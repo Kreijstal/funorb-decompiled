@@ -100,7 +100,7 @@ final class uc {
         try {
           L0: {
             L1: {
-              if (~param5 >= ~param2) {
+              if (param5 <= param2) {
                 var8_int = 1;
                 var9 = 0;
                 L2: while (true) {
@@ -121,12 +121,12 @@ final class uc {
                     var12 = 0;
                     L3: while (true) {
                       L4: {
-                        if (~var12 <= ~var21.length) {
+                        if (var12 >= var21.length) {
                           L5: {
                             if (var11 != 0) {
                               break L5;
                             } else {
-                              if (~param2 != ~j.field_b) {
+                              if (param2 != j.field_b) {
                                 break L4;
                               } else {
                                 break L5;
@@ -136,7 +136,7 @@ final class uc {
                           var8_int = 0;
                           var12 = 0;
                           L6: while (true) {
-                            if (~var12 <= ~var21.length) {
+                            if (var12 >= var21.length) {
                               break L4;
                             } else {
                               L7: {
@@ -145,7 +145,7 @@ final class uc {
                                   gd.field_b = true;
                                   break L7;
                                 } else {
-                                  if (~var13 <= ~param2) {
+                                  if (var13 >= param2) {
                                     break L7;
                                   } else {
                                     rd.field_c[var13] = true;
@@ -162,14 +162,14 @@ final class uc {
                             var13 = var21[var12];
                             var14 = var10[1 + var12];
                             if (var13 == -1) {
-                              if (~b.field_P[param0] != ~var14) {
+                              if (b.field_P[param0] != var14) {
                                 break L4;
                               } else {
                                 break L8;
                               }
                             } else {
                               L9: {
-                                if (~param2 != ~var13) {
+                                if (param2 != var13) {
                                   break L9;
                                 } else {
                                   if (param4 != var14) {
@@ -183,7 +183,7 @@ final class uc {
                               if (param2 <= var13) {
                                 break L4;
                               } else {
-                                if (~(km.field_D[var13] & 255) != ~var14) {
+                                if ((km.field_D[var13] & 255) != var14) {
                                   break L4;
                                 } else {
                                   break L8;
@@ -366,7 +366,7 @@ final class uc {
                       } else {
                         L23: {
                           if (param2 != -1) {
-                            if (~var11 != ~(255 & cd.field_m.field_kc[param2])) {
+                            if (var11 != (255 & cd.field_m.field_kc[param2])) {
                               stackOut_36_0 = 0;
                               stackIn_37_0 = stackOut_36_0;
                               break L23;
@@ -376,7 +376,7 @@ final class uc {
                               break L23;
                             }
                           } else {
-                            if (~cd.field_m.field_mc != ~b.field_P[var11]) {
+                            if (cd.field_m.field_mc != b.field_P[var11]) {
                               stackOut_33_0 = 0;
                               stackIn_37_0 = stackOut_33_0;
                               break L23;

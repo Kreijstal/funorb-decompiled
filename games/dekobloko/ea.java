@@ -395,13 +395,13 @@ final class ea extends cf {
                     if (this.field_s != param5) {
                       break L2;
                     } else {
-                      if (~this.field_q != ~param1) {
+                      if (this.field_q != param1) {
                         break L2;
                       } else {
                         if (param7 != this.field_B) {
                           break L2;
                         } else {
-                          if (~this.field_v != ~param4) {
+                          if (this.field_v != param4) {
                             break L2;
                           } else {
                             if (param3 != this.field_z) {
@@ -487,7 +487,7 @@ final class ea extends cf {
               }
               var12 = 0;
               L7: while (true) {
-                if (~var10 >= ~var12) {
+                if (var10 <= var12) {
                   break L0;
                 } else {
                   L8: {
@@ -638,7 +638,7 @@ final class ea extends cf {
         if (wd.field_d) {
             return null;
         }
-        if (~jc.field_g > ~o.field_b) {
+        if (jc.field_g < o.field_b) {
             return null;
         }
         if (!(he.field_gb + o.field_b <= jc.field_g)) {

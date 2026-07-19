@@ -123,7 +123,7 @@ final class lg extends kf implements vn {
                       }
                     }
                     L7: {
-                      if (~dk.field_g < ~ac.field_F) {
+                      if (dk.field_g > ac.field_F) {
                         break L7;
                       } else {
                         L8: {
@@ -150,7 +150,7 @@ final class lg extends kf implements vn {
                         break L7;
                       }
                     }
-                    if (~dk.field_i > ~ac.field_F) {
+                    if (dk.field_i < ac.field_F) {
                       lb.field_b = true;
                       break L3;
                     } else {
@@ -168,12 +168,12 @@ final class lg extends kf implements vn {
                       if (ig.field_Yb == 0) {
                         break L10;
                       } else {
-                        if (~nf.field_h >= ~var3) {
+                        if (nf.field_h <= var3) {
                           break L10;
                         } else {
                           if (nf.field_h < ge.field_h.field_H + var3) {
                             L11: {
-                              if (~he.field_S >= ~(269 + -ge.field_h.field_I)) {
+                              if (he.field_S <= 269 + -ge.field_h.field_I) {
                                 break L11;
                               } else {
                                 if (he.field_S >= 269) {
@@ -189,7 +189,7 @@ final class lg extends kf implements vn {
                             if (he.field_S <= 586) {
                               break L10;
                             } else {
-                              if (~he.field_S <= ~(ge.field_h.field_I + 586)) {
+                              if (he.field_S >= ge.field_h.field_I + 586) {
                                 break L10;
                               } else {
                                 lb.field_b = true;
@@ -207,7 +207,7 @@ final class lg extends kf implements vn {
                     if (var4 != 0) {
                       break L9;
                     } else {
-                      if (~ac.field_F >= ~dk.field_i) {
+                      if (ac.field_F <= dk.field_i) {
                         break L9;
                       } else {
                         if (var3 >= pm.field_f) {

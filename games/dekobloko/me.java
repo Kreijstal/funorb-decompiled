@@ -119,7 +119,7 @@ final class me extends be {
             me.c(-120);
         }
         if (!(this.field_F == null)) {
-            for (var2 = 0; ~var2 > ~this.field_F.length; var2++) {
+            for (var2 = 0; var2 < this.field_F.length; var2++) {
                 this.field_F[var2] = de.b(this.field_F[var2], 32768);
             }
         }
@@ -191,7 +191,7 @@ final class me extends be {
                       this.field_A = new int[var4_int];
                       var5 = 0;
                       L3: while (true) {
-                        if (~var4_int >= ~var5) {
+                        if (var4_int <= var5) {
                           break L1;
                         } else {
                           L4: {

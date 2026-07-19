@@ -124,23 +124,24 @@ final class fd implements Runnable {
               if (null != this.field_o) {
                 var2_int = 0;
                 L11: while (true) {
-                  if (~var2_int <= ~this.field_o.length) {
+                  if (var2_int >= this.field_o.length) {
                     break L10;
                   } else {
                     if (null != this.field_o[var2_int]) {
                       try {
                         L12: {
                           this.field_o[var2_int].a(param0 ^ -71);
+                          var2_int++;
                           break L12;
                         }
                       } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L13: {
                           var3_ref = (IOException) (Object) decompiledCaughtException;
+                          var2_int++;
                           break L13;
                         }
                       }
-                      var2_int++;
                       continue L11;
                     } else {
                       var2_int++;
@@ -242,7 +243,7 @@ final class fd implements Runnable {
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_u, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var6 = 0;
             L1: while (true) {
-              if (~var5_array.length < ~var6) {
+              if (var5_array.length > var6) {
                 L2: {
                   var7 = var5_array[var6];
                   if (var7.length() <= 0) {
@@ -515,7 +516,7 @@ final class fd implements Runnable {
                                                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                                                             var5 = 0;
                                                             L14: while (true) {
-                                                              if (~var16_ref.length() >= ~var5) {
+                                                              if (var16_ref.length() <= var5) {
                                                                 discarded$9 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var16_ref + "\"");
                                                                 var8_ref.field_b = null;
                                                                 break L12;

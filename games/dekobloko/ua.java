@@ -88,8 +88,8 @@ final class ua extends vi {
     }
 
     final static void h(byte param0) {
-        if (~gd.field_e != ~(0 - sh.field_i)) {
-          if (~gd.field_e != ~(-sh.field_i + 250)) {
+        if (gd.field_e != 0 - sh.field_i) {
+          if (gd.field_e != -sh.field_i + 250) {
             gd.field_e = gd.field_e + 1;
             return;
           } else {

@@ -138,7 +138,7 @@ final class ae extends com.ms.dll.Callback {
         L0: {
           var9 = (com.ms.awt.WComponentPeer) null;
           var5 = var9.getTopHwnd();
-          if (~var5 != ~this.field_e) {
+          if (var5 != this.field_e) {
             break L0;
           } else {
             L1: {
@@ -176,7 +176,7 @@ final class ae extends com.ms.dll.Callback {
             break L2;
           }
         }
-        if (~var5 == ~this.field_e) {
+        if (var5 == this.field_e) {
           L3: {
             stackOut_26_0 = this;
             stackIn_28_0 = stackOut_26_0;

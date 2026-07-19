@@ -195,10 +195,10 @@ final class j {
             } else {
               if (1 + param6 < param2) {
                 L1: {
-                  if (~param2 >= ~(5 + param6)) {
+                  if (param2 <= 5 + param6) {
                     break L1;
                   } else {
-                    if (~param3 != ~param5) {
+                    if (param3 != param5) {
                       var7_int = (param3 >> 1) + ((param5 >> 1) + (param5 & param3 & 1));
                       var8 = param6;
                       var9 = param3;
@@ -260,7 +260,7 @@ final class j {
                   } else {
                     var8 = param6;
                     L6: while (true) {
-                      if (~var7_int >= ~var8) {
+                      if (var7_int <= var8) {
                         var7_int--;
                         continue L5;
                       } else {

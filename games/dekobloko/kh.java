@@ -26,7 +26,7 @@ final class kh {
             var1_int = a.field_r[0];
             var2 = 1;
             L1: while (true) {
-              if (~a.field_r.length >= ~var2) {
+              if (a.field_r.length <= var2) {
                 break L0;
               } else {
                 var3 = a.field_r[var2];
@@ -277,7 +277,7 @@ final class kh {
                       var9 = 0;
                       L3: while (true) {
                         L4: {
-                          if (~var8 <= ~param3) {
+                          if (var8 >= param3) {
                             break L4;
                           } else {
                             L5: {
@@ -339,10 +339,10 @@ final class kh {
                                   if (var11 != param2) {
                                     break L11;
                                   } else {
-                                    if (~var9 != ~var12) {
+                                    if (var9 != var12) {
                                       break L11;
                                     } else {
-                                      if (~var13 != ~this.field_h) {
+                                      if (var13 != this.field_h) {
                                         break L11;
                                       } else {
                                         L12: {
@@ -584,7 +584,7 @@ final class kh {
         int var1_int = 0;
         int var2 = client.field_A ? 1 : 0;
         try {
-            for (var1_int = 0; ~ic.field_c < ~var1_int; var1_int++) {
+            for (var1_int = 0; ic.field_c > var1_int; var1_int++) {
                 pd.field_g[var1_int] = null;
             }
             ic.field_c = 0;
@@ -698,13 +698,13 @@ final class kh {
                                     }
                                     if (var10 == param0) {
                                       if (var8 == var11) {
-                                        if (~this.field_h == ~var13) {
+                                        if (this.field_h == var13) {
                                           if (var12 >= 0) {
                                             if (this.field_a.b(55) / 520L >= (long)var12) {
                                               var15 = var14 - -var9;
                                               var16 = var14;
                                               L5: while (true) {
-                                                if (~var15 >= ~var16) {
+                                                if (var15 <= var16) {
                                                   var8++;
                                                   var5 = var12;
                                                   continue L1;

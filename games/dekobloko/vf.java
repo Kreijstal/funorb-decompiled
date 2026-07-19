@@ -52,7 +52,7 @@ final class vf {
             }
             var5 = var4_int;
             L2: while (true) {
-              if (~param2 >= ~var5) {
+              if (param2 <= var5) {
                 stackOut_6_0 = (StringBuilder) (param0);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;

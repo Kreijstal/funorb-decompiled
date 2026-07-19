@@ -430,10 +430,10 @@ abstract class bd extends hn {
               if (this.field_p) {
                 break L3;
               } else {
-                if (~var3 <= ~fl.a((byte) -108)) {
+                if (var3 >= fl.a((byte) -108)) {
                   break L2;
                 } else {
-                  if (~var3 <= ~ne.b((byte) -40)) {
+                  if (var3 >= ne.b((byte) -40)) {
                     break L2;
                   } else {
                     break L3;

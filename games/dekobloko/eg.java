@@ -10,12 +10,12 @@ final class eg {
 
     final static void a(int param0, int param1, int param2, byte param3) {
         if (param0 == 0) {
-          if (~qk.field_i != ~param2) {
+          if (qk.field_i != param2) {
             rg.field_c = true;
             qk.field_i = param2;
             mf.a((byte) 125, param1);
             if (1 == param0) {
-              if (~wh.field_d != ~param2) {
+              if (wh.field_d != param2) {
                 L0: {
                   rg.field_c = true;
                   wh.field_d = param2;
@@ -100,7 +100,7 @@ final class eg {
             }
           } else {
             if (1 == param0) {
-              if (~wh.field_d != ~param2) {
+              if (wh.field_d != param2) {
                 L3: {
                   rg.field_c = true;
                   wh.field_d = param2;
@@ -186,7 +186,7 @@ final class eg {
           }
         } else {
           if (1 == param0) {
-            if (~wh.field_d != ~param2) {
+            if (wh.field_d != param2) {
               L6: {
                 rg.field_c = true;
                 wh.field_d = param2;

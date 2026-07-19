@@ -154,7 +154,7 @@ final class sa extends bh {
               if (wd.field_d) {
                 break L7;
               } else {
-                if (~o.field_b >= ~jc.field_g) {
+                if (o.field_b <= jc.field_g) {
                   break L7;
                 } else {
                   if (!pm.field_b) {
@@ -174,7 +174,7 @@ final class sa extends bh {
               if (!wd.field_d) {
                 break L8;
               } else {
-                if (~ve.field_hc == ~jc.field_g) {
+                if (ve.field_hc == jc.field_g) {
                   jc.field_g = 0;
                   wd.field_d = false;
                   break L8;

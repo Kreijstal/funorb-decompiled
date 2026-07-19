@@ -9,10 +9,10 @@ final class gi {
     static String field_d;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (~param6 >= ~param2) {
-          if (~(param3 + param6) < ~param2) {
+        if (param6 <= param2) {
+          if (param3 + param6 > param2) {
             if (param1 >= param4) {
-              if (~(param4 - -param5) >= ~param1) {
+              if (param4 - -param5 <= param1) {
                 return false;
               } else {
                 return true;

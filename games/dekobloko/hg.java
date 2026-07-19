@@ -61,7 +61,7 @@ final class hg {
               } else {
                 if (lg.field_W <= 0) {
                   if (tg.field_e <= 0) {
-                    if (~dl.field_M < ~bf.field_r) {
+                    if (dl.field_M > bf.field_r) {
                       if (0 != bf.field_r) {
                         bf.field_r = bf.field_r + 1;
                         return;
@@ -170,7 +170,7 @@ final class hg {
                         tg.field_e = tg.field_e - 1;
                         return;
                       } else {
-                        if (~dl.field_M < ~bf.field_r) {
+                        if (dl.field_M > bf.field_r) {
                           if (0 != bf.field_r) {
                             bf.field_r = bf.field_r + 1;
                             return;
@@ -246,7 +246,7 @@ final class hg {
                 } else {
                   if (lg.field_W <= 0) {
                     if (tg.field_e <= 0) {
-                      if (~dl.field_M < ~bf.field_r) {
+                      if (dl.field_M > bf.field_r) {
                         if (0 == bf.field_r) {
                           mg.b(0, true);
                           bf.field_r = bf.field_r + 1;
@@ -319,7 +319,7 @@ final class hg {
                 if (null == gn.field_e) {
                   break L2;
                 } else {
-                  if (~gn.field_e.length >= ~te.field_w) {
+                  if (gn.field_e.length <= te.field_w) {
                     break L2;
                   } else {
                     break L1;
@@ -338,7 +338,7 @@ final class hg {
               var7 = new int[var6_int];
               var8 = 0;
               L4: while (true) {
-                if (~te.field_w >= ~var8) {
+                if (te.field_w <= var8) {
                   gn.field_e = var7;
                   break L1;
                 } else {

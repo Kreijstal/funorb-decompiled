@@ -80,13 +80,13 @@ final class oj {
                     }
                   }
                   L3: {
-                    if (~qg.field_a < ~param10) {
+                    if (qg.field_a > param10) {
                       break L3;
                     } else {
                       if (qg.field_a > param4) {
                         break L3;
                       } else {
-                        if (~qg.field_a < ~param5) {
+                        if (qg.field_a > param5) {
                           break L3;
                         } else {
                           return;
@@ -104,7 +104,7 @@ final class oj {
                   }
                   L5: {
                     var34 = param14 + -param11;
-                    if (~param11 == ~param3) {
+                    if (param11 == param3) {
                       L6: {
                         if (param11 != param14) {
                           var35 = -param3 + param14;
@@ -197,7 +197,7 @@ final class oj {
                         var35 = -param11 + param3;
                         var19 = (param4 + -param10 << 16) / var35;
                         var20 = (param5 - param10 << 16) / var34;
-                        if (~var20 < ~var19) {
+                        if (var20 > var19) {
                           var33 = 0;
                           var27 = (-param2 + param6 << 16) / var35;
                           var32 = (param13 - param16 << 16) / var34;
@@ -259,7 +259,7 @@ final class oj {
                           } else {
                             L12: {
                               var37 = var17_int >> 16;
-                              if (~qg.field_a < ~var37) {
+                              if (qg.field_a > var37) {
                                 var38 = -(var17_int >> 16) + (var18 >> 16);
                                 if (var38 != 0) {
                                   L13: {
@@ -284,7 +284,7 @@ final class oj {
                                   if (var37 < 0) {
                                     break L12;
                                   } else {
-                                    if (~var37 > ~qg.field_a) {
+                                    if (var37 < qg.field_a) {
                                       ve.a(var25, var37 + var36, 0, 0, var21, var38, 9, param12, var29, 0);
                                       break L12;
                                     } else {
@@ -297,7 +297,7 @@ final class oj {
                               }
                             }
                             param11++;
-                            if (~param11 > ~qg.field_e) {
+                            if (param11 < qg.field_e) {
                               var18 = var18 + var20;
                               var21 = var21 + var23;
                               var30 = var30 + var32;
@@ -376,12 +376,12 @@ final class oj {
                   }
                   var35 = qg.field_d[param11];
                   L16: while (true) {
-                    if (~param11 <= ~param14) {
+                    if (param11 >= param14) {
                       break L0;
                     } else {
                       L17: {
                         var36 = var17_int >> 16;
-                        if (~qg.field_a >= ~var36) {
+                        if (qg.field_a <= var36) {
                           break L17;
                         } else {
                           var37 = (var18 >> 16) - (var17_int >> 16);
@@ -389,7 +389,7 @@ final class oj {
                             if (var36 < 0) {
                               break L17;
                             } else {
-                              if (~qg.field_a >= ~var36) {
+                              if (qg.field_a <= var36) {
                                 break L17;
                               } else {
                                 ve.a(var25, var36 + var35, 0, 0, var21, var37, 9, param12, var29, 0);

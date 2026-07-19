@@ -1,20 +1,20 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-07-19T08:15:04.307Z",
+  "capturedAt": "2026-07-19T11:52:25.761Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "80049736c6b4dae4926a4b42baca51975c416921",
+      "commit": "03c3b99e09689de5572d0e0a0e759ccd6f2acaeb",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "a657e2d64860d008424c234bfcb1729bd65f28df",
+      "commit": "5f9a077afb7bd705cb3248862507e17a0806ea90",
       "trackedClean": true
     }
   },
   "invocation": {
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
-      ".work/games-publish2",
+      "/tmp/issue24-funorb-regen.HlI32y",
       "--game",
       "dekobloko"
     ],
@@ -34,8 +34,8 @@
     }
   },
   "publication": {
-    "synchronizedAt": "2026-07-19T08:34:01.009Z",
-    "destinationBaseCommit": "93561143d6f3f3b492f55929ce86cc3268cca859",
+    "synchronizedAt": "2026-07-19T11:58:26.027Z",
+    "destinationBaseCommit": "b2f94d02527af883bed27561b2ca8d64aa8ab502",
     "syncedGames": [
       "dekobloko"
     ]

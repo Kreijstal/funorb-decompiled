@@ -383,7 +383,7 @@ final class mc {
                             var7 = rk.field_V;
                             var8_int = 0;
                             L10: while (true) {
-                              if (~kk.field_l.length >= ~var8_int) {
+                              if (kk.field_l.length <= var8_int) {
                                 break L6;
                               } else {
                                 kk.field_l[var8_int] = (byte) 0;
@@ -493,7 +493,7 @@ final class mc {
                         var7 = rk.field_V;
                         var8_int = 0;
                         L16: while (true) {
-                          if (~kk.field_l.length >= ~var8_int) {
+                          if (kk.field_l.length <= var8_int) {
                             break L6;
                           } else {
                             kk.field_l[var8_int] = (byte) 0;
@@ -525,12 +525,12 @@ final class mc {
               }
               var7 = stackIn_67_0;
               L18: while (true) {
-                if (~var7 <= ~b.field_P.length) {
+                if (var7 >= b.field_P.length) {
                   break L4;
                 } else {
                   L19: {
                     if (var6 != 0) {
-                      if (~rk.field_V != ~var7) {
+                      if (rk.field_V != var7) {
                         stackOut_73_0 = 1;
                         stackIn_75_0 = stackOut_73_0;
                         break L19;
@@ -560,7 +560,7 @@ final class mc {
                             if (var7 == -1) {
                               var9 = 0;
                               L21: while (true) {
-                                if (~var9 <= ~kk.field_l.length) {
+                                if (var9 >= kk.field_l.length) {
                                   break L20;
                                 } else {
                                   kk.field_l[var9] = (byte) 0;
@@ -575,7 +575,7 @@ final class mc {
                           }
                         } else {
                           var9 = b.field_P[var7];
-                          if (~param0.field_mc == ~var9) {
+                          if (param0.field_mc == var9) {
                             break L20;
                           } else {
                             var5 = 1;
@@ -635,7 +635,7 @@ final class mc {
                         qa.field_v[1][1 + var7].field_ab = true;
                         var9 = 0;
                         L25: while (true) {
-                          if (~b.field_P.length >= ~var9) {
+                          if (b.field_P.length <= var9) {
                             break L22;
                           } else {
                             L26: {
@@ -829,7 +829,7 @@ final class mc {
                 var6 = 0;
                 var7 = 0;
                 L39: while (true) {
-                  if (~j.field_b >= ~var7) {
+                  if (j.field_b <= var7) {
                     L40: {
                       if (var5 == 0) {
                         break L40;
@@ -859,7 +859,7 @@ final class mc {
                     }
                     var9 = stackIn_169_0;
                     L42: while (true) {
-                      if (~var9 <= ~(-1 + var31.length)) {
+                      if (var9 >= -1 + var31.length) {
                         var6 = var6 + (255 & rb.field_k[var7]);
                         var7++;
                         continue L39;
@@ -1295,7 +1295,7 @@ final class mc {
                                           if (lc.field_e == null) {
                                             break L69;
                                           } else {
-                                            if (~var15 < ~lc.field_e.length) {
+                                            if (var15 > lc.field_e.length) {
                                               break L69;
                                             } else {
                                               if (lc.field_e[var15 - 1] == null) {

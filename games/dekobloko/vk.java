@@ -139,7 +139,7 @@ final class vk {
                     L7: {
                       var18 = var14;
                       var19 = var15;
-                      if (~var18 >= ~var19) {
+                      if (var18 <= var19) {
                         break L7;
                       } else {
                         var19 = var8 * param0 / (var8 - -var9) + param4;
@@ -262,7 +262,7 @@ final class vk {
                           hk.f(var17, var18, var10, var19);
                           var20 = var14;
                           L19: while (true) {
-                            if (~var20 <= ~var15) {
+                            if (var20 >= var15) {
                               hk.a(hl.field_e);
                               break L18;
                             } else {
@@ -293,7 +293,7 @@ final class vk {
                               } else {
                                 var21 = var12;
                                 L22: while (true) {
-                                  if (~var21 <= ~var13) {
+                                  if (var21 >= var13) {
                                     var20 = var20 + param2[4].field_C;
                                     continue L21;
                                   } else {
@@ -483,7 +483,7 @@ final class vk {
                     var16 = 0;
                     var17_int = 1;
                     L4: while (true) {
-                      if (~var17_int <= ~jb.field_g.length) {
+                      if (var17_int >= jb.field_g.length) {
                         var23[var16] = -2147483648;
                         var17 = jb.field_g[var16];
                         kc.b(8192, var16);

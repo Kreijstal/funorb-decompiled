@@ -726,7 +726,7 @@ class ce extends bh {
         if (param2 != -72) {
             this.a(-73, -87, 50, 71);
         }
-        while (~var5_int >= ~var4) {
+        while (var5_int <= var4) {
             this.a(param1, -118, var5_int, param0);
             var5_int++;
         }
@@ -910,10 +910,10 @@ class ce extends bh {
             if (param0 < param4 + this.field_u) {
               break L2;
             } else {
-              if (~(param2 - -this.field_D) < ~param3) {
+              if (param2 - -this.field_D > param3) {
                 break L2;
               } else {
-                if (~(this.field_t + (this.field_u + param4)) >= ~param0) {
+                if (this.field_t + (this.field_u + param4) <= param0) {
                   break L2;
                 } else {
                   if (param3 >= this.field_y + this.field_D + param2) {

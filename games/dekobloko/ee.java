@@ -261,12 +261,12 @@ final class ee {
         int stackOut_26_0 = 0;
         L0: {
           if (param1) {
-            if (~ad.field_i[param3] <= ~ad.field_i[param2]) {
-              if (~ad.field_i[param2] > ~ad.field_i[param3]) {
+            if (ad.field_i[param3] >= ad.field_i[param2]) {
+              if (ad.field_i[param2] < ad.field_i[param3]) {
                 return false;
               } else {
                 if (cc.field_h[param3] >= cc.field_h[param2]) {
-                  if (~cc.field_h[param3] < ~cc.field_h[param2]) {
+                  if (cc.field_h[param3] > cc.field_h[param2]) {
                     return false;
                   } else {
                     break L0;
@@ -300,10 +300,10 @@ final class ee {
         }
         var4 = ln.field_a[param3] + (oa.field_e[param3] - -mk.field_b[param3]);
         var5 = mk.field_b[param2] + ln.field_a[param2] + oa.field_e[param2];
-        if (~var5 >= ~var4) {
-          if (~var4 >= ~var5) {
+        if (var5 <= var4) {
+          if (var4 <= var5) {
             L1: {
-              if (~param3 <= ~param2) {
+              if (param3 >= param2) {
                 stackOut_27_0 = 0;
                 stackIn_28_0 = stackOut_27_0;
                 break L1;
@@ -327,7 +327,7 @@ final class ee {
         try {
             this.field_f = new int[256];
             this.field_d = new int[256];
-            for (var2_int = 0; ~var2_int > ~param0.length; var2_int++) {
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 this.field_d[var2_int] = param0[var2_int];
             }
             this.a(8388607);

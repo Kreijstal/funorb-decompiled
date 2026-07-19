@@ -411,7 +411,7 @@ final class sk {
         if (this.field_l <= param0) {
           throw new IllegalArgumentException();
         } else {
-          if (~param2 <= ~this.field_l) {
+          if (param2 >= this.field_l) {
             throw new IllegalArgumentException();
           } else {
             L0: {
@@ -479,7 +479,7 @@ final class sk {
                   }
                   if (param0 >= 0) {
                     L6: {
-                      if (~this.field_h == ~param0) {
+                      if (this.field_h == param0) {
                         break L6;
                       } else {
                         this.field_o = true;

@@ -388,7 +388,7 @@ class kf extends ce implements ra {
                       var5 = new StringBuilder(var4);
                       var6 = var2_int;
                       L5: while (true) {
-                        if (~var3 >= ~var6) {
+                        if (var3 <= var6) {
                           if (0 != var5.length()) {
                             stackOut_28_0 = var5.toString();
                             stackIn_29_0 = stackOut_28_0;
@@ -919,7 +919,7 @@ class kf extends ce implements ra {
                 discarded$12 = param2.append('\n');
                 var7 = 0;
                 L2: while (true) {
-                  if (~var7 < ~param0) {
+                  if (var7 > param0) {
                     discarded$13 = var6.a(param3, 1 + param0, param2, true);
                     var6 = (ce) ((Object) var5.a(-113));
                     continue L1;

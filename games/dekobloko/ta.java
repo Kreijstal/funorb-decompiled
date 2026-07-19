@@ -54,7 +54,7 @@ final class ta {
             var4 = 0;
             var5 = 0;
             L1: while (true) {
-              if (~var5 <= ~var3) {
+              if (var5 >= var3) {
                 stackOut_4_0 = var4;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;

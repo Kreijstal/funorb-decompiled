@@ -278,7 +278,7 @@ final class df extends kf implements vn {
                   this.field_V = new String[var3_int];
                   var4_int = 0;
                   L3: while (true) {
-                    if (~var3_int >= ~var4_int) {
+                    if (var3_int <= var4_int) {
                       var4 = new on(hh.field_e, 0, 1);
                       this.field_bb = new ek[1 + var3_int];
                       var5 = 0;

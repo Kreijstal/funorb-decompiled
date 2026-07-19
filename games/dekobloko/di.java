@@ -68,10 +68,10 @@ class di extends a {
             var6 = (long)(1 + (var0 << 1));
             var3 = (int)(-32768L + (var6 * var6 >> 18));
             var2 = (int)((var4 * var4 >> 18) - 32768L);
-            if (!(~field_B.length < ~var3)) {
+            if (!(field_B.length > var3)) {
                 var3 = field_B.length - 1;
             }
-            for (var1 = var2 < 0 ? 0 : var2; ~var3 <= ~var1; var1++) {
+            for (var1 = var2 < 0 ? 0 : var2; var3 >= var1; var1++) {
                 field_B[var1] = var0;
             }
         }

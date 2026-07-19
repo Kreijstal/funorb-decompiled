@@ -59,9 +59,10 @@ abstract class vb extends kf implements jl {
         int var7 = 0;
         int var8 = 0;
         w var8_ref_w = null;
-        int var9 = 0;
-        qd var9_ref_qd = null;
+        int var9_int = 0;
+        qd var9 = null;
         int var10 = 0;
+        qd var10_ref_qd = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -227,15 +228,16 @@ abstract class vb extends kf implements jl {
                           if (qa.field_v[var6].length <= var8) {
                             break L8;
                           } else {
-                            L13: {
-                              if (qa.field_v[var6][var8] == null) {
-                                break L13;
-                              } else {
-                                break L13;
-                              }
+                            if (qa.field_v[var6][var8] != null) {
+                              var9 = qa.field_v[var6][var8];
+                              qa.field_v[var6][var8].field_N = 0;
+                              var9.field_mb = 0;
+                              var8++;
+                              continue L12;
+                            } else {
+                              var8++;
+                              continue L12;
                             }
-                            var8++;
-                            continue L12;
                           }
                         }
                       } else {
@@ -243,116 +245,118 @@ abstract class vb extends kf implements jl {
                       }
                     }
                   }
-                  L14: {
+                  L13: {
                     if (!param0) {
-                      break L14;
+                      break L13;
                     } else {
                       if (var6 != 0) {
-                        break L14;
+                        break L13;
                       } else {
                         var14 = um.field_c[var6];
                         um.field_c[var6].field_N = 0;
                         var14.field_mb = 0;
                         var8 = 0;
-                        L15: while (true) {
-                          if (~qa.field_v[var6].length >= ~var8) {
+                        L14: while (true) {
+                          if (qa.field_v[var6].length <= var8) {
                             break L8;
                           } else {
-                            L16: {
-                              if (qa.field_v[var6][var8] == null) {
-                                break L16;
-                              } else {
-                                break L16;
-                              }
+                            if (qa.field_v[var6][var8] != null) {
+                              var9 = qa.field_v[var6][var8];
+                              qa.field_v[var6][var8].field_N = 0;
+                              var9.field_mb = 0;
+                              var8++;
+                              continue L14;
+                            } else {
+                              var8++;
+                              continue L14;
                             }
-                            var8++;
-                            continue L15;
                           }
                         }
                       }
                     }
                   }
-                  L17: {
+                  L15: {
                     if (param0) {
                       if (var6 >= 4) {
                         if (null != bn.field_f) {
                           if (bn.field_f[-4 + var6]) {
                             stackOut_42_0 = 1;
                             stackIn_44_0 = stackOut_42_0;
-                            break L17;
+                            break L15;
                           } else {
                             stackOut_41_0 = 0;
                             stackIn_44_0 = stackOut_41_0;
-                            break L17;
+                            break L15;
                           }
                         } else {
                           stackOut_39_0 = 0;
                           stackIn_44_0 = stackOut_39_0;
-                          break L17;
+                          break L15;
                         }
                       } else {
                         stackOut_37_0 = 0;
                         stackIn_44_0 = stackOut_37_0;
-                        break L17;
+                        break L15;
                       }
                     } else {
                       stackOut_35_0 = 0;
                       stackIn_44_0 = stackOut_35_0;
-                      break L17;
+                      break L15;
                     }
                   }
                   var7 = stackIn_44_0;
                   if (var7 == 0) {
-                    L18: {
+                    L16: {
                       um.field_c[var6].a(103, 0, var5, var3, 5);
                       var8 = 110;
                       if (!param0) {
                         if (qa.field_v[var6][0] == null) {
-                          break L18;
+                          break L16;
                         } else {
-                          var9_ref_qd = qa.field_v[var6][0];
+                          var9 = qa.field_v[var6][0];
                           qa.field_v[var6][0].field_N = 0;
-                          var9_ref_qd.field_mb = 0;
-                          break L18;
+                          var9.field_mb = 0;
+                          break L16;
                         }
                       } else {
                         qa.field_v[var6][0].a(var3, 2, var8, var5, 38, j.field_c, 500);
                         var8 += 40;
-                        break L18;
+                        break L16;
                       }
                     }
-                    var9 = 2 + (-var8 + -5) + oh.field_d.field_mb;
+                    var9_int = 2 + (-var8 + -5) + oh.field_d.field_mb;
                     var10 = qa.field_v[var6].length - 1;
                     var11 = 0;
-                    L19: while (true) {
+                    L17: while (true) {
                       if (var10 <= var11) {
                         var5 = var5 + (2 + var3);
                         break L8;
                       } else {
-                        var12 = var9 * var11 / var10;
-                        qa.field_v[var6][var11 - -1].a(var3, 2, var8 + var12, var5, -var12 + ((1 + var11) * var9 / var10 + -2), j.field_c, 500);
+                        var12 = var9_int * var11 / var10;
+                        qa.field_v[var6][var11 - -1].a(var3, 2, var8 + var12, var5, -var12 + ((1 + var11) * var9_int / var10 + -2), j.field_c, 500);
                         var11++;
-                        continue L19;
+                        continue L17;
                       }
                     }
                   } else {
                     var8_ref_w = um.field_c[var6];
                     um.field_c[var6].field_N = 0;
                     var8_ref_w.field_mb = 0;
-                    var9 = 0;
-                    L20: while (true) {
-                      if (qa.field_v[var6].length <= var9) {
+                    var9_int = 0;
+                    L18: while (true) {
+                      if (qa.field_v[var6].length <= var9_int) {
                         break L8;
                       } else {
-                        L21: {
-                          if (qa.field_v[var6][var9] == null) {
-                            break L21;
-                          } else {
-                            break L21;
-                          }
+                        if (qa.field_v[var6][var9_int] != null) {
+                          var10_ref_qd = qa.field_v[var6][var9_int];
+                          qa.field_v[var6][var9_int].field_N = 0;
+                          var10_ref_qd.field_mb = 0;
+                          var9_int++;
+                          continue L18;
+                        } else {
+                          var9_int++;
+                          continue L18;
                         }
-                        var9++;
-                        continue L20;
                       }
                     }
                   }

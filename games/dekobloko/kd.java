@@ -217,7 +217,7 @@ final class kd extends wm {
             L2: {
               var7 = stackIn_4_0;
               var9 = -83 / ((param2 - 29) / 53);
-              if (~hk.field_h <= ~param3) {
+              if (hk.field_h >= param3) {
                 stackOut_6_0 = hk.field_h;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -241,7 +241,7 @@ final class kd extends wm {
             }
             L4: {
               var10 = stackIn_10_0;
-              if (~var6 > ~hk.field_b) {
+              if (var6 < hk.field_b) {
                 stackOut_12_0 = var6;
                 stackIn_13_0 = stackOut_12_0;
                 break L4;
@@ -253,10 +253,10 @@ final class kd extends wm {
             }
             L5: {
               var11 = stackIn_13_0;
-              if (~param1 > ~hk.field_c) {
+              if (param1 < hk.field_c) {
                 break L5;
               } else {
-                if (~hk.field_g >= ~param1) {
+                if (hk.field_g <= param1) {
                   break L5;
                 } else {
                   var12 = param1 + var8 * hk.field_j;
@@ -278,7 +278,7 @@ final class kd extends wm {
               if (param3 < hk.field_h) {
                 break L7;
               } else {
-                if (~hk.field_b >= ~var6) {
+                if (hk.field_b <= var6) {
                   break L7;
                 } else {
                   var12 = hk.field_j * param3 + var7;
@@ -300,7 +300,7 @@ final class kd extends wm {
               if (var5_int < hk.field_c) {
                 break L9;
               } else {
-                if (~var5_int > ~hk.field_g) {
+                if (var5_int < hk.field_g) {
                   var12 = (var8 - -(var5_int - param1 & 1)) * hk.field_j - -var5_int;
                   var13 = -var8 + 1 + var11 >> 1;
                   L10: while (true) {

@@ -64,7 +64,7 @@ final class ul {
                     t.field_cb[0] = oa.field_f;
                     var6_int = 1;
                     L4: while (true) {
-                      if (~var4 >= ~var6_int) {
+                      if (var4 <= var6_int) {
                         ba.a(2147483647, var4, var5);
                         var6_int = 0;
                         L5: while (true) {

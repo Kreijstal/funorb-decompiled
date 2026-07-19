@@ -71,7 +71,7 @@ final class pe {
                       if (var4_ref_fa == null) {
                         break L4;
                       } else {
-                        if (~var3 != ~var4_ref_fa.field_s) {
+                        if (var3 != var4_ref_fa.field_s) {
                           var4_ref_fa = (fa) ((Object) sa.field_C.d(true));
                           continue L3;
                         } else {
@@ -113,7 +113,7 @@ final class pe {
             Throwable decompiledCaughtException = null;
             int stackOut_10_0 = 0;
             int stackOut_12_0 = 0;
-            if (~de.field_V.field_n > ~param1) {
+            if (de.field_V.field_n < param1) {
               if (qc.field_s == null) {
                 return false;
               } else {

@@ -44,7 +44,7 @@ final class pm {
             }
             var4 = rn.field_d;
             L2: while (true) {
-              if (~ef.field_M.length >= ~var3_int) {
+              if (ef.field_M.length <= var3_int) {
                 stackOut_13_0 = -1;
                 stackIn_14_0 = stackOut_13_0;
                 break L0;

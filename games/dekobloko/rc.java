@@ -246,7 +246,7 @@ final class rc implements Runnable {
           var9.a(-1, param4, -129);
           var6 = var8.field_f[0].field_n;
           var7 = var8.field_f[1].field_n;
-          if (~var6 <= ~var7) {
+          if (var6 >= var7) {
             break L2;
           } else {
             var6 = var7;
@@ -264,7 +264,7 @@ final class rc implements Runnable {
         }
         L4: {
           var7 = w.field_kb.a(gf.a(-127, param1, param2, true));
-          if (~var6 > ~var7) {
+          if (var6 < var7) {
             var6 = var7;
             break L4;
           } else {
@@ -273,7 +273,7 @@ final class rc implements Runnable {
         }
         L5: {
           var7 = w.field_kb.a(ri.a(0, param1, param2, true));
-          if (~var7 >= ~var6) {
+          if (var7 <= var6) {
             break L5;
           } else {
             var6 = var7;
@@ -309,7 +309,7 @@ final class rc implements Runnable {
         field_e = new vj();
         field_c = new sg[255];
         field_g = "Cancel unrated rematch";
-        for (var0 = 0; ~var0 > ~field_c.length; var0++) {
+        for (var0 = 0; var0 < field_c.length; var0++) {
             field_c[var0] = new sg();
         }
     }

@@ -582,7 +582,7 @@ final class he extends kf implements qh, vn {
                   if (param1 == null) {
                     break L2;
                   } else {
-                    if (~param1.length != ~var4_int) {
+                    if (param1.length != var4_int) {
                       break L2;
                     } else {
                       break L1;

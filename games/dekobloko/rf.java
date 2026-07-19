@@ -63,7 +63,7 @@ final class rf {
               var4 = new dh[var3];
               var5 = 0;
               L1: while (true) {
-                if (~var5 <= ~var3) {
+                if (var5 >= var3) {
                   stackOut_10_0 = (dh[]) (var4);
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
@@ -324,7 +324,7 @@ final class rf {
             vi.field_z = new ck[args.length];
             var7 = 0;
             L4: while (true) {
-              if (~var7 <= ~args.length) {
+              if (var7 >= args.length) {
                 dl.field_K = args;
                 break L0;
               } else {

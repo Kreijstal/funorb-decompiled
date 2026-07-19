@@ -94,7 +94,7 @@ final class ne {
                     this.field_a = var10;
                     return true;
                   } else {
-                    if (~var17[var7] == ~var5[var7 - -1]) {
+                    if (var17[var7] == var5[var7 - -1]) {
                       var7++;
                       continue L3;
                     } else {

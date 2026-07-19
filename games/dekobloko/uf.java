@@ -57,7 +57,7 @@ final class uf extends wl {
         if (param1 != 0) {
             field_w = (ck) null;
         }
-        while (~param0 < ~this.field_v) {
+        while (param0 > this.field_v) {
             param0 = param0 - this.field_v;
             fieldTemp$0 = this.field_n;
             this.field_n = this.field_n + 1;
@@ -65,7 +65,7 @@ final class uf extends wl {
             this.field_r[this.field_n] = (byte) 0;
             this.field_v = 8;
         }
-        if (~this.field_v != ~param0) {
+        if (this.field_v != param0) {
             this.field_v = this.field_v - param0;
             this.field_r[this.field_n] = (byte)(this.field_r[this.field_n] + (param2 << this.field_v));
         } else {
@@ -102,7 +102,7 @@ final class uf extends wl {
                   fl.a(var2_int - -14, 256, 16777215, nk.field_d[var4][0], var5, w.field_kb);
                   tg.a(true, var4).c(var5 - -param0, 20 + var2_int, 18, 18);
                   var6 = ga.a(211, 0, var2_int + 20, nk.field_d[var4][1], 16, 64, 16777215, se.field_S, (byte) -128, 0, var5 + 24);
-                  if (~var3 > ~var6) {
+                  if (var3 < var6) {
                     var3 = var6;
                     break L2;
                   } else {
@@ -272,14 +272,14 @@ final class uf extends wl {
         int var4 = -(7 & this.field_x) + 8;
         int var5 = 0;
         this.field_x = this.field_x + param0;
-        while (~var4 > ~param0) {
+        while (var4 < param0) {
             incrementValue$0 = var3;
             var3++;
             var5 = var5 + ((ee.field_b[var4] & this.field_r[incrementValue$0]) << param0 + -var4);
             param0 = param0 - var4;
             var4 = 8;
         }
-        if (~param0 != ~var4) {
+        if (param0 != var4) {
             var5 = var5 + (this.field_r[var3] >> -param0 + var4 & ee.field_b[param0]);
         } else {
             var5 = var5 + (ee.field_b[var4] & this.field_r[var3]);

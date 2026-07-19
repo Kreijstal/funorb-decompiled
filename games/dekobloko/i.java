@@ -197,7 +197,7 @@ final class i {
                   if (ad.field_u == 0) {
                     break L2;
                   } else {
-                    if (~var4 < ~ad.field_u) {
+                    if (var4 > ad.field_u) {
                       break L1;
                     } else {
                       break L2;

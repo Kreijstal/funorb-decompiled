@@ -269,7 +269,7 @@ final class bf extends bh {
                       var5 = param3.field_u[param2].length / var4_int;
                       var6 = 0;
                       L2: while (true) {
-                        if (~var5 >= ~var6) {
+                        if (var5 <= var6) {
                           stackOut_22_0 = -1;
                           stackIn_23_0 = stackOut_22_0;
                           break L0;

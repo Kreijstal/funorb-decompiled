@@ -111,7 +111,7 @@ final class de extends ma {
               this.field_Q = param6;
               var12_int = -this.field_O + this.field_Q;
               var13 = this.field_T.b(param10, var12_int, this.field_T.field_R) - -(this.field_O * 2);
-              if (~var13 < ~param3) {
+              if (var13 > param3) {
                 this.b(var13, param2, param0, param1, -16555);
                 break L2;
               } else {
@@ -306,11 +306,11 @@ final class de extends ma {
                   ef.field_M = new String[var8];
                   var9 = 0;
                   L3: while (true) {
-                    if (~var9 <= ~var8) {
+                    if (var9 >= var8) {
                       ef.field_T = new int[1];
                       var9 = 0;
                       L4: while (true) {
-                        if (~var9 <= ~var7) {
+                        if (var9 >= var7) {
                           ef.field_M[var8 + -2] = "";
                           ef.field_M[-1 + var8] = og.field_gb;
                           ug.field_q[-1 + var8] = 0;
@@ -338,11 +338,11 @@ final class de extends ma {
                 ef.field_M = new String[var8];
                 var9 = 0;
                 L5: while (true) {
-                  if (~var9 <= ~var8) {
+                  if (var9 >= var8) {
                     ef.field_T = new int[2];
                     var9 = 0;
                     L6: while (true) {
-                      if (~var9 <= ~var7) {
+                      if (var9 >= var7) {
                         ef.field_M[-3 + var8] = "";
                         ef.field_M[var8 - 2] = var6;
                         ug.field_q[var8 + -2] = 0;
@@ -369,7 +369,7 @@ final class de extends ma {
             var7 = 0;
             var8 = 0;
             L7: while (true) {
-              if (~var8 <= ~ef.field_M.length) {
+              if (var8 >= ef.field_M.length) {
                 ac.field_A = (je.field_c + le.field_t << 1) * wj.field_Jb.field_l;
                 fb.field_f = -(var7 >> 1) + (af.field_f + var7);
                 ad.field_a = af.field_f - (var7 >> 1);
@@ -438,21 +438,20 @@ final class de extends ma {
                     break L11;
                   }
                 }
-                L12: {
-                  if (var9 <= var7) {
-                    break L12;
-                  } else {
-                    break L12;
-                  }
+                if (var9 > var7) {
+                  var7 = var9;
+                  var8++;
+                  continue L7;
+                } else {
+                  var8++;
+                  continue L7;
                 }
-                var8++;
-                continue L7;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L13: {
+          L12: {
             var5 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) (var5);
             stackOut_41_1 = new StringBuilder().append("de.B(").append(param0).append(',').append(-5540).append(',');
@@ -467,7 +466,7 @@ final class de extends ma {
               stackIn_44_0 = stackOut_43_0;
               stackIn_44_1 = stackOut_43_1;
               stackIn_44_2 = stackOut_43_2;
-              break L13;
+              break L12;
             } else {
               stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
               stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
@@ -475,7 +474,7 @@ final class de extends ma {
               stackIn_44_0 = stackOut_42_0;
               stackIn_44_1 = stackOut_42_1;
               stackIn_44_2 = stackOut_42_2;
-              break L13;
+              break L12;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ',' + param3 + ',' + param4 + ')');
@@ -508,7 +507,7 @@ final class de extends ma {
             var3 = hc.field_c[var2] * tm.field_a[var2];
             var4 = tc.field_Nb[var2];
             var5 = new int[var3];
-            for (var6 = 0; ~var6 > ~var3; var6++) {
+            for (var6 = 0; var6 < var3; var6++) {
                 var5[var6] = mb.field_d[lb.a((int) var4[var6], 255)];
             }
             var1[var2] = new ck(ed.field_f, i.field_d, sg.field_d[var2], fh.field_a[var2], tm.field_a[var2], hc.field_c[var2], var5);

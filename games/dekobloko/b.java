@@ -21,7 +21,7 @@ final class b extends ek {
           if (param1 < 0) {
             break L0;
           } else {
-            if (~this.field_N.a(126) < ~param1) {
+            if (this.field_N.a(126) > param1) {
               L1: {
                 if (param0 == -1) {
                   break L1;
@@ -192,7 +192,7 @@ final class b extends ek {
                     var11 = -1;
                     var12 = 0;
                     L4: while (true) {
-                      if (~var12 <= ~this.field_N.a(114)) {
+                      if (var12 >= this.field_N.a(114)) {
                         if (var11 >= 0) {
                           this.field_N.c(-91, var11);
                           break L3;
@@ -200,17 +200,17 @@ final class b extends ek {
                           break L3;
                         }
                       } else {
-                        L5: {
-                          var13 = this.field_N.b(var12, 0) + -var8_int;
-                          var13 = var13 * var13;
-                          if (var13 >= var10) {
-                            break L5;
-                          } else {
-                            break L5;
-                          }
+                        var13 = this.field_N.b(var12, 0) + -var8_int;
+                        var13 = var13 * var13;
+                        if (var13 < var10) {
+                          var10 = var13;
+                          var11 = var12;
+                          var12++;
+                          continue L4;
+                        } else {
+                          var12++;
+                          continue L4;
                         }
-                        var12++;
-                        continue L4;
                       }
                     }
                   } else {
@@ -228,7 +228,7 @@ final class b extends ek {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var8 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) (var8);
             stackOut_23_1 = new StringBuilder().append("b.LB(").append(param0).append(',').append(param1).append(',');
@@ -243,7 +243,7 @@ final class b extends ek {
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
-              break L6;
+              break L5;
             } else {
               stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
               stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
@@ -251,7 +251,7 @@ final class b extends ek {
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
               stackIn_26_2 = stackOut_24_2;
-              break L6;
+              break L5;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');

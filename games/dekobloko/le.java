@@ -71,7 +71,7 @@ final class le extends of {
                         throw new RuntimeException();
                       } else {
                         this.field_I = new ad(var9, this.field_q, this.field_z);
-                        if (~this.field_n == ~this.field_I.field_m) {
+                        if (this.field_n == this.field_I.field_m) {
                           break L2;
                         } else {
                           throw new RuntimeException();
@@ -347,7 +347,7 @@ final class le extends of {
                       ab.field_c.reset();
                       ab.field_c.update(var5, 0, -2 + var28.length);
                       var6_int = (int)ab.field_c.getValue();
-                      if (~this.field_I.field_c[param1] != ~var6_int) {
+                      if (this.field_I.field_c[param1] != var6_int) {
                         throw new RuntimeException();
                       } else {
                         L6: {
@@ -363,7 +363,7 @@ final class le extends of {
                                 if (var11 >= 64) {
                                   break L6;
                                 } else {
-                                  if (~var31[var11] != ~var32[var11]) {
+                                  if (var31[var11] != var32[var11]) {
                                     throw new RuntimeException();
                                   } else {
                                     var11++;
@@ -439,7 +439,7 @@ final class le extends of {
                       ab.field_c.reset();
                       ab.field_c.update(var5, 0, -2 + var28.length);
                       var6_int = (int)ab.field_c.getValue();
-                      if (~this.field_I.field_c[param1] != ~var6_int) {
+                      if (this.field_I.field_c[param1] != var6_int) {
                         throw new RuntimeException();
                       } else {
                         L12: {
@@ -454,7 +454,7 @@ final class le extends of {
                                 if (64 <= var9) {
                                   break L12;
                                 } else {
-                                  if (~var29[var9] == ~var30[var9]) {
+                                  if (var29[var9] == var30[var9]) {
                                     var9++;
                                     continue L13;
                                   } else {
@@ -580,40 +580,39 @@ final class le extends of {
                     if (var3 == null) {
                       L3: while (true) {
                         L4: {
-                          if (~this.field_j <= ~this.field_I.field_B.length) {
+                          if (this.field_j >= this.field_I.field_B.length) {
                             break L4;
                           } else {
-                            if (this.field_I.field_B[this.field_j] == 0) {
-                              this.field_j = this.field_j + 1;
-                              continue L3;
-                            } else {
-                              if (this.field_l.b(0)) {
-                                var2_int = 0;
-                                break L4;
+                            L5: {
+                              if (this.field_I.field_B[this.field_j] == 0) {
+                                break L5;
                               } else {
-                                L5: {
-                                  if (this.field_F[this.field_j] != 1) {
-                                    discarded$4 = this.a(2, this.field_j, (byte) -20);
-                                    break L5;
-                                  } else {
-                                    break L5;
+                                if (this.field_l.b(0)) {
+                                  var2_int = 0;
+                                  break L4;
+                                } else {
+                                  L6: {
+                                    if (this.field_F[this.field_j] != 1) {
+                                      discarded$4 = this.a(2, this.field_j, (byte) -20);
+                                      break L6;
+                                    } else {
+                                      break L6;
+                                    }
                                   }
-                                }
-                                L6: {
                                   if (1 == this.field_F[this.field_j]) {
-                                    break L6;
+                                    break L5;
                                   } else {
                                     var7 = new bh();
                                     var7.field_i = (long)this.field_j;
                                     this.field_J.a(var7, 2777);
                                     var2_int = 0;
-                                    break L6;
+                                    break L5;
                                   }
                                 }
-                                this.field_j = this.field_j + 1;
-                                continue L3;
                               }
                             }
+                            this.field_j = this.field_j + 1;
+                            continue L3;
                           }
                         }
                         if (var2_int != 0) {

@@ -516,7 +516,7 @@ final class bc extends a {
             }
             var4 = 0;
             L2: while (true) {
-              if (~var4 <= ~var7.length) {
+              if (var4 >= var7.length) {
                 break L0;
               } else {
                 L3: {

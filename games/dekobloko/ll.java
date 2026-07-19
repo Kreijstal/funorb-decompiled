@@ -287,7 +287,7 @@ final class ll {
                 if (null != param2.field_C) {
                   var12 = 0;
                   L4: while (true) {
-                    if (~param2.field_C.length >= ~var12) {
+                    if (param2.field_C.length <= var12) {
                       break L3;
                     } else {
                       var13_ref_ac = oi.field_a.a(-126, param2.field_C[var12]);

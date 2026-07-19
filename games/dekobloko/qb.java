@@ -554,7 +554,7 @@ final class qb extends dd {
                     var12 = ph.field_Eb.length;
                     var13 = 0;
                     L11: while (true) {
-                      if (~var12 >= ~var13) {
+                      if (var12 <= var13) {
                         si.a(60);
                         jd.field_Qb = false;
                         stackOut_41_0 = var12 + 100;
@@ -852,7 +852,7 @@ final class qb extends dd {
                                           } else {
                                             var7 = 0;
                                             L13: while (true) {
-                                              if (~var7 <= ~var6) {
+                                              if (var7 >= var6) {
                                                 break L12;
                                               } else {
                                                 this.field_h.field_J.field_r[var7 + this.field_h.field_J.field_n] = (byte)qm.b((int) this.field_h.field_J.field_r[var7 + this.field_h.field_J.field_n], (int) this.field_f);
@@ -864,7 +864,7 @@ final class qb extends dd {
                                         }
                                         this.field_h.field_K = this.field_h.field_K + var6;
                                         this.field_h.field_J.field_n = this.field_h.field_J.field_n + var6;
-                                        if (~this.field_h.field_J.field_n != ~var5) {
+                                        if (this.field_h.field_J.field_n != var5) {
                                           if (512 != this.field_h.field_K) {
                                             break L9;
                                           } else {
@@ -880,7 +880,7 @@ final class qb extends dd {
                                       } else {
                                         L14: {
                                           var5 = -this.field_c.field_n + var4;
-                                          if (~var5 >= ~var3_int) {
+                                          if (var5 <= var3_int) {
                                             break L14;
                                           } else {
                                             var5 = var3_int;
@@ -894,7 +894,7 @@ final class qb extends dd {
                                           } else {
                                             var6 = 0;
                                             L16: while (true) {
-                                              if (~var5 >= ~var6) {
+                                              if (var5 <= var6) {
                                                 break L15;
                                               } else {
                                                 this.field_c.field_r[this.field_c.field_n - -var6] = (byte)qm.b((int) this.field_c.field_r[this.field_c.field_n + var6], (int) this.field_f);
@@ -905,7 +905,7 @@ final class qb extends dd {
                                           }
                                         }
                                         this.field_c.field_n = this.field_c.field_n + var5;
-                                        if (~this.field_c.field_n <= ~var4) {
+                                        if (this.field_c.field_n >= var4) {
                                           if (this.field_h == null) {
                                             L17: {
                                               this.field_c.field_n = 0;

@@ -165,7 +165,7 @@ abstract class cf {
                   var5 = var3[var4];
                   if (var5 != null) {
                     var6 = var5.b(-6375);
-                    if (~var2 > ~var6) {
+                    if (var2 < var6) {
                       var2 = var6;
                       var4++;
                       continue L1;
@@ -307,17 +307,17 @@ abstract class cf {
               break L1;
             } else {
               if (param1 >= this.field_a[0].field_c) {
-                if (~param1 >= ~this.field_a[this.field_a.length - 1].field_i) {
+                if (param1 <= this.field_a[this.field_a.length - 1].field_i) {
                   if (1 != this.field_a.length) {
                     var4 = 0;
                     var5 = 0;
                     L2: while (true) {
-                      if (~this.field_a.length >= ~var5) {
+                      if (this.field_a.length <= var5) {
                         return -1;
                       } else {
                         L3: {
                           var6 = this.field_a[var5];
-                          if (~var6.field_c < ~param1) {
+                          if (var6.field_c > param1) {
                             break L3;
                           } else {
                             if (param1 <= var6.field_i) {
@@ -361,7 +361,7 @@ abstract class cf {
         }
         for (var3 = 0; var3 < this.field_a.length; var3++) {
             var4 = this.field_a[var3];
-            if (~var4.field_a.length < ~param1) {
+            if (var4.field_a.length > param1) {
                 return var3;
             }
             param1 = param1 - (-1 + var4.field_a.length);

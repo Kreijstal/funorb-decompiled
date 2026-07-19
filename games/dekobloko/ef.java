@@ -96,7 +96,7 @@ final class ef extends ma {
     }
 
     final static void f(byte param0) {
-        if (~ac.field_B == ~le.field_m.field_i) {
+        if (ac.field_B == le.field_m.field_i) {
           L0: {
             if (0 < bl.field_T) {
               bl.field_T = bl.field_T - 1;

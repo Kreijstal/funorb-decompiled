@@ -64,7 +64,7 @@ final class s extends w {
                   var7 = param3.length();
                   var8 = 0;
                   L2: while (true) {
-                    if (~var7 >= ~var8) {
+                    if (var7 <= var8) {
                       if (var5 == 0) {
                         throw new NumberFormatException();
                       } else {

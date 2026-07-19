@@ -108,13 +108,13 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var4 = param1.length();
             var5 = 0;
             L1: while (true) {
-              if (~var4 >= ~var5) {
+              if (var4 <= var5) {
                 stackOut_9_0 = var3_int;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 L2: {
-                  if (~param1.charAt(var5) != ~param2) {
+                  if (param1.charAt(var5) != param2) {
                     break L2;
                   } else {
                     var3_int++;
@@ -482,7 +482,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   stackOut_11_0 = (ve) ((Object) stackIn_11_0);
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_12_0 = stackOut_11_0;
-                  if (~param2.field_rc <= ~param2.field_mc) {
+                  if (param2.field_rc >= param2.field_mc) {
                     break L5;
                   } else {
                     stackOut_12_0 = (ve) ((Object) stackIn_12_0);

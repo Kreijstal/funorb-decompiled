@@ -115,7 +115,7 @@ final class r extends ce {
         var5 = this.field_y >> 1;
         var6 = 0;
         L1: while (true) {
-          if (~var6 <= ~this.field_y) {
+          if (var6 >= this.field_y) {
             mk.a((byte) -5);
             return var14;
           } else {
@@ -205,7 +205,7 @@ final class r extends ce {
                 break L2;
               } else {
                 this.field_R = this.field_R + 1;
-                if (~(2 * this.field_J) <= ~this.field_R) {
+                if (2 * this.field_J >= this.field_R) {
                   break L2;
                 } else {
                   this.field_R = this.field_R - 2 * this.field_J;
@@ -276,10 +276,10 @@ final class r extends ce {
             gg.a(param1, 20763, var5_int + -this.field_O.field_I, this.field_O.field_I + param2, this.field_y + param1);
             var6 = param2 + -this.field_R;
             L1: while (true) {
-              if (~var5_int >= ~var6) {
+              if (var5_int <= var6) {
                 L2: {
                   mk.a((byte) -5);
-                  if (~(param2 + this.field_O.field_I) > ~hk.field_c) {
+                  if (param2 + this.field_O.field_I < hk.field_c) {
                     break L2;
                   } else {
                     tb.a(true, this.field_G);
@@ -292,7 +292,7 @@ final class r extends ce {
                   }
                 }
                 L3: {
-                  if (~(-this.field_O.field_I + var5_int) < ~hk.field_g) {
+                  if (-this.field_O.field_I + var5_int > hk.field_g) {
                     break L3;
                   } else {
                     tb.a(true, this.field_G);

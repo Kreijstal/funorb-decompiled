@@ -88,7 +88,7 @@ final class ke {
                     if (var4 == null) {
                       break L4;
                     } else {
-                      if (~var4.field_n != ~var3) {
+                      if (var4.field_n != var3) {
                         var4 = (kc) ((Object) dg.field_e.d(true));
                         continue L3;
                       } else {
@@ -169,7 +169,7 @@ final class ke {
                                         var1_ref.field_n = var24;
                                         var25 = 0;
                                         L11: while (true) {
-                                          if (~var25 <= ~var7) {
+                                          if (var25 >= var7) {
                                             break L10;
                                           } else {
                                             incrementValue$10 = var16;
@@ -197,7 +197,7 @@ final class ke {
                                         var1_ref.field_n = var24;
                                         var25 = 0;
                                         L13: while (true) {
-                                          if (~var7 >= ~var25) {
+                                          if (var7 <= var25) {
                                             break L12;
                                           } else {
                                             incrementValue$11 = var17;
@@ -257,7 +257,7 @@ final class ke {
                       if (var6_ref_kn == null) {
                         break L16;
                       } else {
-                        if (~var6_ref_kn.field_u != ~var3) {
+                        if (var6_ref_kn.field_u != var3) {
                           var6_ref_kn = (kn) ((Object) pb.field_c.d(true));
                           continue L15;
                         } else {
@@ -467,24 +467,42 @@ final class ke {
     }
 
     private final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         ec var6 = null;
-        int var7 = client.field_A ? 1 : 0;
-        int var4 = 640 - (640 * this.field_o * this.field_o / param0 + (this.field_u >> 2));
+        int var7 = 0;
+        var7 = client.field_A ? 1 : 0;
+        var4 = 640 - (640 * this.field_o * this.field_o / param0 + (this.field_u >> 2));
         param1 = param1 - var4;
-        for (var5 = 0; ~var5 > ~this.field_b.field_l; var5++) {
+        var5 = 0;
+        L0: while (true) {
+          if (var5 >= this.field_b.field_l) {
+            return -1;
+          } else {
             var6 = this.field_f[var5];
-            if (~var6.field_l >= ~param1) {
-                if (~(var6.field_n + var6.field_l) < ~param1) {
-                    if (var6.field_m <= param2) {
-                        if (!(~param2 <= ~(var6.field_m - -var6.field_r))) {
-                            return var5;
-                        }
-                    }
+            if (var6.field_l <= param1) {
+              if (var6.field_n + var6.field_l > param1) {
+                if (var6.field_m <= param2) {
+                  if (param2 < var6.field_m - -var6.field_r) {
+                    return var5;
+                  } else {
+                    var5++;
+                    continue L0;
+                  }
+                } else {
+                  var5++;
+                  continue L0;
                 }
+              } else {
+                var5++;
+                continue L0;
+              }
+            } else {
+              var5++;
+              continue L0;
             }
+          }
         }
-        return -1;
     }
 
     private final int b(boolean param0, byte param1) {
@@ -574,10 +592,10 @@ final class ke {
             }
             if (!rb.a(-23, var9, var5)) {
               if (param0) {
-                if (~var7 >= ~he.field_S) {
+                if (var7 <= he.field_S) {
                   if (he.field_S < 32 + var7) {
                     if (nf.field_h >= var8) {
-                      if (~nf.field_h > ~(32 + var8)) {
+                      if (nf.field_h < 32 + var8) {
                         if (var9 != this.field_k) {
                           this.field_k = var9;
                           var7 += 36;
@@ -615,10 +633,10 @@ final class ke {
                     if (bh.field_g < var7) {
                       break L7;
                     } else {
-                      if (~(32 + var7) >= ~bh.field_g) {
+                      if (32 + var7 <= bh.field_g) {
                         break L7;
                       } else {
-                        if (~var8 < ~pm.field_f) {
+                        if (var8 > pm.field_f) {
                           break L7;
                         } else {
                           if (pm.field_f >= 32 + var8) {
@@ -691,7 +709,7 @@ final class ke {
         var6 = -99 % ((-41 - param0) / 33);
         var7 = 0;
         L0: while (true) {
-          if (~this.field_b.field_l >= ~var7) {
+          if (this.field_b.field_l <= var7) {
             this.field_w = -30 + var2;
             this.field_z = -20 + var3;
             this.field_y = var4 - -30 + -this.field_w;
@@ -715,23 +733,21 @@ final class ke {
               }
             }
             L3: {
-              if (~var5 <= ~(this.field_f[var7].field_r + this.field_f[var7].field_m)) {
+              if (var5 >= this.field_f[var7].field_r + this.field_f[var7].field_m) {
                 break L3;
               } else {
                 var5 = this.field_f[var7].field_m - -this.field_f[var7].field_r;
                 break L3;
               }
             }
-            L4: {
-              if (~this.field_f[var7].field_m > ~var3) {
-                var3 = this.field_f[var7].field_m;
-                break L4;
-              } else {
-                break L4;
-              }
+            if (this.field_f[var7].field_m < var3) {
+              var3 = this.field_f[var7].field_m;
+              var7++;
+              continue L0;
+            } else {
+              var7++;
+              continue L0;
             }
-            var7++;
-            continue L0;
           }
         }
     }
@@ -889,7 +905,7 @@ final class ke {
             }
             var7 = var5_int;
             L4: while (true) {
-              if (~var6 >= ~var7) {
+              if (var6 <= var7) {
                 break L0;
               } else {
                 var8 = 152 - -(var7 * 48 / param3);
@@ -911,7 +927,7 @@ final class ke {
     final void b(int param0, int param1) {
         int var3 = 0;
         int var4 = client.field_A ? 1 : 0;
-        for (var3 = 0; ~var3 > ~this.field_b.field_l; var3++) {
+        for (var3 = 0; var3 < this.field_b.field_l; var3++) {
             this.field_f[var3].field_m = this.field_f[var3].field_m + param0;
         }
         this.field_b.a(this.a(400, bh.field_g, pm.field_f), -20563, this.a(400, he.field_S, nf.field_h));
@@ -1264,7 +1280,7 @@ final class ke {
                                 var11 = var8_ref_int__[var9];
                                 var12 = var11 % 8;
                                 var13 = var11 / 8;
-                                if (~var4 == ~var9) {
+                                if (var4 == var9) {
                                   var10 = 16777215;
                                   break L5;
                                 } else {
@@ -1728,7 +1744,7 @@ final class ke {
                   break L5;
                 }
               }
-              if (~var8 > ~(-1 + this.field_b.field_l)) {
+              if (var8 < -1 + this.field_b.field_l) {
                 var9.field_r = var9.field_r - 3;
                 var8++;
                 continue L0;
@@ -2479,7 +2495,7 @@ final class ke {
                             jb.field_c = ((wl) ((Object) var1_ref)).d((byte) -128);
                             var3_int = 0;
                             L30: while (true) {
-                              if (~v.field_a.length >= ~var3_int) {
+                              if (v.field_a.length <= var3_int) {
                                 break L1;
                               } else {
                                 v.field_a[var3_int] = ((wl) ((Object) var1_ref)).g((byte) -119);
@@ -2625,7 +2641,7 @@ final class ke {
                               var11 = 16769088;
                               var12 = var9_ref_int__[var10];
                               var13 = var12 >>> 8;
-                              if (~var5 == ~var10) {
+                              if (var5 == var10) {
                                 var11 = 16777215;
                                 break L5;
                               } else {
@@ -2754,7 +2770,7 @@ final class ke {
         }
         var4 = 0;
         L1: while (true) {
-          if (~var4 <= ~this.field_b.field_l) {
+          if (var4 >= this.field_b.field_l) {
             hk.d();
             return;
           } else {
@@ -2791,7 +2807,7 @@ final class ke {
             }
             L5: {
               var9 = 16694016;
-              if (~var4 != ~this.field_b.field_h) {
+              if (var4 != this.field_b.field_h) {
                 vk.a(var8, (byte) 50, on.field_e, var5.field_n, var7, var3 + var5.field_l);
                 break L5;
               } else {
@@ -2865,7 +2881,7 @@ final class ke {
                 } else {
                   if (0 == (1 << var10_ref_qc.field_P & var10_ref_qc.field_g.field_a)) {
                     if (var10_ref_qc.field_g.field_a == 0) {
-                      if (~((1 << var10_ref_qc.field_g.field_b) + -1) != ~(var10_ref_qc.field_yb | 1 << var10_ref_qc.field_P)) {
+                      if ((1 << var10_ref_qc.field_g.field_b) + -1 != (var10_ref_qc.field_yb | 1 << var10_ref_qc.field_P)) {
                         var6 = ji.field_c;
                         break L7;
                       } else {
@@ -2903,7 +2919,7 @@ final class ke {
                       if (var5.field_d != 22) {
                         break L12;
                       } else {
-                        if (~var4 != ~fc.field_e) {
+                        if (var4 != fc.field_e) {
                           break L12;
                         } else {
                           var9 = 16777215;
@@ -2969,29 +2985,28 @@ final class ke {
               tg.a(true, var14).c(var3 + (-9 + var12) - -var13, 6 + var7, 18, 18);
               break L10;
             }
-            L17: {
-              if (var5.field_d != 2) {
-                break L17;
-              } else {
-                L18: {
-                  if (id.field_P < 3) {
-                    break L18;
+            if (var5.field_d == 2) {
+              L17: {
+                if (id.field_P < 3) {
+                  break L17;
+                } else {
+                  if (h.a(false)) {
+                    break L17;
                   } else {
-                    if (!h.a(false)) {
-                      break L17;
-                    } else {
-                      break L18;
-                    }
+                    var4++;
+                    continue L1;
                   }
                 }
-                hk.c(8 + (var3 + var5.field_l), var7 + 3, var5.field_n - 16, 2);
-                hk.c(4 + (var3 + var5.field_l), var7 - -5, var5.field_n + -8, -10 + var8);
-                hk.c(8 + (var3 + var5.field_l), -5 + (var8 + var7), -16 + var5.field_n, 2);
-                break L17;
               }
+              hk.c(8 + (var3 + var5.field_l), var7 + 3, var5.field_n - 16, 2);
+              hk.c(4 + (var3 + var5.field_l), var7 - -5, var5.field_n + -8, -10 + var8);
+              hk.c(8 + (var3 + var5.field_l), -5 + (var8 + var7), -16 + var5.field_n, 2);
+              var4++;
+              continue L1;
+            } else {
+              var4++;
+              continue L1;
             }
-            var4++;
-            continue L1;
           }
         }
     }
@@ -3115,7 +3130,7 @@ final class ke {
         if (param1 != -54) {
             this.field_v = (int[]) null;
         }
-        while (~this.field_b.field_l < ~var5) {
+        while (this.field_b.field_l > var5) {
             this.field_f[var5].field_m = this.field_f[var5].field_m - param0;
             var5++;
         }
@@ -3603,7 +3618,7 @@ final class ke {
                 L8: {
                   var5 = a.field_t.a(pm.field_c);
                   var6 = a.field_t.a(fj.field_f);
-                  if (~var6 < ~var5) {
+                  if (var6 > var5) {
                     var5 = var6;
                     break L8;
                   } else {
@@ -3740,7 +3755,7 @@ final class ke {
                 L14: {
                   var5 = a.field_t.a(pm.field_c);
                   var6 = a.field_t.a(fj.field_f);
-                  if (~var6 < ~var5) {
+                  if (var6 > var5) {
                     var5 = var6;
                     break L14;
                   } else {

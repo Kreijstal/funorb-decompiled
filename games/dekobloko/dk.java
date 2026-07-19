@@ -91,7 +91,7 @@ final class dk extends java.awt.Canvas {
                 var6 = ((wl) ((Object) var5)).d((byte) -116);
                 var7 = 0;
                 L2: while (true) {
-                  if (~var6 >= ~var7) {
+                  if (var6 <= var7) {
                     var11 = (f) ((Object) rc.field_e.c((byte) 92));
                     if (var11 != null) {
                       var11.field_u = true;

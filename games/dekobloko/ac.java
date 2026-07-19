@@ -360,7 +360,7 @@ final class ac extends be {
                   this.field_C = new int[var4_int];
                   var5 = 0;
                   L4: while (true) {
-                    if (~var5 <= ~var4_int) {
+                    if (var5 >= var4_int) {
                       break L1;
                     } else {
                       L5: {
@@ -448,7 +448,7 @@ final class ac extends be {
         if (this.field_C != null) {
             var4 = 0;
             var2 = var4;
-            while (~var4 > ~this.field_C.length) {
+            while (var4 < this.field_C.length) {
                 this.field_C[var4] = de.b(this.field_C[var4], 32768);
                 var4++;
             }

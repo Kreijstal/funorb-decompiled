@@ -112,11 +112,11 @@ final class mg extends w {
                 var16.a();
                 var17 = 0;
                 L3: while (true) {
-                  if (~var8 >= ~var17) {
+                  if (var8 <= var17) {
                     hk.a(var31, var12, var13);
                     var17 = 0;
                     L4: while (true) {
-                      if (~var17 <= ~var8) {
+                      if (var17 >= var8) {
                         L5: {
                           if (param6 >= 84) {
                             break L5;
@@ -178,15 +178,19 @@ final class mg extends w {
                         var17++;
                         continue L3;
                       } else {
-                        L11: {
-                          if (var15[var17 * var7_int + var18] == 0) {
-                            break L11;
-                          } else {
-                            break L11;
-                          }
+                        if (var15[var17 * var7_int + var18] != 0) {
+                          var19 = var9 * (var18 - -1);
+                          var20 = (var17 - -1) * var9;
+                          hk.e(var19, var20, var9 - var10, param5 | -16777216);
+                          hk.e(-1 + var9 + var19, var20, var9 + -var10, param5 | -16777216);
+                          hk.e(var19, var20 - -var9 - 1, -var10 + var9, param5 | -16777216);
+                          hk.e(var19 + (var9 + -1), var9 + var20 - 1, -var10 + var9, param5 | -16777216);
+                          var18++;
+                          continue L10;
+                        } else {
+                          var18++;
+                          continue L10;
                         }
-                        var18++;
-                        continue L10;
                       }
                     }
                   }
@@ -199,7 +203,7 @@ final class mg extends w {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L12: {
+          L11: {
             var7 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) (var7);
             stackOut_32_1 = new StringBuilder().append("mg.B(").append(16776192).append(',').append(16743168).append(',');
@@ -214,7 +218,7 @@ final class mg extends w {
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
-              break L12;
+              break L11;
             } else {
               stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
               stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
@@ -222,10 +226,10 @@ final class mg extends w {
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
               stackIn_35_2 = stackOut_33_2;
-              break L12;
+              break L11;
             }
           }
-          L13: {
+          L12: {
             stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
             stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',');
             stackIn_37_0 = stackOut_35_0;
@@ -239,7 +243,7 @@ final class mg extends w {
               stackIn_38_0 = stackOut_37_0;
               stackIn_38_1 = stackOut_37_1;
               stackIn_38_2 = stackOut_37_2;
-              break L13;
+              break L12;
             } else {
               stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
               stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
@@ -247,7 +251,7 @@ final class mg extends w {
               stackIn_38_0 = stackOut_36_0;
               stackIn_38_1 = stackOut_36_1;
               stackIn_38_2 = stackOut_36_2;
-              break L13;
+              break L12;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_38_0), stackIn_38_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -317,7 +321,7 @@ final class mg extends w {
             var5 = var8.length;
             var6 = 0;
             L1: while (true) {
-              if (~var6 <= ~var5) {
+              if (var6 >= var5) {
                 break L0;
               } else {
                 L2: {
@@ -1150,7 +1154,7 @@ final class mg extends w {
                     }
                     L10: {
                       var17 = param6.field_J.a(k.field_d);
-                      if (~var17 >= ~var16) {
+                      if (var17 <= var16) {
                         break L10;
                       } else {
                         var16 = var17;
@@ -1159,7 +1163,7 @@ final class mg extends w {
                     }
                     var17 = 0;
                     L11: while (true) {
-                      if (~var17 <= ~qb.field_u) {
+                      if (var17 >= qb.field_u) {
                         L12: {
                           if (var16 <= 140) {
                             break L12;
@@ -1194,7 +1198,7 @@ final class mg extends w {
                           var18 = this.a(true, this.field_Yb[18], var28[1], var18, var16);
                           var18 = this.a(true, this.field_Yb[19], var28[1], var18, var16);
                           var18 = this.a(true, this.field_Yb[20], var28[1], var18, var16);
-                          if (~var17 <= ~var18) {
+                          if (var17 >= var18) {
                             break L14;
                           } else {
                             var17 = var18;
@@ -1217,7 +1221,7 @@ final class mg extends w {
                         L16: {
                           var19 = 3 * var16 - -26;
                           var20 = this.field_cc.a(true);
-                          if (~var20 >= ~var19) {
+                          if (var20 <= var19) {
                             break L16;
                           } else {
                             var19 = var20;
@@ -1229,7 +1233,7 @@ final class mg extends w {
                             break L17;
                           } else {
                             var20 = this.field_Qb.c(4, -4168);
-                            if (~var19 <= ~var20) {
+                            if (var19 >= var20) {
                               break L17;
                             } else {
                               var19 = var20;

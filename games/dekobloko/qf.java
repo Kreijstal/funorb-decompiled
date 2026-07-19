@@ -37,7 +37,7 @@ final class qf extends ba implements qh, tn {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
-              if (~var4 >= ~(var5 - 3)) {
+              if (var4 <= var5 - 3) {
                 if (param0 == -5520) {
                   if (!un.a(var4, var3, var2_int, (byte) 52)) {
                     stackOut_12_0 = vm.field_u;
@@ -104,7 +104,7 @@ final class qf extends ba implements qh, tn {
               if (var4 < 1890) {
                 break L2;
               } else {
-                if (~var4 >= ~(var5 - 3)) {
+                if (var4 <= var5 - 3) {
                   if (!un.a(var4, var3, var2_int, (byte) 52)) {
                     decompiledRegionSelector0 = 0;
                     break L0;
@@ -341,7 +341,7 @@ final class qf extends ba implements qh, tn {
           L0: {
             var2_int = 0;
             L1: while (true) {
-              if (~param0.length() >= ~var2_int) {
+              if (param0.length() <= var2_int) {
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;

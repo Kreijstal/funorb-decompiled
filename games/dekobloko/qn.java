@@ -87,8 +87,8 @@ final class qn extends t {
     }
 
     final static void a(ck param0, ck param1, byte param2) {
-        RuntimeException var3 = null;
         float var3_float = 0.0f;
+        RuntimeException var3 = null;
         float var4 = 0.0f;
         float var5 = 0.0f;
         int var6 = 0;
@@ -154,12 +154,12 @@ final class qn extends t {
             }
             var11 = 0;
             L2: while (true) {
-              if (~var7 >= ~var11) {
+              if (var7 <= var11) {
                 break L0;
               } else {
                 var12 = 0;
                 L3: while (true) {
-                  if (~var6 >= ~var12) {
+                  if (var6 <= var12) {
                     var11++;
                     continue L2;
                   } else {
@@ -345,7 +345,7 @@ final class qn extends t {
                                   var10 = new String[var9];
                                   var11_int = 0;
                                   L6: while (true) {
-                                    if (~var11_int <= ~var9) {
+                                    if (var11_int >= var9) {
                                       L7: {
                                         var23 = new byte[var9][];
                                         var22 = var23;
@@ -357,7 +357,7 @@ final class qn extends t {
                                         } else {
                                           var12_int = 0;
                                           L8: while (true) {
-                                            if (~var9 >= ~var12_int) {
+                                            if (var9 <= var12_int) {
                                               break L7;
                                             } else {
                                               var13 = param3.i(7553);

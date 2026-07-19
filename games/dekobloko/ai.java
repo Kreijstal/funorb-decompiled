@@ -45,7 +45,7 @@ final class ai extends ek {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               var8_int = -this.field_O - (param5 - -this.field_u) + param1;
               var9 = param0 - this.field_V - (param4 - -this.field_D);
-              if (~(var8_int * var8_int + var9 * var9) > ~(this.field_K * this.field_K)) {
+              if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
                 L1: {
                   var10 = Math.atan2((double)var9, (double)var8_int) - hc.field_b;
                   if (0.0 <= var10) {
@@ -62,7 +62,7 @@ final class ai extends ek {
                 }
                 this.field_R = (int)((double)this.field_Q * var10 / 6.283185307179586);
                 L2: while (true) {
-                  if (~this.field_Q < ~this.field_R) {
+                  if (this.field_Q > this.field_R) {
                     L3: while (true) {
                       if (this.field_R >= 0) {
                         stackOut_14_0 = 1;

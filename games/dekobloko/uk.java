@@ -67,16 +67,16 @@ final class uk extends bh {
               var9 = 0;
               var10 = 0;
               L1: while (true) {
-                if (~this.field_A >= ~var10) {
+                if (this.field_A <= var10) {
                   break L0;
                 } else {
                   var11 = this.field_t;
                   var12 = 0;
                   var13 = 0;
                   L2: while (true) {
-                    if (~this.field_w >= ~var13) {
+                    if (this.field_w <= var13) {
                       L3: {
-                        if (~var12 >= ~this.field_t) {
+                        if (var12 <= this.field_t) {
                           break L3;
                         } else {
                           var12 = this.field_t;
@@ -100,10 +100,10 @@ final class uk extends bh {
                             if (var13 >= var14) {
                               var14 = this.field_A * this.field_t;
                               L7: while (true) {
-                                if (~var14 >= ~var13) {
+                                if (var14 <= var13) {
                                   var15 = 0;
                                   L8: while (true) {
-                                    if (~var15 <= ~this.field_w) {
+                                    if (var15 >= this.field_w) {
                                       var10++;
                                       continue L1;
                                     } else {
@@ -118,7 +118,7 @@ final class uk extends bh {
                                           } else {
                                             var20 = var22.field_q[this.field_A * var18 + var10];
                                             L11: while (true) {
-                                              if (~this.field_v >= ~var19) {
+                                              if (this.field_v <= var19) {
                                                 var18++;
                                                 var19 = 0;
                                                 continue L9;
@@ -153,13 +153,13 @@ final class uk extends bh {
                                           }
                                         }
                                         L13: while (true) {
-                                          if (~var12 >= ~var18) {
+                                          if (var12 <= var18) {
                                             var15++;
                                             continue L8;
                                           } else {
                                             var20 = this.field_q[var10 + this.field_A * var18];
                                             L14: while (true) {
-                                              if (~this.field_v >= ~var19) {
+                                              if (this.field_v <= var19) {
                                                 var18++;
                                                 var19 = 0;
                                                 continue L13;
@@ -236,7 +236,7 @@ final class uk extends bh {
                         }
                       }
                       var9++;
-                      if (~((this.field_v + var14 - 1) / this.field_v) < ~var12) {
+                      if ((this.field_v + var14 - 1) / this.field_v > var12) {
                         var12 = (-1 + this.field_v + var14) / this.field_v;
                         var13++;
                         continue L2;
@@ -266,7 +266,7 @@ final class uk extends bh {
                   var12 = 0;
                   var13 = 0;
                   L19: while (true) {
-                    if (~this.field_v >= ~var13) {
+                    if (this.field_v <= var13) {
                       L20: {
                         if (var11 >= 0) {
                           break L20;
@@ -276,7 +276,7 @@ final class uk extends bh {
                         }
                       }
                       L21: {
-                        if (~var12 >= ~this.field_A) {
+                        if (var12 <= this.field_A) {
                           break L21;
                         } else {
                           var12 = this.field_A;
@@ -292,7 +292,7 @@ final class uk extends bh {
                             if (var12 <= var14) {
                               var14 = var12;
                               L24: while (true) {
-                                if (~this.field_A >= ~var14) {
+                                if (this.field_A <= var14) {
                                   var14 = 0;
                                   L25: while (true) {
                                     if (this.field_v <= var14) {
@@ -305,7 +305,7 @@ final class uk extends bh {
                                       var18 = 0;
                                       L26: while (true) {
                                         L27: {
-                                          if (~var16 <= ~var15) {
+                                          if (var16 >= var15) {
                                             break L27;
                                           } else {
                                             var19_ref_pi = var22.field_q[var10 * this.field_A + var17];
@@ -315,7 +315,7 @@ final class uk extends bh {
                                                 var18 = 0;
                                                 continue L26;
                                               } else {
-                                                if (~var16 > ~var15) {
+                                                if (var16 < var15) {
                                                   if (var19_ref_pi != me.field_J) {
                                                     L29: {
                                                       if (var19_ref_pi == null) {
@@ -345,7 +345,7 @@ final class uk extends bh {
                                           }
                                         }
                                         L30: while (true) {
-                                          if (~var17 <= ~var12) {
+                                          if (var17 >= var12) {
                                             var14++;
                                             continue L25;
                                           } else {
@@ -421,14 +421,14 @@ final class uk extends bh {
                         var14 = var4 + (var9 * (var5 - var4) / var7 - -((var7 + -var9) * (var9 * var6) / var8));
                         ub.field_d[var13] = var14;
                         var9++;
-                        if (~var11 < ~(var14 / this.field_w)) {
+                        if (var11 > var14 / this.field_w) {
                           var11 = var14 / this.field_w;
                           break L34;
                         } else {
                           break L34;
                         }
                       }
-                      if (~((this.field_w + var14 + -1) / this.field_w) < ~var12) {
+                      if ((this.field_w + var14 + -1) / this.field_w > var12) {
                         var12 = (var14 - (-this.field_w + 1)) / this.field_w;
                         var13++;
                         continue L19;
@@ -501,7 +501,7 @@ final class uk extends bh {
               var5--;
               var6 = var2;
               L2: while (true) {
-                if (~var6 <= ~var3) {
+                if (var6 >= var3) {
                   continue L0;
                 } else {
                   if (this.field_q[var5 * this.field_A + var6] == me.field_J) {
@@ -518,12 +518,12 @@ final class uk extends bh {
           var6 = 32 / ((-48 - param0) / 43);
           L3: while (true) {
             L4: {
-              if (~var5 >= ~var4) {
+              if (var5 <= var4) {
                 break L4;
               } else {
                 var7 = var2;
                 L5: while (true) {
-                  if (~var7 <= ~var3) {
+                  if (var7 >= var3) {
                     var4++;
                     continue L3;
                   } else {
@@ -539,7 +539,7 @@ final class uk extends bh {
             }
             L6: while (true) {
               L7: {
-                if (~var3 >= ~var2) {
+                if (var3 <= var2) {
                   break L7;
                 } else {
                   var3--;
@@ -561,7 +561,7 @@ final class uk extends bh {
               }
               L9: while (true) {
                 L10: {
-                  if (~var2 <= ~var3) {
+                  if (var2 >= var3) {
                     break L10;
                   } else {
                     var7 = var4;
@@ -585,13 +585,13 @@ final class uk extends bh {
                     if (0 < var2) {
                       break L13;
                     } else {
-                      if (~this.field_A < ~var3) {
+                      if (this.field_A > var3) {
                         break L13;
                       } else {
                         if (0 < var4) {
                           break L13;
                         } else {
-                          if (~this.field_t >= ~var5) {
+                          if (this.field_t <= var5) {
                             break L12;
                           } else {
                             break L13;
@@ -605,7 +605,7 @@ final class uk extends bh {
                   var9 = new pi[var7 * var8];
                   var10 = 0;
                   L14: while (true) {
-                    if (~var8 >= ~var10) {
+                    if (var8 <= var10) {
                       this.field_u = this.field_u + var4;
                       this.field_A = var7;
                       this.field_t = var8;
@@ -615,7 +615,7 @@ final class uk extends bh {
                     } else {
                       var11 = 0;
                       L15: while (true) {
-                        if (~var7 >= ~var11) {
+                        if (var7 <= var11) {
                           var10++;
                           continue L14;
                         } else {

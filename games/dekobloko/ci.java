@@ -25,7 +25,7 @@ final class ci {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
         pi[] var1 = new pi[ec.field_g];
-        for (var2 = 0; ~var2 > ~ec.field_g; var2++) {
+        for (var2 = 0; var2 < ec.field_g; var2++) {
             var1[var2] = new pi(ed.field_f, i.field_d, sg.field_d[var2], fh.field_a[var2], tm.field_a[var2], hc.field_c[var2], tc.field_Nb[var2], mb.field_d);
         }
         oa.a(126);

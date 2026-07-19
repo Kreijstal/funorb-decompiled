@@ -58,7 +58,7 @@ final class rg {
                       var4 = ji.a(';', (byte) 66, var3);
                       var5 = 0;
                       L2: while (true) {
-                        if (~var5 <= ~var4.length) {
+                        if (var5 >= var4.length) {
                           break L1;
                         } else {
                           L3: {

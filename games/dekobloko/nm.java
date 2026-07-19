@@ -298,7 +298,7 @@ final class nm extends w {
                         break L4;
                       }
                     }
-                    if (~ff.field_o.a(dj.field_ab.toString()) < ~var5) {
+                    if (ff.field_o.a(dj.field_ab.toString()) > var5) {
                       discarded$4 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
                       break L3;
                     } else {
@@ -491,7 +491,7 @@ final class nm extends w {
                 break L6;
               }
             }
-            if (~(this.field_Ob.field_F + (this.field_Ob.field_N + -this.field_Rb.field_N)) <= ~-(this.field_Ob.field_Mb + this.field_Ob.field_Ib)) {
+            if (this.field_Ob.field_F + (this.field_Ob.field_N + -this.field_Rb.field_N) >= -(this.field_Ob.field_Mb + this.field_Ob.field_Ib)) {
               break L5;
             } else {
               this.field_Ob.field_Mb = -this.field_Ob.field_Ib + -(-this.field_Rb.field_N + (this.field_Ob.field_F + this.field_Ob.field_N));
@@ -499,7 +499,7 @@ final class nm extends w {
             }
           } else {
             L7: {
-              if (~-(this.field_Ob.field_Mb + this.field_Ob.field_Ib) >= ~(this.field_Ob.field_F + this.field_Ob.field_N + -this.field_Rb.field_N)) {
+              if (-(this.field_Ob.field_Mb + this.field_Ob.field_Ib) <= this.field_Ob.field_F + this.field_Ob.field_N + -this.field_Rb.field_N) {
                 break L7;
               } else {
                 this.field_Ob.field_Mb = -(-this.field_Rb.field_N + (this.field_Ob.field_N - -this.field_Ob.field_F)) - this.field_Ob.field_Ib;

@@ -130,12 +130,12 @@ final class hf {
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, byte param3) {
-        String discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        RuntimeException var4 = null;
+        String discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
+        CharSequence var4 = null;
         int var4_int = 0;
-        CharSequence var4_ref = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6_int = 0;
         StringBuilder var6 = null;
@@ -176,20 +176,20 @@ final class hf {
                 var5 = 0;
                 var6_int = param1;
                 L1: while (true) {
-                  if (~var6_int <= ~var4_int) {
+                  if (var6_int >= var4_int) {
                     L2: {
                       var6 = new StringBuilder(var5);
                       if (param3 == 74) {
                         break L2;
                       } else {
                         var10 = (CharSequence[]) null;
-                        discarded$3 = hf.a(-7, 123, (CharSequence[]) null, (byte) 21);
+                        discarded$7 = hf.a(-7, 123, (CharSequence[]) null, (byte) 21);
                         break L2;
                       }
                     }
                     var7 = param1;
                     L3: while (true) {
-                      if (~var7 <= ~var4_int) {
+                      if (var7 >= var4_int) {
                         stackOut_23_0 = var6.toString();
                         stackIn_24_0 = stackOut_23_0;
                         break L0;
@@ -197,10 +197,10 @@ final class hf {
                         L4: {
                           var8 = param2[var7];
                           if (var8 == null) {
-                            discarded$4 = var6.append("null");
+                            discarded$8 = var6.append("null");
                             break L4;
                           } else {
-                            discarded$5 = var6.append(var8);
+                            discarded$9 = var6.append(var8);
                             break L4;
                           }
                         }
@@ -225,8 +225,8 @@ final class hf {
                 }
               } else {
                 var11 = param2[param1];
-                var4_ref = var11;
-                if (var4_ref == null) {
+                var4 = var11;
+                if (var4 == null) {
                   stackOut_7_0 = "null";
                   stackIn_8_0 = stackOut_7_0;
                   return stackIn_8_0;
@@ -243,8 +243,8 @@ final class hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) (var4);
+            var4_ref = decompiledCaughtException;
+            stackOut_25_0 = (RuntimeException) (var4_ref);
             stackOut_25_1 = new StringBuilder().append("hf.D(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;

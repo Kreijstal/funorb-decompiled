@@ -294,7 +294,7 @@ final class pl {
                     }
                   }
                   L9: {
-                    if (~var6 <= ~var5_ref.length()) {
+                    if (var6 >= var5_ref.length()) {
                       discarded$12 = var7.append('/');
                       break L9;
                     } else {

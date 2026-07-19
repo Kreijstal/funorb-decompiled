@@ -11,7 +11,7 @@ final class tb {
         var9 = client.field_A ? 1 : 0;
         if (param5 > param0) {
           if (param1 <= param5) {
-            if (~param0 > ~param1) {
+            if (param0 < param1) {
               ib.a(param2, param1, param4, param5, param3, (byte) 117, param7, param0, hk.field_l);
               return;
             } else {
@@ -23,7 +23,7 @@ final class tb {
             return;
           }
         } else {
-          if (~param0 <= ~param1) {
+          if (param0 >= param1) {
             if (param1 > param5) {
               ib.a(param4, param1, param2, param0, param3, (byte) 117, param7, param5, hk.field_l);
               return;

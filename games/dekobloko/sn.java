@@ -751,7 +751,7 @@ final class sn {
                           ai.field_N = new byte[uj.field_a];
                           var8 = 0;
                           L17: while (true) {
-                            if (~var8 <= ~uj.field_a) {
+                            if (var8 >= uj.field_a) {
                               break L16;
                             } else {
                               ai.field_N[var8] = de.field_V.g((byte) -99);

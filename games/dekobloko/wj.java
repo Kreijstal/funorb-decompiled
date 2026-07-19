@@ -643,7 +643,7 @@ final class wj extends gk implements vn {
               if (wc.field_n) {
                 break L7;
               } else {
-                if (~var5 > ~kf.field_M) {
+                if (var5 < kf.field_M) {
                   var10_int = rf.a(0, var8_ref_hl.field_m);
                   if (var8_ref_hl.b((byte) 94) < var10_int) {
                     break L7;

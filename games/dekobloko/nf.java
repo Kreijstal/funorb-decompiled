@@ -85,7 +85,7 @@ final class nf {
           if (this.field_a.length != 0) {
             var3 = 1;
             L0: while (true) {
-              if (~this.field_a.length >= ~var3) {
+              if (this.field_a.length <= var3) {
                 if (param1 <= 103) {
                   nf.a(-11);
                   return -1 + this.field_a.length;
@@ -93,7 +93,7 @@ final class nf {
                   return -1 + this.field_a.length;
                 }
               } else {
-                if (~param0 > ~(this.field_a[-1 + var3] + this.field_a[var3] >> 1)) {
+                if (param0 < this.field_a[-1 + var3] + this.field_a[var3] >> 1) {
                   return var3 + -1;
                 } else {
                   var3++;

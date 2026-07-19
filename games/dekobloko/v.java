@@ -108,7 +108,7 @@ final class v {
                   if (param2 == null) {
                     break L2;
                   } else {
-                    if (~param2.length != ~var4_int) {
+                    if (param2.length != var4_int) {
                       break L2;
                     } else {
                       break L1;
@@ -135,7 +135,7 @@ final class v {
                 } else {
                   var7 = 0;
                   L5: while (true) {
-                    if (~var4_int >= ~var7) {
+                    if (var4_int <= var7) {
                       break L3;
                     } else {
                       param2[var7] = (short)var6;

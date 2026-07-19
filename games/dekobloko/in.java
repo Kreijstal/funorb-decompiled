@@ -620,12 +620,12 @@ final class in extends bh {
             var9 = var29;
             var10 = 0;
             L2: while (true) {
-              if (~var10 <= ~var5) {
+              if (var10 >= var5) {
                 break L0;
               } else {
                 var11 = 0;
                 L3: while (true) {
-                  if (~var4_int >= ~var11) {
+                  if (var4_int <= var11) {
                     var10++;
                     continue L2;
                   } else {
@@ -651,7 +651,7 @@ final class in extends bh {
                             } else {
                               var19 = 31 & var12;
                               L6: while (true) {
-                                if (~var17 <= ~var18) {
+                                if (var17 >= var18) {
                                   break L5;
                                 } else {
                                   L7: {
@@ -667,7 +667,7 @@ final class in extends bh {
                                     }
                                   }
                                   L8: {
-                                    if (~var14 <= ~var21) {
+                                    if (var14 >= var21) {
                                       break L8;
                                     } else {
                                       var14 = var21;
@@ -829,7 +829,7 @@ final class in extends bh {
           var15 = vl.a(23841, param10, this.field_t.field_C * -param0);
           var16 = var14;
           if (var15 >= 0) {
-            if (~this.field_t.field_C <= ~var15) {
+            if (this.field_t.field_C >= var15) {
               break L0;
             } else {
               var15 = this.field_t.field_C;
@@ -842,7 +842,7 @@ final class in extends bh {
         }
         L1: {
           if (var14 >= 0) {
-            if (~this.field_t.field_K <= ~var14) {
+            if (this.field_t.field_K >= var14) {
               break L1;
             } else {
               var14 = this.field_t.field_K;
@@ -858,7 +858,7 @@ final class in extends bh {
           if (var17 >= this.field_t.field_K) {
             var17 = 0;
             L3: while (true) {
-              if (~var14 >= ~var17) {
+              if (var14 <= var17) {
                 var17 = this.field_t.field_K + -1;
                 L4: while (true) {
                   if (var17 < var14) {
@@ -866,10 +866,10 @@ final class in extends bh {
                   } else {
                     var18 = 0;
                     L5: while (true) {
-                      if (~var18 <= ~var15) {
+                      if (var18 >= var15) {
                         var18 = this.field_t.field_C - 1;
                         L6: while (true) {
-                          if (~var15 < ~var18) {
+                          if (var15 > var18) {
                             var17--;
                             continue L4;
                           } else {

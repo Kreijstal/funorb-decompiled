@@ -82,7 +82,7 @@ final class vh {
 
     final static int a(int param0, int param1, int param2, int param3) {
         int discarded$2 = 0;
-        if (~hk.field_j <= ~(param2 + param3)) {
+        if (hk.field_j >= param2 + param3) {
           return param3;
         } else {
           if (-param2 + param3 + param0 >= 0) {

@@ -265,7 +265,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                   if (0 > var2_int) {
                     break L2;
                   } else {
-                    if (~var2_int <= ~be.field_w.length) {
+                    if (var2_int >= be.field_w.length) {
                       break L2;
                     } else {
                       var2_int = be.field_w[var2_int];
@@ -302,7 +302,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
               L4: {
                 if (var2_int >= 0) {
                   var3 = jh.field_e + 1 & 127;
-                  if (~var3 != ~sf.field_B) {
+                  if (var3 != sf.field_B) {
                     pf.field_i[jh.field_e] = var2_int;
                     bl.field_Z[jh.field_e] = ' ';
                     jh.field_e = var3;
@@ -489,7 +489,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                     if (var2_int < 0) {
                       break L3;
                     } else {
-                      if (~var2_int <= ~be.field_w.length) {
+                      if (var2_int >= be.field_w.length) {
                         break L3;
                       } else {
                         var2_int = be.field_w[var2_int] & -129;
@@ -508,7 +508,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                   } else {
                     la.field_h[wi.field_b] = ~var2_int;
                     wi.field_b = 127 & wi.field_b - -1;
-                    if (~rc.field_a == ~wi.field_b) {
+                    if (rc.field_a == wi.field_b) {
                       wi.field_b = -1;
                       break L1;
                     } else {
@@ -606,7 +606,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         try {
           L0: {
             L1: {
-              if (~param1 > ~param2) {
+              if (param1 < param2) {
                 var3_int = param1;
                 param1 = param2;
                 param2 = var3_int;

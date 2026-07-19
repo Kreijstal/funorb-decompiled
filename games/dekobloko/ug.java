@@ -131,7 +131,7 @@ final class ug extends bh {
             var65 = sf.field_C;
             var13 = 0;
             L3: while (true) {
-              if (~param0.field_D >= ~var13) {
+              if (param0.field_D <= var13) {
                 var44 = 0;
                 var13 = var44;
                 L4: while (true) {
@@ -167,7 +167,7 @@ final class ug extends bh {
                     }
                     L7: {
                       var19 = stackIn_27_0;
-                      if (~id.field_M.length >= ~param0.field_r[var14]) {
+                      if (id.field_M.length <= param0.field_r[var14]) {
                         stackOut_29_0 = -1;
                         stackIn_30_0 = stackOut_29_0;
                         break L7;
@@ -186,7 +186,7 @@ final class ug extends bh {
                           if (null == param0.field_j) {
                             break L9;
                           } else {
-                            if (~param0.field_j.length >= ~var14) {
+                            if (param0.field_j.length <= var14) {
                               break L9;
                             } else {
                               if (param0.field_j[var14] == -1) {
@@ -220,7 +220,7 @@ final class ug extends bh {
                         if (var18 != var19) {
                           break L11;
                         } else {
-                          if (~var20 == ~var19) {
+                          if (var20 == var19) {
                             L12: {
                               var28 = var66[var18];
                               var29 = var67[var18];
@@ -404,7 +404,7 @@ final class ug extends bh {
             } else {
               var3_int = 0;
               L1: while (true) {
-                if (~var3_int <= ~param0.length()) {
+                if (var3_int >= param0.length()) {
                   var4 = 0;
                   stackOut_12_0 = 1;
                   stackIn_13_0 = stackOut_12_0;

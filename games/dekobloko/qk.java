@@ -233,7 +233,7 @@ final class qk implements Runnable {
                   synchronized (var3_ref) {
                     L2: {
                       L3: {
-                        if (~this.field_f == ~this.field_q) {
+                        if (this.field_f == this.field_q) {
                           if (!this.field_g) {
                             try {
                               L4: {

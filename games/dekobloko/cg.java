@@ -285,7 +285,7 @@ final class cg {
             }
             var2_int = 0;
             L2: while (true) {
-              if (~param1.length >= ~var2_int) {
+              if (param1.length <= var2_int) {
                 stackOut_6_0 = (ck[]) (param1);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;

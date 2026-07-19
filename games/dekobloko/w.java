@@ -419,7 +419,7 @@ class w extends km {
                 }
               }
               L28: {
-                if (~this.field_J.a(var27) < ~(this.field_mb + -(2 * this.field_ub))) {
+                if (this.field_J.a(var27) > this.field_mb + -(2 * this.field_ub)) {
                   break L28;
                 } else {
                   if (0 > var27.indexOf("<br>")) {
@@ -594,7 +594,7 @@ class w extends km {
             var6 = 0;
         }
         int var10 = var7 - param2;
-        if (!(~var5 >= ~var10)) {
+        if (!(var5 <= var10)) {
             var5 = var10;
         }
         if (!(0 <= var5)) {
@@ -760,10 +760,10 @@ class w extends km {
                     if (hk.field_g <= he.field_S) {
                       break L5;
                     } else {
-                      if (~hk.field_h < ~nf.field_h) {
+                      if (hk.field_h > nf.field_h) {
                         break L5;
                       } else {
-                        if (~nf.field_h > ~hk.field_b) {
+                        if (nf.field_h < hk.field_b) {
                           this.field_xb = -this.field_E + he.field_S;
                           this.field_Jb = -this.field_pb + nf.field_h;
                           this.field_gb = ig.field_Yb;
@@ -799,19 +799,19 @@ class w extends km {
               stackOut_25_0 = this;
               stackIn_30_0 = stackOut_25_0;
               stackIn_26_0 = stackOut_25_0;
-              if (~hk.field_c < ~bh.field_g) {
+              if (hk.field_c > bh.field_g) {
                 break L7;
               } else {
                 stackOut_26_0 = this;
                 stackIn_30_0 = stackOut_26_0;
                 stackIn_27_0 = stackOut_26_0;
-                if (~bh.field_g <= ~hk.field_g) {
+                if (bh.field_g >= hk.field_g) {
                   break L7;
                 } else {
                   stackOut_27_0 = this;
                   stackIn_30_0 = stackOut_27_0;
                   stackIn_28_0 = stackOut_27_0;
-                  if (~hk.field_h < ~pm.field_f) {
+                  if (hk.field_h > pm.field_f) {
                     break L7;
                   } else {
                     stackOut_28_0 = this;
@@ -857,7 +857,7 @@ class w extends km {
               stackOut_34_0 = this;
               stackIn_37_0 = stackOut_34_0;
               stackIn_35_0 = stackOut_34_0;
-              if (~be.field_n != ~this.field_gb) {
+              if (be.field_n != this.field_gb) {
                 break L10;
               } else {
                 stackOut_35_0 = this;
@@ -941,7 +941,7 @@ class w extends km {
                 }
               }
               L18: {
-                if (~(-this.field_mb + param4) > ~this.field_vb) {
+                if (-this.field_mb + param4 < this.field_vb) {
                   this.field_vb = param4 + -this.field_mb;
                   break L18;
                 } else {
@@ -951,7 +951,7 @@ class w extends km {
               L19: {
                 this.field_yb = 0;
                 this.field_Mb = 0;
-                if (~(param3 + -this.field_N) > ~this.field_Ib) {
+                if (param3 + -this.field_N < this.field_Ib) {
                   this.field_Ib = param3 - this.field_N;
                   break L19;
                 } else {
@@ -1520,7 +1520,7 @@ class w extends km {
             var4 = (w) ((Object) this.field_M.c((byte) -125));
             while (var4 != null) {
                 var5 = var4.field_mb + var4.field_vb;
-                if (!(~var3 <= ~var5)) {
+                if (!(var3 >= var5)) {
                     var3 = var5;
                 }
                 var4 = (w) ((Object) this.field_M.d(true));

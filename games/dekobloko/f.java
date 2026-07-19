@@ -225,7 +225,7 @@ final class f extends bh {
           stackIn_15_1 = stackOut_13_1;
           stackIn_14_0 = stackOut_13_0;
           stackIn_14_1 = stackOut_13_1;
-          if (~var10.field_n > ~var9.field_n) {
+          if (var10.field_n < var9.field_n) {
             stackOut_15_0 = (ec) ((Object) stackIn_15_0);
             stackOut_15_1 = (ec) ((Object) stackIn_15_1);
             stackOut_15_2 = var9.field_n;
@@ -303,7 +303,7 @@ final class f extends bh {
                   }
                   L12: {
                     var16 = a.field_t.a(pg.field_c);
-                    if (~var15 <= ~var16) {
+                    if (var15 >= var16) {
                       break L12;
                     } else {
                       var15 = var16;
@@ -332,7 +332,7 @@ final class f extends bh {
                   }
                   L15: {
                     var16 = a.field_t.a(k.field_h);
-                    if (~var16 >= ~var15) {
+                    if (var16 <= var15) {
                       break L15;
                     } else {
                       var15 = var16;
@@ -359,7 +359,7 @@ final class f extends bh {
                   }
                   L18: {
                     var16 = a.field_t.a(rc.field_g);
-                    if (~var16 < ~var15) {
+                    if (var16 > var15) {
                       var15 = var16;
                       break L18;
                     } else {
@@ -368,7 +368,7 @@ final class f extends bh {
                   }
                   L19: {
                     var16 = a.field_t.a(ig.field_Xb);
-                    if (~var15 > ~var16) {
+                    if (var15 < var16) {
                       var15 = var16;
                       break L19;
                     } else {
@@ -377,7 +377,7 @@ final class f extends bh {
                   }
                   L20: {
                     var16 = a.field_t.a(di.field_E);
-                    if (~var15 > ~var16) {
+                    if (var15 < var16) {
                       var15 = var16;
                       break L20;
                     } else {

@@ -236,7 +236,7 @@ final class uh implements Iterable {
                 L2: {
                   var4 = ug.field_q[var3];
                   if (var4 >= 0) {
-                    if (~wj.field_Jb.field_h == ~var4) {
+                    if (wj.field_Jb.field_h == var4) {
                       var5 = hd.field_s;
                       break L2;
                     } else {
@@ -280,7 +280,7 @@ final class uh implements Iterable {
                   if (var4 >= 0) {
                     L5: {
                       var2 = var2 + je.field_c;
-                      if (~var4 != ~wj.field_Jb.field_h) {
+                      if (var4 != wj.field_Jb.field_h) {
                         stackOut_15_0 = ql.field_b;
                         stackIn_16_0 = stackOut_15_0;
                         break L5;

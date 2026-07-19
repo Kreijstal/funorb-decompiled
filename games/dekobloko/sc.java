@@ -218,7 +218,7 @@ final class sc extends we {
         var8_array = var6_array;
         var9 = 0;
         L6: while (true) {
-          if (~var8_array.length >= ~var9) {
+          if (var8_array.length <= var9) {
             if (var7 == null) {
               return this.b(2);
             } else {

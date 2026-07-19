@@ -343,9 +343,9 @@ final class ve extends w {
                       if (!this.field_gc) {
                         break L3;
                       } else {
-                        if (~param0.field_Wb != ~this.field_Wb) {
+                        if (param0.field_Wb != this.field_Wb) {
                           L5: {
-                            if (~this.field_Wb <= ~param0.field_Wb) {
+                            if (this.field_Wb >= param0.field_Wb) {
                               stackOut_32_0 = 0;
                               stackIn_33_0 = stackOut_32_0;
                               break L5;

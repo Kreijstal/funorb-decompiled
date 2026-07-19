@@ -168,7 +168,7 @@ final class pf {
                         if (!cd.field_m.field_wc) {
                           break L0;
                         } else {
-                          if (~cd.field_m.field_rc <= ~cd.field_m.field_mc) {
+                          if (cd.field_m.field_rc >= cd.field_m.field_mc) {
                             break L0;
                           } else {
                             if (!var7.field_bc) {
@@ -225,7 +225,7 @@ final class pf {
                     } else {
                       if (var7 != null) {
                         if (cd.field_m.field_wc) {
-                          if (~cd.field_m.field_rc <= ~cd.field_m.field_mc) {
+                          if (cd.field_m.field_rc >= cd.field_m.field_mc) {
                             break L1;
                           } else {
                             if (!var7.field_bc) {

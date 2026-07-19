@@ -136,7 +136,7 @@ final class wb extends w {
         try {
           L0: {
             L1: {
-              if (~hk.field_c >= ~param1) {
+              if (hk.field_c <= param1) {
                 break L1;
               } else {
                 param5 = param5 - (-param1 + hk.field_c);
@@ -145,7 +145,7 @@ final class wb extends w {
               }
             }
             L2: {
-              if (~(param1 + param5) < ~hk.field_g) {
+              if (param1 + param5 > hk.field_g) {
                 param5 = hk.field_g + -param1;
                 break L2;
               } else {
@@ -193,7 +193,7 @@ final class wb extends w {
                             if ((65280 & var8) >> 8 <= 64) {
                               break L8;
                             } else {
-                              if (~(255 & var8 >> 16) < ~(var8 >> 8 & 255)) {
+                              if ((255 & var8 >> 16) > (var8 >> 8 & 255)) {
                                 break L8;
                               } else {
                                 L9: {

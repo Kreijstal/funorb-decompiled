@@ -874,13 +874,13 @@ class a implements gl, nl {
         var16 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (~param1 != ~param0) {
+            if (param1 != param0) {
               L1: {
                 if (param5.a(true)) {
                   L2: {
                     var17 = this.a(param5, (byte) 100);
                     var18 = var17;
-                    if (~param0 > ~param1) {
+                    if (param0 < param1) {
                       var9 = param1;
                       var8 = param0;
                       break L2;
@@ -913,7 +913,7 @@ class a implements gl, nl {
                       }
                       L5: {
                         var14 = stackIn_13_0;
-                        if (~var12 != ~var11) {
+                        if (var12 != var11) {
                           if (var13 != null) {
                             stackOut_17_0 = var13.field_a[-1 + var13.field_a.length];
                             stackIn_18_0 = stackOut_17_0;
@@ -1414,7 +1414,7 @@ class a implements gl, nl {
                     var5 = ji.a(';', (byte) 66, var4);
                     var6 = 0;
                     L3: while (true) {
-                      if (~var5.length >= ~var6) {
+                      if (var5.length <= var6) {
                         break L1;
                       } else {
                         L4: {

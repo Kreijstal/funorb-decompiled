@@ -62,7 +62,7 @@ final class cb {
         if (param0 > -48) {
           discarded$1 = this.a(88);
           L0: while (true) {
-            if (~this.field_j > ~this.field_g) {
+            if (this.field_j < this.field_g) {
               var6 = this.field_f[this.field_j];
               var4 = var6;
               var2 = var4;
@@ -123,7 +123,7 @@ final class cb {
           }
         } else {
           L4: while (true) {
-            if (~this.field_j > ~this.field_g) {
+            if (this.field_j < this.field_g) {
               var5 = this.field_f[this.field_j];
               var4 = var5;
               var2 = var4;
@@ -462,7 +462,7 @@ final class cb {
                   if (null == cd.field_m) {
                     break L4;
                   } else {
-                    if (~param0.field_k == ~cd.field_m.e(125)) {
+                    if (param0.field_k == cd.field_m.e(125)) {
                       L5: {
                         if (!wl.field_p) {
                           var9 = w.field_H;

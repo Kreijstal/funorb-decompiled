@@ -229,7 +229,7 @@ final class ga implements lh {
             } else {
               var3 = 0;
               L0: while (true) {
-                if (~var3 > ~var2_int) {
+                if (var3 < var2_int) {
                   L1: {
                     var4 = param1.charAt(var3);
                     if (45 != var4) {

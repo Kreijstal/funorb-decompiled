@@ -170,7 +170,7 @@ abstract class ba implements nb {
                   var3 = 0;
                   var4 = 0;
                   L1: while (true) {
-                    if (~var17.field_o >= ~var4) {
+                    if (var17.field_o <= var4) {
                       if (var3 != 0) {
                         return;
                       } else {
@@ -178,7 +178,7 @@ abstract class ba implements nb {
                         param1.a(var17.field_C, false);
                         var5 = 0;
                         L2: while (true) {
-                          if (~var5 <= ~var17.field_o) {
+                          if (var5 >= var17.field_o) {
                             discarded$1 = param1.a((byte) -15, var4);
                             var17.b((byte) 103);
                             break L0;
@@ -232,7 +232,7 @@ abstract class ba implements nb {
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
                                         L7: while (true) {
-                                          if (~var10_int <= ~var25.length) {
+                                          if (var10_int >= var25.length) {
                                             var10 = var27.invoke((Object) null, var9);
                                             if (var10 == null) {
                                               param1.a(true, 0);
@@ -381,28 +381,29 @@ abstract class ba implements nb {
                           }
                         }
                       }
-                      if (var13.field_t[var4] != null) {
-                        L22: {
-                          if (var13.field_t[var4].field_c == 2) {
-                            var13.field_A[var4] = -6;
+                      L22: {
+                        if (var13.field_t[var4] != null) {
+                          L23: {
+                            if (var13.field_t[var4].field_c == 2) {
+                              var13.field_A[var4] = -6;
+                              break L23;
+                            } else {
+                              break L23;
+                            }
+                          }
+                          if (var13.field_t[var4].field_c == 0) {
+                            var3 = 1;
                             break L22;
                           } else {
-                            break L22;
+                            var4++;
+                            continue L1;
                           }
+                        } else {
+                          break L22;
                         }
-                        L23: {
-                          if (var13.field_t[var4].field_c != 0) {
-                            break L23;
-                          } else {
-                            break L23;
-                          }
-                        }
-                        var4++;
-                        continue L1;
-                      } else {
-                        var4++;
-                        continue L1;
                       }
+                      var4++;
+                      continue L1;
                     }
                   }
                 }
@@ -523,7 +524,7 @@ abstract class ba implements nb {
             if (null == mk.field_b) {
               break L9;
             } else {
-              if (~param1 < ~mk.field_b.length) {
+              if (param1 > mk.field_b.length) {
                 break L9;
               } else {
                 break L8;

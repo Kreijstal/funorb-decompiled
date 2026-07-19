@@ -115,7 +115,7 @@ final class ib extends t implements vn {
               if (param3 < 0) {
                 break L1;
               } else {
-                if (~qg.field_e < ~param7) {
+                if (qg.field_e > param7) {
                   L2: {
                     if (0 <= param0) {
                       break L2;
@@ -132,10 +132,10 @@ final class ib extends t implements vn {
                     }
                   }
                   L3: {
-                    if (~param0 > ~qg.field_a) {
+                    if (param0 < qg.field_a) {
                       break L3;
                     } else {
-                      if (~param6 > ~qg.field_a) {
+                      if (param6 < qg.field_a) {
                         break L3;
                       } else {
                         if (qg.field_a > param2) {
@@ -150,7 +150,7 @@ final class ib extends t implements vn {
                     var14 = param3 + -param7;
                     if (param1 == param7) {
                       L5: {
-                        if (~param3 != ~param7) {
+                        if (param3 != param7) {
                           var15 = param3 + -param1;
                           if (param6 <= param0) {
                             var12 = (param2 - param0 << 16) / var14;
@@ -190,7 +190,7 @@ final class ib extends t implements vn {
                         var15 = param1 - param7;
                         var12 = (param2 + -param0 << 16) / var14;
                         var11 = (param6 + -param0 << 16) / var15;
-                        if (~var11 > ~var12) {
+                        if (var11 < var12) {
                           var13 = 0;
                           break L6;
                         } else {
@@ -223,18 +223,18 @@ final class ib extends t implements vn {
                         }
                         var16 = qg.field_d[param7];
                         L9: while (true) {
-                          if (~param1 >= ~param7) {
+                          if (param1 <= param7) {
                             break L7;
                           } else {
                             L10: {
                               var17 = var9_int >> 16;
-                              if (~qg.field_a >= ~var17) {
+                              if (qg.field_a <= var17) {
                                 break L10;
                               } else {
                                 var18 = (var10 >> 16) + -(var9_int >> 16);
                                 if (var18 != 0) {
                                   L11: {
-                                    if (~qg.field_a < ~(var18 + var17)) {
+                                    if (qg.field_a > var18 + var17) {
                                       break L11;
                                     } else {
                                       var18 = -1 + (-var17 + qg.field_a);
@@ -320,7 +320,7 @@ final class ib extends t implements vn {
                           var17 = -(var9_int >> 16) + (var10 >> 16);
                           if (var17 != 0) {
                             L16: {
-                              if (~qg.field_a >= ~(var17 + var16)) {
+                              if (qg.field_a <= var17 + var16) {
                                 var17 = qg.field_a + -var16 - 1;
                                 break L16;
                               } else {
@@ -349,7 +349,7 @@ final class ib extends t implements vn {
                         }
                       }
                       param7++;
-                      if (~qg.field_e < ~param7) {
+                      if (qg.field_e > param7) {
                         var10 = var10 + var12;
                         var9_int = var9_int + var11;
                         var15 = var15 + hk.field_j;

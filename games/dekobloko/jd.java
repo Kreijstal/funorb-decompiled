@@ -36,7 +36,7 @@ final class jd extends w {
           }
           if (!param0) {
             L1: {
-              if (~var5 < ~(param3 - param2)) {
+              if (var5 > param3 - param2) {
                 var5 = param3 + -param2;
                 break L1;
               } else {
@@ -614,7 +614,7 @@ final class jd extends w {
         w stackOut_12_2 = null;
         int stackOut_12_3 = 0;
         L0: {
-          if (~this.field_N > ~(2 * this.field_mb)) {
+          if (this.field_N < 2 * this.field_mb) {
             var6 = this.field_N / 2;
             var5 = this.field_N / 2;
             break L0;
@@ -679,7 +679,7 @@ final class jd extends w {
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             stackIn_18_2 = stackOut_17_2;
-            if (~param1 >= ~param0) {
+            if (param1 <= param0) {
               stackOut_19_0 = (w) ((Object) stackIn_19_0);
               stackOut_19_1 = (w) ((Object) stackIn_19_1);
               stackOut_19_2 = (w) ((Object) stackIn_19_2);
@@ -717,7 +717,7 @@ final class jd extends w {
             }
           }
           L4: {
-            if (~var7 <= ~var8) {
+            if (var7 >= var8) {
               break L4;
             } else {
               var8 = var7;
@@ -776,7 +776,7 @@ final class jd extends w {
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             stackIn_12_2 = stackOut_11_2;
-            if (~param1 >= ~param0) {
+            if (param1 <= param0) {
               stackOut_13_0 = (w) ((Object) stackIn_13_0);
               stackOut_13_1 = (w) ((Object) stackIn_13_1);
               stackOut_13_2 = (w) ((Object) stackIn_13_2);

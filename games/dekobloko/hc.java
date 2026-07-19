@@ -48,7 +48,7 @@ final class hc {
               }
               L2: {
                 var2 = -32;
-                if (~ac.field_F <= ~dk.field_i) {
+                if (ac.field_F >= dk.field_i) {
                   break L2;
                 } else {
                   var8 = d.field_h[bh.field_m];
@@ -75,7 +75,7 @@ final class hc {
                   var6 = 0;
                   var4 = var6;
                   L4: while (true) {
-                    if (~var6 <= ~d.field_h.length) {
+                    if (var6 >= d.field_h.length) {
                       if (var3 == null) {
                         break L3;
                       } else {
@@ -83,28 +83,46 @@ final class hc {
                         break L3;
                       }
                     } else {
-                      L5: {
-                        var9 = d.field_h[var6];
-                        if (var9 == null) {
-                          break L5;
-                        } else {
-                          break L5;
+                      var9 = d.field_h[var6];
+                      if (var9 != null) {
+                        L5: {
+                          L6: {
+                            if (365 != var9.field_K) {
+                              break L6;
+                            } else {
+                              if (var9.field_C != 139) {
+                                break L6;
+                              } else {
+                                break L5;
+                              }
+                            }
+                          }
+                          if (var3 != null) {
+                            var3 = (String) (var3) + ", " + var6;
+                            break L5;
+                          } else {
+                            var3 = Integer.toString(var6);
+                            break L5;
+                          }
                         }
+                        var6++;
+                        continue L4;
+                      } else {
+                        var6++;
+                        continue L4;
                       }
-                      var6++;
-                      continue L4;
                     }
                   }
                 }
               }
               break L0;
             } else {
-              L6: {
+              L7: {
                 if (null == bn.field_g) {
-                  break L6;
+                  break L7;
                 } else {
                   discarded$5 = bn.field_g.a(wf.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L6;
+                  break L7;
                 }
               }
               return;

@@ -56,7 +56,7 @@ class km extends be {
             var3 = new byte[var2_int];
             var4 = 0;
             L1: while (true) {
-              if (~var4 <= ~var2_int) {
+              if (var4 >= var2_int) {
                 stackOut_66_0 = (byte[]) (var3);
                 stackIn_67_0 = stackOut_66_0;
                 break L0;

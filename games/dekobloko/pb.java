@@ -179,7 +179,7 @@ final class pb {
                           var12.c(18 - hg.field_a.field_F, 241 - hg.field_a.field_z);
                           var7 = 0;
                           L2: while (true) {
-                            if (~var7 <= ~dl.field_K.length) {
+                            if (var7 >= dl.field_K.length) {
                               dl.field_K = null;
                               oh.field_e = pj.field_I.c();
                               oh.field_e.a();
