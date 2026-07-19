@@ -42,7 +42,7 @@ final class ua extends vi {
                 break L1;
               }
             }
-            stackOut_5_0 = (String) var2;
+            stackOut_5_0 = (String) (var2);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -50,23 +50,23 @@ final class ua extends vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("ua.A(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -74,17 +74,17 @@ final class ua extends vi {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + true + ')');
+          throw dh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + true + ')');
         }
         return stackIn_6_0;
     }
 
     final Object c(int param0) {
         if (param0 != -1) {
-            field_E = null;
-            return ((ua) this).field_F;
+            field_E = (int[]) null;
+            return this.field_F;
         }
-        return ((ua) this).field_F;
+        return this.field_F;
     }
 
     final static void h(byte param0) {
@@ -112,7 +112,7 @@ final class ua extends vi {
             jh.a((byte) 116, tg.field_a, param3);
             int var4_int = -74;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + 46 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ua.D(" + 46 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class ua extends vi {
             }
           }
         } else {
-          field_H = null;
+          field_H = (w) null;
           if (param0 <= 0L) {
             return;
           } else {
@@ -148,7 +148,7 @@ final class ua extends vi {
     }
 
     final static void i(byte param0) {
-        ug dupTemp$0 = (ug) (Object) qi.field_Q.c((byte) -121);
+        ug dupTemp$0 = (ug) ((Object) qi.field_Q.c((byte) -121));
         ug var4 = dupTemp$0;
         ug var1 = dupTemp$0;
         int var2 = 0;
@@ -166,7 +166,7 @@ final class ua extends vi {
 
     final boolean g(byte param0) {
         if (param0 != -83) {
-            field_C = null;
+            field_C = (String) null;
             return false;
         }
         return false;
@@ -175,9 +175,9 @@ final class ua extends vi {
     ua(Object param0, int param1) {
         super(param1);
         try {
-            ((ua) this).field_F = param0;
+            this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

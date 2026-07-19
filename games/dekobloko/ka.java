@@ -16,8 +16,8 @@ final class ka extends ma {
         int var4 = 0;
         L0: {
           var4 = client.field_A ? 1 : 0;
-          var2 = new rd(((ka) this).field_Q);
-          var3 = (bl) (Object) var2.a((byte) 71);
+          var2 = new rd(this.field_Q);
+          var3 = (bl) ((Object) var2.a((byte) 71));
           if (param0 <= -73) {
             break L0;
           } else {
@@ -30,7 +30,7 @@ final class ka extends ma {
             if (var3.field_S) {
               return var3;
             } else {
-              var3 = (bl) (Object) var2.a(-93);
+              var3 = (bl) ((Object) var2.a(-93));
               continue L1;
             }
           } else {
@@ -42,15 +42,15 @@ final class ka extends ma {
     final void c(boolean param0) {
         int var4 = client.field_A ? 1 : 0;
         if (!param0) {
-            field_O = null;
+            field_O = (String) null;
         }
-        rd var2 = new rd(((ka) this).field_Q);
-        bl var3 = (bl) (Object) var2.a((byte) 71);
+        rd var2 = new rd(this.field_Q);
+        bl var3 = (bl) ((Object) var2.a((byte) 71));
         while (var3 != null) {
             var3.field_S = false;
-            var3 = (bl) (Object) var2.a(-48);
+            var3 = (bl) ((Object) var2.a(-48));
         }
-        ((ka) this).field_L = null;
+        this.field_L = null;
     }
 
     final static int a(byte param0, int param1, Random param2) {
@@ -87,7 +87,7 @@ final class ka extends ma {
                   if (param0 >= 42) {
                     break L1;
                   } else {
-                    field_N = null;
+                    field_N = (pl) null;
                     break L1;
                   }
                 }
@@ -113,23 +113,23 @@ final class ka extends ma {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("ka.S(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -137,14 +137,14 @@ final class ka extends ma {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         return stackIn_12_0;
     }
 
     public ka() {
         super(0, 0, cf.field_f, vd.field_n, (gl) null, (kg) null);
-        ((ka) this).field_Q = new vj();
+        this.field_Q = new vj();
     }
 
     final static void a(boolean param0, int param1) {
@@ -573,17 +573,17 @@ final class ka extends ma {
     final void g(int param0) {
         int var4 = client.field_A ? 1 : 0;
         if (param0 != 0) {
-            field_O = null;
+            field_O = (String) null;
         }
-        rd var2 = new rd(((ka) this).field_Q);
-        bl var3 = (bl) (Object) var2.a((byte) 71);
+        rd var2 = new rd(this.field_Q);
+        bl var3 = (bl) ((Object) var2.a((byte) 71));
         while (var3 != null) {
             if (!(!var3.h((byte) 39))) {
                 var3.b((byte) 124);
             }
-            var3 = (bl) (Object) var2.a(param0 + -70);
+            var3 = (bl) ((Object) var2.a(param0 + -70));
         }
-        ((ka) this).field_L = (ce) (Object) ((ka) this).g((byte) -87);
+        this.field_L = (ce) ((Object) this.g((byte) -87));
     }
 
     public static void h(byte param0) {
@@ -599,13 +599,13 @@ final class ka extends ma {
         bl var3 = null;
         int var4 = 0;
         var4 = client.field_A ? 1 : 0;
-        var2 = new rd(((ka) this).field_Q);
+        var2 = new rd(this.field_Q);
         if (param0 == 14) {
-          var3 = (bl) (Object) var2.a((byte) 71);
+          var3 = (bl) ((Object) var2.a((byte) 71));
           L0: while (true) {
             if (var3 != null) {
               if (!var3.field_S) {
-                var3 = (bl) (Object) var2.a(-93);
+                var3 = (bl) ((Object) var2.a(-93));
                 continue L0;
               } else {
                 return var3.e((byte) -74);
@@ -615,57 +615,58 @@ final class ka extends ma {
             }
           }
         } else {
-          return null;
+          return (ce) null;
         }
     }
 
     final void f(byte param0) {
         int var4 = client.field_A ? 1 : 0;
         if (param0 != -66) {
-            field_P = null;
+            field_P = (af) null;
         }
-        rd var2 = new rd(((ka) this).field_Q);
-        bl var3 = (bl) (Object) var2.a((byte) 71);
+        rd var2 = new rd(this.field_Q);
+        bl var3 = (bl) ((Object) var2.a((byte) 71));
         while (var3 != null) {
             if (var3.f((byte) 110)) {
                 var3.b((byte) 120);
             }
-            var3 = (bl) (Object) var2.a(param0 ^ 8);
+            var3 = (bl) ((Object) var2.a(param0 ^ 8));
         }
     }
 
     final void a(byte param0, ce param1) {
         bl var3 = null;
+        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof bl)) {
                 throw new IllegalArgumentException();
             }
             if (param0 > -104) {
-                Object var4 = null;
-                ((ka) this).a((byte) -72, (ce) null);
+                ce var4 = (ce) null;
+                this.a((byte) -72, (ce) null);
             }
-            var3 = (bl) (Object) param1;
-            ((ka) this).field_Q.b(var3, 7143);
+            var3 = (bl) ((Object) param1);
+            this.field_Q.b(var3, 7143);
             var3.field_S = true;
-            boolean discarded$0 = var3.a(false, (ce) this);
+            discarded$0 = var3.a(false, (ce) (this));
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ka.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ka.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = client.field_A ? 1 : 0;
-        if (null != ((ka) this).field_p) {
-            ((ka) this).field_p.a(true, param0, param3, (byte) -100, (ce) this);
+        if (null != this.field_p) {
+            this.field_p.a(true, param0, param3, (byte) -100, (ce) (this));
         }
-        rd var5 = new rd(((ka) this).field_Q);
+        rd var5 = new rd(this.field_Q);
         if (param1 > -103) {
             return;
         }
-        ce var6 = (ce) (Object) var5.a(true);
+        ce var6 = (ce) ((Object) var5.a(true));
         while (var6 != null) {
-            var6.a(param0 + ((ka) this).field_u, -116, param2, ((ka) this).field_D + param3);
-            var6 = (ce) (Object) var5.d(2078965185);
+            var6.a(param0 + this.field_u, -116, param2, this.field_D + param3);
+            var6 = (ce) ((Object) var5.d(2078965185));
         }
     }
 

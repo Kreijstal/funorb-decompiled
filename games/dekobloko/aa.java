@@ -22,7 +22,7 @@ final class aa {
             return qb.field_t;
         }
         if (param0 >= -25) {
-            field_c = null;
+            field_c = (pi[]) null;
             if (ka.field_P == pa.field_V) {
                 return pn.field_fb;
             }

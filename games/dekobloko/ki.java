@@ -112,7 +112,7 @@ final class ki extends bh {
                 ib.field_pb = var9.f((byte) -61);
                 if (sa.field_B.equals(oa.field_f)) {
                   stackOut_22_0 = null;
-                  stackIn_23_0 = (int[]) (Object) stackOut_22_0;
+                  stackIn_23_0 = (int[]) ((Object) stackOut_22_0);
                   break L6;
                 } else {
                   stackOut_21_0 = var9.field_F;
@@ -126,7 +126,7 @@ final class ki extends bh {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            qb.a((Throwable) (Object) var6, 16408, "CC1");
+            qb.a((Throwable) ((Object) var6), 16408, "CC1");
             ib.field_pb = null;
             fa.field_q = null;
             return new hl(param1);
@@ -182,23 +182,23 @@ final class ki extends bh {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("ki.C(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -206,7 +206,7 @@ final class ki extends bh {
                   break L2;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -216,12 +216,12 @@ final class ki extends bh {
     }
 
     public static void c(byte param0) {
-        Object var2 = null;
+        java.applet.Applet var2 = null;
         field_t = null;
         field_w = null;
         field_u = null;
         if (param0 != 22) {
-          var2 = null;
+          var2 = (java.applet.Applet) null;
           ki.a((byte) 121, (java.applet.Applet) null);
           field_n = null;
           return;
@@ -232,12 +232,12 @@ final class ki extends bh {
     }
 
     ki(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((ki) this).field_v = param0;
-        ((ki) this).field_o = param4;
-        ((ki) this).field_q = param5;
-        ((ki) this).field_s = param2;
-        ((ki) this).field_p = param1;
-        ((ki) this).field_r = param3;
+        this.field_v = param0;
+        this.field_o = param4;
+        this.field_q = param5;
+        this.field_s = param2;
+        this.field_p = param1;
+        this.field_r = param3;
     }
 
     static {

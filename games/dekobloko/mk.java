@@ -28,16 +28,16 @@ abstract class mk {
             ba.field_d = param4;
             gf.field_b = param3;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "mk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "mk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0) {
         wc var3 = null;
         if (param0 != -5) {
-            Object var2 = null;
+            cc var2 = (cc) null;
             mk.a(-94, -9, (byte) -115, (cc) null, -10, (cc) null);
-            var3 = (wc) (Object) ci.field_a.d(param0 ^ 113);
+            var3 = (wc) ((Object) ci.field_a.d(param0 ^ 113));
             if (!(var3 != null)) {
                 throw new IllegalStateException();
             }
@@ -47,7 +47,7 @@ abstract class mk {
             sn.field_e.a(var3, param0 ^ -2782);
             return;
         }
-        wc var4 = (wc) (Object) ci.field_a.d(param0 ^ 113);
+        wc var4 = (wc) ((Object) ci.field_a.d(param0 ^ 113));
         if (!(var4 != null)) {
             throw new IllegalStateException();
         }

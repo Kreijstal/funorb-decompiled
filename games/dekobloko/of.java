@@ -16,7 +16,7 @@ abstract class of {
 
     public static void a(byte param0) {
         field_b = null;
-        field_f = null;
+        field_f = (byte[][]) null;
         field_g = null;
         field_a = null;
     }
@@ -81,7 +81,7 @@ abstract class of {
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var4 = (ki) (Object) cg.field_c.c((byte) -112);
+            var4 = (ki) ((Object) cg.field_c.c((byte) -112));
             L1: while (true) {
               if (var4 == null) {
                 L2: {
@@ -104,7 +104,7 @@ abstract class of {
                 }
               } else {
                 kk.a(param1, -15016, var4);
-                var4 = (ki) (Object) cg.field_c.d(true);
+                var4 = (ki) ((Object) cg.field_c.d(true));
                 continue L1;
               }
             }
@@ -112,7 +112,7 @@ abstract class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2_ref, "of.C(" + param0 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) var2_ref), "of.C(" + param0 + ',' + param1 + ')');
         }
     }
 

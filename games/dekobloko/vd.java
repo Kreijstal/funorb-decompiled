@@ -25,7 +25,7 @@ final class vd extends bh {
     }
 
     vd(int param0) {
-        ((vd) this).field_p = param0;
+        this.field_p = param0;
     }
 
     static {

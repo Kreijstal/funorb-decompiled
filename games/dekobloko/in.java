@@ -121,7 +121,7 @@ final class in extends bh {
         L0: {
           var17 = param9;
           var18 = -param7;
-          var19 = ((in) this).field_t.field_D[param11 * ((in) this).field_t.field_K + param10];
+          var19 = this.field_t.field_D[param11 * this.field_t.field_K + param10];
           var20 = (var19 & 24) >> 3;
           var21 = null;
           var22 = null;
@@ -134,17 +134,17 @@ final class in extends bh {
             L1: {
               if (param10 > 0) {
                 L2: {
-                  if (((((in) this).field_t.field_D[param11 * ((in) this).field_t.field_K + (param10 - 1)] ^ var19) & 31) == 0) {
+                  if (((this.field_t.field_D[param11 * this.field_t.field_K + (param10 - 1)] ^ var19) & 31) == 0) {
                     var23++;
-                    if (param10 < ((in) this).field_t.field_K - 1) {
-                      if (((((in) this).field_t.field_D[param11 * ((in) this).field_t.field_K + (param10 + 1)] ^ var19) & 31) == 0) {
+                    if (param10 < this.field_t.field_K - 1) {
+                      if (((this.field_t.field_D[param11 * this.field_t.field_K + (param10 + 1)] ^ var19) & 31) == 0) {
                         var23 += 2;
                         break L2;
                       } else {
                         if (param11 <= 0) {
                           break L1;
                         } else {
-                          if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                          if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                             break L1;
                           } else {
                             var23 += 4;
@@ -156,7 +156,7 @@ final class in extends bh {
                       if (param11 <= 0) {
                         break L1;
                       } else {
-                        if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                        if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                           break L1;
                         } else {
                           var23 += 4;
@@ -165,15 +165,15 @@ final class in extends bh {
                       }
                     }
                   } else {
-                    if (param10 < ((in) this).field_t.field_K - 1) {
-                      if (((((in) this).field_t.field_D[param11 * ((in) this).field_t.field_K + (param10 + 1)] ^ var19) & 31) == 0) {
+                    if (param10 < this.field_t.field_K - 1) {
+                      if (((this.field_t.field_D[param11 * this.field_t.field_K + (param10 + 1)] ^ var19) & 31) == 0) {
                         var23 += 2;
                         break L2;
                       } else {
                         if (param11 <= 0) {
                           break L1;
                         } else {
-                          if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                          if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                             break L1;
                           } else {
                             var23 += 4;
@@ -185,7 +185,7 @@ final class in extends bh {
                       if (param11 <= 0) {
                         break L1;
                       } else {
-                        if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                        if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                           break L1;
                         } else {
                           var23 += 4;
@@ -198,7 +198,7 @@ final class in extends bh {
                 if (param11 <= 0) {
                   break L1;
                 } else {
-                  if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                  if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                     break L1;
                   } else {
                     var23 += 4;
@@ -206,18 +206,18 @@ final class in extends bh {
                   }
                 }
               } else {
-                if (param10 >= ((in) this).field_t.field_K - 1) {
+                if (param10 >= this.field_t.field_K - 1) {
                   if (param11 <= 0) {
                     break L1;
                   } else {
-                    if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) == 0) {
+                    if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) == 0) {
                       var23 += 4;
                       break L1;
                     } else {
                       if (param11 <= 0) {
                         break L1;
                       } else {
-                        if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                        if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                           break L1;
                         } else {
                           var23 += 4;
@@ -230,7 +230,7 @@ final class in extends bh {
                   if (param11 <= 0) {
                     break L1;
                   } else {
-                    if (((((in) this).field_t.field_D[(param11 - 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                    if (((this.field_t.field_D[(param11 - 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                       break L1;
                     } else {
                       var23 += 4;
@@ -241,10 +241,10 @@ final class in extends bh {
               }
             }
             L3: {
-              if (param11 >= ((in) this).field_t.field_C - 1) {
+              if (param11 >= this.field_t.field_C - 1) {
                 break L3;
               } else {
-                if (((((in) this).field_t.field_D[(param11 + 1) * ((in) this).field_t.field_K + param10] ^ var19) & 31) != 0) {
+                if (((this.field_t.field_D[(param11 + 1) * this.field_t.field_K + param10] ^ var19) & 31) != 0) {
                   break L3;
                 } else {
                   var23 += 8;
@@ -258,7 +258,7 @@ final class in extends bh {
           }
         }
         L4: {
-          var26 = ((in) this).field_q[param11 * ((in) this).field_t.field_K + param10];
+          var26 = this.field_q[param11 * this.field_t.field_K + param10];
           var27 = (byte)var26;
           var28 = (byte)(var26 >> 8);
           var29 = var26 >> 16 & 255;
@@ -297,8 +297,8 @@ final class in extends bh {
           break L5;
         }
         var33 = var29 * (var31 + var32) / 10;
-        var34 = var33 * var27 / ((((in) this).field_t.field_K + ((in) this).field_t.field_C) * 4);
-        var35 = var33 * var28 / ((((in) this).field_t.field_K + ((in) this).field_t.field_C) * 4) + (int)(100.0 * Math.sin((double)(uf.field_A + var30 * 4) * 0.07));
+        var34 = var33 * var27 / ((this.field_t.field_K + this.field_t.field_C) * 4);
+        var35 = var33 * var28 / ((this.field_t.field_K + this.field_t.field_C) * 4) + (int)(100.0 * Math.sin((double)(uf.field_A + var30 * 4) * 0.07));
         var36 = 4000000 / param3;
         var37 = (var34 * param7 + var33 * param9) / (var36 * 2);
         var38 = (var34 * param9 - var33 * param7) / (var36 * 2);
@@ -335,11 +335,11 @@ final class in extends bh {
             } else {
               var44 = var43;
               var45 = var43;
-              var46 = ((in) this).field_t.field_K * var24 * 2;
+              var46 = this.field_t.field_K * var24 * 2;
               var47 = param4 + (param10 * param7 * var24 * 2 + var17 * var44) / var46;
               var48 = param4 + ((param10 + 1) * param7 * var24 * 2 + var17 * var45) / var46;
-              var49 = param5 + param11 * param8 / ((in) this).field_t.field_C;
-              var50 = param5 + (param11 + 1) * param8 / ((in) this).field_t.field_C;
+              var49 = param5 + param11 * param8 / this.field_t.field_C;
+              var50 = param5 + (param11 + 1) * param8 / this.field_t.field_C;
               var51 = param6 + (param10 * param9 * var24 * 2 + var18 * var44) / var46;
               var52 = param6 + ((param10 + 1) * param9 * var24 * 2 + var18 * var45) / var46;
               if (var51 >= 500) {
@@ -370,12 +370,12 @@ final class in extends bh {
                       }
                     }
                     L11: {
-                      var59 = ((Object[]) (Object) stackIn_73_0)[stackIn_73_1];
+                      var59 = ((Object[]) ((Object) stackIn_73_0))[stackIn_73_1];
                       var60 = 0;
                       if (param10 >= param12) {
                         break L11;
                       } else {
-                        var60 = (var24 - var43) * ((ck) var59).field_K / (var24 * 2);
+                        var60 = (var24 - var43) * ((ck) (var59)).field_K / (var24 * 2);
                         break L11;
                       }
                     }
@@ -383,7 +383,7 @@ final class in extends bh {
                       if (param10 <= param12) {
                         break L12;
                       } else {
-                        var60 = (var24 + var43) * ((ck) var59).field_K / (var24 * 2);
+                        var60 = (var24 + var43) * ((ck) (var59)).field_K / (var24 * 2);
                         break L12;
                       }
                     }
@@ -454,7 +454,7 @@ final class in extends bh {
                         break L13;
                       }
                     }
-                    cg.a((ck) (Object) stackIn_80_0, (pi) (Object) stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_80_4, stackIn_80_5, stackIn_80_6, stackIn_80_7, stackIn_80_8 != 0, false, var60, -1);
+                    cg.a((ck) ((Object) stackIn_80_0), (pi) ((Object) stackIn_80_1), stackIn_80_2, stackIn_80_3, stackIn_80_4, stackIn_80_5, stackIn_80_6, stackIn_80_7, stackIn_80_8 != 0, false, var60, -1);
                     var43 += 2;
                     continue L8;
                   } else {
@@ -521,6 +521,12 @@ final class in extends bh {
     }
 
     in(String param0, int param1, boolean param2) {
+        int discarded$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -574,7 +580,7 @@ final class in extends bh {
         RuntimeException stackOut_41_0 = null;
         StringBuilder stackOut_41_1 = null;
         String stackOut_41_2 = null;
-        ((in) this).field_r = 0;
+        this.field_r = 0;
         try {
           L0: {
             L1: {
@@ -595,18 +601,18 @@ final class in extends bh {
                 break L1;
               }
             }
-            ((in) this).field_p = stackIn_4_1 != 0;
+            ((in) (this)).field_p = stackIn_4_1 != 0;
             var4_int = field_n.b(param0, 2147483647);
             var5 = field_n.b(param0, 2147483647, 8);
             var4_int--;
-            ((in) this).field_t = new ck(var4_int, var5);
+            this.field_t = new ck(var4_int, var5);
             var34 = hk.field_l;
             var7 = hk.field_j;
             var8 = hk.field_i;
-            ((in) this).field_t.a();
-            int discarded$6 = field_n.a(param0, 0, 0, 1 + var4_int, var5, param1, -1, 1, 1, 8);
+            this.field_t.a();
+            discarded$6 = field_n.a(param0, 0, 0, 1 + var4_int, var5, param1, -1, 1, 1, 8);
             hk.a(var34, var7, var8);
-            ((in) this).field_q = new int[var4_int * var5];
+            this.field_q = new int[var4_int * var5];
             var35 = new int[var5 * var4_int];
             var33 = var35;
             var31 = var33;
@@ -624,10 +630,10 @@ final class in extends bh {
                     continue L2;
                   } else {
                     L4: {
-                      if (((in) this).field_q[var10 * var4_int + var11] != 0) {
+                      if (this.field_q[var10 * var4_int + var11] != 0) {
                         break L4;
                       } else {
-                        var12 = ((in) this).field_t.field_D[var4_int * var10 - -var11];
+                        var12 = this.field_t.field_D[var4_int * var10 - -var11];
                         if ((24 & var12) == 0) {
                           break L4;
                         } else {
@@ -639,7 +645,7 @@ final class in extends bh {
                             var17 = 0;
                             var18 = 1;
                             var9[0] = var10 * var4_int + var11;
-                            ((in) this).field_t.field_D[var4_int * var10 + var11] = ((in) this).field_t.field_D[var4_int * var10 + var11] + -2147483648;
+                            this.field_t.field_D[var4_int * var10 + var11] = this.field_t.field_D[var4_int * var10 + var11] + -2147483648;
                             if ((24 & var12) != 8) {
                               break L5;
                             } else {
@@ -649,7 +655,7 @@ final class in extends bh {
                                   break L5;
                                 } else {
                                   L7: {
-                                    int incrementValue$7 = var17;
+                                    incrementValue$7 = var17;
                                     var17++;
                                     var20 = var9[incrementValue$7];
                                     var21 = var20 % var4_int;
@@ -689,13 +695,13 @@ final class in extends bh {
                                     if (0 >= var21) {
                                       break L11;
                                     } else {
-                                      if ((-2147483617 & ((in) this).field_t.field_D[var20 + -1]) != var19) {
+                                      if ((-2147483617 & this.field_t.field_D[var20 + -1]) != var19) {
                                         break L11;
                                       } else {
-                                        int incrementValue$8 = var18;
+                                        incrementValue$8 = var18;
                                         var18++;
                                         var9[incrementValue$8] = -1 + var20;
-                                        ((in) this).field_t.field_D[-1 + var20] = ((in) this).field_t.field_D[-1 + var20] + -2147483648;
+                                        this.field_t.field_D[-1 + var20] = this.field_t.field_D[-1 + var20] + -2147483648;
                                         break L11;
                                       }
                                     }
@@ -704,13 +710,13 @@ final class in extends bh {
                                     if (-1 + var4_int <= var21) {
                                       break L12;
                                     } else {
-                                      if ((((in) this).field_t.field_D[1 + var20] & -2147483617) != var19) {
+                                      if ((this.field_t.field_D[1 + var20] & -2147483617) != var19) {
                                         break L12;
                                       } else {
-                                        int incrementValue$9 = var18;
+                                        incrementValue$9 = var18;
                                         var18++;
                                         var9[incrementValue$9] = 1 + var20;
-                                        ((in) this).field_t.field_D[var20 - -1] = ((in) this).field_t.field_D[var20 - -1] + -2147483648;
+                                        this.field_t.field_D[var20 - -1] = this.field_t.field_D[var20 - -1] + -2147483648;
                                         break L12;
                                       }
                                     }
@@ -719,13 +725,13 @@ final class in extends bh {
                                     if (var22 <= 0) {
                                       break L13;
                                     } else {
-                                      if ((((in) this).field_t.field_D[-var4_int + var20] & -2147483617) != var19) {
+                                      if ((this.field_t.field_D[-var4_int + var20] & -2147483617) != var19) {
                                         break L13;
                                       } else {
-                                        int incrementValue$10 = var18;
+                                        incrementValue$10 = var18;
                                         var18++;
                                         var9[incrementValue$10] = var20 - var4_int;
-                                        ((in) this).field_t.field_D[-var4_int + var20] = ((in) this).field_t.field_D[-var4_int + var20] + -2147483648;
+                                        this.field_t.field_D[-var4_int + var20] = this.field_t.field_D[-var4_int + var20] + -2147483648;
                                         break L13;
                                       }
                                     }
@@ -734,13 +740,13 @@ final class in extends bh {
                                     if (var22 >= var5 + -1) {
                                       break L14;
                                     } else {
-                                      if (var19 != (((in) this).field_t.field_D[var20 + var4_int] & -2147483617)) {
+                                      if (var19 != (this.field_t.field_D[var20 + var4_int] & -2147483617)) {
                                         break L14;
                                       } else {
-                                        int incrementValue$11 = var18;
+                                        incrementValue$11 = var18;
                                         var18++;
                                         var9[incrementValue$11] = var20 - -var4_int;
-                                        ((in) this).field_t.field_D[var20 + var4_int] = ((in) this).field_t.field_D[var20 + var4_int] + -2147483648;
+                                        this.field_t.field_D[var20 + var4_int] = this.field_t.field_D[var20 + var4_int] + -2147483648;
                                         break L14;
                                       }
                                     }
@@ -762,8 +768,8 @@ final class in extends bh {
                               break L4;
                             } else {
                               var26 = var35[var25];
-                              ((in) this).field_t.field_D[var26] = ((in) this).field_t.field_D[var26] - -2147483648;
-                              ((in) this).field_q[var26] = var24;
+                              this.field_t.field_D[var26] = this.field_t.field_D[var26] - -2147483648;
+                              this.field_q[var26] = var24;
                               var25++;
                               continue L15;
                             }
@@ -782,23 +788,23 @@ final class in extends bh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var4 = decompiledCaughtException;
-            stackOut_40_0 = (RuntimeException) var4;
+            stackOut_40_0 = (RuntimeException) (var4);
             stackOut_40_1 = new StringBuilder().append("in.<init>(");
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;
             stackIn_41_1 = stackOut_40_1;
             if (param0 == null) {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
               stackOut_42_2 = "null";
               stackIn_43_0 = stackOut_42_0;
               stackIn_43_1 = stackOut_42_1;
               stackIn_43_2 = stackOut_42_2;
               break L16;
             } else {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
               stackOut_41_2 = "{...}";
               stackIn_43_0 = stackOut_41_0;
               stackIn_43_1 = stackOut_41_1;
@@ -806,7 +812,7 @@ final class in extends bh {
               break L16;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -822,14 +828,14 @@ final class in extends bh {
           param10 = param10 - param0;
           param8 = param8 - 10000;
           param4 = param4 - param3;
-          var14 = vl.a(23841, param4 * param4 - -(param8 * param8), ((in) this).field_t.field_K * -(param4 * param3 - -(10000 * param8)));
-          var15 = vl.a(23841, param10, ((in) this).field_t.field_C * -param0);
+          var14 = vl.a(23841, param4 * param4 - -(param8 * param8), this.field_t.field_K * -(param4 * param3 - -(10000 * param8)));
+          var15 = vl.a(23841, param10, this.field_t.field_C * -param0);
           var16 = var14;
           if (var15 >= 0) {
-            if (((in) this).field_t.field_C >= var15) {
+            if (this.field_t.field_C >= var15) {
               break L0;
             } else {
-              var15 = ((in) this).field_t.field_C;
+              var15 = this.field_t.field_C;
               break L0;
             }
           } else {
@@ -839,10 +845,10 @@ final class in extends bh {
         }
         L1: {
           if (var14 >= 0) {
-            if (((in) this).field_t.field_K >= var14) {
+            if (this.field_t.field_K >= var14) {
               break L1;
             } else {
-              var14 = ((in) this).field_t.field_K;
+              var14 = this.field_t.field_K;
               break L1;
             }
           } else {
@@ -852,11 +858,11 @@ final class in extends bh {
         }
         var17 = 0;
         L2: while (true) {
-          if (var17 >= ((in) this).field_t.field_K) {
+          if (var17 >= this.field_t.field_K) {
             var17 = 0;
             L3: while (true) {
               if (var14 <= var17) {
-                var17 = ((in) this).field_t.field_K + -1;
+                var17 = this.field_t.field_K + -1;
                 L4: while (true) {
                   if (var17 < var14) {
                     return;
@@ -864,7 +870,7 @@ final class in extends bh {
                     var18 = 0;
                     L5: while (true) {
                       if (var18 >= var15) {
-                        var18 = ((in) this).field_t.field_C - 1;
+                        var18 = this.field_t.field_C - 1;
                         L6: while (true) {
                           if (var15 > var18) {
                             var17--;
@@ -887,7 +893,7 @@ final class in extends bh {
                 var18 = 0;
                 L7: while (true) {
                   if (var18 >= var15) {
-                    var18 = ((in) this).field_t.field_C + -1;
+                    var18 = this.field_t.field_C + -1;
                     L8: while (true) {
                       if (var15 > var18) {
                         var17++;
@@ -909,7 +915,7 @@ final class in extends bh {
           } else {
             var18 = 0;
             L9: while (true) {
-              if (((in) this).field_t.field_C <= var18) {
+              if (this.field_t.field_C <= var18) {
                 var17++;
                 continue L2;
               } else {
@@ -943,12 +949,12 @@ final class in extends bh {
         if (param1 != 1) {
             return;
         }
-        if (var9 * ((in) this).field_t.field_K <= ((in) this).field_t.field_C * var8) {
-            var8 = var9 * ((in) this).field_t.field_K / ((in) this).field_t.field_C;
+        if (var9 * this.field_t.field_K <= this.field_t.field_C * var8) {
+            var8 = var9 * this.field_t.field_K / this.field_t.field_C;
         } else {
-            var9 = ((in) this).field_t.field_C * var8 / ((in) this).field_t.field_K;
+            var9 = this.field_t.field_C * var8 / this.field_t.field_K;
         }
-        int var10 = !(!param4) ? 5 * ((in) this).field_r : 0;
+        int var10 = !(!param4) ? 5 * this.field_r : 0;
         this.a(-var9 + -var10, param2, param6, -var8, var8, (byte) 72, param4, param0, 10000, param5, -var10 + var9, param3, 10000);
     }
 
@@ -958,13 +964,13 @@ final class in extends bh {
             var3 = we.field_b;
             var3.f(param2, param1 ^ 70);
             if (param1 != -70) {
-                Object var4 = null;
+                ug var4 = (ug) null;
                 in.a((ug) null, (byte) -31, 108);
             }
             var3.a(true, param0.field_o);
             var3.d(-1, param0.field_p);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "in.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "in.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

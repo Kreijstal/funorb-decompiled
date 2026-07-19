@@ -37,7 +37,7 @@ class wk extends fm {
         var3 = client.field_A ? 1 : 0;
         try {
           param1.b((byte) 111);
-          var2 = (tj) (Object) i.field_b.c((byte) -61);
+          var2 = (tj) ((Object) i.field_b.c((byte) -61));
           L0: while (true) {
             L1: {
               if (var2 == null) {
@@ -46,7 +46,7 @@ class wk extends fm {
                 if (!var2.a(-985, param1)) {
                   break L1;
                 } else {
-                  var2 = (tj) (Object) i.field_b.d(true);
+                  var2 = (tj) ((Object) i.field_b.d(true));
                   continue L0;
                 }
               }
@@ -71,23 +71,23 @@ class wk extends fm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_0 = (RuntimeException) (var2_ref);
             stackOut_11_1 = new StringBuilder().append("wk.H(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -95,7 +95,7 @@ class wk extends fm {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ class wk extends fm {
 
     gh a(int param0) {
         if (param0 != 18) {
-            Object var3 = null;
+            ff var3 = (ff) null;
             wk.a(124, -86, (ff) null);
             return ui.field_t;
         }
@@ -120,7 +120,7 @@ class wk extends fm {
             cd.field_c.a(param2, 2777);
             mc.a(true, param2, param1);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,23 +155,23 @@ class wk extends fm {
     }
 
     final void a(wl param0, byte param1) {
-        param0.a(((wk) this).field_m, (byte) 0);
+        param0.a(this.field_m, (byte) 0);
         if (param1 < 34) {
             return;
         }
         try {
-            param0.a(((wk) this).field_h, true);
+            param0.a(this.field_h, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void c(int param0) {
-        Object var2 = null;
+        ff var2 = null;
         field_o = null;
         field_g = null;
         if (param0 != 7751) {
-          var2 = null;
+          var2 = (ff) null;
           wk.a(12, -125, (ff) null);
           field_q = null;
           field_p = null;
@@ -193,10 +193,10 @@ class wk extends fm {
 
     wk(long param0, String param1) {
         try {
-            ((wk) this).field_m = param0;
-            ((wk) this).field_h = param1;
+            this.field_m = param0;
+            this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -33,6 +33,14 @@ final class ci {
     }
 
     final static void a(byte param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -53,28 +61,28 @@ final class ci {
               if (var3 >= var4) {
                 break L0;
               } else {
-                int incrementValue$40 = var3;
+                incrementValue$40 = var3;
                 var3++;
                 var6[incrementValue$40] = 0;
-                int incrementValue$41 = var3;
+                incrementValue$41 = var3;
                 var3++;
                 var6[incrementValue$41] = 0;
-                int incrementValue$42 = var3;
+                incrementValue$42 = var3;
                 var3++;
                 var6[incrementValue$42] = 0;
-                int incrementValue$43 = var3;
+                incrementValue$43 = var3;
                 var3++;
                 var6[incrementValue$43] = 0;
-                int incrementValue$44 = var3;
+                incrementValue$44 = var3;
                 var3++;
                 var6[incrementValue$44] = 0;
-                int incrementValue$45 = var3;
+                incrementValue$45 = var3;
                 var3++;
                 var6[incrementValue$45] = 0;
-                int incrementValue$46 = var3;
+                incrementValue$46 = var3;
                 var3++;
                 var6[incrementValue$46] = 0;
-                int incrementValue$47 = var3;
+                incrementValue$47 = var3;
                 var3++;
                 var6[incrementValue$47] = 0;
                 continue L1;
@@ -84,7 +92,7 @@ final class ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1_ref, "ci.A(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1_ref), "ci.A(" + param0 + ')');
         }
     }
 
@@ -96,7 +104,7 @@ final class ci {
             qk.field_m = 4;
             pa.field_Y = 5;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ci.E(" + (param0 != null ? "{...}" : "null") + ',' + 32 + ',' + 5 + ',' + -63 + ',' + 4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ci.E(" + (param0 != null ? "{...}" : "null") + ',' + 32 + ',' + 5 + ',' + -63 + ',' + 4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,24 +14,24 @@ class qi extends ek {
     static boolean field_M;
 
     String c(byte param0) {
-        if (null == ((qi) this).field_P) {
+        if (null == this.field_P) {
             return null;
         }
-        if (null == ((qi) this).field_K) {
+        if (null == this.field_K) {
             return null;
         }
-        if (((qi) this).field_K.length <= ((qi) this).field_P.field_p) {
+        if (this.field_K.length <= this.field_P.field_p) {
             return null;
         }
         if (param0 != 113) {
-            return null;
+            return (String) null;
         }
-        return ((qi) this).field_K[((qi) this).field_P.field_p];
+        return this.field_K[this.field_P.field_p];
     }
 
     final void c(int param0, int param1, int param2, int param3) {
         int var5 = -125 % ((-61 - param0) / 43);
-        ((qi) this).b(((nl) (Object) ((qi) this).field_p).a((ce) this, -125), param3, param1, param2, -16555);
+        this.b(((nl) ((Object) this.field_p)).a((ce) (this), -125), param3, param1, param2, -16555);
     }
 
     final static void a(boolean param0, byte param1) {
@@ -88,11 +88,11 @@ class qi extends ek {
           L0: {
             L1: {
               super.a(param0, 48, param2, param3);
-              ((qi) this).field_P = null;
-              if (((qi) this).field_q) {
-                var5_int = -((qi) this).field_u + (bh.field_g + -param3);
-                var6 = pm.field_f - (param2 - -((qi) this).field_D);
-                ((qi) this).field_P = this.a(1, var6, var5_int);
+              this.field_P = null;
+              if (this.field_q) {
+                var5_int = -this.field_u + (bh.field_g + -param3);
+                var6 = pm.field_f - (param2 - -this.field_D);
+                this.field_P = this.a(1, var6, var5_int);
                 break L1;
               } else {
                 break L1;
@@ -104,23 +104,23 @@ class qi extends ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_0 = (RuntimeException) (var5);
             stackOut_4_1 = new StringBuilder().append("qi.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -128,7 +128,7 @@ class qi extends ek {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 109 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + 109 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -161,10 +161,10 @@ class qi extends ek {
             if (param2 == 1) {
               L1: {
                 L2: {
-                  if (null == ((qi) this).field_K) {
+                  if (null == this.field_K) {
                     break L2;
                   } else {
-                    if (param1 >= ((qi) this).field_K.length) {
+                    if (param1 >= this.field_K.length) {
                       break L2;
                     } else {
                       break L1;
@@ -175,13 +175,13 @@ class qi extends ek {
                   var7 = new String[param1 + 1];
                   var8 = var7;
                   var4 = var8;
-                  if (null != ((qi) this).field_K) {
+                  if (null != this.field_K) {
                     var5 = 0;
                     L4: while (true) {
-                      if (((qi) this).field_K.length <= var5) {
+                      if (this.field_K.length <= var5) {
                         break L3;
                       } else {
-                        var7[var5] = ((qi) this).field_K[var5];
+                        var7[var5] = this.field_K[var5];
                         var5++;
                         continue L4;
                       }
@@ -190,10 +190,10 @@ class qi extends ek {
                     break L3;
                   }
                 }
-                ((qi) this).field_K = var8;
+                this.field_K = var8;
                 break L1;
               }
-              ((qi) this).field_K[param1] = param0;
+              this.field_K[param1] = param0;
               break L0;
             } else {
               return;
@@ -203,23 +203,23 @@ class qi extends ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) runtimeException;
+            stackOut_14_0 = (RuntimeException) (runtimeException);
             stackOut_14_1 = new StringBuilder().append("qi.J(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -227,7 +227,7 @@ class qi extends ek {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -238,12 +238,12 @@ class qi extends ek {
         if (param2 != 0) {
             return;
         }
-        nl var5 = (nl) (Object) ((qi) this).field_p;
-        pk var6 = ((qi) this).field_P;
+        nl var5 = (nl) ((Object) this.field_p);
+        pk var6 = this.field_P;
         if (var6 == null) {
         } else {
-            var7 = var5.a((byte) 24, (ce) this, param0);
-            var8 = var5.a(param3, 0, (ce) this);
+            var7 = var5.a((byte) 24, (ce) (this), param0);
+            var8 = var5.a(param3, 0, (ce) (this));
             do {
                 kd.a(2 + var6.field_n, var6.field_t + (var7 - 2), (byte) -128, -2 + (var6.field_u + var8), var6.field_s - -2);
                 var6 = var6.field_o;
@@ -262,7 +262,7 @@ class qi extends ek {
             he.field_hb = param2;
             int var3_int = 79 / ((-18 - param1) / 58);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "qi.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "qi.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -271,13 +271,13 @@ class qi extends ek {
         pk var5 = null;
         int var6 = 0;
         var6 = client.field_A ? 1 : 0;
-        var4 = (pk) (Object) ((qi) this).field_O.c((byte) 49);
+        var4 = (pk) ((Object) this.field_O.c((byte) 49));
         L0: while (true) {
           if (var4 != null) {
             var5 = var4;
             L1: while (true) {
               if (var5 == null) {
-                var4 = (pk) (Object) ((qi) this).field_O.d(true);
+                var4 = (pk) ((Object) this.field_O.d(true));
                 continue L0;
               } else {
                 L2: {
@@ -346,7 +346,7 @@ class qi extends ek {
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
-              field_N = null;
+              field_N = (String) null;
               return false;
             }
           }
@@ -354,23 +354,23 @@ class qi extends ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("qi.EC(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -378,7 +378,7 @@ class qi extends ek {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -389,19 +389,19 @@ class qi extends ek {
 
     final void b(int param0, int param1, int param2, int param3) {
         super.b(param0, param1, param2, param3);
-        int var5 = -((qi) this).field_u + param0;
-        int var6 = param1 + -((qi) this).field_D;
+        int var5 = -this.field_u + param0;
+        int var6 = param1 + -this.field_D;
         pk var7 = this.a(1, var6, var5);
         if (var7 != null) {
-            if (null != ((qi) this).field_v) {
-                ((rl) (Object) ((qi) this).field_v).a((qi) this, param2, -118, var7.field_p);
+            if (null != this.field_v) {
+                ((rl) ((Object) this.field_v)).a((qi) (this), param2, -118, var7.field_p);
             }
         }
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        ((qi) this).a(2874);
+        this.a(2874);
     }
 
     final void a(int param0) {
@@ -429,26 +429,26 @@ class qi extends ek {
         int stackOut_10_0 = 0;
         L0: {
           var16 = client.field_A ? 1 : 0;
-          ((qi) this).field_O = new vj();
+          this.field_O = new vj();
           var2 = 0;
           if (param0 == 2874) {
             break L0;
           } else {
-            field_S = null;
+            field_S = (vj) null;
             break L0;
           }
         }
-        var3 = (nl) (Object) ((qi) this).field_p;
-        var4 = var3.a((ce) this, (byte) 117);
+        var3 = (nl) ((Object) this.field_p);
+        var4 = var3.a((ce) (this), (byte) 117);
         L1: while (true) {
-          var5 = ((qi) this).field_E.indexOf("<hotspot=", var2);
+          var5 = this.field_E.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           } else {
-            var7 = ((qi) this).field_E.indexOf(">", var5);
-            var6 = ((qi) this).field_E.substring(9 + var5, var7);
+            var7 = this.field_E.indexOf(">", var5);
+            var6 = this.field_E.substring(9 + var5, var7);
             var7 = Integer.parseInt(var6);
-            var2 = ((qi) this).field_E.indexOf("</hotspot>", var5);
+            var2 = this.field_E.indexOf("</hotspot>", var5);
             var8 = var4.a(false, var5);
             var9 = var4.a(false, var2);
             var10 = null;
@@ -491,13 +491,13 @@ class qi extends ek {
                   var14 = stackIn_14_0;
                   var15 = new pk(var7, var13, var12.field_c, var14 - var13, Math.max(var3.a((byte) -120), -var12.field_c + var12.field_i));
                   if (var10 != null) {
-                    ((pk) var10).field_o = var15;
+                    ((pk) (var10)).field_o = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                ((qi) this).field_O.a(var15, 2777);
+                this.field_O.a(var15, 2777);
                 var10 = var15;
                 var11++;
                 continue L2;
@@ -509,11 +509,11 @@ class qi extends ek {
 
     qi(String param0, gl param1) {
         super(param0, (kg) null);
-        ((qi) this).field_P = null;
+        this.field_P = null;
         try {
-            ((qi) this).field_p = param1;
+            this.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

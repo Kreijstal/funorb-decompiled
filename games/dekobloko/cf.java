@@ -17,6 +17,7 @@ abstract class cf {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
+        StringBuilder discarded$0 = null;
         int var11 = client.field_A ? 1 : 0;
         if (param1 <= (long)param0) {
             return null;
@@ -43,7 +44,7 @@ abstract class cf {
                 var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
                 var9 = 160;
             }
-            StringBuilder discarded$0 = var6.append((char) var9);
+            discarded$0 = var6.append((char) var9);
         }
         StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
@@ -51,6 +52,7 @@ abstract class cf {
     }
 
     final static byte[] a(boolean param0, int param1, Object param2) {
+        String discarded$2 = null;
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         mk var4 = null;
@@ -79,9 +81,9 @@ abstract class cf {
         try {
           if (param2 != null) {
             if (param2 instanceof byte[]) {
-              var3 = (byte[]) param2;
+              var3 = (byte[]) (param2);
               if (!param0) {
-                stackOut_8_0 = (byte[]) var3;
+                stackOut_8_0 = (byte[]) (var3);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -95,13 +97,13 @@ abstract class cf {
                   if (param1 > 18) {
                     break L0;
                   } else {
-                    String discarded$2 = cf.a(52, 9L);
+                    discarded$2 = cf.a(52, 9L);
                     break L0;
                   }
                 }
                 throw new IllegalArgumentException();
               } else {
-                var4 = (mk) param2;
+                var4 = (mk) (param2);
                 stackOut_11_0 = var4.a(256);
                 stackIn_12_0 = stackOut_11_0;
                 return stackIn_12_0;
@@ -114,23 +116,23 @@ abstract class cf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_0 = (RuntimeException) (var3_ref);
             stackOut_16_1 = new StringBuilder().append("cf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L1;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -138,7 +140,7 @@ abstract class cf {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
@@ -153,8 +155,8 @@ abstract class cf {
         var2 = -1;
         if (!param0) {
           L0: {
-            if (((cf) this).field_a != null) {
-              var3 = ((cf) this).field_a;
+            if (this.field_a != null) {
+              var3 = this.field_a;
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -194,13 +196,13 @@ abstract class cf {
         if (param0 == -1) {
           L0: {
             L1: {
-              if (((cf) this).field_a == null) {
+              if (this.field_a == null) {
                 break L1;
               } else {
-                if (((cf) this).field_a.length <= 0) {
+                if (this.field_a.length <= 0) {
                   break L1;
                 } else {
-                  stackOut_4_0 = ((cf) this).field_a[((cf) this).field_a.length + -1].field_i - ((cf) this).field_a[0].field_c;
+                  stackOut_4_0 = this.field_a[this.field_a.length + -1].field_i - this.field_a[0].field_c;
                   stackIn_6_0 = stackOut_4_0;
                   break L0;
                 }
@@ -227,6 +229,7 @@ abstract class cf {
     }
 
     final static String a(int param0) {
+        String discarded$0 = null;
         if (!(ca.field_vb >= 2)) {
             return ef.field_U;
         }
@@ -246,7 +249,7 @@ abstract class cf {
             return ne.field_d;
         }
         if (param0 != -11777) {
-            String discarded$0 = cf.a(-68);
+            discarded$0 = cf.a(-68);
         }
         if (!rc.field_k.a("commonui", (byte) 124)) {
             return un.field_a + " - " + rc.field_k.a(-125, "commonui") + "%";
@@ -261,13 +264,14 @@ abstract class cf {
     }
 
     final int a(byte param0, int param1) {
+        String discarded$0 = null;
         int var4 = 0;
         nf var5 = null;
         int var6 = client.field_A ? 1 : 0;
-        nf[] var7 = ((cf) this).field_a;
+        nf[] var7 = this.field_a;
         nf[] var3 = var7;
         if (param0 != -94) {
-            String discarded$0 = cf.a(102);
+            discarded$0 = cf.a(102);
         }
         for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
@@ -280,6 +284,7 @@ abstract class cf {
     }
 
     final int a(int param0, int param1, int param2) {
+        String discarded$2 = null;
         int var4 = 0;
         int var5 = 0;
         nf var6 = null;
@@ -290,28 +295,28 @@ abstract class cf {
           if (param2 == -31917) {
             break L0;
           } else {
-            String discarded$2 = cf.a(-31, -100L);
+            discarded$2 = cf.a(-31, -100L);
             break L0;
           }
         }
         L1: {
-          if (null == ((cf) this).field_a) {
+          if (null == this.field_a) {
             break L1;
           } else {
-            if (((cf) this).field_a.length == 0) {
+            if (this.field_a.length == 0) {
               break L1;
             } else {
-              if (param1 >= ((cf) this).field_a[0].field_c) {
-                if (param1 <= ((cf) this).field_a[((cf) this).field_a.length - 1].field_i) {
-                  if (1 != ((cf) this).field_a.length) {
+              if (param1 >= this.field_a[0].field_c) {
+                if (param1 <= this.field_a[this.field_a.length - 1].field_i) {
+                  if (1 != this.field_a.length) {
                     var4 = 0;
                     var5 = 0;
                     L2: while (true) {
-                      if (((cf) this).field_a.length <= var5) {
+                      if (this.field_a.length <= var5) {
                         return -1;
                       } else {
                         L3: {
-                          var6 = ((cf) this).field_a[var5];
+                          var6 = this.field_a[var5];
                           if (var6.field_c > param1) {
                             break L3;
                           } else {
@@ -333,7 +338,7 @@ abstract class cf {
                       }
                     }
                   } else {
-                    return ((cf) this).field_a[0].a(param0, 109);
+                    return this.field_a[0].a(param0, 109);
                   }
                 } else {
                   return -1;
@@ -354,14 +359,14 @@ abstract class cf {
         if (param0) {
             return -107;
         }
-        for (var3 = 0; var3 < ((cf) this).field_a.length; var3++) {
-            var4 = ((cf) this).field_a[var3];
+        for (var3 = 0; var3 < this.field_a.length; var3++) {
+            var4 = this.field_a[var3];
             if (var4.field_a.length > param1) {
                 return var3;
             }
             param1 = param1 - (-1 + var4.field_a.length);
         }
-        return ((cf) this).field_a.length;
+        return this.field_a.length;
     }
 
     final int a(byte param0, int param1, String param2, int param3) {
@@ -447,23 +452,23 @@ abstract class cf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5;
+            stackOut_18_0 = (RuntimeException) (var5);
             stackOut_18_1 = new StringBuilder().append("cf.I(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L3;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -471,7 +476,7 @@ abstract class cf {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param3 + ')');
         }
         return stackIn_17_0;
     }
@@ -482,7 +487,7 @@ abstract class cf {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        int[] var9 = null;
         int[] var10 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -507,7 +512,7 @@ abstract class cf {
               if (param1 == 57) {
                 break L1;
               } else {
-                var9 = null;
+                var9 = (int[]) null;
                 cf.a(-62, (byte) 71, (int[]) null, 113, -87);
                 break L1;
               }
@@ -532,23 +537,23 @@ abstract class cf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_0 = (RuntimeException) (var5);
             stackOut_8_1 = new StringBuilder().append("cf.A(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -556,7 +561,7 @@ abstract class cf {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -276,11 +276,12 @@ final class eg {
     }
 
     final static int[] a(int[] param0, int[] param1, byte param2) {
+        int[] discarded$2 = null;
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
+        int[] var6 = null;
         int[] var7 = null;
         int[] stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -322,8 +323,8 @@ final class eg {
               if (param2 >= 76) {
                 break L1;
               } else {
-                var6 = null;
-                int[] discarded$2 = eg.a((int[]) null, (int[]) null, (byte) -36);
+                var6 = (int[]) null;
+                discarded$2 = eg.a((int[]) null, (int[]) null, (byte) -36);
                 break L1;
               }
             }
@@ -332,7 +333,7 @@ final class eg {
             var4 = 0;
             L2: while (true) {
               if (var4 >= 8) {
-                stackOut_6_0 = (int[]) var3;
+                stackOut_6_0 = (int[]) (var3);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -346,23 +347,23 @@ final class eg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("eg.B(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -371,23 +372,23 @@ final class eg {
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -395,17 +396,18 @@ final class eg {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
 
     final static ie a(byte param0) {
+        ie discarded$0 = null;
         if (param0 != 63) {
-            ie discarded$0 = eg.a((byte) 127);
-            return (ie) (Object) new dn();
+            discarded$0 = eg.a((byte) 127);
+            return (ie) ((Object) new dn());
         }
-        return (ie) (Object) new dn();
+        return (ie) ((Object) new dn());
     }
 
     public static void a(int param0) {

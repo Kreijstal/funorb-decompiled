@@ -15,41 +15,42 @@ abstract class t extends bl {
     boolean h(byte param0) {
         int var2 = 0;
         int var3 = 0;
+        int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (((t) this).field_hb > 0) {
-            var2 = ((t) this).field_jb;
-            var3 = ((t) this).field_gb;
-            int fieldTemp$0 = ((t) this).field_eb + 1;
-            ((t) this).field_eb = ((t) this).field_eb + 1;
-            if (((t) this).field_hb <= fieldTemp$0) {
-                ((t) this).field_hb = 0;
-                ((t) this).j((byte) -52);
+        if (this.field_hb > 0) {
+            var2 = this.field_jb;
+            var3 = this.field_gb;
+            fieldTemp$0 = this.field_eb + 1;
+            this.field_eb = this.field_eb + 1;
+            if (this.field_hb <= fieldTemp$0) {
+                this.field_hb = 0;
+                this.j((byte) -52);
             } else {
-                var4 = (-((t) this).field_eb + 2 * ((t) this).field_hb) * ((t) this).field_eb;
-                var5 = ((t) this).field_hb * ((t) this).field_hb;
-                var2 = var4 * (((t) this).field_jb + -((t) this).field_db) / var5 + ((t) this).field_db;
-                var3 = ((t) this).field_fb + var4 * (-((t) this).field_fb + ((t) this).field_gb) / var5;
+                var4 = (-this.field_eb + 2 * this.field_hb) * this.field_eb;
+                var5 = this.field_hb * this.field_hb;
+                var2 = var4 * (this.field_jb + -this.field_db) / var5 + this.field_db;
+                var3 = this.field_fb + var4 * (-this.field_fb + this.field_gb) / var5;
             }
-            ((t) this).a(110, var2, var3);
+            this.a(110, var2, var3);
         }
         return super.h((byte) 90);
     }
 
     final void b(int param0, int param1, int param2, int param3) {
         if (param3 != 194) {
-            ((t) this).b(35, 121, -128, 19);
+            this.b(35, 121, -128, 19);
         }
         if (param1 <= 0) {
-            ((t) this).a(121, param0, param2);
+            this.a(121, param0, param2);
             return;
         }
-        ((t) this).field_hb = param1;
-        ((t) this).field_gb = param2;
-        ((t) this).field_db = ((t) this).field_t;
-        ((t) this).field_fb = ((t) this).field_y;
-        ((t) this).field_jb = param0;
-        ((t) this).field_eb = 0;
+        this.field_hb = param1;
+        this.field_gb = param2;
+        this.field_db = this.field_t;
+        this.field_fb = this.field_y;
+        this.field_jb = param0;
+        this.field_eb = 0;
     }
 
     final static void k(byte param0) {
@@ -57,12 +58,12 @@ abstract class t extends bl {
     }
 
     void j(int param0) {
-        if (!(((t) this).field_hb > 0)) {
+        if (!(this.field_hb > 0)) {
             return;
         }
-        ((t) this).a(112, ((t) this).field_jb, ((t) this).field_gb);
-        ((t) this).field_hb = 0;
-        ((t) this).j((byte) -32);
+        this.a(112, this.field_jb, this.field_gb);
+        this.field_hb = 0;
+        this.j((byte) -32);
         int var2 = 40 % ((param0 - -15) / 49);
     }
 
@@ -72,12 +73,12 @@ abstract class t extends bl {
 
     t(ka param0, int param1, int param2) {
         super(param0, param1, param2);
-        ((t) this).field_eb = 0;
-        ((t) this).field_hb = 0;
+        this.field_eb = 0;
+        this.field_hb = 0;
     }
 
     boolean f(byte param0) {
-        ((t) this).j(38);
+        this.j(38);
         return super.f((byte) 125);
     }
 
@@ -104,7 +105,7 @@ abstract class t extends bl {
         int var15 = 0;
         int var16 = 0;
         var16 = client.field_A ? 1 : 0;
-        hk.d(6 + param2, 35 + param1, -12 + ((t) this).field_t, ((t) this).field_y - 40, 2105376, 0);
+        hk.d(6 + param2, 35 + param1, -12 + this.field_t, this.field_y - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -119,10 +120,10 @@ abstract class t extends bl {
             var8 = param1 - -35;
             L1: while (true) {
               if (var7 >= var4) {
-                jm.field_q.c(-90 + (param2 - -((t) this).field_t), 10 + param1);
-                ng.a(c.field_m, -10 + ((t) this).field_t, param1 + 35, -1, 5 + param2);
-                ng.a(g.field_O, ((t) this).field_t, param1 + (((t) this).field_y + -22), -1, param2);
-                var4 = ((t) this).field_y + -79;
+                jm.field_q.c(-90 + (param2 - -this.field_t), 10 + param1);
+                ng.a(c.field_m, -10 + this.field_t, param1 + 35, -1, 5 + param2);
+                ng.a(g.field_O, this.field_t, param1 + (this.field_y + -22), -1, param2);
+                var4 = this.field_y + -79;
                 var5 = 169;
                 var6 = 127;
                 var7 = 0;
@@ -134,7 +135,7 @@ abstract class t extends bl {
                     var9 = var5 - -(var7 * (var6 + -var5) / var4);
                     var9 = var9 | (var9 << 16 | var9 << 8);
                     hk.a(param2, var8, 6, var9);
-                    hk.a(-6 + (((t) this).field_t + param2), var8, 6, var9);
+                    hk.a(-6 + (this.field_t + param2), var8, 6, var9);
                     var8++;
                     var7++;
                     continue L2;
@@ -144,7 +145,7 @@ abstract class t extends bl {
                 var9 = (-var5 + var6) * var7 / var4 + var5;
                 var9 = var9 | (var9 << 16 | var9 << 8);
                 hk.a(param2, var8, 6, var9);
-                hk.a(param2 + ((t) this).field_t + -6, var8, 6, var9);
+                hk.a(param2 + this.field_t + -6, var8, 6, var9);
                 var7++;
                 var8++;
                 continue L1;
@@ -156,7 +157,7 @@ abstract class t extends bl {
                 L3: {
                   var9 = var5 - -((-var5 + var6) * var7 / var4);
                   var10 = 0;
-                  var11 = ((t) this).field_t;
+                  var11 = this.field_t;
                   if (20 >= var7) {
                     L4: while (true) {
                       if (var10 > 20) {
@@ -303,23 +304,23 @@ abstract class t extends bl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("t.MA(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -328,23 +329,23 @@ abstract class t extends bl {
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -353,23 +354,23 @@ abstract class t extends bl {
             }
           }
           L3: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(false).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -377,7 +378,7 @@ abstract class t extends bl {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -396,7 +397,7 @@ abstract class t extends bl {
             hm stackOut_1_0 = null;
             try {
               L0: {
-                stackOut_1_0 = (hm) Class.forName("ag").newInstance();
+                stackOut_1_0 = (hm) (Class.forName("ag").newInstance());
                 stackIn_2_0 = stackOut_1_0;
                 break L0;
               }

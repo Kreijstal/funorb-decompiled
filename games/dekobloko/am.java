@@ -11,11 +11,11 @@ final class am {
         kc var5 = null;
         int var6 = 0;
         var6 = client.field_A ? 1 : 0;
-        var5 = (kc) (Object) dg.field_e.c((byte) 49);
+        var5 = (kc) ((Object) dg.field_e.c((byte) 49));
         L0: while (true) {
           if (var5 != null) {
             if (param3 != var5.field_n) {
-              var5 = (kc) (Object) dg.field_e.d(true);
+              var5 = (kc) ((Object) dg.field_e.d(true));
               continue L0;
             } else {
               return var5;
@@ -33,8 +33,9 @@ final class am {
     }
 
     final static int b(int param0) {
+        int discarded$2 = 0;
         if (param0 <= 69) {
-          int discarded$2 = am.b(-17);
+          discarded$2 = am.b(-17);
           return wl.field_o + (wh.field_d << 2) + (qk.field_i << 4);
         } else {
           return wl.field_o + (wh.field_d << 2) + (qk.field_i << 4);

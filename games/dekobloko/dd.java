@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 abstract class dd {
     ab field_d;
     static w field_k;
@@ -58,7 +56,7 @@ abstract class dd {
         String stackOut_24_2 = null;
         try {
           L0: {
-            var7 = (CharSequence) (Object) param0;
+            var7 = (CharSequence) ((Object) param0);
             if (dc.a(var7, (byte) -70)) {
               if (!k.a(param0, true)) {
                 if (jj.field_b != 2) {
@@ -111,23 +109,23 @@ abstract class dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_0 = (RuntimeException) (var3);
             stackOut_23_1 = new StringBuilder().append("dd.R(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L1;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -135,26 +133,27 @@ abstract class dd {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return (String) (Object) stackIn_22_0;
+        return (String) ((Object) stackIn_22_0);
     }
 
     abstract void a(Object param0, byte param1, boolean param2);
 
     final int c(byte param0) {
         if (param0 >= -73) {
-          field_a = null;
-          return ((dd) this).field_d.a(0) + ((dd) this).field_g.a(0);
+          field_a = (int[]) null;
+          return this.field_d.a(0) + this.field_g.a(0);
         } else {
-          return ((dd) this).field_d.a(0) + ((dd) this).field_g.a(0);
+          return this.field_d.a(0) + this.field_g.a(0);
         }
     }
 
     final static void a(String param0, int param1, int param2) {
+        String discarded$2 = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
@@ -254,8 +253,8 @@ abstract class dd {
             if (param1 == 0) {
               break L0;
             } else {
-              var4 = null;
-              String discarded$2 = dd.b((String) null, 52, 86);
+              var4 = (String) null;
+              discarded$2 = dd.b((String) null, 52, 86);
               return;
             }
           }
@@ -263,23 +262,23 @@ abstract class dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
+            stackOut_25_0 = (RuntimeException) (var3);
             stackOut_25_1 = new StringBuilder().append("dd.T(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -287,7 +286,7 @@ abstract class dd {
               break L8;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -302,8 +301,8 @@ abstract class dd {
         int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
-            ((dd) this).field_j = -70;
-            if (-21 < ((dd) this).c(0)) {
+            this.field_j = -70;
+            if (-21 < this.c(0)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -316,7 +315,7 @@ abstract class dd {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (-21 > ((dd) this).c(0)) {
+            if (-21 > this.c(0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -333,22 +332,22 @@ abstract class dd {
     final pj a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         long var6 = ((long)param3 << 32) - -(long)param4;
         if (!param2) {
-            return null;
+            return (pj) null;
         }
         pj var8 = new pj();
         var8.field_r = var6;
         var8.field_D = param0 ? true : false;
         var8.field_M = param1;
         if (param0) {
-            if (!(((dd) this).c((byte) -109) < 20)) {
+            if (!(this.c((byte) -109) < 20)) {
                 throw new RuntimeException();
             }
-            ((dd) this).field_d.a(var8, -7267);
+            this.field_d.a(var8, -7267);
         } else {
-            if (!(20 > ((dd) this).c(0))) {
+            if (!(20 > this.c(0))) {
                 throw new RuntimeException();
             }
-            ((dd) this).field_n.a(var8, -7267);
+            this.field_n.a(var8, -7267);
         }
         return var8;
     }
@@ -357,15 +356,15 @@ abstract class dd {
 
     final int c(int param0) {
         if (param0 != 0) {
-          ((dd) this).field_h = null;
-          return ((dd) this).field_n.a(0) + ((dd) this).field_l.a(0);
+          this.field_h = (pj) null;
+          return this.field_n.a(0) + this.field_l.a(0);
         } else {
-          return ((dd) this).field_n.a(0) + ((dd) this).field_l.a(0);
+          return this.field_n.a(0) + this.field_l.a(0);
         }
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        Object var4 = null;
+        String var4 = (String) null;
         rb.a(param0, (byte) -85, (String) null, param1);
     }
 
@@ -385,8 +384,8 @@ abstract class dd {
         int stackOut_2_0 = 0;
         if (!param0) {
           L0: {
-            ((dd) this).field_i = null;
-            if (((dd) this).c((byte) -95) < 20) {
+            this.field_i = (wl) null;
+            if (this.c((byte) -95) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -399,7 +398,7 @@ abstract class dd {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((dd) this).c((byte) -95) < 20) {
+            if (this.c((byte) -95) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -416,15 +415,15 @@ abstract class dd {
     abstract void a(int param0);
 
     dd() {
-        ((dd) this).field_d = new ab();
-        ((dd) this).field_g = new ab();
-        ((dd) this).field_n = new ab();
-        ((dd) this).field_l = new ab();
-        ((dd) this).field_i = new wl(6);
-        ((dd) this).field_j = 0;
-        ((dd) this).field_o = 0;
-        ((dd) this).field_f = (byte) 0;
-        ((dd) this).field_c = new wl(10);
+        this.field_d = new ab();
+        this.field_g = new ab();
+        this.field_n = new ab();
+        this.field_l = new ab();
+        this.field_i = new wl(6);
+        this.field_j = 0;
+        this.field_o = 0;
+        this.field_f = (byte) 0;
+        this.field_c = new wl(10);
     }
 
     static {

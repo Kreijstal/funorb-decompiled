@@ -17,13 +17,13 @@ final class pn extends vb {
         try {
             ed.field_c = param2;
             pk.field_r = 2;
-            var5 = (CharSequence) (Object) param2;
+            var5 = (CharSequence) ((Object) param2);
             cf.field_c = kf.a(var5, (byte) 2);
             int var4_int = 54;
             fm.field_d = param1;
             v.b(0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.M(" + 38 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.M(" + 38 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,11 +35,11 @@ final class pn extends vb {
         if (!(param2 == 0)) {
             return;
         }
-        param0 = param0 + ((pn) this).field_u;
-        param3 = param3 + ((pn) this).field_D;
-        this.a(param0, n.field_d, param3, ((pn) this).field_gb, 0);
-        this.a(param0, ql.field_a, param3, ((pn) this).field_hb, 0);
-        this.a(param0, pf.field_c, param3, ((pn) this).field_ib, 0);
+        param0 = param0 + this.field_u;
+        param3 = param3 + this.field_D;
+        this.a(param0, n.field_d, param3, this.field_gb, 0);
+        this.a(param0, ql.field_a, param3, this.field_hb, 0);
+        this.a(param0, pf.field_c, param3, this.field_ib, 0);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, String param4, int param5, int param6, int param7) {
@@ -120,23 +120,23 @@ final class pn extends vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var8;
+            stackOut_16_0 = (RuntimeException) (var8);
             stackOut_16_1 = new StringBuilder().append("pn.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -144,30 +144,30 @@ final class pn extends vb {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     private pn(gl param0, boolean param1) {
         super(0, 0, 0, 0, (gl) null);
         try {
-            ((pn) this).field_gb = (rk) (Object) new og("", (kg) null, 2);
-            ((pn) this).field_hb = (rk) (Object) new og("", (kg) null, 2);
-            ((pn) this).field_ib = (rk) (Object) new og("", (kg) null, 4);
-            ((pn) this).field_ib.field_p = param0;
-            ((pn) this).field_hb.field_p = param0;
-            ((pn) this).field_gb.field_p = param0;
-            ((pn) this).field_cb = param1 ? true : false;
-            if (!((pn) this).field_cb) {
-                ((pn) this).b(((pn) this).field_gb, (byte) -55);
-                ((pn) this).b(((pn) this).field_hb, (byte) -55);
+            this.field_gb = (rk) ((Object) new og("", (kg) null, 2));
+            this.field_hb = (rk) ((Object) new og("", (kg) null, 2));
+            this.field_ib = (rk) ((Object) new og("", (kg) null, 4));
+            this.field_ib.field_p = param0;
+            this.field_hb.field_p = param0;
+            this.field_gb.field_p = param0;
+            this.field_cb = param1 ? true : false;
+            if (!this.field_cb) {
+                this.b(this.field_gb, (byte) -55);
+                this.b(this.field_hb, (byte) -55);
             } else {
-                ((pn) this).b(((pn) this).field_hb, (byte) -55);
-                ((pn) this).b(((pn) this).field_gb, (byte) -55);
+                this.b(this.field_hb, (byte) -55);
+                this.b(this.field_gb, (byte) -55);
             }
-            ((pn) this).b(((pn) this).field_ib, (byte) -55);
+            this.b(this.field_ib, (byte) -55);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class pn extends vb {
         try {
           L0: {
             if (!param0) {
-              stackOut_3_0 = -1 + Integer.parseInt(((pn) this).field_hb.field_E);
+              stackOut_3_0 = -1 + Integer.parseInt(this.field_hb.field_E);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -190,7 +190,7 @@ final class pn extends vb {
               return stackIn_2_0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
@@ -215,28 +215,28 @@ final class pn extends vb {
             oc.field_c = oc.field_c + (var2_int >> 1);
             vm.field_s = vm.field_s + param1.e(3);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.P(" + 63 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.P(" + 63 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     pn(gl param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-            ((pn) this).b(param5, param4, param2, param3, -16555);
+            this.b(param5, param4, param2, param3, -16555);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final String c(byte param0) {
-        String var2 = ((pn) this).field_hb.c(param0);
+        String var2 = this.field_hb.c(param0);
         if (!(var2 == null)) {
             return var2;
         }
-        if (!((pn) this).field_q) {
+        if (!this.field_q) {
             return null;
         }
-        return null == ((pn) this).field_B ? ((pn) this).field_E : ((pn) this).field_B;
+        return null == this.field_B ? this.field_E : this.field_B;
     }
 
     final int i(int param0) {
@@ -248,17 +248,17 @@ final class pn extends vb {
           if (param0 == -22079) {
             break L0;
           } else {
-            ((pn) this).field_ib = null;
+            this.field_ib = (rk) null;
             break L0;
           }
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(((pn) this).field_gb.field_E);
+            stackOut_2_0 = Integer.parseInt(this.field_gb.field_E);
             stackIn_3_0 = stackOut_2_0;
             break L1;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
@@ -267,25 +267,27 @@ final class pn extends vb {
     }
 
     final void a(byte param0, qf param1) {
+        boolean discarded$0 = false;
         try {
             super.a((byte) 88, param1);
             if (param0 < 74) {
-                Object var4 = null;
-                boolean discarded$0 = pn.a((wb) null, (wb) null, true);
+                wb var4 = (wb) null;
+                discarded$0 = pn.a((wb) null, (wb) null, true);
             }
-            ((pn) this).field_gb.field_v = (kg) (Object) param1;
-            ((pn) this).field_hb.field_v = (kg) (Object) param1;
-            ((pn) this).field_ib.field_v = (kg) (Object) param1;
+            this.field_gb.field_v = (kg) ((Object) param1);
+            this.field_hb.field_v = (kg) ((Object) param1);
+            this.field_ib.field_v = (kg) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(wb param0, wb param1, boolean param2) {
+        boolean discarded$2 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        wb var5 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -327,8 +329,8 @@ final class pn extends vb {
               if (!param2) {
                 break L1;
               } else {
-                var5 = null;
-                boolean discarded$2 = pn.a((wb) null, (wb) null, true);
+                var5 = (wb) null;
+                discarded$2 = pn.a((wb) null, (wb) null, true);
                 break L1;
               }
             }
@@ -376,23 +378,23 @@ final class pn extends vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3;
+            stackOut_15_0 = (RuntimeException) (var3);
             stackOut_15_1 = new StringBuilder().append("pn.U(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -401,23 +403,23 @@ final class pn extends vb {
             }
           }
           L6: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -425,7 +427,7 @@ final class pn extends vb {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -440,21 +442,21 @@ final class pn extends vb {
         try {
             bj.field_f.b(param1, (param3.field_t >> 1) + param3.field_u + param0, param2 + (param3.field_D - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + 0 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + 0 + ')');
         }
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, -16555);
         int var6 = param1 - 130 >> 1;
-        if (((pn) this).field_cb) {
-            ((pn) this).field_hb.b(param0, 25, var6, 0, -16555);
-            ((pn) this).field_gb.b(param0, 25, 45 + var6, 0, -16555);
+        if (this.field_cb) {
+            this.field_hb.b(param0, 25, var6, 0, -16555);
+            this.field_gb.b(param0, 25, 45 + var6, 0, -16555);
         } else {
-            ((pn) this).field_gb.b(param0, 25, var6, 0, -16555);
-            ((pn) this).field_hb.b(param0, 25, 45 + var6, 0, param4);
+            this.field_gb.b(param0, 25, var6, 0, -16555);
+            this.field_hb.b(param0, 25, 45 + var6, 0, param4);
         }
-        ((pn) this).field_ib.b(param0, 40, var6 - -90, 0, param4);
+        this.field_ib.b(param0, 40, var6 - -90, 0, param4);
     }
 
     final int f(byte param0) {
@@ -472,11 +474,11 @@ final class pn extends vb {
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(((pn) this).field_ib.field_E);
+            stackOut_2_0 = Integer.parseInt(this.field_ib.field_E);
             stackIn_3_0 = stackOut_2_0;
             break L1;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
@@ -488,22 +490,22 @@ final class pn extends vb {
         int stackIn_14_0 = 0;
         int stackOut_12_0 = 0;
         int stackOut_13_0 = 0;
-        if (((pn) this).field_gb.field_E == null) {
+        if (this.field_gb.field_E == null) {
           return true;
         } else {
-          if (0 != ((pn) this).field_gb.field_E.length()) {
+          if (0 != this.field_gb.field_E.length()) {
             if (param0 > 64) {
               L0: {
-                if (null == ((pn) this).field_hb.field_E) {
+                if (null == this.field_hb.field_E) {
                   break L0;
                 } else {
-                  if (0 != ((pn) this).field_hb.field_E.length()) {
+                  if (0 != this.field_hb.field_E.length()) {
                     L1: {
                       L2: {
-                        if (((pn) this).field_ib.field_E == null) {
+                        if (this.field_ib.field_E == null) {
                           break L2;
                         } else {
-                          if (((pn) this).field_ib.field_E.length() == 0) {
+                          if (this.field_ib.field_E.length() == 0) {
                             break L2;
                           } else {
                             stackOut_12_0 = 0;
@@ -556,9 +558,9 @@ final class pn extends vb {
         try {
           L0: {
             var3 = new sc();
-            ((we) (Object) var3).field_d = param0;
-            ((we) (Object) var3).field_f = param1;
-            stackOut_0_0 = (sc) var3;
+            ((we) ((Object) var3)).field_d = param0;
+            ((we) ((Object) var3)).field_f = param1;
+            stackOut_0_0 = (sc) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -566,23 +568,23 @@ final class pn extends vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_0 = (RuntimeException) (var3_ref);
             stackOut_2_1 = new StringBuilder().append("pn.Q(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -590,9 +592,9 @@ final class pn extends vb {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 23155 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + 23155 + ')');
         }
-        return (we) (Object) stackIn_1_0;
+        return (we) ((Object) stackIn_1_0);
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
@@ -625,7 +627,7 @@ final class pn extends vb {
             }
             nn.a(kf.field_I.b(param2), sb.field_u[0][0], true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "pn.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "pn.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

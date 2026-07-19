@@ -69,7 +69,7 @@ abstract class sf extends be {
                     break L3;
                   }
                   if (jh.field_h) {
-                    ca.a((String) null, (String) null, (String) var2, (byte) 125, 2, 0);
+                    ca.a((String) null, (String) null, (String) (var2), (byte) 125, 2, 0);
                     qn.l(13);
                     break L2;
                   } else {
@@ -98,7 +98,7 @@ abstract class sf extends be {
             }
             L6: {
               if (null != var2) {
-                cl.a((String) null, 0, ij.field_c, (String) var2, -24503);
+                cl.a((String) null, 0, ij.field_c, (String) (var2), -24503);
                 break L6;
               } else {
                 L7: {
@@ -274,9 +274,9 @@ abstract class sf extends be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) var1, "sf.C(" + param0 + ')');
+          throw dh.a((Throwable) (var1), "sf.C(" + param0 + ')');
         }
-        return (String) (Object) stackIn_97_0;
+        return (String) ((Object) stackIn_97_0);
     }
 
     abstract int a(boolean param0);
@@ -302,12 +302,12 @@ abstract class sf extends be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "sf.A(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "sf.A(" + param0 + ')');
         }
     }
 
     sf() {
-        ((sf) this).field_z = true;
+        this.field_z = true;
     }
 
     static {

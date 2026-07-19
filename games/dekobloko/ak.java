@@ -93,7 +93,7 @@ final class ak {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = 5;
-        ((ak) this).field_h.a(param0, param4, param1, var7, var6, param2, -53);
+        this.field_h.a(param0, param4, param1, var7, var6, param2, -53);
         if (param3 < 97) {
             ak.a(127, 8, false, -33);
         }
@@ -109,10 +109,10 @@ final class ak {
         w[] var4 = null;
         try {
             var3 = new String[]{param0, al.field_a, tl.field_s};
-            var4 = new w[]{param1, tb.field_c, (w) (Object) ge.field_f};
-            ((ak) this).field_h = new tc(0L, ec.field_i, var3, fb.field_b, var4, 0);
+            var4 = new w[]{param1, tb.field_c, (w) ((Object) ge.field_f)};
+            this.field_h = new tc(0L, ec.field_i, var3, fb.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ak.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ak.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ak {
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0;
                   } else {
-                    var12 = (int[]) var8.field_b;
+                    var12 = (int[]) (var8.field_b);
                     var11 = var12;
                     var10 = var11;
                     var9 = var10;
@@ -171,7 +171,7 @@ final class ak {
                     var5 = 0;
                     L2: while (true) {
                       if (var5 >= var4.length) {
-                        stackOut_14_0 = (dc[]) var4;
+                        stackOut_14_0 = (dc[]) (var4);
                         stackIn_15_0 = stackOut_14_0;
                         break L0;
                       } else {
@@ -201,23 +201,23 @@ final class ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_0 = (RuntimeException) (var2);
             stackOut_16_1 = new StringBuilder().append("ak.E(").append(-109).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -225,7 +225,7 @@ final class ak {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }

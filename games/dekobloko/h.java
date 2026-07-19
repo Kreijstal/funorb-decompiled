@@ -541,23 +541,23 @@ final class h {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var2 = decompiledCaughtException;
-            stackOut_82_0 = (RuntimeException) var2;
+            stackOut_82_0 = (RuntimeException) (var2);
             stackOut_82_1 = new StringBuilder().append("h.H(");
             stackIn_84_0 = stackOut_82_0;
             stackIn_84_1 = stackOut_82_1;
             stackIn_83_0 = stackOut_82_0;
             stackIn_83_1 = stackOut_82_1;
             if (param0 == null) {
-              stackOut_84_0 = (RuntimeException) (Object) stackIn_84_0;
-              stackOut_84_1 = (StringBuilder) (Object) stackIn_84_1;
+              stackOut_84_0 = (RuntimeException) ((Object) stackIn_84_0);
+              stackOut_84_1 = (StringBuilder) ((Object) stackIn_84_1);
               stackOut_84_2 = "null";
               stackIn_85_0 = stackOut_84_0;
               stackIn_85_1 = stackOut_84_1;
               stackIn_85_2 = stackOut_84_2;
               break L22;
             } else {
-              stackOut_83_0 = (RuntimeException) (Object) stackIn_83_0;
-              stackOut_83_1 = (StringBuilder) (Object) stackIn_83_1;
+              stackOut_83_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackOut_83_1 = (StringBuilder) ((Object) stackIn_83_1);
               stackOut_83_2 = "{...}";
               stackIn_85_0 = stackOut_83_0;
               stackIn_85_1 = stackOut_83_1;
@@ -565,7 +565,7 @@ final class h {
               break L22;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_85_0, stackIn_85_2 + ',' + 95 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_85_0), stackIn_85_2 + ',' + 95 + ')');
         }
     }
 

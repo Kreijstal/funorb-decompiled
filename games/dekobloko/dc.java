@@ -48,7 +48,7 @@ final class dc {
                 }
             }
             if (!(!vh.a((byte) 70))) {
-                Object var4 = null;
+                String var4 = (String) null;
                 ce.a(15, (byte) -85, qa.field_y, fa.field_r, cd.field_a, (String) null);
             }
             return true;
@@ -180,7 +180,7 @@ final class dc {
           if (param1 > 75) {
             break L7;
           } else {
-            field_i = null;
+            field_i = (String) null;
             break L7;
           }
         }
@@ -244,23 +244,23 @@ final class dc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_0 = (RuntimeException) (var2);
             stackOut_15_1 = new StringBuilder().append("dc.A(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L2;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -268,7 +268,7 @@ final class dc {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + -70 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + -70 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -394,7 +394,7 @@ final class dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "dc.D(" + -60 + ')');
+          throw dh.a((Throwable) ((Object) var1), "dc.D(" + -60 + ')');
         }
     }
 

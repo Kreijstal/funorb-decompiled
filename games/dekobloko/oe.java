@@ -28,7 +28,7 @@ abstract class oe extends ce implements ra {
         try {
           L0: {
             var2_int = 0;
-            var3 = ((oe) this).field_K;
+            var3 = this.field_K;
             var4 = 22 % ((36 - param0) / 51);
             var5 = 0;
             L1: while (true) {
@@ -59,7 +59,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "oe.DC(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var2), "oe.DC(" + param0 + ')');
         }
         return stackIn_8_0;
     }
@@ -97,7 +97,7 @@ abstract class oe extends ce implements ra {
         var6 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var3 = ((oe) this).field_K;
+            var3 = this.field_K;
             var4 = 0;
             L1: while (true) {
               if (~var3.length >= ~var4) {
@@ -105,7 +105,7 @@ abstract class oe extends ce implements ra {
                   if (!param0) {
                     break L2;
                   } else {
-                    ((oe) this).field_K = null;
+                    this.field_K = (ce[]) null;
                     break L2;
                   }
                 }
@@ -136,23 +136,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3_ref;
+            stackOut_19_0 = (RuntimeException) (var3_ref);
             stackOut_19_1 = new StringBuilder().append("oe.EC(").append(param0).append(',');
             stackIn_22_0 = stackOut_19_0;
             stackIn_22_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_23_0 = stackOut_20_0;
               stackIn_23_1 = stackOut_20_1;
@@ -160,7 +160,7 @@ abstract class oe extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
         return stackIn_18_0 != 0;
     }
@@ -196,12 +196,12 @@ abstract class oe extends ce implements ra {
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (null == ((oe) this).field_K) {
+            if (null == this.field_K) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0 != 0;
             } else {
-              var4_int = ((oe) this).field_K.length - 1;
+              var4_int = this.field_K.length - 1;
               L1: while (true) {
                 if (var4_int < 0) {
                   L2: {
@@ -217,7 +217,7 @@ abstract class oe extends ce implements ra {
                   break L0;
                 } else {
                   L3: {
-                    var5 = ((oe) this).field_K[var4_int];
+                    var5 = this.field_K[var4_int];
                     if (var5 == null) {
                       break L3;
                     } else {
@@ -228,7 +228,7 @@ abstract class oe extends ce implements ra {
                             break L3;
                           } else {
                             L5: {
-                              var6 = ((oe) this).field_K[var4_int];
+                              var6 = this.field_K[var4_int];
                               if (null == var6) {
                                 break L5;
                               } else {
@@ -260,23 +260,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) var4;
+            stackOut_36_0 = (RuntimeException) (var4);
             stackOut_36_1 = new StringBuilder().append("oe.P(");
             stackIn_39_0 = stackOut_36_0;
             stackIn_39_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
             stackIn_37_1 = stackOut_36_1;
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "null";
               stackIn_40_0 = stackOut_39_0;
               stackIn_40_1 = stackOut_39_1;
               stackIn_40_2 = stackOut_39_2;
               break L6;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "{...}";
               stackIn_40_0 = stackOut_37_0;
               stackIn_40_1 = stackOut_37_1;
@@ -284,7 +284,7 @@ abstract class oe extends ce implements ra {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_35_0 != 0;
     }
@@ -315,9 +315,9 @@ abstract class oe extends ce implements ra {
         try {
           L0: {
             super.a(param0, 102, param2, param3);
-            if (((oe) this).field_K != null) {
+            if (this.field_K != null) {
               if (param1 > 38) {
-                var5 = ((oe) this).field_K;
+                var5 = this.field_K;
                 var6 = 0;
                 L1: while (true) {
                   if (~var5.length >= ~var6) {
@@ -326,7 +326,7 @@ abstract class oe extends ce implements ra {
                     L2: {
                       var7 = var5[var6];
                       if (var7 != null) {
-                        var7.a(param0, 109, param2 + ((oe) this).field_D, ((oe) this).field_u + param3);
+                        var7.a(param0, 109, param2 + this.field_D, this.field_u + param3);
                         break L2;
                       } else {
                         break L2;
@@ -347,23 +347,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) runtimeException;
+            stackOut_15_0 = (RuntimeException) (runtimeException);
             stackOut_15_1 = new StringBuilder().append("oe.A(");
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
@@ -371,7 +371,7 @@ abstract class oe extends ce implements ra {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -471,7 +471,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var7, "oe.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dh.a((Throwable) ((Object) var7), "oe.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -485,7 +485,7 @@ abstract class oe extends ce implements ra {
         try {
             field_J = null;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "oe.N(" + param0 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "oe.N(" + param0 + ')');
         }
     }
 
@@ -514,13 +514,13 @@ abstract class oe extends ce implements ra {
         var10 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (null != ((oe) this).field_K) {
+            if (null != this.field_K) {
               L1: {
-                var7 = ((oe) this).field_K;
+                var7 = this.field_K;
                 if (param1 == 64) {
                   break L1;
                 } else {
-                  ((oe) this).a((ce) null, -80, 51, 84);
+                  this.a((ce) null, -80, 51, 84);
                   break L1;
                 }
               }
@@ -532,7 +532,7 @@ abstract class oe extends ce implements ra {
                   L3: {
                     var9 = var7[var8];
                     if (null != var9) {
-                      var9.a(param0, param1, ((oe) this).field_u + param2, param3, param4 + ((oe) this).field_D, param5);
+                      var9.a(param0, param1, this.field_u + param2, param3, param4 + this.field_D, param5);
                       break L3;
                     } else {
                       break L3;
@@ -550,23 +550,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) runtimeException;
+            stackOut_16_0 = (RuntimeException) (runtimeException);
             stackOut_16_1 = new StringBuilder().append("oe.IB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
@@ -574,11 +574,16 @@ abstract class oe extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param4 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private final void a(StringBuilder param0, int param1, int param2, Hashtable param3) {
+        boolean discarded$113 = false;
+        StringBuilder discarded$114 = null;
+        StringBuilder discarded$115 = null;
+        StringBuilder discarded$116 = null;
+        StringBuilder discarded$117 = null;
         ce[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -619,10 +624,10 @@ abstract class oe extends ce implements ra {
         var9 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (null == ((oe) this).field_K) {
+            if (null == this.field_K) {
               return;
             } else {
-              var5 = ((oe) this).field_K;
+              var5 = this.field_K;
               var6 = 0;
               L1: while (true) {
                 if (var5.length <= var6) {
@@ -630,30 +635,30 @@ abstract class oe extends ce implements ra {
                     if (param2 == 3370) {
                       break L2;
                     } else {
-                      boolean discarded$113 = ((oe) this).a(85, -91, (ce) null, '￬');
+                      discarded$113 = this.a(85, -91, (ce) null, '￬');
                       break L2;
                     }
                   }
                   break L0;
                 } else {
                   var7 = var5[var6];
-                  StringBuilder discarded$114 = param0.append('\n');
+                  discarded$114 = param0.append('\n');
                   var8 = 0;
                   L3: while (true) {
                     if (var8 > param1) {
                       L4: {
                         if (var7 != null) {
-                          StringBuilder discarded$115 = var7.a(param3, param1 - -1, param0, true);
+                          discarded$115 = var7.a(param3, param1 - -1, param0, true);
                           break L4;
                         } else {
-                          StringBuilder discarded$116 = param0.append("null");
+                          discarded$116 = param0.append("null");
                           break L4;
                         }
                       }
                       var6++;
                       continue L1;
                     } else {
-                      StringBuilder discarded$117 = param0.append(' ');
+                      discarded$117 = param0.append(' ');
                       var8++;
                       continue L3;
                     }
@@ -666,23 +671,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5_ref = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var5_ref;
+            stackOut_21_0 = (RuntimeException) (var5_ref);
             stackOut_21_1 = new StringBuilder().append("oe.M(");
             stackIn_24_0 = stackOut_21_0;
             stackIn_24_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_25_0 = stackOut_22_0;
               stackIn_25_1 = stackOut_22_1;
@@ -691,23 +696,23 @@ abstract class oe extends ce implements ra {
             }
           }
           L6: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_28_0 = stackOut_25_0;
             stackIn_28_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L6;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_29_0 = stackOut_26_0;
               stackIn_29_1 = stackOut_26_1;
@@ -715,7 +720,7 @@ abstract class oe extends ce implements ra {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
@@ -751,7 +756,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "oe.TB(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var2), "oe.TB(" + param0 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -816,7 +821,7 @@ abstract class oe extends ce implements ra {
                 }
                 stackOut_10_0 = null;
                 stackIn_11_0 = stackOut_10_0;
-                return (jc) (Object) stackIn_11_0;
+                return (jc) ((Object) stackIn_11_0);
               }
             }
           }
@@ -824,23 +829,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_0 = (RuntimeException) (var2);
             stackOut_15_1 = new StringBuilder().append("oe.U(").append(param0).append(',');
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
@@ -848,12 +853,13 @@ abstract class oe extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
         return stackIn_14_0;
     }
 
     final void d(byte param0) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         ce[] var2 = null;
         int var3 = 0;
@@ -863,7 +869,7 @@ abstract class oe extends ce implements ra {
         var5 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var2 = ((oe) this).field_K;
+            var2 = this.field_K;
             var3 = 0;
             L1: while (true) {
               if (~var3 <= ~var2.length) {
@@ -871,7 +877,7 @@ abstract class oe extends ce implements ra {
                   if (param0 == -95) {
                     break L2;
                   } else {
-                    boolean discarded$2 = oe.a('ﾤ', -111);
+                    discarded$2 = oe.a('ﾤ', -111);
                     break L2;
                   }
                 }
@@ -894,11 +900,13 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) runtimeException, "oe.WB(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "oe.WB(" + param0 + ')');
         }
     }
 
     final static void c(boolean param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var1 = null;
         uf var1_ref = null;
         int var2 = 0;
@@ -988,7 +996,7 @@ abstract class oe extends ce implements ra {
                     if (null == var6) {
                       var6 = ed.a(var5, (byte) 71);
                       if (null != var6) {
-                        mc.field_a.a(var6, -1, (long)kf.a((CharSequence) (Object) var4_ref_String, (byte) 2).hashCode());
+                        mc.field_a.a(var6, -1, (long)kf.a((CharSequence) ((Object) var4_ref_String), (byte) 2).hashCode());
                         break L5;
                       } else {
                         break L5;
@@ -1002,8 +1010,8 @@ abstract class oe extends ce implements ra {
                       break L6;
                     } else {
                       var6 = new wb();
-                      mc.field_a.a(var6, -1, (long)kf.a((CharSequence) (Object) var4_ref_String, (byte) 2).hashCode());
-                      int fieldTemp$2 = md.field_Z;
+                      mc.field_a.a(var6, -1, (long)kf.a((CharSequence) ((Object) var4_ref_String), (byte) 2).hashCode());
+                      fieldTemp$2 = md.field_Z;
                       md.field_Z = md.field_Z + 1;
                       var6.field_Xb = fieldTemp$2;
                       qi.field_S.a(var6, 2777);
@@ -1022,7 +1030,7 @@ abstract class oe extends ce implements ra {
                   var6.field_Ob = var4_ref_String;
                   var6.field_Tb = var5;
                   var6.b((byte) 125);
-                  var7_ref = (wb) (Object) qi.field_S.c((byte) 18);
+                  var7_ref = (wb) ((Object) qi.field_S.c((byte) 18));
                   L8: while (true) {
                     L9: {
                       if (var7_ref == null) {
@@ -1031,7 +1039,7 @@ abstract class oe extends ce implements ra {
                         if (!pn.a(var7_ref, var6, false)) {
                           break L9;
                         } else {
-                          var7_ref = (wb) (Object) qi.field_S.d(true);
+                          var7_ref = (wb) ((Object) qi.field_S.d(true));
                           continue L8;
                         }
                       }
@@ -1085,7 +1093,7 @@ abstract class oe extends ce implements ra {
                 L14: {
                   var6 = g.a(-3805, var4_ref_String);
                   var7 = var1_ref.c((byte) -38);
-                  var8 = kf.a((CharSequence) (Object) var4_ref_String, (byte) 2);
+                  var8 = kf.a((CharSequence) ((Object) var4_ref_String), (byte) 2);
                   if (null == var8) {
                     var8 = var4_ref_String;
                     break L14;
@@ -1110,7 +1118,7 @@ abstract class oe extends ce implements ra {
                   if (var6 == null) {
                     var6 = new wb();
                     hg.field_e.a(var6, -1, (long)var8.hashCode());
-                    int fieldTemp$3 = ed.field_g;
+                    fieldTemp$3 = ed.field_g;
                     ed.field_g = ed.field_g + 1;
                     var6.field_Xb = fieldTemp$3;
                     uf.field_z.a(var6, 2777);
@@ -1131,7 +1139,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "oe.S(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "oe.S(" + param0 + ')');
         }
     }
 
@@ -1148,8 +1156,8 @@ abstract class oe extends ce implements ra {
               if (0 != param2) {
                 break L1;
               } else {
-                if (null != ((oe) this).field_p) {
-                  ((oe) this).field_p.a(true, param0, param3, (byte) -62, (ce) this);
+                if (null != this.field_p) {
+                  this.field_p.a(true, param0, param3, (byte) -62, (ce) (this));
                   break L1;
                 } else {
                   break L1;
@@ -1157,16 +1165,16 @@ abstract class oe extends ce implements ra {
               }
             }
             L2: {
-              if (null != ((oe) this).field_K) {
-                var5_int = -1 + ((oe) this).field_K.length;
+              if (null != this.field_K) {
+                var5_int = -1 + this.field_K.length;
                 L3: while (true) {
                   if (var5_int < 0) {
                     break L2;
                   } else {
                     L4: {
-                      var6 = ((oe) this).field_K[var5_int];
+                      var6 = this.field_K[var5_int];
                       if (var6 != null) {
-                        var6.a(((oe) this).field_u + param0, -109, param2, param3 - -((oe) this).field_D);
+                        var6.a(this.field_u + param0, -109, param2, param3 - -this.field_D);
                         break L4;
                       } else {
                         break L4;
@@ -1184,7 +1192,7 @@ abstract class oe extends ce implements ra {
               if (param1 < -103) {
                 break L5;
               } else {
-                ((oe) this).b(36, 0, -79, -102, 25);
+                this.b(36, 0, -79, -102, 25);
                 break L5;
               }
             }
@@ -1193,7 +1201,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var5, "oe.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) var5), "oe.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1228,8 +1236,8 @@ abstract class oe extends ce implements ra {
         var11 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (((oe) this).field_K != null) {
-              var8 = ((oe) this).field_K;
+            if (this.field_K != null) {
+              var8 = this.field_K;
               var9 = 0;
               L1: while (true) {
                 if (~var9 <= ~var8.length) {
@@ -1250,7 +1258,7 @@ abstract class oe extends ce implements ra {
                     if (var10 == null) {
                       break L3;
                     } else {
-                      if (var10.a(param0, param1, param2, param3, param4 - -((oe) this).field_D, ((oe) this).field_u + param5, (byte) -55)) {
+                      if (var10.a(param0, param1, param2, param3, param4 - -this.field_D, this.field_u + param5, (byte) -55)) {
                         stackOut_14_0 = 1;
                         stackIn_15_0 = stackOut_14_0;
                         return stackIn_15_0 != 0;
@@ -1273,23 +1281,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var8_ref;
+            stackOut_22_0 = (RuntimeException) (var8_ref);
             stackOut_22_1 = new StringBuilder().append("oe.LB(").append(param0).append(',').append(param1).append(',');
             stackIn_25_0 = stackOut_22_0;
             stackIn_25_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_26_0 = stackOut_23_0;
               stackIn_26_1 = stackOut_23_1;
@@ -1297,7 +1305,7 @@ abstract class oe extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_21_0 != 0;
     }
@@ -1333,24 +1341,24 @@ abstract class oe extends ce implements ra {
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (null != ((oe) this).field_K) {
+            if (null != this.field_K) {
               L1: {
                 if (param2 < -127) {
                   break L1;
                 } else {
-                  field_M = null;
+                  field_M = (String[]) null;
                   break L1;
                 }
               }
               var4_int = 0;
               L2: while (true) {
-                if (var4_int >= ((oe) this).field_K.length) {
+                if (var4_int >= this.field_K.length) {
                   stackOut_27_0 = 0;
                   stackIn_28_0 = stackOut_27_0;
                   break L0;
                 } else {
                   L3: {
-                    var5 = ((oe) this).field_K[var4_int];
+                    var5 = this.field_K[var4_int];
                     if (var5 == null) {
                       break L3;
                     } else {
@@ -1359,11 +1367,11 @@ abstract class oe extends ce implements ra {
                       } else {
                         var4_int = var4_int + param1;
                         L4: while (true) {
-                          if (~var4_int <= ~((oe) this).field_K.length) {
+                          if (~var4_int <= ~this.field_K.length) {
                             break L3;
                           } else {
                             L5: {
-                              var6 = ((oe) this).field_K[var4_int];
+                              var6 = this.field_K[var4_int];
                               if (null == var6) {
                                 break L5;
                               } else {
@@ -1397,23 +1405,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var4;
+            stackOut_29_0 = (RuntimeException) (var4);
             stackOut_29_1 = new StringBuilder().append("oe.O(");
             stackIn_32_0 = stackOut_29_0;
             stackIn_32_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L6;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_33_0 = stackOut_30_0;
               stackIn_33_1 = stackOut_30_1;
@@ -1421,14 +1429,14 @@ abstract class oe extends ce implements ra {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_28_0 != 0;
     }
 
     final StringBuilder a(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
         RuntimeException var5 = null;
-        Object stackIn_6_0 = null;
+        StringBuilder stackIn_6_0 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -1446,7 +1454,7 @@ abstract class oe extends ce implements ra {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         StringBuilder stackOut_7_0 = null;
-        Object stackOut_5_0 = null;
+        StringBuilder stackOut_5_0 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_12_0 = null;
@@ -1466,8 +1474,8 @@ abstract class oe extends ce implements ra {
         try {
           L0: {
             L1: {
-              if (((oe) this).a(0, param1, param0, param2)) {
-                ((oe) this).a((byte) 72, param2, param0, param1);
+              if (this.a(0, param1, param0, param2)) {
+                this.a((byte) 72, param2, param0, param1);
                 this.a(param2, param1, 3370, param0);
                 break L1;
               } else {
@@ -1475,36 +1483,36 @@ abstract class oe extends ce implements ra {
               }
             }
             if (param3) {
-              stackOut_7_0 = (StringBuilder) param2;
+              stackOut_7_0 = (StringBuilder) (param2);
               stackIn_8_0 = stackOut_7_0;
               break L0;
             } else {
-              stackOut_5_0 = null;
+              stackOut_5_0 = (StringBuilder) null;
               stackIn_6_0 = stackOut_5_0;
-              return (StringBuilder) (Object) stackIn_6_0;
+              return stackIn_6_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
+            stackOut_9_0 = (RuntimeException) (var5);
             stackOut_9_1 = new StringBuilder().append("oe.MB(");
             stackIn_12_0 = stackOut_9_0;
             stackIn_12_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
@@ -1513,23 +1521,23 @@ abstract class oe extends ce implements ra {
             }
           }
           L3: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
@@ -1537,7 +1545,7 @@ abstract class oe extends ce implements ra {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
         }
         return stackIn_8_0;
     }
@@ -1568,7 +1576,7 @@ abstract class oe extends ce implements ra {
               if (param1 == 0) {
                 break L1;
               } else {
-                ((oe) this).field_K = null;
+                this.field_K = (ce[]) null;
                 break L1;
               }
             }
@@ -1580,23 +1588,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("oe.T(");
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
@@ -1604,7 +1612,7 @@ abstract class oe extends ce implements ra {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -1626,13 +1634,13 @@ abstract class oe extends ce implements ra {
         var6 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (((oe) this).field_K == null) {
+            if (this.field_K == null) {
               stackOut_4_0 = null;
               stackIn_5_0 = stackOut_4_0;
-              return (ce) (Object) stackIn_5_0;
+              return (ce) ((Object) stackIn_5_0);
             } else {
               var3 = 36 % ((param0 - 6) / 63);
-              var2 = ((oe) this).field_K;
+              var2 = this.field_K;
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var2.length) {
@@ -1646,7 +1654,7 @@ abstract class oe extends ce implements ra {
                       break L2;
                     } else {
                       if (var5.a(true)) {
-                        stackOut_16_0 = (ce) var5;
+                        stackOut_16_0 = (ce) (var5);
                         stackIn_17_0 = stackOut_16_0;
                         return stackIn_17_0;
                       } else {
@@ -1663,12 +1671,13 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2_ref, "oe.J(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var2_ref), "oe.J(" + param0 + ')');
         }
-        return (ce) (Object) stackIn_20_0;
+        return (ce) ((Object) stackIn_20_0);
     }
 
     final static int b(int param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1682,7 +1691,7 @@ abstract class oe extends ce implements ra {
               if (param0 == -10498) {
                 break L1;
               } else {
-                boolean discarded$2 = oe.a('ﾏ', -43);
+                discarded$2 = oe.a('ﾏ', -43);
                 break L1;
               }
             }
@@ -1696,7 +1705,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "oe.L(" + param0 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) var2), "oe.L(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -1780,7 +1789,7 @@ abstract class oe extends ce implements ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2_ref, "oe.K(" + param0 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) var2_ref), "oe.K(" + param0 + ',' + param1 + ')');
         }
         return stackIn_30_0 != 0;
     }
@@ -1820,9 +1829,9 @@ abstract class oe extends ce implements ra {
         var9 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (((oe) this).field_K != null) {
+            if (this.field_K != null) {
               var5_int = -117 % ((param0 - -22) / 49);
-              var6 = ((oe) this).field_K;
+              var6 = this.field_K;
               var7 = 0;
               L1: while (true) {
                 if (~var6.length >= ~var7) {
@@ -1878,23 +1887,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var5;
+            stackOut_30_0 = (RuntimeException) (var5);
             stackOut_30_1 = new StringBuilder().append("oe.QA(").append(param0).append(',').append(param1).append(',');
             stackIn_33_0 = stackOut_30_0;
             stackIn_33_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L4;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_34_0 = stackOut_31_0;
               stackIn_34_1 = stackOut_31_1;
@@ -1902,7 +1911,7 @@ abstract class oe extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param3 + ')');
         }
         return stackIn_29_0 != 0;
     }
@@ -1924,8 +1933,8 @@ abstract class oe extends ce implements ra {
         var6 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (((oe) this).field_K != null) {
-              var2 = ((oe) this).field_K;
+            if (this.field_K != null) {
+              var2 = this.field_K;
               var3 = 0;
               L1: while (true) {
                 if (var3 >= var2.length) {
@@ -1933,7 +1942,7 @@ abstract class oe extends ce implements ra {
                     if (param0 == 113) {
                       break L2;
                     } else {
-                      ((oe) this).field_K = null;
+                      this.field_K = (ce[]) null;
                       break L2;
                     }
                   }
@@ -1948,7 +1957,7 @@ abstract class oe extends ce implements ra {
                     } else {
                       var5 = var4.c((byte) 113);
                       if (var5 != null) {
-                        stackOut_12_0 = (String) var5;
+                        stackOut_12_0 = (String) (var5);
                         stackIn_13_0 = stackOut_12_0;
                         return stackIn_13_0;
                       } else {
@@ -1963,15 +1972,15 @@ abstract class oe extends ce implements ra {
             } else {
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
-              return (String) (Object) stackIn_3_0;
+              return (String) ((Object) stackIn_3_0);
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2_ref, "oe.R(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var2_ref), "oe.R(" + param0 + ')');
         }
-        return (String) (Object) stackIn_19_0;
+        return (String) ((Object) stackIn_19_0);
     }
 
     final boolean a(int param0, int param1, int param2, ce param3, int param4, int param5, boolean param6) {
@@ -2016,7 +2025,7 @@ abstract class oe extends ce implements ra {
         var11 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (((oe) this).field_K != null) {
+            if (this.field_K != null) {
               L1: {
                 if (!param6) {
                   break L1;
@@ -2025,7 +2034,7 @@ abstract class oe extends ce implements ra {
                   break L1;
                 }
               }
-              var8 = ((oe) this).field_K;
+              var8 = this.field_K;
               var9 = 0;
               L2: while (true) {
                 if (var8.length <= var9) {
@@ -2039,19 +2048,19 @@ abstract class oe extends ce implements ra {
                       break L3;
                     } else {
                       L4: {
-                        stackOut_10_0 = (ce) var10;
+                        stackOut_10_0 = (ce) (var10);
                         stackIn_15_0 = stackOut_10_0;
                         stackIn_11_0 = stackOut_10_0;
                         if (param6) {
-                          stackOut_15_0 = (ce) (Object) stackIn_15_0;
+                          stackOut_15_0 = (ce) ((Object) stackIn_15_0);
                           stackOut_15_1 = 0;
                           stackIn_16_0 = stackOut_15_0;
                           stackIn_16_1 = stackOut_15_1;
                           break L4;
                         } else {
-                          stackOut_11_0 = (ce) (Object) stackIn_11_0;
+                          stackOut_11_0 = (ce) ((Object) stackIn_11_0);
                           stackIn_13_0 = stackOut_11_0;
-                          stackOut_13_0 = (ce) (Object) stackIn_13_0;
+                          stackOut_13_0 = (ce) ((Object) stackIn_13_0);
                           stackOut_13_1 = 1;
                           stackIn_16_0 = stackOut_13_0;
                           stackIn_16_1 = stackOut_13_1;
@@ -2085,23 +2094,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8_ref = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var8_ref;
+            stackOut_25_0 = (RuntimeException) (var8_ref);
             stackOut_25_1 = new StringBuilder().append("oe.FC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_28_0 = stackOut_25_0;
             stackIn_28_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L5;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_29_0 = stackOut_26_0;
               stackIn_29_1 = stackOut_26_1;
@@ -2109,7 +2118,7 @@ abstract class oe extends ce implements ra {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_24_0 != 0;
     }
@@ -2152,23 +2161,23 @@ abstract class oe extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("oe.V(");
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
@@ -2176,7 +2185,7 @@ abstract class oe extends ce implements ra {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -2184,6 +2193,7 @@ abstract class oe extends ce implements ra {
     abstract void g(int param0);
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
+        int discarded$2 = 0;
         RuntimeException var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2193,17 +2203,17 @@ abstract class oe extends ce implements ra {
               if (param4 == -16555) {
                 break L1;
               } else {
-                int discarded$2 = oe.b(71, 20);
+                discarded$2 = oe.b(71, 20);
                 break L1;
               }
             }
-            ((oe) this).g(30);
+            this.g(30);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var6, "oe.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) var6), "oe.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -17,24 +17,25 @@ final class cm implements Iterator {
     static ie field_f;
 
     public final Object next() {
+        int fieldTemp$0 = 0;
         bh var1 = null;
         int var2 = client.field_A ? 1 : 0;
-        if (!(((cm) this).field_c == ((cm) this).field_k.field_h[((cm) this).field_e + -1])) {
-            var1 = ((cm) this).field_c;
-            ((cm) this).field_c = var1.field_b;
-            ((cm) this).field_j = var1;
+        if (!(this.field_c == this.field_k.field_h[this.field_e + -1])) {
+            var1 = this.field_c;
+            this.field_c = var1.field_b;
+            this.field_j = var1;
             return var1;
         }
         do {
-            if (((cm) this).field_k.field_a <= ((cm) this).field_e) {
+            if (this.field_k.field_a <= this.field_e) {
                 return null;
             }
-            int fieldTemp$0 = ((cm) this).field_e;
-            ((cm) this).field_e = ((cm) this).field_e + 1;
-            var1 = ((cm) this).field_k.field_h[fieldTemp$0].field_b;
-        } while (var1 == ((cm) this).field_k.field_h[-1 + ((cm) this).field_e]);
-        ((cm) this).field_c = var1.field_b;
-        ((cm) this).field_j = var1;
+            fieldTemp$0 = this.field_e;
+            this.field_e = this.field_e + 1;
+            var1 = this.field_k.field_h[fieldTemp$0].field_b;
+        } while (var1 == this.field_k.field_h[-1 + this.field_e]);
+        this.field_c = var1.field_b;
+        this.field_j = var1;
         return var1;
     }
 
@@ -77,7 +78,7 @@ final class cm implements Iterator {
                   break L2;
                 } else {
                   var4 = var9.e((byte) -2);
-                  var5 = (ff) (Object) cd.field_c.c((byte) -124);
+                  var5 = (ff) ((Object) cd.field_c.c((byte) -124));
                   L3: while (true) {
                     L4: {
                       if (var5 == null) {
@@ -94,7 +95,7 @@ final class cm implements Iterator {
                             }
                           }
                         }
-                        var5 = (ff) (Object) cd.field_c.d(true);
+                        var5 = (ff) ((Object) cd.field_c.d(true));
                         continue L3;
                       }
                     }
@@ -108,7 +109,7 @@ final class cm implements Iterator {
                   }
                 }
               } else {
-                var4_ref_sb = (sb) (Object) ef.field_S.c((byte) -68);
+                var4_ref_sb = (sb) ((Object) ef.field_S.c((byte) -68));
                 if (var4_ref_sb == null) {
                   si.a(78);
                   return;
@@ -147,30 +148,31 @@ final class cm implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "cm.A(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "cm.A(" + param0 + ')');
         }
     }
 
     private final void b(byte param0) {
         int var2 = 4;
-        ((cm) this).field_e = 1;
-        ((cm) this).field_j = null;
-        ((cm) this).field_c = ((cm) this).field_k.field_h[0].field_b;
+        this.field_e = 1;
+        this.field_j = null;
+        this.field_c = this.field_k.field_h[0].field_b;
     }
 
     public final boolean hasNext() {
+        int fieldTemp$0 = 0;
         int var2 = client.field_A ? 1 : 0;
-        if (!(((cm) this).field_c == ((cm) this).field_k.field_h[-1 + ((cm) this).field_e])) {
+        if (!(this.field_c == this.field_k.field_h[-1 + this.field_e])) {
             return true;
         }
-        while (((cm) this).field_e < ((cm) this).field_k.field_a) {
-            int fieldTemp$0 = ((cm) this).field_e;
-            ((cm) this).field_e = ((cm) this).field_e + 1;
-            if (((cm) this).field_k.field_h[fieldTemp$0].field_b != ((cm) this).field_k.field_h[((cm) this).field_e - 1]) {
-                ((cm) this).field_c = ((cm) this).field_k.field_h[-1 + ((cm) this).field_e].field_b;
+        while (this.field_e < this.field_k.field_a) {
+            fieldTemp$0 = this.field_e;
+            this.field_e = this.field_e + 1;
+            if (this.field_k.field_h[fieldTemp$0].field_b != this.field_k.field_h[this.field_e - 1]) {
+                this.field_c = this.field_k.field_h[-1 + this.field_e].field_b;
                 return true;
             }
-            ((cm) this).field_c = ((cm) this).field_k.field_h[((cm) this).field_e + -1];
+            this.field_c = this.field_k.field_h[this.field_e + -1];
         }
         return false;
     }
@@ -184,19 +186,22 @@ final class cm implements Iterator {
         field_i = null;
         field_d = null;
         if (param0 != 1714134600) {
-            field_a = null;
+            field_a = (int[]) null;
         }
     }
 
     public final void remove() {
-        if (((cm) this).field_j == null) {
+        if (this.field_j == null) {
             throw new IllegalStateException();
         }
-        ((cm) this).field_j.b((byte) 112);
-        ((cm) this).field_j = null;
+        this.field_j.b((byte) 112);
+        this.field_j = null;
     }
 
     final static String a(byte param0, String param1, String[] param2) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -266,7 +271,7 @@ final class cm implements Iterator {
                     }
                   }
                   var7_ref_String = param1.substring(2 + var6_int, var5);
-                  if (be.a((byte) 98, (CharSequence) (Object) var7_ref_String)) {
+                  if (be.a((byte) 98, (CharSequence) ((Object) var7_ref_String))) {
                     if (var3_int <= var5) {
                       continue L1;
                     } else {
@@ -274,7 +279,7 @@ final class cm implements Iterator {
                         continue L1;
                       } else {
                         var5++;
-                        var8 = cb.a((byte) -72, (CharSequence) (Object) var7_ref_String);
+                        var8 = cb.a((byte) -72, (CharSequence) ((Object) var7_ref_String));
                         var4 = var4 + (var6_int - (var5 - param2[var8].length()));
                         continue L1;
                       }
@@ -313,7 +318,7 @@ final class cm implements Iterator {
                         }
                       }
                       var9 = param1.substring(2 + var8, var5);
-                      if (be.a((byte) 98, (CharSequence) (Object) var9)) {
+                      if (be.a((byte) 98, (CharSequence) ((Object) var9))) {
                         if (var5 >= var3_int) {
                           continue L5;
                         } else {
@@ -321,10 +326,10 @@ final class cm implements Iterator {
                             continue L5;
                           } else {
                             var5++;
-                            var10 = cb.a((byte) 100, (CharSequence) (Object) var9);
-                            StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
+                            var10 = cb.a((byte) 100, (CharSequence) ((Object) var9));
+                            discarded$3 = var6.append(param1.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$4 = var6.append(param2[var10]);
+                            discarded$4 = var6.append(param2[var10]);
                             continue L5;
                           }
                         }
@@ -333,7 +338,7 @@ final class cm implements Iterator {
                       }
                     }
                   } else {
-                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
+                    discarded$5 = var6.append(param1.substring(var7));
                     stackOut_27_0 = var6.toString();
                     stackIn_28_0 = stackOut_27_0;
                     break L0;
@@ -346,23 +351,23 @@ final class cm implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var3;
+            stackOut_29_0 = (RuntimeException) (var3);
             stackOut_29_1 = new StringBuilder().append("cm.D(").append(param0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
@@ -371,23 +376,23 @@ final class cm implements Iterator {
             }
           }
           L9: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
             stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L9;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -395,18 +400,18 @@ final class cm implements Iterator {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
         }
         return stackIn_28_0;
     }
 
     cm(si param0) {
-        ((cm) this).field_j = null;
+        this.field_j = null;
         try {
-            ((cm) this).field_k = param0;
+            this.field_k = param0;
             this.b((byte) -117);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "cm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

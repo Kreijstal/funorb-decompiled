@@ -15,10 +15,10 @@ final class pj extends sf {
         if (param0) {
             return -110;
         }
-        if (!(((pj) this).field_J != null)) {
+        if (!(this.field_J != null)) {
             return 0;
         }
-        return 100 * ((pj) this).field_J.field_n / (-((pj) this).field_M + ((pj) this).field_J.field_r.length);
+        return 100 * this.field_J.field_n / (-this.field_M + this.field_J.field_r.length);
     }
 
     static long a(long param0, long param1) {
@@ -34,13 +34,14 @@ final class pj extends sf {
     }
 
     final byte[] g(byte param0) {
-        if (!((pj) this).field_z) {
-          if (((pj) this).field_J.field_r.length - ((pj) this).field_M <= ((pj) this).field_J.field_n) {
+        int discarded$2 = 0;
+        if (!this.field_z) {
+          if (this.field_J.field_r.length - this.field_M <= this.field_J.field_n) {
             if (param0 <= 65) {
-              int discarded$2 = pj.d(9);
-              return ((pj) this).field_J.field_r;
+              discarded$2 = pj.d(9);
+              return this.field_J.field_r;
             } else {
-              return ((pj) this).field_J.field_r;
+              return this.field_J.field_r;
             }
           } else {
             throw new RuntimeException();
@@ -79,7 +80,7 @@ final class pj extends sf {
         try {
           L0: {
             param0.b((byte) 108);
-            var2 = (ve) (Object) h.field_b.c((byte) -99);
+            var2 = (ve) ((Object) h.field_b.c((byte) -99));
             L1: while (true) {
               L2: {
                 if (var2 == null) {
@@ -88,7 +89,7 @@ final class pj extends sf {
                   if (!var2.a(param0, false)) {
                     break L2;
                   } else {
-                    var2 = (ve) (Object) h.field_b.d(true);
+                    var2 = (ve) ((Object) h.field_b.d(true));
                     continue L1;
                   }
                 }
@@ -106,23 +107,23 @@ final class pj extends sf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_0 = (RuntimeException) (var2_ref);
             stackOut_11_1 = new StringBuilder().append("pj.E(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -130,7 +131,7 @@ final class pj extends sf {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + -50 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + -50 + ')');
         }
     }
 

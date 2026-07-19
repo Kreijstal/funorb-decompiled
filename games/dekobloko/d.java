@@ -41,7 +41,7 @@ final class d {
             }
             jj.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "d.A(" + true + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "d.A(" + true + ')');
         }
     }
 

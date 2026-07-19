@@ -43,38 +43,38 @@ final class ai extends ek {
         try {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              var8_int = -((ai) this).field_O - (param5 - -((ai) this).field_u) + param1;
-              var9 = param0 - ((ai) this).field_V - (param4 - -((ai) this).field_D);
-              if (var8_int * var8_int + var9 * var9 < ((ai) this).field_K * ((ai) this).field_K) {
+              var8_int = -this.field_O - (param5 - -this.field_u) + param1;
+              var9 = param0 - this.field_V - (param4 - -this.field_D);
+              if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
                 L1: {
                   var10 = Math.atan2((double)var9, (double)var8_int) - hc.field_b;
                   if (0.0 <= var10) {
                     if (0.0 >= var10) {
                       break L1;
                     } else {
-                      var10 = var10 + 3.141592653589793 / (double)((ai) this).field_Q;
+                      var10 = var10 + 3.141592653589793 / (double)this.field_Q;
                       break L1;
                     }
                   } else {
-                    var10 = var10 - 3.141592653589793 / (double)((ai) this).field_Q;
+                    var10 = var10 - 3.141592653589793 / (double)this.field_Q;
                     break L1;
                   }
                 }
-                ((ai) this).field_R = (int)((double)((ai) this).field_Q * var10 / 6.283185307179586);
+                this.field_R = (int)((double)this.field_Q * var10 / 6.283185307179586);
                 L2: while (true) {
-                  if (((ai) this).field_Q > ((ai) this).field_R) {
+                  if (this.field_Q > this.field_R) {
                     L3: while (true) {
-                      if (((ai) this).field_R >= 0) {
+                      if (this.field_R >= 0) {
                         stackOut_14_0 = 1;
                         stackIn_15_0 = stackOut_14_0;
                         break L0;
                       } else {
-                        ((ai) this).field_R = ((ai) this).field_R + ((ai) this).field_Q;
+                        this.field_R = this.field_R + this.field_Q;
                         continue L3;
                       }
                     }
                   } else {
-                    ((ai) this).field_R = ((ai) this).field_R - ((ai) this).field_Q;
+                    this.field_R = this.field_R - this.field_Q;
                     continue L2;
                   }
                 }
@@ -89,23 +89,23 @@ final class ai extends ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var8;
+            stackOut_16_0 = (RuntimeException) (var8);
             stackOut_16_1 = new StringBuilder().append("ai.LB(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -113,7 +113,7 @@ final class ai extends ek {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -135,7 +135,7 @@ final class ai extends ek {
             var5_int = (int)(0.5 + (double)(param2.field_p * 256) * Math.pow(2.0, (double)param1 * 0.08333333333333333) / (double)en.field_o);
             dg.field_c.a(param2, var5_int, param4 * pb.field_d, param3 << 6);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ai.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ai.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class ai extends ek {
     }
 
     final static void h(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         qf.a(te.field_q, -128, (String) null);
     }
 
@@ -242,7 +242,7 @@ final class ai extends ek {
         cl var4 = null;
         int var5 = 0;
         var5 = client.field_A ? 1 : 0;
-        var4 = (cl) (Object) oe.field_I.c((byte) 19);
+        var4 = (cl) ((Object) oe.field_I.c((byte) 19));
         L0: while (true) {
           if (var4 == null) {
             var4 = new cl();
@@ -255,7 +255,7 @@ final class ai extends ek {
             if (0 == var4.field_q) {
               return var4;
             } else {
-              var4 = (cl) (Object) oe.field_I.d(true);
+              var4 = (cl) ((Object) oe.field_I.d(true));
               continue L0;
             }
           }

@@ -10,10 +10,10 @@ final class oi {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
-        Object var4 = null;
+        sb var4 = null;
         var3 = param0 + -1 & param2 >> 31;
         if (param1 < 76) {
-          var4 = null;
+          var4 = (sb) null;
           oi.a(106, 18, (sb) null);
           return var3 + (param2 - -(param2 >>> 31)) % param0;
         } else {
@@ -28,18 +28,18 @@ final class oi {
         int var5 = 0;
         rf[] var6 = null;
         var5 = client.field_A ? 1 : 0;
-        var6 = new rf[((oi) this).field_c.length * 2];
+        var6 = new rf[this.field_c.length * 2];
         var2 = var6;
         if (param0 <= 103) {
           return;
         } else {
           var3 = 0;
           L0: while (true) {
-            if (((oi) this).field_c.length <= var3) {
-              ((oi) this).field_c = var2;
+            if (this.field_c.length <= var3) {
+              this.field_c = var2;
               return;
             } else {
-              var4 = ((oi) this).field_c[var3];
+              var4 = this.field_c[var3];
               if (var4 != null) {
                 var2[var4.field_j % var6.length] = var4;
                 var3++;
@@ -88,13 +88,13 @@ final class oi {
               if (param0) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (em) null;
                 break L1;
               }
             }
             L2: {
               var4_int = param2.a(118);
-              var8 = ((oi) this).field_c[var4_int % ((oi) this).field_c.length];
+              var8 = this.field_c[var4_int % this.field_c.length];
               var5 = var8;
               if (var5 == null) {
                 break L2;
@@ -104,13 +104,13 @@ final class oi {
                 } else {
                   L3: {
                     if (!param1) {
-                      ((oi) this).field_c[var4_int % ((oi) this).field_c.length] = null;
+                      this.field_c[var4_int % this.field_c.length] = null;
                       break L3;
                     } else {
                       break L3;
                     }
                   }
-                  stackOut_8_0 = (rf) var5;
+                  stackOut_8_0 = (rf) (var5);
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 }
@@ -121,7 +121,7 @@ final class oi {
                 if (!param1) {
                   break L5;
                 } else {
-                  if (((oi) this).field_c[var4_int % ((oi) this).field_c.length] == null) {
+                  if (this.field_c[var4_int % this.field_c.length] == null) {
                     break L5;
                   } else {
                     this.a((byte) 115);
@@ -140,13 +140,13 @@ final class oi {
                   L7: {
                     param2.k((byte) -128);
                     if (param1) {
-                      ((oi) this).field_c[var4_int % ((oi) this).field_c.length] = var9;
+                      this.field_c[var4_int % this.field_c.length] = var9;
                       break L7;
                     } else {
                       break L7;
                     }
                   }
-                  stackOut_20_0 = (rf) var9;
+                  stackOut_20_0 = (rf) (var9);
                   stackIn_21_0 = stackOut_20_0;
                   break L0;
                 } else {
@@ -161,23 +161,23 @@ final class oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
+            stackOut_22_0 = (RuntimeException) (var4);
             stackOut_22_1 = new StringBuilder().append("oi.F(").append(param0).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -185,16 +185,16 @@ final class oi {
               break L8;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
         return stackIn_21_0;
     }
 
     final rf a(boolean param0, int param1) {
         rf var3 = null;
-        Object var4 = null;
+        rf var4 = null;
         if (!param0) {
-          var3 = ((oi) this).field_c[param1 % ((oi) this).field_c.length];
+          var3 = this.field_c[param1 % this.field_c.length];
           if (var3 != null) {
             if (var3.field_j != param1) {
               return null;
@@ -205,9 +205,9 @@ final class oi {
             return null;
           }
         } else {
-          var4 = null;
-          ((oi) this).a((rf) null, (byte) -73);
-          var3 = ((oi) this).field_c[param1 % ((oi) this).field_c.length];
+          var4 = (rf) null;
+          this.a((rf) null, (byte) -73);
+          var3 = this.field_c[param1 % this.field_c.length];
           if (var3 != null) {
             if (var3.field_j != param1) {
               return null;
@@ -222,21 +222,21 @@ final class oi {
 
     final void a(rf param0, byte param1) {
         int var3_int = param0.field_j;
-        if (param0 != ((oi) this).field_c[var3_int % ((oi) this).field_c.length]) {
+        if (param0 != this.field_c[var3_int % this.field_c.length]) {
             throw new IllegalArgumentException();
         }
         if (param1 < 24) {
             return;
         }
         try {
-            ((oi) this).field_c[var3_int % ((oi) this).field_c.length] = null;
+            this.field_c[var3_int % this.field_c.length] = null;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "oi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "oi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     oi(int param0) {
-        ((oi) this).field_c = new rf[param0];
+        this.field_c = new rf[param0];
     }
 
     public static void a(int param0) {
@@ -248,39 +248,41 @@ final class oi {
 
     final void a(rf param0, int param1) {
         int var3_int = 0;
+        int discarded$0 = 0;
         int var4 = client.field_A ? 1 : 0;
         try {
             var3_int = param0.field_j;
-            if (((oi) this).field_c[var3_int % ((oi) this).field_c.length] != null) {
-                if (param0.field_j == ((oi) this).field_c[var3_int % ((oi) this).field_c.length].field_j) {
+            if (this.field_c[var3_int % this.field_c.length] != null) {
+                if (param0.field_j == this.field_c[var3_int % this.field_c.length].field_j) {
                     throw new IllegalArgumentException();
                 }
             }
-            while (null != ((oi) this).field_c[var3_int % ((oi) this).field_c.length]) {
+            while (null != this.field_c[var3_int % this.field_c.length]) {
                 this.a((byte) 116);
             }
             if (param1 != 0) {
-                int discarded$0 = oi.a(93, 98, -46);
+                discarded$0 = oi.a(93, 98, -46);
             }
-            ((oi) this).field_c[var3_int % ((oi) this).field_c.length] = param0;
+            this.field_c[var3_int % this.field_c.length] = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "oi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "oi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, sb param2) {
         uf var3 = null;
+        int discarded$0 = 0;
         try {
             var3 = we.field_b;
             var3.f(param1, -4);
             var3.a(true, 2);
             var3.a(true, 0);
             if (param0 > -57) {
-                int discarded$0 = oi.a(-93, 111, -125);
+                discarded$0 = oi.a(-93, 111, -125);
             }
             var3.a(true, param2.field_r);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "oi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "oi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

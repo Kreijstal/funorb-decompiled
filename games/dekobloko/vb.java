@@ -27,7 +27,7 @@ abstract class vb extends kf implements jl {
     abstract boolean k(int param0);
 
     final static void g(byte param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         qf.a("", -99, (String) null);
     }
 
@@ -35,17 +35,17 @@ abstract class vb extends kf implements jl {
         if (param0 > -86) {
             vb.j(-30);
         }
-        return (nb) (Object) ((vb) this).field_W;
+        return (nb) ((Object) this.field_W);
     }
 
     abstract int f(byte param0);
 
     void a(byte param0, qf param1) {
         try {
-            ((vb) this).field_W = param1;
-            ((vb) this).field_W.field_g = (vb) this;
+            this.field_W = param1;
+            this.field_W.field_g = (vb) (this);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "vb.H(" + 88 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "vb.H(" + 88 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,7 +119,7 @@ abstract class vb extends kf implements jl {
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               if (!pd.field_a) {
-                stackOut_6_0 = (w) (Object) stackIn_6_0;
+                stackOut_6_0 = (w) ((Object) stackIn_6_0);
                 stackOut_6_1 = stackIn_6_1;
                 stackOut_6_2 = 0;
                 stackIn_7_0 = stackOut_6_0;
@@ -127,7 +127,7 @@ abstract class vb extends kf implements jl {
                 stackIn_7_2 = stackOut_6_2;
                 break L2;
               } else {
-                stackOut_5_0 = (w) (Object) stackIn_5_0;
+                stackOut_5_0 = (w) ((Object) stackIn_5_0);
                 stackOut_5_1 = stackIn_5_1;
                 stackOut_5_2 = 2 + (40 + vh.field_e - -2);
                 stackIn_7_0 = stackOut_5_0;
@@ -365,7 +365,7 @@ abstract class vb extends kf implements jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "vb.G(" + param0 + ',' + -2 + ')');
+          throw dh.a((Throwable) ((Object) var2), "vb.G(" + param0 + ',' + -2 + ')');
         }
     }
 
@@ -415,7 +415,7 @@ abstract class vb extends kf implements jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var3, "vb.E(" + param0 + ',' + param1 + ',' + false + ')');
+          throw dh.a((Throwable) ((Object) var3), "vb.E(" + param0 + ',' + param1 + ',' + false + ')');
         }
         return stackIn_10_0;
     }

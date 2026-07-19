@@ -11,6 +11,6 @@ public class mh {
     public volatile Object field_b;
 
     mh() {
-        ((mh) this).field_c = 0;
+        this.field_c = 0;
     }
 }

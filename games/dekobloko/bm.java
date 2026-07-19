@@ -36,9 +36,9 @@ final class bm {
         L0: while (true) {
           if (var4 >= param1) {
             if (!param2) {
-              var4 = va.field_S[((bm) this).field_a].field_d;
-              var5 = ((bm) this).field_f - ((bm) this).field_b;
-              var6 = var5 / ((bm) this).field_d;
+              var4 = va.field_S[this.field_a].field_d;
+              var5 = this.field_f - this.field_b;
+              var6 = var5 / this.field_d;
               var28 = new int[var6];
               var25 = var28;
               var22 = var25;
@@ -59,7 +59,7 @@ final class bm {
                         if (var8 != 0) {
                           break L3;
                         } else {
-                          var10 = va.field_S[((bm) this).field_a].a();
+                          var10 = va.field_S[this.field_a].a();
                           var11 = var4 - 1;
                           L4: while (true) {
                             if (var11 < 0) {
@@ -69,11 +69,11 @@ final class bm {
                                 if (var9 + var11 >= var6) {
                                   break L5;
                                 } else {
-                                  var7[var9 + var11] = var10 % ((bm) this).field_e;
+                                  var7[var9 + var11] = var10 % this.field_e;
                                   break L5;
                                 }
                               }
-                              var10 = var10 / ((bm) this).field_e;
+                              var10 = var10 / this.field_e;
                               var11--;
                               continue L4;
                             }
@@ -88,16 +88,16 @@ final class bm {
                         } else {
                           L7: {
                             var11 = var28[var9];
-                            var12 = ((bm) this).field_g[var11 * 8 + var8];
+                            var12 = this.field_g[var11 * 8 + var8];
                             if (var12 < 0) {
                               break L7;
                             } else {
-                              var13 = ((bm) this).field_b + var9 * ((bm) this).field_d;
+                              var13 = this.field_b + var9 * this.field_d;
                               var14 = va.field_S[var12];
-                              if (((bm) this).field_c != 0) {
+                              if (this.field_c != 0) {
                                 var15 = 0;
                                 L8: while (true) {
-                                  if (var15 >= ((bm) this).field_d) {
+                                  if (var15 >= this.field_d) {
                                     break L7;
                                   } else {
                                     var30 = var14.b();
@@ -115,7 +115,7 @@ final class bm {
                                   }
                                 }
                               } else {
-                                var15 = ((bm) this).field_d / var14.field_d;
+                                var15 = this.field_d / var14.field_d;
                                 var16 = 0;
                                 L10: while (true) {
                                   if (var16 >= var15) {
@@ -163,18 +163,18 @@ final class bm {
     }
 
     bm() {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ((bm) this).field_c = va.c(16);
-        ((bm) this).field_b = va.c(24);
-        ((bm) this).field_f = va.c(24);
-        ((bm) this).field_d = va.c(24) + 1;
-        ((bm) this).field_e = va.c(6) + 1;
-        ((bm) this).field_a = va.c(8);
-        int[] var1 = new int[((bm) this).field_e];
-        for (var2 = 0; var2 < ((bm) this).field_e; var2++) {
+        int var2 = 0;
+        this.field_c = va.c(16);
+        this.field_b = va.c(24);
+        this.field_f = va.c(24);
+        this.field_d = va.c(24) + 1;
+        this.field_e = va.c(6) + 1;
+        this.field_a = va.c(8);
+        int[] var1 = new int[this.field_e];
+        for (var2 = 0; var2 < this.field_e; var2++) {
             var3 = 0;
             var4 = va.c(3);
             var5 = va.b() != 0 ? 1 : 0;
@@ -183,11 +183,11 @@ final class bm {
             }
             var1[var2] = var3 << 3 | var4;
         }
-        ((bm) this).field_g = new int[((bm) this).field_e * 8];
+        this.field_g = new int[this.field_e * 8];
         int var6 = 0;
         var2 = var6;
-        while (var6 < ((bm) this).field_e * 8) {
-            ((bm) this).field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? va.c(8) : -1;
+        while (var6 < this.field_e * 8) {
+            this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? va.c(8) : -1;
             var6++;
         }
     }

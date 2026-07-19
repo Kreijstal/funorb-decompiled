@@ -38,13 +38,13 @@ final class ne {
         byte[] var16 = null;
         byte[] var17 = null;
         var8 = client.field_A ? 1 : 0;
-        if (null != ((ne) this).field_a) {
+        if (null != this.field_a) {
           return true;
         } else {
           L0: {
-            if (null == ((ne) this).field_j) {
-              if (!((ne) this).field_i.a(true)) {
-                ((ne) this).field_j = ((ne) this).field_i.a(true, (byte) 0, param0, 255, 255);
+            if (null == this.field_j) {
+              if (!this.field_i.a(true)) {
+                this.field_j = this.field_i.a(true, (byte) 0, param0, 255, 255);
                 break L0;
               } else {
                 return false;
@@ -53,8 +53,8 @@ final class ne {
               break L0;
             }
           }
-          if (!((ne) this).field_j.field_z) {
-            var10 = new wl(((ne) this).field_j.g((byte) 113));
+          if (!this.field_j.field_z) {
+            var10 = new wl(this.field_j.g((byte) 113));
             var10.field_n = 5;
             var3 = var10.d((byte) -69);
             var10.field_n = var10.field_n + var3 * 72;
@@ -67,12 +67,12 @@ final class ne {
             if (param0) {
               L1: {
                 L2: {
-                  if (((ne) this).field_e == null) {
+                  if (this.field_e == null) {
                     break L2;
                   } else {
-                    if (null != ((ne) this).field_g) {
+                    if (null != this.field_g) {
                       var12 = new java.math.BigInteger(var16);
-                      var7_ref_java_math_BigInteger = var12.modPow(((ne) this).field_e, ((ne) this).field_g);
+                      var7_ref_java_math_BigInteger = var12.modPow(this.field_e, this.field_g);
                       var5 = var7_ref_java_math_BigInteger.toByteArray();
                       break L1;
                     } else {
@@ -90,8 +90,8 @@ final class ne {
                 var7 = 0;
                 L3: while (true) {
                   if (var7 >= 64) {
-                    ((ne) this).field_h = new le[var3];
-                    ((ne) this).field_a = var10;
+                    this.field_h = new le[var3];
+                    this.field_a = var10;
                     return true;
                   } else {
                     if (var17[var7] == var5[var7 - -1]) {
@@ -156,26 +156,26 @@ final class ne {
         String stackOut_16_2 = null;
         try {
           L0: {
-            if (((ne) this).field_a != null) {
+            if (this.field_a != null) {
               L1: {
                 if (0 > param1) {
                   break L1;
                 } else {
-                  if (((ne) this).field_h.length > param1) {
-                    if (((ne) this).field_h[param1] != null) {
-                      stackOut_8_0 = ((ne) this).field_h[param1];
+                  if (this.field_h.length > param1) {
+                    if (this.field_h[param1] != null) {
+                      stackOut_8_0 = this.field_h[param1];
                       stackIn_9_0 = stackOut_8_0;
                       return stackIn_9_0;
                     } else {
-                      ((ne) this).field_a.field_n = param1 * 72 + 6;
+                      this.field_a.field_n = param1 * 72 + 6;
                       var7 = 10 / ((-41 - param0) / 42);
-                      var6_int = ((ne) this).field_a.i(7553);
-                      var8 = ((ne) this).field_a.i(7553);
+                      var6_int = this.field_a.i(7553);
+                      var8 = this.field_a.i(7553);
                       var14 = new byte[64];
-                      ((ne) this).field_a.a(var14, 0, (byte) 127, 64);
-                      var10 = new le(param1, param2, param3, ((ne) this).field_i, ((ne) this).field_f, var6_int, var14, var8, param4);
-                      ((ne) this).field_h[param1] = var10;
-                      stackOut_10_0 = (le) var10;
+                      this.field_a.a(var14, 0, (byte) 127, 64);
+                      var10 = new le(param1, param2, param3, this.field_i, this.field_f, var6_int, var14, var8, param4);
+                      this.field_h[param1] = var10;
+                      stackOut_10_0 = (le) (var10);
                       stackIn_11_0 = stackOut_10_0;
                       break L0;
                     }
@@ -193,23 +193,23 @@ final class ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("ne.B(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -218,23 +218,23 @@ final class ne {
             }
           }
           L3: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -242,7 +242,7 @@ final class ne {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param4 + ')');
         }
         return stackIn_11_0;
     }
@@ -256,7 +256,7 @@ final class ne {
     }
 
     final static java.awt.Canvas d(int param0) {
-        return null != cl.field_v ? (java.awt.Canvas) (Object) cl.field_v : jh.field_b;
+        return null != cl.field_v ? (java.awt.Canvas) ((Object) cl.field_v) : jh.field_b;
     }
 
     ne(dd param0, im param1) {
@@ -282,21 +282,21 @@ final class ne {
         int var3 = 0;
         int var4 = 0;
         var3 = client.field_A ? 1 : 0;
-        if (((ne) this).field_h == null) {
+        if (this.field_h == null) {
           return;
         } else {
           var2 = 0;
           L0: while (true) {
-            if (var2 >= ((ne) this).field_h.length) {
+            if (var2 >= this.field_h.length) {
               var4 = 0;
               var2 = var4;
               if (param0 <= -106) {
                 L1: while (true) {
-                  if (var4 >= ((ne) this).field_h.length) {
+                  if (var4 >= this.field_h.length) {
                     return;
                   } else {
-                    if (null != ((ne) this).field_h[var4]) {
-                      ((ne) this).field_h[var4].c(true);
+                    if (null != this.field_h[var4]) {
+                      this.field_h[var4].c(true);
                       var4++;
                       continue L1;
                     } else {
@@ -309,8 +309,8 @@ final class ne {
                 return;
               }
             } else {
-              if (((ne) this).field_h[var2] != null) {
-                ((ne) this).field_h[var2].b(16322);
+              if (this.field_h[var2] != null) {
+                this.field_h[var2].b(16322);
                 var2++;
                 continue L0;
               } else {
@@ -393,14 +393,14 @@ final class ne {
         try {
           L0: {
             L1: {
-              ((ne) this).field_f = param1;
-              ((ne) this).field_e = param2;
-              ((ne) this).field_g = param3;
-              ((ne) this).field_i = param0;
-              if (((ne) this).field_i.a(true)) {
+              this.field_f = param1;
+              this.field_e = param2;
+              this.field_g = param3;
+              this.field_i = param0;
+              if (this.field_i.a(true)) {
                 break L1;
               } else {
-                ((ne) this).field_j = ((ne) this).field_i.a(true, (byte) 0, true, 255, 255);
+                this.field_j = this.field_i.a(true, (byte) 0, true, 255, 255);
                 break L1;
               }
             }
@@ -410,23 +410,23 @@ final class ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_0 = (RuntimeException) (runtimeException);
             stackOut_4_1 = new StringBuilder().append("ne.<init>(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -435,23 +435,23 @@ final class ne {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -460,23 +460,23 @@ final class ne {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -485,23 +485,23 @@ final class ne {
             }
           }
           L5: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -509,7 +509,7 @@ final class ne {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 

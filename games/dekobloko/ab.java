@@ -27,21 +27,21 @@ final class ab {
     }
 
     final be b(byte param0) {
-        be var2 = ((ab) this).field_g;
-        if (!(var2 != ((ab) this).field_b)) {
-            ((ab) this).field_g = null;
+        be var2 = this.field_g;
+        if (!(var2 != this.field_b)) {
+            this.field_g = null;
             return null;
         }
         if (param0 != 20) {
-            return null;
+            return (be) null;
         }
-        ((ab) this).field_g = var2.field_p;
+        this.field_g = var2.field_p;
         return var2;
     }
 
     final void a(be param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        be var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -69,15 +69,15 @@ final class ab {
               }
             }
             L2: {
-              param0.field_p = ((ab) this).field_b;
-              param0.field_v = ((ab) this).field_b.field_v;
+              param0.field_p = this.field_b;
+              param0.field_v = this.field_b.field_v;
               param0.field_v.field_p = param0;
               param0.field_p.field_v = param0;
               if (param1 == -7267) {
                 break L2;
               } else {
-                var4 = null;
-                ((ab) this).a((be) null, 54);
+                var4 = (be) null;
+                this.a((be) null, 54);
                 break L2;
               }
             }
@@ -87,23 +87,23 @@ final class ab {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("ab.F(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -111,13 +111,13 @@ final class ab {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
     final be a(byte param0) {
-        be var2 = ((ab) this).field_b.field_p;
-        if (((ab) this).field_b == var2) {
+        be var2 = this.field_b.field_p;
+        if (this.field_b == var2) {
             return null;
         }
         var2.e((byte) 94);
@@ -126,15 +126,16 @@ final class ab {
     }
 
     final be b(int param0) {
+        be discarded$0 = null;
         if (param0 != -2198) {
-            be discarded$0 = ((ab) this).b(61);
+            discarded$0 = this.b(61);
         }
-        be var2 = ((ab) this).field_b.field_p;
-        if (((ab) this).field_b == var2) {
-            ((ab) this).field_g = null;
+        be var2 = this.field_b.field_p;
+        if (this.field_b == var2) {
+            this.field_g = null;
             return null;
         }
-        ((ab) this).field_g = var2.field_p;
+        this.field_g = var2.field_p;
         return var2;
     }
 
@@ -251,23 +252,23 @@ final class ab {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_0 = (RuntimeException) (var2);
             stackOut_21_1 = new StringBuilder().append("ab.E(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L9;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -275,7 +276,7 @@ final class ab {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }
@@ -283,6 +284,7 @@ final class ab {
     final static boolean c(byte param0) {
         int var1 = 0;
         Object var2 = null;
+        Object var2_ref = null;
         Throwable var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
@@ -290,8 +292,8 @@ final class ab {
         int stackOut_4_0 = 0;
         int stackOut_2_0 = 0;
         var1 = 108 % ((-69 - param0) / 50);
-        var2 = f.field_r;
-        synchronized (var2) {
+        var2_ref = f.field_r;
+        synchronized (var2_ref) {
           L0: {
             if (ea.field_n != sf.field_B) {
               wh.field_c = pf.field_i[sf.field_B];
@@ -319,8 +321,8 @@ final class ab {
     final int a(int param0) {
         int var4 = client.field_A ? 1 : 0;
         int var2 = param0;
-        be var3 = ((ab) this).field_b.field_p;
-        while (var3 != ((ab) this).field_b) {
+        be var3 = this.field_b.field_p;
+        while (var3 != this.field_b) {
             var2++;
             var3 = var3.field_p;
         }
@@ -332,9 +334,9 @@ final class ab {
     }
 
     public ab() {
-        ((ab) this).field_b = new be();
-        ((ab) this).field_b.field_v = ((ab) this).field_b;
-        ((ab) this).field_b.field_p = ((ab) this).field_b;
+        this.field_b = new be();
+        this.field_b.field_v = this.field_b;
+        this.field_b.field_p = this.field_b;
     }
 
     static {

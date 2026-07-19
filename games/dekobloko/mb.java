@@ -14,6 +14,7 @@ final class mb {
 
     final static boolean a(boolean param0, int param1) {
         try {
+            long dupTemp$2 = 0L;
             int var2 = 0;
             uf var2_ref_uf = null;
             IOException var2_ref_IOException = null;
@@ -30,14 +31,14 @@ final class mb {
               }
             }
             if (k.field_c.field_c != 0) {
-              long dupTemp$2 = ik.a(4);
+              dupTemp$2 = ik.a(4);
               el.field_J = dupTemp$2;
               p.field_a = dupTemp$2;
               if (k.field_c.field_c == 1) {
                 try {
                   L1: {
                     L2: {
-                      qc.field_s = new qk((java.net.Socket) k.field_c.field_b, lf.field_f);
+                      qc.field_s = new qk((java.net.Socket) (k.field_c.field_b), lf.field_f);
                       var2_ref_uf = de.field_V;
                       we.field_b.field_n = 0;
                       ph.field_xb = ba.field_f;
@@ -88,7 +89,7 @@ final class mb {
 
     final int a(int param0) {
         int var2 = 97 % ((param0 - 37) / 50);
-        return ((mb) this).field_g + 1;
+        return this.field_g + 1;
     }
 
     final static String a(int param0, hl param1) {
@@ -134,9 +135,9 @@ final class mb {
                   }
                 }
                 if (param1.field_l == 2) {
-                  var2 = "<img=1>" + (String) var2;
-                  var3 = (String) var2;
-                  var3 = (String) var2;
+                  var2 = "<img=1>" + (String) (var2);
+                  var3 = (String) (var2);
+                  var3 = (String) (var2);
                   break L1;
                 } else {
                   break L1;
@@ -154,12 +155,12 @@ final class mb {
                       if (param1.field_n != 0) {
                         break L4;
                       } else {
-                        var3 = cm.a((byte) 90, oj.field_b, new String[]{(String) var2});
+                        var3 = cm.a((byte) 90, oj.field_b, new String[]{(String) (var2)});
                         break L3;
                       }
                     }
                   }
-                  var3 = cm.a((byte) 110, im.field_j, new String[]{(String) var2});
+                  var3 = cm.a((byte) 110, im.field_j, new String[]{(String) (var2)});
                   break L3;
                 } else {
                   break L3;
@@ -206,14 +207,14 @@ final class mb {
                   }
                 }
                 if (!param1.field_j) {
-                  var3 = var3 + (String) var2 + ": ";
+                  var3 = var3 + (String) (var2) + ": ";
                   break L3;
                 } else {
                   break L3;
                 }
               }
             }
-            stackOut_30_0 = (String) var3;
+            stackOut_30_0 = (String) (var3);
             stackIn_31_0 = stackOut_30_0;
             break L0;
           }
@@ -229,7 +230,7 @@ final class mb {
             stackIn_33_1 = stackOut_32_1;
             if (param1 == null) {
               stackOut_34_0 = stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
@@ -237,7 +238,7 @@ final class mb {
               break L9;
             } else {
               stackOut_33_0 = stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -245,18 +246,18 @@ final class mb {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
         }
         return stackIn_31_0;
     }
 
     final int b(int param0, int param1) {
-        if (param0 <= ((mb) this).field_g) {
+        if (param0 <= this.field_g) {
           if (param1 != 0) {
-            ((mb) this).field_f = -5;
-            return ((mb) this).field_b[param0];
+            this.field_f = -5;
+            return this.field_b[param0];
           } else {
-            return ((mb) this).field_b[param0];
+            return this.field_b[param0];
           }
         } else {
           throw new ArrayIndexOutOfBoundsException(param0);
@@ -266,28 +267,28 @@ final class mb {
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.a((byte) -63, param0)];
         int[] var3 = var4;
-        an.a(((mb) this).field_b, 0, var4, 0, ((mb) this).field_b.length);
-        ((mb) this).field_b = var4;
+        an.a(this.field_b, 0, var4, 0, this.field_b.length);
+        this.field_b = var4;
     }
 
     private final int a(byte param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = client.field_A ? 1 : 0;
-        var3 = ((mb) this).field_b.length;
+        var3 = this.field_b.length;
         L0: while (true) {
           if (param1 < var3) {
             return var3;
           } else {
-            if (!((mb) this).field_a) {
-              var3 = var3 + ((mb) this).field_f;
+            if (!this.field_a) {
+              var3 = var3 + this.field_f;
               continue L0;
             } else {
               if (var3 == 0) {
                 var3 = 1;
                 continue L0;
               } else {
-                var3 = var3 * ((mb) this).field_f;
+                var3 = var3 * this.field_f;
                 continue L0;
               }
             }
@@ -296,23 +297,23 @@ final class mb {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (((mb) this).field_g >= param1) {
-          if (param1 >= ((mb) this).field_b.length) {
+        if (this.field_g >= param1) {
+          if (param1 >= this.field_b.length) {
             this.a(param1, -23);
-            ((mb) this).field_b[param1] = param2;
+            this.field_b[param1] = param2;
             return;
           } else {
-            ((mb) this).field_b[param1] = param2;
+            this.field_b[param1] = param2;
             return;
           }
         } else {
-          ((mb) this).field_g = param1;
-          if (param1 < ((mb) this).field_b.length) {
-            ((mb) this).field_b[param1] = param2;
+          this.field_g = param1;
+          if (param1 < this.field_b.length) {
+            this.field_b[param1] = param2;
             return;
           } else {
             this.a(param1, -23);
-            ((mb) this).field_b[param1] = param2;
+            this.field_b[param1] = param2;
             return;
           }
         }
@@ -332,11 +333,11 @@ final class mb {
 
     final void a(int param0, boolean param1) {
         if (param1) {
-          field_e = null;
-          this.a((byte) 114, ((mb) this).field_g - -1, param0);
+          field_e = (String) null;
+          this.a((byte) 114, this.field_g - -1, param0);
           return;
         } else {
-          this.a((byte) 114, ((mb) this).field_g - -1, param0);
+          this.a((byte) 114, this.field_g - -1, param0);
           return;
         }
     }
@@ -348,29 +349,29 @@ final class mb {
 
     final void c(int param0, int param1) {
         if (param1 >= 0) {
-          if (((mb) this).field_g >= param1) {
+          if (this.field_g >= param1) {
             if (param0 > -25) {
               L0: {
-                ((mb) this).field_f = 15;
-                if (((mb) this).field_g != param1) {
-                  an.a(((mb) this).field_b, param1 + 1, ((mb) this).field_b, param1, ((mb) this).field_g + -param1);
+                this.field_f = 15;
+                if (this.field_g != param1) {
+                  an.a(this.field_b, param1 + 1, this.field_b, param1, this.field_g + -param1);
                   break L0;
                 } else {
                   break L0;
                 }
               }
-              ((mb) this).field_g = ((mb) this).field_g - 1;
+              this.field_g = this.field_g - 1;
               return;
             } else {
               L1: {
-                if (((mb) this).field_g != param1) {
-                  an.a(((mb) this).field_b, param1 + 1, ((mb) this).field_b, param1, ((mb) this).field_g + -param1);
+                if (this.field_g != param1) {
+                  an.a(this.field_b, param1 + 1, this.field_b, param1, this.field_g + -param1);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              ((mb) this).field_g = ((mb) this).field_g - 1;
+              this.field_g = this.field_g - 1;
               return;
             }
           } else {

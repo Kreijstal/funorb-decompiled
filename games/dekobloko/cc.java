@@ -24,7 +24,7 @@ final class cc {
         field_h = null;
         field_e = null;
         field_b = null;
-        field_f = null;
+        field_f = (pi[][]) null;
     }
 
     final static void a(int param0) {
@@ -33,15 +33,15 @@ final class cc {
 
     cc(ck[] param0) {
         try {
-            ((cc) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = -29 / ((param1 - -69) / 54);
-        vk.a(param4, (byte) 50, ((cc) this).field_c, param0, param3, param2);
+        vk.a(param4, (byte) 50, this.field_c, param0, param3, param2);
     }
 
     static {

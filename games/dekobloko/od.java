@@ -17,7 +17,7 @@ public class od {
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            field_c = null;
+            field_c = (String) null;
             return od.a(field_c, 30869, param1, field_d);
         }
         return od.a(field_c, 30869, param1, field_d);

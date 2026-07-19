@@ -21,6 +21,7 @@ final class bn {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, ck param4, int param5) {
+        int incrementValue$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -61,7 +62,7 @@ final class bn {
               if (param0 <= -96) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String) null;
                 break L1;
               }
             }
@@ -147,7 +148,7 @@ final class bn {
                               break L9;
                             } else {
                               L10: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
                                 var17 = param4.field_D[incrementValue$1];
                                 if (var17 == 0) {
@@ -177,23 +178,23 @@ final class bn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var6;
+            stackOut_32_0 = (RuntimeException) (var6);
             stackOut_32_1 = new StringBuilder().append("bn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param4 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L11;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -201,7 +202,7 @@ final class bn {
               break L11;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param5 + ')');
         }
     }
 

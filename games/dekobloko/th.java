@@ -10,7 +10,7 @@ final class th {
             wj.field_Ob.a(param0, param1, 0, -1);
             rc.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "th.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -12,10 +12,10 @@ abstract class ol extends bh {
     }
 
     final void a(int[] param0, int param1, int param2) {
-        if (((ol) this).field_p) {
-            ((ol) this).b(param0, param1, param2);
+        if (this.field_p) {
+            this.b(param0, param1, param2);
         } else {
-            ((ol) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -28,7 +28,7 @@ abstract class ol extends bh {
     abstract ol c();
 
     ol() {
-        ((ol) this).field_p = true;
+        this.field_p = true;
     }
 
     abstract void a(int param0);

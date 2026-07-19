@@ -15,14 +15,16 @@ abstract class eh {
 
     final void a(byte param0) {
         if (param0 > -82) {
-            ((eh) this).a((byte) 23);
+            this.a((byte) 23);
         }
-        hk.a(((eh) this).field_f, ((eh) this).field_g, ((eh) this).field_i);
+        hk.a(this.field_f, this.field_g, this.field_i);
     }
 
     abstract void a(int param0, byte param1, int param2, java.awt.Component param3);
 
     final static void a(byte param0, byte[] param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -157,7 +159,7 @@ abstract class eh {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        byte dupTemp$2 = var17.g((byte) -115);
+                                                        dupTemp$2 = var17.g((byte) -115);
                                                         var9[var12 + var13 * var5] = dupTemp$2;
                                                         var14 = dupTemp$2;
                                                         stackOut_44_0 = var10;
@@ -214,7 +216,7 @@ abstract class eh {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    byte dupTemp$3 = var17.g((byte) -119);
+                                                    dupTemp$3 = var17.g((byte) -119);
                                                     var9[var12] = dupTemp$3;
                                                     var13 = dupTemp$3;
                                                     stackOut_28_0 = var10;
@@ -296,23 +298,23 @@ abstract class eh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
+            stackOut_51_0 = (RuntimeException) (var2);
             stackOut_51_1 = new StringBuilder().append("eh.M(").append(-72).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param1 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "null";
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
@@ -320,7 +322,7 @@ abstract class eh {
               break L17;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ')');
         }
     }
 
@@ -329,7 +331,7 @@ abstract class eh {
     public static void a(int param0) {
         field_e = null;
         field_d = null;
-        field_h = null;
+        field_h = (boolean[][]) null;
         field_b = null;
         field_j = null;
         if (param0 != 24744) {

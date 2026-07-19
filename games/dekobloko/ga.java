@@ -9,6 +9,22 @@ final class ga implements lh {
     static String field_b;
 
     final static int a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, mm param7, byte param8, int param9, int param10) {
+        int discarded$16 = 0;
+        int discarded$17 = 0;
+        int discarded$18 = 0;
+        int discarded$19 = 0;
+        int discarded$20 = 0;
+        int discarded$21 = 0;
+        int discarded$22 = 0;
+        int discarded$23 = 0;
+        int discarded$24 = 0;
+        int discarded$25 = 0;
+        int discarded$26 = 0;
+        int discarded$27 = 0;
+        int discarded$28 = 0;
+        int discarded$29 = 0;
+        int discarded$30 = 0;
+        int discarded$31 = 0;
         int var11_int = 0;
         RuntimeException var11 = null;
         int stackIn_8_0 = 0;
@@ -56,10 +72,10 @@ final class ga implements lh {
               }
             }
             L2: {
-              int discarded$16 = param7.a(param3, param10 - var11_int, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
-              int discarded$17 = param7.a(param3, -var11_int + param10, param2, param0, param5, 65793, -1, param9, param1, param4);
-              int discarded$18 = param7.a(param3, param10 + -var11_int, param2 - -var11_int, param0, param5, 65793, -1, param9, param1, param4);
-              int discarded$19 = param7.a(param3, param10, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$16 = param7.a(param3, param10 - var11_int, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$17 = param7.a(param3, -var11_int + param10, param2, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$18 = param7.a(param3, param10 + -var11_int, param2 - -var11_int, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$19 = param7.a(param3, param10, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
               if (param8 <= -123) {
                 break L2;
               } else {
@@ -68,21 +84,21 @@ final class ga implements lh {
               }
             }
             L3: {
-              int discarded$20 = param7.a(param3, param10, param2 - -var11_int, param0, param5, 65793, -1, param9, param1, param4);
-              int discarded$21 = param7.a(param3, param10 - -var11_int, param2 + -var11_int, param0, param5, 65793, -1, param9, param1, param4);
-              int discarded$22 = param7.a(param3, param10 - -var11_int, param2, param0, param5, 65793, -1, param9, param1, param4);
-              int discarded$23 = param7.a(param3, var11_int + param10, param2 + var11_int, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$20 = param7.a(param3, param10, param2 - -var11_int, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$21 = param7.a(param3, param10 - -var11_int, param2 + -var11_int, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$22 = param7.a(param3, param10 - -var11_int, param2, param0, param5, 65793, -1, param9, param1, param4);
+              discarded$23 = param7.a(param3, var11_int + param10, param2 + var11_int, param0, param5, 65793, -1, param9, param1, param4);
               if (param7 != w.field_kb) {
                 break L3;
               } else {
-                int discarded$24 = param7.a(param3, 1 + param10, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$25 = param7.a(param3, param10 + -1, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$26 = param7.a(param3, param10 + var11_int, -1 + param2, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$27 = param7.a(param3, -var11_int + param10, param2 + -1, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$28 = param7.a(param3, var11_int + param10, 1 + param2, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$29 = param7.a(param3, param10 - var11_int, param2 - -1, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$30 = param7.a(param3, param10 + 1, var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
-                int discarded$31 = param7.a(param3, -1 + param10, param2 - -var11_int, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$24 = param7.a(param3, 1 + param10, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$25 = param7.a(param3, param10 + -1, -var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$26 = param7.a(param3, param10 + var11_int, -1 + param2, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$27 = param7.a(param3, -var11_int + param10, param2 + -1, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$28 = param7.a(param3, var11_int + param10, 1 + param2, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$29 = param7.a(param3, param10 - var11_int, param2 - -1, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$30 = param7.a(param3, param10 + 1, var11_int + param2, param0, param5, 65793, -1, param9, param1, param4);
+                discarded$31 = param7.a(param3, -1 + param10, param2 - -var11_int, param0, param5, 65793, -1, param9, param1, param4);
                 break L3;
               }
             }
@@ -94,23 +110,23 @@ final class ga implements lh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var11 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var11;
+            stackOut_9_0 = (RuntimeException) (var11);
             stackOut_9_1 = new StringBuilder().append("ga.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -119,23 +135,23 @@ final class ga implements lh {
             }
           }
           L5: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param7 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -143,7 +159,7 @@ final class ga implements lh {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
         return stackIn_8_0;
     }
@@ -207,7 +223,7 @@ final class ga implements lh {
             return stackIn_4_0;
           } else {
             if (var2_int > 63) {
-              stackOut_7_0 = (jc) field_e;
+              stackOut_7_0 = (jc) (field_e);
               stackIn_8_0 = stackOut_7_0;
               return stackIn_8_0;
             } else {
@@ -253,23 +269,23 @@ final class ga implements lh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_0 = (RuntimeException) (var2);
             stackOut_24_1 = new StringBuilder().append("ga.A(").append(7017).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L3;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -277,7 +293,7 @@ final class ga implements lh {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
     }
 

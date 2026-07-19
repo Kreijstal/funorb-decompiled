@@ -18,7 +18,7 @@ class be extends bh {
         field_s = null;
         field_w = null;
         field_o = null;
-        field_u = null;
+        field_u = (ck[][]) null;
         field_t = null;
         int var1 = -75;
         field_x = null;
@@ -54,23 +54,23 @@ class be extends bh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("be.U(").append(98).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -78,16 +78,16 @@ class be extends bh {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final void a(long param0, byte param1) {
-        if (((be) this).field_v != null) {
+        if (this.field_v != null) {
             throw new RuntimeException();
         }
-        ((be) this).field_r = param0;
+        this.field_r = param0;
         if (param1 < 107) {
             field_n = 116;
             return;
@@ -99,15 +99,15 @@ class be extends bh {
             oa.a(param0, -1, "");
             wb.a(param0, 30307);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "be.V(" + (param0 != null ? "{...}" : "null") + ',' + -57 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "be.V(" + (param0 != null ? "{...}" : "null") + ',' + -57 + ')');
         }
     }
 
     final long c(byte param0) {
         if (param0 != 57) {
-            return ((be) this).field_r;
+            return this.field_r;
         }
-        return ((be) this).field_r;
+        return this.field_r;
     }
 
     final static void a(byte param0, ig param1) {
@@ -116,7 +116,7 @@ class be extends bh {
         }
         try {
             if (param0 <= 117) {
-                Object var3 = null;
+                ig var3 = (ig) null;
                 be.a((byte) 85, (ig) null);
             }
             mg.field_bc = param1;
@@ -124,24 +124,24 @@ class be extends bh {
             ie.field_c.a(mg.field_bc, -16834);
             jh.field_h = true;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "be.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "be.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void e(byte param0) {
-        if (null == ((be) this).field_v) {
+        if (null == this.field_v) {
           return;
         } else {
-          ((be) this).field_v.field_p = ((be) this).field_p;
-          ((be) this).field_p.field_v = ((be) this).field_v;
+          this.field_v.field_p = this.field_p;
+          this.field_p.field_v = this.field_v;
           if (param0 < 68) {
-            field_u = null;
-            ((be) this).field_v = null;
-            ((be) this).field_p = null;
+            field_u = (ck[][]) null;
+            this.field_v = null;
+            this.field_p = null;
             return;
           } else {
-            ((be) this).field_v = null;
-            ((be) this).field_p = null;
+            this.field_v = null;
+            this.field_p = null;
             return;
           }
         }
@@ -155,15 +155,15 @@ class be extends bh {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (param0 != -68) {
-          ((be) this).field_r = 35L;
-          if (((be) this).field_v != null) {
+          this.field_r = 35L;
+          if (this.field_v != null) {
             return true;
           } else {
             return false;
           }
         } else {
           L0: {
-            if (((be) this).field_v == null) {
+            if (this.field_v == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;

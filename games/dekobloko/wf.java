@@ -24,13 +24,13 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((wf) this).field_r = param0;
-            param0.setDimensions(((wf) this).field_g, ((wf) this).field_i);
+            this.field_r = param0;
+            param0.setDimensions(this.field_g, this.field_i);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((wf) this).field_t);
+            param0.setColorModel(this.field_t);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,11 +38,11 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         if (param0 >= -113) {
             this.e(-60);
         }
-        if (null == ((wf) this).field_r) {
+        if (null == this.field_r) {
             return;
         }
-        ((wf) this).field_r.setPixels(0, 0, ((wf) this).field_g, ((wf) this).field_i, ((wf) this).field_t, ((wf) this).field_f, 0, ((wf) this).field_g);
-        ((wf) this).field_r.imageComplete(2);
+        this.field_r.setPixels(0, 0, this.field_g, this.field_i, this.field_t, this.field_f, 0, this.field_g);
+        this.field_r.imageComplete(2);
     }
 
     final static w c(int param0) {
@@ -51,24 +51,27 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, byte param1, int param2, java.awt.Component param3) {
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
         try {
-            ((wf) this).field_g = param0;
-            ((wf) this).field_f = new int[1 + param0 * param2];
+            this.field_g = param0;
+            this.field_f = new int[1 + param0 * param2];
             if (param1 != 83) {
-                field_n = null;
+                field_n = (String) null;
             }
-            ((wf) this).field_i = param2;
-            ((wf) this).field_t = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((wf) this).field_c = param3.createImage((java.awt.image.ImageProducer) this);
+            this.field_i = param2;
+            this.field_t = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_c = param3.createImage((java.awt.image.ImageProducer) (this));
             this.e(-117);
-            boolean discarded$0 = param3.prepareImage(((wf) this).field_c, (java.awt.image.ImageObserver) this);
+            discarded$0 = param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
             this.e(-123);
-            boolean discarded$1 = param3.prepareImage(((wf) this).field_c, (java.awt.image.ImageObserver) this);
+            discarded$1 = param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
             this.e(param1 ^ -46);
-            boolean discarded$2 = param3.prepareImage(((wf) this).field_c, (java.awt.image.ImageObserver) this);
-            ((wf) this).a((byte) -98);
+            discarded$2 = param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+            this.a((byte) -98);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,14 +79,14 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return ((wf) this).field_r == param0;
+        return this.field_r == param0;
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((wf) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,8 +124,8 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              if (((wf) this).field_r == param0) {
-                ((wf) this).field_r = null;
+              if (this.field_r == param0) {
+                this.field_r = null;
                 break L1;
               } else {
                 break L1;
@@ -134,23 +137,23 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("wf.removeConsumer(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -158,7 +161,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
@@ -292,7 +295,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1_ref, "wf.A(" + 19012 + ')');
+          throw dh.a((Throwable) ((Object) var1_ref), "wf.A(" + 19012 + ')');
         }
     }
 
@@ -300,8 +303,9 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(byte param0, java.awt.Graphics param1, int param2, int param3) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        Object var6 = null;
+        java.awt.image.ImageConsumer var6 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -322,12 +326,12 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
           L0: {
             L1: {
               this.e(-127);
-              boolean discarded$2 = param1.drawImage(((wf) this).field_c, param2, param3, (java.awt.image.ImageObserver) this);
+              discarded$2 = param1.drawImage(this.field_c, param2, param3, (java.awt.image.ImageObserver) (this));
               if (param0 >= 38) {
                 break L1;
               } else {
-                var6 = null;
-                ((wf) this).requestTopDownLeftRightResend((java.awt.image.ImageConsumer) null);
+                var6 = (java.awt.image.ImageConsumer) null;
+                this.requestTopDownLeftRightResend((java.awt.image.ImageConsumer) null);
                 break L1;
               }
             }
@@ -337,23 +341,23 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wf.H(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -361,7 +365,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -395,23 +399,23 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("wf.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -419,7 +423,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }

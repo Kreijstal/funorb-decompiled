@@ -52,7 +52,7 @@ final class ve extends w {
     static int field_nc;
 
     public static void h(byte param0) {
-        field_uc = null;
+        field_uc = (ck[][]) null;
         field_cc = null;
         field_Gc = null;
         field_vc = null;
@@ -75,6 +75,7 @@ final class ve extends w {
     }
 
     final boolean i(byte param0) {
+        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -83,8 +84,8 @@ final class ve extends w {
         int stackOut_2_0 = 0;
         if (param0 <= 98) {
           L0: {
-            boolean discarded$8 = ve.g((byte) 106);
-            if (((ve) this).d((byte) -68)) {
+            discarded$8 = ve.g((byte) 106);
+            if (this.d((byte) -68)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -97,7 +98,7 @@ final class ve extends w {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ve) this).d((byte) -68)) {
+            if (this.d((byte) -68)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -113,7 +114,7 @@ final class ve extends w {
 
     final int e(int param0) {
         int var2 = 113 / ((param0 - 24) / 54);
-        return (int)((ve) this).c((byte) 57);
+        return (int)this.c((byte) 57);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9) {
@@ -171,23 +172,23 @@ final class ve extends w {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var10 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var10;
+            stackOut_6_0 = (RuntimeException) (var10);
             stackOut_6_1 = new StringBuilder().append("ve.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(9).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param7 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -195,13 +196,13 @@ final class ve extends w {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param8 + ',' + param9 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     ve(int param0) {
         super(0L, (w) null);
-        ((ve) this).field_kc = new byte[param0];
+        this.field_kc = new byte[param0];
     }
 
     final static String c(int param0, int param1) {
@@ -285,8 +286,8 @@ final class ve extends w {
           L0: {
             if (!param1) {
               L1: {
-                if (!((ve) this).field_Zb) {
-                  if (((ve) this).field_oc == 6) {
+                if (!this.field_Zb) {
+                  if (this.field_oc == 6) {
                     stackOut_7_0 = 1;
                     stackIn_9_0 = stackOut_7_0;
                     break L1;
@@ -338,13 +339,13 @@ final class ve extends w {
                         break L4;
                       }
                     }
-                    if (stackIn_24_0 != (((ve) this).field_gc ? 1 : 0)) {
-                      if (!((ve) this).field_gc) {
+                    if (stackIn_24_0 != (this.field_gc ? 1 : 0)) {
+                      if (!this.field_gc) {
                         break L3;
                       } else {
-                        if (param0.field_Wb != ((ve) this).field_Wb) {
+                        if (param0.field_Wb != this.field_Wb) {
                           L5: {
-                            if (((ve) this).field_Wb >= param0.field_Wb) {
+                            if (this.field_Wb >= param0.field_Wb) {
                               stackOut_32_0 = 0;
                               stackIn_33_0 = stackOut_32_0;
                               break L5;
@@ -360,7 +361,7 @@ final class ve extends w {
                         }
                       }
                     } else {
-                      stackOut_25_0 = ((ve) this).field_gc;
+                      stackOut_25_0 = this.field_gc;
                       stackIn_26_0 = stackOut_25_0;
                       return stackIn_26_0;
                     }
@@ -369,7 +370,7 @@ final class ve extends w {
                   }
                 }
                 L6: {
-                  stackOut_34_0 = ((ve) this).field_lc;
+                  stackOut_34_0 = this.field_lc;
                   stackIn_36_0 = stackOut_34_0;
                   stackIn_35_0 = stackOut_34_0;
                   if (param0.field_lc) {
@@ -388,7 +389,7 @@ final class ve extends w {
                 }
                 if ((stackIn_37_0 ? 1 : 0) == stackIn_37_1) {
                   L7: {
-                    if (((ve) this).field_lc) {
+                    if (this.field_lc) {
                       stackOut_41_0 = 0;
                       stackIn_42_0 = stackOut_41_0;
                       break L7;
@@ -400,14 +401,14 @@ final class ve extends w {
                   }
                   return stackIn_42_0 != 0;
                 } else {
-                  if (((ve) this).field_lc) {
+                  if (this.field_lc) {
                     L8: {
-                      if (((ve) this).field_wc) {
+                      if (this.field_wc) {
                         stackOut_52_0 = 1;
                         stackIn_54_0 = stackOut_52_0;
                         break L8;
                       } else {
-                        if (((ve) this).field_qc == 2) {
+                        if (this.field_qc == 2) {
                           stackOut_51_0 = 1;
                           stackIn_54_0 = stackOut_51_0;
                           break L8;
@@ -454,7 +455,7 @@ final class ve extends w {
                       return stackIn_66_0 != 0;
                     } else {
                       L11: {
-                        if (~param0.field_tc <= ~((ve) this).field_tc) {
+                        if (~param0.field_tc <= ~this.field_tc) {
                           stackOut_69_0 = 0;
                           stackIn_70_0 = stackOut_69_0;
                           break L11;
@@ -468,7 +469,7 @@ final class ve extends w {
                     }
                   } else {
                     L12: {
-                      if (param0.field_tc <= ((ve) this).field_tc) {
+                      if (param0.field_tc <= this.field_tc) {
                         stackOut_46_0 = 0;
                         stackIn_47_0 = stackOut_46_0;
                         break L12;
@@ -492,23 +493,23 @@ final class ve extends w {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) var3;
+            stackOut_71_0 = (RuntimeException) (var3);
             stackOut_71_1 = new StringBuilder().append("ve.D(");
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
             stackIn_72_1 = stackOut_71_1;
             if (param0 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L13;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "{...}";
               stackIn_74_0 = stackOut_72_0;
               stackIn_74_1 = stackOut_72_1;
@@ -516,7 +517,7 @@ final class ve extends w {
               break L13;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ',' + param1 + ')');
         }
         return stackIn_70_0 != 0;
     }

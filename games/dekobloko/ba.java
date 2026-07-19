@@ -13,9 +13,9 @@ abstract class ba implements nb {
 
     public final void c(byte param0) {
         if (param0 != -51) {
-            ((ba) this).field_a = -32L;
+            this.field_a = -32L;
         }
-        ((ba) this).field_a = ik.a(param0 + 55);
+        this.field_a = ik.a(param0 + 55);
     }
 
     final static boolean a(ji param0, int param1) {
@@ -48,23 +48,23 @@ abstract class ba implements nb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("ba.AA(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -72,7 +72,7 @@ abstract class ba implements nb {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -2147483648 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + -2147483648 + ')');
         }
         return stackIn_1_0;
     }
@@ -86,22 +86,23 @@ abstract class ba implements nb {
     }
 
     public final String b(byte param0) {
-        if (((ba) this).a((byte) -101)) {
+        if (this.a((byte) -101)) {
             return null;
         }
         if (param0 < 52) {
+            return (String) null;
+        }
+        if (~ik.a(4) > ~(350L + this.field_a)) {
             return null;
         }
-        if (~ik.a(4) > ~(350L + ((ba) this).field_a)) {
-            return null;
-        }
-        return ((ba) this).e((byte) 49);
+        return this.e((byte) 49);
     }
 
     abstract tb b(int param0);
 
     final static void a(int param0, uf param1) {
         try {
+            int discarded$1 = 0;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
@@ -161,7 +162,7 @@ abstract class ba implements nb {
             var12 = client.field_A ? 1 : 0;
             try {
               L0: {
-                var13 = (kl) (Object) aa.field_f.c((byte) -54);
+                var13 = (kl) ((Object) aa.field_f.c((byte) -54));
                 var17 = var13;
                 if (var17 == null) {
                   return;
@@ -178,7 +179,7 @@ abstract class ba implements nb {
                         var5 = 0;
                         L2: while (true) {
                           if (~var5 <= ~var17.field_o) {
-                            int discarded$1 = param1.a((byte) -15, var4);
+                            discarded$1 = param1.a((byte) -15, var4);
                             var17.b((byte) 103);
                             break L0;
                           } else {
@@ -189,14 +190,14 @@ abstract class ba implements nb {
                                     L5: {
                                       var6_int = var17.field_u[var5];
                                       if (var6_int == 0) {
-                                        var15 = (java.lang.reflect.Field) var17.field_y[var5].field_b;
+                                        var15 = (java.lang.reflect.Field) (var17.field_y[var5].field_b);
                                         var8 = var15.getInt((Object) null);
                                         param1.a(true, 0);
                                         param1.a(var8, false);
                                         break L5;
                                       } else {
                                         if (var6_int == 1) {
-                                          var16_ref = (java.lang.reflect.Field) var17.field_y[var5].field_b;
+                                          var16_ref = (java.lang.reflect.Field) (var17.field_y[var5].field_b);
                                           var19 = var16_ref;
                                           var19.setInt((Object) null, var17.field_q[var5]);
                                           param1.a(true, 0);
@@ -205,7 +206,7 @@ abstract class ba implements nb {
                                           if (var6_int != 2) {
                                             break L5;
                                           } else {
-                                            var26 = (java.lang.reflect.Field) var17.field_y[var5].field_b;
+                                            var26 = (java.lang.reflect.Field) (var17.field_y[var5].field_b);
                                             var8 = var26.getModifiers();
                                             param1.a(true, 0);
                                             param1.a(var8, false);
@@ -217,7 +218,7 @@ abstract class ba implements nb {
                                     L6: {
                                       if (3 != var6_int) {
                                         if (4 == var6_int) {
-                                          var28 = (java.lang.reflect.Method) var17.field_t[var5].field_b;
+                                          var28 = (java.lang.reflect.Method) (var17.field_t[var5].field_b);
                                           var8 = var28.getModifiers();
                                           param1.a(true, 0);
                                           param1.a(var8, false);
@@ -226,7 +227,7 @@ abstract class ba implements nb {
                                           break L6;
                                         }
                                       } else {
-                                        var27 = (java.lang.reflect.Method) var17.field_t[var5].field_b;
+                                        var27 = (java.lang.reflect.Method) (var17.field_t[var5].field_b);
                                         var25 = var17.field_s[var5];
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
@@ -239,7 +240,7 @@ abstract class ba implements nb {
                                             } else {
                                               if (var10 instanceof Number) {
                                                 param1.a(true, 1);
-                                                param1.a(((Number) var10).longValue(), (byte) 0);
+                                                param1.a(((Number) (var10)).longValue(), (byte) 0);
                                                 break L6;
                                               } else {
                                                 if (!(var10 instanceof String)) {
@@ -247,13 +248,13 @@ abstract class ba implements nb {
                                                   break L6;
                                                 } else {
                                                   param1.a(true, 2);
-                                                  param1.a(0, (String) var10);
+                                                  param1.a(0, (String) (var10));
                                                   break L6;
                                                 }
                                               }
                                             }
                                           } else {
-                                            var11 = new ObjectInputStream((InputStream) (Object) new ByteArrayInputStream(var25[var10_int]));
+                                            var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var25[var10_int])));
                                             var9[var10_int] = var11.readObject();
                                             var10_int++;
                                             continue L7;
@@ -283,6 +284,13 @@ abstract class ba implements nb {
                                     var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
                                     param1.a(true, -16);
                                     break L14;
+                                  }
+                                } catch (java.lang.SecurityException decompiledCaughtParameter7) {
+                                  decompiledCaughtException = decompiledCaughtParameter7;
+                                  L15: {
+                                    var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
+                                    param1.a(true, -17);
+                                    break L15;
                                   }
                                 } catch (java.io.IOException decompiledCaughtParameter8) {
                                   decompiledCaughtException = decompiledCaughtParameter8;
@@ -375,23 +383,23 @@ abstract class ba implements nb {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_65_0 = (RuntimeException) var2;
+                stackOut_65_0 = (RuntimeException) (var2);
                 stackOut_65_1 = new StringBuilder().append("ba.V(").append(-32141).append(',');
                 stackIn_67_0 = stackOut_65_0;
                 stackIn_67_1 = stackOut_65_1;
                 stackIn_66_0 = stackOut_65_0;
                 stackIn_66_1 = stackOut_65_1;
                 if (param1 == null) {
-                  stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-                  stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+                  stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+                  stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
                   stackOut_67_2 = "null";
                   stackIn_68_0 = stackOut_67_0;
                   stackIn_68_1 = stackOut_67_1;
                   stackIn_68_2 = stackOut_67_2;
                   break L24;
                 } else {
-                  stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-                  stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
                   stackOut_66_2 = "{...}";
                   stackIn_68_0 = stackOut_66_0;
                   stackIn_68_1 = stackOut_66_1;
@@ -399,7 +407,7 @@ abstract class ba implements nb {
                   break L24;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ')');
+              throw dh.a((Throwable) ((Object) stackIn_68_0), stackIn_68_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -409,16 +417,16 @@ abstract class ba implements nb {
     }
 
     public final tb a(int param0) {
-        if (!(!((ba) this).a((byte) 119))) {
+        if (!(!this.a((byte) 119))) {
             return ki.field_t;
         }
         if (param0 != 20350) {
             ba.a(-21, -85, -33);
         }
-        if (!(ik.a(4) >= ((ba) this).field_a + 350L)) {
+        if (!(ik.a(4) >= this.field_a + 350L)) {
             return le.field_o;
         }
-        return ((ba) this).b(param0 + -25870);
+        return this.b(param0 + -25870);
     }
 
     final static void a(int param0, int param1, int param2) {

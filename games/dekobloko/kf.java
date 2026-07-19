@@ -21,10 +21,11 @@ class kf extends ce implements ra {
         if (!param0) {
             return false;
         }
-        return null != ((kf) this).e((byte) -74) ? true : false;
+        return null != this.e((byte) -74) ? true : false;
     }
 
     void a(ce param0, int param1, int param2, int param3) {
+        boolean discarded$2 = false;
         rd var5 = null;
         RuntimeException var5_ref = null;
         ce var6 = null;
@@ -52,13 +53,13 @@ class kf extends ce implements ra {
               if (param1 > 38) {
                 break L1;
               } else {
-                boolean discarded$2 = ((kf) this).a(false);
+                discarded$2 = this.a(false);
                 break L1;
               }
             }
             super.a(param0, 68, param2, param3);
-            var5 = new rd(((kf) this).field_H);
-            var6 = (ce) (Object) var5.a((byte) 71);
+            var5 = new rd(this.field_H);
+            var6 = (ce) ((Object) var5.a((byte) 71));
             L2: while (true) {
               L3: {
                 if (var6 == null) {
@@ -67,8 +68,8 @@ class kf extends ce implements ra {
                   if (!var6.a((byte) 38)) {
                     break L3;
                   } else {
-                    var6.a(param0, 47, ((kf) this).field_D + param2, param3 - -((kf) this).field_u);
-                    var6 = (ce) (Object) var5.a(-62);
+                    var6.a(param0, 47, this.field_D + param2, param3 - -this.field_u);
+                    var6 = (ce) ((Object) var5.a(-62));
                     continue L2;
                   }
                 }
@@ -80,23 +81,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5_ref;
+            stackOut_8_0 = (RuntimeException) (var5_ref);
             stackOut_8_1 = new StringBuilder().append("kf.A(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -104,19 +105,20 @@ class kf extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void b(ce param0, byte param1) {
+        boolean discarded$0 = false;
         try {
             if (param1 != -55) {
-                Object var4 = null;
-                boolean discarded$0 = ((kf) this).a(false, (ce) null);
+                ce var4 = (ce) null;
+                discarded$0 = this.a(false, (ce) null);
             }
-            ((kf) this).field_H.a(param0, 2777);
+            this.field_H.a(param0, 2777);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "kf.KC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "kf.KC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -151,9 +153,9 @@ class kf extends ce implements ra {
         var8 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var10 = new rd(((kf) this).field_H);
+            var10 = new rd(this.field_H);
             var6 = 18 % ((-22 - param0) / 49);
-            var9 = (ce) (Object) var10.a((byte) 71);
+            var9 = (ce) ((Object) var10.a((byte) 71));
             L1: while (true) {
               L2: {
                 if (var9 == null) {
@@ -175,7 +177,7 @@ class kf extends ce implements ra {
                         }
                       }
                     }
-                    var9 = (ce) (Object) var10.a(-78);
+                    var9 = (ce) ((Object) var10.a(-78));
                     continue L1;
                   }
                 }
@@ -184,11 +186,11 @@ class kf extends ce implements ra {
               if (var7 == 80) {
                 L4: {
                   if (!bj.field_d[81]) {
-                    stackOut_14_0 = ((kf) this).a(32, param2);
+                    stackOut_14_0 = this.a(32, param2);
                     stackIn_15_0 = stackOut_14_0;
                     break L4;
                   } else {
-                    stackOut_13_0 = ((kf) this).a(param2, (byte) -120);
+                    stackOut_13_0 = this.a(param2, (byte) -120);
                     stackIn_15_0 = stackOut_13_0;
                     break L4;
                   }
@@ -203,23 +205,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_0 = (RuntimeException) (var5);
             stackOut_16_1 = new StringBuilder().append("kf.QA(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -227,7 +229,7 @@ class kf extends ce implements ra {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param3 + ')');
         }
         return stackIn_15_0;
     }
@@ -256,8 +258,8 @@ class kf extends ce implements ra {
         var9 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var7 = new rd(((kf) this).field_H);
-            var8 = (ce) (Object) var7.a((byte) 71);
+            var7 = new rd(this.field_H);
+            var8 = (ce) ((Object) var7.a((byte) 71));
             L1: while (true) {
               L2: {
                 if (var8 == null) {
@@ -266,8 +268,8 @@ class kf extends ce implements ra {
                   if (!var8.a((byte) 119)) {
                     break L2;
                   } else {
-                    var8.a(param0, param1, ((kf) this).field_u + param2, param3, ((kf) this).field_D + param4, param5);
-                    var8 = (ce) (Object) var7.a(-126);
+                    var8.a(param0, param1, this.field_u + param2, param3, this.field_D + param4, param5);
+                    var8 = (ce) ((Object) var7.a(-126));
                     continue L1;
                   }
                 }
@@ -276,7 +278,7 @@ class kf extends ce implements ra {
                 if (param1 == 64) {
                   break L3;
                 } else {
-                  field_J = null;
+                  field_J = (String) null;
                   break L3;
                 }
               }
@@ -287,23 +289,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var7_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var7_ref;
+            stackOut_8_0 = (RuntimeException) (var7_ref);
             stackOut_8_1 = new StringBuilder().append("kf.IB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -311,11 +313,12 @@ class kf extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static String a(CharSequence param0, byte param1) {
+        StringBuilder discarded$1 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -393,7 +396,7 @@ class kf extends ce implements ra {
                           } else {
                             stackOut_26_0 = null;
                             stackIn_27_0 = stackOut_26_0;
-                            return (String) (Object) stackIn_27_0;
+                            return (String) ((Object) stackIn_27_0);
                           }
                         } else {
                           L6: {
@@ -405,7 +408,7 @@ class kf extends ce implements ra {
                               if (var8 == 0) {
                                 break L6;
                               } else {
-                                StringBuilder discarded$1 = var5.append((char) var8);
+                                discarded$1 = var5.append((char) var8);
                                 break L6;
                               }
                             }
@@ -425,30 +428,30 @@ class kf extends ce implements ra {
             } else {
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
-              return (String) (Object) stackIn_3_0;
+              return (String) ((Object) stackIn_3_0);
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var2;
+            stackOut_30_0 = (RuntimeException) (var2);
             stackOut_30_1 = new StringBuilder().append("kf.MC(");
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L7;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -456,7 +459,7 @@ class kf extends ce implements ra {
               break L7;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + 2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + 2 + ')');
         }
         return stackIn_29_0;
     }
@@ -465,34 +468,35 @@ class kf extends ce implements ra {
         int var5 = 0;
         int var6 = client.field_A ? 1 : 0;
         int var2 = 0;
-        rd var3 = new rd(((kf) this).field_H);
-        ce var4 = (ce) (Object) var3.a((byte) 71);
+        rd var3 = new rd(this.field_H);
+        ce var4 = (ce) ((Object) var3.a((byte) 71));
         while (var4 != null) {
             var5 = var4.d(-31);
             if (!(var2 >= var5)) {
                 var2 = var5;
             }
-            var4 = (ce) (Object) var3.a(-61);
+            var4 = (ce) ((Object) var3.a(-61));
         }
         var5 = -18 / ((36 - param0) / 51);
         return var2;
     }
 
     String c(byte param0) {
+        boolean discarded$2 = false;
         rd var2 = null;
         ce var3 = null;
         String var4 = null;
         int var5 = 0;
-        Object var6 = null;
+        ce var6 = null;
         L0: {
           var5 = client.field_A ? 1 : 0;
-          var2 = new rd(((kf) this).field_H);
-          var3 = (ce) (Object) var2.a((byte) 71);
+          var2 = new rd(this.field_H);
+          var3 = (ce) ((Object) var2.a((byte) 71));
           if (param0 == 113) {
             break L0;
           } else {
-            var6 = null;
-            boolean discarded$2 = ((kf) this).a(59, 12, 76, (ce) null, -65, -4, true);
+            var6 = (ce) null;
+            discarded$2 = this.a(59, 12, 76, (ce) null, -65, -4, true);
             break L0;
           }
         }
@@ -500,7 +504,7 @@ class kf extends ce implements ra {
           if (var3 != null) {
             var4 = var3.c((byte) 113);
             if (var4 == null) {
-              var3 = (ce) (Object) var2.a(-47);
+              var3 = (ce) ((Object) var2.a(-47));
               continue L1;
             } else {
               return var4;
@@ -513,24 +517,26 @@ class kf extends ce implements ra {
 
     private final void g(int param0) {
         int var4 = client.field_A ? 1 : 0;
-        rd var2 = new rd(((kf) this).field_H);
-        ce var3 = (ce) (Object) var2.a((byte) 71);
+        rd var2 = new rd(this.field_H);
+        ce var3 = (ce) ((Object) var2.a((byte) 71));
         while (var3 != null) {
             var3.f(121);
-            var3 = (ce) (Object) var2.a(-57);
+            var3 = (ce) ((Object) var2.a(-57));
         }
     }
 
     void b(int param0, int param1, int param2, int param3, int param4) {
+        boolean discarded$0 = false;
         if (param4 != -16555) {
-            Object var7 = null;
-            boolean discarded$0 = ((kf) this).a((ce) null, (byte) 126);
+            ce var7 = (ce) null;
+            discarded$0 = this.a((ce) null, (byte) 126);
         }
         super.b(param0, param1, param2, param3, param4);
         this.g(0);
     }
 
     final boolean a(ce param0, byte param1) {
+        bh discarded$2 = null;
         rd var3 = null;
         RuntimeException var3_ref = null;
         ce var4 = null;
@@ -562,9 +568,9 @@ class kf extends ce implements ra {
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (!((kf) this).field_H.b(-105)) {
-              var3 = new rd(((kf) this).field_H);
-              var4 = (ce) (Object) var3.a(true);
+            if (!this.field_H.b(-105)) {
+              var3 = new rd(this.field_H);
+              var4 = (ce) ((Object) var3.a(true));
               L1: while (true) {
                 if (var4 == null) {
                   if (param1 < -16) {
@@ -572,7 +578,7 @@ class kf extends ce implements ra {
                     stackIn_18_0 = stackOut_17_0;
                     break L0;
                   } else {
-                    field_Q = null;
+                    field_Q = (w) null;
                     return false;
                   }
                 } else {
@@ -580,9 +586,9 @@ class kf extends ce implements ra {
                     if (!var4.a(true)) {
                       break L2;
                     } else {
-                      var5 = new rd(((kf) this).field_H);
-                      bh discarded$2 = var5.a(var4, (byte) -88);
-                      var6 = (ce) (Object) var5.d(2078965185);
+                      var5 = new rd(this.field_H);
+                      discarded$2 = var5.a(var4, (byte) -88);
+                      var6 = (ce) ((Object) var5.d(2078965185));
                       L3: while (true) {
                         if (var6 == null) {
                           break L2;
@@ -592,14 +598,14 @@ class kf extends ce implements ra {
                             stackIn_12_0 = stackOut_11_0;
                             return stackIn_12_0 != 0;
                           } else {
-                            var6 = (ce) (Object) var5.d(2078965185);
+                            var6 = (ce) ((Object) var5.d(2078965185));
                             continue L3;
                           }
                         }
                       }
                     }
                   }
-                  var4 = (ce) (Object) var3.d(2078965185);
+                  var4 = (ce) ((Object) var3.d(2078965185));
                   continue L1;
                 }
               }
@@ -613,23 +619,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3_ref;
+            stackOut_19_0 = (RuntimeException) (var3_ref);
             stackOut_19_1 = new StringBuilder().append("kf.QC(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -637,21 +643,22 @@ class kf extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
         }
         return stackIn_18_0 != 0;
     }
 
     final void d(byte param0) {
+        String discarded$0 = null;
         int var4 = client.field_A ? 1 : 0;
-        rd var2 = new rd(((kf) this).field_H);
+        rd var2 = new rd(this.field_H);
         if (param0 != -95) {
-            String discarded$0 = ((kf) this).c((byte) 50);
+            discarded$0 = this.c((byte) 50);
         }
-        ce var3 = (ce) (Object) var2.a((byte) 71);
+        ce var3 = (ce) ((Object) var2.a((byte) 71));
         while (var3 != null) {
             var3.d((byte) -95);
-            var3 = (ce) (Object) var2.a(-98);
+            var3 = (ce) ((Object) var2.a(-98));
         }
     }
 
@@ -685,8 +692,8 @@ class kf extends ce implements ra {
         var10 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var8 = new rd(((kf) this).field_H);
-            var9 = (ce) (Object) var8.a((byte) 71);
+            var8 = new rd(this.field_H);
+            var9 = (ce) ((Object) var8.a((byte) 71));
             if (param6 == -55) {
               L1: while (true) {
                 L2: {
@@ -696,12 +703,12 @@ class kf extends ce implements ra {
                     if (!var9.a((byte) 120)) {
                       break L2;
                     } else {
-                      if (var9.a(param0, param1, param2, param3, ((kf) this).field_D + param4, ((kf) this).field_u + param5, (byte) -55)) {
+                      if (var9.a(param0, param1, param2, param3, this.field_D + param4, this.field_u + param5, (byte) -55)) {
                         stackOut_8_0 = 1;
                         stackIn_9_0 = stackOut_8_0;
                         return stackIn_9_0 != 0;
                       } else {
-                        var9 = (ce) (Object) var8.a(-113);
+                        var9 = (ce) ((Object) var8.a(-113));
                         continue L1;
                       }
                     }
@@ -721,23 +728,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var8_ref;
+            stackOut_13_0 = (RuntimeException) (var8_ref);
             stackOut_13_1 = new StringBuilder().append("kf.LB(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -745,22 +752,23 @@ class kf extends ce implements ra {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_12_0 != 0;
     }
 
     kf(int param0, int param1, int param2, int param3, gl param4) {
         super(param0, param1, param2, param3, param4, (kg) null);
-        ((kf) this).field_H = new vj();
+        this.field_H = new vj();
     }
 
     final boolean a(int param0, int param1, int param2, ce param3, int param4, int param5, boolean param6) {
+        boolean discarded$2 = false;
         rd var8 = null;
         RuntimeException var8_ref = null;
         ce var9 = null;
         int var10 = 0;
-        Object var11 = null;
+        ce var11 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -785,16 +793,16 @@ class kf extends ce implements ra {
         try {
           L0: {
             L1: {
-              var8 = new rd(((kf) this).field_H);
+              var8 = new rd(this.field_H);
               if (!param6) {
                 break L1;
               } else {
-                var11 = null;
-                boolean discarded$2 = ((kf) this).a(true, (ce) null);
+                var11 = (ce) null;
+                discarded$2 = this.a(true, (ce) null);
                 break L1;
               }
             }
-            var9 = (ce) (Object) var8.a((byte) 71);
+            var9 = (ce) ((Object) var8.a((byte) 71));
             L2: while (true) {
               L3: {
                 if (var9 == null) {
@@ -816,7 +824,7 @@ class kf extends ce implements ra {
                         }
                       }
                     }
-                    var9 = (ce) (Object) var8.a(-128);
+                    var9 = (ce) ((Object) var8.a(-128));
                     continue L2;
                   }
                 }
@@ -830,23 +838,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var8_ref;
+            stackOut_14_0 = (RuntimeException) (var8_ref);
             stackOut_14_1 = new StringBuilder().append("kf.FC(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -854,12 +862,15 @@ class kf extends ce implements ra {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_13_0 != 0;
     }
 
     private final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+        StringBuilder discarded$12 = null;
+        StringBuilder discarded$13 = null;
+        StringBuilder discarded$14 = null;
         rd var5 = null;
         RuntimeException var5_ref = null;
         ce var6 = null;
@@ -899,21 +910,21 @@ class kf extends ce implements ra {
         var8 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var5 = new rd(((kf) this).field_H);
-            var6 = (ce) (Object) var5.a((byte) 71);
+            var5 = new rd(this.field_H);
+            var6 = (ce) ((Object) var5.a((byte) 71));
             L1: while (true) {
               if (var6 == null) {
                 break L0;
               } else {
-                StringBuilder discarded$12 = param2.append('\n');
+                discarded$12 = param2.append('\n');
                 var7 = 0;
                 L2: while (true) {
                   if (var7 > param0) {
-                    StringBuilder discarded$13 = var6.a(param3, 1 + param0, param2, true);
-                    var6 = (ce) (Object) var5.a(-113);
+                    discarded$13 = var6.a(param3, 1 + param0, param2, true);
+                    var6 = (ce) ((Object) var5.a(-113));
                     continue L1;
                   } else {
-                    StringBuilder discarded$14 = param2.append(' ');
+                    discarded$14 = param2.append(' ');
                     var7++;
                     continue L2;
                   }
@@ -925,23 +936,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5_ref;
+            stackOut_8_0 = (RuntimeException) (var5_ref);
             stackOut_8_1 = new StringBuilder().append("kf.OC(").append(param0).append(',').append(0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -950,23 +961,23 @@ class kf extends ce implements ra {
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param3 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -974,25 +985,25 @@ class kf extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
     void a(int param0, int param1, int param2, int param3) {
         int var7 = client.field_A ? 1 : 0;
         if (param2 == 0) {
-            if (((kf) this).field_p != null) {
-                ((kf) this).field_p.a(true, param0, param3, (byte) -108, (ce) this);
+            if (this.field_p != null) {
+                this.field_p.a(true, param0, param3, (byte) -108, (ce) (this));
             }
         }
-        rd var5 = new rd(((kf) this).field_H);
-        ce var6 = (ce) (Object) var5.a(true);
+        rd var5 = new rd(this.field_H);
+        ce var6 = (ce) ((Object) var5.a(true));
         while (var6 != null) {
-            var6.a(param0 + ((kf) this).field_u, -124, param2, param3 - -((kf) this).field_D);
-            var6 = (ce) (Object) var5.d(2078965185);
+            var6.a(param0 + this.field_u, -124, param2, param3 - -this.field_D);
+            var6 = (ce) ((Object) var5.d(2078965185));
         }
         if (param1 > -103) {
-            ((kf) this).a(59, -115, 20, 76);
+            this.a(59, -115, 20, 76);
         }
     }
 
@@ -1034,10 +1045,10 @@ class kf extends ce implements ra {
         try {
           L0: {
             L1: {
-              if (!((kf) this).a(0, param1, param0, param2)) {
+              if (!this.a(0, param1, param0, param2)) {
                 break L1;
               } else {
-                ((kf) this).a((byte) 72, param2, param0, param1);
+                this.a((byte) 72, param2, param0, param1);
                 this.a(param1, 0, param2, param0);
                 break L1;
               }
@@ -1046,11 +1057,11 @@ class kf extends ce implements ra {
               if (param3) {
                 break L2;
               } else {
-                field_P = null;
+                field_P = (ud) null;
                 break L2;
               }
             }
-            stackOut_4_0 = (StringBuilder) param2;
+            stackOut_4_0 = (StringBuilder) (param2);
             stackIn_5_0 = stackOut_4_0;
             break L0;
           }
@@ -1058,23 +1069,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_0 = (RuntimeException) (var5);
             stackOut_6_1 = new StringBuilder().append("kf.MB(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -1083,23 +1094,23 @@ class kf extends ce implements ra {
             }
           }
           L4: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -1107,12 +1118,13 @@ class kf extends ce implements ra {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ')');
         }
         return stackIn_5_0;
     }
 
     final boolean a(int param0, ce param1) {
+        bh discarded$2 = null;
         RuntimeException var3 = null;
         ce var4 = null;
         rd var5 = null;
@@ -1144,13 +1156,13 @@ class kf extends ce implements ra {
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (((kf) this).field_H.b(-15)) {
+            if (this.field_H.b(-15)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              var8 = new rd(((kf) this).field_H);
-              var4 = (ce) (Object) var8.a((byte) 71);
+              var8 = new rd(this.field_H);
+              var4 = (ce) ((Object) var8.a((byte) 71));
               L1: while (true) {
                 if (var4 == null) {
                   L2: {
@@ -1169,9 +1181,9 @@ class kf extends ce implements ra {
                     if (!var4.a(true)) {
                       break L3;
                     } else {
-                      var5 = new rd(((kf) this).field_H);
-                      bh discarded$2 = var5.a(var4, false);
-                      var6 = (ce) (Object) var5.a(param0 ^ -24);
+                      var5 = new rd(this.field_H);
+                      discarded$2 = var5.a(var4, false);
+                      var6 = (ce) ((Object) var5.a(param0 ^ -24));
                       L4: while (true) {
                         if (var6 == null) {
                           break L3;
@@ -1181,14 +1193,14 @@ class kf extends ce implements ra {
                             stackIn_13_0 = stackOut_12_0;
                             return stackIn_13_0 != 0;
                           } else {
-                            var6 = (ce) (Object) var5.a(param0 + -119);
+                            var6 = (ce) ((Object) var5.a(param0 + -119));
                             continue L4;
                           }
                         }
                       }
                     }
                   }
-                  var4 = (ce) (Object) var8.a(-109);
+                  var4 = (ce) ((Object) var8.a(-109));
                   continue L1;
                 }
               }
@@ -1198,23 +1210,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
+            stackOut_20_0 = (RuntimeException) (var3);
             stackOut_20_1 = new StringBuilder().append("kf.PC(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -1222,7 +1234,7 @@ class kf extends ce implements ra {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
         return stackIn_19_0 != 0;
     }
@@ -1242,18 +1254,18 @@ class kf extends ce implements ra {
 
     ce e(byte param0) {
         int var4 = client.field_A ? 1 : 0;
-        rd var2 = new rd(((kf) this).field_H);
-        ce var3 = (ce) (Object) var2.a((byte) 71);
+        rd var2 = new rd(this.field_H);
+        ce var3 = (ce) ((Object) var2.a((byte) 71));
         while (var3 != null) {
             if (!(!var3.a(true))) {
                 return var3;
             }
-            var3 = (ce) (Object) var2.a(-92);
+            var3 = (ce) ((Object) var2.a(-92));
         }
         if (param0 == -74) {
             return null;
         }
-        field_P = null;
+        field_P = (ud) null;
         return null;
     }
 
@@ -1293,8 +1305,8 @@ class kf extends ce implements ra {
                 break L1;
               }
             }
-            var3 = new rd(((kf) this).field_H);
-            var4 = (ce) (Object) var3.a((byte) 71);
+            var3 = new rd(this.field_H);
+            var4 = (ce) ((Object) var3.a((byte) 71));
             L2: while (true) {
               if (var4 == null) {
                 stackOut_9_0 = 0;
@@ -1302,7 +1314,7 @@ class kf extends ce implements ra {
                 break L0;
               } else {
                 if (!var4.a(false, param1)) {
-                  var4 = (ce) (Object) var3.a(-69);
+                  var4 = (ce) ((Object) var3.a(-69));
                   continue L2;
                 } else {
                   stackOut_6_0 = 1;
@@ -1316,23 +1328,23 @@ class kf extends ce implements ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_0 = (RuntimeException) (var3_ref);
             stackOut_11_1 = new StringBuilder().append("kf.EC(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -1340,7 +1352,7 @@ class kf extends ce implements ra {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_10_0 != 0;
     }

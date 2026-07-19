@@ -8,16 +8,17 @@ final class fn extends mk {
 
     final byte[] a(int param0) {
         if (param0 != 256) {
-            return null;
+            return (byte[]) null;
         }
-        byte[] var3 = new byte[((fn) this).field_h.capacity()];
+        byte[] var3 = new byte[this.field_h.capacity()];
         byte[] var2 = var3;
-        java.nio.Buffer discarded$0 = ((fn) this).field_h.position(0);
-        java.nio.ByteBuffer discarded$1 = ((fn) this).field_h.get(var3);
+        java.nio.Buffer discarded$0 = this.field_h.position(0);
+        java.nio.ByteBuffer discarded$1 = this.field_h.get(var3);
         return var3;
     }
 
     final static void a(ji param0, ji param1, ji param2, int param3) {
+        pi discarded$1 = null;
         RuntimeException var4 = null;
         pi[] var5 = null;
         pi[][] var6 = null;
@@ -91,11 +92,11 @@ final class fn extends mk {
             jm.field_q = id.a(param0, "jagex_logo_grey", "commonui", 8192);
             rm.field_a = bj.a(112, param0, "commonui", "button");
             tl.field_u = ac.a(0, "commonui", "validation", param0);
-            bj.field_f = (mm) (Object) vi.a(param2, param0, "commonui", (byte) 110, "arezzo12");
-            hh.field_e = (mm) (Object) vi.a(param2, param0, "commonui", (byte) 93, "arezzo14");
-            ec.field_p = (mm) (Object) vi.a(param2, param0, "commonui", (byte) -121, "arezzo14bold");
-            var17 = new ck(param1.a(0, "", "button.gif"), (java.awt.Component) (Object) jh.field_b);
-            pi discarded$1 = hn.a("dropdown", param0, "commonui", (byte) 73);
+            bj.field_f = (mm) ((Object) vi.a(param2, param0, "commonui", (byte) 110, "arezzo12"));
+            hh.field_e = (mm) ((Object) vi.a(param2, param0, "commonui", (byte) 93, "arezzo14"));
+            ec.field_p = (mm) ((Object) vi.a(param2, param0, "commonui", (byte) -121, "arezzo14bold"));
+            var17 = new ck(param1.a(0, "", "button.gif"), (java.awt.Component) ((Object) jh.field_b));
+            discarded$1 = hn.a("dropdown", param0, "commonui", (byte) 73);
             var5 = t.a("screen_options", param0, false, "commonui");
             df.field_Y = new pi[4];
             jj.field_e = new pi[4];
@@ -151,7 +152,7 @@ final class fn extends mk {
                   }
                 }
               } else {
-                var7[var8] = (int[]) var21[0].clone();
+                var7[var8] = (int[]) (var21[0].clone());
                 var8++;
                 continue L1;
               }
@@ -161,23 +162,23 @@ final class fn extends mk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("fn.F(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -186,23 +187,23 @@ final class fn extends mk {
             }
           }
           L5: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -211,23 +212,23 @@ final class fn extends mk {
             }
           }
           L6: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -235,7 +236,7 @@ final class fn extends mk {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + 0 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + 0 + ')');
         }
     }
 
@@ -248,15 +249,16 @@ final class fn extends mk {
     }
 
     final void a(byte[] param0, boolean param1) {
-        ((fn) this).field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
-        java.nio.Buffer discarded$6 = ((fn) this).field_h.position(0);
+        java.nio.ByteBuffer discarded$7 = null;
+        this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
+        java.nio.Buffer discarded$6 = this.field_h.position(0);
         if (!param1) {
             return;
         }
         try {
-            java.nio.ByteBuffer discarded$7 = ((fn) this).field_h.put(param0);
+            discarded$7 = this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "fn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "fn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

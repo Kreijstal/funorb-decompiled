@@ -104,7 +104,7 @@ final class qj implements gl {
         var10.field_z = 76;
         var10.a(fc.field_e, param1, -129);
         if (param0 > -3) {
-          field_e = null;
+          field_e = (String) null;
           return var10;
         } else {
           return var10;
@@ -143,18 +143,18 @@ final class qj implements gl {
           L0: {
             L1: {
               if (param4 instanceof b) {
-                stackOut_3_0 = (ce) param4;
+                stackOut_3_0 = (ce) (param4);
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
               } else {
                 stackOut_2_0 = null;
-                stackIn_4_0 = (ce) (Object) stackOut_2_0;
+                stackIn_4_0 = (ce) ((Object) stackOut_2_0);
                 break L1;
               }
             }
             L2: {
-              var12 = (b) (Object) stackIn_4_0;
-              hk.a(param4.field_u + param1, param2 - -param4.field_D, param4.field_t, param4.field_y, ((qj) this).field_b);
+              var12 = (b) ((Object) stackIn_4_0);
+              hk.a(param4.field_u + param1, param2 - -param4.field_D, param4.field_t, param4.field_y, this.field_b);
               if (var12 != null) {
                 break L2;
               } else {
@@ -164,19 +164,19 @@ final class qj implements gl {
             var7 = -(2 * var12.field_L) + param4.field_t;
             var8 = var12.field_L + param4.field_u + param1;
             var9 = param4.field_D + param2 + var12.field_K;
-            hk.b(var8, var9, var7 + var8, var9, ((qj) this).field_i);
+            hk.b(var8, var9, var7 + var8, var9, this.field_i);
             if (param3 <= -60) {
               var10 = -1 + var12.b(true);
               L3: while (true) {
                 if (var10 < 0) {
-                  if (null == ((qj) this).field_j) {
+                  if (null == this.field_j) {
                     break L0;
                   } else {
-                    ((qj) this).field_j.b(var12.field_E, var8 - -(var7 / 2), var12.field_K + ((qj) this).field_j.field_S + var9, ((qj) this).field_f, ((qj) this).field_c);
+                    this.field_j.b(var12.field_E, var8 - -(var7 / 2), var12.field_K + this.field_j.field_S + var9, this.field_f, this.field_c);
                     return;
                   }
                 } else {
-                  hk.e(var12.b(-1, var10) * var7 / var12.i(-15317) + var8, var9, ((qj) this).field_h, ((qj) this).field_a);
+                  hk.e(var12.b(-1, var10) * var7 / var12.i(-15317) + var8, var9, this.field_h, this.field_a);
                   var10--;
                   continue L3;
                 }
@@ -189,23 +189,23 @@ final class qj implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("qj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -213,7 +213,7 @@ final class qj implements gl {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
@@ -253,23 +253,23 @@ final class qj implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("qj.E(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -277,22 +277,22 @@ final class qj implements gl {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + 2 + ')');
         }
         return stackIn_1_0;
     }
 
     qj(mm param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((qj) this).field_f = param1;
-            ((qj) this).field_h = param5;
-            ((qj) this).field_a = param6;
-            ((qj) this).field_c = param2;
-            ((qj) this).field_b = param4;
-            ((qj) this).field_j = param0;
-            ((qj) this).field_i = param3;
+            this.field_f = param1;
+            this.field_h = param5;
+            this.field_a = param6;
+            this.field_c = param2;
+            this.field_b = param4;
+            this.field_j = param0;
+            this.field_i = param3;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

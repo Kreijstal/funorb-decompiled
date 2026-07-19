@@ -62,7 +62,7 @@ final class rc implements Runnable {
             var4 = 0;
             L1: while (true) {
               if (8 <= var4) {
-                stackOut_5_0 = (int[]) var3;
+                stackOut_5_0 = (int[]) (var3);
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
@@ -76,23 +76,23 @@ final class rc implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_0 = (RuntimeException) (var3_ref);
             stackOut_7_1 = new StringBuilder().append("rc.A(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -101,23 +101,23 @@ final class rc implements Runnable {
             }
           }
           L3: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(47).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -125,7 +125,7 @@ final class rc implements Runnable {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -144,29 +144,30 @@ final class rc implements Runnable {
         int var1_int = 0;
         en var2 = null;
         int var4 = client.field_A ? 1 : 0;
-        ((rc) this).field_b = true;
+        this.field_b = true;
         try {
-            while (!((rc) this).field_j) {
+            while (!this.field_j) {
                 for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((rc) this).field_l[var1_int];
+                    var2 = this.field_l[var1_int];
                     if (var2 != null) {
                         var2.g();
                     }
                 }
                 ua.a(10L, -128);
-                db.a(-68, (Object) null, ((rc) this).field_f);
+                db.a(-68, (Object) null, this.field_f);
             }
         } catch (Exception exception) {
-            Object var5 = null;
-            qb.a((Throwable) (Object) exception, 16408, (String) null);
+            String var5 = (String) null;
+            qb.a((Throwable) ((Object) exception), 16408, (String) null);
         } finally {
-            ((rc) this).field_b = false;
+            this.field_b = false;
         }
     }
 
     final static boolean a(boolean param0) {
+        boolean discarded$0 = false;
         if (param0) {
-            boolean discarded$0 = rc.a(true);
+            discarded$0 = rc.a(true);
         }
         return kf.field_Q != null ? true : false;
     }
@@ -197,17 +198,17 @@ final class rc implements Runnable {
         L0: {
           var8 = new ke(2);
           var9 = var8;
-          stackOut_0_0 = (ke) var9;
+          stackOut_0_0 = (ke) (var9);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if (!param1) {
-            stackOut_2_0 = (ke) (Object) stackIn_2_0;
+            stackOut_2_0 = (ke) ((Object) stackIn_2_0);
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             break L0;
           } else {
-            stackOut_1_0 = (ke) (Object) stackIn_1_0;
+            stackOut_1_0 = (ke) ((Object) stackIn_1_0);
             stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -216,17 +217,17 @@ final class rc implements Runnable {
         }
         L1: {
           stackIn_3_0.field_s = stackIn_3_1 != 0;
-          stackOut_3_0 = (ke) var9;
+          stackOut_3_0 = (ke) (var9);
           stackIn_5_0 = stackOut_3_0;
           stackIn_4_0 = stackOut_3_0;
           if (!param2) {
-            stackOut_5_0 = (ke) (Object) stackIn_5_0;
+            stackOut_5_0 = (ke) ((Object) stackIn_5_0);
             stackOut_5_1 = 0;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             break L1;
           } else {
-            stackOut_4_0 = (ke) (Object) stackIn_4_0;
+            stackOut_4_0 = (ke) ((Object) stackIn_4_0);
             stackOut_4_1 = 1;
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
@@ -296,9 +297,9 @@ final class rc implements Runnable {
     }
 
     rc() {
-        ((rc) this).field_l = new en[2];
-        ((rc) this).field_j = false;
-        ((rc) this).field_b = false;
+        this.field_l = new en[2];
+        this.field_j = false;
+        this.field_b = false;
     }
 
     static {

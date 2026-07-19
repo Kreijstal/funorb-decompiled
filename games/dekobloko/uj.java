@@ -86,7 +86,7 @@ final class uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var6, "uj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + -128 + ')');
+          throw dh.a((Throwable) ((Object) var6), "uj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + -128 + ')');
         }
     }
 
@@ -95,11 +95,14 @@ final class uj {
         field_f = null;
         field_c = null;
         field_e = null;
-        field_d = null;
+        field_d = (ck[][]) null;
         field_g = null;
     }
 
     final synchronized static byte[] a(int param0, int param1) {
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
@@ -108,7 +111,7 @@ final class uj {
             break L0;
           } else {
             if (rb.field_h > 0) {
-              int fieldTemp$6 = rb.field_h - 1;
+              fieldTemp$6 = rb.field_h - 1;
               rb.field_h = rb.field_h - 1;
               var2_ref_byte__ = of.field_f[fieldTemp$6];
               of.field_f[rb.field_h] = null;
@@ -125,7 +128,7 @@ final class uj {
             if (la.field_a <= 0) {
               break L1;
             } else {
-              int fieldTemp$7 = la.field_a - 1;
+              fieldTemp$7 = la.field_a - 1;
               la.field_a = la.field_a - 1;
               var2_ref_byte__ = vk.field_c[fieldTemp$7];
               vk.field_c[la.field_a] = null;
@@ -140,7 +143,7 @@ final class uj {
             if (d.field_c <= 0) {
               break L2;
             } else {
-              int fieldTemp$8 = d.field_c - 1;
+              fieldTemp$8 = d.field_c - 1;
               d.field_c = d.field_c - 1;
               var2_ref_byte__ = gk.field_yb[fieldTemp$8];
               gk.field_yb[d.field_c] = null;

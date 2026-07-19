@@ -23,73 +23,73 @@ final class tf extends kf implements rl, vn, fi {
 
     public tf() {
         super(0, 0, 496, 0, (gl) null);
-        ((tf) this).field_fb = new og("", (kg) null, 12);
-        ((tf) this).field_Y = new og("", (kg) null, 100);
-        ((tf) this).field_eb = new og("", (kg) null, 100);
-        ((tf) this).field_hb = new og("", (kg) null, 20);
-        ((tf) this).field_S = new og("", (kg) null, 20);
-        ((tf) this).field_T = new og("", (kg) null, 3);
+        this.field_fb = new og("", (kg) null, 12);
+        this.field_Y = new og("", (kg) null, 100);
+        this.field_eb = new og("", (kg) null, 100);
+        this.field_hb = new og("", (kg) null, 20);
+        this.field_S = new og("", (kg) null, 20);
+        this.field_T = new og("", (kg) null, 3);
         int var1 = 1;
-        ((tf) this).field_W = new dl("", (kg) null, var1 != 0);
-        ((tf) this).field_X = new ek(se.field_Q, (kg) null);
-        ((tf) this).field_V = new ek(ec.field_q, (kg) null);
-        ((tf) this).field_fb.field_B = ea.field_C;
-        ((tf) this).field_Y.field_B = ad.field_t;
-        ((tf) this).field_eb.field_B = aa.field_a;
-        ((tf) this).field_hb.field_B = wd.field_b;
-        ((tf) this).field_S.field_B = ua.field_C;
-        ((tf) this).field_T.field_B = fb.field_a;
-        ((tf) this).field_W.field_B = al.field_j;
-        ((tf) this).field_fb.a(new jm(((tf) this).field_fb), -5362);
-        ((tf) this).field_Y.a(new ii(((tf) this).field_Y), -5362);
-        ((tf) this).field_eb.a(new tl(((tf) this).field_eb, ((tf) this).field_Y), -5362);
-        ((tf) this).field_hb.a(new te(((tf) this).field_hb, ((tf) this).field_fb, ((tf) this).field_Y), -5362);
-        ((tf) this).field_S.a(new re(((tf) this).field_S, ((tf) this).field_hb), -5362);
-        ((tf) this).field_T.a(new kd(((tf) this).field_T), -5362);
-        ((tf) this).field_X.field_I = false;
-        ((tf) this).field_X.field_p = (gl) (Object) new fk();
-        ((tf) this).field_V.field_p = (gl) (Object) new on();
-        ((tf) this).field_fb.field_p = (gl) (Object) new di(10000536);
+        this.field_W = new dl("", (kg) null, var1 != 0);
+        this.field_X = new ek(se.field_Q, (kg) null);
+        this.field_V = new ek(ec.field_q, (kg) null);
+        this.field_fb.field_B = ea.field_C;
+        this.field_Y.field_B = ad.field_t;
+        this.field_eb.field_B = aa.field_a;
+        this.field_hb.field_B = wd.field_b;
+        this.field_S.field_B = ua.field_C;
+        this.field_T.field_B = fb.field_a;
+        this.field_W.field_B = al.field_j;
+        this.field_fb.a(new jm(this.field_fb), -5362);
+        this.field_Y.a(new ii(this.field_Y), -5362);
+        this.field_eb.a(new tl(this.field_eb, this.field_Y), -5362);
+        this.field_hb.a(new te(this.field_hb, this.field_fb, this.field_Y), -5362);
+        this.field_S.a(new re(this.field_S, this.field_hb), -5362);
+        this.field_T.a(new kd(this.field_T), -5362);
+        this.field_X.field_I = false;
+        this.field_X.field_p = (gl) ((Object) new fk());
+        this.field_V.field_p = (gl) ((Object) new on());
+        this.field_fb.field_p = (gl) ((Object) new di(10000536));
         di dupTemp$0 = new di(10000536);
-        ((tf) this).field_eb.field_p = (gl) (Object) dupTemp$0;
-        ((tf) this).field_Y.field_p = (gl) (Object) dupTemp$0;
-        ((tf) this).field_T.field_p = (gl) (Object) new di(10000536);
-        ((tf) this).field_W.field_p = (gl) (Object) new tg();
+        this.field_eb.field_p = (gl) ((Object) dupTemp$0);
+        this.field_Y.field_p = (gl) ((Object) dupTemp$0);
+        this.field_T.field_p = (gl) ((Object) new di(10000536));
+        this.field_W.field_p = (gl) ((Object) new tg());
         gm dupTemp$1 = new gm(10000536);
-        ((tf) this).field_S.field_p = (gl) (Object) dupTemp$1;
-        ((tf) this).field_hb.field_p = (gl) (Object) dupTemp$1;
+        this.field_S.field_p = (gl) ((Object) dupTemp$1);
+        this.field_hb.field_p = (gl) ((Object) dupTemp$1);
         String var2 = cm.a((byte) 102, me.field_G, new String[]{this.g((byte) 63), this.h((byte) 29)});
         int var3 = 20;
-        var3 = var3 + this.a(9828, ((tf) this).field_Y, var3, eg.field_c, 170);
-        var3 = var3 + (5 + this.a(((tf) this).field_eb, oc.field_d, 20, (byte) -44, 170, var3, ""));
-        var3 = var3 + this.a(9828, ((tf) this).field_hb, var3, ch.field_d, 170);
-        var3 = var3 + (this.a(125, ((tf) this).field_S, var3, sl.field_e, ga.field_c, 170) + 5);
-        var3 = var3 + (5 + this.a(114, ((tf) this).field_fb, var3, rg.field_e, ij.field_b, 170));
-        var3 = var3 + this.a(qe.field_e, (byte) -107, ((tf) this).field_T, 170, var3);
-        de var4 = new de(46, var3, -90 + ((tf) this).field_t, 25, ((tf) this).field_W, true, -120 + ((tf) this).field_t, 5, bj.field_f, 11579568, h.field_a);
-        ((tf) this).b(var4, (byte) -55);
+        var3 = var3 + this.a(9828, this.field_Y, var3, eg.field_c, 170);
+        var3 = var3 + (5 + this.a(this.field_eb, oc.field_d, 20, (byte) -44, 170, var3, ""));
+        var3 = var3 + this.a(9828, this.field_hb, var3, ch.field_d, 170);
+        var3 = var3 + (this.a(125, this.field_S, var3, sl.field_e, ga.field_c, 170) + 5);
+        var3 = var3 + (5 + this.a(114, this.field_fb, var3, rg.field_e, ij.field_b, 170));
+        var3 = var3 + this.a(qe.field_e, (byte) -107, this.field_T, 170, var3);
+        de var4 = new de(46, var3, -90 + this.field_t, 25, this.field_W, true, -120 + this.field_t, 5, bj.field_f, 11579568, h.field_a);
+        this.b(var4, (byte) -55);
         var3 = var3 + var4.field_y;
         a var5 = new a(hh.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, hh.field_e.field_R, -1, 2147483647, true);
-        ((tf) this).field_U = new qi(var2, var5);
-        ((tf) this).field_U.field_B = "";
-        ((tf) this).field_U.a(rb.field_i, 0, 1);
-        ((tf) this).field_U.a(rb.field_i, 1, 1);
-        ((tf) this).field_U.field_v = (kg) this;
-        ((tf) this).field_U.c(-114, 46, var3, -90 + ((tf) this).field_t);
-        var3 = var3 + (15 + ((tf) this).field_U.field_y);
-        ((tf) this).b(((tf) this).field_U, (byte) -55);
+        this.field_U = new qi(var2, var5);
+        this.field_U.field_B = "";
+        this.field_U.a(rb.field_i, 0, 1);
+        this.field_U.a(rb.field_i, 1, 1);
+        this.field_U.field_v = (kg) (this);
+        this.field_U.c(-114, 46, var3, -90 + this.field_t);
+        var3 = var3 + (15 + this.field_U.field_y);
+        this.b(this.field_U, (byte) -55);
         int var6 = 4;
         int var7 = 200;
-        ((tf) this).field_X.b(40, var7, -var7 + 496 >> 1, var3, -16555);
-        ((tf) this).field_V.b(40, 60, 3 + var6, var3 + 15, -16555);
-        ((tf) this).field_V.field_v = (kg) this;
-        ((tf) this).field_X.field_v = (kg) this;
-        ((tf) this).b(((tf) this).field_X, (byte) -55);
-        ((tf) this).b(((tf) this).field_V, (byte) -55);
-        ((tf) this).field_db = new df((fi) this);
-        ((tf) this).field_db.b(150, -60 + -((tf) this).field_fb.field_t + (((tf) this).field_t + -((tf) this).field_fb.field_u), ((tf) this).field_fb.field_u + ((tf) this).field_fb.field_t + 60, ((tf) this).field_fb.field_D - -20, -16555);
-        ((tf) this).b(((tf) this).field_db, (byte) -55);
-        ((tf) this).b(55 + var3 - -var6, 496, 0, 0, -16555);
+        this.field_X.b(40, var7, -var7 + 496 >> 1, var3, -16555);
+        this.field_V.b(40, 60, 3 + var6, var3 + 15, -16555);
+        this.field_V.field_v = (kg) (this);
+        this.field_X.field_v = (kg) (this);
+        this.b(this.field_X, (byte) -55);
+        this.b(this.field_V, (byte) -55);
+        this.field_db = new df((fi) (this));
+        this.field_db.b(150, -60 + -this.field_fb.field_t + (this.field_t + -this.field_fb.field_u), this.field_fb.field_u + this.field_fb.field_t + 60, this.field_fb.field_D - -20, -16555);
+        this.b(this.field_db, (byte) -55);
+        this.b(55 + var3 - -var6, 496, 0, 0, -16555);
     }
 
     private final boolean f(byte param0) {
@@ -98,10 +98,10 @@ final class tf extends kf implements rl, vn, fi {
         }
         int var2 = -1;
         try {
-            var2 = Integer.parseInt(((tf) this).field_T.field_E);
+            var2 = Integer.parseInt(this.field_T.field_E);
         } catch (NumberFormatException numberFormatException) {
         }
-        return nk.a(((tf) this).field_hb.field_E, (byte) 123, (tf) this, ((tf) this).field_W.field_H, var2, ((tf) this).field_fb.field_E, ((tf) this).field_Y.field_E);
+        return nk.a(this.field_hb.field_E, (byte) 123, (tf) (this), this.field_W.field_H, var2, this.field_fb.field_E, this.field_Y.field_E);
     }
 
     final static boolean a(byte param0, int[] param1) {
@@ -161,23 +161,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_0 = (RuntimeException) (var2);
             stackOut_13_1 = new StringBuilder().append("tf.HA(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -185,7 +185,7 @@ final class tf extends kf implements rl, vn, fi {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         return stackIn_12_0 != 0;
     }
@@ -197,6 +197,7 @@ final class tf extends kf implements rl, vn, fi {
     }
 
     public final void a(byte param0, int param1, ek param2, int param3, int param4) {
+        boolean discarded$2 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -218,11 +219,11 @@ final class tf extends kf implements rl, vn, fi {
           L0: {
             if (param0 == 67) {
               L1: {
-                if (((tf) this).field_V != param2) {
-                  if (param2 != ((tf) this).field_X) {
+                if (this.field_V != param2) {
+                  if (param2 != this.field_X) {
                     break L1;
                   } else {
-                    boolean discarded$2 = this.f((byte) -35);
+                    discarded$2 = this.f((byte) -35);
                     break L1;
                   }
                 } else {
@@ -239,23 +240,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var6;
+            stackOut_7_0 = (RuntimeException) (var6);
             stackOut_7_1 = new StringBuilder().append("tf.H(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -263,13 +264,14 @@ final class tf extends kf implements rl, vn, fi {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(ce param0, int param1, int param2, int param3) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
-        Object var6 = null;
+        ce var6 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -290,12 +292,12 @@ final class tf extends kf implements rl, vn, fi {
           L0: {
             L1: {
               super.a(param0, 75, param2, param3);
-              ((tf) this).field_X.field_I = this.i(-113);
+              this.field_X.field_I = this.i(-113);
               if (param1 > 38) {
                 break L1;
               } else {
-                var6 = null;
-                boolean discarded$2 = ((tf) this).a(-32, 53, (ce) null, '[');
+                var6 = (ce) null;
+                discarded$2 = this.a(-32, 53, (ce) null, '[');
                 break L1;
               }
             }
@@ -305,23 +307,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("tf.A(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -329,7 +331,7 @@ final class tf extends kf implements rl, vn, fi {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -350,7 +352,7 @@ final class tf extends kf implements rl, vn, fi {
         if (param0 != 25) {
             return;
         }
-        ((jm) (Object) ((tf) this).field_fb.a(-96)).a(true);
+        ((jm) ((Object) this.field_fb.a(-96))).a(true);
     }
 
     private final int a(int param0, ce param1, int param2, String param3, String param4, int param5) {
@@ -409,7 +411,7 @@ final class tf extends kf implements rl, vn, fi {
               if (param0 > 99) {
                 break L1;
               } else {
-                field_cb = null;
+                field_cb = (Random) null;
                 break L1;
               }
             }
@@ -421,23 +423,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var7 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var7;
+            stackOut_4_0 = (RuntimeException) (var7);
             stackOut_4_1 = new StringBuilder().append("tf.OA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -446,23 +448,23 @@ final class tf extends kf implements rl, vn, fi {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -471,23 +473,23 @@ final class tf extends kf implements rl, vn, fi {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param4 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -495,7 +497,7 @@ final class tf extends kf implements rl, vn, fi {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 170 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + 170 + ')');
         }
         return stackIn_3_0;
     }
@@ -555,10 +557,10 @@ final class tf extends kf implements rl, vn, fi {
         try {
           L0: {
             var10 = new de(20, param5, 290, 25, param0, false, 120, 3, hh.field_e, 16777215, param1);
-            ((tf) this).b(var10, (byte) -55);
-            var9 = new pa(((jl) (Object) param0).a(-122), param6, 126, param5 + var10.field_y, 220, param2);
-            var9.field_v = (kg) this;
-            ((tf) this).b(var9, (byte) -55);
+            this.b(var10, (byte) -55);
+            var9 = new pa(((jl) ((Object) param0)).a(-122), param6, 126, param5 + var10.field_y, 220, param2);
+            var9.field_v = (kg) (this);
+            this.b(var9, (byte) -55);
             stackOut_0_0 = var10.field_y - -var9.field_y;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -567,23 +569,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var8 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var8;
+            stackOut_2_0 = (RuntimeException) (var8);
             stackOut_2_1 = new StringBuilder().append("tf.FA(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -592,23 +594,23 @@ final class tf extends kf implements rl, vn, fi {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -617,23 +619,23 @@ final class tf extends kf implements rl, vn, fi {
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(',').append(-44).append(',').append(170).append(',').append(param5).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param6 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -641,7 +643,7 @@ final class tf extends kf implements rl, vn, fi {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -717,23 +719,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("tf.GA(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L1;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -741,7 +743,7 @@ final class tf extends kf implements rl, vn, fi {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -758,22 +760,22 @@ final class tf extends kf implements rl, vn, fi {
     private final boolean i(int param0) {
         int var2 = 0;
         L0: {
-          if (!this.a(((tf) this).field_fb, 127)) {
+          if (!this.a(this.field_fb, 127)) {
             break L0;
           } else {
-            if (!this.a(((tf) this).field_Y, -111)) {
+            if (!this.a(this.field_Y, -111)) {
               break L0;
             } else {
-              if (!this.a(((tf) this).field_eb, 124)) {
+              if (!this.a(this.field_eb, 124)) {
                 break L0;
               } else {
-                if (!this.a(((tf) this).field_hb, 126)) {
+                if (!this.a(this.field_hb, 126)) {
                   break L0;
                 } else {
-                  if (!this.a(((tf) this).field_S, -94)) {
+                  if (!this.a(this.field_S, -94)) {
                     break L0;
                   } else {
-                    if (this.a(((tf) this).field_T, 124)) {
+                    if (this.a(this.field_T, 124)) {
                       var2 = 37 % ((16 - param0) / 54);
                       return true;
                     } else {
@@ -823,14 +825,14 @@ final class tf extends kf implements rl, vn, fi {
             } else {
               if (param1 != 98) {
                 if (99 == param1) {
-                  stackOut_9_0 = ((tf) this).a(32, param2);
+                  stackOut_9_0 = this.a(32, param2);
                   stackIn_10_0 = stackOut_9_0;
                   break L0;
                 } else {
                   return false;
                 }
               } else {
-                stackOut_5_0 = ((tf) this).a(param2, (byte) -115);
+                stackOut_5_0 = this.a(param2, (byte) -115);
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               }
@@ -840,23 +842,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_0 = (RuntimeException) (var5);
             stackOut_11_1 = new StringBuilder().append("tf.QA(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -864,14 +866,14 @@ final class tf extends kf implements rl, vn, fi {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ')');
         }
         return stackIn_10_0;
     }
 
     final static ji a(int param0, int param1, boolean param2, boolean param3, int param4) {
         if (param1 < 73) {
-            field_Z = null;
+            field_Z = (String) null;
         }
         return kc.a(true, 1, param4, false, false, false);
     }
@@ -920,7 +922,7 @@ final class tf extends kf implements rl, vn, fi {
               if (param2 < -87) {
                 break L2;
               } else {
-                ((tf) this).field_fb = null;
+                this.field_fb = (og) null;
                 break L2;
               }
             }
@@ -930,23 +932,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_0 = (RuntimeException) (var5);
             stackOut_10_1 = new StringBuilder().append("tf.PA(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -954,27 +956,29 @@ final class tf extends kf implements rl, vn, fi {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final void a(String param0, int param1) {
         og var3 = null;
+        int discarded$0 = 0;
         String var4 = null;
         try {
-            var3 = ((tf) this).field_fb;
+            var3 = this.field_fb;
             if (param1 != -28464) {
-                Object var5 = null;
-                int discarded$0 = this.a((String) null, (byte) 117, (ce) null, -76, -79);
+                ce var5 = (ce) null;
+                discarded$0 = this.a((String) null, (byte) 117, (ce) null, -76, -79);
             }
             var4 = param0;
-            ((rk) (Object) var3).a(var4, (byte) 114, false);
+            ((rk) ((Object) var3)).a(var4, (byte) 114, false);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "tf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "tf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void b(int param0, boolean param1, int param2, int param3) {
+        boolean discarded$1 = false;
         RuntimeException var4 = null;
         int var4_int = 0;
         w var5 = null;
@@ -1009,7 +1013,7 @@ final class tf extends kf implements rl, vn, fi {
                 ea.field_D.a(false, param1);
                 if (bc.field_E != null) {
                   if (wc.field_n) {
-                    boolean discarded$1 = bc.field_E.a(ea.field_D.field_pb, param1, ea.field_D.field_E, 29166);
+                    discarded$1 = bc.field_E.a(ea.field_D.field_pb, param1, ea.field_D.field_E, 29166);
                     break L3;
                   } else {
                     bc.field_E = null;
@@ -1080,7 +1084,7 @@ final class tf extends kf implements rl, vn, fi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var4, "tf.UA(" + 0 + ',' + param1 + ',' + 0 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) var4), "tf.UA(" + 0 + ',' + param1 + ',' + 0 + ',' + param3 + ')');
         }
     }
 
@@ -1125,13 +1129,13 @@ final class tf extends kf implements rl, vn, fi {
           L0: {
             L1: {
               var8 = new de(20, param4, 120 - -param3, 25, param2, false, 120, 3, hh.field_e, 16777215, param0);
-              ((tf) this).b(var8, (byte) -55);
-              var7 = new g(((jl) (Object) param2).a(-126));
-              ((tf) this).b(var7, (byte) -55);
+              this.b(var8, (byte) -55);
+              var7 = new g(((jl) ((Object) param2)).a(-126));
+              this.b(var7, (byte) -55);
               if (param1 == -107) {
                 break L1;
               } else {
-                ((tf) this).field_db = null;
+                this.field_db = (df) null;
                 break L1;
               }
             }
@@ -1144,23 +1148,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var6;
+            stackOut_4_0 = (RuntimeException) (var6);
             stackOut_4_1 = new StringBuilder().append("tf.NA(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -1169,23 +1173,23 @@ final class tf extends kf implements rl, vn, fi {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -1193,7 +1197,7 @@ final class tf extends kf implements rl, vn, fi {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ',' + param4 + ')');
         }
         return stackIn_3_0;
     }
@@ -1237,7 +1241,7 @@ final class tf extends kf implements rl, vn, fi {
         try {
           L0: {
             var6 = new de(20, param2, 290, 25, param1, false, 120, 3, hh.field_e, 16777215, param3);
-            ((tf) this).b(var6, (byte) -55);
+            this.b(var6, (byte) -55);
             stackOut_0_0 = var6.field_y;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -1246,23 +1250,23 @@ final class tf extends kf implements rl, vn, fi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var6_ref;
+            stackOut_2_0 = (RuntimeException) (var6_ref);
             stackOut_2_1 = new StringBuilder().append("tf.EA(").append(9828).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -1271,23 +1275,23 @@ final class tf extends kf implements rl, vn, fi {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -1295,7 +1299,7 @@ final class tf extends kf implements rl, vn, fi {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 170 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + 170 + ')');
         }
         return stackIn_1_0;
     }

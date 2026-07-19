@@ -27,12 +27,12 @@ final class u {
             ed.field_c = param1;
             int var4_int = 0;
             pk.field_r = 2;
-            var5 = (CharSequence) (Object) param1;
+            var5 = (CharSequence) ((Object) param1);
             cf.field_c = kf.a(var5, (byte) 2);
             jg.field_i = true;
             fm.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "u.A(" + 115 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "u.A(" + 115 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

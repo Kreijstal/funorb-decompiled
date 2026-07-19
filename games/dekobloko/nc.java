@@ -8,14 +8,14 @@ final class nc {
 
     final static Object a(String param0, int param1, java.applet.Applet param2, Object[] param3) throws Throwable {
         if (param1 != -14541) {
-            return null;
+            return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param2).call(param0, param3);
     }
 
     final static Object a(boolean param0, String param1, java.applet.Applet param2) throws Throwable {
         if (!param0) {
-            return null;
+            return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param2).call(param1, (Object[]) null);
     }

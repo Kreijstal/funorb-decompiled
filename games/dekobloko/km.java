@@ -57,7 +57,7 @@ class km extends be {
             var4 = 0;
             L1: while (true) {
               if (var4 >= var2_int) {
-                stackOut_66_0 = (byte[]) var3;
+                stackOut_66_0 = (byte[]) (var3);
                 stackIn_67_0 = stackOut_66_0;
                 break L0;
               } else {
@@ -236,23 +236,23 @@ class km extends be {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_68_0 = (RuntimeException) var2;
+            stackOut_68_0 = (RuntimeException) (var2);
             stackOut_68_1 = new StringBuilder().append("km.F(").append(6216).append(',');
             stackIn_70_0 = stackOut_68_0;
             stackIn_70_1 = stackOut_68_1;
             stackIn_69_0 = stackOut_68_0;
             stackIn_69_1 = stackOut_68_1;
             if (param1 == null) {
-              stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
-              stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+              stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
+              stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
               stackOut_70_2 = "null";
               stackIn_71_0 = stackOut_70_0;
               stackIn_71_1 = stackOut_70_1;
               stackIn_71_2 = stackOut_70_2;
               break L6;
             } else {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "{...}";
               stackIn_71_0 = stackOut_69_0;
               stackIn_71_1 = stackOut_69_1;
@@ -260,7 +260,7 @@ class km extends be {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_71_0), stackIn_71_2 + ')');
         }
         return stackIn_67_0;
     }

@@ -35,6 +35,7 @@ final class ec {
     }
 
     final static void a(int param0) {
+        int fieldTemp$2 = 0;
         uf var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -54,7 +55,7 @@ final class ec {
                 }
               } else {
                 var1.f(8, -4);
-                int fieldTemp$2 = var1.field_n + 1;
+                fieldTemp$2 = var1.field_n + 1;
                 var1.field_n = var1.field_n + 1;
                 var2 = fieldTemp$2;
                 ba.a(-32141, var1);
@@ -66,24 +67,24 @@ final class ec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1_ref, "ec.A(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1_ref), "ec.A(" + param0 + ')');
         }
     }
 
     ec(int param0, String param1, mm param2) {
         try {
-            ((ec) this).field_d = param0;
-            ((ec) this).field_o = param1;
-            ((ec) this).field_n = param2.a(((ec) this).field_o) + 46;
-            ((ec) this).field_r = 30;
+            this.field_d = param0;
+            this.field_o = param1;
+            this.field_n = param2.a(this.field_o) + 46;
+            this.field_r = 30;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     ec(int param0) {
-        ((ec) this).field_r = 30;
-        ((ec) this).field_d = param0;
+        this.field_r = 30;
+        this.field_d = param0;
     }
 
     static {

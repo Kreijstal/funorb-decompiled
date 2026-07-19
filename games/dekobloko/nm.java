@@ -108,7 +108,7 @@ final class nm extends w {
         int stackOut_1_0 = 0;
         L0: {
           if (!param0) {
-            if (((nm) this).field_jb) {
+            if (this.field_jb) {
               if (!param6) {
                 stackOut_6_0 = 1;
                 stackIn_8_0 = stackOut_6_0;
@@ -130,17 +130,17 @@ final class nm extends w {
           }
         }
         var8 = stackIn_8_0;
-        ((nm) this).field_Ob.a((byte) -94, param5, ((nm) this).field_Rb.field_N, var8 != 0);
+        this.field_Ob.a((byte) -94, param5, this.field_Rb.field_N, var8 != 0);
         this.a(param1, param4, 0, false, param3);
         return var8 != 0;
     }
 
     private final void b(int param0, int param1, int param2) {
-        ((nm) this).field_Rb.field_mb = -param0 + (((nm) this).field_mb - param2);
-        ((nm) this).field_Rb.field_N = ((nm) this).field_N;
-        ((nm) this).field_Ob.field_vb = 0;
-        ((nm) this).field_Ob.field_mb = -param0 + (((nm) this).field_mb + -param2);
-        ((nm) this).field_Sb.a(((nm) this).field_mb + -param2, (byte) -32, ((nm) this).field_N, ((nm) this).field_Ob.field_N, param2, -((nm) this).field_Ob.field_Ib, ((nm) this).field_Rb.field_N, 0);
+        this.field_Rb.field_mb = -param0 + (this.field_mb - param2);
+        this.field_Rb.field_N = this.field_N;
+        this.field_Ob.field_vb = 0;
+        this.field_Ob.field_mb = -param0 + (this.field_mb + -param2);
+        this.field_Sb.a(this.field_mb + -param2, (byte) -32, this.field_N, this.field_Ob.field_N, param2, -this.field_Ob.field_Ib, this.field_Rb.field_N, 0);
     }
 
     final static ck g(byte param0) {
@@ -159,6 +159,9 @@ final class nm extends w {
     }
 
     final static boolean a(int param0, int param1, int param2) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         int var3 = 0;
         int var4 = 0;
         String var4_ref_String = null;
@@ -168,10 +171,10 @@ final class nm extends w {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
-        Object var13 = null;
-        Object var14 = null;
-        Object var15 = null;
+        String var12 = null;
+        String var13 = null;
+        String var14 = null;
+        String var15 = null;
         String var16 = null;
         String var17 = null;
         String var18 = null;
@@ -228,7 +231,7 @@ final class nm extends w {
                 } else {
                   if (80 > dj.field_ab.length()) {
                     L4: {
-                      StringBuilder discarded$3 = dj.field_ab.append((char) var4);
+                      discarded$3 = dj.field_ab.append((char) var4);
                       var5 = 485;
                       var17 = oa.field_f;
                       var7 = var17;
@@ -240,7 +243,7 @@ final class nm extends w {
                       var7 = var18;
                       var7 = var18;
                       if (pk.field_r == 2) {
-                        var22 = (CharSequence) (Object) ed.field_c;
+                        var22 = (CharSequence) ((Object) ed.field_c);
                         var20 = cm.a((byte) 94, oj.field_b, new String[]{ua.a(var22, true)});
                         var8 = cm.a((byte) 108, im.field_j, new String[]{var16});
                         var9 = ff.field_o.a(var20);
@@ -296,7 +299,7 @@ final class nm extends w {
                       }
                     }
                     if (ff.field_o.a(dj.field_ab.toString()) > var5) {
-                      StringBuilder discarded$4 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
+                      discarded$4 = vf.a(dj.field_ab, -23510, dj.field_ab.length() + -1, ' ');
                       break L3;
                     } else {
                       break L3;
@@ -318,7 +321,7 @@ final class nm extends w {
                 if (0 >= dj.field_ab.length()) {
                   break L8;
                 } else {
-                  StringBuilder discarded$5 = vf.a(dj.field_ab, -23510, dj.field_ab.length() - 1, ' ');
+                  discarded$5 = vf.a(dj.field_ab, -23510, dj.field_ab.length() - 1, ' ');
                   return true;
                 }
               }
@@ -343,11 +346,11 @@ final class nm extends w {
                 var7 = var4_ref_String;
                 var7 = var4_ref_String;
                 if (ue.a(2048, var4_ref_String)) {
-                  var13 = null;
-                  var12 = null;
+                  var13 = (String) null;
+                  var12 = (String) null;
                   ca.a((String) null, (String) null, wd.field_a, (byte) 90, 2, 0);
-                  var15 = null;
-                  var14 = null;
+                  var15 = (String) null;
+                  var14 = (String) null;
                   ca.a((String) null, (String) null, um.field_e, (byte) 69, 2, 0);
                   qk.a((byte) 94);
                   break L9;
@@ -388,20 +391,20 @@ final class nm extends w {
         if (param2 != -15230) {
             return false;
         }
-        return this.a(param3, ((nm) this).field_Rb.field_N, (byte) 43, param0, param1, param4, param5);
+        return this.a(param3, this.field_Rb.field_N, (byte) 43, param0, param1, param4, param5);
     }
 
     nm(long param0, w param1, w param2, jd param3) {
         super(param0, (w) null);
         try {
-            ((nm) this).field_Rb = new w(0L, param2);
-            ((nm) this).field_Sb = new jd(0L, param3);
-            ((nm) this).a(((nm) this).field_Rb, -16834);
-            ((nm) this).a(((nm) this).field_Sb, -16834);
-            ((nm) this).field_Ob = param1;
-            ((nm) this).field_Rb.a(param1, -16834);
+            this.field_Rb = new w(0L, param2);
+            this.field_Sb = new jd(0L, param3);
+            this.a(this.field_Rb, -16834);
+            this.a(this.field_Sb, -16834);
+            this.field_Ob = param1;
+            this.field_Rb.a(param1, -16834);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "nm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "nm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -412,7 +415,7 @@ final class nm extends w {
     }
 
     final void a(int param0, boolean param1, boolean param2, int param3) {
-        this.a(((nm) this).field_Rb.field_N, param0, 0, param2, param3);
+        this.a(this.field_Rb.field_N, param0, 0, param2, param3);
         if (!param1) {
             nm.h((byte) 66);
         }
@@ -427,52 +430,52 @@ final class nm extends w {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((nm) this).field_mb = param5;
+        this.field_mb = param5;
         if (param0 != 6) {
             return;
         }
-        ((nm) this).field_vb = param3;
-        ((nm) this).field_Ib = param1;
-        ((nm) this).field_N = param4;
+        this.field_vb = param3;
+        this.field_Ib = param1;
+        this.field_N = param4;
         this.b(param6, 0, param2);
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, int param4) {
         L0: {
-          if (!((nm) this).field_Sb.i((byte) 7)) {
+          if (!this.field_Sb.i((byte) 7)) {
             break L0;
           } else {
-            ((nm) this).field_Ob.field_Mb = ((nm) this).field_Ob.field_Mb + param4;
+            this.field_Ob.field_Mb = this.field_Ob.field_Mb + param4;
             break L0;
           }
         }
         L1: {
-          if (((nm) this).field_Sb.h((byte) 78)) {
-            ((nm) this).field_Ob.field_Mb = ((nm) this).field_Ob.field_Mb - param4;
+          if (this.field_Sb.h((byte) 78)) {
+            this.field_Ob.field_Mb = this.field_Ob.field_Mb - param4;
             break L1;
           } else {
             break L1;
           }
         }
         L2: {
-          if (!((nm) this).field_Sb.g((byte) -127)) {
+          if (!this.field_Sb.g((byte) -127)) {
             break L2;
           } else {
-            ((nm) this).field_Ob.field_Mb = ((nm) this).field_Ob.field_Mb + param0;
+            this.field_Ob.field_Mb = this.field_Ob.field_Mb + param0;
             break L2;
           }
         }
         L3: {
-          if (!((nm) this).field_Sb.f(0)) {
+          if (!this.field_Sb.f(0)) {
             break L3;
           } else {
-            ((nm) this).field_Ob.field_Mb = ((nm) this).field_Ob.field_Mb - param0;
+            this.field_Ob.field_Mb = this.field_Ob.field_Mb - param0;
             break L3;
           }
         }
         L4: {
-          if (((nm) this).field_jb) {
-            ((nm) this).field_Ob.field_Mb = ((nm) this).field_Ob.field_Mb - param1;
+          if (this.field_jb) {
+            this.field_Ob.field_Mb = this.field_Ob.field_Mb - param1;
             break L4;
           } else {
             break L4;
@@ -481,46 +484,46 @@ final class nm extends w {
         L5: {
           if (param3) {
             L6: {
-              if (0 <= -(((nm) this).field_Ob.field_Ib - -((nm) this).field_Ob.field_Mb)) {
+              if (0 <= -(this.field_Ob.field_Ib - -this.field_Ob.field_Mb)) {
                 break L6;
               } else {
-                ((nm) this).field_Ob.field_Mb = -((nm) this).field_Ob.field_Ib;
+                this.field_Ob.field_Mb = -this.field_Ob.field_Ib;
                 break L6;
               }
             }
-            if (((nm) this).field_Ob.field_F + (((nm) this).field_Ob.field_N + -((nm) this).field_Rb.field_N) >= -(((nm) this).field_Ob.field_Mb + ((nm) this).field_Ob.field_Ib)) {
+            if (this.field_Ob.field_F + (this.field_Ob.field_N + -this.field_Rb.field_N) >= -(this.field_Ob.field_Mb + this.field_Ob.field_Ib)) {
               break L5;
             } else {
-              ((nm) this).field_Ob.field_Mb = -((nm) this).field_Ob.field_Ib + -(-((nm) this).field_Rb.field_N + (((nm) this).field_Ob.field_F + ((nm) this).field_Ob.field_N));
+              this.field_Ob.field_Mb = -this.field_Ob.field_Ib + -(-this.field_Rb.field_N + (this.field_Ob.field_F + this.field_Ob.field_N));
               break L5;
             }
           } else {
             L7: {
-              if (-(((nm) this).field_Ob.field_Mb + ((nm) this).field_Ob.field_Ib) <= ((nm) this).field_Ob.field_F + ((nm) this).field_Ob.field_N + -((nm) this).field_Rb.field_N) {
+              if (-(this.field_Ob.field_Mb + this.field_Ob.field_Ib) <= this.field_Ob.field_F + this.field_Ob.field_N + -this.field_Rb.field_N) {
                 break L7;
               } else {
-                ((nm) this).field_Ob.field_Mb = -(-((nm) this).field_Rb.field_N + (((nm) this).field_Ob.field_N - -((nm) this).field_Ob.field_F)) - ((nm) this).field_Ob.field_Ib;
+                this.field_Ob.field_Mb = -(-this.field_Rb.field_N + (this.field_Ob.field_N - -this.field_Ob.field_F)) - this.field_Ob.field_Ib;
                 break L7;
               }
             }
-            if (-(((nm) this).field_Ob.field_Ib - -((nm) this).field_Ob.field_Mb) >= 0) {
+            if (-(this.field_Ob.field_Ib - -this.field_Ob.field_Mb) >= 0) {
               break L5;
             } else {
-              ((nm) this).field_Ob.field_Mb = -((nm) this).field_Ob.field_Ib;
+              this.field_Ob.field_Mb = -this.field_Ob.field_Ib;
               break L5;
             }
           }
         }
         L8: {
-          if (!((nm) this).field_Sb.j((byte) -2)) {
+          if (!this.field_Sb.j((byte) -2)) {
             break L8;
           } else {
-            ((nm) this).field_Ob.field_Ib = -((nm) this).field_Sb.a(param3, (byte) 88, ((nm) this).field_Rb.field_N, ((nm) this).field_Ob.field_N);
-            ((nm) this).field_Ob.field_Mb = 0;
+            this.field_Ob.field_Ib = -this.field_Sb.a(param3, (byte) 88, this.field_Rb.field_N, this.field_Ob.field_N);
+            this.field_Ob.field_Mb = 0;
             break L8;
           }
         }
-        ((nm) this).field_Sb.a(((nm) this).field_Rb.field_N, ((nm) this).field_Ob.field_N, 106, -((nm) this).field_Ob.field_Ib);
+        this.field_Sb.a(this.field_Rb.field_N, this.field_Ob.field_N, 106, -this.field_Ob.field_Ib);
     }
 
     static {

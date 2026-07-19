@@ -36,7 +36,7 @@ abstract class lc {
 
     public static void a(int param0) {
         field_h = null;
-        field_e = null;
+        field_e = (String[][]) null;
     }
 
     static {

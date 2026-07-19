@@ -13,7 +13,7 @@ final class tg implements gl {
     static int field_e;
 
     public static void a(boolean param0) {
-        field_d = null;
+        field_d = (String[][]) null;
         field_g = null;
         field_i = null;
         field_a = null;
@@ -53,7 +53,7 @@ final class tg implements gl {
               if (!(param4 instanceof ek)) {
                 break L1;
               } else {
-                if (!((ek) (Object) param4).field_H) {
+                if (!((ek) ((Object) param4)).field_H) {
                   break L1;
                 } else {
                   var8.f((param4.field_t + -var8.field_K >> 1) + var6_int - -1, 1 + var7 + (param4.field_y + -var8.field_C >> 1), 256);
@@ -80,23 +80,23 @@ final class tg implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("tg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -104,7 +104,7 @@ final class tg implements gl {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
@@ -112,13 +112,13 @@ final class tg implements gl {
         md.a(9, 11, cd.field_m.e(102));
         wk.field_i = true;
         if (param0 >= -2) {
-            field_i = null;
+            field_i = (w) null;
         }
     }
 
     final static ck a(boolean param0, int param1) {
         if (!param0) {
-            return null;
+            return (ck) null;
         }
         return ik.field_b[param1][(12 & uf.field_A) >> 2];
     }

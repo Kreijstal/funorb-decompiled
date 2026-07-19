@@ -22,7 +22,7 @@ final class wb extends w {
             var3 = we.field_b;
             var3.f(param1, param2 + -64);
             if (param2 != 60) {
-                field_Nb = null;
+                field_Nb = (fm) null;
             }
             var3.a(true, 5);
             var3.a(true, 0);
@@ -30,7 +30,7 @@ final class wb extends w {
             var3.a(true, param0.field_o);
             var3.a(true, param0.field_v);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -89,23 +89,23 @@ final class wb extends w {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("wb.C(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -113,7 +113,7 @@ final class wb extends w {
                   break L2;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 30307 + ')');
+              throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + 30307 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -231,7 +231,7 @@ final class wb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var6, "wb.A(" + 31 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 64 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) var6), "wb.A(" + 31 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 64 + ',' + param5 + ')');
         }
     }
 
@@ -244,11 +244,11 @@ final class wb extends w {
 
     final static int b(byte param0, int param1) {
         int var2 = 0;
-        Object var3 = null;
+        kc var3 = null;
         var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         if (param0 > -77) {
-          var3 = null;
+          var3 = (kc) null;
           wb.a((kc) null, -48, 106);
           var2 = var2 | var2 >>> 2;
           var2 = var2 | var2 >>> 4;

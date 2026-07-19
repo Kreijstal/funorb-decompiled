@@ -22,16 +22,16 @@ final class dn extends ie {
         int var5 = 0;
         var5 = client.field_A ? 1 : 0;
         if (param0 == 109) {
-          if (((dn) this).field_g >= ((dn) this).field_m) {
+          if (this.field_g >= this.field_m) {
             var4 = 0;
             L0: while (true) {
               L1: {
                 var4++;
-                ((dn) this).field_m = ((dn) this).field_m + param1;
+                this.field_m = this.field_m + param1;
                 if (var4 >= 10) {
                   break L1;
                 } else {
-                  if (((dn) this).field_m < ((dn) this).field_g) {
+                  if (this.field_m < this.field_g) {
                     continue L0;
                   } else {
                     break L1;
@@ -39,8 +39,8 @@ final class dn extends ie {
                 }
               }
               L2: {
-                if (((dn) this).field_m < ((dn) this).field_g) {
-                  ((dn) this).field_m = ((dn) this).field_g;
+                if (this.field_m < this.field_g) {
+                  this.field_m = this.field_g;
                   break L2;
                 } else {
                   break L2;
@@ -49,9 +49,9 @@ final class dn extends ie {
               return var4;
             }
           } else {
-            ((dn) this).field_h = ((dn) this).field_h + (-((dn) this).field_g + ((dn) this).field_m);
-            ((dn) this).field_g = ((dn) this).field_g + (((dn) this).field_m - ((dn) this).field_g);
-            ((dn) this).field_m = ((dn) this).field_m + param1;
+            this.field_h = this.field_h + (-this.field_g + this.field_m);
+            this.field_g = this.field_g + (this.field_m - this.field_g);
+            this.field_m = this.field_m + param1;
             return 1;
           }
         } else {
@@ -63,9 +63,9 @@ final class dn extends ie {
         if (param0 != -30693) {
             return;
         }
-        ((dn) this).field_h = 0L;
-        if (!(((dn) this).field_g >= ((dn) this).field_m)) {
-            ((dn) this).field_g = ((dn) this).field_g + (-((dn) this).field_g + ((dn) this).field_m);
+        this.field_h = 0L;
+        if (!(this.field_g >= this.field_m)) {
+            this.field_g = this.field_g + (-this.field_g + this.field_m);
         }
     }
 
@@ -78,12 +78,12 @@ final class dn extends ie {
     }
 
     final long a(int param0) {
-        ((dn) this).field_g = ((dn) this).field_g + this.c(-8325);
+        this.field_g = this.field_g + this.c(-8325);
         if (param0 != -22962) {
-            ((dn) this).field_o = 53;
+            this.field_o = 53;
         }
-        if (!(((dn) this).field_g >= ((dn) this).field_m)) {
-            return (-((dn) this).field_g + ((dn) this).field_m) / 1000000L;
+        if (!(this.field_g >= this.field_m)) {
+            return (-this.field_g + this.field_m) / 1000000L;
         }
         return 0L;
     }
@@ -105,12 +105,12 @@ final class dn extends ie {
               var1_int++;
               continue L0;
             } else {
-              stackOut_3_0 = (ac) var2;
+              stackOut_3_0 = (ac) (var2);
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
@@ -121,33 +121,33 @@ final class dn extends ie {
         int var8 = 0;
         int var9 = client.field_A ? 1 : 0;
         long var2 = System.nanoTime();
-        long var4 = var2 - ((dn) this).field_h;
-        ((dn) this).field_h = var2;
+        long var4 = var2 - this.field_h;
+        this.field_h = var2;
         if (var4 > -5000000000L) {
             if (!(var4 >= 5000000000L)) {
-                ((dn) this).field_f[((dn) this).field_o] = var4;
-                if (!(((dn) this).field_n >= 1)) {
-                    ((dn) this).field_n = ((dn) this).field_n + 1;
+                this.field_f[this.field_o] = var4;
+                if (!(this.field_n >= 1)) {
+                    this.field_n = this.field_n + 1;
                 }
-                ((dn) this).field_o = (1 + ((dn) this).field_o) % 10;
+                this.field_o = (1 + this.field_o) % 10;
             }
         }
         long var6 = 0L;
-        for (var8 = 1; var8 <= ((dn) this).field_n; var8++) {
-            var6 = var6 + ((dn) this).field_f[(10 + (((dn) this).field_o - var8)) % 10];
+        for (var8 = 1; var8 <= this.field_n; var8++) {
+            var6 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
         }
-        return var6 / (long)((dn) this).field_n;
+        return var6 / (long)this.field_n;
     }
 
     dn() {
-        ((dn) this).field_g = 0L;
-        ((dn) this).field_h = 0L;
-        ((dn) this).field_f = new long[10];
-        ((dn) this).field_n = 1;
-        ((dn) this).field_o = 0;
-        ((dn) this).field_m = 0L;
-        ((dn) this).field_g = System.nanoTime();
-        ((dn) this).field_m = System.nanoTime();
+        this.field_g = 0L;
+        this.field_h = 0L;
+        this.field_f = new long[10];
+        this.field_n = 1;
+        this.field_o = 0;
+        this.field_m = 0L;
+        this.field_g = System.nanoTime();
+        this.field_m = System.nanoTime();
     }
 
     static {

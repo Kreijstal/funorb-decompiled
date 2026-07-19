@@ -14,13 +14,14 @@ final class ge {
     static boolean field_c;
 
     final static int a(lk param0, int param1) {
+        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
+        lk var7 = null;
         int stackIn_3_0 = 0;
         int stackIn_19_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -51,8 +52,8 @@ final class ge {
                 if (param1 > 14) {
                   break L1;
                 } else {
-                  var7 = null;
-                  int discarded$2 = ge.a((lk) null, 96);
+                  var7 = (lk) null;
+                  discarded$2 = ge.a((lk) null, 96);
                   break L1;
                 }
               }
@@ -112,23 +113,23 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_0 = (RuntimeException) (var2);
             stackOut_20_1 = new StringBuilder().append("ge.E(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -136,7 +137,7 @@ final class ge {
               break L7;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
         }
         return stackIn_19_0;
     }
@@ -159,6 +160,10 @@ final class ge {
     }
 
     final static ni a(byte param0, int param1, int param2, pi[] param3, byte[] param4, int param5) {
+        byte[] array$4 = null;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -282,7 +287,7 @@ final class ge {
                   var17.field_R = var17.field_R - param2;
                   hk.a(var56, var14, var15);
                   hk.a(var50);
-                  stackOut_26_0 = (ni) var17;
+                  stackOut_26_0 = (ni) (var17);
                   stackIn_27_0 = stackOut_26_0;
                   break L0;
                 } else {
@@ -290,7 +295,7 @@ final class ge {
                   var7[var17_int] = param3[var17_int].field_c + -param2;
                   var8[var17_int] = (param2 << 1) + param3[var17_int].field_b;
                   var9[var17_int] = param3[var17_int].field_i + (param2 << 1);
-                  byte[] array$4 = new byte[var51[var17_int] * var52[var17_int]];
+                  array$4 = new byte[var51[var17_int] * var52[var17_int]];
                   var12[var17_int] = array$4;
                   var18 = array$4;
                   var19 = param3[var17_int].field_k;
@@ -322,10 +327,10 @@ final class ge {
                                   continue L4;
                                 } else {
                                   L6: {
-                                    int incrementValue$5 = var24;
+                                    incrementValue$5 = var24;
                                     var24++;
                                     if (var19[incrementValue$5] != 0) {
-                                      int incrementValue$6 = var25;
+                                      incrementValue$6 = var25;
                                       var25++;
                                       var18[incrementValue$6] = (byte) 1;
                                       break L6;
@@ -354,7 +359,7 @@ final class ge {
                           continue L2;
                         } else {
                           L8: {
-                            int incrementValue$7 = var24;
+                            incrementValue$7 = var24;
                             var24++;
                             if (0 == var19[incrementValue$7]) {
                               break L8;
@@ -379,23 +384,23 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var6 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var6;
+            stackOut_28_0 = (RuntimeException) (var6);
             stackOut_28_1 = new StringBuilder().append("ge.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param3 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L9;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -404,23 +409,23 @@ final class ge {
             }
           }
           L10: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param4 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L10;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -428,7 +433,7 @@ final class ge {
               break L10;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + 1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + 1 + ')');
         }
         return stackIn_27_0;
     }
@@ -460,23 +465,23 @@ final class ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_0 = (RuntimeException) (var4);
             stackOut_2_1 = new StringBuilder().append("ge.D(").append(param0).append(',').append(param1).append(',').append(127).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param3 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -484,7 +489,7 @@ final class ge {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
     }
 
@@ -510,7 +515,7 @@ final class ge {
         try {
             me.field_z = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ge.G(" + -93 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ge.G(" + -93 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -17,22 +17,23 @@ final class ob extends fm {
     }
 
     final void a(wl param0, byte param1) {
+        ve discarded$0 = null;
         try {
-            param0.b(8, ((ob) this).field_m);
+            param0.b(8, this.field_m);
             if (param1 < 34) {
-                ve discarded$0 = ob.a(-10, 21);
+                discarded$0 = ob.a(-10, 21);
             }
-            param0.a(((ob) this).field_h, true);
+            param0.a(this.field_h, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ob.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ob.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static ve a(int param0, int param1) {
         if (param1 != 8) {
-            field_l = null;
+            field_l = (String) null;
         }
-        return tg.field_b != null ? (ve) (Object) tg.field_b.a(param1 ^ 24718, (long)param0) : null;
+        return tg.field_b != null ? (ve) ((Object) tg.field_b.a(param1 ^ 24718, (long)param0)) : null;
     }
 
     final static ck[] a(int param0, int param1, int param2, int param3) {
@@ -53,7 +54,7 @@ final class ob extends fm {
 
     final gh a(int param0) {
         if (param0 != 18) {
-            return null;
+            return (gh) null;
         }
         return pb.field_i;
     }
@@ -117,23 +118,23 @@ final class ob extends fm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("ob.C(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -141,16 +142,17 @@ final class ob extends fm {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
+        ck[] discarded$0 = null;
         field_i = null;
-        field_j = null;
+        field_j = (ck[][][]) null;
         field_l = null;
         if (param0 < 86) {
-            ck[] discarded$0 = ob.a(-105, -21, 61, -11);
+            discarded$0 = ob.a(-105, -21, 61, -11);
         }
         field_n = null;
     }
@@ -165,10 +167,10 @@ final class ob extends fm {
 
     ob(String param0, String param1) {
         try {
-            ((ob) this).field_m = param0;
-            ((ob) this).field_h = param1;
+            this.field_m = param0;
+            this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

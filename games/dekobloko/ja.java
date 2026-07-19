@@ -34,7 +34,7 @@ final class ja {
         int[] var16 = null;
         int[] var18 = null;
         int[] var19 = null;
-        var19 = new int[((ja) this).field_e];
+        var19 = new int[this.field_e];
         var18 = new int[33];
         var16 = var18;
         var14 = var16;
@@ -42,22 +42,22 @@ final class ja {
         var2_ref_int__ = var12;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((ja) this).field_e) {
-            ((ja) this).field_b = new int[8];
+          if (var3 >= this.field_e) {
+            this.field_b = new int[8];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((ja) this).field_e) {
+              if (var3 >= this.field_e) {
                 return;
               } else {
-                var4 = ((ja) this).field_a[var3];
+                var4 = this.field_a[var3];
                 if (var4 != 0) {
                   var5 = var19[var3];
                   var6 = 0;
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ja) this).field_b[var6] = ~var3;
+                      this.field_b[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -74,30 +74,30 @@ final class ja {
                           break L3;
                         } else {
                           L4: {
-                            if (((ja) this).field_b[var6] != 0) {
+                            if (this.field_b[var6] != 0) {
                               break L4;
                             } else {
-                              ((ja) this).field_b[var6] = var2;
+                              this.field_b[var6] = var2;
                               break L4;
                             }
                           }
-                          var6 = ((ja) this).field_b[var6];
+                          var6 = this.field_b[var6];
                           break L3;
                         }
                       }
                       L5: {
-                        if (var6 < ((ja) this).field_b.length) {
+                        if (var6 < this.field_b.length) {
                           break L5;
                         } else {
-                          var9 = new int[((ja) this).field_b.length * 2];
+                          var9 = new int[this.field_b.length * 2];
                           var11 = 0;
                           var10 = var11;
                           L6: while (true) {
-                            if (var11 >= ((ja) this).field_b.length) {
-                              ((ja) this).field_b = var9;
+                            if (var11 >= this.field_b.length) {
+                              this.field_b = var9;
                               break L5;
                             } else {
-                              var9[var11] = ((ja) this).field_b[var11];
+                              var9[var11] = this.field_b[var11];
                               var11++;
                               continue L6;
                             }
@@ -116,7 +116,7 @@ final class ja {
               }
             }
           } else {
-            var4 = ((ja) this).field_a[var3];
+            var4 = this.field_a[var3];
             if (var4 != 0) {
               L7: {
                 var5 = 1 << 32 - var4;
@@ -177,10 +177,12 @@ final class ja {
     }
 
     final float[] b() {
-        return ((ja) this).field_f[((ja) this).a()];
+        return this.field_f[this.a()];
     }
 
     ja() {
+        int discarded$2 = 0;
+        int incrementValue$3 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -208,10 +210,10 @@ final class ja {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$2 = va.c(24);
-          ((ja) this).field_d = va.c(16);
-          ((ja) this).field_e = va.c(24);
-          ((ja) this).field_a = new int[((ja) this).field_e];
+          discarded$2 = va.c(24);
+          this.field_d = va.c(16);
+          this.field_e = va.c(24);
+          this.field_a = new int[this.field_e];
           if (va.b() == 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -240,7 +242,7 @@ final class ja {
             var14 = 0;
             var3_int = var14;
             L3: while (true) {
-              if (var14 >= ((ja) this).field_e) {
+              if (var14 >= this.field_e) {
                 break L1;
               } else {
                 L4: {
@@ -250,13 +252,13 @@ final class ja {
                     if (va.b() != 0) {
                       break L4;
                     } else {
-                      ((ja) this).field_a[var14] = 0;
+                      this.field_a[var14] = 0;
                       var14++;
                       continue L3;
                     }
                   }
                 }
-                ((ja) this).field_a[var14] = va.c(5) + 1;
+                this.field_a[var14] = va.c(5) + 1;
                 var14++;
                 continue L3;
               }
@@ -265,19 +267,19 @@ final class ja {
             var2 = 0;
             var3_int = va.c(5) + 1;
             L5: while (true) {
-              if (var2 >= ((ja) this).field_e) {
+              if (var2 >= this.field_e) {
                 break L1;
               } else {
-                var4_int = va.c(s.b((byte) 120, ((ja) this).field_e - var2));
+                var4_int = va.c(s.b((byte) 120, this.field_e - var2));
                 var5 = 0;
                 L6: while (true) {
                   if (var5 >= var4_int) {
                     var3_int++;
                     continue L5;
                   } else {
-                    int incrementValue$3 = var2;
+                    incrementValue$3 = var2;
                     var2++;
-                    ((ja) this).field_a[incrementValue$3] = var3_int;
+                    this.field_a[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -309,34 +311,34 @@ final class ja {
             L9: {
               var6 = stackIn_23_0;
               if (var2 != 1) {
-                var7 = ((ja) this).field_e * ((ja) this).field_d;
+                var7 = this.field_e * this.field_d;
                 break L9;
               } else {
-                var7 = ja.a(((ja) this).field_e, ((ja) this).field_d);
+                var7 = ja.a(this.field_e, this.field_d);
                 break L9;
               }
             }
-            ((ja) this).field_c = new int[var7];
+            this.field_c = new int[var7];
             var8 = 0;
             L10: while (true) {
               if (var8 >= var7) {
-                ((ja) this).field_f = new float[((ja) this).field_e][((ja) this).field_d];
+                this.field_f = new float[this.field_e][this.field_d];
                 if (var2 != 1) {
                   var8 = 0;
                   L11: while (true) {
-                    if (var8 >= ((ja) this).field_e) {
+                    if (var8 >= this.field_e) {
                       break L7;
                     } else {
                       var9 = 0.0f;
-                      var10 = var8 * ((ja) this).field_d;
+                      var10 = var8 * this.field_d;
                       var11 = 0;
                       L12: while (true) {
-                        if (var11 >= ((ja) this).field_d) {
+                        if (var11 >= this.field_d) {
                           var8++;
                           continue L11;
                         } else {
-                          var12 = (float)((ja) this).field_c[var10] * var4 + var3 + var9;
-                          ((ja) this).field_f[var8][var11] = var12;
+                          var12 = (float)this.field_c[var10] * var4 + var3 + var9;
+                          this.field_f[var8][var11] = var12;
                           if (var6 != 0) {
                             var9 = var12;
                             var10++;
@@ -354,21 +356,21 @@ final class ja {
                 } else {
                   var8 = 0;
                   L13: while (true) {
-                    if (var8 >= ((ja) this).field_e) {
+                    if (var8 >= this.field_e) {
                       break L7;
                     } else {
                       var9 = 0.0f;
                       var10 = 1;
                       var11 = 0;
                       L14: while (true) {
-                        if (var11 >= ((ja) this).field_d) {
+                        if (var11 >= this.field_d) {
                           var8++;
                           continue L13;
                         } else {
                           L15: {
                             var12_int = var8 / var10 % var7;
-                            var13 = (float)((ja) this).field_c[var12_int] * var4 + var3 + var9;
-                            ((ja) this).field_f[var8][var11] = var13;
+                            var13 = (float)this.field_c[var12_int] * var4 + var3 + var9;
+                            this.field_f[var8][var11] = var13;
                             if (var6 == 0) {
                               break L15;
                             } else {
@@ -385,7 +387,7 @@ final class ja {
                   }
                 }
               } else {
-                ((ja) this).field_c[var8] = va.c(var5);
+                this.field_c[var8] = va.c(var5);
                 var8++;
                 continue L10;
               }
@@ -396,9 +398,9 @@ final class ja {
 
     final int a() {
         int var1 = 0;
-        while (((ja) this).field_b[var1] >= 0) {
-            var1 = va.b() != 0 ? ((ja) this).field_b[var1] : var1 + 1;
+        while (this.field_b[var1] >= 0) {
+            var1 = va.b() != 0 ? this.field_b[var1] : var1 + 1;
         }
-        return ~((ja) this).field_b[var1];
+        return ~this.field_b[var1];
     }
 }

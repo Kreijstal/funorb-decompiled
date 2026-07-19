@@ -37,7 +37,7 @@ final class pe {
               var9 = de.field_V;
               var2 = var9.d((byte) -119);
               if (var2 == 0) {
-                var8 = (hd) (Object) c.field_r.c((byte) 80);
+                var8 = (hd) ((Object) c.field_r.c((byte) 80));
                 if (var8 == null) {
                   si.a(67);
                   return;
@@ -65,14 +65,14 @@ final class pe {
               } else {
                 if (var2 == 1) {
                   var3 = var9.i(7553);
-                  var4_ref_fa = (fa) (Object) sa.field_C.c((byte) 46);
+                  var4_ref_fa = (fa) ((Object) sa.field_C.c((byte) 46));
                   L3: while (true) {
                     L4: {
                       if (var4_ref_fa == null) {
                         break L4;
                       } else {
                         if (var3 != var4_ref_fa.field_s) {
-                          var4_ref_fa = (fa) (Object) sa.field_C.d(true);
+                          var4_ref_fa = (fa) ((Object) sa.field_C.d(true));
                           continue L3;
                         } else {
                           break L4;
@@ -99,7 +99,7 @@ final class pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "pe.E(" + 14750 + ')');
+          throw dh.a((Throwable) ((Object) var1), "pe.E(" + 14750 + ')');
         }
     }
 
@@ -187,6 +187,7 @@ final class pe {
     }
 
     final static int a(byte[] param0, int param1, int param2, int param3) {
+        boolean discarded$2 = false;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -217,7 +218,7 @@ final class pe {
               if (param2 <= -103) {
                 break L1;
               } else {
-                boolean discarded$2 = pe.a(73, -42);
+                discarded$2 = pe.a(73, -42);
                 break L1;
               }
             }
@@ -239,23 +240,23 @@ final class pe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_0 = (RuntimeException) (var4);
             stackOut_8_1 = new StringBuilder().append("pe.A(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -263,7 +264,7 @@ final class pe {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }

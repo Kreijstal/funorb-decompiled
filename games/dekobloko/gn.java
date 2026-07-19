@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.net.URL;
-
 final class gn {
     static String field_d;
     static int field_a;
@@ -13,14 +11,14 @@ final class gn {
 
     public static void a(int param0) {
         field_e = null;
-        field_c = null;
+        field_c = (String[][]) null;
         field_d = null;
     }
 
     final static java.net.URL a(java.net.URL param0, int param1, java.applet.Applet param2) {
         Object var3 = null;
         Object var4 = null;
-        Object stackIn_2_0 = null;
+        java.net.URL stackIn_2_0 = null;
         java.net.URL stackIn_11_0 = null;
         Object stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -38,7 +36,7 @@ final class gn {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         java.net.URL stackOut_10_0 = null;
-        Object stackOut_1_0 = null;
+        java.net.URL stackOut_1_0 = null;
         Object stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         Object stackOut_14_0 = null;
@@ -86,13 +84,13 @@ final class gn {
                   }
                 }
               }
-              stackOut_10_0 = pl.a((String) var4, (String) var3, false, param0, -1);
+              stackOut_10_0 = pl.a((String) (var4), (String) (var3), false, param0, -1);
               stackIn_11_0 = stackOut_10_0;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (java.net.URL) null;
               stackIn_2_0 = stackOut_1_0;
-              return (java.net.URL) (Object) stackIn_2_0;
+              return stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,7 +105,7 @@ final class gn {
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
               stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
@@ -115,7 +113,7 @@ final class gn {
               break L3;
             } else {
               stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -132,7 +130,7 @@ final class gn {
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
               stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
@@ -140,7 +138,7 @@ final class gn {
               break L4;
             } else {
               stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -148,7 +146,7 @@ final class gn {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
         return stackIn_11_0;
     }

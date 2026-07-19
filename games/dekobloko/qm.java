@@ -197,7 +197,7 @@ final class qm {
               if (!param0) {
                 break L1;
               } else {
-                stackOut_82_0 = (w) (Object) stackIn_82_0;
+                stackOut_82_0 = (w) ((Object) stackIn_82_0);
                 stackOut_82_1 = stackIn_82_1;
                 stackIn_87_0 = stackOut_82_0;
                 stackIn_87_1 = stackOut_82_1;
@@ -206,7 +206,7 @@ final class qm {
                 if (param2) {
                   break L1;
                 } else {
-                  stackOut_83_0 = (w) (Object) stackIn_83_0;
+                  stackOut_83_0 = (w) ((Object) stackIn_83_0);
                   stackOut_83_1 = stackIn_83_1;
                   stackIn_87_0 = stackOut_83_0;
                   stackIn_87_1 = stackOut_83_1;
@@ -215,7 +215,7 @@ final class qm {
                   if (ve.field_Qb) {
                     break L1;
                   } else {
-                    stackOut_84_0 = (w) (Object) stackIn_84_0;
+                    stackOut_84_0 = (w) ((Object) stackIn_84_0);
                     stackOut_84_1 = stackIn_84_1;
                     stackIn_87_0 = stackOut_84_0;
                     stackIn_87_1 = stackOut_84_1;
@@ -224,7 +224,7 @@ final class qm {
                     if (null != cd.field_m) {
                       break L1;
                     } else {
-                      stackOut_85_0 = (w) (Object) stackIn_85_0;
+                      stackOut_85_0 = (w) ((Object) stackIn_85_0);
                       stackOut_85_1 = stackIn_85_1;
                       stackIn_87_0 = stackOut_85_0;
                       stackIn_87_1 = stackOut_85_1;
@@ -233,7 +233,7 @@ final class qm {
                       if (g.field_N != null) {
                         break L1;
                       } else {
-                        stackOut_86_0 = (w) (Object) stackIn_86_0;
+                        stackOut_86_0 = (w) ((Object) stackIn_86_0);
                         stackOut_86_1 = stackIn_86_1;
                         stackOut_86_2 = 1;
                         stackIn_88_0 = stackOut_86_0;
@@ -246,7 +246,7 @@ final class qm {
                 }
               }
             }
-            stackOut_87_0 = (w) (Object) stackIn_87_0;
+            stackOut_87_0 = (w) ((Object) stackIn_87_0);
             stackOut_87_1 = stackIn_87_1;
             stackOut_87_2 = 0;
             stackIn_88_0 = stackOut_87_0;
@@ -266,7 +266,7 @@ final class qm {
               if (!param0) {
                 break L3;
               } else {
-                stackOut_89_0 = (w) (Object) stackIn_89_0;
+                stackOut_89_0 = (w) ((Object) stackIn_89_0);
                 stackOut_89_1 = stackIn_89_1;
                 stackIn_94_0 = stackOut_89_0;
                 stackIn_94_1 = stackOut_89_1;
@@ -275,7 +275,7 @@ final class qm {
                 if (param2) {
                   break L3;
                 } else {
-                  stackOut_90_0 = (w) (Object) stackIn_90_0;
+                  stackOut_90_0 = (w) ((Object) stackIn_90_0);
                   stackOut_90_1 = stackIn_90_1;
                   stackIn_94_0 = stackOut_90_0;
                   stackIn_94_1 = stackOut_90_1;
@@ -284,7 +284,7 @@ final class qm {
                   if (ve.field_Qb) {
                     break L3;
                   } else {
-                    stackOut_91_0 = (w) (Object) stackIn_91_0;
+                    stackOut_91_0 = (w) ((Object) stackIn_91_0);
                     stackOut_91_1 = stackIn_91_1;
                     stackIn_94_0 = stackOut_91_0;
                     stackIn_94_1 = stackOut_91_1;
@@ -293,7 +293,7 @@ final class qm {
                     if (cd.field_m != null) {
                       break L3;
                     } else {
-                      stackOut_92_0 = (w) (Object) stackIn_92_0;
+                      stackOut_92_0 = (w) ((Object) stackIn_92_0);
                       stackOut_92_1 = stackIn_92_1;
                       stackIn_94_0 = stackOut_92_0;
                       stackIn_94_1 = stackOut_92_1;
@@ -302,7 +302,7 @@ final class qm {
                       if (null != g.field_N) {
                         break L3;
                       } else {
-                        stackOut_93_0 = (w) (Object) stackIn_93_0;
+                        stackOut_93_0 = (w) ((Object) stackIn_93_0);
                         stackOut_93_1 = stackIn_93_1;
                         stackOut_93_2 = 1;
                         stackIn_95_0 = stackOut_93_0;
@@ -315,7 +315,7 @@ final class qm {
                 }
               }
             }
-            stackOut_94_0 = (w) (Object) stackIn_94_0;
+            stackOut_94_0 = (w) ((Object) stackIn_94_0);
             stackOut_94_1 = stackIn_94_1;
             stackOut_94_2 = 0;
             stackIn_95_0 = stackOut_94_0;
@@ -335,7 +335,7 @@ final class qm {
               if (!param0) {
                 break L5;
               } else {
-                stackOut_96_0 = (w) (Object) stackIn_96_0;
+                stackOut_96_0 = (w) ((Object) stackIn_96_0);
                 stackOut_96_1 = stackIn_96_1;
                 stackIn_99_0 = stackOut_96_0;
                 stackIn_99_1 = stackOut_96_1;
@@ -344,7 +344,7 @@ final class qm {
                 if (param2) {
                   break L5;
                 } else {
-                  stackOut_97_0 = (w) (Object) stackIn_97_0;
+                  stackOut_97_0 = (w) ((Object) stackIn_97_0);
                   stackOut_97_1 = stackIn_97_1;
                   stackIn_99_0 = stackOut_97_0;
                   stackIn_99_1 = stackOut_97_1;
@@ -353,7 +353,7 @@ final class qm {
                   if (!ve.field_Qb) {
                     break L5;
                   } else {
-                    stackOut_98_0 = (w) (Object) stackIn_98_0;
+                    stackOut_98_0 = (w) ((Object) stackIn_98_0);
                     stackOut_98_1 = stackIn_98_1;
                     stackOut_98_2 = 1;
                     stackIn_100_0 = stackOut_98_0;
@@ -364,7 +364,7 @@ final class qm {
                 }
               }
             }
-            stackOut_99_0 = (w) (Object) stackIn_99_0;
+            stackOut_99_0 = (w) ((Object) stackIn_99_0);
             stackOut_99_1 = stackIn_99_1;
             stackOut_99_2 = 0;
             stackIn_100_0 = stackOut_99_0;
@@ -709,7 +709,7 @@ final class qm {
               if (!param0) {
                 break L32;
               } else {
-                stackOut_2_0 = (w) (Object) stackIn_2_0;
+                stackOut_2_0 = (w) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackIn_7_0 = stackOut_2_0;
                 stackIn_7_1 = stackOut_2_1;
@@ -718,7 +718,7 @@ final class qm {
                 if (param2) {
                   break L32;
                 } else {
-                  stackOut_3_0 = (w) (Object) stackIn_3_0;
+                  stackOut_3_0 = (w) ((Object) stackIn_3_0);
                   stackOut_3_1 = stackIn_3_1;
                   stackIn_7_0 = stackOut_3_0;
                   stackIn_7_1 = stackOut_3_1;
@@ -727,7 +727,7 @@ final class qm {
                   if (ve.field_Qb) {
                     break L32;
                   } else {
-                    stackOut_4_0 = (w) (Object) stackIn_4_0;
+                    stackOut_4_0 = (w) ((Object) stackIn_4_0);
                     stackOut_4_1 = stackIn_4_1;
                     stackIn_7_0 = stackOut_4_0;
                     stackIn_7_1 = stackOut_4_1;
@@ -736,7 +736,7 @@ final class qm {
                     if (null != cd.field_m) {
                       break L32;
                     } else {
-                      stackOut_5_0 = (w) (Object) stackIn_5_0;
+                      stackOut_5_0 = (w) ((Object) stackIn_5_0);
                       stackOut_5_1 = stackIn_5_1;
                       stackIn_7_0 = stackOut_5_0;
                       stackIn_7_1 = stackOut_5_1;
@@ -745,7 +745,7 @@ final class qm {
                       if (g.field_N != null) {
                         break L32;
                       } else {
-                        stackOut_6_0 = (w) (Object) stackIn_6_0;
+                        stackOut_6_0 = (w) ((Object) stackIn_6_0);
                         stackOut_6_1 = stackIn_6_1;
                         stackOut_6_2 = 1;
                         stackIn_8_0 = stackOut_6_0;
@@ -758,7 +758,7 @@ final class qm {
                 }
               }
             }
-            stackOut_7_0 = (w) (Object) stackIn_7_0;
+            stackOut_7_0 = (w) ((Object) stackIn_7_0);
             stackOut_7_1 = stackIn_7_1;
             stackOut_7_2 = 0;
             stackIn_8_0 = stackOut_7_0;
@@ -778,7 +778,7 @@ final class qm {
               if (!param0) {
                 break L34;
               } else {
-                stackOut_9_0 = (w) (Object) stackIn_9_0;
+                stackOut_9_0 = (w) ((Object) stackIn_9_0);
                 stackOut_9_1 = stackIn_9_1;
                 stackIn_14_0 = stackOut_9_0;
                 stackIn_14_1 = stackOut_9_1;
@@ -787,7 +787,7 @@ final class qm {
                 if (param2) {
                   break L34;
                 } else {
-                  stackOut_10_0 = (w) (Object) stackIn_10_0;
+                  stackOut_10_0 = (w) ((Object) stackIn_10_0);
                   stackOut_10_1 = stackIn_10_1;
                   stackIn_14_0 = stackOut_10_0;
                   stackIn_14_1 = stackOut_10_1;
@@ -796,7 +796,7 @@ final class qm {
                   if (ve.field_Qb) {
                     break L34;
                   } else {
-                    stackOut_11_0 = (w) (Object) stackIn_11_0;
+                    stackOut_11_0 = (w) ((Object) stackIn_11_0);
                     stackOut_11_1 = stackIn_11_1;
                     stackIn_14_0 = stackOut_11_0;
                     stackIn_14_1 = stackOut_11_1;
@@ -805,7 +805,7 @@ final class qm {
                     if (cd.field_m != null) {
                       break L34;
                     } else {
-                      stackOut_12_0 = (w) (Object) stackIn_12_0;
+                      stackOut_12_0 = (w) ((Object) stackIn_12_0);
                       stackOut_12_1 = stackIn_12_1;
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_14_1 = stackOut_12_1;
@@ -814,7 +814,7 @@ final class qm {
                       if (null != g.field_N) {
                         break L34;
                       } else {
-                        stackOut_13_0 = (w) (Object) stackIn_13_0;
+                        stackOut_13_0 = (w) ((Object) stackIn_13_0);
                         stackOut_13_1 = stackIn_13_1;
                         stackOut_13_2 = 1;
                         stackIn_15_0 = stackOut_13_0;
@@ -827,7 +827,7 @@ final class qm {
                 }
               }
             }
-            stackOut_14_0 = (w) (Object) stackIn_14_0;
+            stackOut_14_0 = (w) ((Object) stackIn_14_0);
             stackOut_14_1 = stackIn_14_1;
             stackOut_14_2 = 0;
             stackIn_15_0 = stackOut_14_0;
@@ -847,7 +847,7 @@ final class qm {
               if (!param0) {
                 break L36;
               } else {
-                stackOut_16_0 = (w) (Object) stackIn_16_0;
+                stackOut_16_0 = (w) ((Object) stackIn_16_0);
                 stackOut_16_1 = stackIn_16_1;
                 stackIn_19_0 = stackOut_16_0;
                 stackIn_19_1 = stackOut_16_1;
@@ -856,7 +856,7 @@ final class qm {
                 if (param2) {
                   break L36;
                 } else {
-                  stackOut_17_0 = (w) (Object) stackIn_17_0;
+                  stackOut_17_0 = (w) ((Object) stackIn_17_0);
                   stackOut_17_1 = stackIn_17_1;
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -865,7 +865,7 @@ final class qm {
                   if (!ve.field_Qb) {
                     break L36;
                   } else {
-                    stackOut_18_0 = (w) (Object) stackIn_18_0;
+                    stackOut_18_0 = (w) ((Object) stackIn_18_0);
                     stackOut_18_1 = stackIn_18_1;
                     stackOut_18_2 = 1;
                     stackIn_20_0 = stackOut_18_0;
@@ -876,7 +876,7 @@ final class qm {
                 }
               }
             }
-            stackOut_19_0 = (w) (Object) stackIn_19_0;
+            stackOut_19_0 = (w) ((Object) stackIn_19_0);
             stackOut_19_1 = stackIn_19_1;
             stackOut_19_2 = 0;
             stackIn_20_0 = stackOut_19_0;
@@ -1041,6 +1041,9 @@ final class qm {
     }
 
     final static int a(byte param0) {
+        boolean discarded$14 = false;
+        int discarded$15 = 0;
+        boolean discarded$16 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -1058,7 +1061,7 @@ final class qm {
         var2 = client.field_A ? 1 : 0;
         try {
           L0: {
-            boolean discarded$14 = ah.field_c.a(of.field_i, true, kf.field_K, 29166);
+            discarded$14 = ah.field_c.a(of.field_i, true, kf.field_K, 29166);
             ah.field_c.g(0);
             L1: while (true) {
               if (!ab.c((byte) -128)) {
@@ -1084,7 +1087,7 @@ final class qm {
                           if (param0 == 57) {
                             break L2;
                           } else {
-                            int discarded$15 = qm.a((byte) -99);
+                            discarded$15 = qm.a((byte) -99);
                             break L2;
                           }
                         }
@@ -1104,7 +1107,7 @@ final class qm {
                   }
                 }
               } else {
-                boolean discarded$16 = ah.field_c.a(wh.field_c, el.field_G, (byte) 123);
+                discarded$16 = ah.field_c.a(wh.field_c, el.field_G, (byte) 123);
                 continue L1;
               }
             }
@@ -1112,7 +1115,7 @@ final class qm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "qm.C(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "qm.C(" + param0 + ')');
         }
         return stackIn_24_0;
     }
@@ -1140,8 +1143,8 @@ final class qm {
     }
 
     qm(int param0, int param1, int param2, int param3) {
-        ((qm) this).field_d = param0;
-        ((qm) this).field_f = param3;
+        this.field_d = param0;
+        this.field_f = param3;
     }
 
     static {

@@ -13,7 +13,7 @@ final class pd {
     static mg field_f;
 
     public static void a(byte param0) {
-        field_e = null;
+        field_e = (byte[][]) null;
         field_f = null;
         field_i = null;
         field_g = null;
@@ -53,7 +53,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "pd.A(" + param0 + ',' + 6 + ')');
+          throw dh.a((Throwable) ((Object) var2), "pd.A(" + param0 + ',' + 6 + ')');
         }
     }
 

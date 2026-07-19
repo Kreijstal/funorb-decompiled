@@ -61,7 +61,7 @@ final class gi {
             param3.d(-1, param0);
             param3.a(true, param1);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "gi.C(" + param0 + ',' + param1 + ',' + 17 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "gi.C(" + param0 + ',' + param1 + ',' + 17 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

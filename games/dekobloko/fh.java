@@ -65,7 +65,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var4, "fh.F(" + param0 + ',' + param1 + ',' + true + ',' + 0 + ')');
+          throw dh.a((Throwable) ((Object) var4), "fh.F(" + param0 + ',' + param1 + ',' + true + ',' + 0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class fh {
             var3.a(true, param1.field_q);
             var3.a(true, param1.field_z);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "fh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 7 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "fh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 7 + ')');
         }
     }
 
@@ -118,6 +118,8 @@ final class fh {
     }
 
     final static void a(int param0) {
+        boolean discarded$15 = false;
+        boolean discarded$16 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -142,13 +144,13 @@ final class fh {
               return;
             } else {
               var1_int = -26 % ((param0 - 37) / 58);
-              boolean discarded$15 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
+              discarded$15 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
               u.field_i.g(0);
               L2: while (true) {
                 if (!ab.c((byte) 50)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
+                  discarded$16 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
                   continue L2;
                 }
               }
@@ -157,7 +159,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "fh.E(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "fh.E(" + param0 + ')');
         }
     }
 

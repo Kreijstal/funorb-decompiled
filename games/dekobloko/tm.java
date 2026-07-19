@@ -12,6 +12,7 @@ final class tm {
     static int field_c;
 
     final static int a(byte param0) {
+        int discarded$1 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -79,7 +80,7 @@ final class tm {
                   if (param0 <= -88) {
                     break L6;
                   } else {
-                    int discarded$1 = tm.a((byte) 116);
+                    discarded$1 = tm.a((byte) 116);
                     break L6;
                   }
                 }
@@ -127,7 +128,7 @@ final class tm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "tm.B(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "tm.B(" + param0 + ')');
         }
         return stackIn_31_0;
     }

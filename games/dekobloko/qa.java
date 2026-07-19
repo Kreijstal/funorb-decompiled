@@ -48,14 +48,14 @@ final class qa extends wk {
           field_s = null;
           field_r = null;
           field_w = null;
-          field_v = null;
+          field_v = (qd[][]) null;
           return;
         } else {
           field_u = null;
           field_s = null;
           field_r = null;
           field_w = null;
-          field_v = null;
+          field_v = (qd[][]) null;
           return;
         }
     }
@@ -66,7 +66,7 @@ final class qa extends wk {
 
     final gh a(int param0) {
         if (param0 != 18) {
-            return null;
+            return (gh) null;
         }
         return gf.field_j;
     }

@@ -204,13 +204,13 @@ final class uc {
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_3_0 = stackOut_2_0;
                   if (param2 != -1) {
-                    stackOut_4_0 = (qd[][]) (Object) stackIn_4_0;
+                    stackOut_4_0 = (qd[][]) ((Object) stackIn_4_0);
                     stackOut_4_1 = param2 + 4;
                     stackIn_5_0 = stackOut_4_0;
                     stackIn_5_1 = stackOut_4_1;
                     break L10;
                   } else {
-                    stackOut_3_0 = (qd[][]) (Object) stackIn_3_0;
+                    stackOut_3_0 = (qd[][]) ((Object) stackIn_3_0);
                     stackOut_3_1 = 1;
                     stackIn_5_0 = stackOut_3_0;
                     stackIn_5_1 = stackOut_3_1;
@@ -419,23 +419,23 @@ final class uc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L28: {
             var8 = decompiledCaughtException;
-            stackOut_90_0 = (RuntimeException) var8;
+            stackOut_90_0 = (RuntimeException) (var8);
             stackOut_90_1 = new StringBuilder().append("uc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_92_0 = stackOut_90_0;
             stackIn_92_1 = stackOut_90_1;
             stackIn_91_0 = stackOut_90_0;
             stackIn_91_1 = stackOut_90_1;
             if (param6 == null) {
-              stackOut_92_0 = (RuntimeException) (Object) stackIn_92_0;
-              stackOut_92_1 = (StringBuilder) (Object) stackIn_92_1;
+              stackOut_92_0 = (RuntimeException) ((Object) stackIn_92_0);
+              stackOut_92_1 = (StringBuilder) ((Object) stackIn_92_1);
               stackOut_92_2 = "null";
               stackIn_93_0 = stackOut_92_0;
               stackIn_93_1 = stackOut_92_1;
               stackIn_93_2 = stackOut_92_2;
               break L28;
             } else {
-              stackOut_91_0 = (RuntimeException) (Object) stackIn_91_0;
-              stackOut_91_1 = (StringBuilder) (Object) stackIn_91_1;
+              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
               stackOut_91_2 = "{...}";
               stackIn_93_0 = stackOut_91_0;
               stackIn_93_1 = stackOut_91_1;
@@ -443,7 +443,7 @@ final class uc {
               break L28;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_93_0, stackIn_93_2 + ',' + false + ')');
+          throw dh.a((Throwable) ((Object) stackIn_93_0), stackIn_93_2 + ',' + false + ')');
         }
     }
 

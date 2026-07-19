@@ -37,6 +37,7 @@ final class kk implements gl {
     }
 
     final static void a(int param0, int param1, ki param2) {
+        int discarded$0 = 0;
         uf var5 = we.field_b;
         var5.f(param0, -4);
         var5.field_n = var5.field_n + 1;
@@ -49,16 +50,16 @@ final class kk implements gl {
             var5.a(param2.field_r, false);
             var5.a(param2.field_o, false);
             var5.a(param2.field_q, false);
-            int discarded$0 = var5.a((byte) -15, var4);
+            discarded$0 = var5.a((byte) -15, var4);
             var5.b(var5.field_n - var4, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "kk.C(" + param0 + ',' + -15016 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "kk.C(" + param0 + ',' + -15016 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         if (param0 > -54) {
-          field_q = null;
+          field_q = (String) null;
           field_l = null;
           field_i = null;
           field_q = null;
@@ -74,6 +75,7 @@ final class kk implements gl {
     }
 
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -112,16 +114,16 @@ final class kk implements gl {
             L2: {
               if (!(param4 instanceof dl)) {
                 stackOut_4_0 = null;
-                stackIn_5_0 = (ce) (Object) stackOut_4_0;
+                stackIn_5_0 = (ce) ((Object) stackOut_4_0);
                 break L2;
               } else {
-                stackOut_3_0 = (ce) param4;
+                stackOut_3_0 = (ce) (param4);
                 stackIn_5_0 = stackOut_3_0;
                 break L2;
               }
             }
             L3: {
-              var11 = (dl) (Object) stackIn_5_0;
+              var11 = (dl) ((Object) stackIn_5_0);
               if (var11 == null) {
                 break L3;
               } else {
@@ -131,7 +133,7 @@ final class kk implements gl {
             }
             L4: {
               var7 = 5592405;
-              hk.a(param1 + param4.field_u, param2 - -param4.field_D, param4.field_t, param4.field_y, ((kk) this).field_o);
+              hk.a(param1 + param4.field_u, param2 - -param4.field_D, param4.field_t, param4.field_y, this.field_o);
               if (!param0) {
                 break L4;
               } else {
@@ -140,21 +142,21 @@ final class kk implements gl {
               }
             }
             L5: {
-              var8 = param1 + param4.field_u - -((kk) this).field_s;
-              var9 = param4.field_D + param2 - -((kk) this).field_j;
-              hk.d(var8, var9, ((kk) this).field_m, ((kk) this).field_f, 5592405);
-              hk.a(var8, var9, ((kk) this).field_m, ((kk) this).field_f, var7);
+              var8 = param1 + param4.field_u - -this.field_s;
+              var9 = param4.field_D + param2 - -this.field_j;
+              hk.d(var8, var9, this.field_m, this.field_f, 5592405);
+              hk.a(var8, var9, this.field_m, this.field_f, var7);
               if (var11.field_H) {
-                hk.b(var8, var9, ((kk) this).field_m + var8, var9 + ((kk) this).field_f, 1);
-                hk.b(var8 - -((kk) this).field_m, var9, var8, ((kk) this).field_f + var9, 1);
+                hk.b(var8, var9, this.field_m + var8, var9 + this.field_f, 1);
+                hk.b(var8 - -this.field_m, var9, var8, this.field_f + var9, 1);
                 break L5;
               } else {
                 break L5;
               }
             }
-            if (((kk) this).field_h != null) {
-              var10 = ((kk) this).field_m - -((kk) this).field_s + ((kk) this).field_g;
-              int discarded$1 = ((kk) this).field_h.a(param4.field_E, param1 + param4.field_u - -var10, ((kk) this).field_r + param2 + param4.field_D, param4.field_t - (((kk) this).field_g + var10), -(((kk) this).field_g << 1) + param4.field_y, ((kk) this).field_d, ((kk) this).field_b, ((kk) this).field_c, ((kk) this).field_a, 0);
+            if (this.field_h != null) {
+              var10 = this.field_m - -this.field_s + this.field_g;
+              discarded$1 = this.field_h.a(param4.field_E, param1 + param4.field_u - -var10, this.field_r + param2 + param4.field_D, param4.field_t - (this.field_g + var10), -(this.field_g << 1) + param4.field_y, this.field_d, this.field_b, this.field_c, this.field_a, 0);
               break L0;
             } else {
               return;
@@ -164,23 +166,23 @@ final class kk implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_0 = (RuntimeException) (var6);
             stackOut_16_1 = new StringBuilder().append("kk.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -188,26 +190,26 @@ final class kk implements gl {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
     kk(mm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((kk) this).field_c = 1;
-        ((kk) this).field_a = 1;
+        this.field_c = 1;
+        this.field_a = 1;
         try {
-            ((kk) this).field_j = param6;
-            ((kk) this).field_g = param1;
-            ((kk) this).field_m = param8;
-            ((kk) this).field_b = param4;
-            ((kk) this).field_d = param3;
-            ((kk) this).field_r = param2;
-            ((kk) this).field_o = param9;
-            ((kk) this).field_f = param7;
-            ((kk) this).field_h = param0;
-            ((kk) this).field_s = param5;
+            this.field_j = param6;
+            this.field_g = param1;
+            this.field_m = param8;
+            this.field_b = param4;
+            this.field_d = param3;
+            this.field_r = param2;
+            this.field_o = param9;
+            this.field_f = param7;
+            this.field_h = param0;
+            this.field_s = param5;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

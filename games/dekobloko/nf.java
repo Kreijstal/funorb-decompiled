@@ -13,23 +13,24 @@ final class nf {
     int[] field_a;
 
     final int b(int param0) {
+        int discarded$6 = 0;
         if (param0 == -6375) {
-          if (null != ((nf) this).field_a) {
-            if (0 == ((nf) this).field_a.length) {
+          if (null != this.field_a) {
+            if (0 == this.field_a.length) {
               return 0;
             } else {
-              return ((nf) this).field_a[((nf) this).field_a.length - 1];
+              return this.field_a[this.field_a.length - 1];
             }
           } else {
             return 0;
           }
         } else {
-          int discarded$6 = ((nf) this).b(75);
-          if (null != ((nf) this).field_a) {
-            if (0 == ((nf) this).field_a.length) {
+          discarded$6 = this.b(75);
+          if (null != this.field_a) {
+            if (0 == this.field_a.length) {
               return 0;
             } else {
-              return ((nf) this).field_a[((nf) this).field_a.length - 1];
+              return this.field_a[this.field_a.length - 1];
             }
           } else {
             return 0;
@@ -80,19 +81,19 @@ final class nf {
         int var3 = 0;
         int var4 = 0;
         var4 = client.field_A ? 1 : 0;
-        if (((nf) this).field_a != null) {
-          if (((nf) this).field_a.length != 0) {
+        if (this.field_a != null) {
+          if (this.field_a.length != 0) {
             var3 = 1;
             L0: while (true) {
-              if (((nf) this).field_a.length <= var3) {
+              if (this.field_a.length <= var3) {
                 if (param1 <= 103) {
                   nf.a(-11);
-                  return -1 + ((nf) this).field_a.length;
+                  return -1 + this.field_a.length;
                 } else {
-                  return -1 + ((nf) this).field_a.length;
+                  return -1 + this.field_a.length;
                 }
               } else {
-                if (param0 < ((nf) this).field_a[-1 + var3] + ((nf) this).field_a[var3] >> 1) {
+                if (param0 < this.field_a[-1 + var3] + this.field_a[var3] >> 1) {
                   return var3 + -1;
                 } else {
                   var3++;
@@ -113,9 +114,9 @@ final class nf {
     }
 
     nf(int param0, int param1, int param2) {
-        ((nf) this).field_c = param0;
-        ((nf) this).field_a = new int[param2 + 1];
-        ((nf) this).field_i = param1;
+        this.field_c = param0;
+        this.field_a = new int[param2 + 1];
+        this.field_i = param1;
     }
 
     static {

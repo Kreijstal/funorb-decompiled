@@ -17,10 +17,10 @@ final class wj extends gk implements vn {
     final boolean h(byte param0) {
         cd var2 = null;
         if (param0 <= 15) {
-            ((wj) this).field_Nb = null;
+            this.field_Nb = (tf) null;
         }
-        if (((wj) this).field_S) {
-            if (!((wj) this).field_Pb) {
+        if (this.field_S) {
+            if (!this.field_Pb) {
                 var2 = je.a(13);
                 if (var2 != null) {
                     this.a(false, var2, false);
@@ -59,14 +59,14 @@ final class wj extends gk implements vn {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (!((wj) this).field_Rb) {
+            if (!this.field_Rb) {
               L1: {
                 in.c((byte) -51);
-                ((wj) this).n(-128);
+                this.n(-128);
                 if (param0 == 67) {
                   break L1;
                 } else {
-                  field_Jb = null;
+                  field_Jb = (sk) null;
                   break L1;
                 }
               }
@@ -80,23 +80,23 @@ final class wj extends gk implements vn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) runtimeException;
+            stackOut_6_0 = (RuntimeException) (runtimeException);
             stackOut_6_1 = new StringBuilder().append("wj.H(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -104,13 +104,13 @@ final class wj extends gk implements vn {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, boolean param4, String param5) {
         RuntimeException var6 = null;
-        Object var7 = null;
+        ck var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -150,7 +150,7 @@ final class wj extends gk implements vn {
               if (param1 < -70) {
                 break L2;
               } else {
-                var7 = null;
+                var7 = (ck) null;
                 wj.a((ck) null, 81);
                 break L2;
               }
@@ -161,23 +161,23 @@ final class wj extends gk implements vn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("wj.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param5 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -185,7 +185,7 @@ final class wj extends gk implements vn {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -250,23 +250,23 @@ final class wj extends gk implements vn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("wj.N(").append(true).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -275,23 +275,23 @@ final class wj extends gk implements vn {
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -299,12 +299,13 @@ final class wj extends gk implements vn {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     final static void c(int param0, int param1) {
         try {
+            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (qc.field_s == null) {
@@ -337,11 +338,18 @@ final class wj extends gk implements vn {
                   if (we.field_b.field_n <= 0) {
                     break L3;
                   } else {
-                    {
+                    try {
                       L4: {
                         qc.field_s.a(0, we.field_b.field_n, 1, we.field_b.field_r);
                         el.field_J = ik.a(4);
                         break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        si.a(100);
+                        break L5;
                       }
                     }
                     we.field_b.field_n = 0;
@@ -362,13 +370,15 @@ final class wj extends gk implements vn {
     wj(ka param0, tf param1) {
         super(param0, ec.field_p, cm.field_i, false, false);
         try {
-            ((wj) this).field_Nb = param1;
+            this.field_Nb = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(boolean param0, cd param1, boolean param2) {
+        ek discarded$2 = null;
+        ek discarded$3 = null;
         RuntimeException var4 = null;
         String var4_ref = null;
         dj var5 = null;
@@ -393,15 +403,15 @@ final class wj extends gk implements vn {
         try {
           L0: {
             L1: {
-              ((wj) this).field_Pb = true;
+              this.field_Pb = true;
               if (param1.field_n) {
                 var4_ref = wf.field_k;
                 break L1;
               } else {
                 if (null != param1.field_d) {
                   var4_ref = of.field_g;
-                  if (((wj) this).field_Nb != null) {
-                    ((wj) this).field_Nb.a(25);
+                  if (this.field_Nb != null) {
+                    this.field_Nb.a(25);
                     break L1;
                   } else {
                     break L1;
@@ -417,7 +427,7 @@ final class wj extends gk implements vn {
                         break L2;
                       }
                     }
-                    ((wj) this).field_Rb = true;
+                    this.field_Rb = true;
                     var4_ref = ab.field_d;
                     break L1;
                   } else {
@@ -427,10 +437,10 @@ final class wj extends gk implements vn {
               }
             }
             L3: {
-              var5 = new dj((gk) this, ec.field_p, var4_ref);
+              var5 = new dj((gk) (this), ec.field_p, var4_ref);
               if (!param1.field_n) {
                 L4: {
-                  if (!((wj) this).field_Rb) {
+                  if (!this.field_Rb) {
                     if (param1.field_h == 5) {
                       var5.a(pb.field_e, 11, 14);
                       var5.a(ig.field_Tb, 17, 14);
@@ -440,31 +450,31 @@ final class wj extends gk implements vn {
                       break L4;
                     }
                   } else {
-                    ek discarded$2 = var5.a(115, fa.field_o, (kg) this);
+                    discarded$2 = var5.a(115, fa.field_o, (kg) (this));
                     break L4;
                   }
                 }
                 if (-4 == param1.field_h) {
                   var5.a(ce.field_z, 7, 14);
-                  ((wj) this).c(var5, (byte) 68);
+                  this.c(var5, (byte) 68);
                   break L3;
                 } else {
                   if (-7 != param1.field_h) {
-                    ((wj) this).c(var5, (byte) 68);
+                    this.c(var5, (byte) 68);
                     break L3;
                   } else {
                     var5.a(vb.field_Y, 9, 14);
-                    ((wj) this).c(var5, (byte) 68);
+                    this.c(var5, (byte) 68);
                     break L3;
                   }
                 }
               } else {
                 if (!param1.field_e) {
-                  ek discarded$3 = var5.a(119, fa.field_o, (kg) this);
-                  ((wj) this).c(var5, (byte) 68);
+                  discarded$3 = var5.a(119, fa.field_o, (kg) (this));
+                  this.c(var5, (byte) 68);
                   break L3;
                 } else {
-                  ((wj) this).c(new md((wj) this), (byte) 79);
+                  this.c(new md((wj) (this)), (byte) 79);
                   return;
                 }
               }
@@ -475,23 +485,23 @@ final class wj extends gk implements vn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
+            stackOut_31_0 = (RuntimeException) (var4);
             stackOut_31_1 = new StringBuilder().append("wj.M(").append(param0).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L5;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -499,7 +509,7 @@ final class wj extends gk implements vn {
               break L5;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + false + ')');
+          throw dh.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + false + ')');
         }
     }
 
@@ -605,7 +615,7 @@ final class wj extends gk implements vn {
                   }
                 }
                 sc.field_m = stackIn_40_0 != 0;
-                return (hl) var4;
+                return (hl) (var4);
               } else {
                 var9_ref_hl = pd.field_g[var8];
                 if (null != var9_ref_hl.field_f) {
@@ -735,23 +745,23 @@ final class wj extends gk implements vn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wj.J(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -759,7 +769,7 @@ final class wj extends gk implements vn {
               break L2;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

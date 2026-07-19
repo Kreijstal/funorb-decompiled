@@ -15,21 +15,22 @@ final class dk extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((dk) this).field_e.update(param0);
+            this.field_e.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dk.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "dk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     dk(java.awt.Component param0) {
         try {
-            ((dk) this).field_e = param0;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
+        f dupTemp$1 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3_ref_int__ = null;
@@ -54,7 +55,7 @@ final class dk extends java.awt.Canvas {
               var2 = var13.d((byte) -36);
               if (var2 != 0) {
                 if (var2 == 1) {
-                  var12 = (ki) (Object) cg.field_c.c((byte) -66);
+                  var12 = (ki) ((Object) cg.field_c.c((byte) -66));
                   if (var12 == null) {
                     si.a(127);
                     return;
@@ -64,7 +65,7 @@ final class dk extends java.awt.Canvas {
                   }
                 } else {
                   if (var2 == 2) {
-                    f dupTemp$1 = (f) (Object) rc.field_e.c((byte) -64);
+                    dupTemp$1 = (f) ((Object) rc.field_e.c((byte) -64));
                     var10 = dupTemp$1;
                     var3_ref_f = dupTemp$1;
                     if (var10 == null) {
@@ -87,11 +88,11 @@ final class dk extends java.awt.Canvas {
                 var9 = var3_ref_int__;
                 var4 = var9;
                 var5 = var13;
-                var6 = ((wl) (Object) var5).d((byte) -116);
+                var6 = ((wl) ((Object) var5)).d((byte) -116);
                 var7 = 0;
                 L2: while (true) {
                   if (var6 <= var7) {
-                    var11 = (f) (Object) rc.field_e.c((byte) 92);
+                    var11 = (f) ((Object) rc.field_e.c((byte) 92));
                     if (var11 != null) {
                       var11.field_u = true;
                       var11.field_t = var3_ref_int__;
@@ -102,7 +103,7 @@ final class dk extends java.awt.Canvas {
                       return;
                     }
                   } else {
-                    var9[var7] = ((wl) (Object) var5).i(7553);
+                    var9[var7] = ((wl) ((Object) var5)).i(7553);
                     var7++;
                     continue L2;
                   }
@@ -115,7 +116,7 @@ final class dk extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "dk.B(" + 69 + ')');
+          throw dh.a((Throwable) ((Object) var1), "dk.B(" + 69 + ')');
         }
     }
 
@@ -129,9 +130,9 @@ final class dk extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((dk) this).field_e.paint(param0);
+            this.field_e.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dk.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "dk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

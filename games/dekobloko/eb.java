@@ -25,13 +25,13 @@ final class eb {
 
     final int d(int param0) {
         if (param0 != 6) {
-            ((eb) this).field_p = null;
+            this.field_p = (lk[]) null;
         }
         int var2 = 2;
-        if (!(3 > ((eb) this).field_m)) {
+        if (!(3 > this.field_m)) {
             var2 = 4;
         }
-        if (!(((eb) this).field_m < 4)) {
+        if (!(this.field_m < 4)) {
             var2 = 6;
         }
         return ka.a((byte) 81, var2, tf.field_cb) + 24;
@@ -70,18 +70,18 @@ final class eb {
           if (param1 <= -49) {
             break L0;
           } else {
-            ((eb) this).field_h = 43;
+            this.field_h = 43;
             break L0;
           }
         }
-        ((eb) this).field_e = param0;
-        ((eb) this).field_j = true;
+        this.field_e = param0;
+        this.field_j = true;
         var3 = 0;
         L1: while (true) {
-          if (var3 >= ((eb) this).field_b) {
+          if (var3 >= this.field_b) {
             return;
           } else {
-            var4 = ((eb) this).field_p[var3];
+            var4 = this.field_p[var3];
             if (var4 != null) {
               var4.k(-9897);
               var3++;
@@ -101,21 +101,21 @@ final class eb {
     eb(int param0, boolean param1, int param2, int param3, int param4, int param5, String[] param6) {
         int var8_int = 0;
         try {
-            ((eb) this).field_l = param0;
-            ((eb) this).field_m = param5;
-            ((eb) this).field_b = param6 != null ? param6.length : 1;
-            ((eb) this).field_f = new int[((eb) this).field_b];
-            ((eb) this).field_o = 0;
-            ((eb) this).field_q = param6;
-            ((eb) this).field_p = new lk[((eb) this).field_b];
-            for (var8_int = 0; ((eb) this).field_b > var8_int; var8_int++) {
-                ((eb) this).field_p[var8_int] = new lk(param1, param2, param3, param4, ((eb) this).field_m);
-                ((eb) this).field_p[var8_int].field_Q = var8_int;
-                ((eb) this).field_f[var8_int] = -1;
+            this.field_l = param0;
+            this.field_m = param5;
+            this.field_b = param6 != null ? param6.length : 1;
+            this.field_f = new int[this.field_b];
+            this.field_o = 0;
+            this.field_q = param6;
+            this.field_p = new lk[this.field_b];
+            for (var8_int = 0; this.field_b > var8_int; var8_int++) {
+                this.field_p[var8_int] = new lk(param1, param2, param3, param4, this.field_m);
+                this.field_p[var8_int].field_Q = var8_int;
+                this.field_f[var8_int] = -1;
             }
-            ((eb) this).field_i = ((eb) this).field_b;
+            this.field_i = this.field_b;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "eb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "eb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

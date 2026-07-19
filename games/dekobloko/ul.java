@@ -13,6 +13,8 @@ final class ul {
     static int[] field_c;
 
     final static void a(byte param0) {
+        String[][] dupTemp$2 = null;
+        int[][] dupTemp$3 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         cl var3 = null;
@@ -35,14 +37,14 @@ final class ul {
           L0: {
             var15 = de.field_V;
             var2 = var15.d((byte) -110);
-            var3 = (cl) (Object) oe.field_I.c((byte) -54);
+            var3 = (cl) ((Object) oe.field_I.c((byte) -54));
             L1: while (true) {
               L2: {
                 if (var3 == null) {
                   break L2;
                 } else {
                   if (var2 != var3.field_q) {
-                    var3 = (cl) (Object) oe.field_I.d(true);
+                    var3 = (cl) ((Object) oe.field_I.d(true));
                     continue L1;
                   } else {
                     break L2;
@@ -68,10 +70,10 @@ final class ul {
                         L5: while (true) {
                           if (var6_int >= var4) {
                             pd.a(var5, (byte) 6);
-                            String[][] dupTemp$2 = new String[2][var5];
+                            dupTemp$2 = new String[2][var5];
                             var3.field_x = dupTemp$2;
                             var6 = dupTemp$2;
-                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            dupTemp$3 = new int[2][var5 * 4];
                             var3.field_u = dupTemp$3;
                             var7 = dupTemp$3;
                             var8 = og.field_eb;
@@ -172,7 +174,7 @@ final class ul {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "ul.A(" + 112 + ')');
+          throw dh.a((Throwable) ((Object) var1), "ul.A(" + 112 + ')');
         }
     }
 

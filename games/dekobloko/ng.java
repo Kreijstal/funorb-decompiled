@@ -53,7 +53,7 @@ final class ng {
                     if (param3 == -1) {
                       break L2;
                     } else {
-                      field_g = null;
+                      field_g = (String) null;
                       break L2;
                     }
                   }
@@ -86,23 +86,23 @@ final class ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_0 = (RuntimeException) (var5);
             stackOut_11_1 = new StringBuilder().append("ng.A(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -110,7 +110,7 @@ final class ng {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -129,14 +129,14 @@ final class ng {
             if (!(null == param2.field_a)) {
                 param2.b((byte) 116);
             }
-            var5 = ((ng) this).field_h[(int)((long)(((ng) this).field_f + param1) & param0)];
+            var5 = this.field_h[(int)((long)(this.field_f + param1) & param0)];
             param2.field_a = var5.field_a;
             param2.field_b = var5;
             param2.field_a.field_b = param2;
             param2.field_b.field_a = param2;
             param2.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ng.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,23 +145,23 @@ final class ng {
         bh var5 = null;
         int var6 = 0;
         var6 = client.field_A ? 1 : 0;
-        var4 = ((ng) this).field_h[(int)((long)(((ng) this).field_f - 1) & param0)];
-        ((ng) this).field_k = var4.field_b;
+        var4 = this.field_h[(int)((long)(this.field_f - 1) & param0)];
+        this.field_k = var4.field_b;
         L0: while (true) {
-          if (((ng) this).field_k == var4) {
-            ((ng) this).field_k = null;
+          if (this.field_k == var4) {
+            this.field_k = null;
             if (param1 >= 48) {
               return null;
             } else {
-              return null;
+              return (bh) null;
             }
           } else {
-            if (~((ng) this).field_k.field_i != ~param0) {
-              ((ng) this).field_k = ((ng) this).field_k.field_b;
+            if (~this.field_k.field_i != ~param0) {
+              this.field_k = this.field_k.field_b;
               continue L0;
             } else {
-              var5 = ((ng) this).field_k;
-              ((ng) this).field_k = ((ng) this).field_k.field_b;
+              var5 = this.field_k;
+              this.field_k = this.field_k.field_b;
               return var5;
             }
           }
@@ -175,7 +175,7 @@ final class ng {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
+        ck[] var7 = null;
         jc stackIn_3_0 = null;
         jc stackIn_6_0 = null;
         jc stackIn_13_0 = null;
@@ -216,7 +216,7 @@ final class ng {
                 if (param0 == -1) {
                   break L0;
                 } else {
-                  var7 = null;
+                  var7 = (ck[]) null;
                   ng.a((ck[]) null, 38, -12, 7, -118);
                   break L0;
                 }
@@ -331,23 +331,23 @@ final class ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) var2;
+            stackOut_49_0 = (RuntimeException) (var2);
             stackOut_49_1 = new StringBuilder().append("ng.B(").append(param0).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
             stackIn_50_1 = stackOut_49_1;
             if (param1 == null) {
-              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
-              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackOut_51_2 = "null";
               stackIn_52_0 = stackOut_51_0;
               stackIn_52_1 = stackOut_51_1;
               stackIn_52_2 = stackOut_51_2;
               break L8;
             } else {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackOut_50_2 = "{...}";
               stackIn_52_0 = stackOut_50_0;
               stackIn_52_1 = stackOut_50_1;
@@ -355,36 +355,39 @@ final class ng {
               break L8;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_52_0), stackIn_52_2 + ')');
         }
     }
 
     final bh a(byte param0) {
-        ((ng) this).field_d = 0;
+        bh discarded$0 = null;
+        this.field_d = 0;
         if (param0 != 126) {
-            bh discarded$0 = ((ng) this).b((byte) 112);
-            return ((ng) this).b((byte) 49);
+            discarded$0 = this.b((byte) 112);
+            return this.b((byte) 49);
         }
-        return ((ng) this).b((byte) 49);
+        return this.b((byte) 49);
     }
 
     final bh b(byte param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         int var3 = 0;
         bh var4 = null;
         bh var5 = null;
         bh var8 = null;
         bh var9 = null;
         var3 = client.field_A ? 1 : 0;
-        if (((ng) this).field_d <= 0) {
+        if (this.field_d <= 0) {
           if (param0 >= 37) {
             L0: while (true) {
-              if (((ng) this).field_f > ((ng) this).field_d) {
-                int fieldTemp$2 = ((ng) this).field_d;
-                ((ng) this).field_d = ((ng) this).field_d + 1;
-                var4 = ((ng) this).field_h[fieldTemp$2].field_b;
+              if (this.field_f > this.field_d) {
+                fieldTemp$2 = this.field_d;
+                this.field_d = this.field_d + 1;
+                var4 = this.field_h[fieldTemp$2].field_b;
                 var9 = var4;
-                if (var4 != ((ng) this).field_h[-1 + ((ng) this).field_d]) {
-                  ((ng) this).field_c = var9.field_b;
+                if (var4 != this.field_h[-1 + this.field_d]) {
+                  this.field_c = var9.field_b;
                   return var9;
                 } else {
                   continue L0;
@@ -394,19 +397,19 @@ final class ng {
               }
             }
           } else {
-            return null;
+            return (bh) null;
           }
         } else {
-          if (((ng) this).field_h[-1 + ((ng) this).field_d] == ((ng) this).field_c) {
+          if (this.field_h[-1 + this.field_d] == this.field_c) {
             if (param0 >= 37) {
               L1: while (true) {
-                if (((ng) this).field_f > ((ng) this).field_d) {
-                  int fieldTemp$3 = ((ng) this).field_d;
-                  ((ng) this).field_d = ((ng) this).field_d + 1;
-                  var4 = ((ng) this).field_h[fieldTemp$3].field_b;
+                if (this.field_f > this.field_d) {
+                  fieldTemp$3 = this.field_d;
+                  this.field_d = this.field_d + 1;
+                  var4 = this.field_h[fieldTemp$3].field_b;
                   var5 = var4;
-                  if (var4 != ((ng) this).field_h[-1 + ((ng) this).field_d]) {
-                    ((ng) this).field_c = var5.field_b;
+                  if (var4 != this.field_h[-1 + this.field_d]) {
+                    this.field_c = var5.field_b;
                     return var5;
                   } else {
                     continue L1;
@@ -416,28 +419,29 @@ final class ng {
                 }
               }
             } else {
-              return null;
+              return (bh) null;
             }
           } else {
-            var8 = ((ng) this).field_c;
-            ((ng) this).field_c = var8.field_b;
+            var8 = this.field_c;
+            this.field_c = var8.field_b;
             return var8;
           }
         }
     }
 
     ng(int param0) {
+        bh dupTemp$2 = null;
         int var2 = 0;
         bh var3 = null;
-        ((ng) this).field_d = 0;
-        ((ng) this).field_f = param0;
-        ((ng) this).field_h = new bh[param0];
+        this.field_d = 0;
+        this.field_f = param0;
+        this.field_h = new bh[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            bh dupTemp$2 = new bh();
+            dupTemp$2 = new bh();
             var3 = dupTemp$2;
-            ((ng) this).field_h[var2] = dupTemp$2;
+            this.field_h[var2] = dupTemp$2;
             var3.field_b = var3;
             var3.field_a = var3;
             var2++;

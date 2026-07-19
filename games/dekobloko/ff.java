@@ -24,12 +24,12 @@ final class ff extends bh {
     }
 
     ff(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((ff) this).field_r = param1;
-        ((ff) this).field_n = param3;
-        ((ff) this).field_s = param4;
-        ((ff) this).field_p = param2;
-        ((ff) this).field_t = param5;
-        ((ff) this).field_q = param0;
+        this.field_r = param1;
+        this.field_n = param3;
+        this.field_s = param4;
+        this.field_p = param2;
+        this.field_t = param5;
+        this.field_q = param0;
     }
 
     static {

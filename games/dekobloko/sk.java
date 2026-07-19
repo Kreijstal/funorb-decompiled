@@ -21,13 +21,13 @@ final class sk {
     static String field_b;
 
     final void a(int param0, byte param1) {
-        if (((sk) this).field_q == 0) {
-            ((sk) this).field_h = param0;
-            ((sk) this).field_o = true;
-            ((sk) this).field_n = false;
+        if (this.field_q == 0) {
+            this.field_h = param0;
+            this.field_o = true;
+            this.field_n = false;
         }
         if (param1 >= -53) {
-            field_b = null;
+            field_b = (String) null;
         }
     }
 
@@ -35,21 +35,21 @@ final class sk {
         if (!param0) {
             sk.e(-70);
         }
-        return ((sk) this).field_q != 0 ? true : false;
+        return this.field_q != 0 ? true : false;
     }
 
     final boolean c(int param0) {
         if (param0 <= 111) {
-            field_g = null;
+            field_g = (ck) null;
         }
-        return ((sk) this).field_d == 102 ? true : false;
+        return this.field_d == 102 ? true : false;
     }
 
     final void a(boolean param0, int param1, int param2) {
-        ((sk) this).field_q = 0;
-        ((sk) this).field_n = param0 ? true : false;
-        if (!(!((sk) this).field_n)) {
-            ((sk) this).field_h = param2;
+        this.field_q = 0;
+        this.field_n = param0 ? true : false;
+        if (!(!this.field_n)) {
+            this.field_h = param2;
         }
         int var4 = -68 / ((54 - param1) / 44);
     }
@@ -58,14 +58,14 @@ final class sk {
         if (param0 != -51) {
             return false;
         }
-        return ((sk) this).field_d == 103 ? true : false;
+        return this.field_d == 103 ? true : false;
     }
 
     final boolean b(boolean param0) {
         if (!param0) {
             return true;
         }
-        return ((sk) this).field_d == 96 ? true : false;
+        return this.field_d == 96 ? true : false;
     }
 
     final void a(byte param0, int param1) {
@@ -73,64 +73,64 @@ final class sk {
           if (param0 == 58) {
             break L0;
           } else {
-            ((sk) this).field_h = 111;
+            this.field_h = 111;
             break L0;
           }
         }
         L1: {
-          ((sk) this).field_d = 0;
-          ((sk) this).field_p = 0;
-          ((sk) this).field_o = false;
-          if (0 != ((sk) this).field_q) {
+          this.field_d = 0;
+          this.field_p = 0;
+          this.field_o = false;
+          if (0 != this.field_q) {
             break L1;
           } else {
-            ((sk) this).field_d = wh.field_c;
+            this.field_d = wh.field_c;
             break L1;
           }
         }
         L2: {
-          if (0 != ((sk) this).field_q) {
+          if (0 != this.field_q) {
             break L2;
           } else {
             if (wh.field_c != 96) {
               break L2;
             } else {
               L3: {
-                if (((sk) this).field_h <= 0) {
-                  ((sk) this).field_h = ((sk) this).field_l;
+                if (this.field_h <= 0) {
+                  this.field_h = this.field_l;
                   break L3;
                 } else {
                   break L3;
                 }
               }
-              ((sk) this).field_n = false;
-              ((sk) this).field_h = ((sk) this).field_h - 1;
-              ((sk) this).field_o = true;
+              this.field_n = false;
+              this.field_h = this.field_h - 1;
+              this.field_o = true;
               break L2;
             }
           }
         }
         L4: {
-          if (((sk) this).field_q != 0) {
+          if (this.field_q != 0) {
             break L4;
           } else {
             if (wh.field_c != 97) {
               break L4;
             } else {
-              ((sk) this).field_h = ((sk) this).field_h + 1;
-              ((sk) this).field_n = false;
-              ((sk) this).field_o = true;
-              if (((sk) this).field_l > ((sk) this).field_h) {
+              this.field_h = this.field_h + 1;
+              this.field_n = false;
+              this.field_o = true;
+              if (this.field_l > this.field_h) {
                 break L4;
               } else {
-                ((sk) this).field_h = 0;
+                this.field_h = 0;
                 break L4;
               }
             }
           }
         }
         L5: {
-          if (((sk) this).field_q != 0) {
+          if (this.field_q != 0) {
             break L5;
           } else {
             L6: {
@@ -145,15 +145,15 @@ final class sk {
               }
             }
             L7: {
-              if (((sk) this).field_h < 0) {
-                ((sk) this).field_h = param1;
+              if (this.field_h < 0) {
+                this.field_h = param1;
                 break L7;
               } else {
                 break L7;
               }
             }
-            ((sk) this).field_n = false;
-            ((sk) this).field_o = true;
+            this.field_n = false;
+            this.field_o = true;
             break L5;
           }
         }
@@ -161,47 +161,47 @@ final class sk {
 
     final boolean b(int param0) {
         int var2 = 90 % ((31 - param0) / 42);
-        return ((sk) this).field_d == 97 ? true : false;
+        return this.field_d == 97 ? true : false;
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        ((sk) this).field_n = param3 ? true : false;
-        ((sk) this).field_q = param1;
-        if (((sk) this).field_n) {
-            ((sk) this).field_h = param2;
+        this.field_n = param3 ? true : false;
+        this.field_q = param1;
+        if (this.field_n) {
+            this.field_h = param2;
         } else {
-            ((sk) this).field_h = param0;
+            this.field_h = param0;
         }
     }
 
     final void a(int param0) {
-        ((sk) this).field_o = false;
-        ((sk) this).field_p = 0;
+        this.field_o = false;
+        this.field_p = 0;
         if (param0 > -24) {
             return;
         }
-        ((sk) this).field_d = 0;
-        if (0 == ((sk) this).field_q) {
+        this.field_d = 0;
+        if (0 == this.field_q) {
             if (wh.field_c == 98) {
-                if (!(((sk) this).field_h > 0)) {
-                    ((sk) this).field_h = ((sk) this).field_l;
+                if (!(this.field_h > 0)) {
+                    this.field_h = this.field_l;
                 }
-                ((sk) this).field_h = ((sk) this).field_h - 1;
-                ((sk) this).field_n = false;
-                ((sk) this).field_o = true;
+                this.field_h = this.field_h - 1;
+                this.field_n = false;
+                this.field_o = true;
             }
         }
-        if (!(((sk) this).field_q != 0)) {
-            ((sk) this).field_d = wh.field_c;
+        if (!(this.field_q != 0)) {
+            this.field_d = wh.field_c;
         }
-        if (0 == ((sk) this).field_q) {
+        if (0 == this.field_q) {
             if (!(wh.field_c != 99)) {
-                ((sk) this).field_h = ((sk) this).field_h + 1;
-                ((sk) this).field_n = false;
-                if (((sk) this).field_h >= ((sk) this).field_l) {
-                    ((sk) this).field_h = 0;
+                this.field_h = this.field_h + 1;
+                this.field_n = false;
+                if (this.field_h >= this.field_l) {
+                    this.field_h = 0;
                 }
-                ((sk) this).field_o = true;
+                this.field_o = true;
             }
         }
     }
@@ -347,23 +347,23 @@ final class sk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) var4;
+            stackOut_35_0 = (RuntimeException) (var4);
             stackOut_35_1 = new StringBuilder().append("sk.O(").append(true).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
             stackIn_36_1 = stackOut_35_1;
             if (param1 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "null";
               stackIn_38_0 = stackOut_37_0;
               stackIn_38_1 = stackOut_37_1;
               stackIn_38_2 = stackOut_37_2;
               break L9;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "{...}";
               stackIn_38_0 = stackOut_36_0;
               stackIn_38_1 = stackOut_36_1;
@@ -371,7 +371,7 @@ final class sk {
               break L9;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + true + ',' + 10 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_38_0), stackIn_38_2 + ',' + true + ',' + 10 + ')');
         }
         return stackIn_34_0 != 0;
     }
@@ -388,11 +388,11 @@ final class sk {
     }
 
     final void d(int param0) {
-        ((sk) this).field_d = 0;
-        ((sk) this).field_p = param0;
-        ((sk) this).field_o = false;
-        if (((sk) this).field_q == 0) {
-            ((sk) this).field_d = wh.field_c;
+        this.field_d = 0;
+        this.field_p = param0;
+        this.field_o = false;
+        if (this.field_q == 0) {
+            this.field_d = wh.field_c;
         }
     }
 
@@ -405,48 +405,48 @@ final class sk {
         if (param0 != -28610) {
             sk.e(69);
         }
-        field_a = null;
+        field_a = (ei[][]) null;
         field_b = null;
     }
 
     final void a(int param0, int param1, int param2) {
-        if (((sk) this).field_l <= param0) {
+        if (this.field_l <= param0) {
           throw new IllegalArgumentException();
         } else {
-          if (~param2 <= ~((sk) this).field_l) {
+          if (~param2 <= ~this.field_l) {
             throw new IllegalArgumentException();
           } else {
             L0: {
-              ((sk) this).field_d = 0;
-              ((sk) this).field_p = 0;
-              ((sk) this).field_o = false;
+              this.field_d = 0;
+              this.field_p = 0;
+              this.field_o = false;
               if (ig.field_Yb == 0) {
                 break L0;
               } else {
-                ((sk) this).field_n = true;
-                ((sk) this).field_q = ig.field_Yb;
-                ((sk) this).field_p = ig.field_Yb;
-                ((sk) this).field_h = param2;
-                ((sk) this).field_j = ib.field_kb;
+                this.field_n = true;
+                this.field_q = ig.field_Yb;
+                this.field_p = ig.field_Yb;
+                this.field_h = param2;
+                this.field_j = ib.field_kb;
                 break L0;
               }
             }
             L1: {
-              if (((sk) this).field_q == 0) {
+              if (this.field_q == 0) {
                 break L1;
               } else {
                 if (be.field_n == 0) {
                   break L1;
                 } else {
                   L2: {
-                    if (((sk) this).field_j > 0) {
+                    if (this.field_j > 0) {
                       break L2;
                     } else {
-                      ((sk) this).field_j = qd.field_Ob;
+                      this.field_j = qd.field_Ob;
                       break L2;
                     }
                   }
-                  ((sk) this).field_j = ((sk) this).field_j - 1;
+                  this.field_j = this.field_j - 1;
                   break L1;
                 }
               }
@@ -457,7 +457,7 @@ final class sk {
                   break L3;
                 } else {
                   if (be.field_n == 0) {
-                    ((sk) this).field_q = 0;
+                    this.field_q = 0;
                     break L3;
                   } else {
                     break L3;
@@ -465,11 +465,11 @@ final class sk {
                 }
               }
               L4: {
-                if (((sk) this).field_q != 0) {
+                if (this.field_q != 0) {
                   break L4;
                 } else {
                   L5: {
-                    if (((sk) this).field_n) {
+                    if (this.field_n) {
                       break L5;
                     } else {
                       if (pm.field_b) {
@@ -481,21 +481,21 @@ final class sk {
                   }
                   if (param0 >= 0) {
                     L6: {
-                      if (~((sk) this).field_h == ~param0) {
+                      if (~this.field_h == ~param0) {
                         break L6;
                       } else {
-                        ((sk) this).field_o = true;
+                        this.field_o = true;
                         break L6;
                       }
                     }
-                    ((sk) this).field_n = true;
-                    ((sk) this).field_h = param0;
+                    this.field_n = true;
+                    this.field_h = param0;
                     break L4;
                   } else {
-                    if (!((sk) this).field_n) {
+                    if (!this.field_n) {
                       break L4;
                     } else {
-                      ((sk) this).field_h = -1;
+                      this.field_h = -1;
                       break L4;
                     }
                   }
@@ -516,13 +516,13 @@ final class sk {
         if (param0 == 114) {
           L0: {
             L1: {
-              if (0 != ((sk) this).field_p) {
+              if (0 != this.field_p) {
                 break L1;
               } else {
-                if (84 == ((sk) this).field_d) {
+                if (84 == this.field_d) {
                   break L1;
                 } else {
-                  if (((sk) this).field_d != 83) {
+                  if (this.field_d != 83) {
                     stackOut_7_0 = 0;
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
@@ -543,14 +543,14 @@ final class sk {
     }
 
     public sk() {
-        ((sk) this).field_n = false;
-        ((sk) this).field_h = 0;
+        this.field_n = false;
+        this.field_h = 0;
     }
 
     sk(int param0) {
-        ((sk) this).field_n = false;
-        ((sk) this).field_h = 0;
-        ((sk) this).field_l = param0;
+        this.field_n = false;
+        this.field_h = 0;
+        this.field_l = param0;
     }
 
     static {

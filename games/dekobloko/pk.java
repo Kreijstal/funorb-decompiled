@@ -104,23 +104,23 @@ final class pk extends bh {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var2_ref2;
+                stackOut_4_0 = (RuntimeException) (var2_ref2);
                 stackOut_4_1 = new StringBuilder().append("pk.B(").append(-17).append(',');
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
                 if (param1 == null) {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
                   stackOut_6_2 = "null";
                   stackIn_7_0 = stackOut_6_0;
                   stackIn_7_1 = stackOut_6_1;
                   stackIn_7_2 = stackOut_6_2;
                   break L1;
                 } else {
-                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
                   stackOut_5_2 = "{...}";
                   stackIn_7_0 = stackOut_5_0;
                   stackIn_7_1 = stackOut_5_1;
@@ -128,7 +128,7 @@ final class pk extends bh {
                   break L1;
                 }
               }
-              throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+              throw dh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -142,11 +142,11 @@ final class pk extends bh {
     }
 
     pk(int param0, int param1, int param2, int param3, int param4) {
-        ((pk) this).field_u = param2;
-        ((pk) this).field_n = param3;
-        ((pk) this).field_s = param4;
-        ((pk) this).field_p = param0;
-        ((pk) this).field_t = param1;
+        this.field_u = param2;
+        this.field_n = param3;
+        this.field_s = param4;
+        this.field_p = param0;
+        this.field_t = param1;
     }
 
     static {

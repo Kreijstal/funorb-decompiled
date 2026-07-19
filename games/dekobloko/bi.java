@@ -28,10 +28,10 @@ final class bi {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((bi) this).field_b[var4] != null) {
-                    var5 = ((bi) this).field_b[var4].field_r * 22050 / 1000;
-                    var6 = ((bi) this).field_b[var4].field_h * 22050 / 1000;
-                    var13 = ((bi) this).field_b[var4].a(var5, ((bi) this).field_b[var4].field_r);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_r * 22050 / 1000;
+                    var6 = this.field_b[var4].field_h * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_r);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class bi {
               return new byte[]{};
             }
           } else {
-            if (((bi) this).field_b[var2] != null) {
-              if (((bi) this).field_b[var2].field_r + ((bi) this).field_b[var2].field_h > var1) {
-                var1 = ((bi) this).field_b[var2].field_r + ((bi) this).field_b[var2].field_h;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_r + this.field_b[var2].field_h > var1) {
+                var1 = this.field_b[var2].field_r + this.field_b[var2].field_h;
                 var2++;
                 continue L0;
               } else {
@@ -81,25 +81,25 @@ final class bi {
 
     final ud b() {
         byte[] var1 = this.a();
-        return new ud(22050, var1, 22050 * ((bi) this).field_c / 1000, 22050 * ((bi) this).field_a / 1000);
+        return new ud(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private bi(wl param0) {
         int var2 = 0;
         int var3 = 0;
-        ((bi) this).field_b = new kj[10];
+        this.field_b = new kj[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((bi) this).field_c = param0.e(3);
-            ((bi) this).field_a = param0.e(3);
+            this.field_c = param0.e(3);
+            this.field_a = param0.e(3);
             return;
           } else {
             var3 = param0.d((byte) -82);
             if (var3 != 0) {
               param0.field_n = param0.field_n - 1;
-              ((bi) this).field_b[var2] = new kj();
-              ((bi) this).field_b[var2].a(param0);
+              this.field_b[var2] = new kj();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

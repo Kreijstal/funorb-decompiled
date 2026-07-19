@@ -81,6 +81,7 @@ final class vh {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
+        int discarded$2 = 0;
         if (hk.field_j >= param2 + param3) {
           return param3;
         } else {
@@ -88,7 +89,7 @@ final class vh {
             return param0 + param3 + -param2;
           } else {
             if (param1 != -18265) {
-              int discarded$2 = vh.a(-78, -105, 117, -8);
+              discarded$2 = vh.a(-78, -105, 117, -8);
               return hk.field_j - param2;
             } else {
               return hk.field_j - param2;

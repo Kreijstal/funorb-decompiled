@@ -496,15 +496,15 @@ final class kc extends bh {
                     break L2;
                   }
                 }
-                var8 = sc.field_l.a((byte) -86, param2, (kh) var7, (kh) var6, false);
+                var8 = sc.field_l.a((byte) -86, param2, (kh) (var7), (kh) (var6), false);
                 stackOut_11_0 = new ji(var8, true, 1);
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
             return stackIn_12_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

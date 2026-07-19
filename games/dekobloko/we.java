@@ -13,9 +13,11 @@ abstract class we {
     static String field_a;
 
     final static void a(byte param0) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         if (!gd.field_f) {
           if (param0 <= 46) {
-            int discarded$4 = we.a(true);
+            discarded$4 = we.a(true);
             return;
           } else {
             return;
@@ -28,7 +30,7 @@ abstract class we {
           if (param0 > 46) {
             return;
           } else {
-            int discarded$5 = we.a(true);
+            discarded$5 = we.a(true);
             return;
           }
         }
@@ -62,23 +64,23 @@ abstract class we {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("we.D(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -86,15 +88,15 @@ abstract class we {
               break L0;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -126 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + -126 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final java.net.Socket b(int param0) throws IOException {
         if (param0 != 2) {
-            return null;
+            return (java.net.Socket) null;
         }
-        return new java.net.Socket(((we) this).field_d, ((we) this).field_f);
+        return new java.net.Socket(this.field_d, this.field_f);
     }
 
     abstract java.net.Socket a(int param0) throws IOException;
@@ -165,7 +167,7 @@ abstract class we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "we.C(" + param0 + ')');
+          throw dh.a((Throwable) ((Object) var1), "we.C(" + param0 + ')');
         }
         return stackIn_14_0;
     }

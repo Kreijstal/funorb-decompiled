@@ -21,59 +21,61 @@ final class ee {
     }
 
     final int a(boolean param0) {
-        if (!(0 != ((ee) this).field_e)) {
+        if (!(0 != this.field_e)) {
             this.b(-1);
-            ((ee) this).field_e = 256;
+            this.field_e = 256;
         }
         if (param0) {
             return 55;
         }
-        int fieldTemp$0 = ((ee) this).field_e - 1;
-        ((ee) this).field_e = ((ee) this).field_e - 1;
-        return ((ee) this).field_d[fieldTemp$0];
+        int fieldTemp$0 = this.field_e - 1;
+        this.field_e = this.field_e - 1;
+        return this.field_d[fieldTemp$0];
     }
 
     private final void b(int param0) {
+        int dupTemp$4 = 0;
+        int dupTemp$5 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         var5 = client.field_A ? 1 : 0;
-        int fieldTemp$3 = ((ee) this).field_h + 1;
-        ((ee) this).field_h = ((ee) this).field_h + 1;
-        ((ee) this).field_j = ((ee) this).field_j + fieldTemp$3;
+        int fieldTemp$3 = this.field_h + 1;
+        this.field_h = this.field_h + 1;
+        this.field_j = this.field_j + fieldTemp$3;
         var2 = 0;
         L0: while (true) {
           if (256 <= var2) {
             return;
           } else {
             L1: {
-              var3 = ((ee) this).field_f[var2];
+              var3 = this.field_f[var2];
               if (0 == (var2 & 2)) {
                 if ((var2 & 1) != 0) {
-                  ((ee) this).field_c = ((ee) this).field_c ^ ((ee) this).field_c >>> 6;
+                  this.field_c = this.field_c ^ this.field_c >>> 6;
                   break L1;
                 } else {
-                  ((ee) this).field_c = ((ee) this).field_c ^ ((ee) this).field_c << 13;
+                  this.field_c = this.field_c ^ this.field_c << 13;
                   break L1;
                 }
               } else {
                 if ((var2 & 1) == 0) {
-                  ((ee) this).field_c = ((ee) this).field_c ^ ((ee) this).field_c << 2;
+                  this.field_c = this.field_c ^ this.field_c << 2;
                   break L1;
                 } else {
-                  ((ee) this).field_c = ((ee) this).field_c ^ ((ee) this).field_c >>> 16;
+                  this.field_c = this.field_c ^ this.field_c >>> 16;
                   break L1;
                 }
               }
             }
-            ((ee) this).field_c = ((ee) this).field_c + ((ee) this).field_f[128 + var2 & 255];
-            int dupTemp$4 = ((ee) this).field_j + ((ee) this).field_c + ((ee) this).field_f[lb.a(1020, var3) >> 2];
+            this.field_c = this.field_c + this.field_f[128 + var2 & 255];
+            dupTemp$4 = this.field_j + this.field_c + this.field_f[lb.a(1020, var3) >> 2];
             var4 = dupTemp$4;
-            ((ee) this).field_f[var2] = dupTemp$4;
-            int dupTemp$5 = var3 + ((ee) this).field_f[lb.a(255, var4 >> 8 >> 2)];
-            ((ee) this).field_j = dupTemp$5;
-            ((ee) this).field_d[var2] = dupTemp$5;
+            this.field_f[var2] = dupTemp$4;
+            dupTemp$5 = var3 + this.field_f[lb.a(255, var4 >> 8 >> 2)];
+            this.field_j = dupTemp$5;
+            this.field_d[var2] = dupTemp$5;
             var2++;
             continue L0;
           }
@@ -87,10 +89,10 @@ final class ee {
         }
         int var3 = -(int)(4294967296L % (long)param1) + 2147483647;
         if (param0 < 71) {
-            field_a = null;
+            field_a = (ui[]) null;
         }
         while (true) {
-            var4 = ((ee) this).a(false);
+            var4 = this.a(false);
             if (var4 <= var3) {
                 break;
             }
@@ -128,17 +130,17 @@ final class ee {
                 L2: while (true) {
                   if (var2 >= 256) {
                     this.b(-1);
-                    ((ee) this).field_e = 256;
+                    this.field_e = 256;
                     return;
                   } else {
-                    var10 = var10 + ((ee) this).field_f[var2 + 7];
-                    var6 = var6 + ((ee) this).field_f[3 + var2];
-                    var4 = var4 + ((ee) this).field_f[1 + var2];
-                    var3 = var3 + ((ee) this).field_f[var2];
-                    var8 = var8 + ((ee) this).field_f[5 + var2];
-                    var5 = var5 + ((ee) this).field_f[var2 + 2];
-                    var9 = var9 + ((ee) this).field_f[6 + var2];
-                    var7 = var7 + ((ee) this).field_f[4 + var2];
+                    var10 = var10 + this.field_f[var2 + 7];
+                    var6 = var6 + this.field_f[3 + var2];
+                    var4 = var4 + this.field_f[1 + var2];
+                    var3 = var3 + this.field_f[var2];
+                    var8 = var8 + this.field_f[5 + var2];
+                    var5 = var5 + this.field_f[var2 + 2];
+                    var9 = var9 + this.field_f[6 + var2];
+                    var7 = var7 + this.field_f[4 + var2];
                     var3 = var3 ^ var4 << 11;
                     var6 = var6 + var3;
                     var4 = var4 + var5;
@@ -163,27 +165,27 @@ final class ee {
                     var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
-                    ((ee) this).field_f[var2] = var3;
-                    ((ee) this).field_f[1 + var2] = var4;
-                    ((ee) this).field_f[var2 + 2] = var5;
-                    ((ee) this).field_f[3 + var2] = var6;
-                    ((ee) this).field_f[var2 - -4] = var7;
-                    ((ee) this).field_f[5 + var2] = var8;
-                    ((ee) this).field_f[6 + var2] = var9;
-                    ((ee) this).field_f[7 + var2] = var10;
+                    this.field_f[var2] = var3;
+                    this.field_f[1 + var2] = var4;
+                    this.field_f[var2 + 2] = var5;
+                    this.field_f[3 + var2] = var6;
+                    this.field_f[var2 - -4] = var7;
+                    this.field_f[5 + var2] = var8;
+                    this.field_f[6 + var2] = var9;
+                    this.field_f[7 + var2] = var10;
                     var2 += 8;
                     continue L2;
                   }
                 }
               } else {
-                var10 = var10 + ((ee) this).field_d[7 + var2];
-                var6 = var6 + ((ee) this).field_d[3 + var2];
-                var9 = var9 + ((ee) this).field_d[6 + var2];
-                var7 = var7 + ((ee) this).field_d[4 + var2];
-                var4 = var4 + ((ee) this).field_d[var2 - -1];
-                var8 = var8 + ((ee) this).field_d[5 + var2];
-                var3 = var3 + ((ee) this).field_d[var2];
-                var5 = var5 + ((ee) this).field_d[2 + var2];
+                var10 = var10 + this.field_d[7 + var2];
+                var6 = var6 + this.field_d[3 + var2];
+                var9 = var9 + this.field_d[6 + var2];
+                var7 = var7 + this.field_d[4 + var2];
+                var4 = var4 + this.field_d[var2 - -1];
+                var8 = var8 + this.field_d[5 + var2];
+                var3 = var3 + this.field_d[var2];
+                var5 = var5 + this.field_d[2 + var2];
                 var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
@@ -208,14 +210,14 @@ final class ee {
                 var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
-                ((ee) this).field_f[var2] = var3;
-                ((ee) this).field_f[var2 + 1] = var4;
-                ((ee) this).field_f[var2 + 2] = var5;
-                ((ee) this).field_f[3 + var2] = var6;
-                ((ee) this).field_f[4 + var2] = var7;
-                ((ee) this).field_f[5 + var2] = var8;
-                ((ee) this).field_f[var2 - -6] = var9;
-                ((ee) this).field_f[var2 - -7] = var10;
+                this.field_f[var2] = var3;
+                this.field_f[var2 + 1] = var4;
+                this.field_f[var2 + 2] = var5;
+                this.field_f[3 + var2] = var6;
+                this.field_f[4 + var2] = var7;
+                this.field_f[5 + var2] = var8;
+                this.field_f[var2 - -6] = var9;
+                this.field_f[var2 - -7] = var10;
                 var2 += 8;
                 continue L1;
               }
@@ -323,14 +325,14 @@ final class ee {
     ee(int[] param0) {
         int var2_int = 0;
         try {
-            ((ee) this).field_f = new int[256];
-            ((ee) this).field_d = new int[256];
+            this.field_f = new int[256];
+            this.field_d = new int[256];
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
-                ((ee) this).field_d[var2_int] = param0[var2_int];
+                this.field_d[var2_int] = param0[var2_int];
             }
             this.a(8388607);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

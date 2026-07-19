@@ -17,6 +17,7 @@ final class pm {
     }
 
     final static int a(int param0, int param1, int param2) {
+        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -37,7 +38,7 @@ final class pm {
               if (param1 == -2141435999) {
                 break L1;
               } else {
-                int discarded$2 = pm.a(7, 120, -115);
+                discarded$2 = pm.a(7, 120, -115);
                 break L1;
               }
             }
@@ -75,7 +76,7 @@ final class pm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var3, "pm.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) var3), "pm.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_14_0;
     }

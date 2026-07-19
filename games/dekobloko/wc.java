@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class wc extends bh {
     int field_v;
     int[] field_t;
@@ -16,20 +14,21 @@ final class wc extends bh {
     int field_w;
 
     final void a(byte param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7) {
+        String discarded$0 = null;
         try {
-            ((wc) this).field_s = param1;
+            this.field_s = param1;
             if (param0 != 37) {
-                Object var10 = null;
-                String discarded$0 = wc.a(false, (CharSequence) null, -40);
+                CharSequence var10 = (CharSequence) null;
+                discarded$0 = wc.a(false, (CharSequence) null, -40);
             }
-            ((wc) this).field_p = param5;
-            ((wc) this).field_t = param2;
-            ((wc) this).field_u = param7;
-            ((wc) this).field_w = param3;
-            ((wc) this).field_v = param6;
-            ((wc) this).field_o = param4;
+            this.field_p = param5;
+            this.field_t = param2;
+            this.field_u = param7;
+            this.field_w = param3;
+            this.field_v = param6;
+            this.field_o = param4;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "wc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "wc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -67,7 +66,7 @@ final class wc extends bh {
         try {
           var3 = rb.a(false, (byte) 19, param1);
           if (var3 != null) {
-            stackOut_3_0 = (String) var3;
+            stackOut_3_0 = (String) (var3);
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
           } else {
@@ -91,23 +90,23 @@ final class wc extends bh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_0 = (RuntimeException) (var3_ref);
             stackOut_14_1 = new StringBuilder().append("wc.A(").append(false).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -115,7 +114,7 @@ final class wc extends bh {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
         }
     }
 
@@ -183,7 +182,7 @@ final class wc extends bh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var3, "wc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) var3), "wc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

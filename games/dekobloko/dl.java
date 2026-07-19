@@ -10,18 +10,18 @@ final class dl extends ek {
     dl(String param0, kg param1, boolean param2) {
         this(param0, param1);
         try {
-            ((dl) this).field_H = param2 ? true : false;
+            this.field_H = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private dl(String param0, kg param1) {
         this(param0, bf.field_x.field_b, param1);
         try {
-            ((dl) this).field_p = bf.field_x.field_a;
+            this.field_p = bf.field_x.field_a;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class dl extends ek {
             if (param0 >= 40) {
               break L0;
             } else {
-              field_L = null;
+              field_L = (String) null;
               return;
             }
           }
@@ -80,23 +80,23 @@ final class dl extends ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("dl.I(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -104,7 +104,7 @@ final class dl extends ek {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -121,13 +121,13 @@ final class dl extends ek {
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var4 = (cl) (Object) oe.field_I.c((byte) 113);
+            var4 = (cl) ((Object) oe.field_I.c((byte) 113));
             L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
                 fh.a((byte) 104, var4, 7);
-                var4 = (cl) (Object) oe.field_I.d(true);
+                var4 = (cl) ((Object) oe.field_I.d(true));
                 continue L1;
               }
             }
@@ -135,21 +135,21 @@ final class dl extends ek {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "dl.L(" + 640 + ',' + 7 + ')');
+          throw dh.a((Throwable) ((Object) var2), "dl.L(" + 640 + ',' + 7 + ')');
         }
     }
 
     private dl(String param0, gl param1, kg param2) {
         super(param0, param1, param2);
         try {
-            ((dl) this).field_p = bf.field_x.field_a;
+            this.field_p = bf.field_x.field_a;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        ((dl) this).field_H = !((dl) this).field_H ? true : false;
+        this.field_H = !this.field_H ? true : false;
         super.b(param0, param1, param2, param3);
     }
 

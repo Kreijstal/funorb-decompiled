@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.Class;
-
 final class cg {
     static int field_a;
     static vj field_c;
@@ -146,23 +144,23 @@ final class cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("cg.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -170,7 +168,7 @@ final class cg {
               break L4;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
@@ -226,6 +224,7 @@ final class cg {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int incrementValue$0 = 0;
         int[] var7 = ob.field_j[param0][2][param2].field_D;
         byte[] var8 = gf.field_f[param2].field_k;
         int[] var9 = ad.field_d.field_D;
@@ -237,7 +236,7 @@ final class cg {
                 if (var8[var10] != 0) {
                     var14 = var7[var10];
                 }
-                int incrementValue$0 = var11;
+                incrementValue$0 = var11;
                 var11++;
                 var9[incrementValue$0] = var14;
                 var10 += 2;
@@ -253,7 +252,7 @@ final class cg {
         RuntimeException var2 = null;
         ck var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        w var5 = null;
         ck[] stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -279,7 +278,7 @@ final class cg {
               if (param0 >= 112) {
                 break L1;
               } else {
-                var5 = null;
+                var5 = (w) null;
                 cg.a(-46, (w) null, 53);
                 break L1;
               }
@@ -287,7 +286,7 @@ final class cg {
             var2_int = 0;
             L2: while (true) {
               if (param1.length <= var2_int) {
-                stackOut_6_0 = (ck[]) param1;
+                stackOut_6_0 = (ck[]) (param1);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -305,23 +304,23 @@ final class cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("cg.E(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -329,7 +328,7 @@ final class cg {
               break L3;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -527,6 +526,7 @@ final class cg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int incrementValue$0 = 0;
         ck var3 = new ck(36, 36);
         int[] var4 = ob.field_j[param0][param1][param2].field_D;
         byte[] var5 = gf.field_f[param2].field_k;
@@ -539,7 +539,7 @@ final class cg {
                 if (var5[var7] != 0) {
                     var11 = var4[var7];
                 }
-                int incrementValue$0 = var8;
+                incrementValue$0 = var8;
                 var8++;
                 var6[incrementValue$0] = var11;
                 var7++;
@@ -644,23 +644,23 @@ final class cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var2;
+            stackOut_29_0 = (RuntimeException) (var2);
             stackOut_29_1 = new StringBuilder().append("cg.I(");
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L1;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
@@ -668,7 +668,7 @@ final class cg {
               break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');
         }
         return stackIn_28_0;
     }

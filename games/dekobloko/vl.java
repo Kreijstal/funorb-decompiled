@@ -49,22 +49,22 @@ final class vl {
     }
 
     vl() {
-        ((vl) this).field_v = new int[6];
-        ((vl) this).field_r = 0;
-        ((vl) this).field_x = new byte[6][258];
-        ((vl) this).field_g = new byte[18002];
-        ((vl) this).field_c = new int[6][258];
-        ((vl) this).field_h = new byte[4096];
-        ((vl) this).field_s = new int[257];
-        ((vl) this).field_d = new byte[256];
-        ((vl) this).field_t = new int[16];
-        ((vl) this).field_B = new int[256];
-        ((vl) this).field_E = 0;
-        ((vl) this).field_y = new boolean[16];
-        ((vl) this).field_D = new int[6][258];
-        ((vl) this).field_u = new int[6][258];
-        ((vl) this).field_q = new boolean[256];
-        ((vl) this).field_a = new byte[18002];
+        this.field_v = new int[6];
+        this.field_r = 0;
+        this.field_x = new byte[6][258];
+        this.field_g = new byte[18002];
+        this.field_c = new int[6][258];
+        this.field_h = new byte[4096];
+        this.field_s = new int[257];
+        this.field_d = new byte[256];
+        this.field_t = new int[16];
+        this.field_B = new int[256];
+        this.field_E = 0;
+        this.field_y = new boolean[16];
+        this.field_D = new int[6][258];
+        this.field_u = new int[6][258];
+        this.field_q = new boolean[256];
+        this.field_a = new byte[18002];
     }
 
     static {

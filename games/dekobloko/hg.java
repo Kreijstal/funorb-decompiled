@@ -319,6 +319,11 @@ final class hg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int[] var7 = null;
@@ -362,19 +367,19 @@ final class hg {
                 }
               }
             }
-            int fieldTemp$10 = te.field_w;
+            fieldTemp$10 = te.field_w;
             te.field_w = te.field_w + 1;
             gn.field_e[fieldTemp$10] = param2;
-            int fieldTemp$11 = te.field_w;
+            fieldTemp$11 = te.field_w;
             te.field_w = te.field_w + 1;
             gn.field_e[fieldTemp$11] = param1;
-            int fieldTemp$12 = te.field_w;
+            fieldTemp$12 = te.field_w;
             te.field_w = te.field_w + 1;
             gn.field_e[fieldTemp$12] = param5;
-            int fieldTemp$13 = te.field_w;
+            fieldTemp$13 = te.field_w;
             te.field_w = te.field_w + 1;
             gn.field_e[fieldTemp$13] = param4;
-            int fieldTemp$14 = te.field_w;
+            fieldTemp$14 = te.field_w;
             te.field_w = te.field_w + 1;
             gn.field_e[fieldTemp$14] = param3;
             break L0;
@@ -382,7 +387,7 @@ final class hg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) runtimeException, "hg.C(" + 114 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "hg.C(" + 114 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

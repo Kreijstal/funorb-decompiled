@@ -12,7 +12,7 @@ final class rn {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        field_e = null;
+        field_e = (ck[][]) null;
         field_a = null;
     }
 
