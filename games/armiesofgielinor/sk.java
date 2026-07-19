@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.lang.String;
 
 final class sk implements pa {
     private lf[] field_s;
@@ -51,38 +50,39 @@ final class sk implements pa {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            if (!((sk) this).field_i[0].field_d) {
+            if (!this.field_i[0].field_d) {
               L1: {
                 var2_int = 0;
                 if (param0 == -13146) {
                   break L1;
                 } else {
-                  ((sk) this).field_I = 30;
+                  this.field_I = 30;
                   break L1;
                 }
               }
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~(-((sk) this).field_J + 3) >= ~var2_int) {
+                    if ((-this.field_J + 3 ^ -1) >= (var2_int ^ -1)) {
                       break L4;
                     } else {
                       if (var3 != 0) {
                         break L3;
                       } else {
                         L5: {
-                          if (((sk) this).field_s[var2_int] == null) {
+                          if (this.field_s[var2_int] == null) {
                             break L5;
                           } else {
-                            if (!((sk) this).field_s[var2_int].b((byte) 44)) {
+                            if (!this.field_s[var2_int].b((byte) 44)) {
                               break L5;
                             } else {
-                              ((sk) this).field_s[var2_int].field_m = ns.a(false, 20, vv.field_b);
-                              ((sk) this).field_s[var2_int].field_f = 1;
+                              this.field_s[var2_int].field_m = ns.a(false, 20, vv.field_b);
+                              this.field_s[var2_int].field_f = 1;
                               break L5;
                             }
                           }
@@ -98,16 +98,23 @@ final class sk implements pa {
                   }
                   break L3;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) runtimeException, "sk.OA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sk.OA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -132,6 +139,7 @@ final class sk implements pa {
         RuntimeException stackIn_153_0 = null;
         StringBuilder stackIn_153_1 = null;
         String stackIn_153_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_145_0 = null;
         StringBuilder stackOut_145_1 = null;
@@ -155,15 +163,15 @@ final class sk implements pa {
             L1: {
               var6_array = new int[-param1 + 3];
               var7 = 0;
-              if (param1 == 2) {
+              if ((param1 ^ -1) == -3) {
                 break L1;
               } else {
                 L2: {
                   L3: {
-                    if (param1 == 1) {
+                    if ((param1 ^ -1) == -2) {
                       break L3;
                     } else {
-                      if (param1 != 0) {
+                      if (-1 != (param1 ^ -1)) {
                         break L2;
                       } else {
                         L4: {
@@ -211,7 +219,7 @@ final class sk implements pa {
                                 }
                               }
                               L8: {
-                                if (param2 != 0) {
+                                if (-1 != (param2 ^ -1)) {
                                   break L8;
                                 } else {
                                   if (null == param3[1]) {
@@ -236,7 +244,7 @@ final class sk implements pa {
                             break L2;
                           } else {
                             L9: {
-                              if (param2 != 2) {
+                              if (-3 != (param2 ^ -1)) {
                                 break L9;
                               } else {
                                 if (param3[0] != null) {
@@ -258,7 +266,7 @@ final class sk implements pa {
                               }
                             }
                             L11: {
-                              if (param2 != 0) {
+                              if ((param2 ^ -1) != -1) {
                                 break L11;
                               } else {
                                 if (param3[2] != null) {
@@ -291,7 +299,7 @@ final class sk implements pa {
                           break L12;
                         } else {
                           L13: {
-                            if (param2 != 0) {
+                            if (-1 != (param2 ^ -1)) {
                               break L13;
                             } else {
                               if (param3[1] != null) {
@@ -345,7 +353,7 @@ final class sk implements pa {
                     if (param4) {
                       break L15;
                     } else {
-                      ((sk) this).field_C = -127;
+                      this.field_C = -127;
                       break L15;
                     }
                   }
@@ -363,9 +371,9 @@ final class sk implements pa {
                           }
                         }
                       }
-                      if (param1 == 0) {
+                      if ((param1 ^ -1) == -1) {
                         L19: {
-                          if (var9 == 2) {
+                          if ((var9 ^ -1) == -3) {
                             break L19;
                           } else {
                             L20: {
@@ -440,35 +448,38 @@ final class sk implements pa {
                       break L22;
                     }
                   }
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_145_0 = (RuntimeException) var6;
+            stackOut_145_0 = (RuntimeException) (var6);
             stackOut_145_1 = new StringBuilder().append("sk.B(");
             stackIn_148_0 = stackOut_145_0;
             stackIn_148_1 = stackOut_145_1;
             stackIn_146_0 = stackOut_145_0;
             stackIn_146_1 = stackOut_145_1;
             if (param0 == null) {
-              stackOut_148_0 = (RuntimeException) (Object) stackIn_148_0;
-              stackOut_148_1 = (StringBuilder) (Object) stackIn_148_1;
+              stackOut_148_0 = (RuntimeException) ((Object) stackIn_148_0);
+              stackOut_148_1 = (StringBuilder) ((Object) stackIn_148_1);
               stackOut_148_2 = "null";
               stackIn_149_0 = stackOut_148_0;
               stackIn_149_1 = stackOut_148_1;
               stackIn_149_2 = stackOut_148_2;
               break L23;
             } else {
-              stackOut_146_0 = (RuntimeException) (Object) stackIn_146_0;
-              stackOut_146_1 = (StringBuilder) (Object) stackIn_146_1;
+              stackOut_146_0 = (RuntimeException) ((Object) stackIn_146_0);
+              stackOut_146_1 = (StringBuilder) ((Object) stackIn_146_1);
               stackOut_146_2 = "{...}";
               stackIn_149_0 = stackOut_146_0;
               stackIn_149_1 = stackOut_146_1;
@@ -477,23 +488,23 @@ final class sk implements pa {
             }
           }
           L24: {
-            stackOut_149_0 = (RuntimeException) (Object) stackIn_149_0;
+            stackOut_149_0 = (RuntimeException) ((Object) stackIn_149_0);
             stackOut_149_1 = ((StringBuilder) (Object) stackIn_149_1).append(stackIn_149_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_152_0 = stackOut_149_0;
             stackIn_152_1 = stackOut_149_1;
             stackIn_150_0 = stackOut_149_0;
             stackIn_150_1 = stackOut_149_1;
             if (param3 == null) {
-              stackOut_152_0 = (RuntimeException) (Object) stackIn_152_0;
-              stackOut_152_1 = (StringBuilder) (Object) stackIn_152_1;
+              stackOut_152_0 = (RuntimeException) ((Object) stackIn_152_0);
+              stackOut_152_1 = (StringBuilder) ((Object) stackIn_152_1);
               stackOut_152_2 = "null";
               stackIn_153_0 = stackOut_152_0;
               stackIn_153_1 = stackOut_152_1;
               stackIn_153_2 = stackOut_152_2;
               break L24;
             } else {
-              stackOut_150_0 = (RuntimeException) (Object) stackIn_150_0;
-              stackOut_150_1 = (StringBuilder) (Object) stackIn_150_1;
+              stackOut_150_0 = (RuntimeException) ((Object) stackIn_150_0);
+              stackOut_150_1 = (StringBuilder) ((Object) stackIn_150_1);
               stackOut_150_2 = "{...}";
               stackIn_153_0 = stackOut_150_0;
               stackIn_153_1 = stackOut_150_1;
@@ -501,7 +512,16 @@ final class sk implements pa {
               break L24;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_153_0, stackIn_153_2 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_153_0), stackIn_153_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -540,7 +560,7 @@ final class sk implements pa {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~var3_int <= ~param0.length) {
+                  if ((var3_int ^ -1) <= (param0.length ^ -1)) {
                     break L4;
                   } else {
                     if (var4 != 0) {
@@ -577,23 +597,23 @@ final class sk implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_0 = (RuntimeException) (var3);
             stackOut_17_1 = new StringBuilder().append("sk.GA(");
             stackIn_20_0 = stackOut_17_0;
             stackIn_20_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_21_0 = stackOut_18_0;
               stackIn_21_1 = stackOut_18_1;
@@ -601,11 +621,12 @@ final class sk implements pa {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
         }
     }
 
     private final void a(int param0, lf[] param1, byte param2) {
+        int incrementValue$1 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int[] var5 = null;
@@ -629,6 +650,7 @@ final class sk implements pa {
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
         String stackIn_65_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lf stackOut_12_0 = null;
         Object stackOut_21_0 = null;
@@ -656,7 +678,7 @@ final class sk implements pa {
               L1: while (true) {
                 L2: {
                   L3: {
-                    if (~var4_int <= ~param1.length) {
+                    if ((var4_int ^ -1) <= (param1.length ^ -1)) {
                       break L3;
                     } else {
                       param0++;
@@ -693,7 +715,7 @@ final class sk implements pa {
                             } else {
                               L9: {
                                 if (stackIn_13_0 != null) {
-                                  int incrementValue$1 = var4_int;
+                                  incrementValue$1 = var4_int;
                                   var4_int++;
                                   var5[incrementValue$1] = var6;
                                   break L9;
@@ -729,7 +751,7 @@ final class sk implements pa {
                                   break L12;
                                 } else {
                                   L13: {
-                                    if (stackIn_22_0 == (Object) (Object) stackIn_22_1) {
+                                    if (stackIn_22_0 == stackIn_22_1) {
                                       break L13;
                                     } else {
                                       var8 = var6 + 1;
@@ -748,10 +770,10 @@ final class sk implements pa {
                                               break L12;
                                             } else {
                                               L16: {
-                                                if (stackIn_28_0 == (Object) (Object) stackIn_28_1) {
+                                                if (stackIn_28_0 == stackIn_28_1) {
                                                   break L16;
                                                 } else {
-                                                  if (~param1[var5[var8]].field_s >= ~param1[var5[var7]].field_s) {
+                                                  if ((param1[var5[var8]].field_s ^ -1) >= (param1[var5[var7]].field_s ^ -1)) {
                                                     break L16;
                                                   } else {
                                                     var7 = var8;
@@ -789,18 +811,18 @@ final class sk implements pa {
                               }
                               L17: while (true) {
                                 L18: {
-                                  if (stackIn_55_0 == (Object) (Object) stackIn_55_1) {
+                                  if (stackIn_55_0 == stackIn_55_1) {
                                     break L18;
                                   } else {
                                     stackOut_56_0 = param1[var5[var6]];
                                     stackIn_58_0 = stackOut_56_0;
-                                    ((lf) (Object) stackIn_58_0).a(((sk) this).field_C, param2 ^ -56, false);
+                                    ((lf) (Object) stackIn_58_0).a(this.field_C, param2 ^ -56, false);
                                     break L18;
                                   }
                                 }
                                 var6++;
                                 if (var9 == 0) {
-                                  if (~param0 >= ~var6) {
+                                  if ((param0 ^ -1) >= (var6 ^ -1)) {
                                     break L6;
                                   } else {
                                     if (var9 != 0) {
@@ -839,7 +861,7 @@ final class sk implements pa {
                                         if (stackIn_43_0 == null) {
                                           break L22;
                                         } else {
-                                          param1[var5[var6]].a(((sk) this).field_C, -84, true);
+                                          param1[var5[var6]].a(this.field_C, -84, true);
                                           break L22;
                                         }
                                       }
@@ -859,7 +881,7 @@ final class sk implements pa {
                           }
                           var6 = 0;
                           L23: while (true) {
-                            if (~param0 >= ~var6) {
+                            if ((param0 ^ -1) >= (var6 ^ -1)) {
                               break L6;
                             } else {
                               if (var9 != 0) {
@@ -870,12 +892,12 @@ final class sk implements pa {
                                 stackIn_55_0 = stackOut_53_0;
                                 stackIn_55_1 = stackOut_53_1;
                                 L24: {
-                                  if (stackIn_55_0 == (Object) (Object) stackIn_55_1) {
+                                  if (stackIn_55_0 == stackIn_55_1) {
                                     break L24;
                                   } else {
                                     stackOut_56_0 = param1[var5[var6]];
                                     stackIn_58_0 = stackOut_56_0;
-                                    ((lf) (Object) stackIn_58_0).a(((sk) this).field_C, param2 ^ -56, false);
+                                    ((lf) (Object) stackIn_58_0).a(this.field_C, param2 ^ -56, false);
                                     break L24;
                                   }
                                 }
@@ -891,11 +913,11 @@ final class sk implements pa {
                         }
                       }
                       L25: while (true) {
-                        ((lf) (Object) stackIn_58_0).a(((sk) this).field_C, param2 ^ -56, false);
+                        ((lf) (Object) stackIn_58_0).a(this.field_C, param2 ^ -56, false);
                         L26: while (true) {
                           var6++;
                           if (var9 == 0) {
-                            if (~param0 >= ~var6) {
+                            if ((param0 ^ -1) >= (var6 ^ -1)) {
                               break L6;
                             } else {
                               if (var9 != 0) {
@@ -905,7 +927,7 @@ final class sk implements pa {
                                 stackOut_53_1 = param1[var5[var6]];
                                 stackIn_55_0 = stackOut_53_0;
                                 stackIn_55_1 = stackOut_53_1;
-                                if (stackIn_55_0 == (Object) (Object) stackIn_55_1) {
+                                if (stackIn_55_0 == stackIn_55_1) {
                                   continue L26;
                                 } else {
                                   stackOut_56_0 = param1[var5[var6]];
@@ -922,34 +944,36 @@ final class sk implements pa {
                     }
                     break L5;
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L27: {
             var4 = decompiledCaughtException;
-            stackOut_61_0 = (RuntimeException) var4;
+            stackOut_61_0 = (RuntimeException) (var4);
             stackOut_61_1 = new StringBuilder().append("sk.F(").append(param0).append(',');
             stackIn_64_0 = stackOut_61_0;
             stackIn_64_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
             stackIn_62_1 = stackOut_61_1;
             if (param1 == null) {
-              stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-              stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
               stackOut_64_2 = "null";
               stackIn_65_0 = stackOut_64_0;
               stackIn_65_1 = stackOut_64_1;
               stackIn_65_2 = stackOut_64_2;
               break L27;
             } else {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "{...}";
               stackIn_65_0 = stackOut_62_0;
               stackIn_65_1 = stackOut_62_1;
@@ -957,7 +981,12 @@ final class sk implements pa {
               break L27;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_65_0), stackIn_65_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -966,6 +995,7 @@ final class sk implements pa {
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_7_0 = false;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_6_0 = false;
         int stackOut_4_0 = 0;
@@ -976,27 +1006,39 @@ final class sk implements pa {
               if (param0 < -25) {
                 stackOut_6_0 = u.field_p.a((byte) -106);
                 stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
                 stackOut_4_0 = 1;
                 stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.I(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.I(" + param0 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0 != 0;
+          } else {
+            return stackIn_7_0;
+          }
+        }
     }
 
     public final boolean a(oj param0, byte param1) {
+        boolean discarded$1 = false;
         RuntimeException var3 = null;
         ag var3_ref = null;
         int var4 = 0;
@@ -1141,6 +1183,7 @@ final class sk implements pa {
         RuntimeException stackIn_272_0 = null;
         StringBuilder stackIn_272_1 = null;
         String stackIn_272_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_4_0 = null;
@@ -1294,9 +1337,9 @@ final class sk implements pa {
             L1: {
               if (1 == param0.field_m) {
                 L2: {
-                  var3_ref = (ag) (Object) param0;
-                  var4 = ((sk) this).field_x.field_v * var3_ref.field_G + var3_ref.field_Q;
-                  var5 = var3_ref.field_F + (var4 + var3_ref.field_B * ((sk) this).field_x.field_v);
+                  var3_ref = (ag) ((Object) param0);
+                  var4 = this.field_x.field_v * var3_ref.field_G + var3_ref.field_Q;
+                  var5 = var3_ref.field_F + (var4 + var3_ref.field_B * this.field_x.field_v);
                   stackOut_4_0 = this;
                   stackIn_7_0 = stackOut_4_0;
                   stackIn_5_0 = stackOut_4_0;
@@ -1315,20 +1358,20 @@ final class sk implements pa {
                   }
                 }
                 L3: {
-                  ((sk) this).field_d = stackIn_8_1 != 0;
-                  if (var4 < 0) {
+                  ((sk) (this)).field_d = stackIn_8_1 != 0;
+                  if (-1 < (var4 ^ -1)) {
                     break L3;
                   } else {
-                    if (var4 >= ((sk) this).field_x.field_Eb.length) {
+                    if (var4 >= this.field_x.field_Eb.length) {
                       break L3;
                     } else {
                       if (var5 < 0) {
                         break L3;
                       } else {
-                        if (~var5 > ~((sk) this).field_x.field_Eb.length) {
+                        if ((var5 ^ -1) > (this.field_x.field_Eb.length ^ -1)) {
                           L4: {
-                            var6_ref = ((sk) this).field_x.field_Eb[var4].field_c;
-                            var7 = ((sk) this).field_x.field_Eb[var5].field_c;
+                            var6_ref = this.field_x.field_Eb[var4].field_c;
+                            var7 = this.field_x.field_Eb[var5].field_c;
                             if (var6_ref == null) {
                               break L4;
                             } else {
@@ -1336,18 +1379,18 @@ final class sk implements pa {
                                 break L4;
                               } else {
                                 L5: {
-                                  ((sk) this).field_k.field_x = var4;
-                                  this.b((byte) 54, ((sk) this).field_x.field_hb);
-                                  ((sk) this).field_g = -1;
-                                  ((sk) this).field_e = -1;
+                                  this.field_k.field_x = var4;
+                                  this.b((byte) 54, this.field_x.field_hb);
+                                  this.field_g = -1;
+                                  this.field_e = -1;
                                   var8 = var6_ref.field_A + var6_ref.field_Y;
                                   var9 = var6_ref.field_t - -var6_ref.field_A;
-                                  ((sk) this).field_e = var6_ref.field_O;
-                                  ((sk) this).field_J = bw.field_m[var6_ref.field_N][9];
+                                  this.field_e = var6_ref.field_O;
+                                  this.field_J = bw.field_m[var6_ref.field_N][9];
                                   stackOut_33_0 = this;
                                   stackIn_36_0 = stackOut_33_0;
                                   stackIn_34_0 = stackOut_33_0;
-                                  if (0 < vu.field_N[((sk) this).field_J] * var8 % var9) {
+                                  if (0 < vu.field_N[this.field_J] * var8 % var9) {
                                     stackOut_36_0 = this;
                                     stackOut_36_1 = 1;
                                     stackIn_37_0 = stackOut_36_0;
@@ -1362,14 +1405,14 @@ final class sk implements pa {
                                   }
                                 }
                                 L6: {
-                                  ((sk) this).field_y = stackIn_37_1 + var8 * vu.field_N[((sk) this).field_J] / var9;
+                                  ((sk) (this)).field_y = stackIn_37_1 + var8 * vu.field_N[this.field_J] / var9;
                                   stackOut_37_0 = this;
-                                  stackOut_37_1 = ((sk) this).field_y + -(vu.field_N[((sk) this).field_J] * (var8 + -var3_ref.field_R) / var9);
+                                  stackOut_37_1 = this.field_y + -(vu.field_N[this.field_J] * (var8 + -var3_ref.field_R) / var9);
                                   stackIn_40_0 = stackOut_37_0;
                                   stackIn_40_1 = stackOut_37_1;
                                   stackIn_38_0 = stackOut_37_0;
                                   stackIn_38_1 = stackOut_37_1;
-                                  if ((-var3_ref.field_R + var8) * vu.field_N[((sk) this).field_J] % var9 > 0) {
+                                  if (-1 > ((-var3_ref.field_R + var8) * vu.field_N[this.field_J] % var9 ^ -1)) {
                                     stackOut_40_0 = this;
                                     stackOut_40_1 = stackIn_40_1;
                                     stackOut_40_2 = 1;
@@ -1389,26 +1432,26 @@ final class sk implements pa {
                                 }
                                 L7: {
                                   L8: {
-                                    ((sk) this).field_v = stackIn_41_1 + -stackIn_41_2;
-                                    if (var6_ref.field_P == 7) {
+                                    ((sk) (this)).field_v = stackIn_41_1 + -stackIn_41_2;
+                                    if (-8 == (var6_ref.field_P ^ -1)) {
                                       break L8;
                                     } else {
-                                      if (var6_ref.field_P != 8) {
+                                      if (-9 != (var6_ref.field_P ^ -1)) {
                                         break L7;
                                       } else {
                                         break L8;
                                       }
                                     }
                                   }
-                                  ((sk) this).field_v = 0;
+                                  this.field_v = 0;
                                   break L7;
                                 }
                                 L9: {
-                                  ((sk) this).field_c = var6_ref.field_N;
-                                  if (((sk) this).field_v <= ((sk) this).field_y) {
+                                  this.field_c = var6_ref.field_N;
+                                  if (this.field_v <= this.field_y) {
                                     break L9;
                                   } else {
-                                    ((sk) this).field_v = ((sk) this).field_y;
+                                    this.field_v = this.field_y;
                                     break L9;
                                   }
                                 }
@@ -1423,7 +1466,7 @@ final class sk implements pa {
                                       stackOut_51_0 = this;
                                       stackIn_56_0 = stackOut_51_0;
                                       stackIn_52_0 = stackOut_51_0;
-                                      if (var7.field_N != 7) {
+                                      if (-8 != (var7.field_N ^ -1)) {
                                         stackOut_56_0 = this;
                                         stackOut_56_1 = 0;
                                         stackIn_57_0 = stackOut_56_0;
@@ -1443,27 +1486,27 @@ final class sk implements pa {
                                   break L10;
                                 }
                                 L12: {
-                                  ((sk) this).field_E = stackIn_57_1 != 0;
+                                  ((sk) (this)).field_E = stackIn_57_1 != 0;
                                   var8 = var7.field_Y - -var7.field_A;
                                   var9 = var7.field_A + var7.field_t;
-                                  if (var7.field_N != 34) {
+                                  if ((var7.field_N ^ -1) != -35) {
                                     break L12;
                                   } else {
                                     if (!var7.field_W) {
                                       break L12;
                                     } else {
-                                      ((sk) this).field_q = true;
+                                      this.field_q = true;
                                       break L12;
                                     }
                                   }
                                 }
                                 L13: {
-                                  ((sk) this).field_g = var7.field_O;
-                                  ((sk) this).field_u = bw.field_m[var7.field_N][9];
+                                  this.field_g = var7.field_O;
+                                  this.field_u = bw.field_m[var7.field_N][9];
                                   stackOut_63_0 = this;
                                   stackIn_66_0 = stackOut_63_0;
                                   stackIn_64_0 = stackOut_63_0;
-                                  if (vu.field_N[((sk) this).field_u] * var8 % var9 <= 0) {
+                                  if (-1 <= (vu.field_N[this.field_u] * var8 % var9 ^ -1)) {
                                     stackOut_66_0 = this;
                                     stackOut_66_1 = 0;
                                     stackIn_67_0 = stackOut_66_0;
@@ -1478,11 +1521,11 @@ final class sk implements pa {
                                   }
                                 }
                                 L14: {
-                                  ((sk) this).field_w = stackIn_67_1 + var8 * vu.field_N[((sk) this).field_u] / var9;
+                                  ((sk) (this)).field_w = stackIn_67_1 + var8 * vu.field_N[this.field_u] / var9;
                                   stackOut_67_0 = this;
                                   stackIn_70_0 = stackOut_67_0;
                                   stackIn_68_0 = stackOut_67_0;
-                                  if (0 >= (var8 - var3_ref.field_K) * vu.field_N[((sk) this).field_u] % var9) {
+                                  if (0 >= (var8 - var3_ref.field_K) * vu.field_N[this.field_u] % var9) {
                                     stackOut_70_0 = this;
                                     stackOut_70_1 = 0;
                                     stackIn_71_0 = stackOut_70_0;
@@ -1498,8 +1541,8 @@ final class sk implements pa {
                                 }
                                 L15: {
                                   L16: {
-                                    ((sk) this).field_O = -stackIn_71_1 - ((var8 - var3_ref.field_K) * vu.field_N[((sk) this).field_u] / var9 - ((sk) this).field_w);
-                                    if (var7.field_P == 7) {
+                                    ((sk) (this)).field_O = -stackIn_71_1 - ((var8 - var3_ref.field_K) * vu.field_N[this.field_u] / var9 - this.field_w);
+                                    if (-8 == (var7.field_P ^ -1)) {
                                       break L16;
                                     } else {
                                       if (var7.field_P != 8) {
@@ -1509,24 +1552,24 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  ((sk) this).field_O = 0;
+                                  this.field_O = 0;
                                   break L15;
                                 }
                                 L17: {
-                                  if (((sk) this).field_w >= ((sk) this).field_O) {
+                                  if (this.field_w >= this.field_O) {
                                     break L17;
                                   } else {
-                                    ((sk) this).field_O = ((sk) this).field_w;
+                                    this.field_O = this.field_w;
                                     break L17;
                                   }
                                 }
                                 L18: {
                                   L19: {
-                                    ((sk) this).field_a = var7.field_N;
+                                    this.field_a = var7.field_N;
                                     stackOut_80_0 = this;
                                     stackIn_84_0 = stackOut_80_0;
                                     stackIn_81_0 = stackOut_80_0;
-                                    if (var7.g(0) == 3) {
+                                    if ((var7.g(0) ^ -1) == -4) {
                                       break L19;
                                     } else {
                                       stackOut_81_0 = this;
@@ -1553,8 +1596,8 @@ final class sk implements pa {
                                 }
                                 L20: {
                                   L21: {
-                                    ((sk) this).field_P = stackIn_87_1 != 0;
-                                    if (((sk) this).field_d) {
+                                    ((sk) (this)).field_P = stackIn_87_1 != 0;
+                                    if (this.field_d) {
                                       break L21;
                                     } else {
                                       L22: {
@@ -1562,7 +1605,7 @@ final class sk implements pa {
                                           if (!var3_ref.field_M) {
                                             break L23;
                                           } else {
-                                            ((sk) this).field_L = 2;
+                                            this.field_L = 2;
                                             if (var10 == 0) {
                                               break L22;
                                             } else {
@@ -1574,7 +1617,7 @@ final class sk implements pa {
                                           if (!var3_ref.field_N) {
                                             break L24;
                                           } else {
-                                            ((sk) this).field_L = 3;
+                                            this.field_L = 3;
                                             if (var10 == 0) {
                                               break L22;
                                             } else {
@@ -1582,10 +1625,10 @@ final class sk implements pa {
                                             }
                                           }
                                         }
-                                        ((sk) this).field_L = 4;
+                                        this.field_L = 4;
                                         break L22;
                                       }
-                                      ((sk) this).field_n = 0;
+                                      this.field_n = 0;
                                       if (var10 == 0) {
                                         break L20;
                                       } else {
@@ -1595,10 +1638,10 @@ final class sk implements pa {
                                   }
                                   L25: {
                                     L26: {
-                                      if (((sk) this).field_c != 34) {
+                                      if ((this.field_c ^ -1) != -35) {
                                         break L26;
                                       } else {
-                                        ((sk) this).field_z = 2;
+                                        this.field_z = 2;
                                         if (var10 == 0) {
                                           break L25;
                                         } else {
@@ -1607,10 +1650,10 @@ final class sk implements pa {
                                       }
                                     }
                                     L27: {
-                                      if (var6_ref.g(param1 ^ 57) != 3) {
+                                      if ((var6_ref.g(param1 ^ 57) ^ -1) != -4) {
                                         break L27;
                                       } else {
-                                        ((sk) this).field_z = 8 - -bw.field_m[var6_ref.field_N][1];
+                                        this.field_z = 8 - -bw.field_m[var6_ref.field_N][1];
                                         if (var10 == 0) {
                                           break L25;
                                         } else {
@@ -1619,20 +1662,20 @@ final class sk implements pa {
                                       }
                                     }
                                     L28: {
-                                      if (((sk) this).field_c == 81) {
+                                      if (this.field_c == 81) {
                                         break L28;
                                       } else {
-                                        if (((sk) this).field_c == 4) {
+                                        if (-5 == (this.field_c ^ -1)) {
                                           break L28;
                                         } else {
-                                          if (((sk) this).field_c == 74) {
+                                          if ((this.field_c ^ -1) == -75) {
                                             break L28;
                                           } else {
                                             L29: {
-                                              if (((sk) this).field_c != 67) {
+                                              if (this.field_c != 67) {
                                                 break L29;
                                               } else {
-                                                ((sk) this).field_z = 3;
+                                                this.field_z = 3;
                                                 if (var10 == 0) {
                                                   break L25;
                                                 } else {
@@ -1641,10 +1684,10 @@ final class sk implements pa {
                                               }
                                             }
                                             L30: {
-                                              if (((sk) this).field_c != 18) {
+                                              if ((this.field_c ^ -1) != -19) {
                                                 break L30;
                                               } else {
-                                                ((sk) this).field_z = 0;
+                                                this.field_z = 0;
                                                 if (var10 == 0) {
                                                   break L25;
                                                 } else {
@@ -1653,10 +1696,10 @@ final class sk implements pa {
                                               }
                                             }
                                             L31: {
-                                              if (((sk) this).field_c != 28) {
+                                              if ((this.field_c ^ -1) != -29) {
                                                 break L31;
                                               } else {
-                                                ((sk) this).field_z = 5;
+                                                this.field_z = 5;
                                                 if (var10 == 0) {
                                                   break L25;
                                                 } else {
@@ -1664,8 +1707,8 @@ final class sk implements pa {
                                                 }
                                               }
                                             }
-                                            if (((sk) this).field_c == 3) {
-                                              ((sk) this).field_z = 6;
+                                            if (-4 == (this.field_c ^ -1)) {
+                                              this.field_z = 6;
                                               if (var10 == 0) {
                                                 break L25;
                                               } else {
@@ -1678,18 +1721,18 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    ((sk) this).field_z = 7;
+                                    this.field_z = 7;
                                     break L25;
                                   }
                                   L32: {
-                                    ((sk) this).field_p = ((sk) this).field_O - (-ns.a(false, ((sk) this).field_y, vv.field_b) - ((sk) this).field_y);
-                                    ((sk) this).field_D = new km[((sk) this).field_p];
-                                    ((sk) this).field_b = this.a(((sk) this).field_w, (byte) -128);
-                                    ((sk) this).field_n = 5;
+                                    this.field_p = this.field_O - (-ns.a(false, this.field_y, vv.field_b) - this.field_y);
+                                    this.field_D = new km[this.field_p];
+                                    this.field_b = this.a(this.field_w, (byte) -128);
+                                    this.field_n = 5;
                                     if (var3_ref.field_M) {
                                       break L32;
                                     } else {
-                                      ((sk) this).field_L = 8;
+                                      this.field_L = 8;
                                       if (var10 == 0) {
                                         break L20;
                                       } else {
@@ -1697,27 +1740,27 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  ((sk) this).field_L = 7;
+                                  this.field_L = 7;
                                   break L20;
                                 }
                                 L33: {
                                   L34: {
-                                    fn.a(((sk) this).field_d, ((sk) this).field_c, param1 + -32653);
-                                    fn.a(((sk) this).field_d, ((sk) this).field_a, param1 ^ -32619);
-                                    if (((sk) this).field_c != 34) {
+                                    fn.a(this.field_d, this.field_c, param1 + -32653);
+                                    fn.a(this.field_d, this.field_a, param1 ^ -32619);
+                                    if (-35 != (this.field_c ^ -1)) {
                                       break L34;
                                     } else {
                                       if (!var3_ref.field_J) {
                                         break L34;
                                       } else {
-                                        ((sk) this).field_s = new lf[6];
+                                        this.field_s = new lf[6];
                                         var8 = 0;
                                         L35: while (true) {
                                           L36: {
-                                            if (~((sk) this).field_y >= ~var8) {
+                                            if ((this.field_y ^ -1) >= (var8 ^ -1)) {
                                               break L36;
                                             } else {
-                                              ((sk) this).field_s[1 + var8] = new lf(((sk) this).field_c, true, id.field_d[var8], kr.field_F[var8], false, 0);
+                                              this.field_s[1 + var8] = new lf(this.field_c, true, id.field_d[var8], kr.field_F[var8], false, 0);
                                               var8++;
                                               if (var10 != 0) {
                                                 break L33;
@@ -1739,22 +1782,22 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  ((sk) this).field_s = new lf[vu.field_N[((sk) this).field_J]];
+                                  this.field_s = new lf[vu.field_N[this.field_J]];
                                   break L33;
                                 }
                                 L37: {
                                   L38: {
-                                    if (!((sk) this).field_q) {
+                                    if (!this.field_q) {
                                       break L38;
                                     } else {
-                                      ((sk) this).field_i = new lf[6];
+                                      this.field_i = new lf[6];
                                       var8 = 0;
                                       L39: while (true) {
                                         L40: {
-                                          if (~((sk) this).field_w >= ~var8) {
+                                          if ((this.field_w ^ -1) >= (var8 ^ -1)) {
                                             break L40;
                                           } else {
-                                            ((sk) this).field_i[1 + var8] = new lf(((sk) this).field_a, false, id.field_d[var8], kr.field_F[var8], false, 0);
+                                            this.field_i[1 + var8] = new lf(this.field_a, false, id.field_d[var8], kr.field_F[var8], false, 0);
                                             var8++;
                                             if (var10 != 0) {
                                               break L37;
@@ -1775,29 +1818,29 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  ((sk) this).field_i = new lf[vu.field_N[((sk) this).field_u]];
+                                  this.field_i = new lf[vu.field_N[this.field_u]];
                                   break L37;
                                 }
                                 L41: {
-                                  if (((sk) this).field_c != 34) {
+                                  if ((this.field_c ^ -1) != -35) {
                                     break L41;
                                   } else {
                                     if (!var3_ref.field_J) {
                                       break L41;
                                     } else {
-                                      ((sk) this).field_h = true;
-                                      ((sk) this).field_y = 1;
-                                      ((sk) this).field_c = 75;
-                                      ((sk) this).field_J = 2;
+                                      this.field_h = true;
+                                      this.field_y = 1;
+                                      this.field_c = 75;
+                                      this.field_J = 2;
                                       break L41;
                                     }
                                   }
                                 }
                                 L42: {
-                                  if (((sk) this).field_q) {
+                                  if (this.field_q) {
                                     L43: {
-                                      ((sk) this).field_a = 75;
-                                      ((sk) this).field_w = 1;
+                                      this.field_a = 75;
+                                      this.field_w = 1;
                                       stackOut_188_0 = this;
                                       stackIn_191_0 = stackOut_188_0;
                                       stackIn_189_0 = stackOut_188_0;
@@ -1815,10 +1858,10 @@ final class sk implements pa {
                                         break L43;
                                       }
                                     }
-                                    ((sk) this).field_O = stackIn_192_1;
-                                    ((sk) this).field_u = 2;
-                                    if (((sk) this).field_O == 1) {
-                                      ((sk) this).field_L = 2;
+                                    ((sk) (this)).field_O = stackIn_192_1;
+                                    this.field_u = 2;
+                                    if (this.field_O == 1) {
+                                      this.field_L = 2;
                                       break L42;
                                     } else {
                                       break L42;
@@ -1833,16 +1876,16 @@ final class sk implements pa {
                                       L47: {
                                         L48: {
                                           L49: {
-                                            if (!((sk) this).field_f) {
+                                            if (!this.field_f) {
                                               break L49;
                                             } else {
                                               var8 = 0;
                                               L50: while (true) {
                                                 L51: {
-                                                  if (((sk) this).field_y <= var8) {
+                                                  if (this.field_y <= var8) {
                                                     break L51;
                                                   } else {
-                                                    stackOut_199_0 = ((sk) this).field_s;
+                                                    stackOut_199_0 = this.field_s;
                                                     stackOut_199_1 = var8;
                                                     stackIn_227_0 = stackOut_199_0;
                                                     stackIn_227_1 = stackOut_199_1;
@@ -1852,15 +1895,15 @@ final class sk implements pa {
                                                       break L48;
                                                     } else {
                                                       L52: {
-                                                        stackOut_200_0 = (lf[]) (Object) stackIn_200_0;
+                                                        stackOut_200_0 = (lf[]) ((Object) stackIn_200_0);
                                                         stackOut_200_1 = stackIn_200_1;
                                                         stackOut_200_2 = null;
                                                         stackOut_200_3 = null;
-                                                        stackOut_200_4 = ((sk) this).field_c;
+                                                        stackOut_200_4 = this.field_c;
                                                         stackOut_200_5 = 1;
-                                                        stackOut_200_6 = tn.field_W[((sk) this).field_J][var8];
-                                                        stackOut_200_7 = kw.field_P[((sk) this).field_J][var8];
-                                                        stackOut_200_8 = ((sk) this).field_d;
+                                                        stackOut_200_6 = tn.field_W[this.field_J][var8];
+                                                        stackOut_200_7 = kw.field_P[this.field_J][var8];
+                                                        stackOut_200_8 = this.field_d;
                                                         stackIn_204_0 = stackOut_200_0;
                                                         stackIn_204_1 = stackOut_200_1;
                                                         stackIn_204_2 = stackOut_200_2;
@@ -1879,8 +1922,8 @@ final class sk implements pa {
                                                         stackIn_201_6 = stackOut_200_6;
                                                         stackIn_201_7 = stackOut_200_7;
                                                         stackIn_201_8 = stackOut_200_8;
-                                                        if (((sk) this).field_d) {
-                                                          stackOut_204_0 = (lf[]) (Object) stackIn_204_0;
+                                                        if (this.field_d) {
+                                                          stackOut_204_0 = (lf[]) ((Object) stackIn_204_0);
                                                           stackOut_204_1 = stackIn_204_1;
                                                           stackOut_204_2 = null;
                                                           stackOut_204_3 = null;
@@ -1902,7 +1945,7 @@ final class sk implements pa {
                                                           stackIn_205_9 = stackOut_204_9;
                                                           break L52;
                                                         } else {
-                                                          stackOut_201_0 = (lf[]) (Object) stackIn_201_0;
+                                                          stackOut_201_0 = (lf[]) ((Object) stackIn_201_0);
                                                           stackOut_201_1 = stackIn_201_1;
                                                           stackOut_201_2 = null;
                                                           stackOut_201_3 = null;
@@ -1920,7 +1963,7 @@ final class sk implements pa {
                                                           stackIn_203_6 = stackOut_201_6;
                                                           stackIn_203_7 = stackOut_201_7;
                                                           stackIn_203_8 = stackOut_201_8;
-                                                          stackOut_203_0 = (lf[]) (Object) stackIn_203_0;
+                                                          stackOut_203_0 = (lf[]) ((Object) stackIn_203_0);
                                                           stackOut_203_1 = stackIn_203_1;
                                                           stackOut_203_2 = null;
                                                           stackOut_203_3 = null;
@@ -1963,10 +2006,10 @@ final class sk implements pa {
                                           }
                                           var8 = 0;
                                           L53: while (true) {
-                                            if (~((sk) this).field_y >= ~var8) {
+                                            if ((this.field_y ^ -1) >= (var8 ^ -1)) {
                                               break L47;
                                             } else {
-                                              stackOut_209_0 = ((sk) this).field_s;
+                                              stackOut_209_0 = this.field_s;
                                               stackOut_209_1 = var8;
                                               stackIn_227_0 = stackOut_209_0;
                                               stackIn_227_1 = stackOut_209_1;
@@ -1976,15 +2019,15 @@ final class sk implements pa {
                                                 break L48;
                                               } else {
                                                 L54: {
-                                                  stackOut_210_0 = (lf[]) (Object) stackIn_210_0;
+                                                  stackOut_210_0 = (lf[]) ((Object) stackIn_210_0);
                                                   stackOut_210_1 = stackIn_210_1;
                                                   stackOut_210_2 = null;
                                                   stackOut_210_3 = null;
-                                                  stackOut_210_4 = ((sk) this).field_c;
+                                                  stackOut_210_4 = this.field_c;
                                                   stackOut_210_5 = 1;
-                                                  stackOut_210_6 = tn.field_W[((sk) this).field_J][var8];
-                                                  stackOut_210_7 = kw.field_P[((sk) this).field_J][var8];
-                                                  stackOut_210_8 = ((sk) this).field_d;
+                                                  stackOut_210_6 = tn.field_W[this.field_J][var8];
+                                                  stackOut_210_7 = kw.field_P[this.field_J][var8];
+                                                  stackOut_210_8 = this.field_d;
                                                   stackIn_214_0 = stackOut_210_0;
                                                   stackIn_214_1 = stackOut_210_1;
                                                   stackIn_214_2 = stackOut_210_2;
@@ -2003,8 +2046,8 @@ final class sk implements pa {
                                                   stackIn_211_6 = stackOut_210_6;
                                                   stackIn_211_7 = stackOut_210_7;
                                                   stackIn_211_8 = stackOut_210_8;
-                                                  if (!((sk) this).field_d) {
-                                                    stackOut_214_0 = (lf[]) (Object) stackIn_214_0;
+                                                  if (!this.field_d) {
+                                                    stackOut_214_0 = (lf[]) ((Object) stackIn_214_0);
                                                     stackOut_214_1 = stackIn_214_1;
                                                     stackOut_214_2 = null;
                                                     stackOut_214_3 = null;
@@ -2026,7 +2069,7 @@ final class sk implements pa {
                                                     stackIn_215_9 = stackOut_214_9;
                                                     break L54;
                                                   } else {
-                                                    stackOut_211_0 = (lf[]) (Object) stackIn_211_0;
+                                                    stackOut_211_0 = (lf[]) ((Object) stackIn_211_0);
                                                     stackOut_211_1 = stackIn_211_1;
                                                     stackOut_211_2 = null;
                                                     stackOut_211_3 = null;
@@ -2044,7 +2087,7 @@ final class sk implements pa {
                                                     stackIn_213_6 = stackOut_211_6;
                                                     stackIn_213_7 = stackOut_211_7;
                                                     stackIn_213_8 = stackOut_211_8;
-                                                    stackOut_213_0 = (lf[]) (Object) stackIn_213_0;
+                                                    stackOut_213_0 = (lf[]) ((Object) stackIn_213_0);
                                                     stackOut_213_1 = stackIn_213_1;
                                                     stackOut_213_2 = null;
                                                     stackOut_213_3 = null;
@@ -2079,16 +2122,16 @@ final class sk implements pa {
                                           }
                                         }
                                         L55: while (true) {
-                                          stackIn_227_0[stackIn_227_1] = new lf(((sk) this).field_a, false, tn.field_W[((sk) this).field_u][var8], kw.field_P[((sk) this).field_u][var8], ((sk) this).field_d, 0);
+                                          stackIn_227_0[stackIn_227_1] = new lf(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                                           var8++;
                                           if (var10 != 0) {
                                             break L44;
                                           } else {
                                             if (var10 == 0) {
-                                              if (~var8 <= ~((sk) this).field_w) {
+                                              if ((var8 ^ -1) <= (this.field_w ^ -1)) {
                                                 break L45;
                                               } else {
-                                                stackOut_226_0 = ((sk) this).field_i;
+                                                stackOut_226_0 = this.field_i;
                                                 stackOut_226_1 = var8;
                                                 stackIn_227_0 = stackOut_226_0;
                                                 stackIn_227_1 = stackOut_226_1;
@@ -2101,16 +2144,16 @@ final class sk implements pa {
                                         }
                                       }
                                       L56: {
-                                        if (((sk) this).field_o) {
+                                        if (this.field_o) {
                                           break L56;
                                         } else {
                                           var8 = 0;
                                           L57: while (true) {
                                             L58: {
-                                              if (~var8 <= ~((sk) this).field_w) {
+                                              if ((var8 ^ -1) <= (this.field_w ^ -1)) {
                                                 break L58;
                                               } else {
-                                                ((sk) this).field_i[var8] = new lf(((sk) this).field_a, false, tn.field_W[((sk) this).field_u][var8], kw.field_P[((sk) this).field_u][var8], ((sk) this).field_d, 0);
+                                                this.field_i[var8] = new lf(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                                                 var8++;
                                                 if (var10 != 0) {
                                                   break L45;
@@ -2133,14 +2176,14 @@ final class sk implements pa {
                                       }
                                       var8 = 0;
                                       L59: while (true) {
-                                        if (~var8 <= ~((sk) this).field_w) {
+                                        if ((var8 ^ -1) <= (this.field_w ^ -1)) {
                                           break L45;
                                         } else {
-                                          stackOut_226_0 = ((sk) this).field_i;
+                                          stackOut_226_0 = this.field_i;
                                           stackOut_226_1 = var8;
                                           stackIn_227_0 = stackOut_226_0;
                                           stackIn_227_1 = stackOut_226_1;
-                                          stackIn_227_0[stackIn_227_1] = new lf(((sk) this).field_a, false, tn.field_W[((sk) this).field_u][var8], kw.field_P[((sk) this).field_u][var8], ((sk) this).field_d, 0);
+                                          stackIn_227_0[stackIn_227_1] = new lf(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                                           var8++;
                                           if (var10 != 0) {
                                             break L44;
@@ -2160,32 +2203,32 @@ final class sk implements pa {
                                     stackOut_231_0 = this;
                                     stackIn_234_0 = stackOut_231_0;
                                     stackIn_232_0 = stackOut_231_0;
-                                    if (~((sk) this).field_J < ~((sk) this).field_u) {
+                                    if ((this.field_J ^ -1) < (this.field_u ^ -1)) {
                                       stackOut_234_0 = this;
-                                      stackOut_234_1 = ((sk) this).field_J;
+                                      stackOut_234_1 = this.field_J;
                                       stackIn_235_0 = stackOut_234_0;
                                       stackIn_235_1 = stackOut_234_1;
                                       break L60;
                                     } else {
                                       stackOut_232_0 = this;
-                                      stackOut_232_1 = ((sk) this).field_u;
+                                      stackOut_232_1 = this.field_u;
                                       stackIn_235_0 = stackOut_232_0;
                                       stackIn_235_1 = stackOut_232_1;
                                       break L60;
                                     }
                                   }
-                                  ((sk) this).field_C = stackIn_235_1;
+                                  ((sk) (this)).field_C = stackIn_235_1;
                                   break L44;
                                 }
                                 L61: {
-                                  if (0 != ((sk) this).field_v) {
+                                  if (0 != this.field_v) {
                                     break L61;
                                   } else {
-                                    if (0 != ((sk) this).field_O) {
+                                    if (0 != this.field_O) {
                                       break L61;
                                     } else {
-                                      if (!((sk) this).field_d) {
-                                        ((sk) this).field_m = true;
+                                      if (!this.field_d) {
+                                        this.field_m = true;
                                         break L61;
                                       } else {
                                         break L61;
@@ -2194,11 +2237,11 @@ final class sk implements pa {
                                   }
                                 }
                                 L62: {
-                                  if (!((sk) this).field_d) {
+                                  if (!this.field_d) {
                                     break L62;
                                   } else {
-                                    if (((sk) this).field_f) {
-                                      ((sk) this).field_n = 6;
+                                    if (this.field_f) {
+                                      this.field_n = 6;
                                       this.h(param1 ^ 56);
                                       break L62;
                                     } else {
@@ -2209,27 +2252,27 @@ final class sk implements pa {
                                 L63: {
                                   L64: {
                                     L65: {
-                                      if (!((sk) this).field_d) {
+                                      if (!this.field_d) {
                                         break L65;
                                       } else {
-                                        if (((sk) this).field_L == 8) {
+                                        if (this.field_L == 8) {
                                           break L64;
                                         } else {
                                           break L65;
                                         }
                                       }
                                     }
-                                    ((sk) this).field_t = ((sk) this).field_x.field_v * var3_ref.field_G + var3_ref.field_Q;
+                                    this.field_t = this.field_x.field_v * var3_ref.field_G + var3_ref.field_Q;
                                     if (var10 == 0) {
                                       break L63;
                                     } else {
                                       break L64;
                                     }
                                   }
-                                  ((sk) this).field_t = var3_ref.field_F + var3_ref.field_Q + ((sk) this).field_x.field_v * (var3_ref.field_B + var3_ref.field_G);
+                                  this.field_t = var3_ref.field_F + var3_ref.field_Q + this.field_x.field_v * (var3_ref.field_B + var3_ref.field_G);
                                   break L63;
                                 }
-                                u.field_p.b(var3_ref.field_G * ((sk) this).field_x.field_v + var3_ref.field_Q, param1 ^ 65);
+                                u.field_p.b(var3_ref.field_G * this.field_x.field_v + var3_ref.field_Q, param1 ^ 65);
                                 break L1;
                               }
                             }
@@ -2247,13 +2290,14 @@ final class sk implements pa {
                               }
                             }
                             var8_ref_String = db.field_d + ": Can see attacker or defender";
-                            ((sk) this).field_x.a(0, var8_ref_String, (oj) (Object) var3_ref);
+                            this.field_x.a(0, var8_ref_String, var3_ref);
                             break L66;
                           }
-                          ((sk) this).field_n = 8;
+                          this.field_n = 8;
                           stackOut_31_0 = 0;
                           stackIn_32_0 = stackOut_31_0;
-                          return stackIn_32_0 != 0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         } else {
                           break L3;
                         }
@@ -2262,11 +2306,12 @@ final class sk implements pa {
                   }
                 }
                 var6 = db.field_d + ": Attacker or defender off map";
-                ((sk) this).field_x.a(0, var6, (oj) (Object) var3_ref);
-                ((sk) this).field_n = 8;
+                this.field_x.a(0, var6, var3_ref);
+                this.field_n = 8;
                 stackOut_18_0 = 0;
                 stackIn_19_0 = stackOut_18_0;
-                return stackIn_19_0 != 0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 break L1;
               }
@@ -2275,36 +2320,37 @@ final class sk implements pa {
               if (param1 == 57) {
                 break L68;
               } else {
-                boolean discarded$1 = ((sk) this).a((oj) null, (byte) -19);
+                discarded$1 = this.a((oj) null, (byte) -19);
                 break L68;
               }
             }
-            ((sk) this).b(param0, (byte) 32);
+            this.b(param0, (byte) 32);
             stackOut_266_0 = 1;
             stackIn_267_0 = stackOut_266_0;
+            decompiledRegionSelector0 = 2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L69: {
             var3 = decompiledCaughtException;
-            stackOut_268_0 = (RuntimeException) var3;
+            stackOut_268_0 = (RuntimeException) (var3);
             stackOut_268_1 = new StringBuilder().append("sk.E(");
             stackIn_271_0 = stackOut_268_0;
             stackIn_271_1 = stackOut_268_1;
             stackIn_269_0 = stackOut_268_0;
             stackIn_269_1 = stackOut_268_1;
             if (param0 == null) {
-              stackOut_271_0 = (RuntimeException) (Object) stackIn_271_0;
-              stackOut_271_1 = (StringBuilder) (Object) stackIn_271_1;
+              stackOut_271_0 = (RuntimeException) ((Object) stackIn_271_0);
+              stackOut_271_1 = (StringBuilder) ((Object) stackIn_271_1);
               stackOut_271_2 = "null";
               stackIn_272_0 = stackOut_271_0;
               stackIn_272_1 = stackOut_271_1;
               stackIn_272_2 = stackOut_271_2;
               break L69;
             } else {
-              stackOut_269_0 = (RuntimeException) (Object) stackIn_269_0;
-              stackOut_269_1 = (StringBuilder) (Object) stackIn_269_1;
+              stackOut_269_0 = (RuntimeException) ((Object) stackIn_269_0);
+              stackOut_269_1 = (StringBuilder) ((Object) stackIn_269_1);
               stackOut_269_2 = "{...}";
               stackIn_272_0 = stackOut_269_0;
               stackIn_272_1 = stackOut_269_1;
@@ -2312,9 +2358,17 @@ final class sk implements pa {
               break L69;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_272_0, stackIn_272_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_272_0), stackIn_272_2 + ',' + param1 + ')');
         }
-        return stackIn_267_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_19_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_32_0 != 0;
+          } else {
+            return stackIn_267_0 != 0;
+          }
+        }
     }
 
     public final void a(int param0) {
@@ -2323,15 +2377,15 @@ final class sk implements pa {
         try {
           L0: {
             L1: {
-              if (((sk) this).field_n == 8) {
+              if (this.field_n == 8) {
                 break L1;
               } else {
-                ((sk) this).field_F = 0;
+                this.field_F = 0;
                 break L1;
               }
             }
             L2: {
-              ((sk) this).field_n = 8;
+              this.field_n = 8;
               if (param0 >= 94) {
                 break L2;
               } else {
@@ -2344,7 +2398,7 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.D(" + param0 + ')');
         }
     }
 
@@ -2359,6 +2413,7 @@ final class sk implements pa {
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         String stackIn_57_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_53_0 = null;
         StringBuilder stackOut_53_1 = null;
@@ -2382,8 +2437,8 @@ final class sk implements pa {
             }
             L2: {
               L3: {
-                ((sk) this).field_F = ((sk) this).field_F + 1;
-                if (((sk) this).field_n != 0) {
+                this.field_F = this.field_F + 1;
+                if ((this.field_n ^ -1) != -1) {
                   break L3;
                 } else {
                   this.o(-124);
@@ -2395,7 +2450,7 @@ final class sk implements pa {
                 }
               }
               L4: {
-                if (8 != ((sk) this).field_n) {
+                if (8 != this.field_n) {
                   break L4;
                 } else {
                   this.d((byte) 126);
@@ -2406,23 +2461,23 @@ final class sk implements pa {
                   }
                 }
               }
-              if (((sk) this).field_n != 1) {
+              if (-2 != (this.field_n ^ -1)) {
                 L5: {
-                  if (((sk) this).field_n == 2) {
+                  if (-3 == (this.field_n ^ -1)) {
                     break L5;
                   } else {
-                    if (((sk) this).field_n == 3) {
+                    if ((this.field_n ^ -1) == -4) {
                       break L5;
                     } else {
-                      if (((sk) this).field_n == 4) {
+                      if (this.field_n == 4) {
                         break L5;
                       } else {
                         L6: {
-                          if (((sk) this).field_n == 5) {
+                          if ((this.field_n ^ -1) == -6) {
                             break L6;
                           } else {
-                            if (6 != ((sk) this).field_n) {
-                              if (7 != ((sk) this).field_n) {
+                            if (6 != this.field_n) {
+                              if (7 != this.field_n) {
                                 break L2;
                               } else {
                                 this.d(29823);
@@ -2434,7 +2489,8 @@ final class sk implements pa {
                               }
                             } else {
                               if (this.a(true)) {
-                                return;
+                                decompiledRegionSelector0 = 1;
+                                break L0;
                               } else {
                                 break L2;
                               }
@@ -2455,36 +2511,38 @@ final class sk implements pa {
                 break L2;
               } else {
                 if (this.g(-9)) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L2;
                 }
               }
             }
             var3_int = -77 % ((param1 - -26) / 48);
+            decompiledRegionSelector0 = 2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_53_0 = (RuntimeException) var3;
+            stackOut_53_0 = (RuntimeException) (var3);
             stackOut_53_1 = new StringBuilder().append("sk.Q(");
             stackIn_56_0 = stackOut_53_0;
             stackIn_56_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;
             stackIn_54_1 = stackOut_53_1;
             if (param0 == null) {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackOut_56_2 = "null";
               stackIn_57_0 = stackOut_56_0;
               stackIn_57_1 = stackOut_56_1;
               stackIn_57_2 = stackOut_56_2;
               break L7;
             } else {
-              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackOut_54_2 = "{...}";
               stackIn_57_0 = stackOut_54_0;
               stackIn_57_1 = stackOut_54_1;
@@ -2492,11 +2550,21 @@ final class sk implements pa {
               break L7;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_57_0), stackIn_57_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     private final void h(int param0) {
+        boolean discarded$2 = false;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -2508,7 +2576,7 @@ final class sk implements pa {
               if (param0 == 1) {
                 break L1;
               } else {
-                boolean discarded$2 = ((sk) this).b(-67);
+                discarded$2 = this.b(-67);
                 break L1;
               }
             }
@@ -2516,7 +2584,7 @@ final class sk implements pa {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (var2_int >= ((sk) this).field_D.length) {
+                  if (var2_int >= this.field_D.length) {
                     break L4;
                   } else {
                     if (var3 != 0) {
@@ -2524,10 +2592,10 @@ final class sk implements pa {
                     } else {
                       L5: {
                         L6: {
-                          if (var2_int >= ((sk) this).field_O) {
+                          if (var2_int >= this.field_O) {
                             break L6;
                           } else {
-                            ((sk) this).field_D[var2_int] = new km(((sk) this).field_i[((sk) this).field_b[var2_int]].field_a, 600 + -pk.field_T[((sk) this).field_a][0], ((sk) this).field_i[((sk) this).field_b[var2_int]].field_s, 200 + ns.a(false, 600, vv.field_b), ((sk) this).field_z);
+                            this.field_D[var2_int] = new km(this.field_i[this.field_b[var2_int]].field_a, 600 + -pk.field_T[this.field_a][0], this.field_i[this.field_b[var2_int]].field_s, 200 + ns.a(false, 600, vv.field_b), this.field_z);
                             if (var3 == 0) {
                               break L5;
                             } else {
@@ -2535,7 +2603,7 @@ final class sk implements pa {
                             }
                           }
                         }
-                        ((sk) this).field_D[var2_int] = new km(100 + ns.a(false, 600, vv.field_b), 600, ns.a(false, 850, vv.field_b) + 900, ns.a(false, 600, vv.field_b) + 200, ((sk) this).field_z);
+                        this.field_D[var2_int] = new km(100 + ns.a(false, 600, vv.field_b), 600, ns.a(false, 850, vv.field_b) + 900, ns.a(false, 600, vv.field_b) + 200, this.field_z);
                         break L5;
                       }
                       var2_int++;
@@ -2555,17 +2623,17 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.JA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.JA(" + param0 + ')');
         }
     }
 
     public final void a(byte param0) {
         try {
             if (param0 != -52) {
-                ((sk) this).a(61, (jd) null, 33, true, (jd) null);
+                this.a(61, (jd) null, 33, true, (jd) null);
             }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sk.O(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "sk.O(" + param0 + ')');
         }
     }
 
@@ -2575,36 +2643,36 @@ final class sk implements pa {
         try {
           L0: {
             L1: {
-              if (((sk) this).field_n != 2) {
+              if (-3 != (this.field_n ^ -1)) {
                 break L1;
               } else {
-                this.a(((sk) this).field_s, -4925);
+                this.a(this.field_s, -4925);
                 break L1;
               }
             }
             L2: {
               L3: {
-                if (((sk) this).field_n == 3) {
+                if (-4 == (this.field_n ^ -1)) {
                   break L3;
                 } else {
-                  if (4 == ((sk) this).field_n) {
+                  if (4 == this.field_n) {
                     break L3;
                   } else {
                     break L2;
                   }
                 }
               }
-              this.a(((sk) this).field_i, -4925);
+              this.a(this.field_i, -4925);
               break L2;
             }
             L4: {
-              this.b(((sk) this).field_s, 12579);
-              this.b(((sk) this).field_i, 12579);
-              if (((sk) this).field_F <= 240) {
+              this.b(this.field_s, 12579);
+              this.b(this.field_i, 12579);
+              if ((this.field_F ^ -1) >= -241) {
                 break L4;
               } else {
-                ((sk) this).field_F = 0;
-                ((sk) this).field_n = 8;
+                this.field_F = 0;
+                this.field_n = 8;
                 break L4;
               }
             }
@@ -2621,11 +2689,12 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.BA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.BA(" + param0 + ')');
         }
     }
 
     private final boolean g(int param0) {
+        boolean discarded$1 = false;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -2634,6 +2703,7 @@ final class sk implements pa {
         int stackIn_63_0 = 0;
         lf stackIn_80_0 = null;
         int stackIn_92_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lf stackOut_3_0 = null;
         int stackOut_62_0 = 0;
@@ -2650,10 +2720,10 @@ final class sk implements pa {
                 L3: {
                   L4: {
                     L5: {
-                      if (var3 >= ((sk) this).field_s.length) {
+                      if (var3 >= this.field_s.length) {
                         break L5;
                       } else {
-                        stackOut_3_0 = ((sk) this).field_s[var3];
+                        stackOut_3_0 = this.field_s[var3];
                         stackIn_80_0 = stackOut_3_0;
                         stackIn_4_0 = stackOut_3_0;
                         if (var4 != 0) {
@@ -2672,24 +2742,24 @@ final class sk implements pa {
                               }
                             }
                             L8: {
-                              ((sk) this).field_s[var3].d((byte) 113);
-                              if (!((sk) this).field_E) {
+                              this.field_s[var3].d((byte) 113);
+                              if (!this.field_E) {
                                 break L8;
                               } else {
-                                if (!((sk) this).field_s[var3].field_e) {
+                                if (!this.field_s[var3].field_e) {
                                   break L8;
                                 } else {
-                                  ((sk) this).field_s[var3].a(0, 30, 0, -10, u.field_o[((sk) this).field_c][1], pk.field_T[((sk) this).field_c][1], (byte) 122);
-                                  ((sk) this).field_s[var3].field_e = false;
+                                  this.field_s[var3].a(0, 30, 0, -10, u.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
+                                  this.field_s[var3].field_e = false;
                                   break L8;
                                 }
                               }
                             }
-                            if (!((sk) this).field_s[var3].field_d) {
+                            if (!this.field_s[var3].field_d) {
                               break L6;
                             } else {
                               L9: {
-                                if (((sk) this).field_s[var3].field_H) {
+                                if (this.field_s[var3].field_H) {
                                   break L9;
                                 } else {
                                   var2_int = 0;
@@ -2700,7 +2770,7 @@ final class sk implements pa {
                                   }
                                 }
                               }
-                              ((sk) this).field_s[var3] = null;
+                              this.field_s[var3] = null;
                               break L6;
                             }
                           }
@@ -2717,35 +2787,35 @@ final class sk implements pa {
                     L10: while (true) {
                       L11: {
                         L12: {
-                          if (~((sk) this).field_i.length >= ~var3) {
+                          if ((this.field_i.length ^ -1) >= (var3 ^ -1)) {
                             break L12;
                           } else {
                             if (var4 != 0) {
                               break L11;
                             } else {
                               L13: {
-                                if (null == ((sk) this).field_i[var3]) {
+                                if (null == this.field_i[var3]) {
                                   break L13;
                                 } else {
                                   L14: {
-                                    ((sk) this).field_i[var3].d((byte) 113);
-                                    if (!((sk) this).field_P) {
+                                    this.field_i[var3].d((byte) 113);
+                                    if (!this.field_P) {
                                       break L14;
                                     } else {
-                                      if (((sk) this).field_i[var3].field_e) {
-                                        ((sk) this).field_i[var3].a(0, 30, 0, 10, u.field_o[((sk) this).field_a][1], pk.field_T[((sk) this).field_a][1], (byte) 122);
-                                        ((sk) this).field_i[var3].field_e = false;
+                                      if (this.field_i[var3].field_e) {
+                                        this.field_i[var3].a(0, 30, 0, 10, u.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
+                                        this.field_i[var3].field_e = false;
                                         break L14;
                                       } else {
                                         break L14;
                                       }
                                     }
                                   }
-                                  if (!((sk) this).field_i[var3].field_d) {
+                                  if (!this.field_i[var3].field_d) {
                                     break L13;
                                   } else {
                                     L15: {
-                                      if (((sk) this).field_i[var3].field_H) {
+                                      if (this.field_i[var3].field_H) {
                                         break L15;
                                       } else {
                                         var2_int = 0;
@@ -2756,7 +2826,7 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    ((sk) this).field_i[var3] = null;
+                                    this.field_i[var3] = null;
                                     break L13;
                                   }
                                 }
@@ -2773,50 +2843,51 @@ final class sk implements pa {
                         if (var2_int == 0) {
                           break L11;
                         } else {
-                          if (((sk) this).field_v != 0) {
+                          if ((this.field_v ^ -1) != -1) {
                             break L11;
                           } else {
-                            if (((sk) this).field_O != 0) {
+                            if (-1 != (this.field_O ^ -1)) {
                               break L11;
                             } else {
                               L16: {
-                                if (!((sk) this).field_m) {
+                                if (!this.field_m) {
                                   break L16;
                                 } else {
-                                  if (500 >= ((sk) this).field_F) {
+                                  if (500 >= this.field_F) {
                                     break L11;
                                   } else {
                                     break L16;
                                   }
                                 }
                               }
-                              ((sk) this).field_F = 0;
-                              ((sk) this).field_n = ((sk) this).field_L;
+                              this.field_F = 0;
+                              this.field_n = this.field_L;
                               stackOut_62_0 = 1;
                               stackIn_63_0 = stackOut_62_0;
-                              return stackIn_63_0 != 0;
+                              decompiledRegionSelector0 = 0;
+                              break L0;
                             }
                           }
                         }
                       }
-                      if (!((sk) this).field_q) {
+                      if (!this.field_q) {
                         break L3;
                       } else {
                         this.m(-13146);
                         this.e((byte) 105);
-                        if (0 != ((sk) this).field_v) {
+                        if (0 != this.field_v) {
                           break L2;
                         } else {
-                          if (((sk) this).field_O <= 0) {
+                          if ((this.field_O ^ -1) >= -1) {
                             break L2;
                           } else {
                             if (var2_int == 0) {
                               break L2;
                             } else {
-                              if (((sk) this).field_F > 400) {
-                                ((sk) this).field_O = ((sk) this).field_O - 1;
-                                ((sk) this).field_i[0].field_d = true;
-                                stackOut_79_0 = ((sk) this).field_i[0];
+                              if (this.field_F > 400) {
+                                this.field_O = this.field_O - 1;
+                                this.field_i[0].field_d = true;
+                                stackOut_79_0 = this.field_i[0];
                                 stackIn_80_0 = stackOut_79_0;
                                 break L4;
                               } else {
@@ -2836,7 +2907,7 @@ final class sk implements pa {
                   }
                 }
                 L17: {
-                  if (((sk) this).field_F % 50 == 0) {
+                  if (this.field_F % 50 == 0) {
                     this.l(param0 + 58);
                     break L17;
                   } else {
@@ -2850,21 +2921,26 @@ final class sk implements pa {
                 if (param0 == -9) {
                   break L18;
                 } else {
-                  boolean discarded$1 = ((sk) this).a((oj) null, (byte) 69);
+                  discarded$1 = this.a((oj) null, (byte) 69);
                   break L18;
                 }
               }
               stackOut_91_0 = 0;
               stackIn_92_0 = stackOut_91_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.DA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.DA(" + param0 + ')');
         }
-        return stackIn_92_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_63_0 != 0;
+        } else {
+          return stackIn_92_0 != 0;
+        }
     }
 
     private final void f(int param0) {
@@ -2875,22 +2951,24 @@ final class sk implements pa {
         int var5 = 0;
         lf stackIn_10_0 = null;
         lf stackIn_25_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lf stackOut_9_0 = null;
         lf stackOut_24_0 = null;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            if (((sk) this).field_p == 0) {
-              return;
+            if ((this.field_p ^ -1) == -1) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 var2_int = 0;
-                var3 = new int[((sk) this).field_y];
+                var3 = new int[this.field_y];
                 if (param0 == -24577) {
                   break L1;
                 } else {
-                  ((sk) this).field_i = null;
+                  this.field_i = (lf[]) null;
                   break L1;
                 }
               }
@@ -2898,10 +2976,10 @@ final class sk implements pa {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (var4 >= ((sk) this).field_y) {
+                    if (var4 >= this.field_y) {
                       break L4;
                     } else {
-                      stackOut_9_0 = ((sk) this).field_s[var4];
+                      stackOut_9_0 = this.field_s[var4];
                       stackIn_25_0 = stackOut_9_0;
                       stackIn_10_0 = stackOut_9_0;
                       if (var5 != 0) {
@@ -2911,7 +2989,7 @@ final class sk implements pa {
                           if (stackIn_10_0 == null) {
                             break L5;
                           } else {
-                            if (((sk) this).field_s[var4].b((byte) 115)) {
+                            if (this.field_s[var4].b((byte) 115)) {
                               var3[var2_int] = var4;
                               var2_int++;
                               break L5;
@@ -2930,16 +3008,18 @@ final class sk implements pa {
                     }
                   }
                   if (1 > var2_int) {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    ((sk) this).field_p = ((sk) this).field_p - 1;
+                    this.field_p = this.field_p - 1;
                     var4 = var3[ns.a(false, var2_int, vv.field_b)];
-                    stackOut_24_0 = ((sk) this).field_s[var4];
+                    stackOut_24_0 = this.field_s[var4];
                     stackIn_25_0 = stackOut_24_0;
                     break L3;
                   }
                 }
                 ((lf) (Object) stackIn_25_0).c((byte) 102);
+                decompiledRegionSelector0 = 2;
                 break L0;
               }
             }
@@ -2947,11 +3027,30 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) runtimeException, "sk.P(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sk.P(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     private final void d(boolean param0) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         RuntimeException var2 = null;
         int[] var2_array = null;
         int[] var3 = null;
@@ -2987,6 +3086,7 @@ final class sk implements pa {
         int stackIn_140_0 = 0;
         int stackIn_140_1 = 0;
         lf stackIn_171_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         lf stackOut_3_1 = null;
@@ -3019,8 +3119,8 @@ final class sk implements pa {
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            var2_array = new int[((sk) this).field_s.length];
-            var3 = new int[((sk) this).field_i.length];
+            var2_array = new int[this.field_s.length];
+            var3 = new int[this.field_i.length];
             var4 = 0;
             var5 = 0;
             L1: while (true) {
@@ -3029,11 +3129,11 @@ final class sk implements pa {
                   L4: {
                     L5: {
                       L6: {
-                        if (((sk) this).field_s.length <= var5) {
+                        if (this.field_s.length <= var5) {
                           break L6;
                         } else {
                           stackOut_3_0 = null;
-                          stackOut_3_1 = ((sk) this).field_s[var5];
+                          stackOut_3_1 = this.field_s[var5];
                           stackIn_124_0 = stackOut_3_0;
                           stackIn_124_1 = stackOut_3_1;
                           stackIn_4_0 = stackOut_3_0;
@@ -3041,8 +3141,8 @@ final class sk implements pa {
                           if (var7 != 0) {
                             L7: while (true) {
                               L8: {
-                                if (stackIn_124_0 != (Object) (Object) stackIn_124_1) {
-                                  ((sk) this).field_i[var3[var5]].a(((sk) this).field_C, -92, false);
+                                if (stackIn_124_0 != stackIn_124_1) {
+                                  this.field_i[var3[var5]].a(this.field_C, -92, false);
                                   break L8;
                                 } else {
                                   break L8;
@@ -3050,14 +3150,14 @@ final class sk implements pa {
                               }
                               var5++;
                               if (var7 == 0) {
-                                if (~((sk) this).field_w >= ~var5) {
+                                if ((this.field_w ^ -1) >= (var5 ^ -1)) {
                                   break L5;
                                 } else {
                                   if (var7 != 0) {
                                     break L3;
                                   } else {
                                     stackOut_122_0 = null;
-                                    stackOut_122_1 = ((sk) this).field_i[var3[var5]];
+                                    stackOut_122_1 = this.field_i[var3[var5]];
                                     stackIn_124_0 = stackOut_122_0;
                                     stackIn_124_1 = stackOut_122_1;
                                     continue L7;
@@ -3069,8 +3169,8 @@ final class sk implements pa {
                             }
                           } else {
                             L9: {
-                              if (stackIn_4_0 != (Object) (Object) stackIn_4_1) {
-                                int incrementValue$10 = var4;
+                              if (stackIn_4_0 != stackIn_4_1) {
+                                incrementValue$10 = var4;
                                 var4++;
                                 var2_array[incrementValue$10] = var5;
                                 break L9;
@@ -3087,16 +3187,16 @@ final class sk implements pa {
                           }
                         }
                       }
-                      ((sk) this).field_y = var4;
+                      this.field_y = var4;
                       var4 = 0;
                       var5 = 0;
                       L10: while (true) {
                         L11: {
                           L12: {
-                            if (((sk) this).field_i.length <= var5) {
+                            if (this.field_i.length <= var5) {
                               break L12;
                             } else {
-                              stackOut_12_0 = ((sk) this).field_i[var5];
+                              stackOut_12_0 = this.field_i[var5];
                               stackIn_171_0 = stackOut_12_0;
                               stackIn_13_0 = stackOut_12_0;
                               if (var7 != 0) {
@@ -3106,7 +3206,7 @@ final class sk implements pa {
                                   if (stackIn_13_0 == null) {
                                     break L13;
                                   } else {
-                                    int incrementValue$11 = var4;
+                                    incrementValue$11 = var4;
                                     var4++;
                                     var3[incrementValue$11] = var5;
                                     break L13;
@@ -3121,12 +3221,12 @@ final class sk implements pa {
                               }
                             }
                           }
-                          ((sk) this).field_w = var4;
+                          this.field_w = var4;
                           var5 = 0;
                           L14: while (true) {
                             L15: {
                               L16: {
-                                if (((sk) this).field_y <= var5) {
+                                if (this.field_y <= var5) {
                                   break L16;
                                 } else {
                                   var4 = var5;
@@ -3140,11 +3240,11 @@ final class sk implements pa {
                                     L17: while (true) {
                                       L18: {
                                         L19: {
-                                          if (~var6 <= ~((sk) this).field_y) {
+                                          if ((var6 ^ -1) <= (this.field_y ^ -1)) {
                                             break L19;
                                           } else {
-                                            stackOut_24_0 = ((sk) this).field_s[var2_array[var6]].field_s;
-                                            stackOut_24_1 = ((sk) this).field_s[var2_array[var4]].field_s;
+                                            stackOut_24_0 = this.field_s[var2_array[var6]].field_s;
+                                            stackOut_24_1 = this.field_s[var2_array[var4]].field_s;
                                             stackIn_32_0 = stackOut_24_0;
                                             stackIn_32_1 = stackOut_24_1;
                                             stackIn_25_0 = stackOut_24_0;
@@ -3204,7 +3304,7 @@ final class sk implements pa {
                               L22: while (true) {
                                 L23: {
                                   L24: {
-                                    if (~((sk) this).field_w >= ~var5) {
+                                    if ((this.field_w ^ -1) >= (var5 ^ -1)) {
                                       break L24;
                                     } else {
                                       var4 = var5;
@@ -3218,11 +3318,11 @@ final class sk implements pa {
                                         L25: while (true) {
                                           L26: {
                                             L27: {
-                                              if (~((sk) this).field_w >= ~var6) {
+                                              if ((this.field_w ^ -1) >= (var6 ^ -1)) {
                                                 break L27;
                                               } else {
-                                                stackOut_42_0 = ~((sk) this).field_i[var3[var4]].field_s;
-                                                stackOut_42_1 = ~((sk) this).field_i[var3[var6]].field_s;
+                                                stackOut_42_0 = this.field_i[var3[var4]].field_s ^ -1;
+                                                stackOut_42_1 = this.field_i[var3[var6]].field_s ^ -1;
                                                 stackIn_50_0 = stackOut_42_0;
                                                 stackIn_50_1 = stackOut_42_1;
                                                 stackIn_43_0 = stackOut_42_0;
@@ -3283,11 +3383,11 @@ final class sk implements pa {
                                   } else {
                                     L31: {
                                       L32: {
-                                        if (((sk) this).field_f) {
+                                        if (this.field_f) {
                                           break L32;
                                         } else {
                                           L33: {
-                                            if (((sk) this).field_o) {
+                                            if (this.field_o) {
                                               break L33;
                                             } else {
                                               var5 = 0;
@@ -3296,11 +3396,11 @@ final class sk implements pa {
                                                 L35: {
                                                   L36: {
                                                     L37: {
-                                                      if (~((sk) this).field_y < ~var5) {
+                                                      if ((this.field_y ^ -1) < (var5 ^ -1)) {
                                                         break L37;
                                                       } else {
                                                         stackOut_64_0 = var6;
-                                                        stackOut_64_1 = ((sk) this).field_w;
+                                                        stackOut_64_1 = this.field_w;
                                                         stackIn_70_0 = stackOut_64_0;
                                                         stackIn_70_1 = stackOut_64_1;
                                                         stackIn_65_0 = stackOut_64_0;
@@ -3316,8 +3416,8 @@ final class sk implements pa {
                                                         }
                                                       }
                                                     }
-                                                    stackOut_68_0 = ~var6;
-                                                    stackOut_68_1 = ~((sk) this).field_w;
+                                                    stackOut_68_0 = var6 ^ -1;
+                                                    stackOut_68_1 = this.field_w ^ -1;
                                                     stackIn_70_0 = stackOut_68_0;
                                                     stackIn_70_1 = stackOut_68_1;
                                                     break L36;
@@ -3326,7 +3426,7 @@ final class sk implements pa {
                                                     if (stackIn_70_0 <= stackIn_70_1) {
                                                       break L38;
                                                     } else {
-                                                      if (((sk) this).field_i[var3[var6]] == null) {
+                                                      if (this.field_i[var3[var6]] == null) {
                                                         var6++;
                                                         break L38;
                                                       } else {
@@ -3335,10 +3435,10 @@ final class sk implements pa {
                                                     }
                                                   }
                                                   L39: {
-                                                    if (var5 >= ((sk) this).field_y) {
+                                                    if (var5 >= this.field_y) {
                                                       break L39;
                                                     } else {
-                                                      if (null == ((sk) this).field_s[var2_array[var5]]) {
+                                                      if (null == this.field_s[var2_array[var5]]) {
                                                         var5++;
                                                         break L39;
                                                       } else {
@@ -3347,12 +3447,12 @@ final class sk implements pa {
                                                     }
                                                   }
                                                   L40: {
-                                                    if (((sk) this).field_w > var6) {
+                                                    if (this.field_w > var6) {
                                                       break L40;
                                                     } else {
-                                                      int incrementValue$12 = var5;
+                                                      incrementValue$12 = var5;
                                                       var5++;
-                                                      ((sk) this).field_s[var2_array[incrementValue$12]].a(((sk) this).field_C, -91, true);
+                                                      this.field_s[var2_array[incrementValue$12]].a(this.field_C, -91, true);
                                                       if (var7 == 0) {
                                                         continue L34;
                                                       } else {
@@ -3361,16 +3461,16 @@ final class sk implements pa {
                                                     }
                                                   }
                                                   L41: {
-                                                    if (~((sk) this).field_y >= ~var5) {
+                                                    if ((this.field_y ^ -1) >= (var5 ^ -1)) {
                                                       break L41;
                                                     } else {
                                                       L42: {
-                                                        if (~((sk) this).field_s[var2_array[var5]].field_s < ~((sk) this).field_i[var3[var6]].field_s) {
+                                                        if ((this.field_s[var2_array[var5]].field_s ^ -1) < (this.field_i[var3[var6]].field_s ^ -1)) {
                                                           break L42;
                                                         } else {
-                                                          int incrementValue$13 = var6;
+                                                          incrementValue$13 = var6;
                                                           var6++;
-                                                          ((sk) this).field_i[var3[incrementValue$13]].a(((sk) this).field_C, -38, true);
+                                                          this.field_i[var3[incrementValue$13]].a(this.field_C, -38, true);
                                                           if (var7 == 0) {
                                                             continue L34;
                                                           } else {
@@ -3378,9 +3478,9 @@ final class sk implements pa {
                                                           }
                                                         }
                                                       }
-                                                      int incrementValue$14 = var5;
+                                                      incrementValue$14 = var5;
                                                       var5++;
-                                                      ((sk) this).field_s[var2_array[incrementValue$14]].a(((sk) this).field_C, -106, true);
+                                                      this.field_s[var2_array[incrementValue$14]].a(this.field_C, -106, true);
                                                       if (var7 == 0) {
                                                         continue L34;
                                                       } else {
@@ -3388,9 +3488,9 @@ final class sk implements pa {
                                                       }
                                                     }
                                                   }
-                                                  int incrementValue$15 = var6;
+                                                  incrementValue$15 = var6;
                                                   var6++;
-                                                  ((sk) this).field_i[var3[incrementValue$15]].a(((sk) this).field_C, -64, true);
+                                                  this.field_i[var3[incrementValue$15]].a(this.field_C, -64, true);
                                                   if (var7 == 0) {
                                                     continue L34;
                                                   } else {
@@ -3408,10 +3508,10 @@ final class sk implements pa {
                                           var5 = 0;
                                           L43: while (true) {
                                             L44: {
-                                              if (~((sk) this).field_y >= ~var5) {
+                                              if ((this.field_y ^ -1) >= (var5 ^ -1)) {
                                                 break L44;
                                               } else {
-                                                stackOut_100_0 = ((sk) this).field_s[var2_array[var5]];
+                                                stackOut_100_0 = this.field_s[var2_array[var5]];
                                                 stackIn_171_0 = stackOut_100_0;
                                                 stackIn_101_0 = stackOut_100_0;
                                                 if (var7 != 0) {
@@ -3421,7 +3521,7 @@ final class sk implements pa {
                                                     if (stackIn_101_0 == null) {
                                                       break L45;
                                                     } else {
-                                                      ((sk) this).field_s[var2_array[var5]].a(((sk) this).field_C, -86, true);
+                                                      this.field_s[var2_array[var5]].a(this.field_C, -86, true);
                                                       break L45;
                                                     }
                                                   }
@@ -3444,10 +3544,10 @@ final class sk implements pa {
                                       }
                                       var5 = 0;
                                       L46: while (true) {
-                                        if (~var5 <= ~((sk) this).field_w) {
+                                        if ((var5 ^ -1) <= (this.field_w ^ -1)) {
                                           break L31;
                                         } else {
-                                          stackOut_110_0 = ((sk) this).field_i[var3[var5]];
+                                          stackOut_110_0 = this.field_i[var3[var5]];
                                           stackIn_171_0 = stackOut_110_0;
                                           stackIn_111_0 = stackOut_110_0;
                                           if (var7 != 0) {
@@ -3455,7 +3555,7 @@ final class sk implements pa {
                                           } else {
                                             L47: {
                                               if (stackIn_111_0 != null) {
-                                                ((sk) this).field_i[var3[var5]].a(((sk) this).field_C, -46, true);
+                                                this.field_i[var3[var5]].a(this.field_C, -46, true);
                                                 break L47;
                                               } else {
                                                 break L47;
@@ -3475,24 +3575,24 @@ final class sk implements pa {
                                     break L30;
                                   }
                                 }
-                                if (!((sk) this).field_f) {
+                                if (!this.field_f) {
                                   break L4;
                                 } else {
                                   var5 = 0;
                                   L48: while (true) {
-                                    if (~((sk) this).field_w >= ~var5) {
+                                    if ((this.field_w ^ -1) >= (var5 ^ -1)) {
                                       break L5;
                                     } else {
                                       if (var7 != 0) {
                                         break L3;
                                       } else {
                                         stackOut_122_0 = null;
-                                        stackOut_122_1 = ((sk) this).field_i[var3[var5]];
+                                        stackOut_122_1 = this.field_i[var3[var5]];
                                         stackIn_124_0 = stackOut_122_0;
                                         stackIn_124_1 = stackOut_122_1;
                                         L49: {
-                                          if (stackIn_124_0 != (Object) (Object) stackIn_124_1) {
-                                            ((sk) this).field_i[var3[var5]].a(((sk) this).field_C, -92, false);
+                                          if (stackIn_124_0 != stackIn_124_1) {
+                                            this.field_i[var3[var5]].a(this.field_C, -92, false);
                                             break L49;
                                           } else {
                                             break L49;
@@ -3510,14 +3610,15 @@ final class sk implements pa {
                                 }
                               }
                             } else {
-                              return;
+                              decompiledRegionSelector0 = 0;
+                              break L0;
                             }
                           }
                         }
                         L50: while (true) {
                           L51: {
                             if (stackIn_171_0 != null) {
-                              ((sk) this).field_s[var2_array[var5]].a(((sk) this).field_C, -65, false);
+                              this.field_s[var2_array[var5]].a(this.field_C, -65, false);
                               break L51;
                             } else {
                               break L51;
@@ -3525,13 +3626,13 @@ final class sk implements pa {
                           }
                           var5++;
                           if (var7 == 0) {
-                            if (~var5 <= ~((sk) this).field_y) {
+                            if ((var5 ^ -1) <= (this.field_y ^ -1)) {
                               break L3;
                             } else {
                               if (var7 != 0) {
                                 break L2;
                               } else {
-                                stackOut_169_0 = ((sk) this).field_s[var2_array[var5]];
+                                stackOut_169_0 = this.field_s[var2_array[var5]];
                                 stackIn_171_0 = stackOut_169_0;
                                 continue L50;
                               }
@@ -3549,7 +3650,7 @@ final class sk implements pa {
                     }
                   }
                   L52: {
-                    if (((sk) this).field_o) {
+                    if (this.field_o) {
                       break L52;
                     } else {
                       var5 = 0;
@@ -3558,11 +3659,11 @@ final class sk implements pa {
                         L54: {
                           L55: {
                             L56: {
-                              if (~var5 > ~((sk) this).field_y) {
+                              if ((var5 ^ -1) > (this.field_y ^ -1)) {
                                 break L56;
                               } else {
                                 stackOut_134_0 = var6;
-                                stackOut_134_1 = ((sk) this).field_w;
+                                stackOut_134_1 = this.field_w;
                                 stackIn_140_0 = stackOut_134_0;
                                 stackIn_140_1 = stackOut_134_1;
                                 stackIn_135_0 = stackOut_134_0;
@@ -3578,8 +3679,8 @@ final class sk implements pa {
                                 }
                               }
                             }
-                            stackOut_138_0 = ~var5;
-                            stackOut_138_1 = ~((sk) this).field_y;
+                            stackOut_138_0 = var5 ^ -1;
+                            stackOut_138_1 = this.field_y ^ -1;
                             stackIn_140_0 = stackOut_138_0;
                             stackIn_140_1 = stackOut_138_1;
                             break L55;
@@ -3588,7 +3689,7 @@ final class sk implements pa {
                             if (stackIn_140_0 <= stackIn_140_1) {
                               break L57;
                             } else {
-                              if (((sk) this).field_s[var2_array[var5]] != null) {
+                              if (this.field_s[var2_array[var5]] != null) {
                                 break L57;
                               } else {
                                 var5++;
@@ -3597,10 +3698,10 @@ final class sk implements pa {
                             }
                           }
                           L58: {
-                            if (((sk) this).field_w <= var6) {
+                            if (this.field_w <= var6) {
                               break L58;
                             } else {
-                              if (((sk) this).field_i[var3[var6]] != null) {
+                              if (this.field_i[var3[var6]] != null) {
                                 break L58;
                               } else {
                                 var6++;
@@ -3609,16 +3710,16 @@ final class sk implements pa {
                             }
                           }
                           L59: {
-                            if (((sk) this).field_w <= var6) {
+                            if (this.field_w <= var6) {
                               break L59;
                             } else {
                               L60: {
-                                if (var5 < ((sk) this).field_y) {
+                                if (var5 < this.field_y) {
                                   break L60;
                                 } else {
-                                  int incrementValue$16 = var6;
+                                  incrementValue$16 = var6;
                                   var6++;
-                                  ((sk) this).field_i[var3[incrementValue$16]].a(((sk) this).field_C, -74, false);
+                                  this.field_i[var3[incrementValue$16]].a(this.field_C, -74, false);
                                   if (var7 == 0) {
                                     continue L53;
                                   } else {
@@ -3627,12 +3728,12 @@ final class sk implements pa {
                                 }
                               }
                               L61: {
-                                if (((sk) this).field_s[var2_array[var5]].field_s > ((sk) this).field_i[var3[var6]].field_s) {
+                                if (this.field_s[var2_array[var5]].field_s > this.field_i[var3[var6]].field_s) {
                                   break L61;
                                 } else {
-                                  int incrementValue$17 = var6;
+                                  incrementValue$17 = var6;
                                   var6++;
-                                  ((sk) this).field_i[var3[incrementValue$17]].a(((sk) this).field_C, -120, false);
+                                  this.field_i[var3[incrementValue$17]].a(this.field_C, -120, false);
                                   if (var7 == 0) {
                                     continue L53;
                                   } else {
@@ -3640,9 +3741,9 @@ final class sk implements pa {
                                   }
                                 }
                               }
-                              int incrementValue$18 = var5;
+                              incrementValue$18 = var5;
                               var5++;
-                              ((sk) this).field_s[var2_array[incrementValue$18]].a(((sk) this).field_C, -65, false);
+                              this.field_s[var2_array[incrementValue$18]].a(this.field_C, -65, false);
                               if (var7 == 0) {
                                 continue L53;
                               } else {
@@ -3650,9 +3751,9 @@ final class sk implements pa {
                               }
                             }
                           }
-                          int incrementValue$19 = var5;
+                          incrementValue$19 = var5;
                           var5++;
-                          ((sk) this).field_s[var2_array[incrementValue$19]].a(((sk) this).field_C, -52, false);
+                          this.field_s[var2_array[incrementValue$19]].a(this.field_C, -52, false);
                           if (var7 == 0) {
                             continue L53;
                           } else {
@@ -3669,17 +3770,17 @@ final class sk implements pa {
                   }
                   var5 = 0;
                   L62: while (true) {
-                    if (~var5 <= ~((sk) this).field_y) {
+                    if ((var5 ^ -1) <= (this.field_y ^ -1)) {
                       break L3;
                     } else {
                       if (var7 != 0) {
                         break L2;
                       } else {
-                        stackOut_169_0 = ((sk) this).field_s[var2_array[var5]];
+                        stackOut_169_0 = this.field_s[var2_array[var5]];
                         stackIn_171_0 = stackOut_169_0;
                         L63: {
                           if (stackIn_171_0 != null) {
-                            ((sk) this).field_s[var2_array[var5]].a(((sk) this).field_C, -65, false);
+                            this.field_s[var2_array[var5]].a(this.field_C, -65, false);
                             break L63;
                           } else {
                             break L63;
@@ -3697,13 +3798,19 @@ final class sk implements pa {
                 }
                 break L2;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.S(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.S(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -3717,6 +3824,7 @@ final class sk implements pa {
         int stackIn_36_0 = 0;
         int stackIn_39_0 = 0;
         int stackIn_41_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_20_0 = 0;
         int stackOut_21_0 = 0;
@@ -3731,23 +3839,23 @@ final class sk implements pa {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~var3 <= ~((sk) this).field_i.length) {
+                  if ((var3 ^ -1) <= (this.field_i.length ^ -1)) {
                     break L3;
                   } else {
                     if (var4 != 0) {
                       break L2;
                     } else {
                       L4: {
-                        if (null != ((sk) this).field_i[var3]) {
-                          ((sk) this).field_i[var3].d((byte) 113);
-                          if (!((sk) this).field_i[var3].field_d) {
+                        if (null != this.field_i[var3]) {
+                          this.field_i[var3].d((byte) 113);
+                          if (!this.field_i[var3].field_d) {
                             break L4;
                           } else {
                             L5: {
-                              if (!((sk) this).field_i[var3].field_H) {
+                              if (!this.field_i[var3].field_H) {
                                 break L5;
                               } else {
-                                ((sk) this).field_i[var3] = null;
+                                this.field_i[var3] = null;
                                 if (var4 == 0) {
                                   break L4;
                                 } else {
@@ -3777,10 +3885,10 @@ final class sk implements pa {
               L6: while (true) {
                 L7: {
                   L8: {
-                    if (((sk) this).field_D.length <= var3) {
+                    if (this.field_D.length <= var3) {
                       break L8;
                     } else {
-                      stackOut_20_0 = ~((sk) this).field_D[var3].field_f;
+                      stackOut_20_0 = this.field_D[var3].field_f ^ -1;
                       stackIn_36_0 = stackOut_20_0;
                       stackIn_21_0 = stackOut_20_0;
                       if (var4 != 0) {
@@ -3797,12 +3905,12 @@ final class sk implements pa {
                           }
                         }
                         L10: {
-                          if (!((sk) this).field_D[var3].b(-103)) {
+                          if (!this.field_D[var3].b(-103)) {
                             break L10;
                           } else {
-                            if (~((sk) this).field_O < ~var3) {
-                              ((sk) this).field_i[((sk) this).field_b[var3]].field_d = true;
-                              ((sk) this).field_i[((sk) this).field_b[var3]].a(2, (byte) -103);
+                            if ((this.field_O ^ -1) < (var3 ^ -1)) {
+                              this.field_i[this.field_b[var3]].field_d = true;
+                              this.field_i[this.field_b[var3]].a(2, (byte) -103);
                               break L10;
                             } else {
                               break L10;
@@ -3823,14 +3931,16 @@ final class sk implements pa {
                   break L7;
                 }
                 if (stackIn_36_0 != 0) {
-                  ((sk) this).field_F = 0;
-                  ((sk) this).field_n = ((sk) this).field_L;
+                  this.field_F = 0;
+                  this.field_n = this.field_L;
                   stackOut_38_0 = 1;
                   stackIn_39_0 = stackOut_38_0;
-                  return stackIn_39_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   stackOut_40_0 = 0;
                   stackIn_41_0 = stackOut_40_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
@@ -3839,12 +3949,25 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.L(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.L(" + param0 + ')');
         }
-        return stackIn_41_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_39_0 != 0;
+        } else {
+          return stackIn_41_0 != 0;
+        }
     }
 
     private final void f(byte param0) {
+        int incrementValue$10 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$11 = 0;
         RuntimeException var2 = null;
         int[] var2_array = null;
         int[] var3 = null;
@@ -3897,6 +4020,7 @@ final class sk implements pa {
         int stackIn_201_0 = 0;
         int stackIn_205_0 = 0;
         int stackIn_209_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lf[] stackOut_9_0 = null;
         Object stackOut_20_0 = null;
@@ -3948,13 +4072,13 @@ final class sk implements pa {
         try {
           L0: {
             L1: {
-              if (((sk) this).field_D == null) {
+              if (this.field_D == null) {
                 break L1;
               } else {
-                if (0 != ((sk) this).field_D.length) {
-                  var2_array = new int[((sk) this).field_s.length];
-                  var3 = new int[((sk) this).field_i.length];
-                  var4 = new int[((sk) this).field_D.length];
+                if (0 != this.field_D.length) {
+                  var2_array = new int[this.field_s.length];
+                  var3 = new int[this.field_i.length];
+                  var4 = new int[this.field_D.length];
                   var5 = 0;
                   var6 = 0;
                   L2: while (true) {
@@ -3963,10 +4087,10 @@ final class sk implements pa {
                         L5: {
                           L6: {
                             L7: {
-                              if (((sk) this).field_s.length <= var6) {
+                              if (this.field_s.length <= var6) {
                                 break L7;
                               } else {
-                                stackOut_9_0 = ((sk) this).field_s;
+                                stackOut_9_0 = this.field_s;
                                 stackIn_19_0 = stackOut_9_0;
                                 stackIn_10_0 = stackOut_9_0;
                                 if (var12 != 0) {
@@ -3988,8 +4112,8 @@ final class sk implements pa {
                                         stackIn_23_0 = stackOut_21_0;
                                         stackIn_23_1 = stackOut_21_1;
                                         L9: {
-                                          if (stackIn_23_0 != (Object) (Object) ((sk) this).field_i[var6]) {
-                                            int incrementValue$9 = var5;
+                                          if (stackIn_23_0 != ((sk) (this)).field_i[var6]) {
+                                            incrementValue$9 = var5;
                                             var5++;
                                             var3[incrementValue$9] = var6;
                                             break L9;
@@ -3999,7 +4123,7 @@ final class sk implements pa {
                                         }
                                         var6++;
                                         if (var12 == 0) {
-                                          stackOut_18_0 = ((sk) this).field_i;
+                                          stackOut_18_0 = this.field_i;
                                           stackIn_19_0 = stackOut_18_0;
                                           continue L8;
                                         } else {
@@ -4011,7 +4135,7 @@ final class sk implements pa {
                                 } else {
                                   L10: {
                                     if (stackIn_10_0[var6] != null) {
-                                      int incrementValue$10 = var5;
+                                      incrementValue$10 = var5;
                                       var5++;
                                       var2_array[incrementValue$10] = var6;
                                       break L10;
@@ -4031,7 +4155,7 @@ final class sk implements pa {
                             var5 = 0;
                             var6 = 0;
                             L11: while (true) {
-                              stackOut_18_0 = ((sk) this).field_i;
+                              stackOut_18_0 = this.field_i;
                               stackIn_19_0 = stackOut_18_0;
                               if (stackIn_19_0.length <= var6) {
                                 break L5;
@@ -4050,8 +4174,8 @@ final class sk implements pa {
                                   stackIn_23_0 = stackOut_21_0;
                                   stackIn_23_1 = stackOut_21_1;
                                   L12: {
-                                    if (stackIn_23_0 != (Object) (Object) ((sk) this).field_i[var6]) {
-                                      int incrementValue$9 = var5;
+                                    if (stackIn_23_0 != ((sk) (this)).field_i[var6]) {
+                                      incrementValue$9 = var5;
                                       var5++;
                                       var3[incrementValue$9] = var6;
                                       break L12;
@@ -4071,10 +4195,10 @@ final class sk implements pa {
                           }
                           L13: while (true) {
                             L14: {
-                              if (stackIn_35_0 == (Object) (Object) ((sk) this).field_D[var6]) {
+                              if (stackIn_35_0 == ((sk) (this)).field_D[var6]) {
                                 break L14;
                               } else {
-                                int incrementValue$11 = var5;
+                                incrementValue$11 = var5;
                                 var5++;
                                 var4[incrementValue$11] = var6;
                                 break L14;
@@ -4082,7 +4206,7 @@ final class sk implements pa {
                             }
                             var6++;
                             if (var12 == 0) {
-                              if (var6 >= ((sk) this).field_D.length) {
+                              if (var6 >= this.field_D.length) {
                                 break L4;
                               } else {
                                 if (var12 != 0) {
@@ -4103,7 +4227,7 @@ final class sk implements pa {
                         var5 = 0;
                         var6 = 0;
                         L15: while (true) {
-                          if (var6 >= ((sk) this).field_D.length) {
+                          if (var6 >= this.field_D.length) {
                             break L4;
                           } else {
                             if (var12 != 0) {
@@ -4114,10 +4238,10 @@ final class sk implements pa {
                               stackIn_35_0 = stackOut_33_0;
                               stackIn_35_1 = stackOut_33_1;
                               L16: {
-                                if (stackIn_35_0 == (Object) (Object) ((sk) this).field_D[var6]) {
+                                if (stackIn_35_0 == ((sk) (this)).field_D[var6]) {
                                   break L16;
                                 } else {
-                                  int incrementValue$11 = var5;
+                                  incrementValue$11 = var5;
                                   var5++;
                                   var4[incrementValue$11] = var6;
                                   break L16;
@@ -4139,7 +4263,7 @@ final class sk implements pa {
                     L17: while (true) {
                       L18: {
                         L19: {
-                          if (((sk) this).field_y <= var6) {
+                          if (this.field_y <= var6) {
                             break L19;
                           } else {
                             var5 = var6;
@@ -4153,11 +4277,11 @@ final class sk implements pa {
                               L20: while (true) {
                                 L21: {
                                   L22: {
-                                    if (~var7 <= ~((sk) this).field_y) {
+                                    if ((var7 ^ -1) <= (this.field_y ^ -1)) {
                                       break L22;
                                     } else {
-                                      stackOut_44_0 = ~((sk) this).field_s[var2_array[var7]].field_s;
-                                      stackOut_44_1 = ~((sk) this).field_s[var2_array[var5]].field_s;
+                                      stackOut_44_0 = this.field_s[var2_array[var7]].field_s ^ -1;
+                                      stackOut_44_1 = this.field_s[var2_array[var5]].field_s ^ -1;
                                       stackIn_51_0 = stackOut_44_0;
                                       stackIn_51_1 = stackOut_44_1;
                                       stackIn_45_0 = stackOut_44_0;
@@ -4182,8 +4306,8 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  stackOut_50_0 = ~var6;
-                                  stackOut_50_1 = ~var5;
+                                  stackOut_50_0 = var6 ^ -1;
+                                  stackOut_50_1 = var5 ^ -1;
                                   stackIn_51_0 = stackOut_50_0;
                                   stackIn_51_1 = stackOut_50_1;
                                   break L21;
@@ -4216,7 +4340,7 @@ final class sk implements pa {
                       L25: while (true) {
                         L26: {
                           L27: {
-                            if (~((sk) this).field_w >= ~var6) {
+                            if ((this.field_w ^ -1) >= (var6 ^ -1)) {
                               break L27;
                             } else {
                               var5 = var6;
@@ -4230,11 +4354,11 @@ final class sk implements pa {
                                 L28: while (true) {
                                   L29: {
                                     L30: {
-                                      if (var7 >= ((sk) this).field_w) {
+                                      if (var7 >= this.field_w) {
                                         break L30;
                                       } else {
-                                        stackOut_60_0 = ~((sk) this).field_i[var3[var7]].field_s;
-                                        stackOut_60_1 = ~((sk) this).field_i[var3[var5]].field_s;
+                                        stackOut_60_0 = this.field_i[var3[var7]].field_s ^ -1;
+                                        stackOut_60_1 = this.field_i[var3[var5]].field_s ^ -1;
                                         stackIn_68_0 = stackOut_60_0;
                                         stackIn_68_1 = stackOut_60_1;
                                         stackIn_61_0 = stackOut_60_0;
@@ -4259,8 +4383,8 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    stackOut_67_0 = ~var6;
-                                    stackOut_67_1 = ~var5;
+                                    stackOut_67_0 = var6 ^ -1;
+                                    stackOut_67_1 = var5 ^ -1;
                                     stackIn_68_0 = stackOut_67_0;
                                     stackIn_68_1 = stackOut_67_1;
                                     break L29;
@@ -4293,7 +4417,7 @@ final class sk implements pa {
                         L33: while (true) {
                           L34: {
                             L35: {
-                              if (((sk) this).field_p <= var6) {
+                              if (this.field_p <= var6) {
                                 break L35;
                               } else {
                                 var5 = var6;
@@ -4307,11 +4431,11 @@ final class sk implements pa {
                                   L36: while (true) {
                                     L37: {
                                       L38: {
-                                        if (var7 >= ((sk) this).field_p) {
+                                        if (var7 >= this.field_p) {
                                           break L38;
                                         } else {
-                                          stackOut_77_0 = ((sk) this).field_D[var4[var5]].field_d;
-                                          stackOut_77_1 = ((sk) this).field_D[var4[var7]].field_d;
+                                          stackOut_77_0 = this.field_D[var4[var5]].field_d;
+                                          stackOut_77_1 = this.field_D[var4[var7]].field_d;
                                           stackIn_84_0 = stackOut_77_0;
                                           stackIn_84_1 = stackOut_77_1;
                                           stackIn_78_0 = stackOut_77_0;
@@ -4336,8 +4460,8 @@ final class sk implements pa {
                                           }
                                         }
                                       }
-                                      stackOut_83_0 = ~var5;
-                                      stackOut_83_1 = ~var6;
+                                      stackOut_83_0 = var5 ^ -1;
+                                      stackOut_83_1 = var6 ^ -1;
                                       stackIn_84_0 = stackOut_83_0;
                                       stackIn_84_1 = stackOut_83_1;
                                       break L37;
@@ -4374,16 +4498,16 @@ final class sk implements pa {
                               break L41;
                             } else {
                               L42: {
-                                if (((sk) this).field_o) {
-                                  var7 = ((sk) this).field_w;
+                                if (this.field_o) {
+                                  var7 = this.field_w;
                                   break L42;
                                 } else {
                                   break L42;
                                 }
                               }
                               L43: {
-                                if (((sk) this).field_f) {
-                                  var6 = ((sk) this).field_y;
+                                if (this.field_f) {
+                                  var6 = this.field_y;
                                   break L43;
                                 } else {
                                   break L43;
@@ -4393,11 +4517,11 @@ final class sk implements pa {
                                 L45: {
                                   L46: {
                                     L47: {
-                                      if (~((sk) this).field_y < ~var6) {
+                                      if ((this.field_y ^ -1) < (var6 ^ -1)) {
                                         break L47;
                                       } else {
-                                        stackOut_101_0 = ~((sk) this).field_w;
-                                        stackOut_101_1 = ~var7;
+                                        stackOut_101_0 = this.field_w ^ -1;
+                                        stackOut_101_1 = var7 ^ -1;
                                         stackIn_110_0 = stackOut_101_0;
                                         stackIn_110_1 = stackOut_101_1;
                                         stackIn_102_0 = stackOut_101_0;
@@ -4408,7 +4532,7 @@ final class sk implements pa {
                                           if (stackIn_102_0 < stackIn_102_1) {
                                             break L47;
                                           } else {
-                                            if (~var8 <= ~((sk) this).field_p) {
+                                            if ((var8 ^ -1) <= (this.field_p ^ -1)) {
                                               break L45;
                                             } else {
                                               break L47;
@@ -4417,8 +4541,8 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    stackOut_108_0 = ~var8;
-                                    stackOut_108_1 = ~((sk) this).field_p;
+                                    stackOut_108_0 = var8 ^ -1;
+                                    stackOut_108_1 = this.field_p ^ -1;
                                     stackIn_110_0 = stackOut_108_0;
                                     stackIn_110_1 = stackOut_108_1;
                                     break L46;
@@ -4427,7 +4551,7 @@ final class sk implements pa {
                                     if (stackIn_110_0 <= stackIn_110_1) {
                                       break L48;
                                     } else {
-                                      if (null == ((sk) this).field_D[var4[var8]]) {
+                                      if (null == this.field_D[var4[var8]]) {
                                         var8++;
                                         break L48;
                                       } else {
@@ -4436,10 +4560,10 @@ final class sk implements pa {
                                     }
                                   }
                                   L49: {
-                                    if (var6 >= ((sk) this).field_y) {
+                                    if (var6 >= this.field_y) {
                                       break L49;
                                     } else {
-                                      if (null != ((sk) this).field_s[var2_array[var6]]) {
+                                      if (null != this.field_s[var2_array[var6]]) {
                                         break L49;
                                       } else {
                                         var6++;
@@ -4448,10 +4572,10 @@ final class sk implements pa {
                                     }
                                   }
                                   L50: {
-                                    if (var7 >= ((sk) this).field_w) {
+                                    if (var7 >= this.field_w) {
                                       break L50;
                                     } else {
-                                      if (((sk) this).field_i[var3[var7]] == null) {
+                                      if (this.field_i[var3[var7]] == null) {
                                         var7++;
                                         break L50;
                                       } else {
@@ -4460,8 +4584,8 @@ final class sk implements pa {
                                     }
                                   }
                                   L51: {
-                                    if (var8 < ((sk) this).field_p) {
-                                      stackOut_133_0 = ((sk) this).field_D[var4[var8]].field_d;
+                                    if (var8 < this.field_p) {
+                                      stackOut_133_0 = this.field_D[var4[var8]].field_d;
                                       stackIn_134_0 = stackOut_133_0;
                                       break L51;
                                     } else {
@@ -4472,8 +4596,8 @@ final class sk implements pa {
                                   }
                                   L52: {
                                     var9 = stackIn_134_0;
-                                    if (((sk) this).field_y > var6) {
-                                      stackOut_137_0 = ((sk) this).field_s[var2_array[var6]].field_s;
+                                    if (this.field_y > var6) {
+                                      stackOut_137_0 = this.field_s[var2_array[var6]].field_s;
                                       stackIn_138_0 = stackOut_137_0;
                                       break L52;
                                     } else {
@@ -4484,12 +4608,12 @@ final class sk implements pa {
                                   }
                                   L53: {
                                     var10 = stackIn_138_0;
-                                    if (((sk) this).field_w <= var7) {
+                                    if (this.field_w <= var7) {
                                       stackOut_141_0 = 100000;
                                       stackIn_142_0 = stackOut_141_0;
                                       break L53;
                                     } else {
-                                      stackOut_139_0 = ((sk) this).field_i[var3[var7]].field_s;
+                                      stackOut_139_0 = this.field_i[var3[var7]].field_s;
                                       stackIn_142_0 = stackOut_139_0;
                                       break L53;
                                     }
@@ -4497,15 +4621,15 @@ final class sk implements pa {
                                   L54: {
                                     L55: {
                                       var11 = stackIn_142_0;
-                                      if (~var11 >= ~var9) {
+                                      if ((var11 ^ -1) >= (var9 ^ -1)) {
                                         break L55;
                                       } else {
                                         if (var9 >= var10) {
                                           break L55;
                                         } else {
-                                          int incrementValue$12 = var8;
+                                          incrementValue$12 = var8;
                                           var8++;
-                                          ((sk) this).field_D[var4[incrementValue$12]].a(true, -8, true, ((sk) this).field_C);
+                                          this.field_D[var4[incrementValue$12]].a(true, -8, true, this.field_C);
                                           if (var12 == 0) {
                                             break L54;
                                           } else {
@@ -4515,12 +4639,12 @@ final class sk implements pa {
                                       }
                                     }
                                     L56: {
-                                      if (~var11 >= ~var10) {
+                                      if ((var11 ^ -1) >= (var10 ^ -1)) {
                                         break L56;
                                       } else {
-                                        int incrementValue$13 = var6;
+                                        incrementValue$13 = var6;
                                         var6++;
-                                        ((sk) this).field_s[var2_array[incrementValue$13]].a(((sk) this).field_C, param0 ^ 58, true);
+                                        this.field_s[var2_array[incrementValue$13]].a(this.field_C, param0 ^ 58, true);
                                         if (var12 == 0) {
                                           break L54;
                                         } else {
@@ -4528,9 +4652,9 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    int incrementValue$14 = var7;
+                                    incrementValue$14 = var7;
                                     var7++;
-                                    ((sk) this).field_i[var3[incrementValue$14]].a(((sk) this).field_C, param0 + -97, true);
+                                    this.field_i[var3[incrementValue$14]].a(this.field_C, param0 + -97, true);
                                     break L54;
                                   }
                                   if (var12 == 0) {
@@ -4548,10 +4672,10 @@ final class sk implements pa {
                             }
                           }
                           L57: {
-                            if (!((sk) this).field_f) {
+                            if (!this.field_f) {
                               break L57;
                             } else {
-                              var6 = ((sk) this).field_y;
+                              var6 = this.field_y;
                               break L57;
                             }
                           }
@@ -4564,8 +4688,8 @@ final class sk implements pa {
                             }
                           }
                           L59: {
-                            if (((sk) this).field_o) {
-                              var7 = ((sk) this).field_w;
+                            if (this.field_o) {
+                              var7 = this.field_w;
                               break L59;
                             } else {
                               break L59;
@@ -4575,11 +4699,11 @@ final class sk implements pa {
                             L61: {
                               L62: {
                                 L63: {
-                                  if (var6 < ((sk) this).field_y) {
+                                  if (var6 < this.field_y) {
                                     break L63;
                                   } else {
-                                    stackOut_169_0 = ~((sk) this).field_w;
-                                    stackOut_169_1 = ~var7;
+                                    stackOut_169_0 = this.field_w ^ -1;
+                                    stackOut_169_1 = var7 ^ -1;
                                     stackIn_178_0 = stackOut_169_0;
                                     stackIn_178_1 = stackOut_169_1;
                                     stackIn_170_0 = stackOut_169_0;
@@ -4590,7 +4714,7 @@ final class sk implements pa {
                                       if (stackIn_170_0 < stackIn_170_1) {
                                         break L63;
                                       } else {
-                                        if (var8 >= ((sk) this).field_p) {
+                                        if (var8 >= this.field_p) {
                                           break L61;
                                         } else {
                                           break L63;
@@ -4599,8 +4723,8 @@ final class sk implements pa {
                                     }
                                   }
                                 }
-                                stackOut_176_0 = ~((sk) this).field_p;
-                                stackOut_176_1 = ~var8;
+                                stackOut_176_0 = this.field_p ^ -1;
+                                stackOut_176_1 = var8 ^ -1;
                                 stackIn_178_0 = stackOut_176_0;
                                 stackIn_178_1 = stackOut_176_1;
                                 break L62;
@@ -4609,7 +4733,7 @@ final class sk implements pa {
                                 if (stackIn_178_0 >= stackIn_178_1) {
                                   break L64;
                                 } else {
-                                  if (null != ((sk) this).field_D[var4[var8]]) {
+                                  if (null != this.field_D[var4[var8]]) {
                                     break L64;
                                   } else {
                                     var8++;
@@ -4618,10 +4742,10 @@ final class sk implements pa {
                                 }
                               }
                               L65: {
-                                if (~var6 <= ~((sk) this).field_y) {
+                                if ((var6 ^ -1) <= (this.field_y ^ -1)) {
                                   break L65;
                                 } else {
-                                  if (null == ((sk) this).field_s[var2_array[var6]]) {
+                                  if (null == this.field_s[var2_array[var6]]) {
                                     var6++;
                                     break L65;
                                   } else {
@@ -4630,10 +4754,10 @@ final class sk implements pa {
                                 }
                               }
                               L66: {
-                                if (~((sk) this).field_w >= ~var7) {
+                                if ((this.field_w ^ -1) >= (var7 ^ -1)) {
                                   break L66;
                                 } else {
-                                  if (((sk) this).field_i[var3[var7]] != null) {
+                                  if (this.field_i[var3[var7]] != null) {
                                     break L66;
                                   } else {
                                     var7++;
@@ -4642,36 +4766,36 @@ final class sk implements pa {
                                 }
                               }
                               L67: {
-                                if (~((sk) this).field_p >= ~var8) {
+                                if ((this.field_p ^ -1) >= (var8 ^ -1)) {
                                   stackOut_200_0 = 100000;
                                   stackIn_201_0 = stackOut_200_0;
                                   break L67;
                                 } else {
-                                  stackOut_198_0 = ((sk) this).field_D[var4[var8]].field_d;
+                                  stackOut_198_0 = this.field_D[var4[var8]].field_d;
                                   stackIn_201_0 = stackOut_198_0;
                                   break L67;
                                 }
                               }
                               L68: {
                                 var9 = stackIn_201_0;
-                                if (var6 >= ((sk) this).field_y) {
+                                if (var6 >= this.field_y) {
                                   stackOut_204_0 = 100000;
                                   stackIn_205_0 = stackOut_204_0;
                                   break L68;
                                 } else {
-                                  stackOut_202_0 = ((sk) this).field_s[var2_array[var6]].field_s;
+                                  stackOut_202_0 = this.field_s[var2_array[var6]].field_s;
                                   stackIn_205_0 = stackOut_202_0;
                                   break L68;
                                 }
                               }
                               L69: {
                                 var10 = stackIn_205_0;
-                                if (var7 >= ((sk) this).field_w) {
+                                if (var7 >= this.field_w) {
                                   stackOut_208_0 = 100000;
                                   stackIn_209_0 = stackOut_208_0;
                                   break L69;
                                 } else {
-                                  stackOut_206_0 = ((sk) this).field_i[var3[var7]].field_s;
+                                  stackOut_206_0 = this.field_i[var3[var7]].field_s;
                                   stackIn_209_0 = stackOut_206_0;
                                   break L69;
                                 }
@@ -4680,7 +4804,7 @@ final class sk implements pa {
                                 L71: {
                                   L72: {
                                     var11 = stackIn_209_0;
-                                    if (~var9 <= ~var11) {
+                                    if ((var9 ^ -1) <= (var11 ^ -1)) {
                                       break L72;
                                     } else {
                                       if (var10 > var9) {
@@ -4694,9 +4818,9 @@ final class sk implements pa {
                                     if (var10 >= var11) {
                                       break L73;
                                     } else {
-                                      int incrementValue$15 = var6;
+                                      incrementValue$15 = var6;
                                       var6++;
-                                      ((sk) this).field_s[var2_array[incrementValue$15]].a(((sk) this).field_C, param0 + -93, false);
+                                      this.field_s[var2_array[incrementValue$15]].a(this.field_C, param0 + -93, false);
                                       if (var12 == 0) {
                                         break L70;
                                       } else {
@@ -4704,18 +4828,18 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  int incrementValue$16 = var7;
+                                  incrementValue$16 = var7;
                                   var7++;
-                                  ((sk) this).field_i[var3[incrementValue$16]].a(((sk) this).field_C, param0 + -51, false);
+                                  this.field_i[var3[incrementValue$16]].a(this.field_C, param0 + -51, false);
                                   if (var12 == 0) {
                                     break L70;
                                   } else {
                                     break L71;
                                   }
                                 }
-                                int incrementValue$17 = var8;
+                                incrementValue$17 = var8;
                                 var8++;
-                                ((sk) this).field_D[var4[incrementValue$17]].a(true, -8, false, ((sk) this).field_C);
+                                this.field_D[var4[incrementValue$17]].a(true, -8, false, this.field_C);
                                 break L70;
                               }
                               if (var12 == 0) {
@@ -4724,6 +4848,7 @@ final class sk implements pa {
                                 break L61;
                               }
                             }
+                            decompiledRegionSelector0 = 1;
                             break L0;
                           }
                         }
@@ -4736,23 +4861,29 @@ final class sk implements pa {
               }
             }
             this.d(true);
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.AA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.AA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final void b(boolean param0) {
         try {
-            this.a(((sk) this).field_i, 0, ((sk) this).field_J, ((sk) this).field_u, ((sk) this).field_s);
-            this.a(((sk) this).field_s, 0, ((sk) this).field_u, ((sk) this).field_J, ((sk) this).field_i);
-            this.a(((sk) this).field_s, ((sk) this).field_J, ((sk) this).field_u, ((sk) this).field_i, param0);
-            this.a(((sk) this).field_i, ((sk) this).field_u, ((sk) this).field_J, ((sk) this).field_s, param0);
+            this.a(this.field_i, 0, this.field_J, this.field_u, this.field_s);
+            this.a(this.field_s, 0, this.field_u, this.field_J, this.field_i);
+            this.a(this.field_s, this.field_J, this.field_u, this.field_i, param0);
+            this.a(this.field_i, this.field_u, this.field_J, this.field_s, param0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sk.N(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "sk.N(" + param0 + ')');
         }
     }
 
@@ -4800,38 +4931,38 @@ final class sk implements pa {
             }
             L2: {
               L3: {
-                if (~((sk) this).field_u != ~((sk) this).field_J) {
+                if ((this.field_u ^ -1) != (this.field_J ^ -1)) {
                   break L3;
                 } else {
                   var2_int = 0;
                   L4: while (true) {
                     L5: {
-                      if (var2_int >= 3 + -((sk) this).field_J) {
+                      if (var2_int >= 3 + -this.field_J) {
                         break L5;
                       } else {
                         if (var4 != 0) {
                           break L2;
                         } else {
                           L6: {
-                            if (null == ((sk) this).field_s[var2_int]) {
+                            if (null == this.field_s[var2_int]) {
                               break L6;
                             } else {
-                              if (null == ((sk) this).field_i[var2_int]) {
+                              if (null == this.field_i[var2_int]) {
                                 break L6;
                               } else {
-                                if (!((sk) this).field_s[var2_int].b((byte) -74)) {
+                                if (!this.field_s[var2_int].b((byte) -74)) {
                                   break L6;
                                 } else {
-                                  if (!((sk) this).field_i[var2_int].b((byte) -110)) {
+                                  if (!this.field_i[var2_int].b((byte) -110)) {
                                     break L6;
                                   } else {
                                     L7: {
                                       if (ns.a(false, 1000, vv.field_b) < 500) {
                                         break L7;
                                       } else {
-                                        ((sk) this).field_s[var2_int].a(2, (byte) -113);
-                                        ((sk) this).field_s[var2_int].field_m = je.field_K[((sk) this).field_a][0];
-                                        ((sk) this).field_i[var2_int].a(1, (byte) -119);
+                                        this.field_s[var2_int].a(2, (byte) -113);
+                                        this.field_s[var2_int].field_m = je.field_K[this.field_a][0];
+                                        this.field_i[var2_int].a(1, (byte) -119);
                                         if (var4 == 0) {
                                           break L6;
                                         } else {
@@ -4839,9 +4970,9 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    ((sk) this).field_s[var2_int].a(1, (byte) -116);
-                                    ((sk) this).field_i[var2_int].field_f = 2;
-                                    ((sk) this).field_i[var2_int].field_m = je.field_K[((sk) this).field_c][0];
+                                    this.field_s[var2_int].a(1, (byte) -116);
+                                    this.field_i[var2_int].field_f = 2;
+                                    this.field_i[var2_int].field_m = je.field_K[this.field_c][0];
                                     break L6;
                                   }
                                 }
@@ -4867,10 +4998,10 @@ final class sk implements pa {
               }
               L8: {
                 L9: {
-                  if (2 == ((sk) this).field_J) {
+                  if (2 == this.field_J) {
                     break L9;
                   } else {
-                    if (((sk) this).field_u != 2) {
+                    if (-3 != (this.field_u ^ -1)) {
                       break L8;
                     } else {
                       break L9;
@@ -4882,10 +5013,10 @@ final class sk implements pa {
                 L10: while (true) {
                   L11: {
                     L12: {
-                      if (~(-((sk) this).field_J + 3) >= ~var3) {
+                      if ((-this.field_J + 3 ^ -1) >= (var3 ^ -1)) {
                         break L12;
                       } else {
-                        stackOut_38_0 = ((sk) this).field_s[var3];
+                        stackOut_38_0 = this.field_s[var3];
                         stackIn_139_0 = stackOut_38_0;
                         stackIn_39_0 = stackOut_38_0;
                         if (var4 != 0) {
@@ -4894,21 +5025,21 @@ final class sk implements pa {
                             L14: while (true) {
                               var3++;
                               if (var4 == 0) {
-                                if (~var3 <= ~(3 - ((sk) this).field_u)) {
+                                if ((var3 ^ -1) <= (3 - this.field_u ^ -1)) {
                                   break L11;
                                 } else {
                                   if (var4 != 0) {
                                     break L2;
                                   } else {
                                     stackOut_134_0 = null;
-                                    stackOut_134_1 = ((sk) this).field_i[var3];
+                                    stackOut_134_1 = this.field_i[var3];
                                     stackIn_136_0 = stackOut_134_0;
                                     stackIn_136_1 = stackOut_134_1;
-                                    if (stackIn_136_0 == (Object) (Object) stackIn_136_1) {
+                                    if (stackIn_136_0 == stackIn_136_1) {
                                       continue L14;
                                     } else {
-                                      ((sk) this).field_i[var3].field_f = 1;
-                                      stackOut_137_0 = ((sk) this).field_i[var3];
+                                      this.field_i[var3].field_f = 1;
+                                      stackOut_137_0 = this.field_i[var3];
                                       stackIn_139_0 = stackOut_137_0;
                                       continue L13;
                                     }
@@ -4924,7 +5055,7 @@ final class sk implements pa {
                             if (stackIn_39_0 == null) {
                               break L15;
                             } else {
-                              if (!((sk) this).field_s[var3].b((byte) -74)) {
+                              if (!this.field_s[var3].b((byte) -74)) {
                                 var2_int = 0;
                                 break L15;
                               } else {
@@ -4945,11 +5076,11 @@ final class sk implements pa {
                     L16: while (true) {
                       L17: {
                         L18: {
-                          if (~var3 <= ~(-((sk) this).field_u + 3)) {
+                          if ((var3 ^ -1) <= (-this.field_u + 3 ^ -1)) {
                             break L18;
                           } else {
                             stackOut_51_0 = null;
-                            stackOut_51_1 = ((sk) this).field_i[var3];
+                            stackOut_51_1 = this.field_i[var3];
                             stackIn_136_0 = stackOut_51_0;
                             stackIn_136_1 = stackOut_51_1;
                             stackIn_52_0 = stackOut_51_0;
@@ -4958,10 +5089,10 @@ final class sk implements pa {
                               break L17;
                             } else {
                               L19: {
-                                if (stackIn_52_0 == (Object) (Object) stackIn_52_1) {
+                                if (stackIn_52_0 == stackIn_52_1) {
                                   break L19;
                                 } else {
-                                  if (((sk) this).field_i[var3].b((byte) 30)) {
+                                  if (this.field_i[var3].b((byte) 30)) {
                                     break L19;
                                   } else {
                                     var2_int = 0;
@@ -4982,24 +5113,24 @@ final class sk implements pa {
                           break L11;
                         } else {
                           L20: {
-                            if (ns.a(false, 1000, vv.field_b) >= 500) {
+                            if (-501 >= (ns.a(false, 1000, vv.field_b) ^ -1)) {
                               break L20;
                             } else {
                               L21: {
                                 L22: {
                                   L23: {
                                     L24: {
-                                      if (((sk) this).field_J == 2) {
+                                      if ((this.field_J ^ -1) == -3) {
                                         break L24;
                                       } else {
                                         var3 = 0;
                                         L25: while (true) {
                                           L26: {
-                                            if (var3 >= 3 - ((sk) this).field_J) {
+                                            if (var3 >= 3 - this.field_J) {
                                               break L26;
                                             } else {
                                               stackOut_69_0 = null;
-                                              stackOut_69_1 = ((sk) this).field_s[var3];
+                                              stackOut_69_1 = this.field_s[var3];
                                               stackIn_91_0 = stackOut_69_0;
                                               stackIn_91_1 = stackOut_69_1;
                                               stackIn_70_0 = stackOut_69_0;
@@ -5007,24 +5138,24 @@ final class sk implements pa {
                                               if (var4 != 0) {
                                                 L27: while (true) {
                                                   L28: {
-                                                    if (stackIn_91_0 == (Object) (Object) stackIn_91_1) {
+                                                    if (stackIn_91_0 == stackIn_91_1) {
                                                       break L28;
                                                     } else {
-                                                      ((sk) this).field_i[var3].field_f = 2;
-                                                      ((sk) this).field_i[var3].field_m = je.field_K[((sk) this).field_c][0] + -ns.a(false, 5, vv.field_b);
+                                                      this.field_i[var3].field_f = 2;
+                                                      this.field_i[var3].field_m = je.field_K[this.field_c][0] + -ns.a(false, 5, vv.field_b);
                                                       break L28;
                                                     }
                                                   }
                                                   var3++;
                                                   if (var4 == 0) {
-                                                    if (3 + -((sk) this).field_u <= var3) {
+                                                    if (3 + -this.field_u <= var3) {
                                                       break L22;
                                                     } else {
                                                       if (var4 != 0) {
                                                         break L11;
                                                       } else {
                                                         stackOut_89_0 = null;
-                                                        stackOut_89_1 = ((sk) this).field_i[var3];
+                                                        stackOut_89_1 = this.field_i[var3];
                                                         stackIn_91_0 = stackOut_89_0;
                                                         stackIn_91_1 = stackOut_89_1;
                                                         continue L27;
@@ -5036,18 +5167,18 @@ final class sk implements pa {
                                                 }
                                               } else {
                                                 L29: {
-                                                  if (stackIn_70_0 != (Object) (Object) stackIn_70_1) {
-                                                    ((sk) this).field_s[var3].field_f = 1;
+                                                  if (stackIn_70_0 != stackIn_70_1) {
+                                                    this.field_s[var3].field_f = 1;
                                                     break L29;
                                                   } else {
                                                     break L29;
                                                   }
                                                 }
                                                 L30: {
-                                                  if (null == ((sk) this).field_s[var3]) {
+                                                  if (null == this.field_s[var3]) {
                                                     break L30;
                                                   } else {
-                                                    ((sk) this).field_s[var3].field_m = ns.a(false, 5, vv.field_b);
+                                                    this.field_s[var3].field_m = ns.a(false, 5, vv.field_b);
                                                     break L30;
                                                   }
                                                 }
@@ -5068,34 +5199,34 @@ final class sk implements pa {
                                         }
                                       }
                                     }
-                                    if (null == ((sk) this).field_s[0]) {
+                                    if (null == this.field_s[0]) {
                                       break L23;
                                     } else {
-                                      ((sk) this).field_s[0].a(1, (byte) -86);
+                                      this.field_s[0].a(1, (byte) -86);
                                       break L23;
                                     }
                                   }
-                                  if (2 == ((sk) this).field_u) {
+                                  if (2 == this.field_u) {
                                     break L21;
                                   } else {
                                     var3 = 0;
                                     L31: while (true) {
-                                      if (3 + -((sk) this).field_u <= var3) {
+                                      if (3 + -this.field_u <= var3) {
                                         break L22;
                                       } else {
                                         if (var4 != 0) {
                                           break L11;
                                         } else {
                                           stackOut_89_0 = null;
-                                          stackOut_89_1 = ((sk) this).field_i[var3];
+                                          stackOut_89_1 = this.field_i[var3];
                                           stackIn_91_0 = stackOut_89_0;
                                           stackIn_91_1 = stackOut_89_1;
                                           L32: {
-                                            if (stackIn_91_0 == (Object) (Object) stackIn_91_1) {
+                                            if (stackIn_91_0 == stackIn_91_1) {
                                               break L32;
                                             } else {
-                                              ((sk) this).field_i[var3].field_f = 2;
-                                              ((sk) this).field_i[var3].field_m = je.field_K[((sk) this).field_c][0] + -ns.a(false, 5, vv.field_b);
+                                              this.field_i[var3].field_f = 2;
+                                              this.field_i[var3].field_m = je.field_K[this.field_c][0] + -ns.a(false, 5, vv.field_b);
                                               break L32;
                                             }
                                           }
@@ -5116,9 +5247,9 @@ final class sk implements pa {
                                   break L21;
                                 }
                               }
-                              if (((sk) this).field_i[0] != null) {
-                                ((sk) this).field_i[0].field_f = 2;
-                                ((sk) this).field_i[0].field_m = je.field_K[((sk) this).field_c][0];
+                              if (this.field_i[0] != null) {
+                                this.field_i[0].field_f = 2;
+                                this.field_i[0].field_m = je.field_K[this.field_c][0];
                                 if (var4 == 0) {
                                   break L11;
                                 } else {
@@ -5131,14 +5262,14 @@ final class sk implements pa {
                           }
                           L33: {
                             L34: {
-                              if (((sk) this).field_J != 2) {
+                              if ((this.field_J ^ -1) != -3) {
                                 break L34;
                               } else {
-                                if (null == ((sk) this).field_s[0]) {
+                                if (null == this.field_s[0]) {
                                   break L33;
                                 } else {
-                                  ((sk) this).field_s[0].field_f = 2;
-                                  ((sk) this).field_s[0].field_m = je.field_K[((sk) this).field_a][0];
+                                  this.field_s[0].field_f = 2;
+                                  this.field_s[0].field_m = je.field_K[this.field_a][0];
                                   if (var4 == 0) {
                                     break L33;
                                   } else {
@@ -5149,11 +5280,11 @@ final class sk implements pa {
                             }
                             var3 = 0;
                             L35: while (true) {
-                              if (~var3 <= ~(-((sk) this).field_J + 3)) {
+                              if ((var3 ^ -1) <= (-this.field_J + 3 ^ -1)) {
                                 break L33;
                               } else {
                                 stackOut_113_0 = null;
-                                stackOut_113_1 = ((sk) this).field_s[var3];
+                                stackOut_113_1 = this.field_s[var3];
                                 stackIn_136_0 = stackOut_113_0;
                                 stackIn_136_1 = stackOut_113_1;
                                 stackIn_114_0 = stackOut_113_0;
@@ -5162,16 +5293,16 @@ final class sk implements pa {
                                   break L17;
                                 } else {
                                   L36: {
-                                    if (stackIn_114_0 != (Object) (Object) stackIn_114_1) {
-                                      ((sk) this).field_s[var3].field_f = 2;
+                                    if (stackIn_114_0 != stackIn_114_1) {
+                                      this.field_s[var3].field_f = 2;
                                       break L36;
                                     } else {
                                       break L36;
                                     }
                                   }
                                   L37: {
-                                    if (((sk) this).field_s[var3] != null) {
-                                      ((sk) this).field_s[var3].field_m = je.field_K[((sk) this).field_a][0] + -ns.a(false, 5, vv.field_b);
+                                    if (this.field_s[var3] != null) {
+                                      this.field_s[var3].field_m = je.field_K[this.field_a][0] + -ns.a(false, 5, vv.field_b);
                                       break L37;
                                     } else {
                                       break L37;
@@ -5188,11 +5319,11 @@ final class sk implements pa {
                             }
                           }
                           L38: {
-                            if (((sk) this).field_u != 2) {
+                            if ((this.field_u ^ -1) != -3) {
                               break L38;
                             } else {
-                              if (((sk) this).field_i[0] != null) {
-                                ((sk) this).field_i[0].a(1, (byte) -122);
+                              if (this.field_i[0] != null) {
+                                this.field_i[0].a(1, (byte) -122);
                                 if (var4 == 0) {
                                   break L11;
                                 } else {
@@ -5205,22 +5336,22 @@ final class sk implements pa {
                           }
                           var3 = 0;
                           L39: while (true) {
-                            if (~var3 <= ~(3 - ((sk) this).field_u)) {
+                            if ((var3 ^ -1) <= (3 - this.field_u ^ -1)) {
                               break L11;
                             } else {
                               if (var4 != 0) {
                                 break L2;
                               } else {
                                 stackOut_134_0 = null;
-                                stackOut_134_1 = ((sk) this).field_i[var3];
+                                stackOut_134_1 = this.field_i[var3];
                                 stackIn_136_0 = stackOut_134_0;
                                 stackIn_136_1 = stackOut_134_1;
                                 L40: {
-                                  if (stackIn_136_0 == (Object) (Object) stackIn_136_1) {
+                                  if (stackIn_136_0 == stackIn_136_1) {
                                     break L40;
                                   } else {
-                                    ((sk) this).field_i[var3].field_f = 1;
-                                    stackOut_137_0 = ((sk) this).field_i[var3];
+                                    this.field_i[var3].field_f = 1;
+                                    stackOut_137_0 = this.field_i[var3];
                                     stackIn_139_0 = stackOut_137_0;
                                     stackIn_139_0.field_m = ns.a(false, 5, vv.field_b);
                                     break L40;
@@ -5239,11 +5370,11 @@ final class sk implements pa {
                       }
                       L41: while (true) {
                         L42: {
-                          if (stackIn_136_0 == (Object) (Object) stackIn_136_1) {
+                          if (stackIn_136_0 == stackIn_136_1) {
                             break L42;
                           } else {
-                            ((sk) this).field_i[var3].field_f = 1;
-                            stackOut_137_0 = ((sk) this).field_i[var3];
+                            this.field_i[var3].field_f = 1;
+                            stackOut_137_0 = this.field_i[var3];
                             stackIn_139_0 = stackOut_137_0;
                             stackIn_139_0.field_m = ns.a(false, 5, vv.field_b);
                             break L42;
@@ -5251,14 +5382,14 @@ final class sk implements pa {
                         }
                         var3++;
                         if (var4 == 0) {
-                          if (~var3 <= ~(3 - ((sk) this).field_u)) {
+                          if ((var3 ^ -1) <= (3 - this.field_u ^ -1)) {
                             break L11;
                           } else {
                             if (var4 != 0) {
                               break L2;
                             } else {
                               stackOut_134_0 = null;
-                              stackOut_134_1 = ((sk) this).field_i[var3];
+                              stackOut_134_1 = this.field_i[var3];
                               stackIn_136_0 = stackOut_134_0;
                               stackIn_136_1 = stackOut_134_1;
                               continue L41;
@@ -5278,25 +5409,25 @@ final class sk implements pa {
                 }
               }
               L43: {
-                if (((sk) this).field_J == 0) {
+                if (-1 == (this.field_J ^ -1)) {
                   break L43;
                 } else {
                   L44: {
-                    if (null == ((sk) this).field_s[0]) {
+                    if (null == this.field_s[0]) {
                       break L44;
                     } else {
-                      if (!((sk) this).field_s[0].b((byte) -61)) {
+                      if (!this.field_s[0].b((byte) -61)) {
                         break L44;
                       } else {
                         L45: {
                           L46: {
-                            if (null == ((sk) this).field_i[0]) {
+                            if (null == this.field_i[0]) {
                               break L46;
                             } else {
-                              if (!((sk) this).field_i[0].b((byte) 104)) {
+                              if (!this.field_i[0].b((byte) 104)) {
                                 break L46;
                               } else {
-                                if (null == ((sk) this).field_i[1]) {
+                                if (null == this.field_i[1]) {
                                   break L45;
                                 } else {
                                   break L46;
@@ -5304,10 +5435,10 @@ final class sk implements pa {
                               }
                             }
                           }
-                          if (((sk) this).field_i[1] == null) {
+                          if (this.field_i[1] == null) {
                             break L44;
                           } else {
-                            if (((sk) this).field_i[1].b((byte) 33)) {
+                            if (this.field_i[1].b((byte) 33)) {
                               break L45;
                             } else {
                               break L44;
@@ -5319,23 +5450,23 @@ final class sk implements pa {
                             break L47;
                           } else {
                             L48: {
-                              if (null != ((sk) this).field_s[0]) {
-                                ((sk) this).field_s[0].field_m = je.field_K[((sk) this).field_a][0] + -ns.a(false, 5, vv.field_b);
-                                ((sk) this).field_s[0].field_f = 2;
+                              if (null != this.field_s[0]) {
+                                this.field_s[0].field_m = je.field_K[this.field_a][0] + -ns.a(false, 5, vv.field_b);
+                                this.field_s[0].field_f = 2;
                                 break L48;
                               } else {
                                 break L48;
                               }
                             }
                             L49: {
-                              if (((sk) this).field_i[1] == null) {
+                              if (this.field_i[1] == null) {
                                 break L49;
                               } else {
-                                if (!((sk) this).field_i[1].b((byte) -80)) {
+                                if (!this.field_i[1].b((byte) -80)) {
                                   break L49;
                                 } else {
-                                  ((sk) this).field_i[1].field_m = je.field_K[((sk) this).field_c][0] + -ns.a(false, 5, vv.field_b);
-                                  ((sk) this).field_i[1].field_f = 1;
+                                  this.field_i[1].field_m = je.field_K[this.field_c][0] + -ns.a(false, 5, vv.field_b);
+                                  this.field_i[1].field_f = 1;
                                   if (var4 == 0) {
                                     break L44;
                                   } else {
@@ -5344,11 +5475,11 @@ final class sk implements pa {
                                 }
                               }
                             }
-                            if (((sk) this).field_i[0] == null) {
+                            if (this.field_i[0] == null) {
                               break L44;
                             } else {
-                              ((sk) this).field_i[0].field_m = je.field_K[((sk) this).field_c][0] - ns.a(false, 5, vv.field_b);
-                              ((sk) this).field_i[0].field_f = 1;
+                              this.field_i[0].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                              this.field_i[0].field_f = 1;
                               if (var4 == 0) {
                                 break L44;
                               } else {
@@ -5358,9 +5489,9 @@ final class sk implements pa {
                           }
                         }
                         L50: {
-                          if (((sk) this).field_s[0] != null) {
-                            ((sk) this).field_s[0].field_m = ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_s[0].field_f = 1;
+                          if (this.field_s[0] != null) {
+                            this.field_s[0].field_m = ns.a(false, 5, vv.field_b);
+                            this.field_s[0].field_f = 1;
                             break L50;
                           } else {
                             break L50;
@@ -5368,21 +5499,21 @@ final class sk implements pa {
                         }
                         L51: {
                           L52: {
-                            if (((sk) this).field_i[1] == null) {
+                            if (this.field_i[1] == null) {
                               break L52;
                             } else {
-                              if (((sk) this).field_i[1].b((byte) -56)) {
+                              if (this.field_i[1].b((byte) -56)) {
                                 break L51;
                               } else {
                                 break L52;
                               }
                             }
                           }
-                          if (null == ((sk) this).field_i[0]) {
+                          if (null == this.field_i[0]) {
                             break L44;
                           } else {
-                            ((sk) this).field_i[0].field_m = je.field_K[((sk) this).field_c][0] - ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_i[0].field_f = 2;
+                            this.field_i[0].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                            this.field_i[0].field_f = 2;
                             if (var4 == 0) {
                               break L44;
                             } else {
@@ -5390,28 +5521,28 @@ final class sk implements pa {
                             }
                           }
                         }
-                        ((sk) this).field_i[1].field_m = je.field_K[((sk) this).field_c][0] - ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_i[1].field_f = 2;
+                        this.field_i[1].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                        this.field_i[1].field_f = 2;
                         break L44;
                       }
                     }
                   }
                   L53: {
-                    if (((sk) this).field_s[1] == null) {
+                    if (this.field_s[1] == null) {
                       break L53;
                     } else {
-                      if (!((sk) this).field_s[1].b((byte) -45)) {
+                      if (!this.field_s[1].b((byte) -45)) {
                         break L53;
                       } else {
                         L54: {
                           L55: {
-                            if (null == ((sk) this).field_i[0]) {
+                            if (null == this.field_i[0]) {
                               break L55;
                             } else {
-                              if (!((sk) this).field_i[0].b((byte) -90)) {
+                              if (!this.field_i[0].b((byte) -90)) {
                                 break L55;
                               } else {
-                                if (((sk) this).field_i[1] == null) {
+                                if (this.field_i[1] == null) {
                                   break L54;
                                 } else {
                                   break L55;
@@ -5419,10 +5550,10 @@ final class sk implements pa {
                               }
                             }
                           }
-                          if (null == ((sk) this).field_i[2]) {
+                          if (null == this.field_i[2]) {
                             break L53;
                           } else {
-                            if (((sk) this).field_i[2].b((byte) 29)) {
+                            if (this.field_i[2].b((byte) 29)) {
                               break L54;
                             } else {
                               break L53;
@@ -5434,29 +5565,29 @@ final class sk implements pa {
                             break L56;
                           } else {
                             L57: {
-                              if (((sk) this).field_s[1] == null) {
+                              if (this.field_s[1] == null) {
                                 break L57;
                               } else {
-                                ((sk) this).field_s[1].field_m = ns.a(false, 5, vv.field_b);
-                                ((sk) this).field_s[1].field_f = 1;
+                                this.field_s[1].field_m = ns.a(false, 5, vv.field_b);
+                                this.field_s[1].field_f = 1;
                                 break L57;
                               }
                             }
                             L58: {
                               L59: {
-                                if (((sk) this).field_i[2] == null) {
+                                if (this.field_i[2] == null) {
                                   break L59;
                                 } else {
-                                  if (((sk) this).field_i[2].b((byte) -114)) {
+                                  if (this.field_i[2].b((byte) -114)) {
                                     break L58;
                                   } else {
                                     break L59;
                                   }
                                 }
                               }
-                              if (null != ((sk) this).field_i[0]) {
-                                ((sk) this).field_i[0].field_m = je.field_K[((sk) this).field_c][0] + -ns.a(false, 30, vv.field_b);
-                                ((sk) this).field_i[0].field_f = 2;
+                              if (null != this.field_i[0]) {
+                                this.field_i[0].field_m = je.field_K[this.field_c][0] + -ns.a(false, 30, vv.field_b);
+                                this.field_i[0].field_f = 2;
                                 if (var4 == 0) {
                                   break L53;
                                 } else {
@@ -5466,8 +5597,8 @@ final class sk implements pa {
                                 break L53;
                               }
                             }
-                            ((sk) this).field_i[2].field_m = je.field_K[((sk) this).field_c][0] - ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_i[2].field_f = 2;
+                            this.field_i[2].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                            this.field_i[2].field_f = 2;
                             if (var4 == 0) {
                               break L53;
                             } else {
@@ -5476,23 +5607,23 @@ final class sk implements pa {
                           }
                         }
                         L60: {
-                          if (null == ((sk) this).field_s[1]) {
+                          if (null == this.field_s[1]) {
                             break L60;
                           } else {
-                            ((sk) this).field_s[1].field_m = je.field_K[((sk) this).field_a][0] - ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_s[1].field_f = 2;
+                            this.field_s[1].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                            this.field_s[1].field_f = 2;
                             break L60;
                           }
                         }
                         L61: {
-                          if (null == ((sk) this).field_i[2]) {
+                          if (null == this.field_i[2]) {
                             break L61;
                           } else {
-                            if (!((sk) this).field_i[2].b((byte) -112)) {
+                            if (!this.field_i[2].b((byte) -112)) {
                               break L61;
                             } else {
-                              ((sk) this).field_i[2].field_m = ns.a(false, 5, vv.field_b);
-                              ((sk) this).field_i[2].field_f = 1;
+                              this.field_i[2].field_m = ns.a(false, 5, vv.field_b);
+                              this.field_i[2].field_f = 1;
                               if (var4 == 0) {
                                 break L53;
                               } else {
@@ -5501,9 +5632,9 @@ final class sk implements pa {
                             }
                           }
                         }
-                        if (((sk) this).field_i[0] != null) {
-                          ((sk) this).field_i[0].field_m = ns.a(false, 5, vv.field_b);
-                          ((sk) this).field_i[0].field_f = 1;
+                        if (this.field_i[0] != null) {
+                          this.field_i[0].field_m = ns.a(false, 5, vv.field_b);
+                          this.field_i[0].field_f = 1;
                           break L53;
                         } else {
                           break L53;
@@ -5511,24 +5642,24 @@ final class sk implements pa {
                       }
                     }
                   }
-                  if (((sk) this).field_i[0] == null) {
+                  if (this.field_i[0] == null) {
                     break L2;
                   } else {
-                    if (!((sk) this).field_i[0].b((byte) -70)) {
+                    if (!this.field_i[0].b((byte) -70)) {
                       break L2;
                     } else {
                       L62: {
                         L63: {
-                          if (((sk) this).field_i[1] == null) {
+                          if (this.field_i[1] == null) {
                             break L63;
                           } else {
-                            if (-1 == ((sk) this).field_i[1].field_f) {
+                            if (-1 == this.field_i[1].field_f) {
                               break L63;
                             } else {
-                              if (null == ((sk) this).field_i[2]) {
+                              if (null == this.field_i[2]) {
                                 break L63;
                               } else {
-                                if (-1 != ((sk) this).field_i[2].field_f) {
+                                if (-1 != this.field_i[2].field_f) {
                                   break L62;
                                 } else {
                                   break L63;
@@ -5539,25 +5670,25 @@ final class sk implements pa {
                         }
                         L64: {
                           L65: {
-                            if (((sk) this).field_i[1] == null) {
+                            if (this.field_i[1] == null) {
                               break L65;
                             } else {
-                              if (-1 != ((sk) this).field_i[1].field_f) {
+                              if (-1 != this.field_i[1].field_f) {
                                 break L64;
                               } else {
                                 break L65;
                               }
                             }
                           }
-                          if (((sk) this).field_i[2] == null) {
+                          if (this.field_i[2] == null) {
                             break L2;
                           } else {
-                            if (-1 != ((sk) this).field_i[2].field_f) {
-                              if (null == ((sk) this).field_i[0]) {
+                            if (-1 != this.field_i[2].field_f) {
+                              if (null == this.field_i[0]) {
                                 break L2;
                               } else {
-                                ((sk) this).field_i[0].field_m = ((sk) this).field_i[2].field_m + ns.a(false, 5, vv.field_b);
-                                ((sk) this).field_i[0].field_f = ((sk) this).field_i[2].field_f;
+                                this.field_i[0].field_m = this.field_i[2].field_m + ns.a(false, 5, vv.field_b);
+                                this.field_i[0].field_f = this.field_i[2].field_f;
                                 if (var4 == 0) {
                                   break L2;
                                 } else {
@@ -5569,9 +5700,9 @@ final class sk implements pa {
                             }
                           }
                         }
-                        if (null != ((sk) this).field_i[0]) {
-                          ((sk) this).field_i[0].field_m = ((sk) this).field_i[1].field_m + ns.a(false, 5, vv.field_b);
-                          ((sk) this).field_i[0].field_f = ((sk) this).field_i[1].field_f;
+                        if (null != this.field_i[0]) {
+                          this.field_i[0].field_m = this.field_i[1].field_m + ns.a(false, 5, vv.field_b);
+                          this.field_i[0].field_f = this.field_i[1].field_f;
                           if (var4 == 0) {
                             break L2;
                           } else {
@@ -5582,12 +5713,12 @@ final class sk implements pa {
                         }
                       }
                       L66: {
-                        if (ns.a(false, 1000, vv.field_b) < 500) {
+                        if (-501 < (ns.a(false, 1000, vv.field_b) ^ -1)) {
                           break L66;
                         } else {
-                          if (((sk) this).field_i[0] != null) {
-                            ((sk) this).field_i[0].field_m = ((sk) this).field_i[1].field_m + ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_i[0].field_f = ((sk) this).field_i[1].field_f;
+                          if (this.field_i[0] != null) {
+                            this.field_i[0].field_m = this.field_i[1].field_m + ns.a(false, 5, vv.field_b);
+                            this.field_i[0].field_f = this.field_i[1].field_f;
                             if (var4 == 0) {
                               break L2;
                             } else {
@@ -5598,9 +5729,9 @@ final class sk implements pa {
                           }
                         }
                       }
-                      if (null != ((sk) this).field_i[0]) {
-                        ((sk) this).field_i[0].field_m = ((sk) this).field_i[2].field_m - -ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_i[0].field_f = ((sk) this).field_i[2].field_f;
+                      if (null != this.field_i[0]) {
+                        this.field_i[0].field_m = this.field_i[2].field_m - -ns.a(false, 5, vv.field_b);
+                        this.field_i[0].field_f = this.field_i[2].field_f;
                         if (var4 == 0) {
                           break L2;
                         } else {
@@ -5614,21 +5745,21 @@ final class sk implements pa {
                 }
               }
               L67: {
-                if (((sk) this).field_i[0] == null) {
+                if (this.field_i[0] == null) {
                   break L67;
                 } else {
-                  if (!((sk) this).field_i[0].b((byte) -126)) {
+                  if (!this.field_i[0].b((byte) -126)) {
                     break L67;
                   } else {
                     L68: {
                       L69: {
-                        if (null == ((sk) this).field_s[0]) {
+                        if (null == this.field_s[0]) {
                           break L69;
                         } else {
-                          if (!((sk) this).field_s[0].b((byte) 118)) {
+                          if (!this.field_s[0].b((byte) 118)) {
                             break L69;
                           } else {
-                            if (((sk) this).field_s[1] == null) {
+                            if (this.field_s[1] == null) {
                               break L68;
                             } else {
                               break L69;
@@ -5636,10 +5767,10 @@ final class sk implements pa {
                           }
                         }
                       }
-                      if (((sk) this).field_s[1] == null) {
+                      if (this.field_s[1] == null) {
                         break L67;
                       } else {
-                        if (((sk) this).field_s[1].b((byte) 117)) {
+                        if (this.field_s[1].b((byte) 117)) {
                           break L68;
                         } else {
                           break L67;
@@ -5647,13 +5778,13 @@ final class sk implements pa {
                       }
                     }
                     L70: {
-                      if (ns.a(false, 1000, vv.field_b) < 500) {
+                      if ((ns.a(false, 1000, vv.field_b) ^ -1) > -501) {
                         break L70;
                       } else {
                         L71: {
-                          if (((sk) this).field_i[0] != null) {
-                            ((sk) this).field_i[0].field_m = ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_i[0].field_f = 1;
+                          if (this.field_i[0] != null) {
+                            this.field_i[0].field_m = ns.a(false, 5, vv.field_b);
+                            this.field_i[0].field_f = 1;
                             break L71;
                           } else {
                             break L71;
@@ -5661,21 +5792,21 @@ final class sk implements pa {
                         }
                         L72: {
                           L73: {
-                            if (null == ((sk) this).field_s[1]) {
+                            if (null == this.field_s[1]) {
                               break L73;
                             } else {
-                              if (((sk) this).field_s[1].b((byte) 126)) {
+                              if (this.field_s[1].b((byte) 126)) {
                                 break L72;
                               } else {
                                 break L73;
                               }
                             }
                           }
-                          if (null == ((sk) this).field_s[0]) {
+                          if (null == this.field_s[0]) {
                             break L67;
                           } else {
-                            ((sk) this).field_s[0].field_m = je.field_K[((sk) this).field_a][0] + -ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_s[0].field_f = 2;
+                            this.field_s[0].field_m = je.field_K[this.field_a][0] + -ns.a(false, 5, vv.field_b);
+                            this.field_s[0].field_f = 2;
                             if (var4 == 0) {
                               break L67;
                             } else {
@@ -5683,8 +5814,8 @@ final class sk implements pa {
                             }
                           }
                         }
-                        ((sk) this).field_s[1].field_m = je.field_K[((sk) this).field_a][0] + -ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_s[1].field_f = 2;
+                        this.field_s[1].field_m = je.field_K[this.field_a][0] + -ns.a(false, 5, vv.field_b);
+                        this.field_s[1].field_f = 2;
                         if (var4 == 0) {
                           break L67;
                         } else {
@@ -5694,21 +5825,21 @@ final class sk implements pa {
                     }
                     L74: {
                       L75: {
-                        ((sk) this).field_i[0].field_m = je.field_K[((sk) this).field_c][0] + -ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_i[0].field_f = 2;
-                        if (null == ((sk) this).field_s[1]) {
+                        this.field_i[0].field_m = je.field_K[this.field_c][0] + -ns.a(false, 5, vv.field_b);
+                        this.field_i[0].field_f = 2;
+                        if (null == this.field_s[1]) {
                           break L75;
                         } else {
-                          if (((sk) this).field_s[1].b((byte) 112)) {
+                          if (this.field_s[1].b((byte) 112)) {
                             break L74;
                           } else {
                             break L75;
                           }
                         }
                       }
-                      if (((sk) this).field_s[0] != null) {
-                        ((sk) this).field_s[0].field_m = ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_s[0].field_f = 1;
+                      if (this.field_s[0] != null) {
+                        this.field_s[0].field_m = ns.a(false, 5, vv.field_b);
+                        this.field_s[0].field_f = 1;
                         if (var4 == 0) {
                           break L67;
                         } else {
@@ -5718,28 +5849,28 @@ final class sk implements pa {
                         break L67;
                       }
                     }
-                    ((sk) this).field_s[1].field_m = ns.a(false, 5, vv.field_b);
-                    ((sk) this).field_s[1].field_f = 1;
+                    this.field_s[1].field_m = ns.a(false, 5, vv.field_b);
+                    this.field_s[1].field_f = 1;
                     break L67;
                   }
                 }
               }
               L76: {
-                if (((sk) this).field_i[1] == null) {
+                if (this.field_i[1] == null) {
                   break L76;
                 } else {
-                  if (!((sk) this).field_i[1].b((byte) -109)) {
+                  if (!this.field_i[1].b((byte) -109)) {
                     break L76;
                   } else {
                     L77: {
                       L78: {
-                        if (null == ((sk) this).field_s[0]) {
+                        if (null == this.field_s[0]) {
                           break L78;
                         } else {
-                          if (!((sk) this).field_s[0].b((byte) 72)) {
+                          if (!this.field_s[0].b((byte) 72)) {
                             break L78;
                           } else {
-                            if (null == ((sk) this).field_s[1]) {
+                            if (null == this.field_s[1]) {
                               break L77;
                             } else {
                               break L78;
@@ -5747,10 +5878,10 @@ final class sk implements pa {
                           }
                         }
                       }
-                      if (null == ((sk) this).field_s[2]) {
+                      if (null == this.field_s[2]) {
                         break L76;
                       } else {
-                        if (!((sk) this).field_s[2].b((byte) 99)) {
+                        if (!this.field_s[2].b((byte) 99)) {
                           break L76;
                         } else {
                           break L77;
@@ -5758,27 +5889,27 @@ final class sk implements pa {
                       }
                     }
                     L79: {
-                      if (ns.a(false, 1000, vv.field_b) >= 500) {
+                      if ((ns.a(false, 1000, vv.field_b) ^ -1) <= -501) {
                         break L79;
                       } else {
                         L80: {
-                          if (null != ((sk) this).field_i[1]) {
-                            ((sk) this).field_i[1].field_m = je.field_K[((sk) this).field_c][0] - ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_i[1].field_f = 2;
+                          if (null != this.field_i[1]) {
+                            this.field_i[1].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                            this.field_i[1].field_f = 2;
                             break L80;
                           } else {
                             break L80;
                           }
                         }
                         L81: {
-                          if (null == ((sk) this).field_s[2]) {
+                          if (null == this.field_s[2]) {
                             break L81;
                           } else {
-                            if (!((sk) this).field_s[2].b((byte) -50)) {
+                            if (!this.field_s[2].b((byte) -50)) {
                               break L81;
                             } else {
-                              ((sk) this).field_s[2].field_m = ns.a(false, 5, vv.field_b);
-                              ((sk) this).field_s[2].field_f = 1;
+                              this.field_s[2].field_m = ns.a(false, 5, vv.field_b);
+                              this.field_s[2].field_f = 1;
                               if (var4 == 0) {
                                 break L76;
                               } else {
@@ -5787,11 +5918,11 @@ final class sk implements pa {
                             }
                           }
                         }
-                        if (((sk) this).field_s[0] == null) {
+                        if (this.field_s[0] == null) {
                           break L76;
                         } else {
-                          ((sk) this).field_s[0].field_m = ns.a(false, 5, vv.field_b);
-                          ((sk) this).field_s[0].field_f = 1;
+                          this.field_s[0].field_m = ns.a(false, 5, vv.field_b);
+                          this.field_s[0].field_f = 1;
                           if (var4 == 0) {
                             break L76;
                           } else {
@@ -5801,23 +5932,23 @@ final class sk implements pa {
                       }
                     }
                     L82: {
-                      if (null == ((sk) this).field_i[1]) {
+                      if (null == this.field_i[1]) {
                         break L82;
                       } else {
-                        ((sk) this).field_i[1].field_m = ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_i[1].field_f = 1;
+                        this.field_i[1].field_m = ns.a(false, 5, vv.field_b);
+                        this.field_i[1].field_f = 1;
                         break L82;
                       }
                     }
                     L83: {
-                      if (((sk) this).field_s[2] == null) {
+                      if (this.field_s[2] == null) {
                         break L83;
                       } else {
-                        if (!((sk) this).field_s[2].b((byte) -122)) {
+                        if (!this.field_s[2].b((byte) -122)) {
                           break L83;
                         } else {
-                          ((sk) this).field_s[2].field_m = je.field_K[((sk) this).field_a][0] + -ns.a(false, 5, vv.field_b);
-                          ((sk) this).field_s[2].field_f = 2;
+                          this.field_s[2].field_m = je.field_K[this.field_a][0] + -ns.a(false, 5, vv.field_b);
+                          this.field_s[2].field_f = 2;
                           if (var4 == 0) {
                             break L76;
                           } else {
@@ -5826,32 +5957,32 @@ final class sk implements pa {
                         }
                       }
                     }
-                    if (null == ((sk) this).field_s[0]) {
+                    if (null == this.field_s[0]) {
                       break L76;
                     } else {
-                      ((sk) this).field_s[0].field_m = je.field_K[((sk) this).field_a][0] + -ns.a(false, 5, vv.field_b);
-                      ((sk) this).field_s[0].field_f = 2;
+                      this.field_s[0].field_m = je.field_K[this.field_a][0] + -ns.a(false, 5, vv.field_b);
+                      this.field_s[0].field_f = 2;
                       break L76;
                     }
                   }
                 }
               }
-              if (null == ((sk) this).field_s[0]) {
+              if (null == this.field_s[0]) {
                 break L2;
               } else {
-                if (((sk) this).field_s[0].b((byte) 120)) {
+                if (this.field_s[0].b((byte) 120)) {
                   L84: {
                     L85: {
-                      if (null == ((sk) this).field_s[1]) {
+                      if (null == this.field_s[1]) {
                         break L85;
                       } else {
-                        if (-1 == ((sk) this).field_s[1].field_f) {
+                        if (-1 == this.field_s[1].field_f) {
                           break L85;
                         } else {
-                          if (null == ((sk) this).field_s[2]) {
+                          if (null == this.field_s[2]) {
                             break L85;
                           } else {
-                            if (((sk) this).field_s[2].field_f != -1) {
+                            if (this.field_s[2].field_f != -1) {
                               break L84;
                             } else {
                               break L85;
@@ -5862,27 +5993,27 @@ final class sk implements pa {
                     }
                     L86: {
                       L87: {
-                        if (((sk) this).field_s[1] == null) {
+                        if (this.field_s[1] == null) {
                           break L87;
                         } else {
-                          if (((sk) this).field_s[1].field_f != -1) {
+                          if ((this.field_s[1].field_f ^ -1) != 0) {
                             break L86;
                           } else {
                             break L87;
                           }
                         }
                       }
-                      if (null == ((sk) this).field_s[2]) {
+                      if (null == this.field_s[2]) {
                         break L2;
                       } else {
-                        if (((sk) this).field_s[2].field_f == -1) {
+                        if ((this.field_s[2].field_f ^ -1) == 0) {
                           break L2;
                         } else {
-                          if (null == ((sk) this).field_s[0]) {
+                          if (null == this.field_s[0]) {
                             break L2;
                           } else {
-                            ((sk) this).field_s[0].field_m = ((sk) this).field_s[2].field_m - -ns.a(false, 5, vv.field_b);
-                            ((sk) this).field_s[0].field_f = ((sk) this).field_s[2].field_f;
+                            this.field_s[0].field_m = this.field_s[2].field_m - -ns.a(false, 5, vv.field_b);
+                            this.field_s[0].field_f = this.field_s[2].field_f;
                             if (var4 == 0) {
                               break L2;
                             } else {
@@ -5892,9 +6023,9 @@ final class sk implements pa {
                         }
                       }
                     }
-                    if (null != ((sk) this).field_s[0]) {
-                      ((sk) this).field_s[0].field_m = ((sk) this).field_s[1].field_m + ns.a(false, 5, vv.field_b);
-                      ((sk) this).field_s[0].field_f = ((sk) this).field_s[1].field_f;
+                    if (null != this.field_s[0]) {
+                      this.field_s[0].field_m = this.field_s[1].field_m + ns.a(false, 5, vv.field_b);
+                      this.field_s[0].field_f = this.field_s[1].field_f;
                       if (var4 == 0) {
                         break L2;
                       } else {
@@ -5908,9 +6039,9 @@ final class sk implements pa {
                     if (ns.a(false, 1000, vv.field_b) < 500) {
                       break L88;
                     } else {
-                      if (null != ((sk) this).field_s[0]) {
-                        ((sk) this).field_s[0].field_m = ((sk) this).field_s[1].field_m + ns.a(false, 5, vv.field_b);
-                        ((sk) this).field_s[0].field_f = ((sk) this).field_s[1].field_f;
+                      if (null != this.field_s[0]) {
+                        this.field_s[0].field_m = this.field_s[1].field_m + ns.a(false, 5, vv.field_b);
+                        this.field_s[0].field_f = this.field_s[1].field_f;
                         if (var4 == 0) {
                           break L2;
                         } else {
@@ -5921,11 +6052,11 @@ final class sk implements pa {
                       }
                     }
                   }
-                  if (((sk) this).field_s[0] == null) {
+                  if (this.field_s[0] == null) {
                     break L2;
                   } else {
-                    ((sk) this).field_s[0].field_m = ((sk) this).field_s[1].field_m + ns.a(false, 5, vv.field_b);
-                    ((sk) this).field_s[0].field_f = ((sk) this).field_s[2].field_f;
+                    this.field_s[0].field_m = this.field_s[1].field_m + ns.a(false, 5, vv.field_b);
+                    this.field_s[0].field_f = this.field_s[2].field_f;
                     break L2;
                   }
                 } else {
@@ -5938,28 +6069,28 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.CA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.CA(" + param0 + ')');
         }
     }
 
     private final void e(int param0) {
-        if (!(((sk) this).field_l != null)) {
+        if (!(this.field_l != null)) {
             return;
         }
-        ((sk) this).field_B.field_c[0] = ((sk) this).field_k.field_x % ((sk) this).field_r;
-        ((sk) this).field_B.field_c[1] = ((sk) this).field_k.field_x / ((sk) this).field_r;
+        this.field_B.field_c[0] = this.field_k.field_x % this.field_r;
+        this.field_B.field_c[1] = this.field_k.field_x / this.field_r;
         if (param0 != 2) {
             return;
         }
         try {
-            ((sk) this).field_B.f(-106);
-            ((sk) this).field_B.i(0);
-            ((sk) this).field_l[1] = ((sk) this).field_B.field_e[1];
-            ((sk) this).field_l[0] = ((sk) this).field_B.field_e[0];
-            ((sk) this).field_k.field_m = ((sk) this).field_l[0];
-            ((sk) this).field_k.field_v = ((sk) this).field_l[1];
+            this.field_B.f(-106);
+            this.field_B.i(0);
+            this.field_l[1] = this.field_B.field_e[1];
+            this.field_l[0] = this.field_B.field_e[0];
+            this.field_k.field_m = this.field_l[0];
+            this.field_k.field_v = this.field_l[1];
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sk.W(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "sk.W(" + param0 + ')');
         }
     }
 
@@ -5969,11 +6100,11 @@ final class sk implements pa {
         try {
           L0: {
             L1: {
-              this.b(((sk) this).field_i, 12579);
-              if (((sk) this).field_F != 30) {
+              this.b(this.field_i, 12579);
+              if ((this.field_F ^ -1) != -31) {
                 break L1;
               } else {
-                ((sk) this).field_n = 1;
+                this.field_n = 1;
                 break L1;
               }
             }
@@ -5981,7 +6112,7 @@ final class sk implements pa {
               if (param0 <= -116) {
                 break L2;
               } else {
-                ((sk) this).a((byte) -35);
+                this.a((byte) -35);
                 break L2;
               }
             }
@@ -5990,7 +6121,7 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.A(" + param0 + ')');
         }
     }
 
@@ -6000,6 +6131,7 @@ final class sk implements pa {
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
         String stackIn_13_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_12_0 = null;
         String stackOut_10_0 = null;
@@ -6011,7 +6143,7 @@ final class sk implements pa {
               if (param0 == -4938) {
                 break L1;
               } else {
-                field_N = null;
+                field_N = (String) null;
                 break L1;
               }
             }
@@ -6020,29 +6152,45 @@ final class sk implements pa {
                 if (se.field_g.a((byte) -47)) {
                   stackOut_12_0 = ga.field_d;
                   stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   stackOut_10_0 = jh.field_j;
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 stackOut_7_0 = jh.field_j;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_4_0 = ue.field_a;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "sk.G(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "sk.G(" + param0 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              return stackIn_13_0;
+            }
+          }
+        }
     }
 
     public final void c(byte param0) {
@@ -6070,26 +6218,26 @@ final class sk implements pa {
           L0: {
             L1: {
               L2: {
-                ((sk) this).field_H.b();
+                this.field_H.b();
                 this.a((byte) 99, 0, 0, -1);
                 tm.a();
                 tm.c();
-                if (!((sk) this).field_d) {
+                if (!this.field_d) {
                   break L2;
                 } else {
                   L3: {
-                    if (((sk) this).field_n == 5) {
+                    if ((this.field_n ^ -1) == -6) {
                       break L3;
                     } else {
                       L4: {
-                        if (((sk) this).field_n == 6) {
+                        if (-7 == (this.field_n ^ -1)) {
                           break L4;
                         } else {
                           L5: {
-                            if (((sk) this).field_n != 8) {
+                            if (-9 != (this.field_n ^ -1)) {
                               break L5;
                             } else {
-                              if (((sk) this).field_L == 8) {
+                              if (-9 == (this.field_L ^ -1)) {
                                 break L4;
                               } else {
                                 break L5;
@@ -6097,13 +6245,13 @@ final class sk implements pa {
                             }
                           }
                           L6: {
-                            if (((sk) this).field_n == 7) {
+                            if (this.field_n == 7) {
                               break L6;
                             } else {
-                              if (8 != ((sk) this).field_n) {
+                              if (8 != this.field_n) {
                                 break L1;
                               } else {
-                                if (((sk) this).field_L == 7) {
+                                if (-8 == (this.field_L ^ -1)) {
                                   break L6;
                                 } else {
                                   break L1;
@@ -6111,7 +6259,7 @@ final class sk implements pa {
                               }
                             }
                           }
-                          this.a(((sk) this).field_y, ((sk) this).field_s, (byte) 83);
+                          this.a(this.field_y, this.field_s, (byte) 83);
                           if (var9 == 0) {
                             break L1;
                           } else {
@@ -6119,7 +6267,7 @@ final class sk implements pa {
                           }
                         }
                       }
-                      this.a(false, ((sk) this).field_i, (byte) 109, ((sk) this).field_w, ((sk) this).field_D);
+                      this.a(false, this.field_i, (byte) 109, this.field_w, this.field_D);
                       if (var9 == 0) {
                         break L1;
                       } else {
@@ -6127,7 +6275,7 @@ final class sk implements pa {
                       }
                     }
                   }
-                  this.a(true, ((sk) this).field_s, (byte) 109, ((sk) this).field_y, ((sk) this).field_D);
+                  this.a(true, this.field_s, (byte) 109, this.field_y, this.field_D);
                   if (var9 == 0) {
                     break L1;
                   } else {
@@ -6137,7 +6285,7 @@ final class sk implements pa {
               }
               L7: {
                 this.f((byte) -15);
-                if (!((sk) this).field_o) {
+                if (!this.field_o) {
                   break L7;
                 } else {
                   qn.f(320, 0, 640, 480, 0);
@@ -6148,7 +6296,7 @@ final class sk implements pa {
                   }
                 }
               }
-              if (!((sk) this).field_f) {
+              if (!this.field_f) {
                 break L1;
               } else {
                 qn.f(0, 0, 320, 480, 0);
@@ -6162,11 +6310,11 @@ final class sk implements pa {
                 var4 = 93;
                 var5 = 35;
                 var6 = rs.field_k - var2_int - var4;
-                var7 = var3;
+                var7 = var3 + 0;
                 if (!iu.field_n) {
                   break L9;
                 } else {
-                  if (((sk) this).b((byte) -96)) {
+                  if (this.b((byte) -96)) {
                     stackOut_49_0 = ci.field_e;
                     stackIn_50_0 = stackOut_49_0;
                     break L8;
@@ -6185,22 +6333,22 @@ final class sk implements pa {
               if (param0 < -119) {
                 break L10;
               } else {
-                ((sk) this).field_C = 65;
+                this.field_C = 65;
                 break L10;
               }
             }
             L11: {
-              var2_int = var4 >> 1;
-              var3 = mp.k(-104) + (var5 >> 1);
+              var2_int = var4 >> -1365344159;
+              var3 = mp.k(-104) + (var5 >> 194242593);
               fe.c(em.field_c, var2_int + var6, var7 - -var3, 2236962, true);
-              if (((sk) this).field_x == null) {
+              if (this.field_x == null) {
                 break L11;
               } else {
-                if (((sk) this).field_x.field_T != null) {
+                if (this.field_x.field_T != null) {
                   L12: {
                     var3 = 19;
                     if (ku.field_J != null) {
-                      stackOut_62_0 = ku.field_J.field_x >> 1;
+                      stackOut_62_0 = ku.field_J.field_x >> -3007455;
                       stackIn_63_0 = stackOut_62_0;
                       break L12;
                     } else {
@@ -6216,7 +6364,7 @@ final class sk implements pa {
                       stackIn_67_0 = stackOut_66_0;
                       break L13;
                     } else {
-                      stackOut_64_0 = ku.field_J.field_A >> 1;
+                      stackOut_64_0 = ku.field_J.field_A >> -541784767;
                       stackIn_67_0 = stackOut_64_0;
                       break L13;
                     }
@@ -6224,20 +6372,20 @@ final class sk implements pa {
                   L14: {
                     var4 = stackIn_67_0;
                     var2_int = 17;
-                    var6 = var2_int;
+                    var6 = 0 + var2_int;
                     var7 = -var5 + (ag.field_I.field_D - var3);
-                    if (((sk) this).field_e <= -1) {
+                    if (this.field_e <= -1) {
                       break L14;
                     } else {
-                      ((sk) this).field_x.field_T[((sk) this).field_e].a(var6, ((sk) this).field_x.field_lb[((sk) this).field_e], false, false, var7, false, false, 122);
+                      this.field_x.field_T[this.field_e].a(var6, this.field_x.field_lb[this.field_e], false, false, var7, false, false, 122);
                       break L14;
                     }
                   }
                   var6 = -var2_int + (so.field_b.field_a + -var4);
-                  if (((sk) this).field_g <= -1) {
+                  if ((this.field_g ^ -1) >= 0) {
                     break L11;
                   } else {
-                    ((sk) this).field_x.field_T[((sk) this).field_g].a(var6, ((sk) this).field_x.field_lb[((sk) this).field_g], false, false, var7, false, false, 28);
+                    this.field_x.field_T[this.field_g].a(var6, this.field_x.field_lb[this.field_g], false, false, var7, false, false, 28);
                     break L11;
                   }
                 } else {
@@ -6252,7 +6400,7 @@ final class sk implements pa {
                 if (null == u.field_p) {
                   break L16;
                 } else {
-                  u.field_p.a(-66, ((sk) this).field_H);
+                  u.field_p.a(-66, this.field_H);
                   if (var9 == 0) {
                     break L15;
                   } else {
@@ -6260,7 +6408,7 @@ final class sk implements pa {
                   }
                 }
               }
-              ((sk) this).field_H.f(0, 0);
+              this.field_H.f(0, 0);
               break L15;
             }
             break L0;
@@ -6268,7 +6416,7 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.H(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.H(" + param0 + ')');
         }
     }
 
@@ -6293,6 +6441,7 @@ final class sk implements pa {
         RuntimeException stackIn_183_0 = null;
         StringBuilder stackIn_183_1 = null;
         String stackIn_183_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_175_0 = null;
         StringBuilder stackOut_175_1 = null;
@@ -6316,7 +6465,7 @@ final class sk implements pa {
             L1: {
               var6_array = new int[3 + -param2];
               var7 = param1;
-              if (param2 == 2) {
+              if (-3 == (param2 ^ -1)) {
                 break L1;
               } else {
                 L2: {
@@ -6339,7 +6488,7 @@ final class sk implements pa {
                                   }
                                 }
                               }
-                              if (param3 != 1) {
+                              if (-2 != (param3 ^ -1)) {
                                 break L4;
                               } else {
                                 if (param0[1] == null) {
@@ -6380,7 +6529,7 @@ final class sk implements pa {
                                   }
                                 }
                               }
-                              if (param3 != 0) {
+                              if (-1 != (param3 ^ -1)) {
                                 break L7;
                               } else {
                                 if (param0[1] == null) {
@@ -6404,7 +6553,7 @@ final class sk implements pa {
                         } else {
                           L10: {
                             L11: {
-                              if (param3 != 2) {
+                              if (-3 != (param3 ^ -1)) {
                                 break L11;
                               } else {
                                 if (null == param0[0]) {
@@ -6419,7 +6568,7 @@ final class sk implements pa {
                               }
                             }
                             L12: {
-                              if (param3 != 1) {
+                              if (-2 != (param3 ^ -1)) {
                                 break L12;
                               } else {
                                 if (null == param0[1]) {
@@ -6433,7 +6582,7 @@ final class sk implements pa {
                                 }
                               }
                             }
-                            if (param3 != 0) {
+                            if ((param3 ^ -1) != -1) {
                               break L2;
                             } else {
                               if (null == param0[2]) {
@@ -6474,7 +6623,7 @@ final class sk implements pa {
                             }
                           }
                         }
-                        if (param3 != 0) {
+                        if (-1 != (param3 ^ -1)) {
                           break L13;
                         } else {
                           if (null == param0[1]) {
@@ -6510,7 +6659,7 @@ final class sk implements pa {
                           }
                         }
                       }
-                      if (param3 != 0) {
+                      if (-1 != (param3 ^ -1)) {
                         break L2;
                       } else {
                         if (null == param0[2]) {
@@ -6533,7 +6682,7 @@ final class sk implements pa {
                     }
                   }
                 }
-                if (var7 != 0) {
+                if (-1 != (var7 ^ -1)) {
                   L18: {
                     L19: {
                       var8 = -1;
@@ -6553,11 +6702,11 @@ final class sk implements pa {
                         }
                       }
                     }
-                    if (param2 != 0) {
+                    if ((param2 ^ -1) != -1) {
                       break L18;
                     } else {
                       L20: {
-                        if (var9 != 2) {
+                        if (-3 != (var9 ^ -1)) {
                           break L20;
                         } else {
                           L21: {
@@ -6612,7 +6761,7 @@ final class sk implements pa {
                           }
                         }
                       }
-                      if (param2 != 0) {
+                      if (-1 != (param2 ^ -1)) {
                         break L18;
                       } else {
                         if (param4[4] == null) {
@@ -6629,7 +6778,7 @@ final class sk implements pa {
                     }
                   }
                   L23: {
-                    if (var8 > -1) {
+                    if (0 > (var8 ^ -1)) {
                       param4[var9] = param4[var8];
                       param4[var8] = null;
                       param4[var9].field_j = tn.field_W[param2][var9];
@@ -6639,35 +6788,38 @@ final class sk implements pa {
                       break L23;
                     }
                   }
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_175_0 = (RuntimeException) var6;
+            stackOut_175_0 = (RuntimeException) (var6);
             stackOut_175_1 = new StringBuilder().append("sk.HA(");
             stackIn_178_0 = stackOut_175_0;
             stackIn_178_1 = stackOut_175_1;
             stackIn_176_0 = stackOut_175_0;
             stackIn_176_1 = stackOut_175_1;
             if (param0 == null) {
-              stackOut_178_0 = (RuntimeException) (Object) stackIn_178_0;
-              stackOut_178_1 = (StringBuilder) (Object) stackIn_178_1;
+              stackOut_178_0 = (RuntimeException) ((Object) stackIn_178_0);
+              stackOut_178_1 = (StringBuilder) ((Object) stackIn_178_1);
               stackOut_178_2 = "null";
               stackIn_179_0 = stackOut_178_0;
               stackIn_179_1 = stackOut_178_1;
               stackIn_179_2 = stackOut_178_2;
               break L24;
             } else {
-              stackOut_176_0 = (RuntimeException) (Object) stackIn_176_0;
-              stackOut_176_1 = (StringBuilder) (Object) stackIn_176_1;
+              stackOut_176_0 = (RuntimeException) ((Object) stackIn_176_0);
+              stackOut_176_1 = (StringBuilder) ((Object) stackIn_176_1);
               stackOut_176_2 = "{...}";
               stackIn_179_0 = stackOut_176_0;
               stackIn_179_1 = stackOut_176_1;
@@ -6676,23 +6828,23 @@ final class sk implements pa {
             }
           }
           L25: {
-            stackOut_179_0 = (RuntimeException) (Object) stackIn_179_0;
+            stackOut_179_0 = (RuntimeException) ((Object) stackIn_179_0);
             stackOut_179_1 = ((StringBuilder) (Object) stackIn_179_1).append(stackIn_179_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_182_0 = stackOut_179_0;
             stackIn_182_1 = stackOut_179_1;
             stackIn_180_0 = stackOut_179_0;
             stackIn_180_1 = stackOut_179_1;
             if (param4 == null) {
-              stackOut_182_0 = (RuntimeException) (Object) stackIn_182_0;
-              stackOut_182_1 = (StringBuilder) (Object) stackIn_182_1;
+              stackOut_182_0 = (RuntimeException) ((Object) stackIn_182_0);
+              stackOut_182_1 = (StringBuilder) ((Object) stackIn_182_1);
               stackOut_182_2 = "null";
               stackIn_183_0 = stackOut_182_0;
               stackIn_183_1 = stackOut_182_1;
               stackIn_183_2 = stackOut_182_2;
               break L25;
             } else {
-              stackOut_180_0 = (RuntimeException) (Object) stackIn_180_0;
-              stackOut_180_1 = (StringBuilder) (Object) stackIn_180_1;
+              stackOut_180_0 = (RuntimeException) ((Object) stackIn_180_0);
+              stackOut_180_1 = (StringBuilder) ((Object) stackIn_180_1);
               stackOut_180_2 = "{...}";
               stackIn_183_0 = stackOut_180_0;
               stackIn_183_1 = stackOut_180_1;
@@ -6700,7 +6852,16 @@ final class sk implements pa {
               break L25;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_183_0, stackIn_183_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_183_0), stackIn_183_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -6712,6 +6873,7 @@ final class sk implements pa {
         Object stackIn_4_1 = null;
         Object stackIn_19_0 = null;
         Object stackIn_19_1 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_3_1 = null;
@@ -6725,7 +6887,7 @@ final class sk implements pa {
               L2: {
                 L3: {
                   L4: {
-                    if (var2_int >= ((sk) this).field_s.length) {
+                    if (var2_int >= this.field_s.length) {
                       break L4;
                     } else {
                       stackOut_3_0 = null;
@@ -6736,13 +6898,13 @@ final class sk implements pa {
                       stackIn_4_1 = stackOut_3_1;
                       if (var3 != 0) {
                         L5: while (true) {
-                          if (stackIn_19_0 == (Object) (Object) ((sk) this).field_D[var2_int]) {
+                          if (stackIn_19_0 == ((sk) (this)).field_D[var2_int]) {
                             break L2;
                           } else {
-                            ((sk) this).field_D[var2_int].d(59);
+                            this.field_D[var2_int].d(59);
                             var2_int++;
                             if (var3 == 0) {
-                              if (~((sk) this).field_D.length >= ~var2_int) {
+                              if ((this.field_D.length ^ -1) >= (var2_int ^ -1)) {
                                 break L2;
                               } else {
                                 stackOut_18_0 = null;
@@ -6758,19 +6920,19 @@ final class sk implements pa {
                         }
                       } else {
                         L6: {
-                          if (stackIn_4_0 == (Object) (Object) ((sk) this).field_s[var2_int]) {
+                          if (stackIn_4_0 == ((sk) (this)).field_s[var2_int]) {
                             break L6;
                           } else {
-                            ((sk) this).field_s[var2_int].d((byte) 113);
-                            if (!((sk) this).field_s[var2_int].field_l) {
+                            this.field_s[var2_int].d((byte) 113);
+                            if (!this.field_s[var2_int].field_l) {
                               break L6;
                             } else {
-                              ((sk) this).field_s[var2_int].field_l = false;
+                              this.field_s[var2_int].field_l = false;
                               this.a((byte) -84, var2_int);
-                              if (!((sk) this).field_h) {
+                              if (!this.field_h) {
                                 break L6;
                               } else {
-                                ((sk) this).field_s[var2_int].a(0, 30, 1, -10, u.field_o[((sk) this).field_c][1], pk.field_T[((sk) this).field_c][1], (byte) 122);
+                                this.field_s[var2_int].a(0, 30, 1, -10, u.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
                                 break L6;
                               }
                             }
@@ -6787,17 +6949,17 @@ final class sk implements pa {
                   }
                   var2_int = 0;
                   L7: while (true) {
-                    if (~((sk) this).field_D.length >= ~var2_int) {
+                    if ((this.field_D.length ^ -1) >= (var2_int ^ -1)) {
                       break L2;
                     } else {
                       stackOut_18_0 = null;
                       stackOut_18_1 = this;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
-                      if (stackIn_19_0 == (Object) (Object) ((sk) this).field_D[var2_int]) {
+                      if (stackIn_19_0 == ((sk) (this)).field_D[var2_int]) {
                         break L2;
                       } else {
-                        ((sk) this).field_D[var2_int].d(59);
+                        this.field_D[var2_int].d(59);
                         var2_int++;
                         if (var3 == 0) {
                           continue L7;
@@ -6812,7 +6974,7 @@ final class sk implements pa {
               }
               if (!param0) {
                 L8: {
-                  if (0 != (((sk) this).field_F & 15)) {
+                  if (0 != (this.field_F & 15)) {
                     break L8;
                   } else {
                     this.f(-24577);
@@ -6820,28 +6982,35 @@ final class sk implements pa {
                   }
                 }
                 L9: {
-                  if (((sk) this).field_D[-1 + ((sk) this).field_D.length] == null) {
+                  if (this.field_D[-1 + this.field_D.length] == null) {
                     break L9;
                   } else {
-                    if (((sk) this).field_D[-1 + ((sk) this).field_D.length].field_f <= 200) {
+                    if (-201 <= (this.field_D[-1 + this.field_D.length].field_f ^ -1)) {
                       break L9;
                     } else {
-                      ((sk) this).field_n = 6;
+                      this.field_n = 6;
                       this.h(1);
                       break L9;
                     }
                   }
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.KA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.KA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -6856,7 +7025,7 @@ final class sk implements pa {
               if (param0 >= 86) {
                 break L1;
               } else {
-                field_j = null;
+                field_j = (int[][]) null;
                 break L1;
               }
             }
@@ -6866,7 +7035,7 @@ final class sk implements pa {
                   if (jv.field_a) {
                     break L4;
                   } else {
-                    if (null != ((sk) this).field_A) {
+                    if (null != this.field_A) {
                       break L3;
                     } else {
                       break L4;
@@ -6881,10 +7050,10 @@ final class sk implements pa {
                 }
               }
               L5: {
-                if (param3 >= 0) {
+                if ((param3 ^ -1) <= -1) {
                   break L5;
                 } else {
-                  ((sk) this).field_A.f(param1, param2);
+                  this.field_A.f(param1, param2);
                   if (var6 == 0) {
                     break L2;
                   } else {
@@ -6892,7 +7061,7 @@ final class sk implements pa {
                   }
                 }
               }
-              ((sk) this).field_A.e(param1, param2, param3);
+              this.field_A.e(param1, param2, param3);
               break L2;
             }
             break L0;
@@ -6900,7 +7069,7 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var5, "sk.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) var5), "sk.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -6913,13 +7082,14 @@ final class sk implements pa {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object stackIn_3_0 = null;
+        int[] stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         int[] stackIn_14_0 = null;
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
         int[] stackIn_23_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_11_1 = 0;
@@ -6927,7 +7097,7 @@ final class sk implements pa {
         int stackOut_16_0 = 0;
         int stackOut_16_1 = 0;
         int[] stackOut_22_0 = null;
-        Object stackOut_2_0 = null;
+        int[] stackOut_2_0 = null;
         var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -6959,8 +7129,8 @@ final class sk implements pa {
                   break L2;
                 }
                 L4: while (true) {
-                  stackOut_11_0 = ~var5;
-                  stackOut_11_1 = ~(param0 + -1);
+                  stackOut_11_0 = var5 ^ -1;
+                  stackOut_11_1 = param0 + -1 ^ -1;
                   stackIn_12_0 = stackOut_11_0;
                   stackIn_12_1 = stackOut_11_1;
                   L5: while (true) {
@@ -6970,7 +7140,7 @@ final class sk implements pa {
                           break L7;
                         } else {
                           var6 = var5;
-                          stackOut_13_0 = (int[]) var4;
+                          stackOut_13_0 = (int[]) (var4);
                           stackIn_23_0 = stackOut_13_0;
                           stackIn_14_0 = stackOut_13_0;
                           if (var9 != 0) {
@@ -6980,11 +7150,11 @@ final class sk implements pa {
                             var8 = var5 + 1;
                             L8: while (true) {
                               L9: {
-                                if (~param0 >= ~var8) {
+                                if ((param0 ^ -1) >= (var8 ^ -1)) {
                                   break L9;
                                 } else {
-                                  stackOut_16_0 = ~var4[var8];
-                                  stackOut_16_1 = ~var7;
+                                  stackOut_16_0 = var4[var8] ^ -1;
+                                  stackOut_16_1 = var7 ^ -1;
                                   stackIn_12_0 = stackOut_16_0;
                                   stackIn_12_1 = stackOut_16_1;
                                   stackIn_17_0 = stackOut_16_0;
@@ -7025,26 +7195,32 @@ final class sk implements pa {
                           }
                         }
                       }
-                      stackOut_22_0 = (int[]) var3_array;
+                      stackOut_22_0 = (int[]) (var3_array);
                       stackIn_23_0 = stackOut_22_0;
                       break L6;
                     }
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               }
             } else {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (int[]) null;
               stackIn_3_0 = stackOut_2_0;
-              return (int[]) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3, "sk.J(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "sk.J(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_23_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_23_0;
+        }
     }
 
     private final void e(byte param0) {
@@ -7054,29 +7230,31 @@ final class sk implements pa {
         int var4 = 0;
         lf stackIn_14_0 = null;
         lf stackIn_43_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lf stackOut_13_0 = null;
         lf stackOut_42_0 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            if (((sk) this).field_v == 0) {
-              return;
+            if (this.field_v == 0) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param0 > 47) {
                   break L1;
                 } else {
-                  ((sk) this).field_u = -53;
+                  this.field_u = -53;
                   break L1;
                 }
               }
               L2: {
                 L3: {
-                  if (0 == ((sk) this).field_I) {
+                  if (0 == this.field_I) {
                     break L3;
                   } else {
-                    ((sk) this).field_I = ((sk) this).field_I - 1;
+                    this.field_I = this.field_I - 1;
                     if (var4 == 0) {
                       break L2;
                     } else {
@@ -7090,10 +7268,10 @@ final class sk implements pa {
                 L4: while (true) {
                   L5: {
                     L6: {
-                      if (~var3 <= ~((sk) this).field_s.length) {
+                      if ((var3 ^ -1) <= (this.field_s.length ^ -1)) {
                         break L6;
                       } else {
-                        stackOut_13_0 = ((sk) this).field_s[var3];
+                        stackOut_13_0 = this.field_s[var3];
                         stackIn_43_0 = stackOut_13_0;
                         stackIn_14_0 = stackOut_13_0;
                         if (var4 != 0) {
@@ -7103,7 +7281,7 @@ final class sk implements pa {
                             if (stackIn_14_0 == null) {
                               break L7;
                             } else {
-                              if (((sk) this).field_s[var3].field_D != 0) {
+                              if (this.field_s[var3].field_D != 0) {
                                 break L7;
                               } else {
                                 var2_int++;
@@ -7121,25 +7299,26 @@ final class sk implements pa {
                       }
                     }
                     if (var2_int == 0) {
-                      return;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
                       var2_int = ns.a(false, var2_int, vv.field_b) + 1;
                       var3 = 0;
                       var3 = 0;
                       L8: while (true) {
                         L9: {
-                          if (var3 >= ((sk) this).field_s.length) {
+                          if (var3 >= this.field_s.length) {
                             break L9;
                           } else {
                             if (0 >= var2_int) {
                               break L9;
                             } else {
                               L10: {
-                                if (null == ((sk) this).field_s[var3]) {
+                                if (null == this.field_s[var3]) {
                                   break L10;
                                 } else {
                                   L11: {
-                                    if (((sk) this).field_s[var3].field_D == 0) {
+                                    if (this.field_s[var3].field_D == 0) {
                                       break L11;
                                     } else {
                                       if (var4 == 0) {
@@ -7162,29 +7341,39 @@ final class sk implements pa {
                             }
                           }
                         }
-                        ((sk) this).field_s[var3 - 1].a(2, (byte) -108);
-                        ((sk) this).field_s[var3 + -1].a(0, 30, 1, 0, u.field_o[((sk) this).field_c][0], pk.field_T[((sk) this).field_c][0], (byte) 122);
-                        ((sk) this).field_s[var3 + -1].field_d = true;
-                        ((sk) this).field_i[0].a(1, (byte) -109);
-                        stackOut_42_0 = ((sk) this).field_i[0];
+                        this.field_s[var3 - 1].a(2, (byte) -108);
+                        this.field_s[var3 + -1].a(0, 30, 1, 0, u.field_o[this.field_c][0], pk.field_T[this.field_c][0], (byte) 122);
+                        this.field_s[var3 + -1].field_d = true;
+                        this.field_i[0].a(1, (byte) -109);
+                        stackOut_42_0 = this.field_i[0];
                         stackIn_43_0 = stackOut_42_0;
                         break L5;
                       }
                     }
                   }
-                  ((lf) (Object) stackIn_43_0).a(0, 30, 1, 20, u.field_o[((sk) this).field_a][1], pk.field_T[((sk) this).field_a][1], (byte) 122);
-                  ((sk) this).field_v = ((sk) this).field_v - 1;
-                  ((sk) this).field_I = 20 + ns.a(false, 20, vv.field_b);
+                  ((lf) (Object) stackIn_43_0).a(0, 30, 1, 20, u.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
+                  this.field_v = this.field_v - 1;
+                  this.field_I = 20 + ns.a(false, 20, vv.field_b);
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.IA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.IA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -7197,7 +7386,7 @@ final class sk implements pa {
               if (param0 < -30) {
                 break L1;
               } else {
-                field_G = null;
+                field_G = (jp) null;
                 break L1;
               }
             }
@@ -7207,7 +7396,7 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "sk.M(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "sk.M(" + param0 + ')');
         }
     }
 
@@ -7234,6 +7423,7 @@ final class sk implements pa {
         RuntimeException stackIn_195_0 = null;
         StringBuilder stackIn_195_1 = null;
         String stackIn_195_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_185_0 = 0;
         int stackOut_183_0 = 0;
@@ -7259,10 +7449,10 @@ final class sk implements pa {
           L0: {
             var6 = new int[3 - param1];
             var7 = 0;
-            if (param1 != 2) {
+            if ((param1 ^ -1) != -3) {
               L1: {
                 L2: {
-                  if (param1 == 1) {
+                  if (-2 == (param1 ^ -1)) {
                     break L2;
                   } else {
                     if (0 != param1) {
@@ -7331,7 +7521,7 @@ final class sk implements pa {
                             } else {
                               L7: {
                                 L8: {
-                                  if (param3 == 0) {
+                                  if ((param3 ^ -1) == -1) {
                                     break L8;
                                   } else {
                                     if (param2[0] == null) {
@@ -7475,7 +7665,7 @@ final class sk implements pa {
                               }
                             }
                           }
-                          if (param3 != 0) {
+                          if (-1 != (param3 ^ -1)) {
                             break L12;
                           } else {
                             if (null == param2[1]) {
@@ -7523,7 +7713,7 @@ final class sk implements pa {
                             }
                           }
                         }
-                        if (param3 != 0) {
+                        if ((param3 ^ -1) != -1) {
                           break L1;
                         } else {
                           if (null == param2[2]) {
@@ -7550,51 +7740,55 @@ final class sk implements pa {
                   }
                 }
               }
-              if (var7 != 0) {
+              if (-1 != (var7 ^ -1)) {
                 var8 = var6[ns.a(false, var7, vv.field_b)];
                 if (param0 == -93) {
                   param4[var8].field_d = true;
                   stackOut_185_0 = 1;
                   stackIn_186_0 = stackOut_185_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   stackOut_183_0 = 1;
                   stackIn_184_0 = stackOut_183_0;
-                  return stackIn_184_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 stackOut_180_0 = 0;
                 stackIn_181_0 = stackOut_180_0;
-                return stackIn_181_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               param4[0].field_d = true;
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var6_ref = decompiledCaughtException;
-            stackOut_187_0 = (RuntimeException) var6_ref;
+            stackOut_187_0 = (RuntimeException) (var6_ref);
             stackOut_187_1 = new StringBuilder().append("sk.T(").append(param0).append(',').append(param1).append(',');
             stackIn_190_0 = stackOut_187_0;
             stackIn_190_1 = stackOut_187_1;
             stackIn_188_0 = stackOut_187_0;
             stackIn_188_1 = stackOut_187_1;
             if (param2 == null) {
-              stackOut_190_0 = (RuntimeException) (Object) stackIn_190_0;
-              stackOut_190_1 = (StringBuilder) (Object) stackIn_190_1;
+              stackOut_190_0 = (RuntimeException) ((Object) stackIn_190_0);
+              stackOut_190_1 = (StringBuilder) ((Object) stackIn_190_1);
               stackOut_190_2 = "null";
               stackIn_191_0 = stackOut_190_0;
               stackIn_191_1 = stackOut_190_1;
               stackIn_191_2 = stackOut_190_2;
               break L17;
             } else {
-              stackOut_188_0 = (RuntimeException) (Object) stackIn_188_0;
-              stackOut_188_1 = (StringBuilder) (Object) stackIn_188_1;
+              stackOut_188_0 = (RuntimeException) ((Object) stackIn_188_0);
+              stackOut_188_1 = (StringBuilder) ((Object) stackIn_188_1);
               stackOut_188_2 = "{...}";
               stackIn_191_0 = stackOut_188_0;
               stackIn_191_1 = stackOut_188_1;
@@ -7603,23 +7797,23 @@ final class sk implements pa {
             }
           }
           L18: {
-            stackOut_191_0 = (RuntimeException) (Object) stackIn_191_0;
+            stackOut_191_0 = (RuntimeException) ((Object) stackIn_191_0);
             stackOut_191_1 = ((StringBuilder) (Object) stackIn_191_1).append(stackIn_191_2).append(',').append(param3).append(',');
             stackIn_194_0 = stackOut_191_0;
             stackIn_194_1 = stackOut_191_1;
             stackIn_192_0 = stackOut_191_0;
             stackIn_192_1 = stackOut_191_1;
             if (param4 == null) {
-              stackOut_194_0 = (RuntimeException) (Object) stackIn_194_0;
-              stackOut_194_1 = (StringBuilder) (Object) stackIn_194_1;
+              stackOut_194_0 = (RuntimeException) ((Object) stackIn_194_0);
+              stackOut_194_1 = (StringBuilder) ((Object) stackIn_194_1);
               stackOut_194_2 = "null";
               stackIn_195_0 = stackOut_194_0;
               stackIn_195_1 = stackOut_194_1;
               stackIn_195_2 = stackOut_194_2;
               break L18;
             } else {
-              stackOut_192_0 = (RuntimeException) (Object) stackIn_192_0;
-              stackOut_192_1 = (StringBuilder) (Object) stackIn_192_1;
+              stackOut_192_0 = (RuntimeException) ((Object) stackIn_192_0);
+              stackOut_192_1 = (StringBuilder) ((Object) stackIn_192_1);
               stackOut_192_2 = "{...}";
               stackIn_195_0 = stackOut_192_0;
               stackIn_195_1 = stackOut_192_1;
@@ -7627,12 +7821,33 @@ final class sk implements pa {
               break L18;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_195_0, stackIn_195_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_195_0), stackIn_195_2 + ')');
         }
-        return stackIn_186_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_181_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_184_0 != 0;
+            } else {
+              return stackIn_186_0 != 0;
+            }
+          }
+        }
     }
 
     private final void a(boolean param0, lf[] param1, byte param2, int param3, km[] param4) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int[] var7 = null;
@@ -7673,6 +7888,7 @@ final class sk implements pa {
         RuntimeException stackIn_137_0 = null;
         StringBuilder stackIn_137_1 = null;
         String stackIn_137_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_35_0 = null;
         lf stackOut_35_1 = null;
@@ -7716,7 +7932,7 @@ final class sk implements pa {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~param1.length >= ~var6_int) {
+                  if ((param1.length ^ -1) >= (var6_int ^ -1)) {
                     break L3;
                   } else {
                     param3++;
@@ -7758,7 +7974,7 @@ final class sk implements pa {
                 L6: while (true) {
                   L7: {
                     L8: {
-                      if (~var9 <= ~var6_int) {
+                      if ((var9 ^ -1) <= (var6_int ^ -1)) {
                         break L8;
                       } else {
                         var8[var9] = var9;
@@ -7781,7 +7997,7 @@ final class sk implements pa {
                   L9: while (true) {
                     L10: {
                       L11: {
-                        if (~param3 >= ~var9) {
+                        if ((param3 ^ -1) >= (var9 ^ -1)) {
                           break L11;
                         } else {
                           if (var12 != 0) {
@@ -7789,7 +8005,7 @@ final class sk implements pa {
                           } else {
                             L12: {
                               if (null != param1[var9]) {
-                                int incrementValue$9 = var6_int;
+                                incrementValue$9 = var6_int;
                                 var6_int++;
                                 var7[incrementValue$9] = var9;
                                 break L12;
@@ -7826,7 +8042,7 @@ final class sk implements pa {
                               stackIn_37_1 = stackOut_35_1;
                               L16: while (true) {
                                 L17: {
-                                  if (stackIn_37_0 == (Object) (Object) stackIn_37_1) {
+                                  if (stackIn_37_0 == stackIn_37_1) {
                                     break L17;
                                   } else {
                                     var11 = 1 + var9;
@@ -7845,10 +8061,10 @@ final class sk implements pa {
                                             continue L16;
                                           } else {
                                             L20: {
-                                              if (stackIn_41_0 == (Object) (Object) stackIn_41_1) {
+                                              if (stackIn_41_0 == stackIn_41_1) {
                                                 break L20;
                                               } else {
-                                                if (~param1[var7[var11]].field_s >= ~param1[var7[var10]].field_s) {
+                                                if ((param1[var7[var11]].field_s ^ -1) >= (param1[var7[var10]].field_s ^ -1)) {
                                                   break L20;
                                                 } else {
                                                   var10 = var11;
@@ -7892,7 +8108,7 @@ final class sk implements pa {
                       L21: while (true) {
                         L22: {
                           L23: {
-                            if (~var8.length >= ~var9) {
+                            if ((var8.length ^ -1) >= (var9 ^ -1)) {
                               break L23;
                             } else {
                               var10 = var9;
@@ -7909,8 +8125,8 @@ final class sk implements pa {
                                       if (var11 >= var8.length) {
                                         break L26;
                                       } else {
-                                        stackOut_55_0 = ~param4[var8[var10]].field_d;
-                                        stackOut_55_1 = ~param4[var8[var11]].field_d;
+                                        stackOut_55_0 = param4[var8[var10]].field_d ^ -1;
+                                        stackOut_55_1 = param4[var8[var11]].field_d ^ -1;
                                         stackIn_63_0 = stackOut_55_0;
                                         stackIn_63_1 = stackOut_55_1;
                                         stackIn_56_0 = stackOut_55_0;
@@ -8016,20 +8232,20 @@ final class sk implements pa {
                                     }
                                   }
                                   L35: {
-                                    if (~var9 <= ~param3) {
+                                    if ((var9 ^ -1) <= (param3 ^ -1)) {
                                       break L35;
                                     } else {
                                       L36: {
-                                        if (~var8.length >= ~var6_int) {
+                                        if ((var8.length ^ -1) >= (var6_int ^ -1)) {
                                           break L36;
                                         } else {
                                           L37: {
-                                            if (~param1[var7[var9]].field_s <= ~param4[var8[var6_int]].field_d) {
+                                            if ((param1[var7[var9]].field_s ^ -1) <= (param4[var8[var6_int]].field_d ^ -1)) {
                                               break L37;
                                             } else {
-                                              int incrementValue$10 = var6_int;
+                                              incrementValue$10 = var6_int;
                                               var6_int++;
-                                              param4[var8[incrementValue$10]].a(param0, param2 ^ -107, true, ((sk) this).field_C);
+                                              param4[var8[incrementValue$10]].a(param0, param2 ^ -107, true, this.field_C);
                                               if (var12 == 0) {
                                                 continue L30;
                                               } else {
@@ -8037,9 +8253,9 @@ final class sk implements pa {
                                               }
                                             }
                                           }
-                                          int incrementValue$11 = var9;
+                                          incrementValue$11 = var9;
                                           var9++;
-                                          param1[var7[incrementValue$11]].a(((sk) this).field_C, -91, true);
+                                          param1[var7[incrementValue$11]].a(this.field_C, -91, true);
                                           if (var12 == 0) {
                                             continue L30;
                                           } else {
@@ -8047,9 +8263,9 @@ final class sk implements pa {
                                           }
                                         }
                                       }
-                                      int incrementValue$12 = var9;
+                                      incrementValue$12 = var9;
                                       var9++;
-                                      param1[var7[incrementValue$12]].a(((sk) this).field_C, param2 ^ -55, true);
+                                      param1[var7[incrementValue$12]].a(this.field_C, param2 ^ -55, true);
                                       if (var12 == 0) {
                                         continue L30;
                                       } else {
@@ -8057,9 +8273,9 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  int incrementValue$13 = var6_int;
+                                  incrementValue$13 = var6_int;
                                   var6_int++;
-                                  param4[var8[incrementValue$13]].a(param0, -8, true, ((sk) this).field_C);
+                                  param4[var8[incrementValue$13]].a(param0, -8, true, this.field_C);
                                   if (var12 == 0) {
                                     continue L30;
                                   } else {
@@ -8079,11 +8295,11 @@ final class sk implements pa {
                             L39: {
                               L40: {
                                 L41: {
-                                  if (~var6_int > ~var8.length) {
+                                  if ((var6_int ^ -1) > (var8.length ^ -1)) {
                                     break L41;
                                   } else {
-                                    stackOut_102_0 = ~param3;
-                                    stackOut_102_1 = ~var9;
+                                    stackOut_102_0 = param3 ^ -1;
+                                    stackOut_102_1 = var9 ^ -1;
                                     stackIn_108_0 = stackOut_102_0;
                                     stackIn_108_1 = stackOut_102_1;
                                     stackIn_103_0 = stackOut_102_0;
@@ -8126,12 +8342,12 @@ final class sk implements pa {
                                   break L43;
                                 } else {
                                   L44: {
-                                    if (~var6_int > ~var8.length) {
+                                    if ((var6_int ^ -1) > (var8.length ^ -1)) {
                                       break L44;
                                     } else {
-                                      int incrementValue$14 = var9;
+                                      incrementValue$14 = var9;
                                       var9++;
-                                      param1[var7[incrementValue$14]].a(((sk) this).field_C, -65, false);
+                                      param1[var7[incrementValue$14]].a(this.field_C, -65, false);
                                       if (var12 == 0) {
                                         continue L38;
                                       } else {
@@ -8143,9 +8359,9 @@ final class sk implements pa {
                                     if (param1[var7[var9]].field_s >= param4[var8[var6_int]].field_d) {
                                       break L45;
                                     } else {
-                                      int incrementValue$15 = var6_int;
+                                      incrementValue$15 = var6_int;
                                       var6_int++;
-                                      param4[var8[incrementValue$15]].a(param0, -8, false, ((sk) this).field_C);
+                                      param4[var8[incrementValue$15]].a(param0, -8, false, this.field_C);
                                       if (var12 == 0) {
                                         continue L38;
                                       } else {
@@ -8153,9 +8369,9 @@ final class sk implements pa {
                                       }
                                     }
                                   }
-                                  int incrementValue$16 = var9;
+                                  incrementValue$16 = var9;
                                   var9++;
-                                  param1[var7[incrementValue$16]].a(((sk) this).field_C, -70, false);
+                                  param1[var7[incrementValue$16]].a(this.field_C, -70, false);
                                   if (var12 == 0) {
                                     continue L38;
                                   } else {
@@ -8163,19 +8379,21 @@ final class sk implements pa {
                                   }
                                 }
                               }
-                              int incrementValue$17 = var6_int;
+                              incrementValue$17 = var6_int;
                               var6_int++;
-                              param4[var8[incrementValue$17]].a(param0, -8, false, ((sk) this).field_C);
+                              param4[var8[incrementValue$17]].a(param0, -8, false, this.field_C);
                               if (var12 == 0) {
                                 continue L38;
                               } else {
                                 break L39;
                               }
                             }
+                            decompiledRegionSelector0 = 1;
                             break L0;
                           }
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 0;
+                          break L0;
                         }
                       }
                     }
@@ -8188,23 +8406,23 @@ final class sk implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L46: {
             var6 = decompiledCaughtException;
-            stackOut_129_0 = (RuntimeException) var6;
+            stackOut_129_0 = (RuntimeException) (var6);
             stackOut_129_1 = new StringBuilder().append("sk.FA(").append(param0).append(',');
             stackIn_132_0 = stackOut_129_0;
             stackIn_132_1 = stackOut_129_1;
             stackIn_130_0 = stackOut_129_0;
             stackIn_130_1 = stackOut_129_1;
             if (param1 == null) {
-              stackOut_132_0 = (RuntimeException) (Object) stackIn_132_0;
-              stackOut_132_1 = (StringBuilder) (Object) stackIn_132_1;
+              stackOut_132_0 = (RuntimeException) ((Object) stackIn_132_0);
+              stackOut_132_1 = (StringBuilder) ((Object) stackIn_132_1);
               stackOut_132_2 = "null";
               stackIn_133_0 = stackOut_132_0;
               stackIn_133_1 = stackOut_132_1;
               stackIn_133_2 = stackOut_132_2;
               break L46;
             } else {
-              stackOut_130_0 = (RuntimeException) (Object) stackIn_130_0;
-              stackOut_130_1 = (StringBuilder) (Object) stackIn_130_1;
+              stackOut_130_0 = (RuntimeException) ((Object) stackIn_130_0);
+              stackOut_130_1 = (StringBuilder) ((Object) stackIn_130_1);
               stackOut_130_2 = "{...}";
               stackIn_133_0 = stackOut_130_0;
               stackIn_133_1 = stackOut_130_1;
@@ -8213,23 +8431,23 @@ final class sk implements pa {
             }
           }
           L47: {
-            stackOut_133_0 = (RuntimeException) (Object) stackIn_133_0;
+            stackOut_133_0 = (RuntimeException) ((Object) stackIn_133_0);
             stackOut_133_1 = ((StringBuilder) (Object) stackIn_133_1).append(stackIn_133_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_136_0 = stackOut_133_0;
             stackIn_136_1 = stackOut_133_1;
             stackIn_134_0 = stackOut_133_0;
             stackIn_134_1 = stackOut_133_1;
             if (param4 == null) {
-              stackOut_136_0 = (RuntimeException) (Object) stackIn_136_0;
-              stackOut_136_1 = (StringBuilder) (Object) stackIn_136_1;
+              stackOut_136_0 = (RuntimeException) ((Object) stackIn_136_0);
+              stackOut_136_1 = (StringBuilder) ((Object) stackIn_136_1);
               stackOut_136_2 = "null";
               stackIn_137_0 = stackOut_136_0;
               stackIn_137_1 = stackOut_136_1;
               stackIn_137_2 = stackOut_136_2;
               break L47;
             } else {
-              stackOut_134_0 = (RuntimeException) (Object) stackIn_134_0;
-              stackOut_134_1 = (StringBuilder) (Object) stackIn_134_1;
+              stackOut_134_0 = (RuntimeException) ((Object) stackIn_134_0);
+              stackOut_134_1 = (StringBuilder) ((Object) stackIn_134_1);
               stackOut_134_2 = "{...}";
               stackIn_137_0 = stackOut_134_0;
               stackIn_137_1 = stackOut_134_1;
@@ -8237,23 +8455,28 @@ final class sk implements pa {
               break L47;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_137_0, stackIn_137_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_137_0), stackIn_137_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final void d(int param0) {
-        this.a(((sk) this).field_s, -4925);
+        this.a(this.field_s, -4925);
         if (param0 != 29823) {
             return;
         }
         try {
-            this.b(((sk) this).field_s, 12579);
-            if (((sk) this).field_F > 200) {
-                ((sk) this).field_F = 0;
-                ((sk) this).field_n = 8;
+            this.b(this.field_s, 12579);
+            if ((this.field_F ^ -1) < -201) {
+                this.field_F = 0;
+                this.field_n = 8;
             }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sk.R(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "sk.R(" + param0 + ')');
         }
     }
 
@@ -8265,9 +8488,9 @@ final class sk implements pa {
             return;
         }
         try {
-            field_j = null;
+            field_j = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sk.V(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "sk.V(" + param0 + ')');
         }
     }
 
@@ -8277,6 +8500,7 @@ final class sk implements pa {
         int stackIn_10_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_18_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_9_0 = 0;
@@ -8286,14 +8510,14 @@ final class sk implements pa {
           L0: {
             L1: {
               L2: {
-                if (((sk) this).field_n != 8) {
+                if (-9 != (this.field_n ^ -1)) {
                   break L2;
                 } else {
                   L3: {
                     if (null == u.field_p) {
                       break L3;
                     } else {
-                      if (u.field_p.field_n != 0) {
+                      if ((u.field_p.field_n ^ -1) != -1) {
                         break L2;
                       } else {
                         break L3;
@@ -8313,8 +8537,8 @@ final class sk implements pa {
             if (param0 == 8865) {
               L4: {
                 if (var2_int != 0) {
-                  eb.a(((sk) this).field_d, ((sk) this).field_c, true);
-                  eb.a(((sk) this).field_d, ((sk) this).field_a, true);
+                  eb.a(this.field_d, this.field_c, true);
+                  eb.a(this.field_d, this.field_a, true);
                   break L4;
                 } else {
                   break L4;
@@ -8322,19 +8546,25 @@ final class sk implements pa {
               }
               stackOut_17_0 = var2_int;
               stackIn_18_0 = stackOut_17_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_11_0 = 0;
               stackIn_12_0 = stackOut_11_0;
-              return stackIn_12_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.K(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.K(" + param0 + ')');
         }
-        return stackIn_18_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_12_0 != 0;
+        } else {
+          return stackIn_18_0 != 0;
+        }
     }
 
     private final void a(byte param0, int param1) {
@@ -8342,6 +8572,7 @@ final class sk implements pa {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
@@ -8350,10 +8581,10 @@ final class sk implements pa {
             var3_int = 0;
             L1: while (true) {
               L2: {
-                if (~((sk) this).field_D.length >= ~var3_int) {
+                if ((this.field_D.length ^ -1) >= (var3_int ^ -1)) {
                   break L2;
                 } else {
-                  if (null == ((sk) this).field_D[var3_int]) {
+                  if (null == this.field_D[var3_int]) {
                     break L2;
                   } else {
                     var3_int++;
@@ -8365,10 +8596,12 @@ final class sk implements pa {
                   }
                 }
               }
-              if (~var3_int <= ~((sk) this).field_D.length) {
-                return;
+              if ((var3_int ^ -1) <= (this.field_D.length ^ -1)) {
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
-                ((sk) this).field_D[var3_int] = new km(-u.field_o[((sk) this).field_c][1] + ((sk) this).field_s[param1].field_a, 600 + -pk.field_T[((sk) this).field_c][1], ((sk) this).field_s[param1].field_s, 2, ((sk) this).field_z);
+                this.field_D[var3_int] = new km(-u.field_o[this.field_c][1] + this.field_s[param1].field_a, 600 + -pk.field_T[this.field_c][1], this.field_s[param1].field_s, 2, this.field_z);
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -8376,7 +8609,12 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) runtimeException, "sk.MA(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sk.MA(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -8433,7 +8671,7 @@ final class sk implements pa {
                 if (param1 == 12579) {
                   break L2;
                 } else {
-                  ((sk) this).field_c = 97;
+                  this.field_c = 97;
                   break L2;
                 }
               }
@@ -8444,23 +8682,23 @@ final class sk implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) runtimeException;
+            stackOut_14_0 = (RuntimeException) (runtimeException);
             stackOut_14_1 = new StringBuilder().append("sk.C(");
             stackIn_17_0 = stackOut_14_0;
             stackIn_17_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_18_0 = stackOut_15_0;
               stackIn_18_1 = stackOut_15_1;
@@ -8468,7 +8706,7 @@ final class sk implements pa {
               break L5;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
         }
     }
 
@@ -8485,19 +8723,19 @@ final class sk implements pa {
               if (param0 >= 26) {
                 break L1;
               } else {
-                ((sk) this).field_w = -32;
+                this.field_w = -32;
                 break L1;
               }
             }
             L2: {
               L3: {
                 L4: {
-                  var2_int = ((sk) this).field_y + -((sk) this).field_v;
-                  var3 = ((sk) this).field_w - ((sk) this).field_O;
-                  if (0 >= ((sk) this).field_O) {
+                  var2_int = this.field_y + -this.field_v;
+                  var3 = this.field_w - this.field_O;
+                  if (0 >= this.field_O) {
                     break L4;
                   } else {
-                    if (((sk) this).field_v > 0) {
+                    if (-1 > (this.field_v ^ -1)) {
                       break L3;
                     } else {
                       break L4;
@@ -8505,14 +8743,14 @@ final class sk implements pa {
                   }
                 }
                 L5: {
-                  if (0 < ((sk) this).field_v) {
+                  if (0 < this.field_v) {
                     break L5;
                   } else {
-                    if (((sk) this).field_O > 0) {
-                      if (!this.a((byte) -93, ((sk) this).field_u, ((sk) this).field_s, ((sk) this).field_J, ((sk) this).field_i)) {
+                    if (-1 > (this.field_O ^ -1)) {
+                      if (!this.a((byte) -93, this.field_u, this.field_s, this.field_J, this.field_i)) {
                         break L2;
                       } else {
-                        ((sk) this).field_O = ((sk) this).field_O - 1;
+                        this.field_O = this.field_O - 1;
                         if (var4 == 0) {
                           break L2;
                         } else {
@@ -8524,8 +8762,8 @@ final class sk implements pa {
                     }
                   }
                 }
-                if (this.a((byte) -93, ((sk) this).field_J, ((sk) this).field_i, ((sk) this).field_u, ((sk) this).field_s)) {
-                  ((sk) this).field_v = ((sk) this).field_v - 1;
+                if (this.a((byte) -93, this.field_J, this.field_i, this.field_u, this.field_s)) {
+                  this.field_v = this.field_v - 1;
                   if (var4 == 0) {
                     break L2;
                   } else {
@@ -8536,20 +8774,20 @@ final class sk implements pa {
                 }
               }
               L6: {
-                if (var2_int <= 0) {
+                if ((var2_int ^ -1) >= -1) {
                   break L6;
                 } else {
                   if (0 >= var3) {
                     break L6;
                   } else {
                     L7: {
-                      if (ns.a(false, ((sk) this).field_O + ((sk) this).field_v, vv.field_b) > ((sk) this).field_v) {
+                      if (ns.a(false, this.field_O + this.field_v, vv.field_b) > this.field_v) {
                         break L7;
                       } else {
-                        if (!this.a((byte) -93, ((sk) this).field_J, ((sk) this).field_i, ((sk) this).field_u, ((sk) this).field_s)) {
+                        if (!this.a((byte) -93, this.field_J, this.field_i, this.field_u, this.field_s)) {
                           break L2;
                         } else {
-                          ((sk) this).field_v = ((sk) this).field_v - 1;
+                          this.field_v = this.field_v - 1;
                           if (var4 == 0) {
                             break L2;
                           } else {
@@ -8558,10 +8796,10 @@ final class sk implements pa {
                         }
                       }
                     }
-                    if (!this.a((byte) -93, ((sk) this).field_u, ((sk) this).field_s, ((sk) this).field_J, ((sk) this).field_i)) {
+                    if (!this.a((byte) -93, this.field_u, this.field_s, this.field_J, this.field_i)) {
                       break L2;
                     } else {
-                      ((sk) this).field_O = ((sk) this).field_O - 1;
+                      this.field_O = this.field_O - 1;
                       if (var4 == 0) {
                         break L2;
                       } else {
@@ -8572,12 +8810,12 @@ final class sk implements pa {
                 }
               }
               L8: {
-                if (var2_int > 0) {
+                if (-1 > (var2_int ^ -1)) {
                   break L8;
                 } else {
-                  if (var3 > 0) {
-                    if (this.a((byte) -93, ((sk) this).field_u, ((sk) this).field_s, ((sk) this).field_J, ((sk) this).field_i)) {
-                      ((sk) this).field_O = ((sk) this).field_O - 1;
+                  if ((var3 ^ -1) < -1) {
+                    if (this.a((byte) -93, this.field_u, this.field_s, this.field_J, this.field_i)) {
+                      this.field_O = this.field_O - 1;
                       if (var4 == 0) {
                         break L2;
                       } else {
@@ -8591,10 +8829,10 @@ final class sk implements pa {
                   }
                 }
               }
-              if (!this.a((byte) -93, ((sk) this).field_J, ((sk) this).field_i, ((sk) this).field_u, ((sk) this).field_s)) {
+              if (!this.a((byte) -93, this.field_J, this.field_i, this.field_u, this.field_s)) {
                 break L2;
               } else {
-                ((sk) this).field_v = ((sk) this).field_v - 1;
+                this.field_v = this.field_v - 1;
                 break L2;
               }
             }
@@ -8603,26 +8841,34 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.PA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.PA(" + param0 + ')');
         }
     }
 
     private final void b(byte param0, int param1) {
         RuntimeException var3 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             if (param0 == 54) {
-              ((sk) this).field_A = qc.a(param1, 8806);
+              this.field_A = qc.a(param1, 8806);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3, "sk.EA(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "sk.EA(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -8632,8 +8878,8 @@ final class sk implements pa {
         try {
           L0: {
             L1: {
-              this.b(((sk) this).field_s, param0 + 12453);
-              this.b(((sk) this).field_i, param0 + 12453);
+              this.b(this.field_s, param0 + 12453);
+              this.b(this.field_i, param0 + 12453);
               if (param0 == 126) {
                 break L1;
               } else {
@@ -8642,14 +8888,14 @@ final class sk implements pa {
               }
             }
             L2: {
-              if (((sk) this).field_F != 1) {
+              if ((this.field_F ^ -1) != -2) {
                 break L2;
               } else {
                 L3: {
                   if (null == u.field_p) {
                     break L3;
                   } else {
-                    u.field_p.a(param0 ^ -24, ((sk) this).field_t);
+                    u.field_p.a(param0 ^ -24, this.field_t);
                     break L3;
                   }
                 }
@@ -8662,7 +8908,7 @@ final class sk implements pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "sk.NA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "sk.NA(" + param0 + ')');
         }
     }
 
@@ -9110,7 +9356,7 @@ final class sk implements pa {
           L0: {
             L1: {
               L2: {
-                if (null != ((sk) this).field_x) {
+                if (null != this.field_x) {
                   break L2;
                 } else {
                   this.b((byte) 54, 0);
@@ -9121,11 +9367,11 @@ final class sk implements pa {
                   }
                 }
               }
-              this.b((byte) 54, ((sk) this).field_x.field_hb);
+              this.b((byte) 54, this.field_x.field_hb);
               break L1;
             }
             L3: {
-              if (~param1.field_Y < ~param0) {
+              if ((param1.field_Y ^ -1) < (param0 ^ -1)) {
                 stackOut_10_0 = 0;
                 stackIn_11_0 = stackOut_10_0;
                 break L3;
@@ -9175,14 +9421,14 @@ final class sk implements pa {
               }
             }
             L7: {
-              ((sk) this).field_d = stackIn_21_1 != 0;
-              if (param4.field_N != 34) {
+              ((sk) (this)).field_d = stackIn_21_1 != 0;
+              if ((param4.field_N ^ -1) != -35) {
                 break L7;
               } else {
                 if (!param4.field_W) {
                   break L7;
                 } else {
-                  ((sk) this).field_d = true;
+                  this.field_d = true;
                   break L7;
                 }
               }
@@ -9191,12 +9437,12 @@ final class sk implements pa {
               if (param3) {
                 break L8;
               } else {
-                ((sk) this).field_v = 72;
+                this.field_v = 72;
                 break L8;
               }
             }
             L9: {
-              if (((sk) this).field_d) {
+              if (this.field_d) {
                 param2 = 0;
                 break L9;
               } else {
@@ -9204,11 +9450,11 @@ final class sk implements pa {
               }
             }
             L10: {
-              ((sk) this).field_J = bw.field_m[param4.field_N][9];
+              this.field_J = bw.field_m[param4.field_N][9];
               stackOut_34_0 = this;
               stackIn_37_0 = stackOut_34_0;
               stackIn_35_0 = stackOut_34_0;
-              if (vu.field_N[((sk) this).field_J] * param4.field_Y % param4.field_t <= 0) {
+              if ((vu.field_N[this.field_J] * param4.field_Y % param4.field_t ^ -1) >= -1) {
                 stackOut_37_0 = this;
                 stackOut_37_1 = 0;
                 stackIn_38_0 = stackOut_37_0;
@@ -9223,14 +9469,14 @@ final class sk implements pa {
               }
             }
             L11: {
-              ((sk) this).field_y = stackIn_38_1 + param4.field_Y * vu.field_N[((sk) this).field_J] / param4.field_t;
+              ((sk) (this)).field_y = stackIn_38_1 + param4.field_Y * vu.field_N[this.field_J] / param4.field_t;
               stackOut_38_0 = this;
-              stackOut_38_1 = -((-param2 + param4.field_Y) * vu.field_N[((sk) this).field_J] / param4.field_t);
+              stackOut_38_1 = -((-param2 + param4.field_Y) * vu.field_N[this.field_J] / param4.field_t);
               stackIn_41_0 = stackOut_38_0;
               stackIn_41_1 = stackOut_38_1;
               stackIn_39_0 = stackOut_38_0;
               stackIn_39_1 = stackOut_38_1;
-              if (vu.field_N[((sk) this).field_J] * (param4.field_Y + -param2) % param4.field_t > 0) {
+              if (vu.field_N[this.field_J] * (param4.field_Y + -param2) % param4.field_t > 0) {
                 stackOut_41_0 = this;
                 stackOut_41_1 = stackIn_41_1;
                 stackOut_41_2 = 1;
@@ -9249,12 +9495,12 @@ final class sk implements pa {
               }
             }
             L12: {
-              ((sk) this).field_v = stackIn_42_1 + (-stackIn_42_2 + ((sk) this).field_y);
-              ((sk) this).field_c = param4.field_N;
-              if (~((sk) this).field_v >= ~((sk) this).field_y) {
+              ((sk) (this)).field_v = stackIn_42_1 + (-stackIn_42_2 + this.field_y);
+              this.field_c = param4.field_N;
+              if ((this.field_v ^ -1) >= (this.field_y ^ -1)) {
                 break L12;
               } else {
-                ((sk) this).field_v = ((sk) this).field_y;
+                this.field_v = this.field_y;
                 break L12;
               }
             }
@@ -9289,12 +9535,12 @@ final class sk implements pa {
               break L13;
             }
             L15: {
-              ((sk) this).field_E = stackIn_52_1 != 0;
-              if (param1.field_N != 34) {
+              ((sk) (this)).field_E = stackIn_52_1 != 0;
+              if (-35 != (param1.field_N ^ -1)) {
                 break L15;
               } else {
                 if (param1.field_W) {
-                  ((sk) this).field_q = true;
+                  this.field_q = true;
                   break L15;
                 } else {
                   break L15;
@@ -9302,14 +9548,14 @@ final class sk implements pa {
               }
             }
             L16: {
-              ((sk) this).field_u = bw.field_m[param1.field_N][9];
+              this.field_u = bw.field_m[param1.field_N][9];
               stackOut_59_0 = this;
-              stackOut_59_1 = param1.field_Y * vu.field_N[((sk) this).field_u] / param1.field_t;
+              stackOut_59_1 = param1.field_Y * vu.field_N[this.field_u] / param1.field_t;
               stackIn_62_0 = stackOut_59_0;
               stackIn_62_1 = stackOut_59_1;
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
-              if (vu.field_N[((sk) this).field_u] * param1.field_Y % param1.field_t <= 0) {
+              if (-1 <= (vu.field_N[this.field_u] * param1.field_Y % param1.field_t ^ -1)) {
                 stackOut_62_0 = this;
                 stackOut_62_1 = stackIn_62_1;
                 stackOut_62_2 = 0;
@@ -9328,14 +9574,14 @@ final class sk implements pa {
               }
             }
             L17: {
-              ((sk) this).field_w = stackIn_63_1 + stackIn_63_2;
+              ((sk) (this)).field_w = stackIn_63_1 + stackIn_63_2;
               stackOut_63_0 = this;
-              stackOut_63_1 = ((sk) this).field_w;
+              stackOut_63_1 = this.field_w;
               stackIn_66_0 = stackOut_63_0;
               stackIn_66_1 = stackOut_63_1;
               stackIn_64_0 = stackOut_63_0;
               stackIn_64_1 = stackOut_63_1;
-              if ((-param0 + param1.field_Y) * vu.field_N[((sk) this).field_u] % param1.field_t <= 0) {
+              if ((-param0 + param1.field_Y) * vu.field_N[this.field_u] % param1.field_t <= 0) {
                 stackOut_66_0 = this;
                 stackOut_66_1 = stackIn_66_1;
                 stackOut_66_2 = 0;
@@ -9354,12 +9600,12 @@ final class sk implements pa {
               }
             }
             L18: {
-              ((sk) this).field_O = stackIn_67_1 - stackIn_67_2 - vu.field_N[((sk) this).field_u] * (param1.field_Y + -param0) / param1.field_t;
-              ((sk) this).field_a = param1.field_N;
-              if (~((sk) this).field_w <= ~((sk) this).field_O) {
+              ((sk) (this)).field_O = stackIn_67_1 - stackIn_67_2 - vu.field_N[this.field_u] * (param1.field_Y + -param0) / param1.field_t;
+              this.field_a = param1.field_N;
+              if ((this.field_w ^ -1) <= (this.field_O ^ -1)) {
                 break L18;
               } else {
-                ((sk) this).field_O = ((sk) this).field_w;
+                this.field_O = this.field_w;
                 break L18;
               }
             }
@@ -9368,7 +9614,7 @@ final class sk implements pa {
                 stackOut_70_0 = this;
                 stackIn_74_0 = stackOut_70_0;
                 stackIn_71_0 = stackOut_70_0;
-                if (param1.g(0) == 3) {
+                if (-4 == (param1.g(0) ^ -1)) {
                   break L20;
                 } else {
                   stackOut_71_0 = this;
@@ -9395,16 +9641,16 @@ final class sk implements pa {
             }
             L21: {
               L22: {
-                ((sk) this).field_P = stackIn_77_1 != 0;
-                if (((sk) this).field_d) {
+                ((sk) (this)).field_P = stackIn_77_1 != 0;
+                if (this.field_d) {
                   break L22;
                 } else {
                   L23: {
-                    ((sk) this).field_n = 1;
+                    this.field_n = 1;
                     if (var6_int == 0) {
                       break L23;
                     } else {
-                      ((sk) this).field_L = 2;
+                      this.field_L = 2;
                       if (var9 == 0) {
                         break L21;
                       } else {
@@ -9416,7 +9662,7 @@ final class sk implements pa {
                     if (var7 != 0) {
                       break L24;
                     } else {
-                      ((sk) this).field_L = 4;
+                      this.field_L = 4;
                       if (var9 == 0) {
                         break L21;
                       } else {
@@ -9424,7 +9670,7 @@ final class sk implements pa {
                       }
                     }
                   }
-                  ((sk) this).field_L = 3;
+                  this.field_L = 3;
                   if (var9 == 0) {
                     break L21;
                   } else {
@@ -9434,10 +9680,10 @@ final class sk implements pa {
               }
               L25: {
                 L26: {
-                  if (34 != ((sk) this).field_c) {
+                  if (34 != this.field_c) {
                     break L26;
                   } else {
-                    ((sk) this).field_z = 2;
+                    this.field_z = 2;
                     if (var9 == 0) {
                       break L25;
                     } else {
@@ -9446,10 +9692,10 @@ final class sk implements pa {
                   }
                 }
                 L27: {
-                  if (param4.g(0) != 3) {
+                  if ((param4.g(0) ^ -1) != -4) {
                     break L27;
                   } else {
-                    ((sk) this).field_z = bw.field_m[param4.field_N][1] + 8;
+                    this.field_z = bw.field_m[param4.field_N][1] + 8;
                     if (var9 == 0) {
                       break L25;
                     } else {
@@ -9458,28 +9704,28 @@ final class sk implements pa {
                   }
                 }
                 L28: {
-                  if (((sk) this).field_c == 81) {
+                  if (-82 == (this.field_c ^ -1)) {
                     break L28;
                   } else {
-                    if (4 == ((sk) this).field_c) {
+                    if (4 == this.field_c) {
                       break L28;
                     } else {
-                      if (((sk) this).field_c == 74) {
+                      if (this.field_c == 74) {
                         break L28;
                       } else {
                         L29: {
-                          if (((sk) this).field_c == 67) {
+                          if (-68 == (this.field_c ^ -1)) {
                             break L29;
                           } else {
                             L30: {
-                              if (((sk) this).field_c == 18) {
+                              if (this.field_c == 18) {
                                 break L30;
                               } else {
                                 L31: {
-                                  if (((sk) this).field_c != 28) {
+                                  if (this.field_c != 28) {
                                     break L31;
                                   } else {
-                                    ((sk) this).field_z = 5;
+                                    this.field_z = 5;
                                     if (var9 == 0) {
                                       break L25;
                                     } else {
@@ -9487,8 +9733,8 @@ final class sk implements pa {
                                     }
                                   }
                                 }
-                                if (((sk) this).field_c == 3) {
-                                  ((sk) this).field_z = 6;
+                                if (this.field_c == 3) {
+                                  this.field_z = 6;
                                   if (var9 == 0) {
                                     break L25;
                                   } else {
@@ -9499,7 +9745,7 @@ final class sk implements pa {
                                 }
                               }
                             }
-                            ((sk) this).field_z = 0;
+                            this.field_z = 0;
                             if (var9 == 0) {
                               break L25;
                             } else {
@@ -9507,7 +9753,7 @@ final class sk implements pa {
                             }
                           }
                         }
-                        ((sk) this).field_z = 3;
+                        this.field_z = 3;
                         if (var9 == 0) {
                           break L25;
                         } else {
@@ -9517,18 +9763,18 @@ final class sk implements pa {
                     }
                   }
                 }
-                ((sk) this).field_z = 7;
+                this.field_z = 7;
                 break L25;
               }
               L32: {
-                ((sk) this).field_p = ((sk) this).field_O - (-ns.a(false, ((sk) this).field_y, vv.field_b) + -((sk) this).field_y);
-                ((sk) this).field_D = new km[((sk) this).field_p];
-                ((sk) this).field_b = this.a(((sk) this).field_w, (byte) -127);
-                ((sk) this).field_n = 5;
+                this.field_p = this.field_O - (-ns.a(false, this.field_y, vv.field_b) + -this.field_y);
+                this.field_D = new km[this.field_p];
+                this.field_b = this.a(this.field_w, (byte) -127);
+                this.field_n = 5;
                 if (var6_int != 0) {
                   break L32;
                 } else {
-                  ((sk) this).field_L = 8;
+                  this.field_L = 8;
                   if (var9 == 0) {
                     break L21;
                   } else {
@@ -9536,18 +9782,18 @@ final class sk implements pa {
                   }
                 }
               }
-              ((sk) this).field_L = 7;
+              this.field_L = 7;
               break L21;
             }
             L33: {
               L34: {
                 L35: {
-                  fn.a(((sk) this).field_d, ((sk) this).field_c, -32596);
-                  fn.a(((sk) this).field_d, ((sk) this).field_a, -32596);
+                  fn.a(this.field_d, this.field_c, -32596);
+                  fn.a(this.field_d, this.field_a, -32596);
                   if (param4.field_N == 7) {
                     break L35;
                   } else {
-                    if (param4.field_N != 34) {
+                    if (-35 != (param4.field_N ^ -1)) {
                       break L34;
                     } else {
                       break L35;
@@ -9557,14 +9803,14 @@ final class sk implements pa {
                 if (!param4.field_W) {
                   break L34;
                 } else {
-                  ((sk) this).field_s = new lf[6];
+                  this.field_s = new lf[6];
                   var8 = 0;
                   L36: while (true) {
                     L37: {
-                      if (var8 >= ((sk) this).field_y) {
+                      if (var8 >= this.field_y) {
                         break L37;
                       } else {
-                        ((sk) this).field_s[1 + var8] = new lf(((sk) this).field_c, true, id.field_d[var8], kr.field_F[var8], false, 0);
+                        this.field_s[1 + var8] = new lf(this.field_c, true, id.field_d[var8], kr.field_F[var8], false, 0);
                         var8++;
                         if (var9 != 0) {
                           break L33;
@@ -9585,7 +9831,7 @@ final class sk implements pa {
                   }
                 }
               }
-              ((sk) this).field_s = new lf[vu.field_N[((sk) this).field_J]];
+              this.field_s = new lf[vu.field_N[this.field_J]];
               break L33;
             }
             L38: {
@@ -9593,10 +9839,10 @@ final class sk implements pa {
                 L40: {
                   L41: {
                     L42: {
-                      if (param1.field_N == 7) {
+                      if (-8 == (param1.field_N ^ -1)) {
                         break L42;
                       } else {
-                        if (param1.field_N != 34) {
+                        if (-35 != (param1.field_N ^ -1)) {
                           break L41;
                         } else {
                           break L42;
@@ -9609,20 +9855,20 @@ final class sk implements pa {
                       break L41;
                     }
                   }
-                  ((sk) this).field_i = new lf[vu.field_N[((sk) this).field_u]];
+                  this.field_i = new lf[vu.field_N[this.field_u]];
                   if (var9 == 0) {
                     break L39;
                   } else {
                     break L40;
                   }
                 }
-                ((sk) this).field_i = new lf[6];
+                this.field_i = new lf[6];
                 var8 = 0;
                 L43: while (true) {
-                  if (~var8 <= ~((sk) this).field_w) {
+                  if ((var8 ^ -1) <= (this.field_w ^ -1)) {
                     break L39;
                   } else {
-                    ((sk) this).field_i[var8 + 1] = new lf(((sk) this).field_a, false, id.field_d[var8], kr.field_F[var8], false, 0);
+                    this.field_i[var8 + 1] = new lf(this.field_a, false, id.field_d[var8], kr.field_F[var8], false, 0);
                     var8++;
                     if (var9 != 0) {
                       break L38;
@@ -9641,11 +9887,11 @@ final class sk implements pa {
               } else {
                 if (param1.field_W) {
                   L44: {
-                    ((sk) this).field_w = 1;
+                    this.field_w = 1;
                     stackOut_184_0 = this;
                     stackIn_187_0 = stackOut_184_0;
                     stackIn_185_0 = stackOut_184_0;
-                    if (~(param1.field_Y - -param1.field_A) < ~param0) {
+                    if ((param1.field_Y - -param1.field_A ^ -1) < (param0 ^ -1)) {
                       stackOut_187_0 = this;
                       stackOut_187_1 = 0;
                       stackIn_188_0 = stackOut_187_0;
@@ -9660,17 +9906,17 @@ final class sk implements pa {
                     }
                   }
                   L45: {
-                    ((sk) this).field_O = stackIn_188_1;
-                    ((sk) this).field_u = 2;
-                    ((sk) this).field_a = 75;
-                    if (((sk) this).field_O == 1) {
-                      ((sk) this).field_L = 2;
+                    ((sk) (this)).field_O = stackIn_188_1;
+                    this.field_u = 2;
+                    this.field_a = 75;
+                    if ((this.field_O ^ -1) == -2) {
+                      this.field_L = 2;
                       break L45;
                     } else {
                       break L45;
                     }
                   }
-                  ((sk) this).field_q = true;
+                  this.field_q = true;
                   break L38;
                 } else {
                   break L38;
@@ -9684,10 +9930,10 @@ final class sk implements pa {
                 if (!param4.field_W) {
                   break L46;
                 } else {
-                  ((sk) this).field_y = 1;
-                  ((sk) this).field_J = 2;
-                  ((sk) this).field_c = 75;
-                  ((sk) this).field_h = true;
+                  this.field_y = 1;
+                  this.field_J = 2;
+                  this.field_c = 75;
+                  this.field_h = true;
                   break L46;
                 }
               }
@@ -9698,16 +9944,16 @@ final class sk implements pa {
                   L50: {
                     L51: {
                       L52: {
-                        if (((sk) this).field_f) {
+                        if (this.field_f) {
                           break L52;
                         } else {
                           var8 = 0;
                           L53: while (true) {
                             L54: {
-                              if (((sk) this).field_y <= var8) {
+                              if (this.field_y <= var8) {
                                 break L54;
                               } else {
-                                stackOut_202_0 = ((sk) this).field_s;
+                                stackOut_202_0 = this.field_s;
                                 stackOut_202_1 = var8;
                                 stackIn_236_0 = stackOut_202_0;
                                 stackIn_236_1 = stackOut_202_1;
@@ -9717,15 +9963,15 @@ final class sk implements pa {
                                   break L51;
                                 } else {
                                   L55: {
-                                    stackOut_203_0 = (lf[]) (Object) stackIn_203_0;
+                                    stackOut_203_0 = (lf[]) ((Object) stackIn_203_0);
                                     stackOut_203_1 = stackIn_203_1;
                                     stackOut_203_2 = null;
                                     stackOut_203_3 = null;
-                                    stackOut_203_4 = ((sk) this).field_c;
+                                    stackOut_203_4 = this.field_c;
                                     stackOut_203_5 = 1;
-                                    stackOut_203_6 = tn.field_W[((sk) this).field_J][var8];
-                                    stackOut_203_7 = kw.field_P[((sk) this).field_J][var8];
-                                    stackOut_203_8 = ((sk) this).field_d;
+                                    stackOut_203_6 = tn.field_W[this.field_J][var8];
+                                    stackOut_203_7 = kw.field_P[this.field_J][var8];
+                                    stackOut_203_8 = this.field_d;
                                     stackIn_207_0 = stackOut_203_0;
                                     stackIn_207_1 = stackOut_203_1;
                                     stackIn_207_2 = stackOut_203_2;
@@ -9744,9 +9990,9 @@ final class sk implements pa {
                                     stackIn_204_6 = stackOut_203_6;
                                     stackIn_204_7 = stackOut_203_7;
                                     stackIn_204_8 = stackOut_203_8;
-                                    if (!((sk) this).field_d) {
+                                    if (!this.field_d) {
                                       L56: {
-                                        stackOut_207_0 = (lf[]) (Object) stackIn_207_0;
+                                        stackOut_207_0 = (lf[]) ((Object) stackIn_207_0);
                                         stackOut_207_1 = stackIn_207_1;
                                         stackOut_207_2 = null;
                                         stackOut_207_3 = null;
@@ -9777,7 +10023,7 @@ final class sk implements pa {
                                         stackIn_208_8 = stackOut_207_8;
                                         stackIn_208_9 = stackOut_207_9;
                                         if (param3) {
-                                          stackOut_209_0 = (lf[]) (Object) stackIn_209_0;
+                                          stackOut_209_0 = (lf[]) ((Object) stackIn_209_0);
                                           stackOut_209_1 = stackIn_209_1;
                                           stackOut_209_2 = null;
                                           stackOut_209_3 = null;
@@ -9801,7 +10047,7 @@ final class sk implements pa {
                                           stackIn_210_10 = stackOut_209_10;
                                           break L56;
                                         } else {
-                                          stackOut_208_0 = (lf[]) (Object) stackIn_208_0;
+                                          stackOut_208_0 = (lf[]) ((Object) stackIn_208_0);
                                           stackOut_208_1 = stackIn_208_1;
                                           stackOut_208_2 = null;
                                           stackOut_208_3 = null;
@@ -9826,7 +10072,7 @@ final class sk implements pa {
                                           break L56;
                                         }
                                       }
-                                      stackOut_210_0 = (lf[]) (Object) stackIn_210_0;
+                                      stackOut_210_0 = (lf[]) ((Object) stackIn_210_0);
                                       stackOut_210_1 = stackIn_210_1;
                                       stackOut_210_2 = null;
                                       stackOut_210_3 = null;
@@ -9848,7 +10094,7 @@ final class sk implements pa {
                                       stackIn_211_9 = stackOut_210_9;
                                       break L55;
                                     } else {
-                                      stackOut_204_0 = (lf[]) (Object) stackIn_204_0;
+                                      stackOut_204_0 = (lf[]) ((Object) stackIn_204_0);
                                       stackOut_204_1 = stackIn_204_1;
                                       stackOut_204_2 = null;
                                       stackOut_204_3 = null;
@@ -9866,7 +10112,7 @@ final class sk implements pa {
                                       stackIn_206_6 = stackOut_204_6;
                                       stackIn_206_7 = stackOut_204_7;
                                       stackIn_206_8 = stackOut_204_8;
-                                      stackOut_206_0 = (lf[]) (Object) stackIn_206_0;
+                                      stackOut_206_0 = (lf[]) ((Object) stackIn_206_0);
                                       stackOut_206_1 = stackIn_206_1;
                                       stackOut_206_2 = null;
                                       stackOut_206_3 = null;
@@ -9909,10 +10155,10 @@ final class sk implements pa {
                       }
                       var8 = 0;
                       L57: while (true) {
-                        if (var8 >= ((sk) this).field_y) {
+                        if (var8 >= this.field_y) {
                           break L50;
                         } else {
-                          stackOut_215_0 = ((sk) this).field_s;
+                          stackOut_215_0 = this.field_s;
                           stackOut_215_1 = var8;
                           stackIn_236_0 = stackOut_215_0;
                           stackIn_236_1 = stackOut_215_1;
@@ -9922,15 +10168,15 @@ final class sk implements pa {
                             break L51;
                           } else {
                             L58: {
-                              stackOut_216_0 = (lf[]) (Object) stackIn_216_0;
+                              stackOut_216_0 = (lf[]) ((Object) stackIn_216_0);
                               stackOut_216_1 = stackIn_216_1;
                               stackOut_216_2 = null;
                               stackOut_216_3 = null;
-                              stackOut_216_4 = ((sk) this).field_c;
+                              stackOut_216_4 = this.field_c;
                               stackOut_216_5 = 1;
-                              stackOut_216_6 = tn.field_W[((sk) this).field_J][var8];
-                              stackOut_216_7 = kw.field_P[((sk) this).field_J][var8];
-                              stackOut_216_8 = ((sk) this).field_d;
+                              stackOut_216_6 = tn.field_W[this.field_J][var8];
+                              stackOut_216_7 = kw.field_P[this.field_J][var8];
+                              stackOut_216_8 = this.field_d;
                               stackIn_220_0 = stackOut_216_0;
                               stackIn_220_1 = stackOut_216_1;
                               stackIn_220_2 = stackOut_216_2;
@@ -9949,9 +10195,9 @@ final class sk implements pa {
                               stackIn_217_6 = stackOut_216_6;
                               stackIn_217_7 = stackOut_216_7;
                               stackIn_217_8 = stackOut_216_8;
-                              if (!((sk) this).field_d) {
+                              if (!this.field_d) {
                                 L59: {
-                                  stackOut_220_0 = (lf[]) (Object) stackIn_220_0;
+                                  stackOut_220_0 = (lf[]) ((Object) stackIn_220_0);
                                   stackOut_220_1 = stackIn_220_1;
                                   stackOut_220_2 = null;
                                   stackOut_220_3 = null;
@@ -9982,7 +10228,7 @@ final class sk implements pa {
                                   stackIn_221_8 = stackOut_220_8;
                                   stackIn_221_9 = stackOut_220_9;
                                   if (param3) {
-                                    stackOut_222_0 = (lf[]) (Object) stackIn_222_0;
+                                    stackOut_222_0 = (lf[]) ((Object) stackIn_222_0);
                                     stackOut_222_1 = stackIn_222_1;
                                     stackOut_222_2 = null;
                                     stackOut_222_3 = null;
@@ -10006,7 +10252,7 @@ final class sk implements pa {
                                     stackIn_223_10 = stackOut_222_10;
                                     break L59;
                                   } else {
-                                    stackOut_221_0 = (lf[]) (Object) stackIn_221_0;
+                                    stackOut_221_0 = (lf[]) ((Object) stackIn_221_0);
                                     stackOut_221_1 = stackIn_221_1;
                                     stackOut_221_2 = null;
                                     stackOut_221_3 = null;
@@ -10031,7 +10277,7 @@ final class sk implements pa {
                                     break L59;
                                   }
                                 }
-                                stackOut_223_0 = (lf[]) (Object) stackIn_223_0;
+                                stackOut_223_0 = (lf[]) ((Object) stackIn_223_0);
                                 stackOut_223_1 = stackIn_223_1;
                                 stackOut_223_2 = null;
                                 stackOut_223_3 = null;
@@ -10053,7 +10299,7 @@ final class sk implements pa {
                                 stackIn_224_9 = stackOut_223_9;
                                 break L58;
                               } else {
-                                stackOut_217_0 = (lf[]) (Object) stackIn_217_0;
+                                stackOut_217_0 = (lf[]) ((Object) stackIn_217_0);
                                 stackOut_217_1 = stackIn_217_1;
                                 stackOut_217_2 = null;
                                 stackOut_217_3 = null;
@@ -10071,7 +10317,7 @@ final class sk implements pa {
                                 stackIn_219_6 = stackOut_217_6;
                                 stackIn_219_7 = stackOut_217_7;
                                 stackIn_219_8 = stackOut_217_8;
-                                stackOut_219_0 = (lf[]) (Object) stackIn_219_0;
+                                stackOut_219_0 = (lf[]) ((Object) stackIn_219_0);
                                 stackOut_219_1 = stackIn_219_1;
                                 stackOut_219_2 = null;
                                 stackOut_219_3 = null;
@@ -10106,16 +10352,16 @@ final class sk implements pa {
                       }
                     }
                     L60: while (true) {
-                      stackIn_236_0[stackIn_236_1] = new lf(((sk) this).field_a, false, tn.field_W[((sk) this).field_u][var8], kw.field_P[((sk) this).field_u][var8], ((sk) this).field_d, 0);
+                      stackIn_236_0[stackIn_236_1] = new lf(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                       var8++;
                       if (var9 != 0) {
                         break L47;
                       } else {
                         if (var9 == 0) {
-                          if (~((sk) this).field_w >= ~var8) {
+                          if ((this.field_w ^ -1) >= (var8 ^ -1)) {
                             break L48;
                           } else {
-                            stackOut_235_0 = ((sk) this).field_i;
+                            stackOut_235_0 = this.field_i;
                             stackOut_235_1 = var8;
                             stackIn_236_0 = stackOut_235_0;
                             stackIn_236_1 = stackOut_235_1;
@@ -10128,16 +10374,16 @@ final class sk implements pa {
                     }
                   }
                   L61: {
-                    if (((sk) this).field_o) {
+                    if (this.field_o) {
                       break L61;
                     } else {
                       var8 = 0;
                       L62: while (true) {
                         L63: {
-                          if (var8 >= ((sk) this).field_w) {
+                          if (var8 >= this.field_w) {
                             break L63;
                           } else {
-                            ((sk) this).field_i[var8] = new lf(((sk) this).field_a, false, tn.field_W[((sk) this).field_u][var8], kw.field_P[((sk) this).field_u][var8], ((sk) this).field_d, 0);
+                            this.field_i[var8] = new lf(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                             var8++;
                             if (var9 != 0) {
                               break L48;
@@ -10160,14 +10406,14 @@ final class sk implements pa {
                   }
                   var8 = 0;
                   L64: while (true) {
-                    if (~((sk) this).field_w >= ~var8) {
+                    if ((this.field_w ^ -1) >= (var8 ^ -1)) {
                       break L48;
                     } else {
-                      stackOut_235_0 = ((sk) this).field_i;
+                      stackOut_235_0 = this.field_i;
                       stackOut_235_1 = var8;
                       stackIn_236_0 = stackOut_235_0;
                       stackIn_236_1 = stackOut_235_1;
-                      stackIn_236_0[stackIn_236_1] = new lf(((sk) this).field_a, false, tn.field_W[((sk) this).field_u][var8], kw.field_P[((sk) this).field_u][var8], ((sk) this).field_d, 0);
+                      stackIn_236_0[stackIn_236_1] = new lf(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                       var8++;
                       if (var9 != 0) {
                         break L47;
@@ -10187,32 +10433,32 @@ final class sk implements pa {
                 stackOut_240_0 = this;
                 stackIn_243_0 = stackOut_240_0;
                 stackIn_241_0 = stackOut_240_0;
-                if (~((sk) this).field_u > ~((sk) this).field_J) {
+                if ((this.field_u ^ -1) > (this.field_J ^ -1)) {
                   stackOut_243_0 = this;
-                  stackOut_243_1 = ((sk) this).field_J;
+                  stackOut_243_1 = this.field_J;
                   stackIn_244_0 = stackOut_243_0;
                   stackIn_244_1 = stackOut_243_1;
                   break L65;
                 } else {
                   stackOut_241_0 = this;
-                  stackOut_241_1 = ((sk) this).field_u;
+                  stackOut_241_1 = this.field_u;
                   stackIn_244_0 = stackOut_241_0;
                   stackIn_244_1 = stackOut_241_1;
                   break L65;
                 }
               }
-              ((sk) this).field_C = stackIn_244_1;
+              ((sk) (this)).field_C = stackIn_244_1;
               break L47;
             }
             L66: {
-              if (((sk) this).field_v != 0) {
+              if (-1 != (this.field_v ^ -1)) {
                 break L66;
               } else {
-                if (((sk) this).field_O != 0) {
+                if (-1 != (this.field_O ^ -1)) {
                   break L66;
                 } else {
-                  if (!((sk) this).field_d) {
-                    ((sk) this).field_m = true;
+                  if (!this.field_d) {
+                    this.field_m = true;
                     break L66;
                   } else {
                     break L66;
@@ -10221,11 +10467,11 @@ final class sk implements pa {
               }
             }
             L67: {
-              if (!((sk) this).field_d) {
+              if (!this.field_d) {
                 break L67;
               } else {
-                if (((sk) this).field_f) {
-                  ((sk) this).field_n = 6;
+                if (this.field_f) {
+                  this.field_n = 6;
                   this.h(1);
                   break L67;
                 } else {
@@ -10239,23 +10485,23 @@ final class sk implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L68: {
             var6 = decompiledCaughtException;
-            stackOut_263_0 = (RuntimeException) var6;
+            stackOut_263_0 = (RuntimeException) (var6);
             stackOut_263_1 = new StringBuilder().append("sk.U(").append(param0).append(',');
             stackIn_266_0 = stackOut_263_0;
             stackIn_266_1 = stackOut_263_1;
             stackIn_264_0 = stackOut_263_0;
             stackIn_264_1 = stackOut_263_1;
             if (param1 == null) {
-              stackOut_266_0 = (RuntimeException) (Object) stackIn_266_0;
-              stackOut_266_1 = (StringBuilder) (Object) stackIn_266_1;
+              stackOut_266_0 = (RuntimeException) ((Object) stackIn_266_0);
+              stackOut_266_1 = (StringBuilder) ((Object) stackIn_266_1);
               stackOut_266_2 = "null";
               stackIn_267_0 = stackOut_266_0;
               stackIn_267_1 = stackOut_266_1;
               stackIn_267_2 = stackOut_266_2;
               break L68;
             } else {
-              stackOut_264_0 = (RuntimeException) (Object) stackIn_264_0;
-              stackOut_264_1 = (StringBuilder) (Object) stackIn_264_1;
+              stackOut_264_0 = (RuntimeException) ((Object) stackIn_264_0);
+              stackOut_264_1 = (StringBuilder) ((Object) stackIn_264_1);
               stackOut_264_2 = "{...}";
               stackIn_267_0 = stackOut_264_0;
               stackIn_267_1 = stackOut_264_1;
@@ -10264,23 +10510,23 @@ final class sk implements pa {
             }
           }
           L69: {
-            stackOut_267_0 = (RuntimeException) (Object) stackIn_267_0;
+            stackOut_267_0 = (RuntimeException) ((Object) stackIn_267_0);
             stackOut_267_1 = ((StringBuilder) (Object) stackIn_267_1).append(stackIn_267_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_270_0 = stackOut_267_0;
             stackIn_270_1 = stackOut_267_1;
             stackIn_268_0 = stackOut_267_0;
             stackIn_268_1 = stackOut_267_1;
             if (param4 == null) {
-              stackOut_270_0 = (RuntimeException) (Object) stackIn_270_0;
-              stackOut_270_1 = (StringBuilder) (Object) stackIn_270_1;
+              stackOut_270_0 = (RuntimeException) ((Object) stackIn_270_0);
+              stackOut_270_1 = (StringBuilder) ((Object) stackIn_270_1);
               stackOut_270_2 = "null";
               stackIn_271_0 = stackOut_270_0;
               stackIn_271_1 = stackOut_270_1;
               stackIn_271_2 = stackOut_270_2;
               break L69;
             } else {
-              stackOut_268_0 = (RuntimeException) (Object) stackIn_268_0;
-              stackOut_268_1 = (StringBuilder) (Object) stackIn_268_1;
+              stackOut_268_0 = (RuntimeException) ((Object) stackIn_268_0);
+              stackOut_268_1 = (StringBuilder) ((Object) stackIn_268_1);
               stackOut_268_2 = "{...}";
               stackIn_271_0 = stackOut_268_0;
               stackIn_271_1 = stackOut_268_1;
@@ -10288,7 +10534,7 @@ final class sk implements pa {
               break L69;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_271_0, stackIn_271_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_271_0), stackIn_271_2 + ')');
         }
     }
 
@@ -10341,31 +10587,31 @@ final class sk implements pa {
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
         String stackOut_23_2 = null;
-        ((sk) this).field_I = 60;
-        ((sk) this).field_F = 0;
-        ((sk) this).field_z = 1;
+        this.field_I = 60;
+        this.field_F = 0;
+        this.field_z = 1;
         try {
           L0: {
             L1: {
-              ((sk) this).field_k = param2;
-              ((sk) this).field_x = param0;
-              if (((sk) this).field_x == null) {
+              this.field_k = param2;
+              this.field_x = param0;
+              if (this.field_x == null) {
                 break L1;
               } else {
-                ((sk) this).field_r = param0.field_v;
-                ((sk) this).field_l = new int[2];
-                ((sk) this).field_x = param0;
+                this.field_r = param0.field_v;
+                this.field_l = new int[2];
+                this.field_x = param0;
                 break L1;
               }
             }
             L2: {
               if (param1 != null) {
                 L3: {
-                  ((sk) this).field_B = param1;
+                  this.field_B = param1;
                   if (null == u.field_p) {
                     break L3;
                   } else {
-                    u.field_p.field_k = ((sk) this).field_B;
+                    u.field_p.field_k = this.field_B;
                     if (!ArmiesOfGielinor.field_M) {
                       break L2;
                     } else {
@@ -10379,7 +10625,7 @@ final class sk implements pa {
                 break L2;
               }
             }
-            ((sk) this).field_H = new wk(640, 480);
+            this.field_H = new wk(640, 480);
             var4 = cb.field_a[ns.a(false, cb.field_a.length, vv.field_b)];
             hh.a(-16147, 50, var4, true);
             break L0;
@@ -10388,23 +10634,23 @@ final class sk implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) runtimeException;
+            stackOut_14_0 = (RuntimeException) (runtimeException);
             stackOut_14_1 = new StringBuilder().append("sk.<init>(");
             stackIn_17_0 = stackOut_14_0;
             stackIn_17_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_18_0 = stackOut_15_0;
               stackIn_18_1 = stackOut_15_1;
@@ -10413,23 +10659,23 @@ final class sk implements pa {
             }
           }
           L5: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_21_0 = stackOut_18_0;
             stackIn_21_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_22_0 = stackOut_19_0;
               stackIn_22_1 = stackOut_19_1;
@@ -10438,23 +10684,23 @@ final class sk implements pa {
             }
           }
           L6: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_25_0 = stackOut_22_0;
             stackIn_25_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_26_0 = stackOut_23_0;
               stackIn_26_1 = stackOut_23_1;
@@ -10462,15 +10708,11 @@ final class sk implements pa {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "Yes";
     }
 }

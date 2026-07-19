@@ -14,17 +14,21 @@ final class ae {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
+        if (param0 != -67) {
+            return;
+        }
         field_d = null;
     }
 
     final boolean a(int param0) {
+        String discarded$5 = null;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == 18544) {
-          if (this != (Object) (Object) nn.field_m) {
-            if ((Object) (Object) wi.field_s != this) {
-              if ((Object) (Object) pb.field_c == this) {
+          if (this != nn.field_m) {
+            if (wi.field_s != this) {
+              if (pb.field_c == this) {
                 return true;
               } else {
                 return false;
@@ -36,13 +40,13 @@ final class ae {
             return true;
           }
         } else {
-          String discarded$5 = ((ae) this).toString();
-          if (this != (Object) (Object) nn.field_m) {
-            if ((Object) (Object) wi.field_s == this) {
+          discarded$5 = this.toString();
+          if (this != nn.field_m) {
+            if (wi.field_s == this) {
               return true;
             } else {
               L0: {
-                if ((Object) (Object) pb.field_c != this) {
+                if (pb.field_c != this) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -61,10 +65,6 @@ final class ae {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "No highscores";
         field_c = 480;
     }

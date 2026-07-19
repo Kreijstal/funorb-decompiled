@@ -12,16 +12,15 @@ abstract class tja {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 8192) {
+            return;
+        }
         field_a = null;
     }
 
     abstract int a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "tja.I(";
         field_b = "Just play";
         field_a = new int[8192];

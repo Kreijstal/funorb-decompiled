@@ -10,18 +10,27 @@ final class tf {
         fl.field_b = param1;
         jc.field_b = param2;
         if (param0 <= 11) {
-            Object var4 = null;
+            java.applet.Applet var4 = (java.applet.Applet) null;
             tf.a((byte) -74, (java.applet.Applet) null);
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 640) {
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
+            Object discarded$6 = null;
+            Object discarded$7 = null;
+            Object discarded$8 = null;
+            Object discarded$9 = null;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             Throwable var2 = null;
             RuntimeException var2_ref = null;
             String var3 = null;
@@ -48,19 +57,19 @@ final class tf {
                   L1: {
                     var4 = param1.getCodeBase();
                     var3 = uf.a(param1, (byte) 113, var4).getFile();
-                    Object discarded$6 = mf.a(126, "updatelinks", param1, new Object[2]);
-                    Object discarded$7 = mf.a(124, "updatelinks", param1, new Object[2]);
-                    Object discarded$8 = mf.a(124, "updatelinks", param1, new Object[2]);
-                    Object discarded$9 = mf.a(123, "updatelinks", param1, new Object[2]);
+                    discarded$6 = mf.a(126, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
+                    discarded$7 = mf.a(124, "updatelinks", param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
+                    discarded$8 = mf.a(124, "updatelinks", param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+                    discarded$9 = mf.a(123, "updatelinks", param1, new Object[]{"options", var3 + "options.ws"});
                     if (param0 < -1) {
                       break L1;
                     } else {
-                      field_a = null;
+                      field_a = (ai[]) null;
                       break L1;
                     }
                   }
-                  Object discarded$10 = mf.a(123, "updatelinks", param1, new Object[2]);
-                  Object discarded$11 = mf.a(121, "updatelinks", param1, new Object[2]);
+                  discarded$10 = mf.a(123, "updatelinks", param1, new Object[]{"terms", var3 + "terms.ws"});
+                  discarded$11 = mf.a(121, "updatelinks", param1, new Object[]{"privacy", var3 + "privacy.ws"});
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -73,23 +82,23 @@ final class tf {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_0 = (RuntimeException) (var2_ref);
                 stackOut_6_1 = new StringBuilder().append("tf.B(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -97,7 +106,7 @@ final class tf {
                   break L2;
                 }
               }
-              throw la.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw la.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -107,10 +116,6 @@ final class tf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 640;
     }
 }

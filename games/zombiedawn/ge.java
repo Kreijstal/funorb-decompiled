@@ -22,10 +22,6 @@ final class ge {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ge.A(";
         field_c = 256;
         field_e = 49;

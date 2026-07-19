@@ -16,17 +16,23 @@ final class li {
     static String[] field_f;
 
     final static void c(int param0) {
-        ta.field_a.b(1, (lm) (Object) new ia());
+        ta.field_a.b(1, new ia());
         if (param0 != 316) {
             field_j = 24;
         }
     }
 
     final static void a(int param0) {
+        if (param0 != -8) {
+            li.a(true);
+        }
         np.a((byte) -123, m.c(true));
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            field_j = 33;
+        }
         field_e = null;
         field_b = null;
         field_d = null;
@@ -41,67 +47,87 @@ final class li {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         cn[] stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        cn[] stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        cn[] stackOut_6_0 = null;
         cn[] stackOut_4_0 = null;
         Object stackOut_1_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
           L0: {
-            if (kk.a(param2, 1, param0, param1)) {
-              stackOut_4_0 = ib.b(-10718);
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
+            if (kk.a(param2, param3 + -3, param0, param1)) {
+              if (param3 == 4) {
+                stackOut_6_0 = ib.b(-10718);
+                stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                stackOut_4_0 = (cn[]) null;
+                stackIn_5_0 = stackOut_4_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (cn[]) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("li.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_8_0 = (RuntimeException) (var4);
+            stackOut_8_1 = new StringBuilder().append("li.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
         }
-        return stackIn_5_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (cn[]) ((Object) stackIn_2_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            return stackIn_7_0;
+          }
+        }
     }
 
     final static void b(int param0) {
@@ -111,6 +137,9 @@ final class li {
         int var4 = DungeonAssault.field_K;
         try {
             jh.c();
+            if (param0 > -57) {
+                field_e = (String) null;
+            }
             if (!(null != wm.field_c)) {
                 bn.field_f = new cn(256, 256);
                 wm.field_c = new cn(316, 316);
@@ -120,8 +149,8 @@ final class li {
             bn.field_f.e();
             gf.a();
             var1_int = 0;
-            for (var2 = 0; var2 < 7; var2++) {
-                for (var3 = 0; var3 < 7; var3++) {
+            for (var2 = 0; (var2 ^ -1) > -8; var2++) {
+                for (var3 = 0; (var3 ^ -1) > -8; var3++) {
                     if (!(null == qj.field_c[var1_int])) {
                         gf.b(var3 * 36 + 4, 4 - -(36 * var2), 32, 32, 16777215);
                     }
@@ -136,15 +165,11 @@ final class li {
             gf.d(4, 4, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
             jh.b();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "li.D(" + -107 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "li.D(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 3;
         field_c = "Select two rooms to spy out";
         field_d = "Try not to get snared in this spider's webs; the gigantic tarantula is always alert; it likes nothing more than the sweet meat of a raider or two.";

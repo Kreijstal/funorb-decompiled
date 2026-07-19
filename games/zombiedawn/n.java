@@ -17,19 +17,32 @@ final class n extends le {
     public static void a(int param0) {
         field_k = null;
         field_p = null;
+        if (param0 != 128) {
+            field_k = (int[]) null;
+            field_r = null;
+            return;
+        }
         field_r = null;
     }
 
     final static uc c(byte param0) {
         try {
             Throwable var1 = null;
-            uc stackIn_1_0 = null;
+            uc stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            uc stackOut_0_0 = null;
+            uc stackOut_2_0 = null;
             try {
               L0: {
-                stackOut_0_0 = (uc) Class.forName("ol").newInstance();
-                stackIn_1_0 = stackOut_0_0;
+                L1: {
+                  if (param0 >= 81) {
+                    break L1;
+                  } else {
+                    n.a(8);
+                    break L1;
+                  }
+                }
+                stackOut_2_0 = (uc) (Class.forName("ol").newInstance());
+                stackIn_3_0 = stackOut_2_0;
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -37,7 +50,7 @@ final class n extends le {
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_1_0;
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -49,10 +62,6 @@ final class n extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new int[]{128, 128, 128, 128};
     }
 }

@@ -8,6 +8,9 @@ final class ld {
     static int field_a;
 
     public static void a(byte param0) {
+        if (param0 != 62) {
+            return;
+        }
         field_c = null;
     }
 
@@ -27,10 +30,6 @@ final class ld {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 20000000L;
     }
 }

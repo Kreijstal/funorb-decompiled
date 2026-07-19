@@ -19,8 +19,8 @@ final class ub {
 
     public static void a(byte param0) {
         field_d = null;
-        field_c = null;
-        int var1 = -61;
+        field_c = (ka[][]) null;
+        int var1 = -122 / ((40 - param0) / 45);
         field_e = null;
         field_b = null;
         field_a = null;
@@ -48,6 +48,7 @@ final class ub {
         int stackIn_25_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_33_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_32_0 = 0;
         int stackOut_17_0 = 0;
@@ -78,6 +79,7 @@ final class ub {
                 if (var9 <= var13) {
                   stackOut_32_0 = -1;
                   stackIn_33_0 = stackOut_32_0;
+                  decompiledRegionSelector0 = 4;
                   break L0;
                 } else {
                   L3: {
@@ -114,7 +116,8 @@ final class ub {
                             } else {
                               stackOut_17_0 = var13;
                               stackIn_18_0 = stackOut_17_0;
-                              return stackIn_18_0;
+                              decompiledRegionSelector0 = 1;
+                              break L0;
                             }
                           }
                         }
@@ -140,7 +143,8 @@ final class ub {
                           }
                           stackOut_24_0 = var13;
                           stackIn_25_0 = stackOut_24_0;
-                          return stackIn_25_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
                       }
                     }
@@ -150,7 +154,8 @@ final class ub {
                       if (var4_int >= var5) {
                         stackOut_29_0 = var13;
                         stackIn_30_0 = stackOut_29_0;
-                        return stackIn_30_0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       } else {
                         break L5;
                       }
@@ -163,22 +168,35 @@ final class ub {
             } else {
               stackOut_2_0 = 81;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var4, "ub.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.a((Throwable) ((Object) var4), "ub.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_33_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_18_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_25_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_30_0;
+              } else {
+                return stackIn_33_0;
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{240, 240, 240, 240, 240, 240};
         field_h = 0;
         field_g = "Connection lost - attempting to reconnect";
@@ -187,8 +205,8 @@ final class ub {
         field_n = -1;
         field_l = new int[]{96, 96, 96, 96, 96, 96};
         field_i = false;
-        field_a = new int[]{field_l[0] + field_b[0] >> 1, field_l[1] + field_b[1] >> 1, field_l[2] + field_b[2] >> 1, field_l[3] - -field_b[3] >> 1, field_l[4] - -field_b[4] >> 1, field_b[5] + field_l[5] >> 1};
+        field_a = new int[]{field_l[0] + field_b[0] >> 1626538849, field_l[1] + field_b[1] >> -2058231839, field_l[2] + field_b[2] >> 1807388961, field_l[3] - -field_b[3] >> 1177122177, field_l[4] - -field_b[4] >> -1139605151, field_b[5] + field_l[5] >> 2006380481};
         field_j = 2;
-        field_k = new int[]{-field_l[0] + field_b[0] >> 1, field_b[1] - field_l[1] >> 1, field_b[2] - field_l[2] >> 1, field_b[3] - field_l[3] >> 1, field_b[4] + -field_l[4] >> 1, field_b[5] - field_l[5] >> 1};
+        field_k = new int[]{-field_l[0] + field_b[0] >> 481525185, field_b[1] - field_l[1] >> 432480833, field_b[2] - field_l[2] >> 1409236449, field_b[3] - field_l[3] >> -1232959775, field_b[4] + -field_l[4] >> 2112182337, field_b[5] - field_l[5] >> -73940127};
     }
 }

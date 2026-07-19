@@ -33,6 +33,7 @@ class en {
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             if (!this.field_f) {
               var1 = ik.a(4);
@@ -78,7 +79,8 @@ class en {
                           this.field_i = true;
                           break L5;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 0;
+                          break L4;
                         }
                       }
                     }
@@ -146,7 +148,8 @@ class en {
                                     } else {
                                       this.d();
                                       this.field_m = var1 + 2000L;
-                                      return;
+                                      decompiledRegionSelector0 = 1;
+                                      break L4;
                                     }
                                   }
                                 }
@@ -161,6 +164,7 @@ class en {
                           }
                         }
                         this.field_e = var3_int;
+                        decompiledRegionSelector0 = 2;
                         break L4;
                       } else {
                         this.a(this.field_k, 256);
@@ -176,10 +180,19 @@ class en {
                     var3 = (Exception) (Object) decompiledCaughtException;
                     this.d();
                     this.field_m = var1 + 2000L;
+                    decompiledRegionSelector0 = 2;
                     break L14;
                   }
                 }
-                return;
+                if (decompiledRegionSelector0 == 0) {
+                  return;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return;
+                  } else {
+                    return;
+                  }
+                }
               } else {
                 return;
               }
@@ -359,9 +372,35 @@ class en {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        field_o = 22050;
-        field_u = true;
-        field_s = 10;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 < 8000) {
+            break L0;
+          } else {
+            if (param0 <= 48000) {
+              L1: {
+                field_o = param0;
+                if (!param1) {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
+                } else {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
+                }
+              }
+              field_u = stackIn_7_0 != 0;
+              field_s = param2;
+              return;
+            } else {
+              break L0;
+            }
+          }
+        }
+        throw new IllegalArgumentException();
     }
 
     private final void a(ol param0, int param1) {
@@ -441,7 +480,7 @@ class en {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & ~(1 << var7_int);
+                            var5 = var5 & (1 << var7_int ^ -1);
                             var10 = null;
                             var11 = this.field_p[var7_int];
                             var14 = var11;

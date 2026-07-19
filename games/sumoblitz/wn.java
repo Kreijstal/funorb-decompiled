@@ -6,11 +6,15 @@ final class wn {
     static mp field_b;
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_b = null;
+        if (param0 != 0) {
+            discarded$0 = wn.a(71, -52, 50);
+        }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = 53;
+        int var3 = 106 / ((-16 - param2) / 45);
         return (param0 & 16) != 0 ? true : false;
     }
 
@@ -18,8 +22,8 @@ final class wn {
         if (!(ms.field_a)) {
             throw new IllegalStateException();
         }
-        pu.field_m = true;
-        jv.a(false, false);
+        pu.field_m = param0;
+        jv.a(false, !param0 ? true : false);
         jv.field_a = 0;
     }
 
@@ -50,17 +54,13 @@ final class wn {
         if (param1 <= 0) {
             return false;
         }
-        if (!((param4 | param0) != 0)) {
+        if (!(-1 != ((param4 | param0) ^ -1))) {
             return true;
         }
         return param4 * param4 - -(param0 * param0) <= param1 * param1 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new mp();
     }
 }

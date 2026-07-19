@@ -36,112 +36,133 @@ abstract class qra {
 
     final static void a(la param0, int param1, ff param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
-              if (vpa.a(84)) {
+              if (param1 == 100) {
                 break L1;
               } else {
-                if (!param2.k(-25319)) {
+                field_e = (int[]) null;
+                break L1;
+              }
+            }
+            L2: {
+              if (vpa.a(84)) {
+                break L2;
+              } else {
+                if (!param2.k(param1 + -25419)) {
                   if (0 > param0.q((byte) -82)) {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     ql.field_k.k(96, -2988);
                     ql.field_k.f(-1477662136, param0.q((byte) -82));
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
-            stackOut_9_1 = new StringBuilder().append("qra.L(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L2;
-            } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L2;
-            }
-          }
           L3: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(100).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+            runtimeException = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
+            stackOut_11_1 = new StringBuilder().append("qra.L(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          L4: {
+            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -150,23 +171,26 @@ abstract class qra {
     abstract boolean a(char param0, int param1, int param2);
 
     final static int a(int param0) {
-        return ej.field_a.f(-2147483648);
+        if (param0 != 96) {
+            return 112;
+        }
+        return ej.field_a.f(param0 ^ -2147483552);
     }
 
     private final void a(byte param0) {
-        ((qra) this).field_k = new fna(0, wba.field_q[0], 0, false);
+        this.field_k = new fna(0, wba.field_q[0], 0, false);
         if (param0 != -78) {
           this.a((byte) 97);
-          ((qra) this).field_k.field_b = ((qra) this).field_k.e(-163) / 2 + 10;
-          ((qra) this).field_k.field_i = -25 + koa.b(0);
-          ((qra) this).field_k.a(false);
-          ((qra) this).field_a = new ko(1);
+          this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
+          this.field_k.field_i = -25 + koa.b(0);
+          this.field_k.a(false);
+          this.field_a = new ko(1);
           return;
         } else {
-          ((qra) this).field_k.field_b = ((qra) this).field_k.e(-163) / 2 + 10;
-          ((qra) this).field_k.field_i = -25 + koa.b(0);
-          ((qra) this).field_k.a(false);
-          ((qra) this).field_a = new ko(1);
+          this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
+          this.field_k.field_i = -25 + koa.b(0);
+          this.field_k.a(false);
+          this.field_a = new ko(1);
           return;
         }
     }
@@ -340,12 +364,12 @@ abstract class qra {
         int stackOut_27_1 = 0;
         int stackOut_26_0 = 0;
         int stackOut_26_1 = 0;
-        ((qra) this).field_i = true;
-        if (((qra) this).field_k.field_b - 80 <= jba.field_j) {
-          if (((qra) this).field_k.field_b - -80 > jba.field_j) {
+        this.field_i = true;
+        if (this.field_k.field_b - 80 <= jba.field_j) {
+          if (this.field_k.field_b - -80 > jba.field_j) {
             L0: {
-              if (-25 + ((qra) this).field_k.field_i <= sta.field_B) {
-                if (((qra) this).field_k.field_i + 25 <= sta.field_B) {
+              if (-25 + this.field_k.field_i <= sta.field_B) {
+                if (this.field_k.field_i + 25 <= sta.field_B) {
                   stackOut_66_0 = 0;
                   stackIn_67_0 = stackOut_66_0;
                   break L0;
@@ -380,11 +404,11 @@ abstract class qra {
               }
             }
             L2: {
-              ((qra) this).field_b = stackIn_70_1 != 0;
-              if (((qra) this).field_k.field_b <= jm.field_m) {
-                if (jm.field_m < 100 + ((qra) this).field_k.field_b) {
-                  if (lba.field_p >= ((qra) this).field_k.field_i) {
-                    if (20 + ((qra) this).field_k.field_i <= lba.field_p) {
+              ((qra) (this)).field_b = stackIn_70_1 != 0;
+              if (this.field_k.field_b <= jm.field_m) {
+                if (jm.field_m < 100 + this.field_k.field_b) {
+                  if (lba.field_p >= this.field_k.field_i) {
+                    if (20 + this.field_k.field_i <= lba.field_p) {
                       stackOut_78_0 = 0;
                       stackIn_79_0 = stackOut_78_0;
                       break L2;
@@ -411,17 +435,17 @@ abstract class qra {
             }
             L3: {
               var3 = stackIn_79_0;
-              stackOut_79_0 = ((qra) this).field_a;
+              stackOut_79_0 = this.field_a;
               stackIn_81_0 = stackOut_79_0;
               stackIn_80_0 = stackOut_79_0;
               if (var3 != 0) {
-                stackOut_81_0 = (ko) (Object) stackIn_81_0;
+                stackOut_81_0 = (ko) ((Object) stackIn_81_0);
                 stackOut_81_1 = 0;
                 stackIn_82_0 = stackOut_81_0;
                 stackIn_82_1 = stackOut_81_1;
                 break L3;
               } else {
-                stackOut_80_0 = (ko) (Object) stackIn_80_0;
+                stackOut_80_0 = (ko) ((Object) stackIn_80_0);
                 stackOut_80_1 = -1;
                 stackIn_82_0 = stackOut_80_0;
                 stackIn_82_1 = stackOut_80_1;
@@ -429,7 +453,7 @@ abstract class qra {
               }
             }
             L4: {
-              stackOut_82_0 = (ko) (Object) stackIn_82_0;
+              stackOut_82_0 = (ko) ((Object) stackIn_82_0);
               stackOut_82_1 = stackIn_82_1;
               stackOut_82_2 = 85;
               stackIn_84_0 = stackOut_82_0;
@@ -439,7 +463,7 @@ abstract class qra {
               stackIn_83_1 = stackOut_82_1;
               stackIn_83_2 = stackOut_82_2;
               if (var2 != 0) {
-                stackOut_84_0 = (ko) (Object) stackIn_84_0;
+                stackOut_84_0 = (ko) ((Object) stackIn_84_0);
                 stackOut_84_1 = stackIn_84_1;
                 stackOut_84_2 = stackIn_84_2;
                 stackOut_84_3 = 0;
@@ -449,7 +473,7 @@ abstract class qra {
                 stackIn_85_3 = stackOut_84_3;
                 break L4;
               } else {
-                stackOut_83_0 = (ko) (Object) stackIn_83_0;
+                stackOut_83_0 = (ko) ((Object) stackIn_83_0);
                 stackOut_83_1 = stackIn_83_1;
                 stackOut_83_2 = stackIn_83_2;
                 stackOut_83_3 = -1;
@@ -461,7 +485,7 @@ abstract class qra {
               }
             }
             ((ko) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_85_2, stackIn_85_3);
-            ((qra) this).field_k.a(true, ((qra) this).field_b, true, 6);
+            this.field_k.a(true, this.field_b, true, 6);
             if (param0 == 7) {
               if (var2 != 0) {
                 if (0 == hf.field_b) {
@@ -471,7 +495,7 @@ abstract class qra {
                     stackOut_90_0 = 0;
                     stackIn_92_0 = stackOut_90_0;
                     stackIn_91_0 = stackOut_90_0;
-                    if (!((qra) this).field_h.field_D) {
+                    if (!this.field_h.field_D) {
                       stackOut_92_0 = stackIn_92_0;
                       stackOut_92_1 = 9;
                       stackIn_93_0 = stackOut_92_0;
@@ -515,11 +539,11 @@ abstract class qra {
               }
             }
             L7: {
-              ((qra) this).field_b = stackIn_35_1 != 0;
-              if (((qra) this).field_k.field_b <= jm.field_m) {
-                if (jm.field_m < 100 + ((qra) this).field_k.field_b) {
-                  if (lba.field_p >= ((qra) this).field_k.field_i) {
-                    if (20 + ((qra) this).field_k.field_i > lba.field_p) {
+              ((qra) (this)).field_b = stackIn_35_1 != 0;
+              if (this.field_k.field_b <= jm.field_m) {
+                if (jm.field_m < 100 + this.field_k.field_b) {
+                  if (lba.field_p >= this.field_k.field_i) {
+                    if (20 + this.field_k.field_i > lba.field_p) {
                       stackOut_43_0 = 1;
                       stackIn_45_0 = stackOut_43_0;
                       break L7;
@@ -546,17 +570,17 @@ abstract class qra {
             }
             L8: {
               var3 = stackIn_45_0;
-              stackOut_45_0 = ((qra) this).field_a;
+              stackOut_45_0 = this.field_a;
               stackIn_47_0 = stackOut_45_0;
               stackIn_46_0 = stackOut_45_0;
               if (var3 != 0) {
-                stackOut_47_0 = (ko) (Object) stackIn_47_0;
+                stackOut_47_0 = (ko) ((Object) stackIn_47_0);
                 stackOut_47_1 = 0;
                 stackIn_48_0 = stackOut_47_0;
                 stackIn_48_1 = stackOut_47_1;
                 break L8;
               } else {
-                stackOut_46_0 = (ko) (Object) stackIn_46_0;
+                stackOut_46_0 = (ko) ((Object) stackIn_46_0);
                 stackOut_46_1 = -1;
                 stackIn_48_0 = stackOut_46_0;
                 stackIn_48_1 = stackOut_46_1;
@@ -564,7 +588,7 @@ abstract class qra {
               }
             }
             L9: {
-              stackOut_48_0 = (ko) (Object) stackIn_48_0;
+              stackOut_48_0 = (ko) ((Object) stackIn_48_0);
               stackOut_48_1 = stackIn_48_1;
               stackOut_48_2 = 85;
               stackIn_50_0 = stackOut_48_0;
@@ -574,7 +598,7 @@ abstract class qra {
               stackIn_49_1 = stackOut_48_1;
               stackIn_49_2 = stackOut_48_2;
               if (var2 != 0) {
-                stackOut_50_0 = (ko) (Object) stackIn_50_0;
+                stackOut_50_0 = (ko) ((Object) stackIn_50_0);
                 stackOut_50_1 = stackIn_50_1;
                 stackOut_50_2 = stackIn_50_2;
                 stackOut_50_3 = 0;
@@ -584,7 +608,7 @@ abstract class qra {
                 stackIn_51_3 = stackOut_50_3;
                 break L9;
               } else {
-                stackOut_49_0 = (ko) (Object) stackIn_49_0;
+                stackOut_49_0 = (ko) ((Object) stackIn_49_0);
                 stackOut_49_1 = stackIn_49_1;
                 stackOut_49_2 = stackIn_49_2;
                 stackOut_49_3 = -1;
@@ -596,7 +620,7 @@ abstract class qra {
               }
             }
             ((ko) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_51_2, stackIn_51_3);
-            ((qra) this).field_k.a(true, ((qra) this).field_b, true, 6);
+            this.field_k.a(true, this.field_b, true, 6);
             if (param0 == 7) {
               if (var2 != 0) {
                 if (0 == hf.field_b) {
@@ -606,7 +630,7 @@ abstract class qra {
                     stackOut_56_0 = 0;
                     stackIn_58_0 = stackOut_56_0;
                     stackIn_57_0 = stackOut_56_0;
-                    if (!((qra) this).field_h.field_D) {
+                    if (!this.field_h.field_D) {
                       stackOut_58_0 = stackIn_58_0;
                       stackOut_58_1 = 9;
                       stackIn_59_0 = stackOut_58_0;
@@ -651,11 +675,11 @@ abstract class qra {
             }
           }
           L12: {
-            ((qra) this).field_b = stackIn_4_1 != 0;
-            if (((qra) this).field_k.field_b <= jm.field_m) {
-              if (jm.field_m < 100 + ((qra) this).field_k.field_b) {
-                if (lba.field_p >= ((qra) this).field_k.field_i) {
-                  if (20 + ((qra) this).field_k.field_i > lba.field_p) {
+            ((qra) (this)).field_b = stackIn_4_1 != 0;
+            if (this.field_k.field_b <= jm.field_m) {
+              if (jm.field_m < 100 + this.field_k.field_b) {
+                if (lba.field_p >= this.field_k.field_i) {
+                  if (20 + this.field_k.field_i > lba.field_p) {
                     stackOut_12_0 = 1;
                     stackIn_14_0 = stackOut_12_0;
                     break L12;
@@ -682,17 +706,17 @@ abstract class qra {
           }
           L13: {
             var3 = stackIn_14_0;
-            stackOut_14_0 = ((qra) this).field_a;
+            stackOut_14_0 = this.field_a;
             stackIn_16_0 = stackOut_14_0;
             stackIn_15_0 = stackOut_14_0;
             if (var3 != 0) {
-              stackOut_16_0 = (ko) (Object) stackIn_16_0;
+              stackOut_16_0 = (ko) ((Object) stackIn_16_0);
               stackOut_16_1 = 0;
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               break L13;
             } else {
-              stackOut_15_0 = (ko) (Object) stackIn_15_0;
+              stackOut_15_0 = (ko) ((Object) stackIn_15_0);
               stackOut_15_1 = -1;
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -700,7 +724,7 @@ abstract class qra {
             }
           }
           L14: {
-            stackOut_17_0 = (ko) (Object) stackIn_17_0;
+            stackOut_17_0 = (ko) ((Object) stackIn_17_0);
             stackOut_17_1 = stackIn_17_1;
             stackOut_17_2 = 85;
             stackIn_19_0 = stackOut_17_0;
@@ -710,7 +734,7 @@ abstract class qra {
             stackIn_18_1 = stackOut_17_1;
             stackIn_18_2 = stackOut_17_2;
             if (var2 != 0) {
-              stackOut_19_0 = (ko) (Object) stackIn_19_0;
+              stackOut_19_0 = (ko) ((Object) stackIn_19_0);
               stackOut_19_1 = stackIn_19_1;
               stackOut_19_2 = stackIn_19_2;
               stackOut_19_3 = 0;
@@ -720,7 +744,7 @@ abstract class qra {
               stackIn_20_3 = stackOut_19_3;
               break L14;
             } else {
-              stackOut_18_0 = (ko) (Object) stackIn_18_0;
+              stackOut_18_0 = (ko) ((Object) stackIn_18_0);
               stackOut_18_1 = stackIn_18_1;
               stackOut_18_2 = stackIn_18_2;
               stackOut_18_3 = -1;
@@ -732,7 +756,7 @@ abstract class qra {
             }
           }
           ((ko) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_20_2, stackIn_20_3);
-          ((qra) this).field_k.a(true, ((qra) this).field_b, true, 6);
+          this.field_k.a(true, this.field_b, true, 6);
           if (param0 == 7) {
             if (var2 != 0) {
               if (0 == hf.field_b) {
@@ -742,7 +766,7 @@ abstract class qra {
                   stackOut_25_0 = 0;
                   stackIn_27_0 = stackOut_25_0;
                   stackIn_26_0 = stackOut_25_0;
-                  if (!((qra) this).field_h.field_D) {
+                  if (!this.field_h.field_D) {
                     stackOut_27_0 = stackIn_27_0;
                     stackOut_27_1 = 9;
                     stackIn_28_0 = stackOut_27_0;
@@ -770,12 +794,12 @@ abstract class qra {
 
     qra(qh param0, v param1) {
         try {
-            ((qra) this).field_c = param0.field_k;
-            ((qra) this).field_f = param1;
-            ((qra) this).field_h = param0;
+            this.field_c = param0.field_k;
+            this.field_f = param1;
+            this.field_h = param0;
             this.a((byte) -78);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -783,14 +807,10 @@ abstract class qra {
         if (param0 != -27142) {
             return;
         }
-        ((qra) this).field_k.a(false, ((qra) this).field_i, param0 + 27143, ((qra) this).field_b);
+        this.field_k.a(false, this.field_i, param0 + 27143, this.field_b);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "<%0> is not a member, and cannot play with the current options.";
     }
 }

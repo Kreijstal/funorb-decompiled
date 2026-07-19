@@ -11,15 +11,17 @@ final class kd {
 
     public static void a(boolean param0) {
         field_e = null;
+        if (!param0) {
+            field_d = (String) null;
+            field_a = null;
+            field_d = null;
+            return;
+        }
         field_a = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kd.A(";
         field_e = "End the turn";
         field_d = "Deselect grenades";

@@ -31,31 +31,31 @@ final class mo {
           if (param0) {
             break L0;
           } else {
-            ((mo) this).field_q = null;
+            this.field_q = (String) null;
             break L0;
           }
         }
         L1: {
-          if (((mo) this).field_f) {
+          if (this.field_f) {
             break L1;
           } else {
             L2: {
-              if (2 != ((mo) this).field_b) {
+              if (2 != this.field_b) {
                 break L2;
               } else {
-                if (((mo) this).field_p > 0) {
+                if (-1 > (this.field_p ^ -1)) {
                   break L1;
                 } else {
                   break L2;
                 }
               }
             }
-            if (oh.field_H != ((mo) this).field_n) {
+            if (oh.field_H != this.field_n) {
               L3: {
                 if (th.field_a != 2) {
                   break L3;
                 } else {
-                  if (!jj.a(82, ((mo) this).field_m)) {
+                  if (!jj.a(82, this.field_m)) {
                     break L3;
                   } else {
                     return 1;
@@ -93,57 +93,68 @@ final class mo {
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_g = null;
         field_s = null;
         field_l = null;
         field_o = null;
         field_t = null;
         field_i = null;
+        if (param0 != 0) {
+            discarded$0 = mo.a(-123, 18, -64, -107, -63, (byte) 82, 91);
+        }
     }
 
     mo(boolean param0) {
-        ((mo) this).field_h = dg.field_b;
-        if (param0) {
-            ((mo) this).field_d = hv.field_R;
-        } else {
-            ((mo) this).field_d = null;
+        L0: {
+          L1: {
+            this.field_h = dg.field_b;
+            if (!param0) {
+              break L1;
+            } else {
+              this.field_d = hv.field_R;
+              if (!ArmiesOfGielinor.field_M) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          this.field_d = null;
+          break L0;
         }
-        ((mo) this).field_a = rh.field_e;
-        ((mo) this).field_b = u.field_k;
-        ((mo) this).field_k = aw.field_k;
-        ((mo) this).field_f = ui.field_b;
-        ((mo) this).field_m = gp.field_b;
-        ((mo) this).field_q = qd.field_L;
-        ((mo) this).field_v = ut.field_eb;
-        ((mo) this).field_e = th.field_c;
-        ((mo) this).field_p = hc.field_e;
-        ((mo) this).field_n = gk.field_I;
+        this.field_a = rh.field_e;
+        this.field_b = u.field_k;
+        this.field_k = aw.field_k;
+        this.field_f = ui.field_b;
+        this.field_m = gp.field_b;
+        this.field_q = qd.field_L;
+        this.field_v = ut.field_eb;
+        this.field_e = th.field_c;
+        this.field_p = hc.field_e;
+        this.field_n = gk.field_I;
     }
 
     mo(int param0, String param1, int param2, String param3, String param4) {
         try {
-            ((mo) this).field_m = param1;
-            ((mo) this).field_q = param1;
-            ((mo) this).field_f = true;
-            ((mo) this).field_n = 0L;
-            ((mo) this).field_k = param3;
-            ((mo) this).field_v = param2;
-            ((mo) this).field_p = 0;
-            ((mo) this).field_d = null;
-            ((mo) this).field_e = 0;
-            ((mo) this).field_b = param0;
-            ((mo) this).field_h = param4;
-            ((mo) this).field_a = 0;
+            this.field_m = param1;
+            this.field_q = param1;
+            this.field_f = true;
+            this.field_n = 0L;
+            this.field_k = param3;
+            this.field_v = param2;
+            this.field_p = 0;
+            this.field_d = null;
+            this.field_e = 0;
+            this.field_b = param0;
+            this.field_h = param4;
+            this.field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "mo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "This game is full.";
         field_r = false;
         field_o = "Click to begin";

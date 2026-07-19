@@ -7,10 +7,10 @@ final class qgb extends ksa {
 
     qgb(ha param0, kla param1) {
         try {
-            ((qgb) this).field_e = param0;
-            ((qgb) this).field_d = param1;
+            this.field_e = param0;
+            this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qgb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qgb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -37,23 +37,23 @@ final class hl extends el {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         var13 = Geoblox.field_C;
-        var14 = new dm(((hl) this).field_H * 2, ((hl) this).field_h);
+        var14 = new dm(this.field_H * 2, this.field_h);
         Geoblox.a(1, var14);
-        var5 = ((hl) this).field_h >> 1;
+        var5 = this.field_h >> -1499813087;
         var6 = 0;
         L0: while (true) {
-          if (((hl) this).field_h <= var6) {
-            id.a(true);
+          if (this.field_h <= var6) {
+            id.a(param1);
             return var14;
           } else {
             L1: {
-              var7 = (var6 >> 1) * (-1 + ((hl) this).field_H * 2) % (((hl) this).field_H * 2);
+              var7 = (var6 >> 303611585) * (-1 + this.field_H * 2) % (this.field_H * 2);
               var8 = 16711935 & param2;
               var9 = 65280 & param2;
               var10 = -var5 + var6;
               var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
-              if (var11 < 256) {
-                stackOut_4_0 = (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
+              if (-257 < (var11 ^ -1)) {
+                stackOut_4_0 = (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> -259500472;
                 stackIn_5_0 = stackOut_4_0;
                 break L1;
               } else {
@@ -64,8 +64,8 @@ final class hl extends el {
             }
             L2: {
               var12 = stackIn_5_0;
-              vb.c(var7, var6, ((hl) this).field_H, var12);
-              vb.c(-(2 * ((hl) this).field_H) + var7, var6, ((hl) this).field_H, var12);
+              vb.c(var7, var6, this.field_H, var12);
+              vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
               var9 = param0 & 65280;
               var8 = param0 & 16711935;
               if (256 <= var11) {
@@ -73,14 +73,14 @@ final class hl extends el {
                 stackIn_8_0 = stackOut_7_0;
                 break L2;
               } else {
-                stackOut_6_0 = (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8;
+                stackOut_6_0 = (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> -1261115064;
                 stackIn_8_0 = stackOut_6_0;
                 break L2;
               }
             }
             var12 = stackIn_8_0;
-            vb.c(((hl) this).field_H + var7, var6, ((hl) this).field_H, var12);
-            vb.c(-((hl) this).field_H + var7, var6, ((hl) this).field_H, var12);
+            vb.c(this.field_H + var7, var6, this.field_H, var12);
+            vb.c(-this.field_H + var7, var6, this.field_H, var12);
             var6++;
             continue L0;
           }
@@ -88,13 +88,13 @@ final class hl extends el {
     }
 
     final void a(int param0, int param1, byte param2) {
-        ((hl) this).field_A = 8355711 & param0 >> 1;
-        ((hl) this).field_E = param1;
-        ((hl) this).field_J = param1 >> 1 & 8355711;
+        this.field_A = 8355711 & param0 >> 1658526497;
+        this.field_E = param1;
+        this.field_J = param1 >> -1908051263 & 8355711;
         if (param2 != -103) {
             this.e(-107);
         }
-        ((hl) this).field_L = param0;
+        this.field_L = param0;
         this.e(-1326628703);
     }
 
@@ -104,21 +104,21 @@ final class hl extends el {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Geoblox.field_C;
-        int var2 = ((hl) this).field_h >> 1;
-        dm var3 = new dm(var2, ((hl) this).field_h);
+        int var2 = this.field_h >> 1430525217;
+        dm var3 = new dm(var2, this.field_h);
         if (param0 != 255) {
-            return null;
+            return (dm) null;
         }
         Geoblox.a(1, var3);
-        for (var4 = 0; var4 < ((hl) this).field_h; var4++) {
+        for (var4 = 0; var4 < this.field_h; var4++) {
             for (var5 = 0; var5 < var2; var5++) {
-                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + ((hl) this).field_h));
+                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
                 var8 = 1;
                 if (!(var6 >= 1.0)) {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }
-                vb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+                vb.a(var5, var4, var8 << 2019007536 | (var8 | var8 << 407213000));
             }
         }
         id.a(true);
@@ -126,68 +126,77 @@ final class hl extends el {
     }
 
     private final void a(dm param0, int param1, int param2, int param3) {
+        dm discarded$1 = null;
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var8 = Geoblox.field_C;
         try {
           L0: {
-            var5_int = param2 + ((hl) this).field_r;
-            uh.a(param1, ((hl) this).field_M.field_r + param2, -14045, ((hl) this).field_h + param1, var5_int - ((hl) this).field_M.field_r);
-            var6 = param2 + -((hl) this).field_I;
+            var5_int = param2 + this.field_r;
+            uh.a(param1, this.field_M.field_r + param2, param3 ^ 6447, this.field_h + param1, var5_int - this.field_M.field_r);
+            var6 = param2 + -this.field_I;
             L1: while (true) {
               if (var6 >= var5_int) {
                 L2: {
-                  id.a(true);
-                  if (((hl) this).field_M.field_r + param2 < vb.field_e) {
+                  if (param3 == -12276) {
                     break L2;
                   } else {
-                    Geoblox.a(1, ((hl) this).field_z);
-                    param0.b(-((hl) this).field_I, 0);
-                    param0.b(2 * ((hl) this).field_H - ((hl) this).field_I, 0);
-                    ((hl) this).field_y.e(0, 0);
-                    id.a(true);
-                    ((hl) this).field_z.b(param2, param1);
+                    discarded$1 = this.g(1);
                     break L2;
                   }
                 }
                 L3: {
-                  if (vb.field_k >= var5_int - ((hl) this).field_M.field_r) {
-                    Geoblox.a(1, ((hl) this).field_z);
-                    var7 = ((hl) this).field_I + (((hl) this).field_r - ((hl) this).field_M.field_r);
-                    L4: while (true) {
-                      if (var7 <= 2 * ((hl) this).field_H) {
+                  id.a(true);
+                  if (this.field_M.field_r + param2 < vb.field_e) {
+                    break L3;
+                  } else {
+                    Geoblox.a(1, this.field_z);
+                    param0.b(-this.field_I, 0);
+                    param0.b(2 * this.field_H - this.field_I, 0);
+                    this.field_y.e(0, 0);
+                    id.a(true);
+                    this.field_z.b(param2, param1);
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (vb.field_k >= var5_int - this.field_M.field_r) {
+                    Geoblox.a(param3 ^ -12275, this.field_z);
+                    var7 = this.field_I + (this.field_r - this.field_M.field_r);
+                    L5: while (true) {
+                      if (var7 <= 2 * this.field_H) {
                         param0.b(-var7, 0);
-                        param0.b(-var7 + ((hl) this).field_H * 2, 0);
-                        ((hl) this).field_M.e(0, 0);
+                        param0.b(-var7 + this.field_H * 2, 0);
+                        this.field_M.e(0, 0);
                         id.a(true);
-                        ((hl) this).field_z.b(-((hl) this).field_M.field_r + var5_int, param1);
-                        break L3;
+                        this.field_z.b(-this.field_M.field_r + var5_int, param1);
+                        break L4;
                       } else {
-                        var7 = var7 - 2 * ((hl) this).field_H;
-                        continue L4;
+                        var7 = var7 - 2 * this.field_H;
+                        continue L5;
                       }
                     }
                   } else {
-                    break L3;
+                    break L4;
                   }
                 }
                 break L0;
@@ -200,80 +209,81 @@ final class hl extends el {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var5;
-            stackOut_13_1 = new StringBuilder().append("hl.G(");
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_15_0 = (RuntimeException) (var5);
+            stackOut_15_1 = new StringBuilder().append("hl.G(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L5;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L5;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + -12276 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = -76 % ((param2 - 1) / 43);
-        if (!(param3 == 0)) {
+        if (!(-1 == (param3 ^ -1))) {
             return;
         }
-        int var6 = param0 - -((hl) this).field_v;
-        int var7 = param1 - -((hl) this).field_m;
-        this.a(((hl) this).field_F[0], var7, var6, -12276);
-        if (((hl) this).field_x < 65536) {
-            uh.a(var7, var6 - -(((hl) this).field_r * ((hl) this).field_x >> 16), -14045, var7 + ((hl) this).field_h, ((hl) this).field_r + var6);
-            this.a(((hl) this).field_F[1], var7, var6, -12276);
+        int var6 = param0 - -this.field_v;
+        int var7 = param1 - -this.field_m;
+        this.a(this.field_F[0], var7, var6, -12276);
+        if (-65537 < (this.field_x ^ -1)) {
+            uh.a(var7, var6 - -(this.field_r * this.field_x >> 1475207664), -14045, var7 + this.field_h, this.field_r + var6);
+            this.a(this.field_F[1], var7, var6, -12276);
             id.a(true);
         }
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
+        dm discarded$0 = null;
         super.a(param0, param1, (byte) -74, param3, param4);
         this.e(-1326628703);
         if (param2 > -6) {
-            dm discarded$0 = this.g(109);
+            discarded$0 = this.g(109);
         }
     }
 
     private final void e(int param0) {
-        ((hl) this).field_F = new dm[]{this.a(((hl) this).field_L, true, ((hl) this).field_E), this.a(((hl) this).field_A, true, ((hl) this).field_J)};
-        ((hl) this).field_M = this.g(255);
+        this.field_F = new dm[]{this.a(this.field_L, true, this.field_E), this.a(this.field_A, true, this.field_J)};
+        this.field_M = this.g(255);
         if (param0 != -1326628703) {
             return;
         }
-        ((hl) this).field_y = ((hl) this).field_M.c();
-        ((hl) this).field_z = new dm(((hl) this).field_h >> 1, ((hl) this).field_h);
+        this.field_y = this.field_M.c();
+        this.field_z = new dm(this.field_h >> -1326628703, this.field_h);
     }
 
     private hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        ((hl) this).field_E = param5;
-        ((hl) this).field_H = param4;
-        ((hl) this).field_L = param6;
-        ((hl) this).field_J = param7;
-        ((hl) this).field_A = param8;
-        ((hl) this).a(param3, param2, (byte) -121, param1, param0);
+        this.field_E = param5;
+        this.field_H = param4;
+        this.field_L = param6;
+        this.field_J = param7;
+        this.field_A = param8;
+        this.a(param3, param2, (byte) -121, param1, param0);
     }
 
     hl(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
+        this(param0, param1, param2, param3, param4, param5, param6, param5 >> -1450193727 & 8355711, param6 >> -1873287327 & 8355711);
     }
 
     public static void f(int param0) {
@@ -306,14 +316,14 @@ final class hl extends el {
         try {
           L0: {
             L1: {
-              if (!((hl) this).field_C) {
+              if (!this.field_C) {
                 break L1;
               } else {
-                ((hl) this).field_I = ((hl) this).field_I + 1;
-                if (((hl) this).field_I <= 2 * ((hl) this).field_H) {
+                this.field_I = this.field_I + 1;
+                if (this.field_I <= 2 * this.field_H) {
                   break L1;
                 } else {
-                  ((hl) this).field_I = ((hl) this).field_I - 2 * ((hl) this).field_H;
+                  this.field_I = this.field_I - 2 * this.field_H;
                   break L1;
                 }
               }
@@ -332,23 +342,23 @@ final class hl extends el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_0 = (RuntimeException) (var5);
             stackOut_6_1 = new StringBuilder().append("hl.H(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -356,15 +366,11 @@ final class hl extends el {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = new int[4];
         field_G = true;
     }

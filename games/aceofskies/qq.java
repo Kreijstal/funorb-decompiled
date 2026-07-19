@@ -13,18 +13,25 @@ final class qq {
     gk field_d;
 
     final static int a(int param0, int param1) {
+        if (param0 != 20) {
+            field_e = (vd[]) null;
+            return bs.a(-1, ci.field_i, param1);
+        }
         return bs.a(-1, ci.field_i, param1);
     }
 
     public static void b(byte param0) {
         field_g = null;
+        if (param0 < 35) {
+            field_g = (gb) null;
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 
     final static void a(byte param0) {
-        if (null != du.field_p) {
-          return;
-        } else {
+        if (null == du.field_p) {
           du.field_p = new String[23];
           du.field_p[4] = dk.field_b;
           du.field_p[11] = ne.field_h;
@@ -44,11 +51,23 @@ final class qq {
           du.field_p[19] = iu.field_f;
           du.field_p[8] = tq.field_e[0];
           du.field_p[20] = wq.field_i;
-          du.field_p[18] = so.field_c;
-          du.field_p[10] = tq.field_e[2];
-          du.field_p[21] = ki.field_c;
-          du.field_p[22] = ii.field_l;
-          du.field_p[9] = tq.field_e[1];
+          if (param0 > -83) {
+            field_e = (vd[]) null;
+            du.field_p[18] = so.field_c;
+            du.field_p[10] = tq.field_e[2];
+            du.field_p[21] = ki.field_c;
+            du.field_p[22] = ii.field_l;
+            du.field_p[9] = tq.field_e[1];
+            return;
+          } else {
+            du.field_p[18] = so.field_c;
+            du.field_p[10] = tq.field_e[2];
+            du.field_p[21] = ki.field_c;
+            du.field_p[22] = ii.field_l;
+            du.field_p[9] = tq.field_e[1];
+            return;
+          }
+        } else {
           return;
         }
     }
@@ -58,10 +77,6 @@ final class qq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new gb(1.2, 2, 2, 300, 3, 7.0, 10.0, 16, 1);
     }
 }

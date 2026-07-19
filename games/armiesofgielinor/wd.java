@@ -27,7 +27,7 @@ final class wd {
             field_k = null;
             field_j = null;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wd.C(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ')');
         }
     }
 
@@ -39,6 +39,7 @@ final class wd {
         int var9 = 0;
         ca var10 = null;
         int var11 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
@@ -46,10 +47,10 @@ final class wd {
               if (param5 < 0) {
                 break L1;
               } else {
-                if (param3 < 0) {
+                if (-1 < (param3 ^ -1)) {
                   break L1;
                 } else {
-                  if (~param5 <= ~ks.field_y) {
+                  if ((param5 ^ -1) <= (ks.field_y ^ -1)) {
                     break L1;
                   } else {
                     if (param3 >= ef.field_c) {
@@ -60,7 +61,7 @@ final class wd {
                       var8 = a.a(16711680, param3, var6_int, param5);
                       if (param2 == -128) {
                         L2: {
-                          var9 = -(var8 >>> 24 & 2102808831) + 255;
+                          var9 = -(var8 >>> -517319592 & 2102808831) + 255;
                           var8 = var8 & 16777215;
                           if (!param0) {
                             po.a((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
@@ -78,7 +79,7 @@ final class wd {
                           if (null == var10) {
                             break L3;
                           } else {
-                            if ((var10.field_c & 1) == 0) {
+                            if (-1 == (var10.field_c & 1 ^ -1)) {
                               break L3;
                             } else {
                               if (-1 >= vs.field_e[var6_int].field_a) {
@@ -108,9 +109,11 @@ final class wd {
                           }
                         }
                         fs.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     }
                   }
@@ -118,12 +121,22 @@ final class wd {
               }
             }
             gb.a(param3, param5, param1, param4, (byte) -82);
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var6, "wd.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) var6), "wd.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -147,6 +160,7 @@ final class wd {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_23_0 = 0;
@@ -223,34 +237,36 @@ final class wd {
                   break L5;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_20_0 = 0;
               stackIn_21_0 = stackOut_20_0;
-              return stackIn_21_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var3;
+            stackOut_27_0 = (RuntimeException) (var3);
             stackOut_27_1 = new StringBuilder().append("wd.B(").append(param0).append(',');
             stackIn_30_0 = stackOut_27_0;
             stackIn_30_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L6;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_31_0 = stackOut_28_0;
               stackIn_31_1 = stackOut_28_1;
@@ -259,23 +275,23 @@ final class wd {
             }
           }
           L7: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_34_0 = stackOut_31_0;
             stackIn_34_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L7;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_35_0 = stackOut_32_0;
               stackIn_35_1 = stackOut_32_1;
@@ -283,12 +299,17 @@ final class wd {
               break L7;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
         }
-        return stackIn_26_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_21_0 != 0;
+        } else {
+          return stackIn_26_0 != 0;
+        }
     }
 
     final static String a(boolean param0) {
+        boolean discarded$1 = false;
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -312,7 +333,7 @@ final class wd {
               if (!param0) {
                 break L1;
               } else {
-                boolean discarded$1 = wd.a((byte) -13);
+                discarded$1 = wd.a((byte) -13);
                 break L1;
               }
             }
@@ -323,7 +344,7 @@ final class wd {
                 break L2;
               } else {
                 if (no.field_K != null) {
-                  var2 = (Object) (Object) wc.field_K;
+                  var2 = wc.field_K;
                   break L2;
                 } else {
                   break L2;
@@ -331,7 +352,7 @@ final class wd {
               }
             }
             L3: {
-              if (rs.field_t != 2) {
+              if (-3 != (rs.field_t ^ -1)) {
                 break L3;
               } else {
                 if (vu.j(6)) {
@@ -342,7 +363,7 @@ final class wd {
                       if (jj.a(62, wm.field_b)) {
                         break L5;
                       } else {
-                        var2 = (Object) (Object) fo.a(4800, vo.field_h, new String[1]);
+                        var2 = fo.a(4800, vo.field_h, new String[]{qd.field_G});
                         if (var10 == 0) {
                           break L4;
                         } else {
@@ -350,13 +371,13 @@ final class wd {
                         }
                       }
                     }
-                    var2 = (Object) (Object) fo.a(4800, pt.field_gb, new String[1]);
+                    var2 = fo.a(4800, pt.field_gb, new String[]{qd.field_G});
                     break L4;
                   }
                   if (!iu.field_h) {
                     break L3;
                   } else {
-                    ta.a((String) null, 2, -18119, (String) null, (String) var2, 0);
+                    ta.a((String) null, 2, -18119, (String) null, (String) (var2), 0);
                     qu.e(-3);
                     break L3;
                   }
@@ -371,7 +392,7 @@ final class wd {
                   break L6;
                 } else {
                   if (null == eu.field_g) {
-                    var2 = (Object) (Object) uq.field_w;
+                    var2 = uq.field_w;
                     break L6;
                   } else {
                     break L6;
@@ -381,7 +402,7 @@ final class wd {
             }
             L7: {
               if (var2 != null) {
-                fs.a(ni.field_d, (String) null, (String) var2, -122, 0);
+                fs.a(ni.field_d, (String) null, (String) (var2), -122, 0);
                 break L7;
               } else {
                 L8: {
@@ -392,10 +413,10 @@ final class wd {
                   var6 = rs.field_t;
                   var7 = 0;
                   if (var6 == 2) {
-                    var4 = fo.a(4800, ta.field_Q, new String[1]);
-                    var8 = fo.a(4800, ov.field_l, new String[1]);
+                    var4 = fo.a(4800, ta.field_Q, new String[]{qd.field_G});
+                    var8 = fo.a(4800, ov.field_l, new String[]{var3});
                     var7 = rb.field_b.field_gb + qj.field_z.field_gb - 485 - (-tc.field_e.a(var8) + tc.field_e.a(var4));
-                    if (var7 >= 0) {
+                    if ((var7 ^ -1) <= -1) {
                       break L8;
                     } else {
                       var7 = 0;
@@ -432,7 +453,7 @@ final class wd {
                                 }
                               }
                             }
-                            var4 = "[" + fo.a(4800, cv.field_m, new String[1]) + "] ";
+                            var4 = "[" + fo.a(4800, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
                             if (var10 == 0) {
                               break L9;
                             } else {
@@ -490,23 +511,23 @@ final class wd {
                           if (!qj.field_z.field_eb) {
                             break L17;
                           } else {
-                            if (~var9 >= ~(-qj.field_z.field_V + sm.field_d)) {
+                            if ((var9 ^ -1) >= (-qj.field_z.field_V + sm.field_d ^ -1)) {
                               break L17;
                             } else {
                               if (!bb.field_a) {
-                                var1 = (Object) (Object) ps.field_z;
+                                var1 = ps.field_z;
                                 break L17;
                               } else {
-                                var1 = (Object) (Object) "Broken!";
+                                var1 = "Broken!";
                                 break L17;
                               }
                             }
                           }
                         }
-                        if (qj.field_z.field_yb == 0) {
+                        if ((qj.field_z.field_yb ^ -1) == -1) {
                           break L16;
                         } else {
-                          if (~qj.field_z.field_bb <= ~var9) {
+                          if ((qj.field_z.field_bb ^ -1) <= (var9 ^ -1)) {
                             break L16;
                           } else {
                             if (bb.field_a) {
@@ -533,7 +554,7 @@ final class wd {
                 }
                 L19: {
                   if (rb.field_b.field_eb) {
-                    var1 = (Object) (Object) fo.a(4800, os.field_q, new String[2]);
+                    var1 = fo.a(4800, os.field_q, new String[]{var3, qd.field_G});
                     break L19;
                   } else {
                     break L19;
@@ -548,16 +569,17 @@ final class wd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw ig.a((Throwable) var1, "wd.A(" + param0 + ')');
+          var1 = decompiledCaughtException;
+          throw ig.a((Throwable) (var1), "wd.A(" + param0 + ')');
         }
-        return (String) (Object) stackIn_96_0;
+        return (String) ((Object) stackIn_96_0);
     }
 
     final static boolean a(byte param0) {
         RuntimeException var1 = null;
         int stackIn_2_0 = 0;
         int stackIn_10_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_9_0 = 0;
@@ -583,34 +605,36 @@ final class wd {
                 stackIn_10_0 = stackOut_9_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "wd.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "wd.D(" + param0 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     wd(boolean param0) {
         try {
-            ((wd) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wd.<init>(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "wd.<init>(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Options";
         field_l = "No players";
         field_g = "<%0> has resigned";

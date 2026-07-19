@@ -21,10 +21,6 @@ final class mb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mb.A(";
         field_e = new pj();
         eg.a(50, -1937866142);

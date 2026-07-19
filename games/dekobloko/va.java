@@ -287,7 +287,7 @@ final class va extends bh {
         this.field_P = var2.i(7553);
         this.field_L = var2.i(7553);
         if (this.field_L < 0) {
-            this.field_L = ~this.field_L;
+            this.field_L = this.field_L ^ -1;
             this.field_q = true;
         }
         int var3 = var2.i(7553);
@@ -314,9 +314,7 @@ final class va extends bh {
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -343,9 +341,9 @@ final class va extends bh {
         L2: while (true) {
           if (this.field_N >= this.field_t.length) {
             this.field_z = null;
-            var14 = this.field_E;
+            var12 = this.field_E;
             this.field_E = null;
-            return new ud(this.field_O, var14, this.field_P, this.field_L, this.field_q);
+            return new ud(this.field_O, var12, this.field_P, this.field_L, this.field_q);
           } else {
             L3: {
               if (param0 == null) {
@@ -359,15 +357,13 @@ final class va extends bh {
               }
             }
             L4: {
-              var13 = this.d(this.field_N);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.d(this.field_N);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
                   var3 = this.field_F;
-                  var4 = var13.length;
+                  var4 = var7.length;
                   if (var4 <= this.field_I - var3) {
                     break L5;
                   } else {
@@ -390,11 +386,11 @@ final class va extends bh {
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
@@ -451,7 +447,7 @@ final class va extends bh {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
@@ -534,13 +530,7 @@ final class va extends bh {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -698,9 +688,7 @@ final class va extends bh {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_H;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_H;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -757,9 +745,7 @@ final class va extends bh {
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -839,7 +825,7 @@ final class va extends bh {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -884,7 +870,7 @@ final class va extends bh {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -1002,9 +988,7 @@ final class va extends bh {
               } else {
                 L36: {
                   var18_int = this.field_s + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
                   var17 = var40;
@@ -1032,7 +1016,7 @@ final class va extends bh {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_H[var19];
                       var19++;
                       continue L38;
@@ -1068,8 +1052,8 @@ final class va extends bh {
             return (float[]) (var17);
           } else {
             var42 = field_o[var14.field_d[var17_int]];
-            var55 = field_H;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_H;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -1157,7 +1141,7 @@ final class va extends bh {
 
     private final static void a(byte[] param0, int param1) {
         field_w = param0;
-        field_T = 0;
+        field_T = param1;
         field_u = 0;
     }
 

@@ -13,14 +13,18 @@ final class og extends ib implements qi {
     }
 
     public final void a(byte param0) {
-        ((og) this).field_c.a((og) this, 87);
+        int discarded$0 = 0;
+        this.field_c.a((og) (this), 87);
         if (param0 != -50) {
-            int discarded$0 = ((og) this).b((byte) -21);
+            discarded$0 = this.b((byte) -21);
         }
     }
 
     og(kr param0, hd param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, param1, la.field_h, false, param2 * param3);
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -63,8 +67,8 @@ final class og extends ib implements qi {
         L0: {
           L1: {
             stackOut_0_0 = this;
-            stackOut_0_1 = (kr) param0;
-            stackOut_0_2 = (hd) param1;
+            stackOut_0_1 = (kr) (param0);
+            stackOut_0_2 = (hd) (param1);
             stackOut_0_3 = la.field_h;
             stackIn_3_0 = stackOut_0_0;
             stackIn_3_1 = stackOut_0_1;
@@ -78,9 +82,9 @@ final class og extends ib implements qi {
               break L1;
             } else {
               stackOut_1_0 = this;
-              stackOut_1_1 = (kr) (Object) stackIn_1_1;
-              stackOut_1_2 = (hd) (Object) stackIn_1_2;
-              stackOut_1_3 = (la) (Object) stackIn_1_3;
+              stackOut_1_1 = (kr) ((Object) stackIn_1_1);
+              stackOut_1_2 = (hd) ((Object) stackIn_1_2);
+              stackOut_1_3 = (la) ((Object) stackIn_1_3);
               stackIn_3_0 = stackOut_1_0;
               stackIn_3_1 = stackOut_1_1;
               stackIn_3_2 = stackOut_1_2;
@@ -93,9 +97,9 @@ final class og extends ib implements qi {
                 break L1;
               } else {
                 stackOut_2_0 = this;
-                stackOut_2_1 = (kr) (Object) stackIn_2_1;
-                stackOut_2_2 = (hd) (Object) stackIn_2_2;
-                stackOut_2_3 = (la) (Object) stackIn_2_3;
+                stackOut_2_1 = (kr) ((Object) stackIn_2_1);
+                stackOut_2_2 = (hd) ((Object) stackIn_2_2);
+                stackOut_2_3 = (la) ((Object) stackIn_2_3);
                 stackOut_2_4 = 1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
@@ -107,9 +111,9 @@ final class og extends ib implements qi {
             }
           }
           stackOut_3_0 = this;
-          stackOut_3_1 = (kr) (Object) stackIn_3_1;
-          stackOut_3_2 = (hd) (Object) stackIn_3_2;
-          stackOut_3_3 = (la) (Object) stackIn_3_3;
+          stackOut_3_1 = (kr) ((Object) stackIn_3_1);
+          stackOut_3_2 = (hd) ((Object) stackIn_3_2);
+          stackOut_3_3 = (la) ((Object) stackIn_3_3);
           stackOut_3_4 = 0;
           stackIn_4_0 = stackOut_3_0;
           stackIn_4_1 = stackOut_3_1;
@@ -119,28 +123,28 @@ final class og extends ib implements qi {
           break L0;
         }
         L2: {
-          if (!((og) this).field_c.field_Dc) {
-            ((og) this).field_f = fk.a(param2, 63);
-            ((og) this).field_h = fk.a(param3, 69);
+          if (!this.field_c.field_Dc) {
+            this.field_f = fk.a(param2, 63);
+            this.field_h = fk.a(param3, 69);
             break L2;
           } else {
-            ((og) this).field_h = param3;
-            ((og) this).field_f = param2;
+            this.field_h = param3;
+            this.field_f = param2;
             break L2;
           }
         }
         L3: {
           if (!param4) {
-            ((og) this).field_i = ((og) this).field_c.field_Rc.a(((og) this).field_f, ((og) this).field_h, 1, 0, kr.a(((og) this).field_e, la.field_h, false), 1);
+            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, kr.a(this.field_e, la.field_h, false), 1);
             break L3;
           } else {
-            ((og) this).field_i = ((og) this).field_c.field_Rc.a(((og) this).field_f, ((og) this).field_h, 0, 1024, kr.a(((og) this).field_e, la.field_h, false), 1);
+            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 0, 1024, kr.a(this.field_e, la.field_h, false), 1);
             break L3;
           }
         }
         L4: {
-          var13 = ((og) this).field_c.field_Ec;
-          var10 = ((og) this).field_i.LockRect(0, 0, 0, param2, param3, 0, var13);
+          var13 = this.field_c.field_Ec;
+          var10 = this.field_i.LockRect(0, 0, 0, param2, param3, 0, var13);
           if (!jagdx.gf.a((byte) 111, var10)) {
             break L4;
           } else {
@@ -152,14 +156,14 @@ final class og extends ib implements qi {
                 break L5;
               }
             }
-            param2 = param2 * ((og) this).field_e.field_b;
-            param7 = param7 * ((og) this).field_e.field_b;
+            param2 = param2 * this.field_e.field_b;
+            param7 = param7 * this.field_e.field_b;
             var11 = var13.getRowPitch();
             if (var11 != param2) {
               var12 = 0;
               L6: while (true) {
                 if (param3 <= var12) {
-                  boolean discarded$3 = ((og) this).field_i.UnlockRect(0);
+                  discarded$3 = this.field_i.UnlockRect(0);
                   return;
                 } else {
                   var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
@@ -170,13 +174,13 @@ final class og extends ib implements qi {
             } else {
               if (param2 == param7) {
                 var13.a(param5, param6, 0, param2 * param3);
-                boolean discarded$4 = ((og) this).field_i.UnlockRect(0);
+                discarded$4 = this.field_i.UnlockRect(0);
                 break L4;
               } else {
                 var12 = 0;
                 L7: while (true) {
                   if (param3 <= var12) {
-                    boolean discarded$5 = ((og) this).field_i.UnlockRect(0);
+                    discarded$5 = this.field_i.UnlockRect(0);
                     return;
                   } else {
                     var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
@@ -201,55 +205,58 @@ final class og extends ib implements qi {
         if (param0 < 56) {
             return -84;
         }
-        return ((og) this).field_f;
+        return this.field_f;
     }
 
     public final int b(byte param0) {
         if (param0 < 2) {
             return -101;
         }
-        return ((og) this).field_h;
+        return this.field_h;
     }
 
     final jagdx.IDirect3DBaseTexture b(int param0) {
         if (param0 < 87) {
-            ((og) this).field_j = false;
-            return (jagdx.IDirect3DBaseTexture) (Object) ((og) this).field_i;
+            this.field_j = false;
+            return (jagdx.IDirect3DBaseTexture) ((Object) this.field_i);
         }
-        return (jagdx.IDirect3DBaseTexture) (Object) ((og) this).field_i;
+        return (jagdx.IDirect3DBaseTexture) ((Object) this.field_i);
     }
 
     public final float a(float param0, byte param1) {
         if (param1 != -32) {
-          ((og) this).field_i = null;
-          return param0 / (float)((og) this).field_h;
+          this.field_i = (jagdx.IDirect3DTexture) null;
+          return param0 / (float)this.field_h;
         } else {
-          return param0 / (float)((og) this).field_h;
+          return param0 / (float)this.field_h;
         }
     }
 
     public final float a(int param0, float param1) {
         if (param0 < 65) {
-            ((og) this).field_g = true;
-            return param1 / (float)((og) this).field_f;
+            this.field_g = true;
+            return param1 / (float)this.field_f;
         }
-        return param1 / (float)((og) this).field_f;
+        return param1 / (float)this.field_f;
     }
 
     og(kr param0, hd param1, la param2, int param3, int param4) {
         super(param0, param1, param2, false, param3 * param4);
-        if (!((og) this).field_c.field_Dc) {
-            ((og) this).field_f = fk.a(param3, 118);
-            ((og) this).field_h = fk.a(param4, 61);
+        if (!this.field_c.field_Dc) {
+            this.field_f = fk.a(param3, 118);
+            this.field_h = fk.a(param4, 61);
         } else {
-            ((og) this).field_f = param3;
-            ((og) this).field_h = param4;
+            this.field_f = param3;
+            this.field_h = param4;
         }
-        ((og) this).field_i = ((og) this).field_c.field_Rc.a(param3, param4, 1, 0, kr.a(((og) this).field_e, ((og) this).field_d, false), 1);
+        this.field_i = this.field_c.field_Rc.a(param3, param4, 1, 0, kr.a(this.field_e, this.field_d, false), 1);
     }
 
     og(kr param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, lc.field_g, la.field_h, false, param1 * param2);
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -292,7 +299,7 @@ final class og extends ib implements qi {
         L0: {
           L1: {
             stackOut_0_0 = this;
-            stackOut_0_1 = (kr) param0;
+            stackOut_0_1 = (kr) (param0);
             stackOut_0_2 = lc.field_g;
             stackOut_0_3 = la.field_h;
             stackIn_3_0 = stackOut_0_0;
@@ -307,9 +314,9 @@ final class og extends ib implements qi {
               break L1;
             } else {
               stackOut_1_0 = this;
-              stackOut_1_1 = (kr) (Object) stackIn_1_1;
-              stackOut_1_2 = (hd) (Object) stackIn_1_2;
-              stackOut_1_3 = (la) (Object) stackIn_1_3;
+              stackOut_1_1 = (kr) ((Object) stackIn_1_1);
+              stackOut_1_2 = (hd) ((Object) stackIn_1_2);
+              stackOut_1_3 = (la) ((Object) stackIn_1_3);
               stackIn_3_0 = stackOut_1_0;
               stackIn_3_1 = stackOut_1_1;
               stackIn_3_2 = stackOut_1_2;
@@ -322,9 +329,9 @@ final class og extends ib implements qi {
                 break L1;
               } else {
                 stackOut_2_0 = this;
-                stackOut_2_1 = (kr) (Object) stackIn_2_1;
-                stackOut_2_2 = (hd) (Object) stackIn_2_2;
-                stackOut_2_3 = (la) (Object) stackIn_2_3;
+                stackOut_2_1 = (kr) ((Object) stackIn_2_1);
+                stackOut_2_2 = (hd) ((Object) stackIn_2_2);
+                stackOut_2_3 = (la) ((Object) stackIn_2_3);
                 stackOut_2_4 = 1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
@@ -336,9 +343,9 @@ final class og extends ib implements qi {
             }
           }
           stackOut_3_0 = this;
-          stackOut_3_1 = (kr) (Object) stackIn_3_1;
-          stackOut_3_2 = (hd) (Object) stackIn_3_2;
-          stackOut_3_3 = (la) (Object) stackIn_3_3;
+          stackOut_3_1 = (kr) ((Object) stackIn_3_1);
+          stackOut_3_2 = (hd) ((Object) stackIn_3_2);
+          stackOut_3_3 = (la) ((Object) stackIn_3_3);
           stackOut_3_4 = 0;
           stackIn_4_0 = stackOut_3_0;
           stackIn_4_1 = stackOut_3_1;
@@ -348,27 +355,27 @@ final class og extends ib implements qi {
           break L0;
         }
         L2: {
-          if (((og) this).field_c.field_Dc) {
-            ((og) this).field_f = param1;
-            ((og) this).field_h = param2;
+          if (this.field_c.field_Dc) {
+            this.field_f = param1;
+            this.field_h = param2;
             break L2;
           } else {
-            ((og) this).field_f = fk.a(param1, 91);
-            ((og) this).field_h = fk.a(param2, 22);
+            this.field_f = fk.a(param1, 91);
+            this.field_h = fk.a(param2, 22);
             break L2;
           }
         }
         L3: {
           if (!param3) {
-            ((og) this).field_i = ((og) this).field_c.field_Rc.a(((og) this).field_f, ((og) this).field_h, 1, 0, 21, 1);
+            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, 21, 1);
             break L3;
           } else {
-            ((og) this).field_i = ((og) this).field_c.field_Rc.a(((og) this).field_f, ((og) this).field_h, 0, 1024, 21, 1);
+            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 0, 1024, 21, 1);
             break L3;
           }
         }
-        var12 = ((og) this).field_c.field_Ec;
-        var9 = ((og) this).field_i.LockRect(0, 0, 0, param1, param2, 0, var12);
+        var12 = this.field_c.field_Ec;
+        var9 = this.field_i.LockRect(0, 0, 0, param1, param2, 0, var12);
         if (!jagdx.gf.a((byte) 104, var9)) {
           return;
         } else {
@@ -384,13 +391,13 @@ final class og extends ib implements qi {
           if (4 * param1 == var10) {
             if (param1 == param6) {
               var12.a(param4, param5, 0, param2 * param1);
-              boolean discarded$3 = ((og) this).field_i.UnlockRect(0);
+              discarded$3 = this.field_i.UnlockRect(0);
               return;
             } else {
               var11 = 0;
               L5: while (true) {
                 if (param2 <= var11) {
-                  boolean discarded$4 = ((og) this).field_i.UnlockRect(0);
+                  discarded$4 = this.field_i.UnlockRect(0);
                   return;
                 } else {
                   var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
@@ -403,7 +410,7 @@ final class og extends ib implements qi {
             var11 = 0;
             L6: while (true) {
               if (param2 <= var11) {
-                boolean discarded$5 = ((og) this).field_i.UnlockRect(0);
+                discarded$5 = this.field_i.UnlockRect(0);
                 return;
               } else {
                 var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
@@ -416,6 +423,7 @@ final class og extends ib implements qi {
     }
 
     public final void a(boolean param0, boolean param1, byte param2) {
+        boolean discarded$11 = false;
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -461,10 +469,10 @@ final class og extends ib implements qi {
             break L0;
           }
         }
-        ((og) this).field_g = stackIn_3_1 != 0;
+        ((og) (this)).field_g = stackIn_3_1 != 0;
         if (param2 != -127) {
           L1: {
-            boolean discarded$11 = ((og) this).c((byte) -41);
+            discarded$11 = this.c((byte) -41);
             stackOut_8_0 = this;
             stackIn_10_0 = stackOut_8_0;
             stackIn_9_0 = stackOut_8_0;
@@ -482,7 +490,7 @@ final class og extends ib implements qi {
               break L1;
             }
           }
-          ((og) this).field_j = stackIn_11_1 != 0;
+          ((og) (this)).field_j = stackIn_11_1 != 0;
           return;
         } else {
           L2: {
@@ -503,7 +511,7 @@ final class og extends ib implements qi {
               break L2;
             }
           }
-          ((og) this).field_j = stackIn_7_1 != 0;
+          ((og) (this)).field_j = stackIn_7_1 != 0;
           return;
         }
     }

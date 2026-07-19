@@ -12,6 +12,9 @@ final class pk {
         field_d = null;
         field_a = null;
         field_e = null;
+        if (param0 != 4) {
+            return;
+        }
         field_b = null;
     }
 
@@ -31,14 +34,10 @@ final class pk {
         }
         sh.field_t = true;
         ma.a(true, 0);
-        bl.field_a = 0;
+        bl.field_a = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new rk();
         field_d = new int[4];
         field_b = "Invalid password.";

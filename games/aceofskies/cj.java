@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import jagdx.IDirect3DVertexBuffer;
-
 final class cj implements tl {
     jagdx.IDirect3DVertexBuffer field_f;
     private int field_b;
@@ -25,12 +23,12 @@ final class cj implements tl {
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
         if (param1 <= -112) {
-          ((cj) this).field_c = param2;
-          ((cj) this).field_g = (byte)param0;
-          if (((cj) this).field_b < ((cj) this).field_c) {
+          this.field_c = param2;
+          this.field_g = (byte)param0;
+          if (this.field_b < this.field_c) {
             L0: {
               var5 = 8;
-              if (((cj) this).field_a) {
+              if (this.field_a) {
                 var5 = var5 | 512;
                 var4 = 0;
                 break L0;
@@ -39,11 +37,11 @@ final class cj implements tl {
                 break L0;
               }
             }
-            if (((cj) this).field_f != null) {
+            if (this.field_f != null) {
               L1: {
-                ((cj) this).field_f = ((cj) this).field_e.field_Rc.a(((cj) this).field_c, var5, 0, var4, ((cj) this).field_f);
-                ((cj) this).field_b = ((cj) this).field_c;
-                if (((cj) this).field_f == null) {
+                this.field_f = this.field_e.field_Rc.a(this.field_c, var5, 0, var4, this.field_f);
+                this.field_b = this.field_c;
+                if (this.field_f == null) {
                   stackOut_17_0 = 0;
                   stackIn_18_0 = stackOut_17_0;
                   break L1;
@@ -56,9 +54,9 @@ final class cj implements tl {
               return stackIn_18_0 != 0;
             } else {
               L2: {
-                ((cj) this).field_f = ((cj) this).field_e.field_Rc.a(((cj) this).field_c, var5, 0, var4, ((cj) this).field_f);
-                ((cj) this).field_b = ((cj) this).field_c;
-                if (((cj) this).field_f == null) {
+                this.field_f = this.field_e.field_Rc.a(this.field_c, var5, 0, var4, this.field_f);
+                this.field_b = this.field_c;
+                if (this.field_f == null) {
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
                   break L2;
@@ -72,7 +70,7 @@ final class cj implements tl {
             }
           } else {
             L3: {
-              if (((cj) this).field_f == null) {
+              if (this.field_f == null) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 break L3;
@@ -90,50 +88,52 @@ final class cj implements tl {
     }
 
     public final void a(int param0) {
+        int discarded$2 = 0;
         L0: {
-          if (null != ((cj) this).field_f) {
-            ((cj) this).field_f = null;
+          if (null != this.field_f) {
+            this.field_f = null;
             break L0;
           } else {
             break L0;
           }
         }
         if (param0 != 4665) {
-          int discarded$2 = ((cj) this).b(28);
-          ((cj) this).field_b = 0;
-          ((cj) this).field_c = 0;
+          discarded$2 = this.b(28);
+          this.field_b = 0;
+          this.field_c = 0;
           return;
         } else {
-          ((cj) this).field_b = 0;
-          ((cj) this).field_c = 0;
+          this.field_b = 0;
+          this.field_c = 0;
           return;
         }
     }
 
     final int b(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 1) {
-            boolean discarded$0 = ((cj) this).a((byte) 105);
-            return ((cj) this).field_g;
+            discarded$0 = this.a((byte) 105);
+            return this.field_g;
         }
-        return ((cj) this).field_g;
+        return this.field_g;
     }
 
     public final boolean a(byte param0) {
-        if (!((cj) this).field_d) {
+        if (!this.field_d) {
           if (param0 != -60) {
             return true;
           } else {
             return false;
           }
         } else {
-          if (!jagdx.gf.a((byte) 73, ((cj) this).field_f.Unlock())) {
+          if (!jagdx.gf.a((byte) 73, this.field_f.Unlock())) {
             if (param0 != -60) {
               return true;
             } else {
               return false;
             }
           } else {
-            ((cj) this).field_d = false;
+            this.field_d = false;
             return true;
           }
         }
@@ -167,20 +167,20 @@ final class cj implements tl {
         int stackOut_4_2 = 0;
         int stackOut_4_3 = 0;
         int stackOut_4_4 = 0;
-        if (null != ((cj) this).field_f) {
-          param0 = param0 & ((cj) this).field_a;
-          if (((cj) this).field_d) {
+        if (null != this.field_f) {
+          param0 = param0 & this.field_a;
+          if (this.field_d) {
             if (param1 < -58) {
               return null;
             } else {
-              return null;
+              return (jaclib.memory.Buffer) null;
             }
           } else {
             L0: {
               stackOut_3_0 = 124;
-              stackOut_3_1 = ((cj) this).field_f;
+              stackOut_3_1 = this.field_f;
               stackOut_3_2 = 0;
-              stackOut_3_3 = ((cj) this).field_b;
+              stackOut_3_3 = this.field_b;
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
               stackIn_5_2 = stackOut_3_2;
@@ -191,7 +191,7 @@ final class cj implements tl {
               stackIn_4_3 = stackOut_3_3;
               if (!param0) {
                 stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = (jagdx.IDirect3DVertexBuffer) (Object) stackIn_5_1;
+                stackOut_5_1 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_5_1);
                 stackOut_5_2 = stackIn_5_2;
                 stackOut_5_3 = stackIn_5_3;
                 stackOut_5_4 = 0;
@@ -203,7 +203,7 @@ final class cj implements tl {
                 break L0;
               } else {
                 stackOut_4_0 = stackIn_4_0;
-                stackOut_4_1 = (jagdx.IDirect3DVertexBuffer) (Object) stackIn_4_1;
+                stackOut_4_1 = (jagdx.IDirect3DVertexBuffer) ((Object) stackIn_4_1);
                 stackOut_4_2 = stackIn_4_2;
                 stackOut_4_3 = stackIn_4_3;
                 stackOut_4_4 = 8192;
@@ -215,15 +215,15 @@ final class cj implements tl {
                 break L0;
               }
             }
-            if (!jagdx.gf.a((byte) stackIn_6_0, ((jagdx.IDirect3DVertexBuffer) (Object) stackIn_6_1).Lock(stackIn_6_2, stackIn_6_3, stackIn_6_4, ((cj) this).field_e.field_vc))) {
+            if (!jagdx.gf.a((byte) stackIn_6_0, ((jagdx.IDirect3DVertexBuffer) (Object) stackIn_6_1).Lock(stackIn_6_2, stackIn_6_3, stackIn_6_4, this.field_e.field_vc))) {
               if (param1 < -58) {
                 return null;
               } else {
-                return null;
+                return (jaclib.memory.Buffer) null;
               }
             } else {
-              ((cj) this).field_d = true;
-              return (jaclib.memory.Buffer) (Object) ((cj) this).field_e.field_vc;
+              this.field_d = true;
+              return (jaclib.memory.Buffer) ((Object) this.field_e.field_vc);
             }
           }
         } else {
@@ -232,8 +232,8 @@ final class cj implements tl {
     }
 
     cj(kr param0, boolean param1) {
-        ((cj) this).field_d = false;
-        ((cj) this).field_e = param0;
-        ((cj) this).field_a = param1 ? true : false;
+        this.field_d = false;
+        this.field_e = param0;
+        this.field_a = param1 ? true : false;
     }
 }

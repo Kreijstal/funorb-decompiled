@@ -13,6 +13,10 @@ final class jpa {
     int field_i;
 
     final int[] e() {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var1 = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -23,31 +27,31 @@ final class jpa {
         L0: {
           var1 = this.a();
           var2 = new int[var1 * this.c()];
-          if (((jpa) this).field_h == null) {
+          if (this.field_h == null) {
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((jpa) this).field_a) {
+              if (var3 >= this.field_a) {
                 break L0;
               } else {
-                var4 = var3 * ((jpa) this).field_i;
-                var5 = ((jpa) this).field_d + (var3 + ((jpa) this).field_c) * var1;
+                var4 = var3 * this.field_i;
+                var5 = this.field_d + (var3 + this.field_c) * var1;
                 var6 = 0;
                 L2: while (true) {
-                  if (var6 >= ((jpa) this).field_i) {
+                  if (var6 >= this.field_i) {
                     var3++;
                     continue L1;
                   } else {
-                    int incrementValue$12 = var4;
+                    incrementValue$12 = var4;
                     var4++;
-                    var7 = ((jpa) this).field_g[((jpa) this).field_f[incrementValue$12] & 255];
+                    var7 = this.field_g[this.field_f[incrementValue$12] & 255];
                     if (var7 == 0) {
-                      int incrementValue$13 = var5;
+                      incrementValue$13 = var5;
                       var5++;
                       var2[incrementValue$13] = 0;
                       var6++;
                       continue L2;
                     } else {
-                      int incrementValue$14 = var5;
+                      incrementValue$14 = var5;
                       var5++;
                       var2[incrementValue$14] = -16777216 | var7;
                       var6++;
@@ -60,20 +64,20 @@ final class jpa {
           } else {
             var3 = 0;
             L3: while (true) {
-              if (var3 >= ((jpa) this).field_a) {
+              if (var3 >= this.field_a) {
                 break L0;
               } else {
-                var4 = var3 * ((jpa) this).field_i;
-                var5 = ((jpa) this).field_d + (var3 + ((jpa) this).field_c) * var1;
+                var4 = var3 * this.field_i;
+                var5 = this.field_d + (var3 + this.field_c) * var1;
                 var6 = 0;
                 L4: while (true) {
-                  if (var6 >= ((jpa) this).field_i) {
+                  if (var6 >= this.field_i) {
                     var3++;
                     continue L3;
                   } else {
-                    int incrementValue$15 = var5;
+                    incrementValue$15 = var5;
                     var5++;
-                    var2[incrementValue$15] = ((jpa) this).field_h[var4] << 24 | ((jpa) this).field_g[((jpa) this).field_f[var4] & 255];
+                    var2[incrementValue$15] = this.field_h[var4] << 24 | this.field_g[this.field_f[var4] & 255];
                     var4++;
                     var6++;
                     continue L4;
@@ -87,7 +91,7 @@ final class jpa {
     }
 
     private final int a() {
-        return ((jpa) this).field_i + ((jpa) this).field_d + ((jpa) this).field_b;
+        return this.field_i + this.field_d + this.field_b;
     }
 
     final static jpa[] b(cn param0, String param1, String param2) {
@@ -123,6 +127,8 @@ final class jpa {
     }
 
     private final static jpa[] a(byte[] param0) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         uia var1 = null;
         int var2 = 0;
         jpa[] var3 = null;
@@ -142,8 +148,6 @@ final class jpa {
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
         int stackIn_48_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
@@ -189,9 +193,7 @@ final class jpa {
                             L5: while (true) {
                               if (var7_int >= var2) {
                                 var1.field_h = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
-                                var19 = new int[var6];
-                                var18 = var19;
-                                var17 = var18;
+                                var17 = new int[var6];
                                 var16 = var17;
                                 var7 = var16;
                                 var8 = 1;
@@ -230,7 +232,7 @@ final class jpa {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                byte dupTemp$2 = var1.c((byte) 106);
+                                                                dupTemp$2 = var1.c((byte) 106);
                                                                 var9.field_h[var13 + var14 * var9.field_i] = dupTemp$2;
                                                                 var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
@@ -281,7 +283,7 @@ final class jpa {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            byte dupTemp$3 = var1.c((byte) 46);
+                                                            dupTemp$3 = var1.c((byte) 46);
                                                             var9.field_h[var13] = dupTemp$3;
                                                             var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
@@ -367,8 +369,8 @@ final class jpa {
                                     }
                                   } else {
                                     var7[var8] = var1.a(-32768);
-                                    if (var19[var8] == 0) {
-                                      var19[var8] = 1;
+                                    if (var17[var8] == 0) {
+                                      var17[var8] = 1;
                                       var8++;
                                       continue L6;
                                     } else {
@@ -420,8 +422,8 @@ final class jpa {
     final void b() {
         int var1 = 0;
         byte[] var2 = null;
-        byte[] var3_ref_byte__ = null;
         int var3 = 0;
+        byte[] var3_ref_byte__ = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -429,40 +431,32 @@ final class jpa {
         byte[] var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
-        byte[] var14 = null;
         L0: {
-          var13 = ((jpa) this).field_f;
-          var11 = var13;
-          var9 = var11;
+          var9 = this.field_f;
           var7 = var9;
           var2 = var7;
-          if (((jpa) this).field_h != null) {
-            var14 = ((jpa) this).field_h;
-            var12 = var14;
-            var10 = var12;
+          if (this.field_h != null) {
+            var10 = this.field_h;
             var8 = var10;
             var3_ref_byte__ = var8;
-            var4 = ((jpa) this).field_a - 1;
+            var4 = this.field_a - 1;
             L1: while (true) {
               if (var4 < 0) {
                 break L0;
               } else {
-                var5 = var4 * ((jpa) this).field_i;
-                var6 = (var4 + 1) * ((jpa) this).field_i;
+                var5 = var4 * this.field_i;
+                var6 = (var4 + 1) * this.field_i;
                 L2: while (true) {
                   if (var5 >= var6) {
                     var4--;
                     continue L1;
                   } else {
                     var6--;
-                    var1 = var13[var5];
-                    var2[var5] = var13[var6];
+                    var1 = var9[var5];
+                    var2[var5] = var9[var6];
                     var2[var6] = (byte)var1;
-                    var1 = var14[var5];
-                    var3_ref_byte__[var5] = var14[var6];
+                    var1 = var10[var5];
+                    var3_ref_byte__[var5] = var10[var6];
                     var3_ref_byte__[var6] = (byte)var1;
                     var5++;
                     continue L2;
@@ -471,21 +465,21 @@ final class jpa {
               }
             }
           } else {
-            var3 = ((jpa) this).field_a - 1;
+            var3 = this.field_a - 1;
             L3: while (true) {
               if (var3 < 0) {
                 break L0;
               } else {
-                var4 = var3 * ((jpa) this).field_i;
-                var5 = (var3 + 1) * ((jpa) this).field_i;
+                var4 = var3 * this.field_i;
+                var5 = (var3 + 1) * this.field_i;
                 L4: while (true) {
                   if (var4 >= var5) {
                     var3--;
                     continue L3;
                   } else {
                     var5--;
-                    var1 = var13[var4];
-                    var2[var4] = var13[var5];
+                    var1 = var9[var4];
+                    var2[var4] = var9[var5];
                     var2[var5] = (byte)var1;
                     var4++;
                     continue L4;
@@ -495,16 +489,20 @@ final class jpa {
             }
           }
         }
-        var3 = ((jpa) this).field_d;
-        ((jpa) this).field_d = ((jpa) this).field_b;
-        ((jpa) this).field_b = var3;
+        var3 = this.field_d;
+        this.field_d = this.field_b;
+        this.field_b = var3;
     }
 
     private final int c() {
-        return ((jpa) this).field_a + ((jpa) this).field_c + ((jpa) this).field_e;
+        return this.field_a + this.field_c + this.field_e;
     }
 
     final void d() {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var1 = 0;
         int var2 = 0;
         byte[] var3 = null;
@@ -517,10 +515,10 @@ final class jpa {
         L0: {
           var1 = this.a();
           var2 = this.c();
-          if (((jpa) this).field_i != var1) {
+          if (this.field_i != var1) {
             break L0;
           } else {
-            if (((jpa) this).field_a != var2) {
+            if (this.field_a != var2) {
               break L0;
             } else {
               return;
@@ -529,25 +527,25 @@ final class jpa {
         }
         L1: {
           var3 = new byte[var1 * var2];
-          if (((jpa) this).field_h == null) {
+          if (this.field_h == null) {
             var4 = 0;
             L2: while (true) {
-              if (var4 >= ((jpa) this).field_a) {
+              if (var4 >= this.field_a) {
                 break L1;
               } else {
-                var5 = var4 * ((jpa) this).field_i;
-                var6 = (var4 + ((jpa) this).field_c) * var1 + ((jpa) this).field_d;
+                var5 = var4 * this.field_i;
+                var6 = (var4 + this.field_c) * var1 + this.field_d;
                 var7 = 0;
                 L3: while (true) {
-                  if (var7 >= ((jpa) this).field_i) {
+                  if (var7 >= this.field_i) {
                     var4++;
                     continue L2;
                   } else {
-                    int incrementValue$4 = var6;
+                    incrementValue$4 = var6;
                     var6++;
-                    int incrementValue$5 = var5;
+                    incrementValue$5 = var5;
                     var5++;
-                    var3[incrementValue$4] = ((jpa) this).field_f[incrementValue$5];
+                    var3[incrementValue$4] = this.field_f[incrementValue$5];
                     var7++;
                     continue L3;
                   }
@@ -558,24 +556,24 @@ final class jpa {
             var4_ref_byte__ = new byte[var1 * var2];
             var5 = 0;
             L4: while (true) {
-              if (var5 >= ((jpa) this).field_a) {
-                ((jpa) this).field_h = var4_ref_byte__;
+              if (var5 >= this.field_a) {
+                this.field_h = var4_ref_byte__;
                 break L1;
               } else {
-                var6 = var5 * ((jpa) this).field_i;
-                var7 = (var5 + ((jpa) this).field_c) * var1 + ((jpa) this).field_d;
+                var6 = var5 * this.field_i;
+                var7 = (var5 + this.field_c) * var1 + this.field_d;
                 var8 = 0;
                 L5: while (true) {
-                  if (var8 >= ((jpa) this).field_i) {
+                  if (var8 >= this.field_i) {
                     var5++;
                     continue L4;
                   } else {
-                    var3[var7] = ((jpa) this).field_f[var6];
-                    int incrementValue$6 = var7;
+                    var3[var7] = this.field_f[var6];
+                    incrementValue$6 = var7;
                     var7++;
-                    int incrementValue$7 = var6;
+                    incrementValue$7 = var6;
                     var6++;
-                    var4_ref_byte__[incrementValue$6] = ((jpa) this).field_h[incrementValue$7];
+                    var4_ref_byte__[incrementValue$6] = this.field_h[incrementValue$7];
                     var8++;
                     continue L5;
                   }
@@ -584,12 +582,12 @@ final class jpa {
             }
           }
         }
-        ((jpa) this).field_e = 0;
-        ((jpa) this).field_c = 0;
-        ((jpa) this).field_b = 0;
-        ((jpa) this).field_d = 0;
-        ((jpa) this).field_i = var1;
-        ((jpa) this).field_a = var2;
-        ((jpa) this).field_f = var3;
+        this.field_e = 0;
+        this.field_c = 0;
+        this.field_b = 0;
+        this.field_d = 0;
+        this.field_i = var1;
+        this.field_a = var2;
+        this.field_f = var3;
     }
 }

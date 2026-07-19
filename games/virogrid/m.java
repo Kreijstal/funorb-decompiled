@@ -17,6 +17,7 @@ final class m {
     p field_g;
 
     final void a(int param0) {
+        pe discarded$1 = null;
         int var2 = 0;
         fb var3 = null;
         int var4 = 0;
@@ -38,7 +39,7 @@ final class m {
         int stackOut_15_2 = 0;
         var5 = Virogrid.field_F ? 1 : 0;
         var2 = 2 % ((-69 - param0) / 55);
-        var3 = (fb) (Object) ((m) this).field_g.a((byte) -87);
+        var3 = (fb) ((Object) this.field_g.a((byte) -87));
         L0: while (true) {
           L1: {
             if (var3 == null) {
@@ -48,26 +49,26 @@ final class m {
                 var4 = var3.field_j;
                 if (var4 != 0) {
                   if (1 != var4) {
-                    if (var4 == 2) {
+                    if ((var4 ^ -1) == -3) {
                       L3: {
                         var3.field_n = var3.field_n - 3;
                         var3.field_h = var3.field_h - 40;
-                        if (var3.field_n >= 0) {
+                        if (-1 >= (var3.field_n ^ -1)) {
                           break L3;
                         } else {
                           if (var3.field_h >= 0) {
                             break L3;
                           } else {
                             L4: {
-                              pe discarded$1 = vm.a((byte) 30, td.field_d[sh.a(4712, 5)]);
-                              stackOut_14_0 = ((m) this).field_d[var3.field_g];
+                              discarded$1 = vm.a((byte) 30, td.field_d[sh.a(4712, 5)]);
+                              stackOut_14_0 = this.field_d[var3.field_g];
                               stackOut_14_1 = var3.field_k;
                               stackIn_16_0 = stackOut_14_0;
                               stackIn_16_1 = stackOut_14_1;
                               stackIn_15_0 = stackOut_14_0;
                               stackIn_15_1 = stackOut_14_1;
                               if (!var3.field_q) {
-                                stackOut_16_0 = (byte[]) (Object) stackIn_16_0;
+                                stackOut_16_0 = (byte[]) ((Object) stackIn_16_0);
                                 stackOut_16_1 = stackIn_16_1;
                                 stackOut_16_2 = 1;
                                 stackIn_17_0 = stackOut_16_0;
@@ -75,7 +76,7 @@ final class m {
                                 stackIn_17_2 = stackOut_16_2;
                                 break L4;
                               } else {
-                                stackOut_15_0 = (byte[]) (Object) stackIn_15_0;
+                                stackOut_15_0 = (byte[]) ((Object) stackIn_15_0);
                                 stackOut_15_1 = stackIn_15_1;
                                 stackOut_15_2 = 0;
                                 stackIn_17_0 = stackOut_15_0;
@@ -91,7 +92,7 @@ final class m {
                         }
                       }
                       L5: {
-                        if (var3.field_n < 0) {
+                        if ((var3.field_n ^ -1) > -1) {
                           var3.field_n = 0;
                           break L5;
                         } else {
@@ -119,7 +120,7 @@ final class m {
                   }
                 } else {
                   var3.field_h = var3.field_h + 40;
-                  if (var3.field_h <= 240) {
+                  if ((var3.field_h ^ -1) >= -241) {
                     break L2;
                   } else {
                     var3.field_h = 240;
@@ -129,17 +130,17 @@ final class m {
                 }
               }
               L6: {
-                if (!((m) this).field_l.field_g) {
+                if (!this.field_l.field_g) {
                   break L6;
                 } else {
-                  if (var3.field_j < 1) {
+                  if ((var3.field_j ^ -1) > -2) {
                     break L1;
                   } else {
                     break L6;
                   }
                 }
               }
-              var3 = (fb) (Object) ((m) this).field_g.a(16213);
+              var3 = (fb) ((Object) this.field_g.a(16213));
               continue L0;
             }
           }
@@ -155,19 +156,19 @@ final class m {
           if (param2 < -108) {
             break L0;
           } else {
-            ((m) this).a(false, -57);
+            this.a(false, -57);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (null == ((m) this).field_j) {
+            if (null == this.field_j) {
               break L2;
             } else {
-              if (param0 != ((m) this).field_j.field_a) {
+              if (param0 != this.field_j.field_a) {
                 break L2;
               } else {
-                if (((m) this).field_j.field_b != param1) {
+                if (this.field_j.field_b != param1) {
                   break L2;
                 } else {
                   stackOut_5_0 = 1;
@@ -185,14 +186,21 @@ final class m {
     }
 
     final static ka a(byte param0, int param1) {
+        if (param0 <= 63) {
+            field_f = (mg[]) null;
+        }
         ka var2 = new ka();
-        tf.field_a.a((l) (Object) var2, (byte) -50);
-        fn.a(4, true);
+        tf.field_a.a(var2, (byte) -50);
+        fn.a(param1, true);
         return var2;
     }
 
     final static int b(boolean param0) {
+        ka discarded$0 = null;
         ql.field_q.b((byte) -116);
+        if (!param0) {
+            discarded$0 = m.a((byte) -1, 53);
+        }
         if (!ji.field_e.d(-57)) {
             return dk.b((byte) 108);
         }
@@ -202,6 +210,9 @@ final class m {
     public static void b(int param0) {
         field_a = null;
         field_i = null;
+        if (param0 != -314) {
+            field_f = (mg[]) null;
+        }
         field_f = null;
     }
 
@@ -209,17 +220,18 @@ final class m {
         int var2 = 0;
         int var3 = 0;
         int var4 = Virogrid.field_F ? 1 : 0;
-        for (var2 = 0; ((m) this).field_d.length > var2; var2++) {
-            for (var3 = 0; var3 < ((m) this).field_d[0].length; var3++) {
-                ((m) this).field_d[var2][var3] = ((m) this).field_l.field_C[var2][var3];
+        for (var2 = 0; this.field_d.length > var2; var2++) {
+            for (var3 = 0; var3 < this.field_d[0].length; var3++) {
+                this.field_d[var2][var3] = this.field_l.field_C[var2][var3];
             }
         }
-        ((m) this).field_j = null;
-        ((m) this).field_g.a(param0);
-        ((m) this).field_l.a(((m) this).field_h, ((m) this).field_l.field_A, (byte) 14);
+        this.field_j = null;
+        this.field_g.a(param0);
+        this.field_l.a(this.field_h, this.field_l.field_A, (byte) 14);
     }
 
     final void a(boolean param0, int param1) {
+        boolean discarded$1 = false;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -292,21 +304,21 @@ final class m {
         int stackOut_47_3 = 0;
         L0: {
           var9 = Virogrid.field_F ? 1 : 0;
-          if (-1 >= ((m) this).field_l.field_m) {
+          if (-1 >= this.field_l.field_m) {
             break L0;
           } else {
-            if (-1 < ((m) this).field_l.field_w) {
+            if (-1 < this.field_l.field_w) {
               L1: {
                 stackOut_3_0 = this;
-                stackOut_3_1 = ((m) this).field_l.field_w;
-                stackOut_3_2 = ((m) this).field_l.field_m;
+                stackOut_3_1 = this.field_l.field_w;
+                stackOut_3_2 = this.field_l.field_m;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_5_1 = stackOut_3_1;
                 stackIn_5_2 = stackOut_3_2;
                 stackIn_4_0 = stackOut_3_0;
                 stackIn_4_1 = stackOut_3_1;
                 stackIn_4_2 = stackOut_3_2;
-                if (((m) this).field_l.field_C[((m) this).field_l.field_m][((m) this).field_l.field_w] != 0) {
+                if (this.field_l.field_C[this.field_l.field_m][this.field_l.field_w] != 0) {
                   stackOut_5_0 = this;
                   stackOut_5_1 = stackIn_5_1;
                   stackOut_5_2 = stackIn_5_2;
@@ -330,15 +342,15 @@ final class m {
               }
               L2: {
                 if (this.a(stackIn_6_1, stackIn_6_2, stackIn_6_3 == 0, 16238)) {
-                  this.a(((m) this).field_l.field_m, (byte) 99, ((m) this).field_l.field_w);
+                  this.a(this.field_l.field_m, (byte) 99, this.field_l.field_w);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                var3 = -1 + ((m) this).field_l.field_m;
-                if (var3 >= 0) {
+                var3 = -1 + this.field_l.field_m;
+                if (-1 >= (var3 ^ -1)) {
                   break L3;
                 } else {
                   var3 = 0;
@@ -346,26 +358,26 @@ final class m {
                 }
               }
               L4: {
-                var4 = ((m) this).field_l.field_m - -1;
-                if (var4 >= ((m) this).field_l.field_C.length) {
-                  var4 = ((m) this).field_l.field_C.length - 1;
+                var4 = this.field_l.field_m - -1;
+                if (var4 >= this.field_l.field_C.length) {
+                  var4 = this.field_l.field_C.length - 1;
                   break L4;
                 } else {
                   break L4;
                 }
               }
               L5: {
-                var5 = ((m) this).field_l.field_w + 1;
-                if (((m) this).field_l.field_C[0].length <= var5) {
-                  var5 = ((m) this).field_l.field_C[0].length + -1;
+                var5 = this.field_l.field_w + 1;
+                if (this.field_l.field_C[0].length <= var5) {
+                  var5 = this.field_l.field_C[0].length + -1;
                   break L5;
                 } else {
                   break L5;
                 }
               }
               L6: {
-                var6 = ((m) this).field_l.field_w - 1;
-                if (var6 >= 0) {
+                var6 = this.field_l.field_w - 1;
+                if (-1 >= (var6 ^ -1)) {
                   break L6;
                 } else {
                   var6 = 0;
@@ -383,7 +395,7 @@ final class m {
                       var7++;
                       continue L7;
                     } else {
-                      if (1 - ((m) this).field_l.field_C[((m) this).field_l.field_m][((m) this).field_l.field_w] == ((m) this).field_d[var7][var8]) {
+                      if (1 - this.field_l.field_C[this.field_l.field_m][this.field_l.field_w] == this.field_d[var7][var8]) {
                         L9: {
                           stackOut_25_0 = this;
                           stackOut_25_1 = var8;
@@ -394,7 +406,7 @@ final class m {
                           stackIn_26_0 = stackOut_25_0;
                           stackIn_26_1 = stackOut_25_1;
                           stackIn_26_2 = stackOut_25_2;
-                          if (((m) this).field_l.field_C[var7][var8] != 0) {
+                          if (-1 != (this.field_l.field_C[var7][var8] ^ -1)) {
                             stackOut_27_0 = this;
                             stackOut_27_1 = stackIn_27_1;
                             stackOut_27_2 = stackIn_27_2;
@@ -441,34 +453,34 @@ final class m {
           if (param1 == 31626) {
             break L10;
           } else {
-            boolean discarded$1 = this.a(49, 29, 84);
+            discarded$1 = this.a(49, 29, 84);
             break L10;
           }
         }
         var3 = 0;
         L11: while (true) {
-          if (var3 >= ((m) this).field_d.length) {
+          if (var3 >= this.field_d.length) {
             L12: {
               if (param0) {
-                ((m) this).field_l.a((byte) -78);
+                this.field_l.a((byte) -78);
                 break L12;
               } else {
                 break L12;
               }
             }
-            ((m) this).field_l.a(((m) this).field_h, -((m) this).field_l.field_A + 1, (byte) 14);
+            this.field_l.a(this.field_h, -this.field_l.field_A + 1, (byte) 14);
             return;
           } else {
             var4 = 0;
             L13: while (true) {
-              if (((m) this).field_d[0].length <= var4) {
+              if (this.field_d[0].length <= var4) {
                 var3++;
                 continue L11;
               } else {
-                var5 = ((m) this).field_d[var3][var4] ^ ((m) this).field_l.field_C[var3][var4];
+                var5 = this.field_d[var3][var4] ^ this.field_l.field_C[var3][var4];
                 if (var5 != 0) {
-                  if (((m) this).field_l.field_C[var3][var4] == -1) {
-                    ((m) this).field_d[var3][var4] = ((m) this).field_l.field_C[var3][var4];
+                  if (0 == (this.field_l.field_C[var3][var4] ^ -1)) {
+                    this.field_d[var3][var4] = this.field_l.field_C[var3][var4];
                     var4++;
                     continue L13;
                   } else {
@@ -483,7 +495,7 @@ final class m {
                         stackIn_47_0 = stackOut_46_0;
                         stackIn_47_1 = stackOut_46_1;
                         stackIn_47_2 = stackOut_46_2;
-                        if (((m) this).field_l.field_C[var3][var4] != 0) {
+                        if (this.field_l.field_C[var3][var4] != 0) {
                           stackOut_48_0 = this;
                           stackOut_48_1 = stackIn_48_1;
                           stackOut_48_2 = stackIn_48_2;
@@ -530,7 +542,10 @@ final class m {
 
     private final boolean a(int param0, int param1, boolean param2, int param3) {
         int var6 = Virogrid.field_F ? 1 : 0;
-        fb var5 = (fb) (Object) ((m) this).field_g.a((byte) -68);
+        if (param3 != 16238) {
+            return true;
+        }
+        fb var5 = (fb) ((Object) this.field_g.a((byte) -68));
         while (var5 != null) {
             if (param2 == var5.field_q) {
                 if (param0 == var5.field_k) {
@@ -539,51 +554,53 @@ final class m {
                     }
                 }
             }
-            var5 = (fb) (Object) ((m) this).field_g.a(16213);
+            var5 = (fb) ((Object) this.field_g.a(16213));
         }
         return false;
     }
 
     private final void a(int param0, byte param1, int param2) {
+        pe discarded$11 = null;
+        pe discarded$12 = null;
         int var4 = 0;
         int var5 = 0;
         L0: {
           var5 = Virogrid.field_F ? 1 : 0;
           var4 = -48 % ((param1 - -36) / 54);
-          if (((m) this).field_l.field_C[param0][param2] == 0) {
+          if (this.field_l.field_C[param0][param2] == 0) {
             L1: {
-              if (((m) this).field_b != 0) {
+              if (this.field_b != 0) {
                 break L1;
               } else {
                 if (this.a(param2, param0, -124)) {
-                  ((m) this).field_g.a((l) (Object) new fb(((m) this).field_j, true), (byte) -100);
-                  ((m) this).field_j = null;
+                  this.field_g.a(new fb(this.field_j, true), (byte) -100);
+                  this.field_j = null;
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            ((m) this).field_g.a((l) (Object) new fb(param2, param0, true), (byte) -41);
-            pe discarded$11 = vm.a((byte) 30, tk.field_c[sh.a(4712, 5)]);
+            this.field_g.a(new fb(param2, param0, true), (byte) -41);
+            discarded$11 = vm.a((byte) 30, tk.field_c[sh.a(4712, 5)]);
             break L0;
           } else {
-            if (((m) this).field_l.field_C[param0][param2] == 1) {
+            if (this.field_l.field_C[param0][param2] == 1) {
               L2: {
-                if (((m) this).field_b != 1) {
+                if (-2 != (this.field_b ^ -1)) {
                   break L2;
                 } else {
                   if (this.a(param2, param0, -111)) {
-                    ((m) this).field_g.a((l) (Object) new fb(((m) this).field_j, false), (byte) -75);
-                    ((m) this).field_j = null;
+                    this.field_g.a(new fb(this.field_j, false), (byte) -75);
+                    this.field_j = null;
                     break L0;
                   } else {
                     break L2;
                   }
                 }
               }
-              ((m) this).field_g.a((l) (Object) new fb(param2, param0, false), (byte) -51);
-              pe discarded$12 = vm.a((byte) 30, tk.field_c[sh.a(4712, 5)]);
+              this.field_g.a(new fb(param2, param0, false), (byte) -51);
+              discarded$12 = vm.a((byte) 30, tk.field_c[sh.a(4712, 5)]);
               break L0;
             } else {
               break L0;
@@ -595,32 +612,28 @@ final class m {
     m(uf param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        ((m) this).field_k = -1;
-        ((m) this).field_c = -1;
+        this.field_k = -1;
+        this.field_c = -1;
         try {
-            ((m) this).field_b = param1;
-            ((m) this).field_l = param0;
-            ((m) this).field_g = new p();
-            ((m) this).field_d = new byte[((m) this).field_l.field_C.length][((m) this).field_l.field_C[0].length];
-            for (var3_int = 0; var3_int < ((m) this).field_d.length; var3_int++) {
-                for (var4 = 0; ((m) this).field_d[0].length > var4; var4++) {
-                    ((m) this).field_d[var3_int][var4] = ((m) this).field_l.field_C[var3_int][var4];
+            this.field_b = param1;
+            this.field_l = param0;
+            this.field_g = new p();
+            this.field_d = new byte[this.field_l.field_C.length][this.field_l.field_C[0].length];
+            for (var3_int = 0; var3_int < this.field_d.length; var3_int++) {
+                for (var4 = 0; this.field_d[0].length > var4; var4++) {
+                    this.field_d[var3_int][var4] = this.field_l.field_C[var3_int][var4];
                 }
             }
-            ((m) this).field_h = new boolean[((m) this).field_d.length][((m) this).field_d[0].length];
-            ((m) this).field_e = -1;
-            ((m) this).field_l.a(((m) this).field_h, ((m) this).field_l.field_A, (byte) 14);
+            this.field_h = new boolean[this.field_d.length][this.field_d[0].length];
+            this.field_e = -1;
+            this.field_l.a(this.field_h, this.field_l.field_A, (byte) 14);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new int[4];
-        field_a = new byte[]{(byte) 2, (byte) 1};
+        field_a = new byte[]{(byte)2, (byte) 1};
     }
 }

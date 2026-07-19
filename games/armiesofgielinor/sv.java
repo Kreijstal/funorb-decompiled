@@ -7,27 +7,27 @@ final class sv extends el implements java.awt.event.MouseWheelListener {
     final synchronized int a(int param0) {
         int var2 = 0;
         if (param0 != 9) {
-          ((sv) this).field_g = -118;
-          var2 = ((sv) this).field_g;
-          ((sv) this).field_g = 0;
+          this.field_g = -118;
+          var2 = this.field_g;
+          this.field_g = 0;
           return var2;
         } else {
-          var2 = ((sv) this).field_g;
-          ((sv) this).field_g = 0;
+          var2 = this.field_g;
+          this.field_g = 0;
           return var2;
         }
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        ((sv) this).field_g = ((sv) this).field_g + param0.getWheelRotation();
+        this.field_g = this.field_g + param0.getWheelRotation();
         param0.consume();
     }
 
     final void a(java.awt.Component param0, boolean param1) {
-        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param1) {
-            Object var4 = null;
-            ((sv) this).mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+            java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
+            this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
         }
     }
 
@@ -35,10 +35,10 @@ final class sv extends el implements java.awt.event.MouseWheelListener {
         if (param0 != 0) {
             return;
         }
-        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     sv() {
-        ((sv) this).field_g = 0;
+        this.field_g = 0;
     }
 }

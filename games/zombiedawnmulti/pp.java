@@ -18,7 +18,7 @@ class pp extends ic {
 
     pi b(int param0) {
         if (param0 != 7) {
-            field_o = null;
+            field_o = (String) null;
             return pl.field_G;
         }
         return pl.field_G;
@@ -26,30 +26,27 @@ class pp extends ic {
 
     pp(long param0, String param1) {
         try {
-            ((pp) this).field_p = param0;
-            ((pp) this).field_m = param1;
+            this.field_p = param0;
+            this.field_m = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(k param0, int param1) {
+        pi discarded$0 = null;
         try {
-            param0.a(((pp) this).field_p, true);
+            param0.a(this.field_p, true);
             if (param1 != -1) {
-                pi discarded$0 = ((pp) this).b(-111);
+                discarded$0 = this.b(-111);
             }
-            param0.a(13066, ((pp) this).field_m);
+            param0.a(13066, this.field_m);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Make humans or enemy zombies heavy with their burdens, slowing them down. Then, move in for the kill!";
     }
 }

@@ -18,7 +18,7 @@ final class qj extends ub {
         int var4 = 0;
         L0: {
           var4 = HoldTheLine.field_D;
-          var2 = new tm(((qj) this).field_K);
+          var2 = new tm(this.field_K);
           if (param0 >= 120) {
             break L0;
           } else {
@@ -26,13 +26,13 @@ final class qj extends ub {
             break L0;
           }
         }
-        var3 = (rl) (Object) var2.c((byte) -120);
+        var3 = (rl) ((Object) var2.c((byte) -120));
         L1: while (true) {
           if (var3 != null) {
             if (var3.field_F) {
               return var3.f((byte) 119);
             } else {
-              var3 = (rl) (Object) var2.a((byte) -104);
+              var3 = (rl) ((Object) var2.a((byte) -104));
               continue L1;
             }
           } else {
@@ -47,19 +47,19 @@ final class qj extends ub {
         int var4 = 0;
         L0: {
           var4 = HoldTheLine.field_D;
-          var2 = new tm(((qj) this).field_K);
-          var3 = (rl) (Object) var2.c((byte) 89);
+          var2 = new tm(this.field_K);
+          var3 = (rl) ((Object) var2.c((byte) 89));
           if (param0 < -74) {
             break L0;
           } else {
-            ((qj) this).field_K = null;
+            this.field_K = (ah) null;
             break L0;
           }
         }
         L1: while (true) {
           if (var3 != null) {
             if (!var3.field_F) {
-              var3 = (rl) (Object) var2.a((byte) -104);
+              var3 = (rl) ((Object) var2.a((byte) -104));
               continue L1;
             } else {
               return var3;
@@ -72,37 +72,37 @@ final class qj extends ub {
 
     final void f(byte param0) {
         int var5 = HoldTheLine.field_D;
-        tm var2 = new tm(((qj) this).field_K);
+        tm var2 = new tm(this.field_K);
         int var4 = -22 % ((90 - param0) / 36);
-        rl var3 = (rl) (Object) var2.c((byte) 30);
+        rl var3 = (rl) ((Object) var2.c((byte) 30));
         while (var3 != null) {
             if (!(!var3.a(true))) {
                 var3.d(0);
             }
-            var3 = (rl) (Object) var2.a((byte) -104);
+            var3 = (rl) ((Object) var2.a((byte) -104));
         }
     }
 
     public qj() {
         super(0, 0, ho.field_i, pe.field_e, (dh) null, (tb) null);
-        ((qj) this).field_K = new ah();
+        this.field_K = new ah();
     }
 
     final static void h(byte param0) {
         cg.field_b = new a();
-        sm.field_c.a((n) (Object) cg.field_b, (byte) -99);
+        sm.field_c.a((n) (cg.field_b), (byte) -99);
         int var1 = 95 / ((param0 - -54) / 53);
     }
 
     final void a(boolean param0) {
         int var4 = HoldTheLine.field_D;
-        tm var2 = new tm(((qj) this).field_K);
-        rl var3 = (rl) (Object) var2.c((byte) -2);
+        tm var2 = new tm(this.field_K);
+        rl var3 = (rl) ((Object) var2.c((byte) -2));
         while (var3 != null) {
             var3.field_F = false;
-            var3 = (rl) (Object) var2.a((byte) -104);
+            var3 = (rl) ((Object) var2.a((byte) -104));
         }
-        ((qj) this).field_B = null;
+        this.field_B = null;
         if (param0) {
             field_H = -70L;
         }
@@ -113,29 +113,30 @@ final class qj extends ub {
         if (param0 != -9532) {
             qj.b(true);
         }
-        if (null != ((qj) this).field_l) {
-            ((qj) this).field_l.a(true, param2, -115, (n) this, param1);
+        if (null != this.field_l) {
+            this.field_l.a(true, param2, -115, (n) (this), param1);
         }
-        tm var5 = new tm(((qj) this).field_K);
-        n var6 = (n) (Object) var5.a(8115);
+        tm var5 = new tm(this.field_K);
+        n var6 = (n) ((Object) var5.a(8115));
         while (var6 != null) {
-            var6.a(param0, ((qj) this).field_o + param1, param2 - -((qj) this).field_k, param3);
-            var6 = (n) (Object) var5.a(false);
+            var6.a(param0 + 0, this.field_o + param1, param2 - -this.field_k, param3);
+            var6 = (n) ((Object) var5.a(false));
         }
     }
 
     final void a(n param0, boolean param1) {
         rl var3 = null;
+        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof rl)) {
                 throw new IllegalArgumentException();
             }
-            var3 = (rl) (Object) param0;
-            ((qj) this).field_K.a((hl) (Object) var3, param1);
+            var3 = (rl) ((Object) param0);
+            this.field_K.a(var3, param1);
             var3.field_F = true;
-            boolean discarded$0 = var3.a((n) this, -25823);
+            discarded$0 = var3.a((n) (this), -25823);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "qj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "qj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -143,6 +144,9 @@ final class qj extends ub {
         field_N = null;
         field_F = null;
         field_G = null;
+        if (!param0) {
+            field_H = 58L;
+        }
         field_M = null;
         field_J = null;
     }
@@ -151,30 +155,29 @@ final class qj extends ub {
         pc.field_b = si.n(-49);
         ka.field_b = new qj();
         cg.a((byte) -109, true, true);
+        if (param0 != -1) {
+            qj.b(true);
+        }
     }
 
     final void g(byte param0) {
         int var4 = HoldTheLine.field_D;
-        tm var2 = new tm(((qj) this).field_K);
+        tm var2 = new tm(this.field_K);
         if (param0 != -59) {
-            Object var5 = null;
-            ((qj) this).a((n) null, false);
+            n var5 = (n) null;
+            this.a((n) null, false);
         }
-        rl var3 = (rl) (Object) var2.c((byte) 63);
+        rl var3 = (rl) ((Object) var2.c((byte) 63));
         while (var3 != null) {
             if (!(!var3.g((byte) 39))) {
                 var3.d(0);
             }
-            var3 = (rl) (Object) var2.a((byte) -104);
+            var3 = (rl) ((Object) var2.a((byte) -104));
         }
-        ((qj) this).field_B = (n) (Object) ((qj) this).i((byte) -116);
+        this.field_B = (n) ((Object) this.i((byte) -116));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = "Retry";
         field_M = new ge();
         field_F = new sh();

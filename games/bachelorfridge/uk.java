@@ -6,32 +6,62 @@ final class uk extends ana {
     static String field_w;
 
     public static void d(int param0) {
-        int var1 = -100;
+        int var1 = 100 / ((param0 - 59) / 61);
         field_w = null;
     }
 
     private final void e(int param0) {
-        aga var2 = null;
-        iv var3 = null;
-        ad var4 = null;
+        oha discarded$3 = null;
+        boolean discarded$4 = false;
+        oha discarded$5 = null;
+        Object var3 = null;
+        iv var3_ref = null;
         int var5 = 0;
+        aga var7 = null;
+        ad var8 = null;
+        aga var9 = null;
+        ad var10 = null;
+        var3 = null;
         var5 = BachelorFridge.field_y;
-        var2 = ((uk) this).field_v.field_l.a(98, ((uk) this).field_q.field_h);
-        if (var2.i(-123)) {
-          return;
+        if (param0 == 1) {
+          var9 = this.field_v.field_l.a(98, this.field_q.field_h);
+          if (var9.i(-123)) {
+            return;
+          } else {
+            var3_ref = (iv) ((Object) this.field_v.field_o.b((byte) 90));
+            discarded$3 = al.a(param0 + 106, this.field_v.field_k);
+            L0: while (true) {
+              if (var3_ref == null) {
+                return;
+              } else {
+                var3_ref.a(var9, this.field_q.field_h, 12);
+                var10 = var3_ref.field_h.a(param0 + -27450, this.field_q);
+                var10.b(-1, 6);
+                var10.a(24831, param0 ^ 98, kna.field_g[1]);
+                var3_ref = (iv) ((Object) this.field_v.field_o.c(param0 ^ 1));
+                continue L0;
+              }
+            }
+          }
         } else {
-          var3 = (iv) (Object) ((uk) this).field_v.field_o.b((byte) 90);
-          oha discarded$1 = al.a(107, ((uk) this).field_v.field_k);
-          L0: while (true) {
-            if (var3 == null) {
-              return;
-            } else {
-              var3.a(var2, ((uk) this).field_q.field_h, 12);
-              var4 = var3.field_h.a(-27449, ((uk) this).field_q);
-              var4.b(-1, 6);
-              var4.a(24831, 99, kna.field_g[1]);
-              var3 = (iv) (Object) ((uk) this).field_v.field_o.c(0);
-              continue L0;
+          discarded$4 = this.c((byte) -34);
+          var7 = this.field_v.field_l.a(98, this.field_q.field_h);
+          if (var7.i(-123)) {
+            return;
+          } else {
+            var3_ref = (iv) ((Object) this.field_v.field_o.b((byte) 90));
+            discarded$5 = al.a(param0 + 106, this.field_v.field_k);
+            L1: while (true) {
+              if (var3_ref == null) {
+                return;
+              } else {
+                var3_ref.a(var7, this.field_q.field_h, 12);
+                var8 = var3_ref.field_h.a(param0 + -27450, this.field_q);
+                var8.b(-1, 6);
+                var8.a(24831, param0 ^ 98, kna.field_g[1]);
+                var3_ref = (iv) ((Object) this.field_v.field_o.c(param0 ^ 1));
+                continue L1;
+              }
             }
           }
         }
@@ -39,10 +69,10 @@ final class uk extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((uk) this).field_l - 1;
-        ((uk) this).field_l = ((uk) this).field_l - 1;
+        int fieldTemp$2 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
         if (fieldTemp$2 >= 0) {
-          if (((uk) this).field_l == 25) {
+          if ((this.field_l ^ -1) == -26) {
             jja.a(256, -1, 35);
             this.e(1);
             return false;
@@ -57,22 +87,22 @@ final class uk extends ana {
     }
 
     private final void f(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != 11642) {
+            discarded$0 = this.c((byte) 8);
+        }
     }
 
     uk(gj param0, kh param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((uk) this).field_v = param1;
+            this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = "Match by...";
     }
 }

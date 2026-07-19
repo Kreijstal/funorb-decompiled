@@ -11,6 +11,9 @@ final class mt extends td {
     static int field_r;
 
     public static void b(int param0) {
+        if (param0 != 1687) {
+            return;
+        }
         field_q = null;
         field_u = null;
         field_t = null;
@@ -54,18 +57,18 @@ final class mt extends td {
                 break L1;
               }
             }
-            var9 = ((mt) this).field_h.a(param1 ^ 115, param0);
-            var4 = new nb(((mt) this).field_g, new nq(var9));
+            var9 = this.field_h.a(param1 ^ 115, param0);
+            var4 = new nb(this.field_g, new nq(var9));
             var5 = 0;
             L2: while (true) {
               if (var5 >= param0.field_d) {
-                stackOut_15_0 = (nb) var4;
+                stackOut_15_0 = (nb) (var4);
                 stackIn_16_0 = stackOut_15_0;
                 break L0;
               } else {
                 var6 = 0;
                 L3: while (true) {
-                  if (var6 >= 7) {
+                  if ((var6 ^ -1) <= -8) {
                     var5++;
                     continue L2;
                   } else {
@@ -86,8 +89,8 @@ final class mt extends td {
                               if (var7.field_J != var9.field_J) {
                                 break L4;
                               } else {
-                                var4.field_o.a((bw) (Object) new iv(new nq(var9), false, 1, -var7.field_t, 0), true);
-                                var4.field_o.a((bw) (Object) new pea(new nq(var7), var7.field_x, var7.field_J), true);
+                                var4.field_o.a(new iv(new nq(var9), false, 1, -var7.field_t, 0), true);
+                                var4.field_o.a(new pea(new nq(var7), var7.field_x, var7.field_J), true);
                                 break L4;
                               }
                             }
@@ -106,23 +109,23 @@ final class mt extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_0 = (RuntimeException) (var3);
             stackOut_17_1 = new StringBuilder().append("mt.A(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -130,12 +133,15 @@ final class mt extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_16_0;
+        return (ii) ((Object) stackIn_16_0);
     }
 
     final static sna c(int param0) {
+        if (param0 != 0) {
+            mt.b(24);
+        }
         return rba.field_a.field_wb;
     }
 
@@ -144,10 +150,6 @@ final class mt extends td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new int[8192];
         field_t = "More suggestions";
     }

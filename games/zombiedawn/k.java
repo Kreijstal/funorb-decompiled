@@ -8,10 +8,11 @@ final class k extends vf {
 
     public static void c(int param0) {
         field_r = null;
-        int var1 = 0;
+        int var1 = -126 % ((48 - param0) / 63);
     }
 
     public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -53,7 +54,7 @@ final class k extends vf {
             L1: {
               bi.c(param4 - -param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, 10197915);
               if (param1) {
-                if (((an) (Object) param3).field_x) {
+                if (((an) ((Object) param3)).field_x) {
                   stackOut_4_0 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
@@ -117,42 +118,42 @@ final class k extends vf {
               }
             }
             L6: {
-              var10 = ((k) this).field_s[var8];
+              var10 = this.field_s[var8];
               var11 = (-var10.field_j + param3.field_i) / 2 + (param4 + param3.field_k);
               var12 = (-var10.field_d + param3.field_n) / 2 + (param2 - -param3.field_j);
               var13 = param3.field_k + (param4 + param3.field_i / 2);
               if (param0 == 16777215) {
                 break L6;
               } else {
-                int discarded$1 = k.a(-100, -115);
+                discarded$1 = k.a(-100, -115);
                 break L6;
               }
             }
             var10.a(var11, var12);
-            ((k) this).field_m.a(((k) this).b(12307, param3), var13, param2, var9, -1);
+            this.field_m.a(this.b(12307, param3), var13, param2, var9, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var6;
+            stackOut_25_0 = (RuntimeException) (var6);
             stackOut_25_1 = new StringBuilder().append("k.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -160,7 +161,7 @@ final class k extends vf {
               break L7;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param4 + ')');
         }
     }
 
@@ -178,7 +179,7 @@ final class k extends vf {
           if (param0 == 51) {
             tf.field_c.field_e = 2;
             tf.field_c.field_h = tf.field_c.field_h + 1;
-            if (tf.field_c.field_h < 2) {
+            if ((tf.field_c.field_h ^ -1) > -3) {
               L0: {
                 if (2 > tf.field_c.field_h) {
                   break L0;
@@ -190,7 +191,7 @@ final class k extends vf {
                   }
                 }
               }
-              if (tf.field_c.field_h < 4) {
+              if (-5 < (tf.field_c.field_h ^ -1)) {
                 return -1;
               } else {
                 return 1;
@@ -210,7 +211,7 @@ final class k extends vf {
                     }
                   }
                 }
-                if (tf.field_c.field_h < 4) {
+                if (-5 < (tf.field_c.field_h ^ -1)) {
                   return -1;
                 } else {
                   return 1;
@@ -218,10 +219,10 @@ final class k extends vf {
               }
             }
           } else {
-            if (param0 == 50) {
+            if (-51 == (param0 ^ -1)) {
               tf.field_c.field_e = 5;
               tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h < 2) {
+              if ((tf.field_c.field_h ^ -1) > -3) {
                 L2: {
                   if (2 > tf.field_c.field_h) {
                     break L2;
@@ -233,7 +234,7 @@ final class k extends vf {
                     }
                   }
                 }
-                if (tf.field_c.field_h < 4) {
+                if (-5 < (tf.field_c.field_h ^ -1)) {
                   return -1;
                 } else {
                   return 1;
@@ -253,7 +254,7 @@ final class k extends vf {
                       }
                     }
                   }
-                  if (tf.field_c.field_h < 4) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -263,7 +264,7 @@ final class k extends vf {
             } else {
               tf.field_c.field_e = 1;
               tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h < 2) {
+              if ((tf.field_c.field_h ^ -1) > -3) {
                 L4: {
                   if (2 > tf.field_c.field_h) {
                     break L4;
@@ -275,7 +276,7 @@ final class k extends vf {
                     }
                   }
                 }
-                if (tf.field_c.field_h < 4) {
+                if (-5 < (tf.field_c.field_h ^ -1)) {
                   return -1;
                 } else {
                   return 1;
@@ -295,7 +296,7 @@ final class k extends vf {
                       }
                     }
                   }
-                  if (tf.field_c.field_h < 4) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -305,7 +306,7 @@ final class k extends vf {
             }
           }
         } else {
-          field_r = null;
+          field_r = (String) null;
           sb.field_a = null;
           jd.field_a = 0;
           var2 = bd.field_j;
@@ -314,13 +315,13 @@ final class k extends vf {
           if (param0 == 51) {
             tf.field_c.field_e = 2;
             tf.field_c.field_h = tf.field_c.field_h + 1;
-            if (tf.field_c.field_h >= 2) {
+            if ((tf.field_c.field_h ^ -1) <= -3) {
               if (param0 == 51) {
                 return 2;
               } else {
                 if (2 <= tf.field_c.field_h) {
                   if (50 != param0) {
-                    if (tf.field_c.field_h < 4) {
+                    if (-5 < (tf.field_c.field_h ^ -1)) {
                       return -1;
                     } else {
                       return 1;
@@ -329,7 +330,7 @@ final class k extends vf {
                     return 5;
                   }
                 } else {
-                  if (tf.field_c.field_h < 4) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -341,43 +342,43 @@ final class k extends vf {
                 if (50 == param0) {
                   return 5;
                 } else {
-                  if (tf.field_c.field_h < 4) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
                   }
                 }
               } else {
-                if (tf.field_c.field_h < 4) {
-                  return -1;
-                } else {
+                if (-5 >= (tf.field_c.field_h ^ -1)) {
                   return 1;
+                } else {
+                  return -1;
                 }
               }
             }
           } else {
-            if (param0 == 50) {
+            if (-51 == (param0 ^ -1)) {
               tf.field_c.field_e = 5;
               tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h >= 2) {
+              if ((tf.field_c.field_h ^ -1) <= -3) {
                 if (param0 == 51) {
                   return 2;
                 } else {
                   if (2 <= tf.field_c.field_h) {
                     if (50 != param0) {
-                      if (tf.field_c.field_h < 4) {
-                        return -1;
-                      } else {
+                      if (-5 >= (tf.field_c.field_h ^ -1)) {
                         return 1;
+                      } else {
+                        return -1;
                       }
                     } else {
                       return 5;
                     }
                   } else {
-                    if (tf.field_c.field_h < 4) {
-                      return -1;
-                    } else {
+                    if (-5 >= (tf.field_c.field_h ^ -1)) {
                       return 1;
+                    } else {
+                      return -1;
                     }
                   }
                 }
@@ -393,34 +394,34 @@ final class k extends vf {
                     }
                   }
                 }
-                if (tf.field_c.field_h < 4) {
-                  return -1;
-                } else {
+                if (-5 >= (tf.field_c.field_h ^ -1)) {
                   return 1;
+                } else {
+                  return -1;
                 }
               }
             } else {
               tf.field_c.field_e = 1;
               tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h >= 2) {
+              if ((tf.field_c.field_h ^ -1) <= -3) {
                 if (param0 == 51) {
                   return 2;
                 } else {
                   if (2 <= tf.field_c.field_h) {
                     if (50 != param0) {
-                      if (tf.field_c.field_h < 4) {
-                        return -1;
-                      } else {
+                      if (-5 >= (tf.field_c.field_h ^ -1)) {
                         return 1;
+                      } else {
+                        return -1;
                       }
                     } else {
                       return 5;
                     }
                   } else {
-                    if (tf.field_c.field_h < 4) {
-                      return -1;
-                    } else {
+                    if (-5 >= (tf.field_c.field_h ^ -1)) {
                       return 1;
+                    } else {
+                      return -1;
                     }
                   }
                 }
@@ -436,10 +437,10 @@ final class k extends vf {
                     }
                   }
                 }
-                if (tf.field_c.field_h < 4) {
-                  return -1;
-                } else {
+                if (-5 >= (tf.field_c.field_h ^ -1)) {
                   return 1;
+                } else {
+                  return -1;
                 }
               }
             }
@@ -449,18 +450,14 @@ final class k extends vf {
 
     k(v[] param0) {
         try {
-            ((k) this).field_s = param0;
-            ((k) this).field_m = ia.field_e;
+            this.field_s = param0;
+            this.field_m = ia.field_e;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Friends can be added in multiplayer<nbsp>games";
     }
 }

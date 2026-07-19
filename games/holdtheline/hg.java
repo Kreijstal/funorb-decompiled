@@ -18,6 +18,11 @@ final class hg extends rm {
         field_N = null;
         field_M = null;
         field_Q = null;
+        if (param0) {
+            field_Q = (uf) null;
+            field_H = null;
+            return;
+        }
         field_H = null;
     }
 
@@ -50,9 +55,9 @@ final class hg extends rm {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               L1: {
-                var8_int = param5 - (param0 + (((hg) this).field_k + ((hg) this).field_G));
-                var9 = param1 + -((hg) this).field_o + (-param2 + -((hg) this).field_J);
-                if (((hg) this).field_P * ((hg) this).field_P <= var9 * var9 + var8_int * var8_int) {
+                var8_int = param5 - (param0 + (this.field_k + this.field_G));
+                var9 = param1 + -this.field_o + (-param2 + -this.field_J);
+                if (this.field_P * this.field_P <= var9 * var9 + var8_int * var8_int) {
                   break L1;
                 } else {
                   L2: {
@@ -61,27 +66,27 @@ final class hg extends rm {
                       if (var10 <= 0.0) {
                         break L2;
                       } else {
-                        var10 = var10 + 3.141592653589793 / (double)((hg) this).field_O;
+                        var10 = var10 + 3.141592653589793 / (double)this.field_O;
                         break L2;
                       }
                     } else {
-                      var10 = var10 - 3.141592653589793 / (double)((hg) this).field_O;
+                      var10 = var10 - 3.141592653589793 / (double)this.field_O;
                       break L2;
                     }
                   }
-                  ((hg) this).field_K = (int)((double)((hg) this).field_O * var10 / 6.283185307179586);
+                  this.field_K = (int)((double)this.field_O * var10 / 6.283185307179586);
                   L3: while (true) {
-                    if (((hg) this).field_O > ((hg) this).field_K) {
+                    if (this.field_O > this.field_K) {
                       L4: while (true) {
-                        if (((hg) this).field_K >= 0) {
+                        if (this.field_K >= 0) {
                           break L1;
                         } else {
-                          ((hg) this).field_K = ((hg) this).field_K + ((hg) this).field_O;
+                          this.field_K = this.field_K + this.field_O;
                           continue L4;
                         }
                       }
                     } else {
-                      ((hg) this).field_K = ((hg) this).field_K - ((hg) this).field_O;
+                      this.field_K = this.field_K - this.field_O;
                       continue L3;
                     }
                   }
@@ -98,23 +103,23 @@ final class hg extends rm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var8;
+            stackOut_15_0 = (RuntimeException) (var8);
             stackOut_15_1 = new StringBuilder().append("hg.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -122,7 +127,7 @@ final class hg extends rm {
               break L5;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_14_0 != 0;
     }
@@ -132,14 +137,14 @@ final class hg extends rm {
     }
 
     final static int a(byte param0) {
+        if (param0 <= 36) {
+            field_H = (ng) null;
+            return -mk.field_d + vf.field_t;
+        }
         return -mk.field_d + vf.field_t;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "Checking";
     }
 }

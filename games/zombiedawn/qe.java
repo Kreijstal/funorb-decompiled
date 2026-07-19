@@ -10,12 +10,16 @@ final class qe {
     }
 
     final static Object a(Object[] param0, String param1, int param2, java.applet.Applet param3) throws Throwable {
-        return netscape.javascript.JSObject.getWindow(param3).call(param1, param0);
+        if (param2 != 29674) {
+          return ((Object[]) (((Object[]) (param0[19]))[4]))[0];
+        } else {
+          return netscape.javascript.JSObject.getWindow(param3).call(param1, param0);
+        }
     }
 
     final static Object a(java.applet.Applet param0, String param1, int param2) throws Throwable {
         if (param2 >= -81) {
-            return null;
+            return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param0).call(param1, (Object[]) null);
     }

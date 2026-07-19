@@ -7,7 +7,7 @@ public class IDirect3DSwapChain extends jaclib.peer.IUnknown {
     private jaclib.peer.tqb a;
 
     public final jagdx.IDirect3DSurface a(int param0, int param1) {
-        jagdx.IDirect3DSurface var3 = new jagdx.IDirect3DSurface(((jagdx.IDirect3DSwapChain) this).a);
+        jagdx.IDirect3DSurface var3 = new jagdx.IDirect3DSurface(this.a);
         int var4 = this._GetBackBuffer(param0, param1, var3);
         if (!(!jagdx.hea.a(var4, (byte) -116))) {
             throw new jagdx.nba(String.valueOf(var4));
@@ -19,7 +19,7 @@ public class IDirect3DSwapChain extends jaclib.peer.IUnknown {
 
     IDirect3DSwapChain(jaclib.peer.tqb param0) {
         super(param0);
-        ((jagdx.IDirect3DSwapChain) this).a = param0;
+        this.a = param0;
     }
 
     public final native int Present(int param0);

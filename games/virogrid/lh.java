@@ -13,31 +13,52 @@ final class lh {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null != pm.field_l) {
-          var1 = (Object) (Object) pm.field_l;
+          var1 = pm.field_l;
           synchronized (var1) {
             L0: {
               pm.field_l = null;
               break L0;
             }
           }
+          L1: {
+            if (param0) {
+              break L1;
+            } else {
+              lh.b(false);
+              break L1;
+            }
+          }
           return;
         } else {
+          L2: {
+            if (param0) {
+              break L2;
+            } else {
+              lh.b(false);
+              break L2;
+            }
+          }
           return;
         }
     }
 
     public static void b(boolean param0) {
         field_b = null;
-        field_d = null;
-        field_c = null;
-        field_a = null;
+        if (param0) {
+          lh.a(true);
+          field_d = null;
+          field_c = null;
+          field_a = null;
+          return;
+        } else {
+          field_d = null;
+          field_c = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[12];
         field_b = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_d = "Main Menu";

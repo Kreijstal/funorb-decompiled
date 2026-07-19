@@ -24,6 +24,14 @@ final class qc {
     }
 
     final static void b(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -36,34 +44,34 @@ final class qc {
           L0: {
             var5 = vf.field_b;
             var1 = var5;
-            var2 = 0;
+            var2 = param0;
             var3 = var5.length;
             L1: while (true) {
               if (var3 <= var2) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
                 continue L1;
@@ -73,14 +81,14 @@ final class qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1_ref, "qc.C(" + 0 + ')');
+          throw oj.a((Throwable) ((Object) var1_ref), "qc.C(" + param0 + ')');
         }
     }
 
     final static void a(int param0) {
         cj.a((byte) 118, gi.b(param0 ^ 12476));
         if (param0 != 0) {
-            field_i = null;
+            field_i = (ne) null;
         }
     }
 
@@ -89,11 +97,22 @@ final class qc {
         field_d = null;
         field_g = null;
         field_c = null;
-        field_h = null;
-        field_b = null;
-        field_e = null;
-        field_i = null;
-        field_f = null;
+        if (param0 != 26) {
+          qc.a((byte) 37, 124, -19, 37, -63);
+          field_h = null;
+          field_b = null;
+          field_e = null;
+          field_i = null;
+          field_f = null;
+          return;
+        } else {
+          field_h = null;
+          field_b = null;
+          field_e = null;
+          field_i = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static byte[] a(byte[] param0, int param1, byte param2, int param3) {
@@ -157,7 +176,7 @@ final class qc {
             var5.a((long)(param1 * 8), 19668, var4);
             var6 = new byte[64];
             var5.a(var6, -6, 0);
-            stackOut_8_0 = (byte[]) var6;
+            stackOut_8_0 = (byte[]) (var6);
             stackIn_9_0 = stackOut_8_0;
             break L0;
           }
@@ -165,23 +184,23 @@ final class qc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4_ref;
+            stackOut_10_0 = (RuntimeException) (var4_ref);
             stackOut_10_1 = new StringBuilder().append("qc.D(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -189,16 +208,12 @@ final class qc {
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new cf();
         field_g = new int[]{0, 0};
         field_i = new ne();

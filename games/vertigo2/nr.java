@@ -13,13 +13,14 @@ final class nr extends tb implements ef {
 
     final static void a(boolean param0, db param1, int param2, jj param3, int param4, java.awt.Component param5) {
         try {
-            jn.a(22050, 1024, param5, 22050, true, 18246, param1, param3);
+            jn.a(param2, param4, param5, param2, param0, param4 + 17222, param1, param3);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "nr.K(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + 22050 + ',' + (param3 != null ? "{...}" : "null") + ',' + 1024 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "nr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean d(int param0, int param1) {
+        int[] discarded$14 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -28,8 +29,8 @@ final class nr extends tb implements ef {
         int stackOut_2_0 = 0;
         if (param0 > -114) {
           L0: {
-            int[] discarded$14 = ((nr) this).a(0.3591744601726532f, 110, 81);
-            if (((nr) this).e(param1, -1).field_a) {
+            discarded$14 = this.a(0.3591744601726532f, 110, 81);
+            if (this.e(param1, -1).field_a) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -42,7 +43,7 @@ final class nr extends tb implements ef {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((nr) this).e(param1, -1).field_a) {
+            if (this.e(param1, -1).field_a) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -58,43 +59,47 @@ final class nr extends tb implements ef {
 
     public final int b(int param0, int param1) {
         if (param0 != 212) {
-          ((nr) this).field_m = null;
-          return ((nr) this).e(param1, -1).field_h;
+          this.field_m = (r) null;
+          return this.e(param1, -1).field_h;
         } else {
-          return ((nr) this).e(param1, -1).field_h;
+          return this.e(param1, -1).field_h;
         }
     }
 
     final static void a(int param0, int param1, vi param2) {
-        mc.field_i.a((li) (Object) param2, false);
+        mc.field_i.a(param2, false);
+        if (param1 != -22754) {
+            return;
+        }
         try {
-            aj.a(3, 41, param2);
+            aj.a(param0, param1 + 22795, param2);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "nr.N(" + 3 + ',' + -22754 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "nr.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final ta a(int param0, byte param1) {
+        int[] discarded$1 = null;
         ta var3 = null;
         byte[] var4 = null;
-        var3 = (ta) (Object) ((nr) this).field_n.a((long)param0, false);
+        var3 = (ta) ((Object) this.field_n.a((long)param0, false));
         if (var3 == null) {
-          var4 = ((nr) this).field_j.a(param0, 0, (byte) -126);
+          var4 = this.field_j.a(param0, 0, (byte) -126);
           if (param1 >= 40) {
             if (var4 == null) {
               return null;
             } else {
               var3 = new ta(new ed(var4));
-              ((nr) this).field_n.a(-1, (gp) (Object) var3, (long)param0);
+              this.field_n.a(-1, var3, (long)param0);
               return var3;
             }
           } else {
-            int[] discarded$1 = ((nr) this).a(1.1444469690322876f, -2, -78);
+            discarded$1 = this.a(1.1444469690322876f, -2, -78);
             if (var4 == null) {
               return null;
             } else {
               var3 = new ta(new ed(var4));
-              ((nr) this).field_n.a(-1, (gp) (Object) var3, (long)param0);
+              this.field_n.a(-1, var3, (long)param0);
               return var3;
             }
           }
@@ -198,9 +203,9 @@ final class nr extends tb implements ef {
           } else {
             L0: {
               L1: {
-                stackOut_11_0 = (ta) var4;
+                stackOut_11_0 = (ta) (var4);
                 stackOut_11_1 = this;
-                stackOut_11_2 = ((nr) this).field_m;
+                stackOut_11_2 = this.field_m;
                 stackOut_11_3 = param0;
                 stackIn_14_0 = stackOut_11_0;
                 stackIn_14_1 = stackOut_11_1;
@@ -210,12 +215,12 @@ final class nr extends tb implements ef {
                 stackIn_12_1 = stackOut_11_1;
                 stackIn_12_2 = stackOut_11_2;
                 stackIn_12_3 = stackOut_11_3;
-                if (((nr) this).field_k) {
+                if (this.field_k) {
                   break L1;
                 } else {
-                  stackOut_12_0 = (ta) (Object) stackIn_12_0;
+                  stackOut_12_0 = (ta) ((Object) stackIn_12_0);
                   stackOut_12_1 = this;
-                  stackOut_12_2 = (r) (Object) stackIn_12_2;
+                  stackOut_12_2 = (r) ((Object) stackIn_12_2);
                   stackOut_12_3 = stackIn_12_3;
                   stackIn_15_0 = stackOut_12_0;
                   stackIn_15_1 = stackOut_12_1;
@@ -225,10 +230,10 @@ final class nr extends tb implements ef {
                   stackIn_13_1 = stackOut_12_1;
                   stackIn_13_2 = stackOut_12_2;
                   stackIn_13_3 = stackOut_12_3;
-                  if (!((nr) this).e(param1, -1).field_c) {
-                    stackOut_15_0 = (ta) (Object) stackIn_15_0;
+                  if (!this.e(param1, -1).field_c) {
+                    stackOut_15_0 = (ta) ((Object) stackIn_15_0);
                     stackOut_15_1 = this;
-                    stackOut_15_2 = (r) (Object) stackIn_15_2;
+                    stackOut_15_2 = (r) ((Object) stackIn_15_2);
                     stackOut_15_3 = stackIn_15_3;
                     stackOut_15_4 = 0;
                     stackIn_16_0 = stackOut_15_0;
@@ -238,9 +243,9 @@ final class nr extends tb implements ef {
                     stackIn_16_4 = stackOut_15_4;
                     break L0;
                   } else {
-                    stackOut_13_0 = (ta) (Object) stackIn_13_0;
+                    stackOut_13_0 = (ta) ((Object) stackIn_13_0);
                     stackOut_13_1 = this;
-                    stackOut_13_2 = (r) (Object) stackIn_13_2;
+                    stackOut_13_2 = (r) ((Object) stackIn_13_2);
                     stackOut_13_3 = stackIn_13_3;
                     stackIn_14_0 = stackOut_13_0;
                     stackIn_14_1 = stackOut_13_1;
@@ -250,9 +255,9 @@ final class nr extends tb implements ef {
                   }
                 }
               }
-              stackOut_14_0 = (ta) (Object) stackIn_14_0;
+              stackOut_14_0 = (ta) ((Object) stackIn_14_0);
               stackOut_14_1 = this;
-              stackOut_14_2 = (r) (Object) stackIn_14_2;
+              stackOut_14_2 = (r) ((Object) stackIn_14_2);
               stackOut_14_3 = stackIn_14_3;
               stackOut_14_4 = 1;
               stackIn_16_0 = stackOut_14_0;
@@ -262,19 +267,19 @@ final class nr extends tb implements ef {
               stackIn_16_4 = stackOut_14_4;
               break L0;
             }
-            return ((ta) (Object) stackIn_16_0).a((ka) this, stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0);
+            return ((ta) (Object) stackIn_16_0).a((ka) (this), stackIn_16_2, stackIn_16_3, stackIn_16_4 != 0);
           }
         } else {
-          field_p = null;
+          field_p = (nj) null;
           var4 = this.a(param1, (byte) 79);
           if (var4 == null) {
             return null;
           } else {
             L2: {
               L3: {
-                stackOut_2_0 = (ta) var4;
+                stackOut_2_0 = (ta) (var4);
                 stackOut_2_1 = this;
-                stackOut_2_2 = ((nr) this).field_m;
+                stackOut_2_2 = this.field_m;
                 stackOut_2_3 = param0;
                 stackIn_5_0 = stackOut_2_0;
                 stackIn_5_1 = stackOut_2_1;
@@ -284,12 +289,12 @@ final class nr extends tb implements ef {
                 stackIn_3_1 = stackOut_2_1;
                 stackIn_3_2 = stackOut_2_2;
                 stackIn_3_3 = stackOut_2_3;
-                if (((nr) this).field_k) {
+                if (this.field_k) {
                   break L3;
                 } else {
-                  stackOut_3_0 = (ta) (Object) stackIn_3_0;
+                  stackOut_3_0 = (ta) ((Object) stackIn_3_0);
                   stackOut_3_1 = this;
-                  stackOut_3_2 = (r) (Object) stackIn_3_2;
+                  stackOut_3_2 = (r) ((Object) stackIn_3_2);
                   stackOut_3_3 = stackIn_3_3;
                   stackIn_6_0 = stackOut_3_0;
                   stackIn_6_1 = stackOut_3_1;
@@ -299,10 +304,10 @@ final class nr extends tb implements ef {
                   stackIn_4_1 = stackOut_3_1;
                   stackIn_4_2 = stackOut_3_2;
                   stackIn_4_3 = stackOut_3_3;
-                  if (!((nr) this).e(param1, -1).field_c) {
-                    stackOut_6_0 = (ta) (Object) stackIn_6_0;
+                  if (!this.e(param1, -1).field_c) {
+                    stackOut_6_0 = (ta) ((Object) stackIn_6_0);
                     stackOut_6_1 = this;
-                    stackOut_6_2 = (r) (Object) stackIn_6_2;
+                    stackOut_6_2 = (r) ((Object) stackIn_6_2);
                     stackOut_6_3 = stackIn_6_3;
                     stackOut_6_4 = 0;
                     stackIn_7_0 = stackOut_6_0;
@@ -312,9 +317,9 @@ final class nr extends tb implements ef {
                     stackIn_7_4 = stackOut_6_4;
                     break L2;
                   } else {
-                    stackOut_4_0 = (ta) (Object) stackIn_4_0;
+                    stackOut_4_0 = (ta) ((Object) stackIn_4_0);
                     stackOut_4_1 = this;
-                    stackOut_4_2 = (r) (Object) stackIn_4_2;
+                    stackOut_4_2 = (r) ((Object) stackIn_4_2);
                     stackOut_4_3 = stackIn_4_3;
                     stackIn_5_0 = stackOut_4_0;
                     stackIn_5_1 = stackOut_4_1;
@@ -324,9 +329,9 @@ final class nr extends tb implements ef {
                   }
                 }
               }
-              stackOut_5_0 = (ta) (Object) stackIn_5_0;
+              stackOut_5_0 = (ta) ((Object) stackIn_5_0);
               stackOut_5_1 = this;
-              stackOut_5_2 = (r) (Object) stackIn_5_2;
+              stackOut_5_2 = (r) ((Object) stackIn_5_2);
               stackOut_5_3 = stackIn_5_3;
               stackOut_5_4 = 1;
               stackIn_7_0 = stackOut_5_0;
@@ -336,7 +341,7 @@ final class nr extends tb implements ef {
               stackIn_7_4 = stackOut_5_4;
               break L2;
             }
-            return ((ta) (Object) stackIn_7_0).a((ka) this, stackIn_7_2, stackIn_7_3, stackIn_7_4 != 0);
+            return ((ta) (Object) stackIn_7_0).a((ka) (this), stackIn_7_2, stackIn_7_3, stackIn_7_4 != 0);
           }
         }
     }
@@ -345,13 +350,17 @@ final class nr extends tb implements ef {
         field_o = null;
         field_q = null;
         field_p = null;
+        if (param0 <= 113) {
+            nr.a((byte) 16, -123, 67, -3);
+        }
     }
 
     public final boolean c(int param0, int param1) {
-        if (!((nr) this).field_k) {
-          if (!((nr) this).e(param1, -1).field_c) {
+        ta discarded$2 = null;
+        if (!this.field_k) {
+          if (!this.e(param1, -1).field_c) {
             if (param0 != 1) {
-              ta discarded$2 = this.a(-80, (byte) 53);
+              discarded$2 = this.a(-80, (byte) 53);
               return false;
             } else {
               return false;
@@ -374,7 +383,7 @@ final class nr extends tb implements ef {
         Object stackOut_2_0 = null;
         if (param0 != 21922) {
           L0: {
-            ((nr) this).field_l = -110;
+            this.field_l = -110;
             var3 = this.a(param1, (byte) 92);
             if (var3 != null) {
               stackOut_7_0 = var3.field_v;
@@ -382,7 +391,7 @@ final class nr extends tb implements ef {
               break L0;
             } else {
               stackOut_6_0 = null;
-              stackIn_8_0 = (he) (Object) stackOut_6_0;
+              stackIn_8_0 = (he) ((Object) stackOut_6_0);
               break L0;
             }
           }
@@ -396,7 +405,7 @@ final class nr extends tb implements ef {
               break L1;
             } else {
               stackOut_2_0 = null;
-              stackIn_4_0 = (he) (Object) stackOut_2_0;
+              stackIn_4_0 = (he) ((Object) stackOut_2_0);
               break L1;
             }
           }
@@ -408,142 +417,187 @@ final class nr extends tb implements ef {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_5_0 = 0;
+        int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
-            L1: {
-              var2_int = param0.h(-11);
-              if (var2_int != 1) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
+            if (param1 >= 64) {
+              L1: {
+                var2_int = param0.h(-11);
+                if (-2 != (var2_int ^ -1)) {
+                  stackOut_5_0 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L1;
+                }
               }
+              var3 = stackIn_6_0;
+              stackOut_6_0 = var3;
+              stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            var3 = stackIn_5_0;
-            stackOut_5_0 = var3;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("nr.I(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_8_0 = (RuntimeException) (var2);
+            stackOut_8_1 = new StringBuilder().append("nr.I(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 67 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
-        return stackIn_6_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     public final int a(int param0, int param1) {
         if (param1 != 65535) {
             return 91;
         }
-        return ((nr) this).e(param0, -1).field_f & 65535;
+        return this.e(param0, -1).field_f & 65535;
     }
 
     final static er[] a(int param0, int param1, int param2, int param3, int param4) {
-        er[] var6 = new er[9];
-        er[] var5 = var6;
-        er dupTemp$0 = ed.a(param3, 1, false);
-        var6[6] = dupTemp$0;
-        var5[3] = dupTemp$0;
-        var5[2] = dupTemp$0;
-        var5[1] = dupTemp$0;
-        var5[0] = dupTemp$0;
-        er dupTemp$1 = ed.a(param2, 1, false);
-        var6[8] = dupTemp$1;
-        var5[7] = dupTemp$1;
-        var5[5] = dupTemp$1;
-        if (!(param0 == 0)) {
+        er dupTemp$4 = null;
+        er dupTemp$5 = null;
+        er[] var5 = null;
+        er[] var6 = null;
+        L0: {
+          var6 = new er[9];
+          var5 = var6;
+          dupTemp$4 = ed.a(param3, param1, false);
+          var6[6] = dupTemp$4;
+          var5[3] = dupTemp$4;
+          var5[2] = dupTemp$4;
+          var5[1] = dupTemp$4;
+          var5[0] = dupTemp$4;
+          dupTemp$5 = ed.a(param2, param1, false);
+          var6[8] = dupTemp$5;
+          var5[7] = dupTemp$5;
+          var5[5] = dupTemp$5;
+          if (-1 != (param0 ^ -1)) {
             var6[4] = ed.a(param0, 64, false);
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        return var5;
+        if (param4 > -24) {
+          field_p = (nj) null;
+          return var5;
+        } else {
+          return var5;
+        }
     }
 
     nr(r param0, r param1, r param2, int param3, boolean param4) {
         super(param1, param0, param2);
-        ((nr) this).field_l = 50;
-        ((nr) this).field_k = false;
+        this.field_l = 50;
+        this.field_k = false;
         try {
-            ((nr) this).field_k = param4 ? true : false;
-            ((nr) this).field_m = param2;
-            ((nr) this).field_j = param0;
-            ((nr) this).field_l = param3;
-            ((nr) this).field_n = new la(((nr) this).field_l);
+            this.field_k = param4 ? true : false;
+            this.field_m = param2;
+            this.field_j = param0;
+            this.field_l = param3;
+            this.field_n = new la(this.field_l);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
+        er[] discarded$3 = null;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int var4 = 0;
         iq.field_x.field_u = 0;
         iq.field_x.f(12, 105);
+        iq.field_x.e(j.field_r.nextInt(), param0 + -115);
         iq.field_x.e(j.field_r.nextInt(), 0);
-        iq.field_x.e(j.field_r.nextInt(), 0);
-        iq.field_x.f(param2, 101);
-        iq.field_x.f(param3, -67);
-        iq.field_x.d(param1, -1783);
-        iq.field_x.a(lp.field_E, jm.field_H, 9157);
-        uh.field_Wb.j(18, 120);
-        int fieldTemp$0 = uh.field_Wb.field_u + 1;
-        uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-        int var4 = fieldTemp$0;
-        uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
-        uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
+        if (param0 != 115) {
+          discarded$3 = nr.a(-111, -84, -8, -110, 72);
+          iq.field_x.f(param2, 101);
+          iq.field_x.f(param3, -67);
+          iq.field_x.d(param1, param0 ^ -1670);
+          iq.field_x.a(lp.field_E, jm.field_H, 9157);
+          uh.field_Wb.j(18, param0 + 5);
+          fieldTemp$4 = uh.field_Wb.field_u + 1;
+          uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
+          var4 = fieldTemp$4;
+          uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
+          uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
+          return;
+        } else {
+          iq.field_x.f(param2, 101);
+          iq.field_x.f(param3, -67);
+          iq.field_x.d(param1, param0 ^ -1670);
+          iq.field_x.a(lp.field_E, jm.field_H, 9157);
+          uh.field_Wb.j(18, param0 + 5);
+          fieldTemp$5 = uh.field_Wb.field_u + 1;
+          uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
+          var4 = fieldTemp$5;
+          uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
+          uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_o = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
+        field_o = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
     }
 }

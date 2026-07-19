@@ -9,17 +9,17 @@ final class u extends ud {
     byte[] field_i;
 
     u(int param0, byte[] param1, int param2, int param3) {
-        ((u) this).field_j = param0;
-        ((u) this).field_i = param1;
-        ((u) this).field_k = param2;
-        ((u) this).field_g = param3;
+        this.field_j = param0;
+        this.field_i = param1;
+        this.field_k = param2;
+        this.field_g = param3;
     }
 
     u(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((u) this).field_j = param0;
-        ((u) this).field_i = param1;
-        ((u) this).field_k = param2;
-        ((u) this).field_g = param3;
-        ((u) this).field_h = param4 ? true : false;
+        this.field_j = param0;
+        this.field_i = param1;
+        this.field_k = param2;
+        this.field_g = param3;
+        this.field_h = param4 ? true : false;
     }
 }

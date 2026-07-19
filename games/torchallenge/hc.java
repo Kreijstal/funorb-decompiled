@@ -14,9 +14,9 @@ final class hc extends ng {
     hc(String param0, gg param1, boolean param2) {
         this(param0, param1);
         try {
-            ((hc) this).field_D = param2 ? true : false;
+            this.field_D = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class hc extends ng {
         if (param0 < 20) {
             hc.d((byte) -55);
         }
-        if (!(var9 > 0)) {
+        if (!(-1 > (var9 ^ -1))) {
             return;
         }
         if (!(var8 != null)) {
@@ -44,49 +44,57 @@ final class hc extends ng {
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            RuntimeException stackIn_17_0 = null;
-            StringBuilder stackIn_17_1 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            RuntimeException stackIn_21_0 = null;
+            StringBuilder stackIn_21_1 = null;
+            String stackIn_21_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_16_0 = null;
-            StringBuilder stackOut_16_1 = null;
             RuntimeException stackOut_18_0 = null;
             StringBuilder stackOut_18_1 = null;
-            String stackOut_18_2 = null;
-            RuntimeException stackOut_17_0 = null;
-            StringBuilder stackOut_17_1 = null;
-            String stackOut_17_2 = null;
+            RuntimeException stackOut_20_0 = null;
+            StringBuilder stackOut_20_1 = null;
+            String stackOut_20_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
             var5 = TorChallenge.field_F ? 1 : 0;
             try {
               L0: {
                 L1: {
+                  if (param1 == -13) {
+                    break L1;
+                  } else {
+                    field_S = 50;
+                    break L1;
+                  }
+                }
+                L2: {
                   var6 = new byte[24];
                   var2 = var6;
                   if (null != cf.field_d) {
                     try {
-                      L2: {
+                      L3: {
                         cf.field_d.a(0L, 0);
                         cf.field_d.a((byte) -128, var6);
                         var3_int = 0;
-                        L3: while (true) {
-                          L4: {
-                            if (var3_int >= 24) {
-                              break L4;
+                        L4: while (true) {
+                          L5: {
+                            if ((var3_int ^ -1) <= -25) {
+                              break L5;
                             } else {
                               if (var2[var3_int] == 0) {
                                 var3_int++;
-                                continue L3;
+                                continue L4;
                               } else {
-                                break L4;
+                                break L5;
                               }
                             }
                           }
                           if (24 > var3_int) {
-                            break L2;
+                            break L3;
                           } else {
                             throw new IOException();
                           }
@@ -94,58 +102,58 @@ final class hc extends ng {
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
+                      L6: {
                         var3 = (Exception) (Object) decompiledCaughtException;
                         var4 = 0;
-                        L6: while (true) {
+                        L7: while (true) {
                           if (24 <= var4) {
-                            break L5;
+                            break L6;
                           } else {
-                            var2[var4] = (byte) -1;
+                            var2[var4] = (byte)-1;
                             var4++;
-                            continue L6;
+                            continue L7;
                           }
                         }
                       }
                     }
                     param0.a(24, 0, var2, -16384);
-                    break L1;
+                    break L2;
                   } else {
                     param0.a(24, 0, var2, -16384);
-                    break L1;
+                    break L2;
                   }
                 }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L7: {
+              L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_16_0 = (RuntimeException) var2_ref;
-                stackOut_16_1 = new StringBuilder().append("hc.AA(");
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_18_1 = stackOut_16_1;
-                stackIn_17_0 = stackOut_16_0;
-                stackIn_17_1 = stackOut_16_1;
+                stackOut_18_0 = (RuntimeException) (var2_ref);
+                stackOut_18_1 = new StringBuilder().append("hc.AA(");
+                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_1 = stackOut_18_1;
+                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_1 = stackOut_18_1;
                 if (param0 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-                  stackOut_18_2 = "null";
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  stackIn_19_2 = stackOut_18_2;
-                  break L7;
+                  stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+                  stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+                  stackOut_20_2 = "null";
+                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_1 = stackOut_20_1;
+                  stackIn_21_2 = stackOut_20_2;
+                  break L8;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-                  stackOut_17_2 = "{...}";
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  stackIn_19_2 = stackOut_17_2;
-                  break L7;
+                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+                  stackOut_19_2 = "{...}";
+                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_1 = stackOut_19_1;
+                  stackIn_21_2 = stackOut_19_2;
+                  break L8;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -13 + ')');
+              throw oj.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -155,21 +163,31 @@ final class hc extends ng {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ka param8) {
-        dd.field_u = 1500;
+        dd.field_u = param5;
         vk.field_d = param8;
-        rl.field_f = 30;
-        pi.field_b = 80;
+        rl.field_f = param3;
+        pi.field_b = param6;
+        if (param1 < 86) {
+            return;
+        }
         try {
-            si.field_J = 10;
-            fd.field_f = 80;
-            vk.field_k = 10;
-            bh.field_t = 10;
+            si.field_J = param0;
+            fd.field_f = param4;
+            vk.field_k = param7;
+            bh.field_t = param2;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.EA(" + 10 + ',' + 101 + ',' + 10 + ',' + 30 + ',' + 80 + ',' + 1500 + ',' + 80 + ',' + 10 + ',' + (param8 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "hc.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void d(byte param0) {
+        boolean discarded$7 = false;
+        String[][] dupTemp$8 = null;
+        long[][] dupTemp$9 = null;
+        int[][] dupTemp$10 = null;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -199,6 +217,7 @@ final class hc extends ng {
         int var25 = 0;
         int var26 = 0;
         pa var28 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var26 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -209,16 +228,16 @@ final class hc extends ng {
               if (param0 == -117) {
                 break L1;
               } else {
-                boolean discarded$7 = hc.c((byte) -46);
+                discarded$7 = hc.c((byte) -46);
                 break L1;
               }
             }
             L2: {
               if (var2 != 0) {
-                if (var2 == 1) {
+                if ((var2 ^ -1) == -2) {
                   var3 = var28.c(false);
                   var4 = var28.k(param0 ^ 95);
-                  var6 = (ji) (Object) wf.field_g.c((byte) 1);
+                  var6 = (ji) ((Object) wf.field_g.c((byte) 1));
                   L3: while (true) {
                     L4: {
                       if (var6 == null) {
@@ -227,7 +246,7 @@ final class hc extends ng {
                         if (var6.field_l == var3) {
                           break L4;
                         } else {
-                          var6 = (ji) (Object) wf.field_g.c(-270);
+                          var6 = (ji) ((Object) wf.field_g.c(-270));
                           continue L3;
                         }
                       }
@@ -238,7 +257,8 @@ final class hc extends ng {
                       break L2;
                     } else {
                       ob.b(-99);
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 } else {
@@ -248,7 +268,7 @@ final class hc extends ng {
                 }
               } else {
                 var3 = var28.c(false);
-                var4_ref_ae = (ae) (Object) bk.field_t.c((byte) -110);
+                var4_ref_ae = (ae) ((Object) bk.field_t.c((byte) -110));
                 L5: while (true) {
                   L6: {
                     if (var4_ref_ae == null) {
@@ -257,14 +277,15 @@ final class hc extends ng {
                       if (var4_ref_ae.field_o == var3) {
                         break L6;
                       } else {
-                        var4_ref_ae = (ae) (Object) bk.field_t.c(-270);
+                        var4_ref_ae = (ae) ((Object) bk.field_t.c(-270));
                         continue L5;
                       }
                     }
                   }
                   if (var4_ref_ae == null) {
                     ob.b(-127);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
                     L7: {
                       var5 = var28.j(-127);
@@ -279,14 +300,14 @@ final class hc extends ng {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$8 = new String[3][var6_int];
+                            dupTemp$8 = new String[3][var6_int];
                             var4_ref_ae.field_i = dupTemp$8;
                             var8 = dupTemp$8;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$9 = new long[3][var6_int];
+                            dupTemp$9 = new long[3][var6_int];
                             var4_ref_ae.field_t = dupTemp$9;
                             var10 = dupTemp$9;
-                            int[][] dupTemp$10 = new int[3][var7 * var6_int];
+                            dupTemp$10 = new int[3][var7 * var6_int];
                             var4_ref_ae.field_l = dupTemp$10;
                             var11 = dupTemp$10;
                             var12 = 0;
@@ -321,7 +342,7 @@ final class hc extends ng {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          int incrementValue$11 = var15;
+                                          incrementValue$11 = var15;
                                           var15++;
                                           var11[0][incrementValue$11] = var28.i(51);
                                           var25++;
@@ -345,7 +366,7 @@ final class hc extends ng {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            int incrementValue$12 = var16;
+                                            incrementValue$12 = var16;
                                             var16++;
                                             var11[1][incrementValue$12] = var28.i(46);
                                             var25++;
@@ -373,7 +394,7 @@ final class hc extends ng {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            int incrementValue$13 = var17;
+                                            incrementValue$13 = var17;
                                             var17++;
                                             var11[2][incrementValue$13] = var28.i(param0 + 158);
                                             var25++;
@@ -394,7 +415,7 @@ final class hc extends ng {
                             L16: {
                               ph.field_b[var8_int].field_g = var28.b(false);
                               ph.field_b[var8_int].field_e = false;
-                              if (var28.j(-121) == 1) {
+                              if ((var28.j(-121) ^ -1) == -2) {
                                 ph.field_b[var8_int].field_a = var28.b(false);
                                 break L16;
                               } else {
@@ -415,27 +436,40 @@ final class hc extends ng {
                 }
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "hc.BA(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "hc.BA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     private hc(String param0, gg param1) {
         this(param0, kl.field_e.field_f, param1);
         try {
-            ((hc) this).field_q = kl.field_e.field_l;
+            this.field_q = kl.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_T = null;
         field_P = null;
+        if (param0 > -23) {
+            field_P = (k) null;
+        }
     }
 
     final static boolean c(byte param0) {
@@ -446,7 +480,7 @@ final class hc extends ng {
         L0: {
           L1: {
             var1 = -73 % ((param0 - -52) / 54);
-            if (li.field_K < 20) {
+            if (-21 < (li.field_K ^ -1)) {
               break L1;
             } else {
               if (!ih.f((byte) -108)) {
@@ -479,25 +513,21 @@ final class hc extends ng {
     private hc(String param0, j param1, gg param2) {
         super(param0, param1, param2);
         try {
-            ((hc) this).field_q = kl.field_e.field_l;
+            this.field_q = kl.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ((hc) this).field_D = !((hc) this).field_D ? true : false;
-        super.a(param0, param1, param2, param3);
+        this.field_D = !this.field_D ? true : false;
+        super.a(param0, param1 ^ 0, param2, param3);
         if (param1 != -13461) {
             field_Q = true;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Q = false;
         field_R = 0L;
         field_P = new k(7, 0, 1, 1);

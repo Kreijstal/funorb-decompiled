@@ -11,21 +11,21 @@ abstract class kf extends ki {
     static String field_H;
 
     kf(i param0, int param1, int param2) {
-        super(-param1 + og.field_f >> 1, -param2 + wc.field_e >> 1, param1, param2, (j) null);
+        super(-param1 + og.field_f >> 1600490529, -param2 + wc.field_e >> -753274303, param1, param2, (j) null);
         try {
-            ((kf) this).field_J = false;
-            ((kf) this).field_I = 0;
-            ((kf) this).field_E = param0;
+            this.field_J = false;
+            this.field_I = 0;
+            this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     boolean e(byte param0) {
         if (param0 == 124) {
-          ((kf) this).field_I = this.a((byte) 11);
-          if (((kf) this).field_I == 0) {
-            if (((kf) this).field_J) {
+          this.field_I = this.a((byte) 11);
+          if (-1 == (this.field_I ^ -1)) {
+            if (this.field_J) {
               return false;
             } else {
               return true;
@@ -34,10 +34,10 @@ abstract class kf extends ki {
             return false;
           }
         } else {
-          field_H = null;
-          ((kf) this).field_I = this.a((byte) 11);
-          if (((kf) this).field_I == 0) {
-            if (((kf) this).field_J) {
+          field_H = (String) null;
+          this.field_I = this.a((byte) 11);
+          if (-1 == (this.field_I ^ -1)) {
+            if (this.field_J) {
               return false;
             } else {
               return true;
@@ -51,7 +51,7 @@ abstract class kf extends ki {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         fl.b((byte) 91);
         if (param0 != 97) {
-          field_G = null;
+          field_G = (rb[]) null;
           mi.d(param1, param2, param3, param4);
           return;
         } else {
@@ -61,9 +61,9 @@ abstract class kf extends ki {
     }
 
     final void b(int param0, int param1, int param2) {
-        ((kf) this).b(param2, param0, og.field_f - param0 >> 1, 0, -param2 + wc.field_e >> 1);
+        this.b(param2, param0, og.field_f - param0 >> -2038584927, 0, -param2 + wc.field_e >> -984831359);
         if (param1 != -2038584927) {
-            Object var5 = null;
+            String[] var5 = (String[]) null;
             kf.a(-72, (String[]) null);
         }
     }
@@ -88,9 +88,9 @@ abstract class kf extends ki {
         if (param0 == 1784) {
           L0: {
             var2 = this.a((byte) -104);
-            var3 = -((kf) this).field_I + var2;
+            var3 = -this.field_I + var2;
             if (var3 > 0) {
-              ((kf) this).field_I = ((kf) this).field_I + (8 + var3 - 1) / 8;
+              this.field_I = this.field_I + (8 + var3 - 1) / 8;
               break L0;
             } else {
               break L0;
@@ -99,14 +99,14 @@ abstract class kf extends ki {
           if (0 > var3) {
             L1: {
               L2: {
-                ((kf) this).field_I = ((kf) this).field_I + (-16 + var3 + 1) / 16;
-                if (((kf) this).field_I != 0) {
+                this.field_I = this.field_I + (-16 + var3 + 1) / 16;
+                if (this.field_I != 0) {
                   break L2;
                 } else {
                   if (var2 != 0) {
                     break L2;
                   } else {
-                    if (((kf) this).field_J) {
+                    if (this.field_J) {
                       break L2;
                     } else {
                       stackOut_36_0 = 1;
@@ -124,13 +124,13 @@ abstract class kf extends ki {
           } else {
             L3: {
               L4: {
-                if (((kf) this).field_I != 0) {
+                if (this.field_I != 0) {
                   break L4;
                 } else {
                   if (var2 != 0) {
                     break L4;
                   } else {
-                    if (((kf) this).field_J) {
+                    if (this.field_J) {
                       break L4;
                     } else {
                       stackOut_30_0 = 1;
@@ -150,22 +150,22 @@ abstract class kf extends ki {
           L5: {
             kf.a((byte) -47, 114, 13, 107, 118);
             var2 = this.a((byte) -104);
-            var3 = -((kf) this).field_I + var2;
+            var3 = -this.field_I + var2;
             if (var3 > 0) {
-              ((kf) this).field_I = ((kf) this).field_I + (8 + var3 - 1) / 8;
+              this.field_I = this.field_I + (8 + var3 - 1) / 8;
               break L5;
             } else {
               break L5;
             }
           }
           if (0 > var3) {
-            ((kf) this).field_I = ((kf) this).field_I + (-16 + var3 + 1) / 16;
-            if (((kf) this).field_I == 0) {
+            this.field_I = this.field_I + (-16 + var3 + 1) / 16;
+            if (this.field_I == 0) {
               if (var2 != 0) {
                 return false;
               } else {
                 L6: {
-                  if (((kf) this).field_J) {
+                  if (this.field_J) {
                     stackOut_19_0 = 0;
                     stackIn_20_0 = stackOut_19_0;
                     break L6;
@@ -181,12 +181,12 @@ abstract class kf extends ki {
               return false;
             }
           } else {
-            if (((kf) this).field_I == 0) {
+            if (this.field_I == 0) {
               if (var2 != 0) {
                 return false;
               } else {
                 L7: {
-                  if (((kf) this).field_J) {
+                  if (this.field_J) {
                     stackOut_10_0 = 0;
                     stackIn_11_0 = stackOut_10_0;
                     break L7;
@@ -214,6 +214,7 @@ abstract class kf extends ki {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
@@ -235,36 +236,38 @@ abstract class kf extends ki {
                 }
               }
               if (null == sj.field_d) {
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 sj.field_d.field_F.a(20870, param1);
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("kf.WB(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -272,13 +275,18 @@ abstract class kf extends ki {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final int a(byte param0) {
         int var2 = 98 / ((-50 - param0) / 54);
-        return !((kf) this).field_J ? 0 : (Object) (Object) ((kf) this).field_E.d((byte) 109) == this ? 256 : 0;
+        return !this.field_J ? 0 : this.field_E.d((byte) 109) == this ? 256 : 0;
     }
 
     final rc d(byte param0) {
@@ -286,58 +294,58 @@ abstract class kf extends ki {
         if (var2 != null) {
             return var2;
         }
-        return (rc) this;
+        return (rc) (this);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (((kf) this).field_I != 0) {
-          if (256 <= ((kf) this).field_I) {
+        if (-1 != (this.field_I ^ -1)) {
+          if (256 <= this.field_I) {
             if (param1 != 0) {
               return;
             } else {
-              ((kf) this).a(((kf) this).field_m + param2, (byte) 55, ((kf) this).field_j + param0);
-              super.a(param0, param1, param2, param3);
+              this.a(this.field_m + param2, (byte) 55, this.field_j + param0);
+              super.a(param0, param1, param2, param3 ^ 0);
               return;
             }
           } else {
             if (jj.field_x != null) {
-              if (jj.field_x.field_p >= ((kf) this).field_t) {
-                if (jj.field_x.field_t >= ((kf) this).field_x) {
+              if (jj.field_x.field_p >= this.field_t) {
+                if (jj.field_x.field_t >= this.field_x) {
                   cl.a(-100, jj.field_x);
                   mi.a();
-                  ((kf) this).a(param3, (byte) 94, 0);
-                  super.a(-((kf) this).field_j + -param0, param1, -((kf) this).field_m + -param2, 0);
+                  this.a(param3, (byte) 94, 0);
+                  super.a(-this.field_j + -param0, param1, -this.field_m + -param2, 0);
                   mf.e(4096);
-                  jj.field_x.c(((kf) this).field_m + param2, ((kf) this).field_j + param0, ((kf) this).field_I);
+                  jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
                   return;
                 } else {
-                  jj.field_x = new o(((kf) this).field_t, ((kf) this).field_x);
+                  jj.field_x = new o(this.field_t, this.field_x);
                   cl.a(-100, jj.field_x);
                   mi.a();
-                  ((kf) this).a(param3, (byte) 94, 0);
-                  super.a(-((kf) this).field_j + -param0, param1, -((kf) this).field_m + -param2, 0);
+                  this.a(param3, (byte) 94, 0);
+                  super.a(-this.field_j + -param0, param1, -this.field_m + -param2, 0);
                   mf.e(4096);
-                  jj.field_x.c(((kf) this).field_m + param2, ((kf) this).field_j + param0, ((kf) this).field_I);
+                  jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
                   return;
                 }
               } else {
-                jj.field_x = new o(((kf) this).field_t, ((kf) this).field_x);
+                jj.field_x = new o(this.field_t, this.field_x);
                 cl.a(-100, jj.field_x);
                 mi.a();
-                ((kf) this).a(param3, (byte) 94, 0);
-                super.a(-((kf) this).field_j + -param0, param1, -((kf) this).field_m + -param2, 0);
+                this.a(param3, (byte) 94, 0);
+                super.a(-this.field_j + -param0, param1, -this.field_m + -param2, 0);
                 mf.e(4096);
-                jj.field_x.c(((kf) this).field_m + param2, ((kf) this).field_j + param0, ((kf) this).field_I);
+                jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
                 return;
               }
             } else {
-              jj.field_x = new o(((kf) this).field_t, ((kf) this).field_x);
+              jj.field_x = new o(this.field_t, this.field_x);
               cl.a(-100, jj.field_x);
               mi.a();
-              ((kf) this).a(param3, (byte) 94, 0);
-              super.a(-((kf) this).field_j + -param0, param1, -((kf) this).field_m + -param2, 0);
+              this.a(param3, (byte) 94, 0);
+              super.a(-this.field_j + -param0, param1, -this.field_m + -param2, 0);
               mf.e(4096);
-              jj.field_x.c(((kf) this).field_m + param2, ((kf) this).field_j + param0, ((kf) this).field_I);
+              jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
               return;
             }
           }
@@ -349,15 +357,19 @@ abstract class kf extends ki {
     public static void i(int param0) {
         field_G = null;
         field_F = null;
-        field_H = null;
-        field_D = null;
+        if (param0 < 16) {
+          field_D = (String) null;
+          field_H = null;
+          field_D = null;
+          return;
+        } else {
+          field_H = null;
+          field_D = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "Username: ";
         field_F = "Return to game";
     }

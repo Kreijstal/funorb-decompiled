@@ -13,15 +13,19 @@ final class ab {
         field_c = null;
         field_a = null;
         field_e = null;
-        field_d = null;
-        field_b = null;
+        if (param0 >= -38) {
+          field_b = (String) null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ab.A(";
         field_b = "Passwords must be between 5 and 20 characters long";
         field_a = "Passwords must be between 5 and 20 letters and numbers";

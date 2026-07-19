@@ -29,13 +29,13 @@ final class hk extends le {
               if (param1 <= -60) {
                 break L1;
               } else {
-                field_i = null;
+                field_i = (String) null;
                 break L1;
               }
             }
             L2: {
               if (0 == param0) {
-                ((hk) this).field_j = param2.e(1869);
+                this.field_j = param2.e(1869);
                 break L2;
               } else {
                 break L2;
@@ -47,23 +47,23 @@ final class hk extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("hk.F(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -71,7 +71,7 @@ final class hk extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -97,24 +97,24 @@ final class hk extends le {
         var16 = VoidHunters.field_G;
         if (param1) {
           L0: {
-            var17 = ((hk) this).field_f.a((byte) 124, param0);
+            var17 = this.field_f.a((byte) 124, param0);
             var3 = var17;
-            if (((hk) this).field_f.field_e) {
-              var25 = ((hk) this).a(0, wf.field_d & -1 + param0, 255);
-              var5 = ((hk) this).a(0, param0, 255);
-              var24 = ((hk) this).a(0, wf.field_d & param0 - -1, 255);
+            if (this.field_f.field_e) {
+              var25 = this.a(0, wf.field_d & -1 + param0, 255);
+              var5 = this.a(0, param0, 255);
+              var24 = this.a(0, wf.field_d & param0 - -1, 255);
               var7 = 0;
               L1: while (true) {
                 if (var7 >= hob.field_d) {
                   break L0;
                 } else {
                   L2: {
-                    var8 = ((hk) this).field_j * (var24[var7] - var25[var7]);
-                    var9 = (-var5[gbb.field_q & -1 + var7] + var5[var7 - -1 & gbb.field_q]) * ((hk) this).field_j;
-                    var10 = var9 >> 12;
-                    var11 = var8 >> 12;
-                    var12 = var10 * var10 >> 12;
-                    var13 = var11 * var11 >> 12;
+                    var8 = this.field_j * (var24[var7] - var25[var7]);
+                    var9 = (-var5[gbb.field_q & -1 + var7] + var5[var7 - -1 & gbb.field_q]) * this.field_j;
+                    var10 = var9 >> -1225116564;
+                    var11 = var8 >> 1949747916;
+                    var12 = var10 * var10 >> -692120020;
+                    var13 = var11 * var11 >> -1210841460;
                     var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var13 + var12)) / 4096.0f)));
                     if (var14 != 0) {
                       stackOut_8_0 = 16777216 / var14;
@@ -138,31 +138,33 @@ final class hk extends le {
           }
           return var17;
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
     final static void b(int param0, int param1) {
-        nrb.field_b = new pgb[3000];
+        nrb.field_b = new pgb[param0 * 15];
+        if (param1 > -90) {
+            field_i = (String) null;
+        }
         ou.field_q = 0;
         dca.field_q = new int[3];
-        hab.field_k = 200;
+        hab.field_k = param0;
     }
 
     public static void d(int param0) {
         field_i = null;
+        if (param0 != -1210841460) {
+            field_i = (String) null;
+        }
     }
 
     public hk() {
         super(1, true);
-        ((hk) this).field_j = 4096;
+        this.field_j = 4096;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Enter name of friend to add to list";
     }
 }

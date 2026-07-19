@@ -13,6 +13,9 @@ final class qj {
     static String field_e;
 
     final static void a(int param0, int param1, int param2, int param3, ed param4, int param5, int param6, int param7) {
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
@@ -47,7 +50,7 @@ final class qj {
         try {
           L0: {
             L1: {
-              if (param6 > 0) {
+              if ((param6 ^ -1) < -1) {
                 if (20 >= param6) {
                   L2: {
                     var8_int = 0;
@@ -60,7 +63,7 @@ final class qj {
                     }
                   }
                   L3: {
-                    if (var9 <= 10) {
+                    if ((var9 ^ -1) >= -11) {
                       var8_int = 0;
                       break L3;
                     } else {
@@ -71,16 +74,16 @@ final class qj {
                     }
                   }
                   var10 = var9 * var9;
-                  var11 = 240 - var9;
+                  var11 = param5 - var9;
                   L4: while (true) {
-                    if (240 + var9 <= var11) {
+                    if (param5 + var9 <= var11) {
                       break L1;
                     } else {
                       var12 = param3 + (-var8_int + var11 * 640);
-                      var13 = (-240 + var11) * (1 + (var11 + -240));
+                      var13 = (-param5 + var11) * (1 + (var11 + -param5));
                       var14 = -var9;
                       L5: while (true) {
-                        if (var14 >= 0) {
+                        if (-1 >= (var14 ^ -1)) {
                           var14 = -(255 * var13 / var10) + 255;
                           var15 = -var8_int;
                           L6: while (true) {
@@ -106,7 +109,7 @@ final class qj {
                                 }
                               }
                             } else {
-                              int incrementValue$3 = var12;
+                              incrementValue$3 = var12;
                               var12++;
                               em.field_i[incrementValue$3] = var14 * 65793;
                               var15++;
@@ -114,16 +117,16 @@ final class qj {
                             }
                           }
                         } else {
-                          L9: {
-                            var15 = var13 + var14 * (1 + var14);
-                            if (var15 >= var10) {
-                              break L9;
-                            } else {
-                              break L9;
-                            }
+                          var15 = var13 + var14 * (1 + var14);
+                          if (var15 < var10) {
+                            var16 = -(var15 * 255 / var10) + 255;
+                            em.field_i[var14 + var12] = var16 * 65793;
+                            var14++;
+                            continue L5;
+                          } else {
+                            var14++;
+                            continue L5;
                           }
-                          var14++;
-                          continue L5;
                         }
                       }
                     }
@@ -136,46 +139,46 @@ final class qj {
                       break L1;
                     } else {
                       var9 = param4.field_z / 2 * 65536 / var8_int;
-                      var10 = var9 >> 1;
+                      var10 = var9 >> -385911967;
                       var11 = 0;
-                      L10: while (true) {
+                      L9: while (true) {
                         if (var11 >= var8_int + var8_int) {
                           break L1;
                         } else {
-                          L11: {
-                            var12 = var10 >> 16;
+                          L10: {
+                            var12 = var10 >> 367878128;
                             var10 = var10 + var9;
                             if (var12 < param4.field_v) {
-                              break L11;
+                              break L10;
                             } else {
                               if (var12 < param4.field_v - -param4.field_x) {
                                 var13 = param4.field_s * var12;
-                                var14 = (var11 + -var8_int + 240) * 640 + param7 + param4.field_q;
+                                var14 = (var11 + -var8_int + param5) * 640 + param7 + param4.field_q;
                                 var15_double = 8.0 * Math.sin((double)param1 + (double)((param1 & 7) + 8) * ((double)var12 * 0.001));
                                 var15_double = var15_double + Math.sin((double)(param1 + var12) * 0.002 * (double)((5 * param1 & 31) + 16)) * 4.0;
                                 var14 = var14 + (int)Math.floor(var15_double + 0.5);
                                 var17 = 0;
-                                L12: while (true) {
+                                L11: while (true) {
                                   if (param4.field_s <= var17) {
-                                    break L11;
+                                    break L10;
                                   } else {
-                                    int incrementValue$4 = var13;
+                                    incrementValue$4 = var13;
                                     var13++;
                                     var18 = param4.field_B[incrementValue$4];
-                                    int incrementValue$5 = var14;
+                                    incrementValue$5 = var14;
                                     var14++;
-                                    em.field_i[incrementValue$5] = var18 - ae.a(4144959, var18 >> 2);
+                                    em.field_i[incrementValue$5] = var18 - ae.a(4144959, var18 >> -1276284702);
                                     var17++;
-                                    continue L12;
+                                    continue L11;
                                   }
                                 }
                               } else {
-                                break L11;
+                                break L10;
                               }
                             }
                           }
                           var11++;
-                          continue L10;
+                          continue L9;
                         }
                       }
                     }
@@ -188,29 +191,37 @@ final class qj {
                 break L1;
               }
             }
+            L12: {
+              if (param0 == -1276284702) {
+                break L12;
+              } else {
+                field_a = (n) null;
+                break L12;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var8 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) var8;
-            stackOut_42_1 = new StringBuilder().append("qj.D(").append(-1276284702).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackOut_42_0 = (RuntimeException) (var8);
+            stackOut_42_1 = new StringBuilder().append("qj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
             stackIn_43_1 = stackOut_42_1;
             if (param4 == null) {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
               stackOut_44_2 = "null";
               stackIn_45_0 = stackOut_44_0;
               stackIn_45_1 = stackOut_44_1;
               stackIn_45_2 = stackOut_44_2;
               break L13;
             } else {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackOut_43_2 = "{...}";
               stackIn_45_0 = stackOut_43_0;
               stackIn_45_1 = stackOut_43_1;
@@ -218,13 +229,14 @@ final class qj {
               break L13;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ',' + 240 + ',' + param6 + ',' + param7 + ')');
+          throw t.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
+        ed var3 = null;
         L0: {
           L1: {
             L2: {
@@ -233,7 +245,7 @@ final class qj {
               if (!bj.e((byte) -32)) {
                 break L2;
               } else {
-                if (hm.field_o.field_f != 2) {
+                if ((hm.field_o.field_f ^ -1) != -3) {
                   break L1;
                 } else {
                   break L2;
@@ -287,31 +299,42 @@ final class qj {
           hm.field_o = new pf(var1 != 0);
           break L0;
         }
+        L3: {
+          if (param0 == -883) {
+            break L3;
+          } else {
+            var3 = (ed) null;
+            qj.a(-40, 111, 116, 104, (ed) null, -68, -42, 107);
+            break L3;
+          }
+        }
     }
 
     final static int a(byte param0, int param1, int param2) {
+        if (param0 != -38) {
+            qj.b(69);
+        }
         return ni.a(param2, param1, false, ka.field_d);
     }
 
     qj(int param0, int param1) {
-        ((qj) this).field_b = param1;
-        ((qj) this).field_h = param0;
+        this.field_b = param1;
+        this.field_h = param0;
     }
 
     public static void b(int param0) {
         field_i = null;
         field_g = null;
         field_e = null;
+        if (param0 != -10497) {
+            field_c = -87;
+        }
         field_f = null;
         field_d = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new ee("");
         field_d = "Ship";
         field_c = 0;

@@ -32,14 +32,26 @@ final class sa {
 
     final static String a(boolean param0) {
         if (ra.field_e != wd.field_Lb) {
-          sa.a(38);
-          if (pa.field_I == ra.field_e) {
-            return l.field_c;
-          } else {
-            if (!ig.field_j.a(88)) {
+          if (!param0) {
+            if (pa.field_I == ra.field_e) {
               return l.field_c;
             } else {
-              return qo.field_x;
+              if (!ig.field_j.a(88)) {
+                return l.field_c;
+              } else {
+                return qo.field_x;
+              }
+            }
+          } else {
+            sa.a(38);
+            if (pa.field_I == ra.field_e) {
+              return l.field_c;
+            } else {
+              if (!ig.field_j.a(88)) {
+                return l.field_c;
+              } else {
+                return qo.field_x;
+              }
             }
           }
         } else {
@@ -49,6 +61,7 @@ final class sa {
 
     final static boolean a(byte param0, boolean param1) {
         try {
+            long dupTemp$1 = 0L;
             IOException var2 = null;
             oq var4 = null;
             oq var5 = null;
@@ -65,10 +78,10 @@ final class sa {
               }
             }
             if (ge.field_u.field_f != 0) {
-              long dupTemp$1 = rl.a((byte) -95);
+              dupTemp$1 = rl.a((byte) -95);
               nf.field_Q = dupTemp$1;
               ob.field_v = dupTemp$1;
-              if (ge.field_u.field_f != 1) {
+              if ((ge.field_u.field_f ^ -1) != -2) {
                 tl.field_J = vk.field_V;
                 if (param0 != 65) {
                   return false;
@@ -80,7 +93,7 @@ final class sa {
                 try {
                   L1: {
                     L2: {
-                      jd.field_c = new vb((java.net.Socket) ge.field_u.field_e, nd.field_a);
+                      jd.field_c = new vb((java.net.Socket) (ge.field_u.field_e), nd.field_a);
                       var4 = kn.field_e;
                       var5 = var4;
                       ej.field_j.field_v = 0;
@@ -99,7 +112,7 @@ final class sa {
                     vd.field_g = stackIn_8_0;
                     ia.field_l = stackIn_8_0;
                     tl.field_J = no.field_h;
-                    fm.a((ge) (Object) ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
+                    fm.a(ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
                     de.a(-1, 0);
                     break L1;
                   }
@@ -132,6 +145,7 @@ final class sa {
     }
 
     public static void a(int param0) {
+        boolean discarded$2 = false;
         field_s = null;
         field_m = null;
         field_v = null;
@@ -143,7 +157,7 @@ final class sa {
         field_y = null;
         field_e = null;
         if (param0 != -13265) {
-          boolean discarded$2 = sa.a((byte) 89, true);
+          discarded$2 = sa.a((byte) 89, true);
           field_q = null;
           field_f = null;
           field_o = null;
@@ -163,10 +177,6 @@ final class sa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         field_d = "You have <%0> unread messages!";
         field_g = "Climbing out of the jungle into the mountains...";

@@ -16,18 +16,19 @@ final class md {
     }
 
     final ne b(byte param0) {
+        ne discarded$7 = null;
         ne var2 = null;
-        var2 = ((md) this).field_c.field_e;
+        var2 = this.field_c.field_e;
         if (param0 == -124) {
-          if (var2 == ((md) this).field_c) {
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.a(false);
             return var2;
           }
         } else {
-          ne discarded$7 = ((md) this).a(80);
-          if (var2 == ((md) this).field_c) {
+          discarded$7 = this.a(80);
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.a(false);
@@ -39,21 +40,21 @@ final class md {
     final void b(int param0) {
         ne var2 = null;
         int var3 = 0;
-        Object var4 = null;
+        ne var4 = null;
         var3 = DungeonAssault.field_K;
         L0: while (true) {
-          var2 = ((md) this).field_c.field_e;
-          if (var2 != ((md) this).field_c) {
+          var2 = this.field_c.field_e;
+          if (var2 != this.field_c) {
             var2.a(false);
             continue L0;
           } else {
             if (param0 != -4) {
-              var4 = null;
-              ((md) this).b((ne) null, false);
-              ((md) this).field_e = null;
+              var4 = (ne) null;
+              this.b((ne) null, false);
+              this.field_e = null;
               return;
             } else {
-              ((md) this).field_e = null;
+              this.field_e = null;
               return;
             }
           }
@@ -62,16 +63,16 @@ final class md {
 
     final ne g(int param0) {
         ne var2 = null;
-        Object var3 = null;
-        var2 = ((md) this).field_e;
-        if (((md) this).field_c == var2) {
-          ((md) this).field_e = null;
+        ne var3 = null;
+        var2 = this.field_e;
+        if (this.field_c == var2) {
+          this.field_e = null;
           return null;
         } else {
-          ((md) this).field_e = var2.field_a;
+          this.field_e = var2.field_a;
           if (param0 != 20) {
-            var3 = null;
-            ((md) this).a((ne) null, false);
+            var3 = (ne) null;
+            this.a((ne) null, false);
             return var2;
           } else {
             return var2;
@@ -81,12 +82,30 @@ final class md {
 
     final static void a(int param0, int param1) {
         mo.field_e = param1;
-        if (nk.field_Jb.field_b < 0) {
-            return;
-        }
-        if (!nl.a(nk.field_Jb.field_b, (byte) -124)) {
+        if (nk.field_Jb.field_b >= 0) {
+          if (!nl.a(nk.field_Jb.field_b, (byte) -124)) {
             nk.field_Jb.field_b = 1;
+            if (param0 == 20631) {
+              return;
+            } else {
+              field_b = 78;
+              return;
+            }
+          } else {
+            if (param0 == 20631) {
+              return;
+            } else {
+              field_b = 78;
+              return;
+            }
+          }
+        } else {
+          if (param0 == 20631) {
             return;
+          } else {
+            field_b = 78;
+            return;
+          }
         }
     }
 
@@ -99,8 +118,8 @@ final class md {
         int stackOut_2_0 = 0;
         if (param0 > -55) {
           L0: {
-            ((md) this).field_c = null;
-            if (((md) this).field_c.field_e != ((md) this).field_c) {
+            this.field_c = (ne) null;
+            if (this.field_c.field_e != this.field_c) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -113,7 +132,7 @@ final class md {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((md) this).field_c.field_e != ((md) this).field_c) {
+            if (this.field_c.field_e != this.field_c) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -128,9 +147,14 @@ final class md {
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, int param5, float param6) {
-        if (!(null != bf.field_h)) {
-            bf.field_h = new ge((qb) (Object) wa.field_j);
-            hm.field_n.a((qb) (Object) bf.field_h);
+        L0: {
+          if (null == bf.field_h) {
+            bf.field_h = new ge(wa.field_j);
+            hm.field_n.a(bf.field_h);
+            break L0;
+          } else {
+            break L0;
+          }
         }
         bf.field_h.f(param4);
         bf.field_h.e(param1);
@@ -138,9 +162,18 @@ final class md {
         bf.field_h.a(param3);
         bf.field_h.b(param0);
         bf.field_h.c(param2);
+        if (param5 == 0) {
+          return;
+        } else {
+          field_b = 91;
+          return;
+        }
     }
 
     final static boolean f(int param0) {
+        if (param0 != 20) {
+            return false;
+        }
         return null == cm.field_R ? rj.field_o : true;
     }
 
@@ -181,14 +214,14 @@ final class md {
                 break L1;
               }
             }
-            param0.field_a = ((md) this).field_c.field_a;
-            param0.field_e = ((md) this).field_c;
+            param0.field_a = this.field_c.field_a;
+            param0.field_e = this.field_c;
             param0.field_a.field_e = param0;
             param0.field_e.field_a = param0;
             if (!param1) {
               break L0;
             } else {
-              field_d = null;
+              field_d = (Random) null;
               return;
             }
           }
@@ -196,23 +229,23 @@ final class md {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("md.H(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -220,51 +253,51 @@ final class md {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
     final ne a(int param0) {
         ne var2 = null;
         if (param0 != 4) {
-            Object var3 = null;
+            cn var3 = (cn) null;
             md.a(-3, (cn) null);
-            var2 = ((md) this).field_e;
-            if (!(var2 != ((md) this).field_c)) {
-                ((md) this).field_e = null;
+            var2 = this.field_e;
+            if (!(var2 != this.field_c)) {
+                this.field_e = null;
                 return null;
             }
-            ((md) this).field_e = var2.field_e;
+            this.field_e = var2.field_e;
             return var2;
         }
-        var2 = ((md) this).field_e;
-        if (!(var2 != ((md) this).field_c)) {
-            ((md) this).field_e = null;
+        var2 = this.field_e;
+        if (!(var2 != this.field_c)) {
+            this.field_e = null;
             return null;
         }
-        ((md) this).field_e = var2.field_e;
+        this.field_e = var2.field_e;
         return var2;
     }
 
     final ne e(int param0) {
         ne var2 = null;
         if (param0 == -24172) {
-          var2 = ((md) this).field_c.field_e;
-          if (var2 == ((md) this).field_c) {
-            ((md) this).field_e = null;
+          var2 = this.field_c.field_e;
+          if (var2 == this.field_c) {
+            this.field_e = null;
             return null;
           } else {
-            ((md) this).field_e = var2.field_e;
+            this.field_e = var2.field_e;
             return var2;
           }
         } else {
-          field_d = null;
-          var2 = ((md) this).field_c.field_e;
-          if (var2 == ((md) this).field_c) {
-            ((md) this).field_e = null;
+          field_d = (Random) null;
+          var2 = this.field_c.field_e;
+          if (var2 == this.field_c) {
+            this.field_e = null;
             return null;
           } else {
-            ((md) this).field_e = var2.field_e;
+            this.field_e = var2.field_e;
             return var2;
           }
         }
@@ -272,17 +305,17 @@ final class md {
 
     final ne c(int param0) {
         ne var2 = null;
-        var2 = ((md) this).field_c.field_a;
+        var2 = this.field_c.field_a;
         if (param0 == 0) {
-          if (((md) this).field_c == var2) {
+          if (this.field_c == var2) {
             return null;
           } else {
             var2.a(false);
             return var2;
           }
         } else {
-          ((md) this).field_c = null;
-          if (((md) this).field_c == var2) {
+          this.field_c = (ne) null;
+          if (this.field_c == var2) {
             return null;
           } else {
             var2.a(false);
@@ -292,6 +325,8 @@ final class md {
     }
 
     final static void a(int param0, cn param1) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -308,6 +343,7 @@ final class md {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -320,7 +356,7 @@ final class md {
         var9 = DungeonAssault.field_K;
         try {
           L0: {
-            if ((3 & (param1.field_A | (param1.field_w | (param1.field_v | param1.field_y)))) != 0) {
+            if (-1 != (3 & (param1.field_A | (param1.field_w | (param1.field_v | param1.field_y))) ^ -1)) {
               L1: {
                 var2_int = (3 & param1.field_w) + param1.field_y;
                 var2_int = -(3 & var2_int) + 4 + var2_int;
@@ -344,6 +380,7 @@ final class md {
                   param1.field_v = var3;
                   param1.field_A = param1.field_A & -4;
                   param1.field_B = var4;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var8 = 0;
@@ -353,9 +390,9 @@ final class md {
                       var7++;
                       continue L2;
                     } else {
-                      int incrementValue$2 = var6;
+                      incrementValue$2 = var6;
                       var6++;
-                      int incrementValue$3 = var5;
+                      incrementValue$3 = var5;
                       var5++;
                       var4[incrementValue$2] = param1.field_B[incrementValue$3];
                       var8++;
@@ -365,30 +402,31 @@ final class md {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_0 = (RuntimeException) (var2);
             stackOut_12_1 = new StringBuilder().append("md.O(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -396,7 +434,12 @@ final class md {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -406,49 +449,45 @@ final class md {
                 param0.a(false);
             }
             if (param1) {
-                field_a = null;
+                field_a = (String) null;
             }
-            param0.field_a = ((md) this).field_c;
-            param0.field_e = ((md) this).field_c.field_e;
+            param0.field_a = this.field_c;
+            param0.field_e = this.field_c.field_e;
             param0.field_a.field_e = param0;
             param0.field_e.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "md.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "md.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final ne d(int param0) {
         ne var2 = null;
         if (param0 != -14205) {
-            field_a = null;
-            var2 = ((md) this).field_c.field_a;
-            if (!(var2 != ((md) this).field_c)) {
-                ((md) this).field_e = null;
+            field_a = (String) null;
+            var2 = this.field_c.field_a;
+            if (!(var2 != this.field_c)) {
+                this.field_e = null;
                 return null;
             }
-            ((md) this).field_e = var2.field_a;
+            this.field_e = var2.field_a;
             return var2;
         }
-        var2 = ((md) this).field_c.field_a;
-        if (!(var2 != ((md) this).field_c)) {
-            ((md) this).field_e = null;
+        var2 = this.field_c.field_a;
+        if (!(var2 != this.field_c)) {
+            this.field_e = null;
             return null;
         }
-        ((md) this).field_e = var2.field_a;
+        this.field_e = var2.field_a;
         return var2;
     }
 
     public md() {
-        ((md) this).field_c = new ne();
-        ((md) this).field_c.field_e = ((md) this).field_c;
-        ((md) this).field_c.field_a = ((md) this).field_c;
+        this.field_c = new ne();
+        this.field_c.field_e = this.field_c;
+        this.field_c.field_a = this.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 20;
         field_a = "FULL ACCESS";
         field_d = new Random(6L);

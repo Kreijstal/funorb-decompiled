@@ -10,20 +10,22 @@ final class db extends RuntimeException {
     static byte[][] field_b;
 
     public static void a(byte param0) {
-        field_b = null;
+        if (param0 <= 61) {
+            field_d = -89;
+            field_b = (byte[][]) null;
+            field_f = null;
+            return;
+        }
+        field_b = (byte[][]) null;
         field_f = null;
     }
 
     db(Throwable param0, String param1) {
-        ((db) this).field_c = param0;
-        ((db) this).field_a = param1;
+        this.field_c = param0;
+        this.field_a = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = true;
     }
 }

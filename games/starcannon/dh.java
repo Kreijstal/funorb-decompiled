@@ -7,24 +7,27 @@ final class dh {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 > -100) {
+            return;
+        }
         field_b = null;
     }
 
     final static void a(byte param0, ue param1) {
+        ud discarded$0 = null;
         nj.b(param1.a("headers.packvorbis", (byte) 45, ""));
         nj var2 = nj.a(param1, "jagex logo2.packvorbis", "");
+        if (param0 != 115) {
+            return;
+        }
         try {
-            ud discarded$0 = var2.c();
+            discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "dh.B(" + 115 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ge();
         field_b = "Checking";
     }

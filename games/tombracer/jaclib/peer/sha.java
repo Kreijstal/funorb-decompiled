@@ -11,9 +11,9 @@ public final class sha {
     public final void b(int param0) {
         this.a(8841);
         L0: while (true) {
-          if (((jaclib.peer.sha) this).b == null) {
+          if (this.b == null) {
             if (param0 != 14203) {
-              ((jaclib.peer.sha) this).c = null;
+              this.c = (jaclib.peer.PeerReference) null;
               this.a(8841);
               return;
             } else {
@@ -21,7 +21,7 @@ public final class sha {
               return;
             }
           } else {
-            this.b(-27558, ((jaclib.peer.sha) this).b);
+            this.b(-27558, this.b);
             continue L0;
           }
         }
@@ -37,29 +37,36 @@ public final class sha {
     private final void a(int param0) {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
+        jaclib.peer.PeerReference var4 = null;
         L0: while (true) {
-          var2 = ((jaclib.peer.sha) this).a.poll();
+          var2 = this.a.poll();
           if (var2 != null) {
-            var3 = (jaclib.peer.PeerReference) (Object) var2;
+            var3 = (jaclib.peer.PeerReference) ((Object) var2);
             this.b(-27558, var3);
             continue L0;
           } else {
-            return;
+            if (param0 != 8841) {
+              var4 = (jaclib.peer.PeerReference) null;
+              this.b(-120, (jaclib.peer.PeerReference) null);
+              return;
+            } else {
+              return;
+            }
           }
         }
     }
 
     private final void b(int param0, jaclib.peer.PeerReference param1) {
-        Object var4 = null;
+        jaclib.peer.PeerReference var4 = null;
         L0: {
-          if (((jaclib.peer.sha) this).c == param1) {
-            ((jaclib.peer.sha) this).c = param1.b;
+          if (this.c == param1) {
+            this.c = param1.b;
             break L0;
           } else {
             break L0;
           }
         }
-        if (param1 != ((jaclib.peer.sha) this).b) {
+        if (param1 != this.b) {
           L1: {
             if (param1.b != null) {
               param1.b.a = param1.a;
@@ -70,7 +77,7 @@ public final class sha {
           }
           if (param0 != -27558) {
             L2: {
-              var4 = null;
+              var4 = (jaclib.peer.PeerReference) null;
               this.b(-21, (jaclib.peer.PeerReference) null);
               if (null != param1.a) {
                 param1.a.b = param1.b;
@@ -93,7 +100,7 @@ public final class sha {
           }
         } else {
           L4: {
-            ((jaclib.peer.sha) this).b = param1.a;
+            this.b = param1.a;
             if (param1.b != null) {
               param1.b.a = param1.a;
               break L4;
@@ -113,7 +120,7 @@ public final class sha {
             return;
           } else {
             L6: {
-              var4 = null;
+              var4 = (jaclib.peer.PeerReference) null;
               this.b(-21, (jaclib.peer.PeerReference) null);
               if (null != param1.a) {
                 param1.a.b = param1.b;
@@ -128,38 +135,38 @@ public final class sha {
     }
 
     public sha() {
-        ((jaclib.peer.sha) this).a = new java.lang.ref.ReferenceQueue();
+        this.a = new java.lang.ref.ReferenceQueue();
     }
 
     final void a(int param0, jaclib.peer.PeerReference param1) {
-        Object var4 = null;
+        jaclib.peer.PeerReference var4 = null;
         param1.b = null;
-        param1.a = ((jaclib.peer.sha) this).b;
+        param1.a = this.b;
         if (param0 <= 61) {
           L0: {
-            var4 = null;
-            ((jaclib.peer.sha) this).a(114, (jaclib.peer.PeerReference) null);
-            if (null == ((jaclib.peer.sha) this).c) {
-              ((jaclib.peer.sha) this).c = param1;
+            var4 = (jaclib.peer.PeerReference) null;
+            this.a(114, (jaclib.peer.PeerReference) null);
+            if (null == this.c) {
+              this.c = param1;
               break L0;
             } else {
-              ((jaclib.peer.sha) this).b.b = param1;
+              this.b.b = param1;
               break L0;
             }
           }
-          ((jaclib.peer.sha) this).b = param1;
+          this.b = param1;
           return;
         } else {
           L1: {
-            if (null == ((jaclib.peer.sha) this).c) {
-              ((jaclib.peer.sha) this).c = param1;
+            if (null == this.c) {
+              this.c = param1;
               break L1;
             } else {
-              ((jaclib.peer.sha) this).b.b = param1;
+              this.b.b = param1;
               break L1;
             }
           }
-          ((jaclib.peer.sha) this).b = param1;
+          this.b = param1;
           return;
         }
     }

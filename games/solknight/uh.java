@@ -47,7 +47,7 @@ final class uh {
     static int field_d;
 
     private final void a(boolean param0) {
-        ((uh) this).field_f = false;
+        this.field_f = param0 ? true : false;
     }
 
     final void b(int param0) {
@@ -63,8 +63,8 @@ final class uh {
         int var11 = 0;
         int var12 = 0;
         var12 = SolKnight.field_L ? 1 : 0;
-        if (!((uh) this).field_f) {
-          ((uh) this).field_f = true;
+        if (!this.field_f) {
+          this.field_f = true;
           var2 = param0;
           var3 = 32767;
           var4 = 32767;
@@ -73,66 +73,72 @@ final class uh {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (((uh) this).field_y <= var8) {
-              ((uh) this).field_Q = var5;
-              ((uh) this).field_t = var3;
-              ((uh) this).field_m = var6;
-              ((uh) this).field_N = var7;
-              ((uh) this).field_E = var2;
-              ((uh) this).field_G = var4;
-              return;
-            } else {
-              L1: {
-                var9 = ((uh) this).field_n[var8];
-                var10 = ((uh) this).field_q[var8];
-                if (var10 < var3) {
-                  var3 = var10;
-                  break L1;
-                } else {
-                  break L1;
+            if (this.field_y > var8) {
+              var9 = this.field_n[var8];
+              var10 = this.field_q[var8];
+              if (var12 == 0) {
+                L1: {
+                  if (var10 < var3) {
+                    var3 = var10;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
-              }
-              L2: {
-                var11 = ((uh) this).field_z[var8];
-                if (var6 >= var10) {
-                  break L2;
-                } else {
-                  var6 = var10;
-                  break L2;
+                L2: {
+                  var11 = this.field_z[var8];
+                  if (var6 >= var10) {
+                    break L2;
+                  } else {
+                    var6 = var10;
+                    break L2;
+                  }
                 }
-              }
-              L3: {
-                if (var9 <= var5) {
-                  break L3;
-                } else {
-                  var5 = var9;
-                  break L3;
+                L3: {
+                  if (var9 <= var5) {
+                    break L3;
+                  } else {
+                    var5 = var9;
+                    break L3;
+                  }
                 }
-              }
-              L4: {
-                if (var9 >= var2) {
-                  break L4;
-                } else {
-                  var2 = var9;
-                  break L4;
+                L4: {
+                  if (var9 >= var2) {
+                    break L4;
+                  } else {
+                    var2 = var9;
+                    break L4;
+                  }
                 }
-              }
-              L5: {
-                if (var7 < var11) {
-                  var7 = var11;
-                  break L5;
-                } else {
-                  break L5;
+                L5: {
+                  if (var7 < var11) {
+                    var7 = var11;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
-              }
-              if (var4 > var11) {
-                var4 = var11;
+                L6: {
+                  if (var4 > var11) {
+                    var4 = var11;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
                 var8++;
                 continue L0;
               } else {
-                var8++;
-                continue L0;
+                return;
               }
+            } else {
+              this.field_Q = var5;
+              this.field_t = var3;
+              this.field_m = var6;
+              this.field_N = var7;
+              this.field_E = var2;
+              this.field_G = var4;
+              return;
             }
           }
         } else {
@@ -141,50 +147,113 @@ final class uh {
     }
 
     public static void a(int param0) {
-        field_l = null;
-        field_r = null;
-        field_P = null;
+        if (param0 != -18662) {
+          field_d = -118;
+          field_l = null;
+          field_r = null;
+          field_P = null;
+          return;
+        } else {
+          field_l = null;
+          field_r = null;
+          field_P = null;
+          return;
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var7 = SolKnight.field_L ? 1 : 0;
-        if (param0 != 8292) {
-            this.a(false);
+        int var7 = 0;
+        var7 = SolKnight.field_L ? 1 : 0;
+        if (param0 == 8292) {
+          var6 = 0;
+          L0: while (true) {
+            if (var6 < this.field_y) {
+              this.field_n[var6] = (short)(param2 * this.field_n[var6] / param1);
+              this.field_q[var6] = (short)(param4 * this.field_q[var6] / param1);
+              this.field_z[var6] = (short)(param3 * this.field_z[var6] / param1);
+              var6++;
+              if (var7 == 0) {
+                continue L0;
+              } else {
+                return;
+              }
+            } else {
+              this.a(false);
+              return;
+            }
+          }
+        } else {
+          this.a(false);
+          var6 = 0;
+          L1: while (true) {
+            if (var6 < this.field_y) {
+              this.field_n[var6] = (short)(param2 * this.field_n[var6] / param1);
+              this.field_q[var6] = (short)(param4 * this.field_q[var6] / param1);
+              this.field_z[var6] = (short)(param3 * this.field_z[var6] / param1);
+              var6++;
+              if (var7 == 0) {
+                continue L1;
+              } else {
+                return;
+              }
+            } else {
+              this.a(false);
+              return;
+            }
+          }
         }
-        for (var6 = 0; var6 < ((uh) this).field_y; var6++) {
-            ((uh) this).field_n[var6] = (short)(param2 * ((uh) this).field_n[var6] / param1);
-            ((uh) this).field_q[var6] = (short)(param4 * ((uh) this).field_q[var6] / param1);
-            ((uh) this).field_z[var6] = (short)(param3 * ((uh) this).field_z[var6] / param1);
-        }
-        this.a(false);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var6 = SolKnight.field_L ? 1 : 0;
         int var5 = 0;
+        int var6 = 0;
+        var6 = SolKnight.field_L ? 1 : 0;
+        var5 = 0;
         if (param1 != -32768) {
-            ((uh) this).a(56, -36, 64, 112, -90);
+          this.a(56, -36, 64, 112, -90);
+          L0: while (true) {
+            if (this.field_y > var5) {
+              this.field_n[var5] = (short)(this.field_n[var5] + param0);
+              this.field_q[var5] = (short)(this.field_q[var5] + param2);
+              this.field_z[var5] = (short)(this.field_z[var5] + param3);
+              var5++;
+              if (var6 == 0) {
+                continue L0;
+              } else {
+                return;
+              }
+            } else {
+              this.a(false);
+              return;
+            }
+          }
+        } else {
+          L1: while (true) {
+            if (this.field_y > var5) {
+              this.field_n[var5] = (short)(this.field_n[var5] + param0);
+              this.field_q[var5] = (short)(this.field_q[var5] + param2);
+              this.field_z[var5] = (short)(this.field_z[var5] + param3);
+              var5++;
+              if (var6 == 0) {
+                continue L1;
+              } else {
+                return;
+              }
+            } else {
+              this.a(false);
+              return;
+            }
+          }
         }
-        while (((uh) this).field_y > var5) {
-            ((uh) this).field_n[var5] = (short)(((uh) this).field_n[var5] + param0);
-            ((uh) this).field_q[var5] = (short)(((uh) this).field_q[var5] + param2);
-            ((uh) this).field_z[var5] = (short)(((uh) this).field_z[var5] + param3);
-            var5++;
-        }
-        this.a(false);
     }
 
     uh() {
-        ((uh) this).field_f = false;
-        ((uh) this).field_j = (byte) 0;
+        this.field_f = false;
+        this.field_j = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_P = "This password contains repeated characters, and would be easy to guess";
     }
 }

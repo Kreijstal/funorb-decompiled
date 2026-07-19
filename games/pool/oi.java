@@ -36,10 +36,6 @@ final class oi extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = new int[8192];
         field_r = "Checking";
     }

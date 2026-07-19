@@ -11,22 +11,22 @@ final class lk {
 
     final int a(int param0) {
         if (param0 == 0) {
-          if (((lk) this).field_c != null) {
-            if (0 == ((lk) this).field_c.length) {
+          if (this.field_c != null) {
+            if (0 == this.field_c.length) {
               return 0;
             } else {
-              return ((lk) this).field_c[-1 + ((lk) this).field_c.length];
+              return this.field_c[-1 + this.field_c.length];
             }
           } else {
             return 0;
           }
         } else {
-          field_f = null;
-          if (((lk) this).field_c != null) {
-            if (0 == ((lk) this).field_c.length) {
+          field_f = (int[]) null;
+          if (this.field_c != null) {
+            if (0 == this.field_c.length) {
               return 0;
             } else {
-              return ((lk) this).field_c[-1 + ((lk) this).field_c.length];
+              return this.field_c[-1 + this.field_c.length];
             }
           } else {
             return 0;
@@ -38,12 +38,12 @@ final class lk {
         int var3 = 0;
         int var4 = 0;
         var4 = Geoblox.field_C;
-        if (null != ((lk) this).field_c) {
-          if (((lk) this).field_c.length != 0) {
+        if (null != this.field_c) {
+          if (this.field_c.length != 0) {
             var3 = 1;
             L0: while (true) {
-              if (((lk) this).field_c.length > var3) {
-                if (((lk) this).field_c[var3] + ((lk) this).field_c[-1 + var3] >> 1 <= param1) {
+              if (this.field_c.length > var3) {
+                if (this.field_c[var3] + this.field_c[-1 + var3] >> 505852993 <= param1) {
                   var3++;
                   continue L0;
                 } else {
@@ -51,7 +51,7 @@ final class lk {
                 }
               } else {
                 var3 = 35 / ((param0 - -9) / 51);
-                return ((lk) this).field_c.length + -1;
+                return this.field_c.length + -1;
               }
             }
           } else {
@@ -72,9 +72,9 @@ final class lk {
     }
 
     lk(int param0, int param1, int param2) {
-        ((lk) this).field_d = param0;
-        ((lk) this).field_c = new int[1 + param2];
-        ((lk) this).field_a = param1;
+        this.field_d = param0;
+        this.field_c = new int[1 + param2];
+        this.field_a = param1;
     }
 
     static {

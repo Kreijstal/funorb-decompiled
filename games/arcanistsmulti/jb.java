@@ -26,12 +26,12 @@ abstract class jb extends tf {
             param0.c(param3, (byte) -88);
             param0.f(param2, (byte) -97);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "jb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "jb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void c(int param0) {
-        int var1 = -95;
+        int var1 = 95 / ((53 - param0) / 55);
         field_z = null;
         field_u = null;
         field_m = null;
@@ -43,21 +43,17 @@ abstract class jb extends tf {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 116 / ((81 - param2) / 39);
-        int var6 = ((jb) this).field_n << 3;
-        param3 = (var6 & 15) + (param3 << 4);
-        int var7 = ((jb) this).field_w << 3;
-        param1 = (var7 & 15) + (param1 << 4);
-        ((jb) this).a(var6, var7, param3, param1, param4, param0);
+        int var6 = this.field_n << 1634213347;
+        param3 = (var6 & 15) + (param3 << -589035420);
+        int var7 = this.field_w << 121130179;
+        param1 = (var7 & 15) + (param1 << 1819411940);
+        this.a(var6, var7, param3, param1, param4, param0);
     }
 
     jb() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Macroing or use of bots";
         field_p = false;
         field_s = new int[128];

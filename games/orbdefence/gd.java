@@ -7,22 +7,52 @@ final class gd {
     static String field_a;
 
     final static bl a(int param0) {
-        if (!(ed.field_h != null)) {
-            ed.field_h = new bl();
-            ed.field_h.a(lm.field_f, -2699);
-            ed.field_h.field_j = pc.field_bb;
-            ed.field_h.field_r = 7697781;
-            ed.field_h.field_d = 4;
-            ed.field_h.field_a = 5;
-            ed.field_h.field_o = 0;
-            ed.field_h.field_h = 6;
-            ed.field_h.field_i = 14;
-            ed.field_h.field_k = 2763306;
+        if (param0 != 0) {
+          L0: {
+            field_a = (String) null;
+            if (ed.field_h == null) {
+              ed.field_h = new bl();
+              ed.field_h.a(lm.field_f, -2699);
+              ed.field_h.field_j = pc.field_bb;
+              ed.field_h.field_r = 7697781;
+              ed.field_h.field_d = 4;
+              ed.field_h.field_a = 5;
+              ed.field_h.field_o = 0;
+              ed.field_h.field_h = 6;
+              ed.field_h.field_i = 14;
+              ed.field_h.field_k = 2763306;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return ed.field_h;
+        } else {
+          L1: {
+            if (ed.field_h == null) {
+              ed.field_h = new bl();
+              ed.field_h.a(lm.field_f, -2699);
+              ed.field_h.field_j = pc.field_bb;
+              ed.field_h.field_r = 7697781;
+              ed.field_h.field_d = 4;
+              ed.field_h.field_a = 5;
+              ed.field_h.field_o = 0;
+              ed.field_h.field_h = 6;
+              ed.field_h.field_i = 14;
+              ed.field_h.field_k = 2763306;
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          return ed.field_h;
         }
-        return ed.field_h;
     }
 
     public static void b(int param0) {
+        if (param0 != 24) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -42,12 +72,33 @@ final class gd {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
                 cd.field_t.field_i = cd.field_t.field_i + 24;
-                return;
+                if (param0 <= 38) {
+                  field_b = (hj[]) null;
+                  return;
+                } else {
+                  return;
+                }
               }
-              cd.field_t.field_i = cd.field_t.field_i + 24;
+              L1: {
+                cd.field_t.field_i = cd.field_t.field_i + 24;
+                if (param0 > 38) {
+                  break L1;
+                } else {
+                  field_b = (hj[]) null;
+                  break L1;
+                }
+              }
               return;
             } else {
-              cd.field_t.field_i = cd.field_t.field_i + 24;
+              L2: {
+                cd.field_t.field_i = cd.field_t.field_i + 24;
+                if (param0 > 38) {
+                  break L2;
+                } else {
+                  field_b = (hj[]) null;
+                  break L2;
+                }
+              }
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -58,10 +109,6 @@ final class gd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "CHOMPO";
     }
 }

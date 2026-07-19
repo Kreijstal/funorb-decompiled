@@ -14,27 +14,29 @@ final class fa {
 
     final static void a(String param0, int param1, boolean param2) {
         mi.field_I = param2;
+        if (param1 != 480) {
+            return;
+        }
         try {
             va.field_d = true;
             Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
-            kd.field_e.a(false, (el) (Object) Geoblox.field_y);
+            kd.field_e.a(false, Geoblox.field_y);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + 480 + ',' + param2 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_d = null;
+        if (param0 != 30970) {
+            return;
+        }
         field_h = null;
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 60;
         field_f = 14;
         field_d = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";

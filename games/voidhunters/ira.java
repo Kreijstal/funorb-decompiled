@@ -9,8 +9,9 @@ final class ira extends mfb {
     }
 
     final boolean h(byte param0) {
+        int discarded$0 = 0;
         if (param0 <= 18) {
-            int discarded$0 = ((ira) this).a(false);
+            discarded$0 = this.a(false);
             return false;
         }
         return false;
@@ -25,7 +26,7 @@ final class ira extends mfb {
 
     final int a(boolean param0) {
         if (param0) {
-            field_b = null;
+            field_b = (lkb) null;
             return 41;
         }
         return 41;
@@ -38,7 +39,7 @@ final class ira extends mfb {
 
     final int f(byte param0) {
         if (param0 < 0) {
-            field_c = null;
+            field_c = (java.awt.Frame) null;
             return fja.field_o;
         }
         return fja.field_o;
@@ -50,21 +51,28 @@ final class ira extends mfb {
     }
 
     public static void l(int param0) {
+        boolean discarded$0 = false;
         field_b = null;
         field_c = null;
+        if (param0 != 17036) {
+            String var2 = (String) null;
+            discarded$0 = ira.a(25L, (String) null, -89);
+        }
     }
 
     final int a(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((ira) this).c((byte) -16);
+            discarded$0 = this.c((byte) -16);
             return eg.field_o;
         }
         return eg.field_o;
     }
 
     final int g(byte param0) {
+        int discarded$0 = 0;
         if (param0 > -12) {
-            int discarded$0 = ((ira) this).d((byte) -91);
+            discarded$0 = this.d((byte) -91);
             return nob.field_p;
         }
         return nob.field_p;
@@ -83,9 +91,10 @@ final class ira extends mfb {
     }
 
     final static boolean a(long param0, String param1, int param2) {
+        boolean discarded$2 = false;
         vu var4 = null;
         RuntimeException var4_ref = null;
-        Object var5 = null;
+        String var5 = null;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -95,6 +104,7 @@ final class ira extends mfb {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_9_0 = 0;
@@ -114,8 +124,8 @@ final class ira extends mfb {
               if (param2 == 41) {
                 break L1;
               } else {
-                var5 = null;
-                boolean discarded$2 = ira.a(1L, (String) null, 31);
+                var5 = (String) null;
+                discarded$2 = ira.a(1L, (String) null, 31);
                 break L1;
               }
             }
@@ -126,7 +136,8 @@ final class ira extends mfb {
                 if (null != var4.field_Ab) {
                   stackOut_5_0 = 1;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L2;
                 }
@@ -150,29 +161,30 @@ final class ira extends mfb {
               stackIn_11_0 = stackOut_10_0;
               break L3;
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4_ref;
+            stackOut_12_0 = (RuntimeException) (var4_ref);
             stackOut_12_1 = new StringBuilder().append("ira.G(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -180,9 +192,13 @@ final class ira extends mfb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_11_0 != 0;
+        }
     }
 
     final int g(int param0) {
@@ -194,7 +210,7 @@ final class ira extends mfb {
 
     final boolean h(int param0) {
         if (param0 != -2291) {
-            field_b = null;
+            field_b = (lkb) null;
             return true;
         }
         return true;
@@ -202,7 +218,7 @@ final class ira extends mfb {
 
     final int d(byte param0) {
         if (param0 >= -52) {
-            field_b = null;
+            field_b = (lkb) null;
             return mqa.field_s;
         }
         return mqa.field_s;
@@ -221,10 +237,6 @@ final class ira extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new lkb();
     }
 }

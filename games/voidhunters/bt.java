@@ -9,46 +9,48 @@ final class bt {
     final void b(int param0) {
         jaggl.OpenGL.glEndList();
         if (param0 != 4864) {
-            ((bt) this).b(30);
+            this.b(30);
         }
     }
 
     public static void a(int param0) {
+        if (param0 != -4509) {
+            field_b = (String) null;
+            field_b = null;
+            field_a = null;
+            return;
+        }
         field_b = null;
         field_a = null;
     }
 
     final void a(boolean param0, char param1) {
         if (!param0) {
-          ((bt) this).field_c = 21;
-          jaggl.OpenGL.glCallList(((bt) this).field_c - -param1);
+          this.field_c = 21;
+          jaggl.OpenGL.glCallList(this.field_c - -param1);
           return;
         } else {
-          jaggl.OpenGL.glCallList(((bt) this).field_c - -param1);
+          jaggl.OpenGL.glCallList(this.field_c - -param1);
           return;
         }
     }
 
     bt(qfa param0, int param1) {
         try {
-            ((bt) this).field_c = jaggl.OpenGL.glGenLists(param1);
+            this.field_c = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int param1) {
-        jaggl.OpenGL.glNewList(((bt) this).field_c - -param1, 4864);
+        jaggl.OpenGL.glNewList(this.field_c - -param1, 4864);
         if (param0 >= -79) {
-            field_a = null;
+            field_a = (ds) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Armageddon in <%0>...";
     }
 }

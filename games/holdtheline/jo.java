@@ -7,15 +7,14 @@ abstract class jo {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 != 108) {
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jo.A(";
     }
 }

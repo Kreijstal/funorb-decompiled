@@ -10,8 +10,8 @@ final class fl {
     final static void a(int param0, String param1, String[] param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        Object var6 = null;
-        Object var7 = null;
+        String[] var6 = null;
+        String[] var7 = null;
         String[] var8 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
@@ -61,7 +61,7 @@ final class fl {
               if (param0 == 20657) {
                 break L1;
               } else {
-                var6 = null;
+                var6 = (String[]) null;
                 fl.a(49, (String) null, (String[]) null, 7);
                 break L1;
               }
@@ -71,7 +71,7 @@ final class fl {
                 if (100 > param3) {
                   break L2;
                 } else {
-                  if (param3 <= 105) {
+                  if ((param3 ^ -1) >= -106) {
                     var8 = param2;
                     ao.a(var8, param0 ^ -20688);
                     fh.field_i = ho.a((byte) 120, param2);
@@ -103,7 +103,7 @@ final class fl {
                 }
               }
               fh.field_i = oj.a(stackIn_7_0, stackIn_7_1 != 0);
-              var7 = null;
+              var7 = (String[]) null;
               ao.a((String[]) null, -127);
               return;
             }
@@ -112,23 +112,23 @@ final class fl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("fl.A(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -137,23 +137,23 @@ final class fl {
             }
           }
           L5: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -161,7 +161,7 @@ final class fl {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ')');
         }
     }
 
@@ -185,7 +185,10 @@ final class fl {
         int var3 = 0;
         int var4 = 0;
         try {
-            var2 = new qb(param1.a("", "final_frame.jpg", -1), (java.awt.Component) (Object) on.field_c);
+            if (param0 != -2389) {
+                field_a = true;
+            }
+            var2 = new qb(param1.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) on.field_c));
             var3 = var2.field_q;
             var4 = var2.field_y;
             ec.a(65280);
@@ -198,15 +201,11 @@ final class fl {
             gm.field_l.field_o = mi.field_E.field_y;
             oo.c(-15405);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "fl.B(" + -2389 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_c = "Reading Book of Overlight";
     }

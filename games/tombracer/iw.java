@@ -11,9 +11,18 @@ final class iw {
     }
 
     public static void a(boolean param0) {
-        field_a = null;
-        field_c = null;
-        field_b = null;
+        if (param0) {
+          field_b = (String) null;
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static void a(byte param0, boolean param1) {
@@ -33,7 +42,7 @@ final class iw {
         }
         rm.field_e = stackIn_3_0;
         nra.field_c = new jea(0L, (jea) null);
-        nra.field_c.b(param0 ^ 65, (jea) (Object) rm.field_e.field_a);
+        nra.field_c.b(param0 ^ 65, rm.field_e.field_a);
         nra.field_c.b(param0 ^ 68, bc.field_b);
         hf.field_a = new jea(0L, lma.field_r);
         if (param0 != -64) {
@@ -57,10 +66,6 @@ final class iw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Quick Chat Help";
         field_b = "Play rated game";
         field_c = new ica();

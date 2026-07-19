@@ -15,24 +15,20 @@ final class ot {
     }
 
     final static void a(int param0) {
-        Object var2 = null;
+        String var2 = null;
         if (param0 > -94) {
-          field_c = null;
-          var2 = null;
+          field_c = (String) null;
+          var2 = (String) null;
           uhb.a((String) null, "", 0);
           return;
         } else {
-          var2 = null;
+          var2 = (String) null;
           uhb.a((String) null, "", 0);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Hide players in <%0>'s game";
         field_a = "OpenGL";
     }

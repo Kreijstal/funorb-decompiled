@@ -9,9 +9,9 @@ final class af {
 
     final boolean b(int param0) {
         if (param0 < -37) {
-          if ((Object) (Object) hp.field_z != this) {
-            if (this != (Object) (Object) td.field_b) {
-              if ((Object) (Object) df.field_j == this) {
+          if (hp.field_z != this) {
+            if (this != td.field_b) {
+              if (df.field_j == this) {
                 return true;
               } else {
                 return false;

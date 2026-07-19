@@ -10,7 +10,7 @@ final class ud {
         if (0 != (e.field_a[param1] & 41)) {
             return 512;
         }
-        if (!(param1 == 15)) {
+        if (!(-16 == (param1 ^ -1))) {
             return 1024;
         }
         return 128;
@@ -19,9 +19,12 @@ final class ud {
     final static void a(int param0, float param1, String param2) {
         try {
             pb.field_a = param1;
+            if (param0 != 128) {
+                field_a = (int[][]) null;
+            }
             qi.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ud.B(" + 128 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ud.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,6 +33,14 @@ final class ud {
     }
 
     final static void a(int param0) {
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -53,28 +64,28 @@ final class ud {
                   return;
                 }
               } else {
-                int incrementValue$16 = var2;
+                incrementValue$16 = var2;
                 var2++;
                 var5[incrementValue$16] = 0;
-                int incrementValue$17 = var2;
+                incrementValue$17 = var2;
                 var2++;
                 var5[incrementValue$17] = 0;
-                int incrementValue$18 = var2;
+                incrementValue$18 = var2;
                 var2++;
                 var5[incrementValue$18] = 0;
-                int incrementValue$19 = var2;
+                incrementValue$19 = var2;
                 var2++;
                 var5[incrementValue$19] = 0;
-                int incrementValue$20 = var2;
+                incrementValue$20 = var2;
                 var2++;
                 var5[incrementValue$20] = 0;
-                int incrementValue$21 = var2;
+                incrementValue$21 = var2;
                 var2++;
                 var5[incrementValue$21] = 0;
-                int incrementValue$22 = var2;
+                incrementValue$22 = var2;
                 var2++;
                 var5[incrementValue$22] = 0;
-                int incrementValue$23 = var2;
+                incrementValue$23 = var2;
                 var2++;
                 var5[incrementValue$23] = 0;
                 continue L1;
@@ -84,12 +95,18 @@ final class ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "ud.C(" + param0 + ')');
+          throw sl.a((Throwable) ((Object) var1_ref), "ud.C(" + param0 + ')');
         }
     }
 
     public static void a(boolean param0) {
-        field_a = null;
+        if (!param0) {
+            field_b = (String) null;
+            field_a = (int[][]) null;
+            field_b = null;
+            return;
+        }
+        field_a = (int[][]) null;
         field_b = null;
     }
 

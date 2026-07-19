@@ -51,6 +51,7 @@ abstract class ie {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
@@ -94,8 +95,14 @@ abstract class ie {
         String stackOut_17_2 = null;
         try {
           L0: {
-            dh.a(param1, 20, 32, new cc(param0), new cc(param2), new cc(param13), 1, 320, param12, 5, 16, 20, 0, false, 14, 4, 0, 20, 240, 20);
-            break L0;
+            if (param16 == 10406) {
+              dh.a(param1, param7, param6, new cc(param0), new cc(param2), new cc(param13), param14, param3, param12, param10, param18, param11, param5, false, param15, param9, param17, param4, param8, param19);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +184,7 @@ abstract class ie {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(320).append(',').append(20).append(',').append(0).append(',').append(32).append(',').append(20).append(',').append(240).append(',').append(4).append(',').append(5).append(',').append(20).append(',');
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -225,15 +232,30 @@ abstract class ie {
               break L5;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + 1 + ',' + 14 + ',' + 10406 + ',' + 0 + ',' + 16 + ',' + 20 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param14 + ',' + param15 + ',' + param16 + ',' + param17 + ',' + param18 + ',' + param19 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(byte param0) {
+        ck[] var2 = null;
         field_d = null;
         field_c = null;
-        field_a = null;
-        field_e = null;
+        if (param0 >= -117) {
+          var2 = (ck[]) null;
+          ie.a((ck[]) null, (mm) null, (ck[]) null, 49, -127, -49, -3, 31, 17, -85, 4, 92, (mm) null, (ck[]) null, -45, 72, 26, 15, 123, 106);
+          field_a = null;
+          field_e = null;
+          return;
+        } else {
+          field_a = null;
+          field_e = null;
+          return;
+        }
     }
 
     final int a(long param0, int param1) {

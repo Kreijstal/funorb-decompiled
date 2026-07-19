@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ci extends lc implements gl, rc {
     private boolean field_J;
     private String field_E;
@@ -18,35 +16,38 @@ final class ci extends lc implements gl, rc {
     static rg field_L;
 
     final void b(int param0, String param1) {
+        boolean discarded$0 = false;
         ba var3 = null;
         String var4 = null;
         try {
             if (param0 != 190) {
-                boolean discarded$0 = ci.k(125);
+                discarded$0 = ci.k(125);
             }
-            var3 = ((ci) this).field_I;
+            var3 = this.field_I;
             var4 = param1;
             var3.a(false, var4, true);
-            ((ci) this).field_z.h(117);
+            this.field_z.h(117);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ci.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "ci.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (null != ((ci) this).field_E) {
-            int discarded$0 = sg.field_a.a(((ci) this).field_E, ((ci) this).field_r + (param3 + 20), 15 + (param1 + ((ci) this).field_i), -40 + ((ci) this).field_k, ((ci) this).field_m, 16777215, -1, 1, 0, sg.field_a.field_s);
+        int discarded$0 = 0;
+        if (null != this.field_E) {
+            discarded$0 = sg.field_a.a(this.field_E, this.field_r + (param3 + 20), 15 + (param1 + this.field_i), -40 + this.field_k, this.field_m, 16777215, -1, 1, 0, sg.field_a.field_s);
         }
-        if (((ci) this).field_H != null) {
-            na.a(10 + param3, 134 + param1, ((ci) this).field_k + -20, 4210752);
+        if (this.field_H != null) {
+            na.a(10 + param3, 134 + param1, this.field_k + -20, 4210752);
         }
         super.a(param0, param1, 37, param3);
         if (param2 <= 33) {
-            ((ci) this).field_C = true;
+            this.field_C = true;
         }
     }
 
     final static void a(byte param0, gk param1) {
+        boolean discarded$1 = false;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -94,7 +95,7 @@ final class ci extends lc implements gl, rc {
                       if (param0 == -116) {
                         break L3;
                       } else {
-                        boolean discarded$1 = ci.k(-56);
+                        discarded$1 = ci.k(-56);
                         break L3;
                       }
                     }
@@ -103,7 +104,7 @@ final class ci extends lc implements gl, rc {
                     var5 = q.field_G[var9];
                     var5.a((byte) -26, 6, 6, 6, 1);
                     var5.a(true);
-                    var6 = new int[]{var5.field_n + var5.field_e >> 1, var5.field_N + var5.field_H >> 1, var5.field_D + var5.field_R >> 1};
+                    var6 = new int[]{var5.field_n + var5.field_e >> -229321023, var5.field_N + var5.field_H >> 1528523553, var5.field_D + var5.field_R >> -1001305055};
                     li.field_e[var9] = var6;
                     var5.a(-var6[1], 126, -var6[2], -var6[0]);
                     var9++;
@@ -121,23 +122,23 @@ final class ci extends lc implements gl, rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("ci.W(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -145,7 +146,7 @@ final class ci extends lc implements gl, rc {
               break L4;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
@@ -175,24 +176,24 @@ final class ci extends lc implements gl, rc {
               if (param0 > 6) {
                 break L1;
               } else {
-                ((ci) this).field_J = false;
+                this.field_J = false;
                 break L1;
               }
             }
             L2: {
-              if (param4 == ((ci) this).field_D) {
+              if (param4 == this.field_D) {
                 this.b(false);
                 break L2;
               } else {
-                if (((ci) this).field_H != param4) {
-                  if (param4 != ((ci) this).field_K) {
+                if (this.field_H != param4) {
+                  if (param4 != this.field_K) {
                     break L2;
                   } else {
-                    if (((ci) this).field_J) {
+                    if (this.field_J) {
                       hh.c((byte) -60);
                       break L2;
                     } else {
-                      if (((ci) this).field_B) {
+                      if (this.field_B) {
                         oh.b(true);
                         break L2;
                       } else {
@@ -213,23 +214,23 @@ final class ci extends lc implements gl, rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_0 = (RuntimeException) (var6);
             stackOut_14_1 = new StringBuilder().append("ci.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param4 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -237,28 +238,34 @@ final class ci extends lc implements gl, rc {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
     final String a(int param0) {
-        if (null == ((ci) this).field_I.field_h) {
+        if (null == this.field_I.field_h) {
             return "";
         }
         if (param0 != 0) {
-            ((ci) this).field_B = false;
+            this.field_B = false;
         }
-        return ((ci) this).field_I.field_h;
+        return this.field_I.field_h;
     }
 
     public static void a(boolean param0) {
+        boolean discarded$0 = false;
         field_L = null;
         field_F = null;
         field_G = null;
+        if (param0) {
+            discarded$0 = ci.k(29);
+        }
     }
 
     ci(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (fc) null);
+        hb dupTemp$2 = null;
+        hb dupTemp$3 = null;
         RuntimeException var6 = null;
         jh var6_ref = null;
         tj var7 = null;
@@ -366,8 +373,8 @@ final class ci extends lc implements gl, rc {
               }
             }
             L2: {
-              ((ci) this).field_B = stackIn_4_1 != 0;
-              ((ci) this).field_E = param1;
+              ((ci) (this)).field_B = stackIn_4_1 != 0;
+              this.field_E = param1;
               stackOut_4_0 = this;
               stackIn_6_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
@@ -386,7 +393,7 @@ final class ci extends lc implements gl, rc {
               }
             }
             L3: {
-              ((ci) this).field_C = stackIn_7_1 != 0;
+              ((ci) (this)).field_C = stackIn_7_1 != 0;
               stackOut_7_0 = this;
               stackIn_9_0 = stackOut_7_0;
               stackIn_8_0 = stackOut_7_0;
@@ -405,15 +412,15 @@ final class ci extends lc implements gl, rc {
               }
             }
             L4: {
-              ((ci) this).field_J = stackIn_10_1 != 0;
-              if (!((ci) this).field_J) {
+              ((ci) (this)).field_J = stackIn_10_1 != 0;
+              if (!this.field_J) {
                 break L4;
               } else {
                 L5: {
-                  if (((ci) this).field_C) {
+                  if (this.field_C) {
                     break L5;
                   } else {
-                    if (!((ci) this).field_B) {
+                    if (!this.field_B) {
                       break L4;
                     } else {
                       break L5;
@@ -424,16 +431,16 @@ final class ci extends lc implements gl, rc {
               }
             }
             L6: {
-              ((ci) this).field_I = (ba) (Object) new ti(param0, (sk) this, 100);
-              ((ci) this).field_z = (ba) (Object) new ti("", (sk) this, 20);
-              if (((ci) this).field_J) {
-                ((ci) this).field_D = new wd(mh.field_W, (sk) null);
-                ((ci) this).field_K = new wd(i.field_g, (sk) null);
-                ((ci) this).field_I.field_y = false;
+              this.field_I = (ba) ((Object) new ti(param0, (sk) (this), 100));
+              this.field_z = (ba) ((Object) new ti("", (sk) (this), 20));
+              if (this.field_J) {
+                this.field_D = new wd(mh.field_W, (sk) null);
+                this.field_K = new wd(i.field_g, (sk) null);
+                this.field_I.field_y = false;
                 break L6;
               } else {
                 L7: {
-                  ((ci) this).field_D = new wd(bi.field_k, (sk) null);
+                  this.field_D = new wd(bi.field_k, (sk) null);
                   stackOut_15_0 = this;
                   stackOut_15_1 = null;
                   stackOut_15_2 = null;
@@ -443,7 +450,7 @@ final class ci extends lc implements gl, rc {
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
-                  if (!((ci) this).field_B) {
+                  if (!this.field_B) {
                     stackOut_17_0 = this;
                     stackOut_17_1 = null;
                     stackOut_17_2 = null;
@@ -465,66 +472,66 @@ final class ci extends lc implements gl, rc {
                     break L7;
                   }
                 }
-                ((ci) this).field_K = new wd(stackIn_18_3, (sk) null);
-                if (!((ci) this).field_C) {
+                ((ci) (this)).field_K = new wd(stackIn_18_3, (sk) null);
+                if (!this.field_C) {
                   break L6;
                 } else {
-                  ((ci) this).field_H = new wd(gk.field_m, (sk) this);
+                  this.field_H = new wd(gk.field_m, (sk) (this));
                   break L6;
                 }
               }
             }
             L8: {
-              ((ci) this).field_I.field_j = (fc) (Object) new tc(10000536);
-              ((ci) this).field_z.field_j = (fc) (Object) new wg(10000536);
+              this.field_I.field_j = (fc) ((Object) new tc(10000536));
+              this.field_z.field_j = (fc) ((Object) new wg(10000536));
               var6_ref = new jh();
-              ((ci) this).field_D.field_j = (fc) (Object) var6_ref;
-              if (null == ((ci) this).field_K) {
+              this.field_D.field_j = (fc) ((Object) var6_ref);
+              if (null == this.field_K) {
                 break L8;
               } else {
-                ((ci) this).field_K.field_j = (fc) (Object) var6_ref;
+                this.field_K.field_j = (fc) ((Object) var6_ref);
                 break L8;
               }
             }
             L9: {
-              if (((ci) this).field_H == null) {
+              if (this.field_H == null) {
                 break L9;
               } else {
-                ((ci) this).field_H.field_j = (fc) (Object) var6_ref;
+                this.field_H.field_j = (fc) ((Object) var6_ref);
                 break L9;
               }
             }
             L10: {
-              ((ci) this).field_I.field_q = hf.field_a;
-              if (null == ((ci) this).field_H) {
+              this.field_I.field_q = hf.field_a;
+              if (null == this.field_H) {
                 break L10;
               } else {
-                ((ci) this).field_H.field_q = ge.field_a;
+                this.field_H.field_q = ge.field_a;
                 break L10;
               }
             }
             L11: {
-              if (((ci) this).field_J) {
-                ((ci) this).field_K.field_q = mi.field_e;
+              if (this.field_J) {
+                this.field_K.field_q = mi.field_e;
                 break L11;
               } else {
-                if (!((ci) this).field_B) {
-                  ((ci) this).field_K.field_j = (fc) (Object) new r();
+                if (!this.field_B) {
+                  this.field_K.field_j = (fc) ((Object) new r());
                   break L11;
                 } else {
-                  ((ci) this).field_K.field_q = nf.field_a;
-                  ((ci) this).field_K.field_j = (fc) (Object) new r();
+                  this.field_K.field_q = nf.field_a;
+                  this.field_K.field_j = (fc) ((Object) new r());
                   break L11;
                 }
               }
             }
             L12: {
-              ((ci) this).field_i = 15;
+              this.field_i = 15;
               var7 = sg.field_a;
-              if (((ci) this).field_E == null) {
+              if (this.field_E == null) {
                 break L12;
               } else {
-                ((ci) this).field_i = ((ci) this).field_i + (5 + var7.b(((ci) this).field_E, ((ci) this).field_k - 40, var7.field_s));
+                this.field_i = this.field_i + (5 + var7.b(this.field_E, this.field_k - 40, var7.field_s));
                 break L12;
               }
             }
@@ -544,87 +551,87 @@ final class ci extends lc implements gl, rc {
               }
             }
             L14: {
-              hb dupTemp$2 = new hb(10, ((ci) this).field_i, ((ci) this).field_k + -20, 25, (lk) (Object) ((ci) this).field_I, false, 80, 3, var7, 16777215, var8);
+              dupTemp$2 = new hb(10, this.field_i, this.field_k + -20, 25, this.field_I, false, 80, 3, var7, 16777215, var8);
               var12 = dupTemp$2;
-              ((ci) this).b((lk) (Object) dupTemp$2, true);
-              ((ci) this).field_i = ((ci) this).field_i + (5 + ((lk) (Object) var12).field_m);
-              hb dupTemp$3 = new hb(10, ((ci) this).field_i, -20 + ((ci) this).field_k, 25, (lk) (Object) ((ci) this).field_z, false, 80, 3, var7, 16777215, ae.field_d);
+              this.b(dupTemp$2, true);
+              this.field_i = this.field_i + (5 + ((lk) ((Object) var12)).field_m);
+              dupTemp$3 = new hb(10, this.field_i, -20 + this.field_k, 25, this.field_z, false, 80, 3, var7, 16777215, ae.field_d);
               var13 = dupTemp$3;
-              ((ci) this).b((lk) (Object) dupTemp$3, true);
-              ((ci) this).field_D.field_n = (sk) this;
-              ((ci) this).field_i = ((ci) this).field_i + (5 + ((lk) (Object) var13).field_m);
-              if (((ci) this).field_H == null) {
+              this.b(dupTemp$3, true);
+              this.field_D.field_n = (sk) (this);
+              this.field_i = this.field_i + (5 + ((lk) ((Object) var13)).field_m);
+              if (this.field_H == null) {
                 break L14;
               } else {
-                ((ci) this).field_H.field_n = (sk) this;
+                this.field_H.field_n = (sk) (this);
                 break L14;
               }
             }
             L15: {
-              if (null == ((ci) this).field_K) {
+              if (null == this.field_K) {
                 break L15;
               } else {
-                ((ci) this).field_K.field_n = (sk) this;
+                this.field_K.field_n = (sk) (this);
                 break L15;
               }
             }
             L16: {
-              if (((ci) this).field_H != null) {
-                ((ci) this).field_D.b(30, 80, -95 + ((ci) this).field_k, 85, ((ci) this).field_i);
-                ((ci) this).field_i = ((ci) this).field_i + 60;
+              if (this.field_H != null) {
+                this.field_D.b(30, 80, -95 + this.field_k, 85, this.field_i);
+                this.field_i = this.field_i + 60;
                 break L16;
               } else {
-                ((ci) this).field_D.b(30, 80, -10 + ((ci) this).field_k - 6, 8, ((ci) this).field_i);
-                ((ci) this).field_i = ((ci) this).field_i + 35;
+                this.field_D.b(30, 80, -10 + this.field_k - 6, 8, this.field_i);
+                this.field_i = this.field_i + 35;
                 break L16;
               }
             }
             L17: {
-              if (null == ((ci) this).field_H) {
+              if (null == this.field_H) {
                 break L17;
               } else {
-                ((ci) this).field_H.b(30, 80, -6 + (((ci) this).field_k + -10), 8, ((ci) this).field_i);
-                ((ci) this).field_i = ((ci) this).field_i + 35;
+                this.field_H.b(30, 80, -6 + (this.field_k + -10), 8, this.field_i);
+                this.field_i = this.field_i + 35;
                 break L17;
               }
             }
             L18: {
-              if (null == ((ci) this).field_K) {
+              if (null == this.field_K) {
                 break L18;
               } else {
                 L19: {
-                  if (((ci) this).field_J) {
+                  if (this.field_J) {
                     break L19;
                   } else {
-                    if (!((ci) this).field_B) {
-                      ((ci) this).field_K.b(20, 80, 40, 8, ((ci) this).field_i);
-                      ((ci) this).field_i = ((ci) this).field_i + 25;
+                    if (!this.field_B) {
+                      this.field_K.b(20, 80, 40, 8, this.field_i);
+                      this.field_i = this.field_i + 25;
                       break L18;
                     } else {
                       break L19;
                     }
                   }
                 }
-                ((ci) this).field_K.b(30, 80, -10 + (-6 + ((ci) this).field_k), 8, ((ci) this).field_i);
-                ((ci) this).field_i = ((ci) this).field_i + 35;
+                this.field_K.b(30, 80, -10 + (-6 + this.field_k), 8, this.field_i);
+                this.field_i = this.field_i + 35;
                 break L18;
               }
             }
             L20: {
-              ((ci) this).b(((ci) this).field_i + 3, 80, ((ci) this).field_k, 0, 0);
-              ((ci) this).b((lk) (Object) ((ci) this).field_D, true);
-              if (null == ((ci) this).field_H) {
+              this.b(this.field_i + 3, 80, this.field_k, 0, 0);
+              this.b(this.field_D, true);
+              if (null == this.field_H) {
                 break L20;
               } else {
-                ((ci) this).b((lk) (Object) ((ci) this).field_H, true);
+                this.b(this.field_H, true);
                 break L20;
               }
             }
             L21: {
-              if (((ci) this).field_K == null) {
+              if (this.field_K == null) {
                 break L21;
               } else {
-                ((ci) this).b((lk) (Object) ((ci) this).field_K, true);
+                this.b(this.field_K, true);
                 break L21;
               }
             }
@@ -634,23 +641,23 @@ final class ci extends lc implements gl, rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var6 = decompiledCaughtException;
-            stackOut_57_0 = (RuntimeException) var6;
+            stackOut_57_0 = (RuntimeException) (var6);
             stackOut_57_1 = new StringBuilder().append("ci.<init>(");
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
             stackIn_58_1 = stackOut_57_1;
             if (param0 == null) {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "null";
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
               stackIn_60_2 = stackOut_59_2;
               break L22;
             } else {
-              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
               stackOut_58_2 = "{...}";
               stackIn_60_0 = stackOut_58_0;
               stackIn_60_1 = stackOut_58_1;
@@ -659,23 +666,23 @@ final class ci extends lc implements gl, rc {
             }
           }
           L23: {
-            stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
+            stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
             stackOut_60_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
             stackIn_62_0 = stackOut_60_0;
             stackIn_62_1 = stackOut_60_1;
             stackIn_61_0 = stackOut_60_0;
             stackIn_61_1 = stackOut_60_1;
             if (param1 == null) {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "null";
               stackIn_63_0 = stackOut_62_0;
               stackIn_63_1 = stackOut_62_1;
               stackIn_63_2 = stackOut_62_2;
               break L23;
             } else {
-              stackOut_61_0 = (RuntimeException) (Object) stackIn_61_0;
-              stackOut_61_1 = (StringBuilder) (Object) stackIn_61_1;
+              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
+              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
               stackOut_61_2 = "{...}";
               stackIn_63_0 = stackOut_61_0;
               stackIn_63_1 = stackOut_61_1;
@@ -683,7 +690,7 @@ final class ci extends lc implements gl, rc {
               break L23;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -691,11 +698,12 @@ final class ci extends lc implements gl, rc {
         if (param0 != -100) {
             return;
         }
-        ((ci) this).field_I.h(123);
-        ((ci) this).field_z.h(param0 + 225);
+        this.field_I.h(123);
+        this.field_z.h(param0 + 225);
     }
 
     public final void a(byte param0, ba param1) {
+        boolean discarded$2 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -718,15 +726,15 @@ final class ci extends lc implements gl, rc {
           L0: {
             L1: {
               var3_int = 12 / ((0 - param0) / 33);
-              if (((ci) this).field_I == param1) {
-                boolean discarded$2 = ((ci) this).field_z.a((lk) this, false);
+              if (this.field_I == param1) {
+                discarded$2 = this.field_z.a((lk) (this), false);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (((ci) this).field_z != param1) {
+              if (this.field_z != param1) {
                 break L2;
               } else {
                 this.b(false);
@@ -739,23 +747,23 @@ final class ci extends lc implements gl, rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("ci.F(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -763,7 +771,7 @@ final class ci extends lc implements gl, rc {
               break L3;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -773,10 +781,10 @@ final class ci extends lc implements gl, rc {
             if (td.a(1)) {
               break L1;
             } else {
-              if (((ci) this).field_I.field_h.length() <= 0) {
+              if ((this.field_I.field_h.length() ^ -1) >= -1) {
                 break L0;
               } else {
-                if (0 >= ((ci) this).field_z.field_h.length()) {
+                if (0 >= this.field_z.field_h.length()) {
                   break L0;
                 } else {
                   break L1;
@@ -784,10 +792,17 @@ final class ci extends lc implements gl, rc {
               }
             }
           }
-          rg.a(-8742, ((ci) this).field_I.field_h, ((ci) this).field_z.field_h);
+          rg.a(-8742, this.field_I.field_h, this.field_z.field_h);
           break L0;
         }
-        ((ci) this).field_J = true;
+        L2: {
+          if (!param0) {
+            break L2;
+          } else {
+            this.field_J = true;
+            break L2;
+          }
+        }
     }
 
     final boolean a(lk param0, char param1, int param2, int param3) {
@@ -802,6 +817,7 @@ final class ci extends lc implements gl, rc {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_8_0 = false;
         boolean stackOut_4_0 = false;
@@ -819,44 +835,47 @@ final class ci extends lc implements gl, rc {
             if (!super.a(param0, param1, param2, param3)) {
               if (98 != param2) {
                 if (param2 == 99) {
-                  stackOut_8_0 = ((ci) this).a(param0, 19755);
+                  stackOut_8_0 = this.a(param0, 19755);
                   stackIn_9_0 = stackOut_8_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
                 }
               } else {
-                stackOut_4_0 = ((ci) this).a((byte) -102, param0);
+                stackOut_4_0 = this.a((byte) -102, param0);
                 stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_0 = (RuntimeException) (var5);
             stackOut_10_1 = new StringBuilder().append("ci.E(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L1;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -864,13 +883,21 @@ final class ci extends lc implements gl, rc {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_9_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            return stackIn_9_0;
+          }
+        }
     }
 
     final static boolean k(int param0) {
-        Object var2 = null;
+        gk var2 = null;
         int stackIn_9_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -878,14 +905,14 @@ final class ci extends lc implements gl, rc {
           if (param0 == -31077) {
             break L0;
           } else {
-            var2 = null;
+            var2 = (gk) null;
             ci.a((byte) -62, (gk) null);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (sa.field_k < 20) {
+            if (-21 < (sa.field_k ^ -1)) {
               break L2;
             } else {
               if (!hi.a((byte) -126)) {
@@ -939,7 +966,7 @@ final class ci extends lc implements gl, rc {
               if (param1 >= 81) {
                 break L1;
               } else {
-                ((ci) this).field_I = null;
+                this.field_I = (ba) null;
                 break L1;
               }
             }
@@ -949,23 +976,23 @@ final class ci extends lc implements gl, rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ci.D(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -973,15 +1000,11 @@ final class ci extends lc implements gl, rc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = new bc();
     }
 }

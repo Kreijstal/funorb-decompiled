@@ -23,7 +23,14 @@ final class nm extends mc {
         field_n = null;
         field_A = null;
         field_p = null;
-        field_v = null;
+        if (param0 != 6) {
+          field_v = (String) null;
+          field_v = null;
+          return;
+        } else {
+          field_v = null;
+          return;
+        }
     }
 
     final static void b(byte param0) {
@@ -32,7 +39,7 @@ final class nm extends mc {
           return;
         } else {
           L0: {
-            var1 = (dl) (Object) fm.field_a.c((byte) 125);
+            var1 = (dl) ((Object) fm.field_a.c((byte) 125));
             if (var1 != null) {
               break L0;
             } else {
@@ -41,7 +48,7 @@ final class nm extends mc {
             }
           }
           var1.a(ra.field_g, ra.field_l, ra.field_f, ra.field_j, ra.field_b, true, ra.field_i, ra.field_e);
-          oa.field_u.a((mc) (Object) var1, false);
+          oa.field_u.a(var1, false);
           return;
         }
     }
@@ -50,10 +57,6 @@ final class nm extends mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "Invalid date";
         field_v = "Lobby";
         field_A = "Accept";

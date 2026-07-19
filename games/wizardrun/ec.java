@@ -15,24 +15,27 @@ final class ec {
         try {
             pe.field_B = ih.a((byte) -109) * param2 / 1000;
             hd.a(param0, -125);
+            if (param1 > -61) {
+                ec.a(-127);
+            }
             uk.a(125, param0);
             ab.a(param0, (byte) 1);
             vf.a(256);
             r.c(350);
             jd.field_f = 0 - pe.field_B;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + -82 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_g = null;
         field_d = null;
-        field_f = null;
+        field_f = (byte[][]) null;
         field_b = null;
         field_h = null;
         if (param0 > -13) {
-          field_e = null;
+          field_e = (String) null;
           field_a = null;
           field_e = null;
           return;
@@ -44,10 +47,6 @@ final class ec {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Type your email address again to make sure it's correct";
         field_h = "This entry doesn't match";
         field_f = new byte[1000][];

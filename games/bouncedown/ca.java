@@ -20,29 +20,29 @@ final class ca {
         var4 = Bounce.field_N;
         try {
           L0: {
-            var5 = new boolean[]{false, false, false};
+            var5 = new boolean[]{false, false, param0};
             var1_array = var5;
             var2 = 0;
             L1: while (true) {
-              if (~vk.field_b >= ~var2) {
+              if ((vk.field_b ^ -1) >= (var2 ^ -1)) {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= vk.field_b) {
                     var2 = vk.field_b;
                     L3: while (true) {
-                      if (var2 >= 3) {
+                      if ((var2 ^ -1) <= -4) {
                         var2 = 0;
                         L4: while (true) {
                           if (var2 >= vk.field_b) {
                             var2 = 0;
                             L5: while (true) {
-                              if (~var2 <= ~vk.field_b) {
+                              if ((var2 ^ -1) <= (vk.field_b ^ -1)) {
                                 break L0;
                               } else {
                                 var6 = 1 + var2;
                                 var3 = var6;
                                 L6: while (true) {
-                                  if (~var6 <= ~vk.field_b) {
+                                  if ((var6 ^ -1) <= (vk.field_b ^ -1)) {
                                     var2++;
                                     continue L5;
                                   } else {
@@ -150,7 +150,7 @@ final class ca {
                               if (he.field_n[var2].field_n > 0) {
                                 break L12;
                               } else {
-                                if (he.field_n[var2].field_p != 0) {
+                                if ((he.field_n[var2].field_p ^ -1) != -1) {
                                   break L12;
                                 } else {
                                   he.field_n[var2].field_j = -100.0;
@@ -163,7 +163,7 @@ final class ca {
                               ua.field_c[var2 + (ua.field_b + -3)].field_c = he.field_n[var2].field_u;
                               ua.field_c[var2 + (-3 + ua.field_b)].field_h = he.field_n[var2].field_j - 0.88 * he.field_n[var2].field_e;
                               ua.field_c[ua.field_b + -3 - -var2].field_b = (int)(he.field_n[var2].field_e / 2.0);
-                              if (~(ua.field_b - 3) < ~he.field_n[var2].field_t) {
+                              if ((ua.field_b - 3 ^ -1) < (he.field_n[var2].field_t ^ -1)) {
                                 break L13;
                               } else {
                                 L14: {
@@ -182,7 +182,7 @@ final class ca {
                                         break L15;
                                       }
                                     }
-                                    if (he.field_n[var3].field_i <= 0) {
+                                    if ((he.field_n[var3].field_i ^ -1) >= -1) {
                                       he.field_n[var3].field_p = 2;
                                       he.field_n[var3].field_f = 99;
                                       break L14;
@@ -275,24 +275,28 @@ final class ca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "ca.C(" + false + ')');
+          throw ii.a((Throwable) ((Object) var1), "ca.C(" + param0 + ')');
         }
     }
 
     final static int a(int param0, byte param1) {
+        int discarded$0 = 0;
         int var2 = 0;
-        if ((param0 & 7) != 0) {
+        if (-1 != (param0 & 7 ^ -1)) {
             var2 = 8 + -(7 & param0);
         }
         int var3 = param0 + var2;
         if (param1 != 27) {
-            int discarded$0 = ca.a(-69, (byte) 34);
+            discarded$0 = ca.a(-69, (byte) 34);
         }
         return var3;
     }
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 >= -79) {
+            return;
+        }
         field_e = null;
         field_d = null;
         field_c = null;
@@ -300,10 +304,6 @@ final class ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[8192];
     }
 }

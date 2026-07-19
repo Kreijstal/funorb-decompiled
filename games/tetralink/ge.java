@@ -8,7 +8,7 @@ final class ge {
 
     final wf b() {
         byte[] var1 = this.a();
-        return new wf(22050, var1, 22050 * ((ge) this).field_c / 1000, 22050 * ((ge) this).field_b / 1000);
+        return new wf(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     final static ge a(ah param0, int param1, int param2) {
@@ -41,10 +41,10 @@ final class ge {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((ge) this).field_a[var4] != null) {
-                    var5 = ((ge) this).field_a[var4].field_w * 22050 / 1000;
-                    var6 = ((ge) this).field_a[var4].field_b * 22050 / 1000;
-                    var13 = ((ge) this).field_a[var4].a(var5, ((ge) this).field_a[var4].field_w);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_w * 22050 / 1000;
+                    var6 = this.field_a[var4].field_b * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_w);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -75,9 +75,9 @@ final class ge {
               return new byte[]{};
             }
           } else {
-            if (((ge) this).field_a[var2] != null) {
-              if (((ge) this).field_a[var2].field_w + ((ge) this).field_a[var2].field_b > var1) {
-                var1 = ((ge) this).field_a[var2].field_w + ((ge) this).field_a[var2].field_b;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_w + this.field_a[var2].field_b > var1) {
+                var1 = this.field_a[var2].field_w + this.field_a[var2].field_b;
                 var2++;
                 continue L0;
               } else {
@@ -95,19 +95,19 @@ final class ge {
     private ge(bh param0) {
         int var2 = 0;
         int var3 = 0;
-        ((ge) this).field_a = new ql[10];
+        this.field_a = new ql[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((ge) this).field_c = param0.e(127);
-            ((ge) this).field_b = param0.e(127);
+            this.field_c = param0.e(127);
+            this.field_b = param0.e(127);
             return;
           } else {
             var3 = param0.d((byte) -99);
             if (var3 != 0) {
               param0.field_t = param0.field_t - 1;
-              ((ge) this).field_a[var2] = new ql();
-              ((ge) this).field_a[var2].a(param0);
+              this.field_a[var2] = new ql();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

@@ -6,6 +6,7 @@ final class ipb {
     private tsa[] field_b;
 
     ipb(ij param0) {
+        int incrementValue$4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         tsa var3 = null;
@@ -25,21 +26,21 @@ final class ipb {
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        ((ipb) this).field_a = 0;
+        this.field_a = 0;
         try {
           L0: {
-            ((ipb) this).field_b = new tsa[param0.c(3)];
+            this.field_b = new tsa[param0.c(3)];
             var2_int = 0;
-            var3 = (tsa) (Object) param0.d(0);
+            var3 = (tsa) ((Object) param0.d(0));
             L1: while (true) {
               if (var3 == null) {
                 break L0;
               } else {
                 var3.b(-3846);
-                int incrementValue$4 = var2_int;
+                incrementValue$4 = var2_int;
                 var2_int++;
-                ((ipb) this).field_b[incrementValue$4] = var3;
-                var3 = (tsa) (Object) param0.a((byte) 13);
+                this.field_b[incrementValue$4] = var3;
+                var3 = (tsa) ((Object) param0.a((byte) 13));
                 continue L1;
               }
             }
@@ -48,23 +49,23 @@ final class ipb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("ipb.<init>(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -72,7 +73,7 @@ final class ipb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -85,8 +86,8 @@ final class ipb {
         int stackOut_2_0 = 0;
         if (param0 <= 18) {
           L0: {
-            ((ipb) this).field_b = null;
-            if (((ipb) this).field_a < ((ipb) this).field_b.length) {
+            this.field_b = (tsa[]) null;
+            if (this.field_a < this.field_b.length) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -99,7 +100,7 @@ final class ipb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ipb) this).field_a < ((ipb) this).field_b.length) {
+            if (this.field_a < this.field_b.length) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -115,9 +116,9 @@ final class ipb {
 
     final tsa a(byte param0) {
         int var2 = 75 / ((param0 - 70) / 55);
-        int fieldTemp$0 = ((ipb) this).field_a;
-        ((ipb) this).field_a = ((ipb) this).field_a + 1;
-        return ((ipb) this).field_b[fieldTemp$0];
+        int fieldTemp$0 = this.field_a;
+        this.field_a = this.field_a + 1;
+        return this.field_b[fieldTemp$0];
     }
 
     static {

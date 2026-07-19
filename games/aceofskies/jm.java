@@ -30,14 +30,10 @@ abstract class jm {
 
     final java.net.Socket b(byte param0) throws IOException {
         int var2 = -124 / ((param0 - -69) / 34);
-        return new java.net.Socket(((jm) this).field_e, ((jm) this).field_f);
+        return new java.net.Socket(this.field_e, this.field_f);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Not yet achieved";
         field_d = 5;
         field_c = "Unfortunately your configuration doesn't support fullscreen mode.";

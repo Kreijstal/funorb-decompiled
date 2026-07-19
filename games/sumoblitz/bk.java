@@ -19,29 +19,25 @@ final class bk {
     }
 
     final cj b(int param0) {
-        if (!(null != ((bk) this).field_a)) {
-            ((bk) this).field_a = new cj();
+        if (!(null != this.field_a)) {
+            this.field_a = new cj();
         }
         int var2 = 105 % ((param0 - 3) / 46);
-        ((bk) this).field_a.a(-108, (bk) this);
-        return ((bk) this).field_a;
+        this.field_a.a(-108, (bk) (this));
+        return this.field_a;
     }
 
     bk(ha param0, nj param1, java.awt.Canvas param2) {
         try {
-            ((bk) this).field_c = param2;
-            ((bk) this).field_g = param0;
-            ((bk) this).field_d = param1;
+            this.field_c = param2;
+            this.field_g = param0;
+            this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[4];
     }
 }

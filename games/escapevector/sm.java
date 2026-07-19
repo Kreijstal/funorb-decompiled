@@ -8,31 +8,31 @@ abstract class sm implements el {
     static String field_d;
 
     public final rf a(int param0) {
-        if (!(!((sm) this).c(-107))) {
+        if (!(!this.c(-107))) {
             return re.field_s;
         }
         if (param0 != 17124) {
             sm.a(false, true);
-            if (~td.b(param0 + -16996) > ~(((sm) this).field_c + 350L)) {
+            if ((td.b(param0 + -16996) ^ -1L) > (this.field_c + 350L ^ -1L)) {
                 return of.field_f;
             }
-            return ((sm) this).d(-76);
+            return this.d(-76);
         }
-        if (~td.b(param0 + -16996) > ~(((sm) this).field_c + 350L)) {
+        if ((td.b(param0 + -16996) ^ -1L) > (this.field_c + 350L ^ -1L)) {
             return of.field_f;
         }
-        return ((sm) this).d(-76);
+        return this.d(-76);
     }
 
     public final String b(int param0) {
         int var2 = 103 / ((param0 - -35) / 59);
-        if (((sm) this).c(95)) {
+        if (this.c(95)) {
             return null;
         }
-        if (~(350L + ((sm) this).field_c) < ~td.b(128)) {
+        if ((350L + this.field_c ^ -1L) < (td.b(128) ^ -1L)) {
             return null;
         }
-        return ((sm) this).a((byte) 125);
+        return this.a((byte) 125);
     }
 
     final static int a(int param0, int param1, dk[] param2, int param3) {
@@ -52,6 +52,7 @@ abstract class sm implements el {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
         int stackOut_9_0 = 0;
@@ -75,6 +76,7 @@ abstract class sm implements el {
                 if (var4.length <= var5) {
                   stackOut_12_0 = -1;
                   stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L2: {
@@ -85,7 +87,8 @@ abstract class sm implements el {
                       } else {
                         stackOut_9_0 = var7.field_c;
                         stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     } else {
                       break L2;
@@ -98,30 +101,31 @@ abstract class sm implements el {
             } else {
               stackOut_2_0 = -1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4_ref;
+            stackOut_14_0 = (RuntimeException) (var4_ref);
             stackOut_14_1 = new StringBuilder().append("sm.R(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -129,13 +133,21 @@ abstract class sm implements el {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0;
+          } else {
+            return stackIn_13_0;
+          }
+        }
     }
 
     public final void a(boolean param0) {
-        ((sm) this).field_c = td.b(128);
+        this.field_c = td.b(128);
         if (param0) {
             field_b = -44;
         }
@@ -145,15 +157,21 @@ abstract class sm implements el {
 
     public static void b(boolean param0) {
         field_a = null;
+        if (!param0) {
+            sm.a(false, false);
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     final static void a(qd param0, int param1, boolean param2) {
         c var3 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var3 = om.field_c;
-            var3.a(4, true);
+            var3.a(param1, param2);
             var3.field_m = var3.field_m + 1;
             var4 = var3.field_m;
             var3.f(1, -123);
@@ -163,97 +181,229 @@ abstract class sm implements el {
             var3.a((byte) 127, param0.field_i);
             var3.a((byte) 125, param0.field_j);
             var3.a((byte) 127, param0.field_g);
-            int discarded$0 = var3.c(var4, -76);
+            discarded$0 = var3.c(var4, -76);
             var3.e(86, var3.field_m - var4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + true + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "sm.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(boolean param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
+        pk stackIn_17_0 = null;
+        pk stackIn_18_0 = null;
+        pk stackIn_19_0 = null;
+        int stackIn_19_1 = 0;
+        pk stackIn_50_0 = null;
+        pk stackIn_51_0 = null;
+        pk stackIn_52_0 = null;
+        int stackIn_52_1 = 0;
+        pk stackOut_49_0 = null;
+        pk stackOut_51_0 = null;
+        int stackOut_51_1 = 0;
+        pk stackOut_50_0 = null;
+        int stackOut_50_1 = 0;
+        pk stackOut_16_0 = null;
+        pk stackOut_18_0 = null;
+        int stackOut_18_1 = 0;
+        pk stackOut_17_0 = null;
+        int stackOut_17_1 = 0;
         var3 = EscapeVector.field_A;
-        if (s.field_x > 0) {
-          if (km.field_n == null) {
-            L0: {
-              df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
-              if (null != df.field_d) {
-                var2 = 2;
-                rc.a((java.awt.Canvas) (Object) df.field_d, true);
-                break L0;
-              } else {
-                var2 = 3;
-                break L0;
+        if (!param0) {
+          if (s.field_x > 0) {
+            if (km.field_n == null) {
+              L0: {
+                df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
+                if (null != df.field_d) {
+                  var2 = 2;
+                  rc.a(df.field_d, true);
+                  break L0;
+                } else {
+                  var2 = 3;
+                  break L0;
+                }
               }
-            }
-            L1: {
-              if (null != km.field_n) {
-                break L1;
-              } else {
-                if (!e.field_d) {
+              L1: {
+                if (null != km.field_n) {
                   break L1;
                 } else {
-                  sn.a(var2, 0, param1);
-                  return;
+                  if (!e.field_d) {
+                    break L1;
+                  } else {
+                    sn.a(var2, 0, param1);
+                    return;
+                  }
                 }
               }
-            }
-            return;
-          } else {
-            L2: {
-              df.field_d = km.field_n.a(true);
-              ue.b(2, (byte) 101);
-              if (null != df.field_d) {
-                var2 = 2;
-                rc.a((java.awt.Canvas) (Object) df.field_d, true);
-                break L2;
-              } else {
-                var2 = 3;
-                break L2;
+              return;
+            } else {
+              L2: {
+                stackOut_49_0 = km.field_n;
+                stackIn_51_0 = stackOut_49_0;
+                stackIn_50_0 = stackOut_49_0;
+                if (param0) {
+                  stackOut_51_0 = (pk) ((Object) stackIn_51_0);
+                  stackOut_51_1 = 0;
+                  stackIn_52_0 = stackOut_51_0;
+                  stackIn_52_1 = stackOut_51_1;
+                  break L2;
+                } else {
+                  stackOut_50_0 = (pk) ((Object) stackIn_50_0);
+                  stackOut_50_1 = 1;
+                  stackIn_52_0 = stackOut_50_0;
+                  stackIn_52_1 = stackOut_50_1;
+                  break L2;
+                }
               }
-            }
-            L3: {
-              if (null != km.field_n) {
-                break L3;
-              } else {
-                if (!e.field_d) {
+              L3: {
+                df.field_d = ((pk) (Object) stackIn_52_0).a(stackIn_52_1 != 0);
+                ue.b(2, (byte) 101);
+                if (null != df.field_d) {
+                  var2 = 2;
+                  rc.a(df.field_d, true);
                   break L3;
                 } else {
-                  sn.a(var2, 0, param1);
-                  return;
+                  var2 = 3;
+                  break L3;
                 }
               }
-            }
-            return;
-          }
-        } else {
-          if (aj.b(-104)) {
-            L4: {
-              var2 = 0;
-              if (null != km.field_n) {
-                break L4;
-              } else {
-                if (!e.field_d) {
+              L4: {
+                if (null != km.field_n) {
                   break L4;
                 } else {
-                  sn.a(var2, 0, param1);
-                  return;
+                  if (!e.field_d) {
+                    break L4;
+                  } else {
+                    sn.a(var2, 0, param1);
+                    return;
+                  }
                 }
               }
+              return;
             }
-            return;
           } else {
-            var2 = 1;
-            if (null == km.field_n) {
-              if (e.field_d) {
-                sn.a(var2, 0, param1);
-                return;
+            if (aj.b(-104)) {
+              var2 = 0;
+              if (null == km.field_n) {
+                if (e.field_d) {
+                  sn.a(var2, 0, param1);
+                  return;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
             } else {
+              L5: {
+                var2 = 1;
+                if (null != km.field_n) {
+                  break L5;
+                } else {
+                  if (!e.field_d) {
+                    break L5;
+                  } else {
+                    sn.a(var2, 0, param1);
+                    return;
+                  }
+                }
+              }
               return;
+            }
+          }
+        } else {
+          field_a = (String) null;
+          if (s.field_x > 0) {
+            if (km.field_n == null) {
+              L6: {
+                df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
+                if (null != df.field_d) {
+                  var2 = 2;
+                  rc.a(df.field_d, true);
+                  break L6;
+                } else {
+                  var2 = 3;
+                  break L6;
+                }
+              }
+              if (null == km.field_n) {
+                if (e.field_d) {
+                  sn.a(var2, 0, param1);
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              L7: {
+                stackOut_16_0 = km.field_n;
+                stackIn_18_0 = stackOut_16_0;
+                stackIn_17_0 = stackOut_16_0;
+                if (param0) {
+                  stackOut_18_0 = (pk) ((Object) stackIn_18_0);
+                  stackOut_18_1 = 0;
+                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_1 = stackOut_18_1;
+                  break L7;
+                } else {
+                  stackOut_17_0 = (pk) ((Object) stackIn_17_0);
+                  stackOut_17_1 = 1;
+                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_1 = stackOut_17_1;
+                  break L7;
+                }
+              }
+              L8: {
+                df.field_d = ((pk) (Object) stackIn_19_0).a(stackIn_19_1 != 0);
+                ue.b(2, (byte) 101);
+                if (null != df.field_d) {
+                  var2 = 2;
+                  rc.a(df.field_d, true);
+                  break L8;
+                } else {
+                  var2 = 3;
+                  break L8;
+                }
+              }
+              if (null == km.field_n) {
+                if (e.field_d) {
+                  sn.a(var2, 0, param1);
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          } else {
+            if (aj.b(-104)) {
+              var2 = 0;
+              if (null == km.field_n) {
+                if (e.field_d) {
+                  sn.a(var2, 0, param1);
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              var2 = 1;
+              if (null == km.field_n) {
+                if (e.field_d) {
+                  sn.a(var2, 0, param1);
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
             }
           }
         }
@@ -270,10 +420,6 @@ abstract class sm implements el {
     abstract String a(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_d = "Loading graphics";
     }

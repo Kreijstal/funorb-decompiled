@@ -16,6 +16,11 @@ final class rn implements el {
     static volatile int field_f;
 
     public static void a(byte param0) {
+        if (param0 < 104) {
+            rn.a(43);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -35,6 +40,7 @@ final class rn implements el {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         gm stackOut_2_0 = null;
@@ -52,17 +58,17 @@ final class rn implements el {
             L1: {
               if (!(param4 instanceof ri)) {
                 stackOut_3_0 = null;
-                stackIn_4_0 = (gm) (Object) stackOut_3_0;
+                stackIn_4_0 = (gm) ((Object) stackOut_3_0);
                 break L1;
               } else {
-                stackOut_2_0 = (gm) param4;
+                stackOut_2_0 = (gm) (param4);
                 stackIn_4_0 = stackOut_2_0;
                 break L1;
               }
             }
             L2: {
-              var12 = (ri) (Object) stackIn_4_0;
-              ph.d(param2 + param4.field_w, param1 - -param4.field_k, param4.field_p, param4.field_o, ((rn) this).field_i);
+              var12 = (ri) ((Object) stackIn_4_0);
+              ph.d(param2 + param4.field_w, param1 - -param4.field_k, param4.field_p, param4.field_o, this.field_i);
               if (var12 != null) {
                 break L2;
               } else {
@@ -73,47 +79,49 @@ final class rn implements el {
               var7 = -(2 * var12.field_F) + param4.field_p;
               var8 = param4.field_w + param2 + var12.field_F;
               var9 = var12.field_C + (param1 + param4.field_k);
-              ph.a(var8, var9, var7 + var8, var9, ((rn) this).field_g);
+              ph.a(var8, var9, var7 + var8, var9, this.field_g);
               var10 = var12.a(0) + -1;
               L3: while (true) {
                 if (0 > var10) {
-                  if (((rn) this).field_c == null) {
+                  if (this.field_c == null) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    ((rn) this).field_c.c(var12.field_m, var7 / 2 + var8, var12.field_C + var9 + ((rn) this).field_c.field_q, ((rn) this).field_l, ((rn) this).field_d);
+                    this.field_c.c(var12.field_m, var7 / 2 + var8, var12.field_C + var9 + this.field_c.field_q, this.field_l, this.field_d);
                     return;
                   }
                 } else {
-                  ph.d(var8 - -(var7 * var12.b(var10, 0) / var12.a((byte) -108)), var9, ((rn) this).field_k, ((rn) this).field_h);
+                  ph.d(var8 - -(var7 * var12.b(var10, 0) / var12.a((byte) -108)), var9, this.field_k, this.field_h);
                   var10--;
                   continue L3;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("rn.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -121,41 +129,57 @@ final class rn implements el {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = param0 >> 16;
-        int var4 = param0 & 65535;
-        int var5 = param2 >> 16;
-        int var6 = param2 & 65535;
-        return var4 * var5 + (var3 * param2 - -(var4 * var6 >> 16));
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        var3 = param0 >> 719091120;
+        if (param1 != -18) {
+          field_b = 126;
+          var4 = param0 & 65535;
+          var5 = param2 >> 2096882704;
+          var6 = param2 & 65535;
+          return var4 * var5 + (var3 * param2 - -(var4 * var6 >> 1664227344));
+        } else {
+          var4 = param0 & 65535;
+          var5 = param2 >> 2096882704;
+          var6 = param2 & 65535;
+          return var4 * var5 + (var3 * param2 - -(var4 * var6 >> 1664227344));
+        }
     }
 
     rn(uc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((rn) this).field_g = param3;
-            ((rn) this).field_l = param1;
-            ((rn) this).field_d = param2;
-            ((rn) this).field_h = param6;
-            ((rn) this).field_c = param0;
-            ((rn) this).field_k = param5;
-            ((rn) this).field_i = param4;
+            this.field_g = param3;
+            this.field_l = param1;
+            this.field_d = param2;
+            this.field_h = param6;
+            this.field_c = param0;
+            this.field_k = param5;
+            this.field_i = param4;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static void a(int param0) {
         oh.field_c = 0;
+        if (param0 > -3) {
+            field_j = 64;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 0;
         field_e = (byte) 1;
         field_a = "EXCLUSIVE";

@@ -12,23 +12,33 @@ class lk extends u {
     private String field_h;
 
     final static int[] c(byte param0) {
+        if (param0 != 8) {
+            field_j = false;
+        }
         return new int[8];
     }
 
     final static vj a(boolean param0, boolean param1, int param2, int param3, int param4) {
-        return na.a(true, param2, false, false, true, 1);
+        if (param4 != 8) {
+            field_k = (he) null;
+        }
+        return na.a(param1, param2, false, param0, true, param3);
     }
 
     db b(byte param0) {
         if (param0 != -98) {
-            ((lk) this).field_g = -35L;
+            this.field_g = -35L;
         }
         return si.field_A;
     }
 
     final static void b(int param0) {
+        int[] discarded$0 = null;
         qg.a(true, bg.field_q, ol.field_j, (byte) -11);
         hl.field_b = true;
+        if (param0 != 1) {
+            discarded$0 = lk.c((byte) -37);
+        }
     }
 
     public static void a(int param0) {
@@ -37,9 +47,14 @@ class lk extends u {
         field_i = null;
         field_k = null;
         field_m = null;
+        if (param0 != -27996) {
+            field_k = (he) null;
+        }
     }
 
     final static void a(byte[] param0, int param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -60,10 +75,6 @@ class lk extends u {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
@@ -122,7 +133,7 @@ class lk extends u {
                 var4 = 0;
                 L2: while (true) {
                   if (var4 >= bd.field_M) {
-                    var5 = 0;
+                    var5 = 35 % ((param1 - -12) / 63);
                     var4 = 0;
                     L3: while (true) {
                       if (bd.field_M <= var4) {
@@ -144,21 +155,17 @@ class lk extends u {
                                       var5 = gf.field_o[var4];
                                       var6 = qa.field_J[var4];
                                       var7 = var5 * var6;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      a.field_e[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      a.field_e[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      ll.field_o[var4] = var25;
+                                      ll.field_o[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.l(31760);
-                                      if ((1 & var11) != 0) {
+                                      if (-1 != (1 & var11 ^ -1)) {
                                         var12 = 0;
                                         L8: while (true) {
                                           if (var5 <= var12) {
@@ -175,7 +182,7 @@ class lk extends u {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        byte dupTemp$2 = var17.n(99);
+                                                        dupTemp$2 = var17.n(99);
                                                         var9[var13 * var5 + var12] = dupTemp$2;
                                                         var14 = dupTemp$2;
                                                         stackOut_44_0 = var10;
@@ -223,7 +230,7 @@ class lk extends u {
                                         var12 = 0;
                                         L13: while (true) {
                                           if (var12 >= var7) {
-                                            if ((var11 & 2) == 0) {
+                                            if (-1 == (var11 & 2 ^ -1)) {
                                               break L7;
                                             } else {
                                               var12 = 0;
@@ -232,7 +239,7 @@ class lk extends u {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    byte dupTemp$3 = var17.n(98);
+                                                    dupTemp$3 = var17.n(98);
                                                     var9[var12] = dupTemp$3;
                                                     var13 = dupTemp$3;
                                                     stackOut_28_0 = var10;
@@ -274,7 +281,7 @@ class lk extends u {
                               } else {
                                 L16: {
                                   aj.field_a[var4] = var17.g(-1);
-                                  if (aj.field_a[var4] == 0) {
+                                  if (-1 == (aj.field_a[var4] ^ -1)) {
                                     aj.field_a[var4] = 1;
                                     break L16;
                                   } else {
@@ -314,23 +321,23 @@ class lk extends u {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
+            stackOut_51_0 = (RuntimeException) (var2);
             stackOut_51_1 = new StringBuilder().append("lk.O(");
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param0 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "null";
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
@@ -338,7 +345,7 @@ class lk extends u {
               break L17;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ',' + 87 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ',' + param1 + ')');
         }
     }
 
@@ -347,27 +354,23 @@ class lk extends u {
             return;
         }
         try {
-            param0.a(((lk) this).field_g, (byte) 127);
-            param0.b(1, ((lk) this).field_h);
+            param0.a(this.field_g, (byte) 127);
+            param0.b(1, this.field_h);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     lk(long param0, String param1) {
         try {
-            ((lk) this).field_g = param0;
-            ((lk) this).field_h = param1;
+            this.field_g = param0;
+            this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "lk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "lk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Connection restored.";
         field_j = false;
         field_l = "Use this alternative as your account name";

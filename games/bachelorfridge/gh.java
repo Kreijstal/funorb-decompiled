@@ -7,6 +7,9 @@ final class gh extends td {
     }
 
     final static hk[] c(byte param0) {
+        if (param0 != -67) {
+            return (hk[]) null;
+        }
         return new hk[]{se.field_u, er.field_x, uka.field_k};
     }
 
@@ -18,7 +21,7 @@ final class gh extends td {
         aga var7 = null;
         int var8 = 0;
         aga var9 = null;
-        Object stackIn_3_0 = null;
+        ii stackIn_3_0 = null;
         op stackIn_6_0 = null;
         kk stackIn_15_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -28,11 +31,12 @@ final class gh extends td {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         op stackOut_4_0 = null;
         kk stackOut_14_0 = null;
         op stackOut_5_0 = null;
-        Object stackOut_2_0 = null;
+        ii stackOut_2_0 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         RuntimeException stackOut_18_0 = null;
@@ -44,30 +48,31 @@ final class gh extends td {
         var8 = BachelorFridge.field_y;
         try {
           L0: {
-            var9 = ((gh) this).field_h.a(32, param0);
-            var4 = new kk(((gh) this).field_g, new nq(var9));
+            var9 = this.field_h.a(32, param0);
+            var4 = new kk(this.field_g, new nq(var9));
             var5 = 0;
             if (param1 == 3) {
-              stackOut_4_0 = (op) param0;
+              stackOut_4_0 = (op) (param0);
               stackIn_6_0 = stackOut_4_0;
               L1: while (true) {
                 if (stackIn_6_0.field_z <= var5) {
-                  stackOut_14_0 = (kk) var4;
+                  stackOut_14_0 = (kk) (var4);
                   stackIn_15_0 = stackOut_14_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var6 = 0;
                   L2: while (true) {
                     if (var6 >= param0.field_B) {
                       var5++;
-                      stackOut_5_0 = (op) param0;
+                      stackOut_5_0 = (op) (param0);
                       stackIn_6_0 = stackOut_5_0;
                       continue L1;
                     } else {
                       L3: {
                         if (null != param0.field_a[var5][var6].field_l) {
                           var7 = param0.field_a[var5][var6].field_l;
-                          var4.field_o.a((bw) (Object) new iv(new nq(var7), false, 1, 0, 18), true);
+                          var4.field_o.a(new iv(new nq(var7), false, 1, 0, 18), true);
                           break L3;
                         } else {
                           break L3;
@@ -80,32 +85,33 @@ final class gh extends td {
                 }
               }
             } else {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (ii) null;
               stackIn_3_0 = stackOut_2_0;
-              return (ii) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_0 = (RuntimeException) (var3);
             stackOut_16_1 = new StringBuilder().append("gh.A(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -113,9 +119,13 @@ final class gh extends td {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_15_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return (ii) ((Object) stackIn_15_0);
+        }
     }
 
     static {

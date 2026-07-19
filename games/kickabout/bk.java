@@ -17,24 +17,21 @@ final class bk {
         field_c = null;
         field_h = null;
         field_a = null;
-        int var1 = -7;
+        int var1 = -7 / ((32 - param0) / 62);
         field_f = null;
     }
 
     final static int a(int param0) {
+        int discarded$0 = 0;
         wk.a(nj.a(-70), 0);
         if (param0 != 2) {
-            int discarded$0 = bk.a(31);
+            discarded$0 = bk.a(31);
             return oa.field_a.get(2);
         }
         return oa.field_a.get(2);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Selling";
         field_b = 0L;
         field_d = "Close";

@@ -16,11 +16,22 @@ final class nb {
         field_a = null;
         field_e = null;
         field_c = null;
-        field_b = null;
-        field_d = null;
+        if (param0 <= 84) {
+          nb.a(1);
+          field_b = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_d = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
+        if (param0 != 22) {
+            return;
+        }
         if (wh.field_d) {
             return;
         }
@@ -32,10 +43,6 @@ final class nb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Giant whirling blades concealed in the floor and walls of this room will slice less nimble raiders into chunks.<br><br>Trapped raiders permanently lose 3 <%defence>. (If <%defence> reduced to 0, the raider dies)";
         field_e = new int[]{5, 6, 22, 23, 9};
         field_b = "Loading animations";

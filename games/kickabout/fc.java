@@ -17,6 +17,10 @@ final class fc {
         field_g = null;
         field_c = null;
         field_b = null;
+        if (param0 != 29136) {
+            String var2 = (String) null;
+            fc.a((String) null, -116, 0);
+        }
     }
 
     final static void a(String param0, int param1, int param2) {
@@ -51,7 +55,7 @@ final class fc {
                 if (rk.field_f.field_C) {
                   L2: {
                     var4 = 1;
-                    if (param1 == 8) {
+                    if ((param1 ^ -1) == -9) {
                       L3: {
                         param1 = 2;
                         if (hk.field_G) {
@@ -69,7 +73,7 @@ final class fc {
                     }
                   }
                   L4: {
-                    if (param1 != 10) {
+                    if ((param1 ^ -1) != -11) {
                       break L4;
                     } else {
                       pc.a((byte) -126);
@@ -83,7 +87,7 @@ final class fc {
                     } else {
                       L6: {
                         if (po.field_f) {
-                          param0 = vo.a((byte) -18, mh.field_l, new String[1]);
+                          param0 = vo.a((byte) -18, mh.field_l, new String[]{param0});
                           break L6;
                         } else {
                           break L6;
@@ -101,10 +105,10 @@ final class fc {
                       break L5;
                     }
                   }
-                  if (param1 == 256) {
+                  if (-257 == (param1 ^ -1)) {
                     break L1;
                   } else {
-                    if (param1 == 10) {
+                    if ((param1 ^ -1) == -11) {
                       break L1;
                     } else {
                       if (hk.field_G) {
@@ -126,23 +130,23 @@ final class fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_0 = (RuntimeException) (var3);
             stackOut_23_1 = new StringBuilder().append("fc.A(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -150,15 +154,11 @@ final class fc {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 2;
         field_e = "Slight stagger";
         field_b = "rankings";

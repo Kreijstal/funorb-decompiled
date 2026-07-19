@@ -14,6 +14,7 @@ final class oq extends hq {
     private int field_y;
 
     public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -51,7 +52,7 @@ final class oq extends hq {
               if (param2 == -15112) {
                 break L1;
               } else {
-                ((oq) this).field_s = 28;
+                this.field_s = 28;
                 break L1;
               }
             }
@@ -77,23 +78,23 @@ final class oq extends hq {
               if (!(param4 instanceof gn)) {
                 break L3;
               } else {
-                param0 = param0 & ((gn) (Object) param4).field_F;
+                param0 = param0 & ((gn) ((Object) param4)).field_F;
                 break L3;
               }
             }
             L4: {
               if (param0) {
                 if (var6_int == 0) {
-                  stackOut_14_0 = ((oq) this).field_s;
+                  stackOut_14_0 = this.field_s;
                   stackIn_15_0 = stackOut_14_0;
                   break L4;
                 } else {
-                  stackOut_13_0 = ((oq) this).field_C;
+                  stackOut_13_0 = this.field_C;
                   stackIn_15_0 = stackOut_13_0;
                   break L4;
                 }
               } else {
-                stackOut_11_0 = ((oq) this).field_y;
+                stackOut_11_0 = this.field_y;
                 stackIn_15_0 = stackOut_11_0;
                 break L4;
               }
@@ -111,31 +112,31 @@ final class oq extends hq {
               }
             }
             var8 = stackIn_18_0;
-            jm.a(var7, true, param3 + param4.field_y, ((oq) this).field_A, (-((oq) this).field_A[0].field_u + param4.field_w >> 1) + (param4.field_i + param1), param4.field_n);
-            int discarded$1 = ((oq) this).field_j.a(param4.field_j, param3 - -param4.field_y, param4.field_i + (param1 + -2), param4.field_n, param4.field_w, var8, -1, 1, 1, ((oq) this).field_j.field_C);
+            jm.a(var7, true, param3 + param4.field_y, this.field_A, (-this.field_A[0].field_u + param4.field_w >> -333783327) + (param4.field_i + param1), param4.field_n);
+            discarded$1 = this.field_j.a(param4.field_j, param3 - -param4.field_y, param4.field_i + (param1 + -2), param4.field_n, param4.field_w, var8, -1, 1, 1, this.field_j.field_C);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("oq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param4 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -143,7 +144,7 @@ final class oq extends hq {
               break L6;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
     }
 
@@ -152,27 +153,39 @@ final class oq extends hq {
           se.field_E = 0;
           qj.field_p = false;
           io.field_g = false;
-          if (param0 >= 117) {
+          if (param0 < 117) {
+            oq.c((byte) -11);
             return;
           } else {
-            oq.c((byte) -11);
             return;
           }
         } else {
           qj.field_p = true;
-          if (!pp.field_n) {
+          if (pp.field_n) {
+            ah.a((byte) -86, 21);
+            if (ZombieDawnMulti.field_E) {
+              se.field_E = 0;
+              qj.field_p = false;
+              io.field_g = false;
+              if (param0 < 117) {
+                oq.c((byte) -11);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              if (param0 < 117) {
+                oq.c((byte) -11);
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
             if (param0 < 117) {
               oq.c((byte) -11);
               return;
             } else {
-              return;
-            }
-          } else {
-            ah.a((byte) -86, 21);
-            if (param0 >= 117) {
-              return;
-            } else {
-              oq.c((byte) -11);
               return;
             }
           }
@@ -184,28 +197,24 @@ final class oq extends hq {
     }
 
     private oq(int param0, int param1, int param2) {
-        ((oq) this).field_C = param1;
-        ((oq) this).field_j = ci.field_d;
-        ((oq) this).field_s = param0;
-        ((oq) this).field_y = param2;
-        ((oq) this).field_A = ui.field_k;
+        this.field_C = param1;
+        this.field_j = ci.field_d;
+        this.field_s = param0;
+        this.field_y = param2;
+        this.field_A = ui.field_k;
     }
 
     public static void d(byte param0) {
-        int var1 = 0;
+        int var1 = 121 % ((12 - param0) / 43);
         field_z = null;
         field_v = null;
-        field_u = null;
+        field_u = (int[][]) null;
         field_x = null;
         field_t = null;
         field_w = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "Go Back";
         field_z = "This password contains your email address, and would be easy to guess";
     }

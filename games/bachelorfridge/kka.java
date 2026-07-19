@@ -17,11 +17,11 @@ final class kka extends bw {
         var3 = lka.field_E[param0][param2];
         var3 = var3.trim();
         var3 = var3.toLowerCase();
-        if (var3.equals((Object) (Object) "")) {
+        if (var3.equals("")) {
           return -1;
         } else {
           var4 = 53 / ((4 - param1) / 41);
-          return ((ji) (Object) eo.field_f.a(true, (long)var3.hashCode())).field_h;
+          return ((ji) ((Object) eo.field_f.a(true, (long)var3.hashCode()))).field_h;
         }
     }
 
@@ -30,11 +30,14 @@ final class kka extends bw {
         field_l = null;
         field_h = null;
         field_f = null;
+        if (param0 != -1) {
+            return;
+        }
         field_i = null;
     }
 
     kka() {
-        ((kka) this).field_j = false;
+        this.field_j = false;
     }
 
     static {

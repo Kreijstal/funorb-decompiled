@@ -23,25 +23,29 @@ final class ub {
     private int field_r;
 
     private final String h(int param0) {
-        int var2 = ((ub) this).field_a / 3000;
-        int var3 = ((ub) this).field_a % 3000 / 50;
+        if (param0 != 31214) {
+            return (String) null;
+        }
+        int var2 = this.field_a / 3000;
+        int var3 = this.field_a % 3000 / 50;
         return var2 + ":" + (10 <= var3 ? "" : "0") + var3;
     }
 
     public static void c(byte param0) {
+        va discarded$0 = null;
         field_j = null;
         field_h = null;
         if (param0 <= 59) {
-            va discarded$0 = ub.a(-19, 30);
+            discarded$0 = ub.a(-19, 30);
         }
     }
 
     final void a(boolean param0) {
-        ((ub) this).field_b = ((ub) this).field_b + 1;
+        this.field_b = this.field_b + 1;
         if (!param0) {
-            ((ub) this).field_r = 87;
+            this.field_r = 87;
         }
-        ((ub) this).d((byte) -106);
+        this.d((byte) -106);
     }
 
     final static void a(int param0, byte param1) {
@@ -63,7 +67,7 @@ final class ub {
                   bd.field_i[qd.field_e][b.field_q].d(10, 10, 0);
                   bi.h(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
                   cn.field_f.b(-115);
-                  rk.field_a = 3 * sn.field_f.length >> 2;
+                  rk.field_a = 3 * sn.field_f.length >> 416263970;
                   if (param1 < -25) {
                     break L2;
                   } else {
@@ -82,19 +86,20 @@ final class ub {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "ub.L(" + param0 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) var2), "ub.L(" + param0 + ',' + param1 + ')');
         }
     }
 
     final int j(int param0) {
+        boolean discarded$0 = false;
         if (param0 >= -73) {
-            boolean discarded$0 = ((ub) this).k(123);
+            discarded$0 = this.k(123);
         }
-        return ((ub) this).field_q / 50;
+        return this.field_q / 50;
     }
 
     final void a(boolean param0, byte param1) {
-        ((ub) this).field_l = param0 ? true : false;
+        this.field_l = param0 ? true : false;
         if (param1 != -13) {
             return;
         }
@@ -118,7 +123,7 @@ final class ub {
         if (param0 == 127) {
             return null;
         }
-        field_j = null;
+        field_j = (String) null;
         return null;
     }
 
@@ -126,9 +131,9 @@ final class ub {
         if (param0 != 0) {
             return;
         }
-        ((ub) this).field_e = param1 ? true : false;
+        this.field_e = param1 ? true : false;
         if (!(!param1)) {
-            ((ub) this).field_b = 0;
+            this.field_b = 0;
             this.f(param0 ^ 6);
         }
     }
@@ -137,16 +142,16 @@ final class ub {
         int var3 = 0;
         int var4 = 0;
         int var2 = -1;
-        if (((ub) this).field_p == 1.0f) {
+        if (this.field_p == 1.0f) {
             si.field_Ub[5].a();
             bi.d();
-            ((ub) this).field_o.b(this.h(31214), -5 + bi.field_f, ((ub) this).field_o.field_I + 5, 0, var2);
+            this.field_o.b(this.h(31214), -5 + bi.field_f, this.field_o.field_I + 5, 0, var2);
         } else {
             pl.field_p.a();
             bi.d();
-            ((ub) this).field_o.b(this.h(31214), -5 + bi.field_f, 5 + ((ub) this).field_o.field_I, 2, var2);
-            var3 = (int)(((ub) this).field_p * (float)bi.field_f);
-            var4 = (int)((float)bi.field_a * ((ub) this).field_p);
+            this.field_o.b(this.h(31214), -5 + bi.field_f, 5 + this.field_o.field_I, 2, var2);
+            var3 = (int)(this.field_p * (float)bi.field_f);
+            var4 = (int)((float)bi.field_a * this.field_p);
             si.field_Ub[5].a();
             bi.d();
             pl.field_p.a(bi.field_f - var3, 0, var3, var4);
@@ -155,7 +160,7 @@ final class ub {
         bi.d();
         si.field_Ub[5].h(0, 0, 16777215);
         oc.a((byte) 50);
-        si.field_Ub[5].h(0, 0, 0);
+        si.field_Ub[5].h(0, param0, 0);
     }
 
     private final void c(int param0) {
@@ -169,11 +174,11 @@ final class ub {
           var4 = ZombieDawn.field_J;
           si.field_Ub[2].a();
           bi.d();
-          if (((ub) this).field_s) {
+          if (this.field_s) {
             var2 = dj.field_e.field_hb;
             break L0;
           } else {
-            if (!((ub) this).field_g) {
+            if (!this.field_g) {
               var2 = dj.field_e.field_P;
               break L0;
             } else {
@@ -183,7 +188,7 @@ final class ub {
           }
         }
         L1: {
-          if (!((ub) this).field_s) {
+          if (!this.field_s) {
             stackOut_7_0 = dj.field_e.field_f;
             stackIn_8_0 = stackOut_7_0;
             break L1;
@@ -196,16 +201,16 @@ final class ub {
         L2: {
           L3: {
             var3 = stackIn_8_0;
-            if (((ub) this).field_l) {
+            if (this.field_l) {
               break L3;
             } else {
-              if (!((ub) this).field_g) {
-                if (var3 <= 99) {
-                  ((ub) this).field_o.c(var2 + "/" + var3, 20, 2 * ((ub) this).field_o.field_I + -3, 2, 65793);
+              if (!this.field_g) {
+                if (-100 <= (var3 ^ -1)) {
+                  this.field_o.c(var2 + "/" + var3, 20, 2 * this.field_o.field_I + -3, 2, 65793);
                   break L2;
                 } else {
-                  ((ub) this).field_o.c("/" + var3, 22, ((ub) this).field_o.field_I * 2 - -6, 2, 65793);
-                  ((ub) this).field_o.c(Integer.toString(var2), 15, 6 + ((ub) this).field_o.field_I, 2, 65793);
+                  this.field_o.c("/" + var3, 22, this.field_o.field_I * 2 - -6, 2, 65793);
+                  this.field_o.c(Integer.toString(var2), 15, 6 + this.field_o.field_I, 2, 65793);
                   break L2;
                 }
               } else {
@@ -213,7 +218,7 @@ final class ub {
               }
             }
           }
-          ((ub) this).field_o.c(Integer.toString(var2), 20, ((ub) this).field_o.field_I * 2 - 3, 2, 65793);
+          this.field_o.c(Integer.toString(var2), 20, this.field_o.field_I * 2 - 3, 2, 65793);
           break L2;
         }
         L4: {
@@ -224,7 +229,7 @@ final class ub {
           if (param0 < -20) {
             break L4;
           } else {
-            ((ub) this).field_k = 119;
+            this.field_k = 119;
             break L4;
           }
         }
@@ -234,7 +239,7 @@ final class ub {
     private final void d(int param0, int param1) {
         si.field_Ub[4].a();
         bi.d();
-        ((ub) this).field_o.b(this.b(param0 + -73, param1), -5 + bi.field_f, 5 + ((ub) this).field_o.field_I, param0, -1);
+        this.field_o.b(this.b(param0 + -73, param1), -5 + bi.field_f, 5 + this.field_o.field_I, param0, -1);
         vh.field_e[4].a();
         bi.d();
         si.field_Ub[4].h(0, 0, 16777215);
@@ -246,7 +251,7 @@ final class ub {
         le var2 = null;
         int var3 = 0;
         var3 = ZombieDawn.field_J;
-        ((ub) this).field_k = 0;
+        this.field_k = 0;
         var2 = dj.field_e.field_R.b((byte) 26);
         k.field_t = 0;
         L0: while (true) {
@@ -256,11 +261,11 @@ final class ub {
               L1: {
                 this.c(-58);
                 this.e(param0 + 106);
-                if (((ub) this).field_e) {
+                if (this.field_e) {
                   this.f(6);
                   break L1;
                 } else {
-                  if (!((ub) this).field_g) {
+                  if (!this.field_g) {
                     break L1;
                   } else {
                     this.f(6);
@@ -270,13 +275,13 @@ final class ub {
               }
               L2: {
                 cn.field_f.b(-117);
-                if (((ub) this).field_s) {
+                if (this.field_s) {
                   break L2;
                 } else {
-                  if (((ub) this).field_e) {
+                  if (this.field_e) {
                     break L2;
                   } else {
-                    if (((ub) this).field_g) {
+                    if (this.field_g) {
                       break L2;
                     } else {
                       if (dj.field_e.field_f <= dj.field_e.field_P + k.field_t) {
@@ -299,8 +304,8 @@ final class ub {
                 if (!(var2 instanceof kd)) {
                   break L4;
                 } else {
-                  if (((kd) (Object) var2).i((byte) -126)) {
-                    ((ub) this).field_k = ((ub) this).field_k + 1;
+                  if (((kd) ((Object) var2)).i((byte) -126)) {
+                    this.field_k = this.field_k + 1;
                     break L3;
                   } else {
                     break L4;
@@ -311,23 +316,23 @@ final class ub {
                 break L3;
               } else {
                 L5: {
-                  if (!((ub) this).field_s) {
+                  if (!this.field_s) {
                     break L5;
                   } else {
-                    if (28 != ((ah) (Object) var2).field_t) {
+                    if (28 != ((ah) ((Object) var2)).field_t) {
                       break L3;
                     } else {
                       break L5;
                     }
                   }
                 }
-                if (((ah) (Object) var2).field_F == 18) {
+                if ((((ah) ((Object) var2)).field_F ^ -1) == -19) {
                   break L3;
                 } else {
-                  if (19 == ((ah) (Object) var2).field_t) {
+                  if (19 == ((ah) ((Object) var2)).field_t) {
                     break L3;
                   } else {
-                    if (((ah) (Object) var2).field_J) {
+                    if (((ah) ((Object) var2)).field_J) {
                       break L3;
                     } else {
                       k.field_t = k.field_t + 1;
@@ -344,9 +349,10 @@ final class ub {
     }
 
     final void d(int param0) {
-        ((ub) this).field_c = false;
+        boolean discarded$0 = false;
+        this.field_c = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((ub) this).b(false);
+            discarded$0 = this.b(false);
         }
     }
 
@@ -364,10 +370,10 @@ final class ub {
         }
         L1: {
           L2: {
-            if (!((ub) this).field_c) {
+            if (!this.field_c) {
               break L2;
             } else {
-              if (((ub) this).field_a > 0) {
+              if (-1 > (this.field_a ^ -1)) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;
@@ -384,38 +390,38 @@ final class ub {
     }
 
     final void b(int param0, boolean param1) {
-        ((ub) this).field_g = param1 ? true : false;
+        this.field_g = param1 ? true : false;
         if (param0 != 10) {
             return;
         }
         if (!(!param1)) {
             this.f(6);
-            ((ub) this).field_c = true;
+            this.field_c = true;
         }
     }
 
     final void i(int param0) {
-        if (!(((ub) this).field_r >= 320)) {
-            ((ub) this).field_r = ((ub) this).field_r + 1;
+        if (!((this.field_r ^ -1) <= -321)) {
+            this.field_r = this.field_r + 1;
         }
         if (param0 != 16777215) {
-            ((ub) this).field_g = true;
+            this.field_g = true;
         }
     }
 
     final boolean g(int param0) {
         if (param0 != 16954) {
-            ((ub) this).c(-109, 76);
+            this.c(-109, 76);
         }
-        return ((ub) this).field_k <= 0 ? true : false;
+        return -1 <= (this.field_k ^ -1) ? true : false;
     }
 
     final void b(int param0) {
         int var2 = 0;
         int var3 = 0;
-        if (!((ub) this).field_i) {
+        if (!this.field_i) {
           L0: {
-            if (((ub) this).field_c) {
+            if (this.field_c) {
               var2 = -210 + bd.field_e;
               so.a(vh.field_e[5], var2, 40);
               si.field_Ub[5].b(var2, 40);
@@ -431,16 +437,16 @@ final class ub {
             if (param0 < -59) {
               break L1;
             } else {
-              ((ub) this).c(54, 36);
+              this.c(54, 36);
               break L1;
             }
           }
           L2: {
             L3: {
-              if (((ub) this).field_e) {
+              if (this.field_e) {
                 break L3;
               } else {
-                if (((ub) this).field_g) {
+                if (this.field_g) {
                   break L3;
                 } else {
                   var2 = -70 + nh.field_P;
@@ -468,7 +474,7 @@ final class ub {
           }
           return;
         } else {
-          var2 = id.field_M - -((ub) this).field_n;
+          var2 = id.field_M - -this.field_n;
           bi.b(0, 0, bd.field_e, var2, 0);
           var2++;
           bi.b(0, -var2 + nh.field_P, bd.field_e, var2, 0);
@@ -477,6 +483,10 @@ final class ub {
     }
 
     final static void b(byte param0) {
+        va discarded$0 = null;
+        if (param0 < 43) {
+            discarded$0 = ub.a(124, 35);
+        }
         jm.a((String) null, to.field_d, -901373652);
     }
 
@@ -484,7 +494,7 @@ final class ub {
         String var5 = qi.a(true, 0, jp.field_a, (long)param1, (byte) 113);
         String var3 = var5;
         int var4 = 107 % ((-8 - param0) / 33);
-        return s.a(1938762664, jp.field_i, new String[1]);
+        return s.a(1938762664, jp.field_i, new String[]{var5});
     }
 
     final boolean b(boolean param0) {
@@ -494,7 +504,7 @@ final class ub {
         int stackOut_11_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        if (!((ub) this).field_s) {
+        if (!this.field_s) {
           L0: {
             if (param0) {
               break L0;
@@ -508,10 +518,10 @@ final class ub {
               if (dj.field_e.field_P < dj.field_e.field_f) {
                 break L2;
               } else {
-                if (((ub) this).field_l) {
+                if (this.field_l) {
                   break L2;
                 } else {
-                  if (((ub) this).field_g) {
+                  if (this.field_g) {
                     break L2;
                   } else {
                     stackOut_10_0 = 1;
@@ -546,32 +556,32 @@ final class ub {
         if (param0 != 49) {
             ub.a(110, (byte) 53);
         }
-        ((ub) this).field_s = param1 ? true : false;
+        this.field_s = param1 ? true : false;
         if (param1) {
-            ((ub) this).d((byte) -106);
+            this.d((byte) -106);
             this.c(-53);
         }
     }
 
     final void l(int param0) {
-        ((ub) this).field_a = param0;
+        this.field_a = param0;
     }
 
     final int a(byte param0) {
         int var2 = -41 % ((2 - param0) / 45);
-        return !((ub) this).field_c ? -1 : ((ub) this).field_a / 50;
+        return !this.field_c ? -1 : this.field_a / 50;
     }
 
     private final void f(int param0) {
         ki.a((byte) -103, si.field_Ub[param0]);
         bi.d();
         String var2 = "";
-        if (((ub) this).field_e) {
-            var2 = s.a(1938762664, li.field_f, new String[2]);
-            ((ub) this).field_o.a(var2, bi.field_f / 2, 5 + ((ub) this).field_o.field_I, 2, 65793);
+        if (this.field_e) {
+            var2 = s.a(1938762664, li.field_f, new String[]{Integer.toString(this.field_b), Integer.toString(this.field_k - -this.field_b)});
+            this.field_o.a(var2, bi.field_f / 2, 5 + this.field_o.field_I, 2, 65793);
         } else {
             var2 = kn.field_I + " " + Integer.toString(dj.field_e.field_nb);
-            bj.field_q.a(var2, bi.field_f / 2, 5 + ((ub) this).field_o.field_I, 16777088, 65793);
+            bj.field_q.a(var2, bi.field_f / 2, 5 + this.field_o.field_I, 16777088, 65793);
         }
         pa.a(-21189);
         ki.a((byte) -93, vh.field_e[6]);
@@ -585,7 +595,7 @@ final class ub {
     private final void e(int param0) {
         si.field_Ub[3].a();
         bi.d();
-        ((ub) this).field_o.b(Integer.toString(((ub) this).field_k), -5 + bi.field_f, ((ub) this).field_o.field_I + 5, 1, 65793);
+        this.field_o.b(Integer.toString(this.field_k), -5 + bi.field_f, this.field_o.field_I + 5, 1, 65793);
         vh.field_e[3].a();
         bi.d();
         si.field_Ub[3].h(0, 0, 16777215);
@@ -597,26 +607,28 @@ final class ub {
         if (!param0) {
             return;
         }
-        ((ub) this).field_i = param1 ? true : false;
+        this.field_i = param1 ? true : false;
         if (!(!param1)) {
-            ((ub) this).field_r = 80;
-            ((ub) this).field_n = 0;
-            ((ub) this).field_c = false;
+            this.field_r = 80;
+            this.field_n = 0;
+            this.field_c = false;
         }
     }
 
     final void c(int param0, int param1) {
+        fn discarded$2 = null;
+        fn discarded$3 = null;
         L0: {
-          if (((ub) this).field_i) {
-            if (~((ub) this).field_n <= ~((ub) this).field_r) {
-              if (((ub) this).field_r < ((ub) this).field_n) {
-                ((ub) this).field_n = ((ub) this).field_r;
+          if (this.field_i) {
+            if (this.field_n >= this.field_r) {
+              if (this.field_r < this.field_n) {
+                this.field_n = this.field_r;
                 break L0;
               } else {
                 break L0;
               }
             } else {
-              ((ub) this).field_n = ((ub) this).field_n + 1;
+              this.field_n = this.field_n + 1;
               break L0;
             }
           } else {
@@ -624,19 +636,19 @@ final class ub {
           }
         }
         L1: {
-          if (!((ub) this).field_c) {
+          if (!this.field_c) {
             break L1;
           } else {
-            if (((ub) this).b(true)) {
+            if (this.b(true)) {
               break L1;
             } else {
-              if (((ub) this).g(16954)) {
+              if (this.g(16954)) {
                 break L1;
               } else {
-                if (((ub) this).k(16284)) {
+                if (this.k(16284)) {
                   break L1;
                 } else {
-                  ((ub) this).field_a = ((ub) this).field_a - 1;
+                  this.field_a = this.field_a - 1;
                   break L1;
                 }
               }
@@ -644,11 +656,11 @@ final class ub {
           }
         }
         L2: {
-          ((ub) this).field_q = ((ub) this).field_q + 1;
-          if (1.0f != ((ub) this).field_p) {
-            ((ub) this).field_p = ((ub) this).field_p + -0.029999999329447746f;
-            if (((ub) this).field_p <= 1.0f) {
-              ((ub) this).field_p = 1.0f;
+          this.field_q = this.field_q + 1;
+          if (1.0f != this.field_p) {
+            this.field_p = this.field_p + -0.029999999329447746f;
+            if (this.field_p <= 1.0f) {
+              this.field_p = 1.0f;
               break L2;
             } else {
               break L2;
@@ -658,92 +670,94 @@ final class ub {
           }
         }
         L3: {
-          if (((ub) this).field_a <= param1) {
-            break L3;
-          } else {
-            if (((ub) this).field_a % 1500 == 49) {
-              ((ub) this).field_p = 2.0f;
+          if (this.field_a <= param1) {
+            if ((this.field_a ^ -1) >= -1) {
               break L3;
             } else {
+              if (-551 > (this.field_a ^ -1)) {
+                break L3;
+              } else {
+                if ((this.field_a % 50 ^ -1) != -50) {
+                  break L3;
+                } else {
+                  this.field_p = 2.0f;
+                  discarded$2 = kh.a(47, false);
+                  break L3;
+                }
+              }
+            }
+          } else {
+            if ((this.field_a ^ -1) >= -1) {
               break L3;
+            } else {
+              if (-551 > (this.field_a ^ -1)) {
+                break L3;
+              } else {
+                if ((this.field_a % 50 ^ -1) != -50) {
+                  break L3;
+                } else {
+                  this.field_p = 2.0f;
+                  discarded$3 = kh.a(47, false);
+                  break L3;
+                }
+              }
             }
           }
         }
         L4: {
-          if (((ub) this).field_a <= 0) {
+          if (!this.field_c) {
             break L4;
           } else {
-            if (((ub) this).field_a > 550) {
+            if (1.0f < this.field_p) {
+              this.a(0);
               break L4;
             } else {
-              if (((ub) this).field_a % 50 != 49) {
+              if (-50 != (this.field_a % 50 ^ -1)) {
                 break L4;
               } else {
-                ((ub) this).field_p = 2.0f;
-                fn discarded$1 = kh.a(47, false);
+                this.a(0);
                 break L4;
               }
             }
           }
         }
         L5: {
-          if (!((ub) this).field_c) {
+          if (param0 != this.field_m) {
+            this.d(3, param0);
+            this.field_m = param0;
             break L5;
           } else {
-            if (1.0f < ((ub) this).field_p) {
-              this.a(0);
-              break L5;
-            } else {
-              if (((ub) this).field_a % 50 != 49) {
-                break L5;
-              } else {
-                this.a(0);
-                break L5;
-              }
-            }
-          }
-        }
-        L6: {
-          if (param0 != ((ub) this).field_m) {
-            this.d(3, param0);
-            ((ub) this).field_m = param0;
-            break L6;
-          } else {
-            break L6;
+            break L5;
           }
         }
         cn.field_f.b(124);
     }
 
     ub(int param0) {
-        ((ub) this).field_n = 0;
-        ((ub) this).field_b = 0;
-        ((ub) this).field_l = false;
-        ((ub) this).field_q = 0;
-        ((ub) this).field_m = 0;
-        ((ub) this).field_k = 0;
-        ((ub) this).field_c = true;
-        ((ub) this).field_e = false;
-        ((ub) this).field_p = 1.0f;
-        ((ub) this).field_i = false;
-        ((ub) this).field_s = false;
-        ((ub) this).field_a = 0;
-        ((ub) this).field_g = false;
-        ((ub) this).field_r = 80;
-        ((ub) this).field_a = param0;
-        ((ub) this).field_q = 0;
-        ((ub) this).field_o = sg.field_jb;
+        this.field_n = 0;
+        this.field_b = 0;
+        this.field_l = false;
+        this.field_q = 0;
+        this.field_m = 0;
+        this.field_k = 0;
+        this.field_c = true;
+        this.field_e = false;
+        this.field_p = 1.0f;
+        this.field_i = false;
+        this.field_s = false;
+        this.field_a = 0;
+        this.field_g = false;
+        this.field_r = 80;
+        this.field_a = param0;
+        this.field_q = 0;
+        this.field_o = sg.field_jb;
         this.a(0);
-        this.d(3, ((ub) this).field_m);
-        ((ub) this).d((byte) -106);
+        this.d(3, this.field_m);
+        this.d((byte) -106);
         cn.field_f.b(-123);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "BREACH";
         field_j = "to return to the normal view.";
     }

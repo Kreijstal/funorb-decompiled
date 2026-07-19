@@ -8,6 +8,9 @@ final class ig {
     static int field_a;
 
     public static void b(int param0) {
+        if (param0 != 1) {
+            return;
+        }
         field_d = null;
         field_c = null;
         field_b = null;
@@ -23,10 +26,6 @@ final class ig {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new eh(0, 2, 2, 1);
         field_b = new eh(11, 0, 1, 2);
         field_a = 4;

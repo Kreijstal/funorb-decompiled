@@ -47,8 +47,8 @@ final class wk {
         try {
           L0: {
             L1: {
-              var2_float = (float)((param0 & 16711680) >> 16) / 255.0f;
-              var3 = (float)((param0 & 65280) >> 8) / 255.0f;
+              var2_float = (float)((param0 & 16711680) >> -425703856) / 255.0f;
+              var3 = (float)((param0 & 65280) >> 528660040) / 255.0f;
               var4 = (float)(param0 & 255) / 255.0f;
               if (var2_float > var3) {
                 if (var2_float <= var4) {
@@ -147,7 +147,7 @@ final class wk {
                       break L6;
                     }
                     var8 = stackIn_33_0;
-                    var10 = (int)(0.5f + var7 * (float)63);
+                    var10 = (int)(0.5f + var7 * (float)param1);
                     var11 = (int)(7.0f * var8 + 0.5f);
                     var12 = (int)(0.5f + var9 * 127.0f);
                     stackOut_33_0 = ks.a(var12, var10, -87, var11);
@@ -167,7 +167,7 @@ final class wk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "wk.D(" + param0 + ',' + 63 + ')');
+          throw nb.a((Throwable) ((Object) var2), "wk.D(" + param0 + ',' + param1 + ')');
         }
         return stackIn_34_0;
     }
@@ -175,7 +175,7 @@ final class wk {
     public static void a(byte param0) {
         field_f = null;
         field_e = null;
-        int var1 = 14;
+        int var1 = 14 / ((-6 - param0) / 57);
         field_g = null;
         field_d = null;
         field_b = null;
@@ -187,14 +187,17 @@ final class wk {
         hn var3 = null;
         int var2 = Kickabout.field_G;
         try {
-            var3 = (hn) (Object) da.field_h.g(24009);
+            if (param0 != 50) {
+                field_a = (String) null;
+            }
+            var3 = (hn) ((Object) da.field_h.g(24009));
             while (var3 != null) {
                 tu.field_E.a(var3, false, 0);
-                var3 = (hn) (Object) da.field_h.c(33);
+                var3 = (hn) ((Object) da.field_h.c(param0 ^ 19));
             }
             da.field_h.b(22997);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wk.E(" + 50 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "wk.E(" + param0 + ')');
         }
     }
 
@@ -208,95 +211,102 @@ final class wk {
         int var9 = 0;
         int var10 = 0;
         gr var11 = null;
-        var10 = Kickabout.field_G;
-        var11 = new gr();
-        var3 = new Random();
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= 5) {
+        L0: {
+          var10 = Kickabout.field_G;
+          var11 = new gr();
+          var3 = new Random();
+          var4 = 0;
+          if (param1) {
+            break L0;
+          } else {
+            wk.a(-87L, -8);
+            break L0;
+          }
+        }
+        L1: while (true) {
+          if ((var4 ^ -1) <= -6) {
             return var11;
           } else {
-            L1: {
+            L2: {
               var5 = new up();
               var5.field_q = 0;
-              if (var4 == 0) {
+              if (-1 == (var4 ^ -1)) {
                 var5.field_q = 0;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (var4 == 2) {
-                var5.field_q = 3;
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var4 != 3) {
+              if (-3 == (var4 ^ -1)) {
+                var5.field_q = 3;
                 break L3;
               } else {
-                var5.field_q = 1;
                 break L3;
               }
             }
             L4: {
-              if (param0) {
-                var5.field_q = 0;
+              if (-4 != (var4 ^ -1)) {
                 break L4;
               } else {
+                var5.field_q = 1;
                 break L4;
               }
             }
             L5: {
-              L6: {
+              if (param0) {
+                var5.field_q = 0;
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              L7: {
                 var5.field_e = dq.a((byte) -126, td.field_a.length, var3);
                 var5.field_l = 1 + dq.a((byte) -62, -1 + ce.field_G[var5.field_q].length, var3);
                 var5.field_r = 0;
                 if (!param0) {
-                  break L6;
+                  break L7;
                 } else {
-                  if (var4 != 3) {
+                  if (-4 != (var4 ^ -1)) {
                     var5.field_g = 10;
                     var5.field_o = 10;
                     var5.field_n = 10;
-                    break L5;
-                  } else {
                     break L6;
+                  } else {
+                    break L7;
                   }
                 }
               }
               var5.field_o = 50;
               var5.field_g = 50;
               var5.field_n = 50;
-              break L5;
+              break L6;
             }
             var5.field_h = new int[]{};
             var6 = dq.a((byte) -48, 5, var3);
             var7 = dq.a((byte) -40, 3, var3);
             var8 = dq.a((byte) 107, 3, var3);
             var9 = var8;
-            var9 = var9 | var7 << 4;
-            var9 = var9 | var6 << 8;
+            var9 = var9 | var7 << 193520100;
+            var9 = var9 | var6 << 768241160;
             var5.field_j = var9;
             var11.field_i[var4] = var5;
             var4++;
-            continue L0;
+            continue L1;
           }
         }
     }
 
     final static void a(long param0, int param1) {
         oa.field_a.setTime(new Date(param0));
+        if (param1 != 0) {
+            field_d = (ut[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "games in progress (<%0>)";
         field_a = "Kick";
         field_g = new la[]{new la(0, 0, 896, 1344)};

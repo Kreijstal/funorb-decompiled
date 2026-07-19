@@ -17,13 +17,13 @@ final class bh {
         L0: {
           L1: {
             var2 = -44 % ((param0 - 9) / 63);
-            if (((bh) this).field_a == null) {
+            if (this.field_a == null) {
               break L1;
             } else {
-              if (((bh) this).field_a.length == 0) {
+              if (this.field_a.length == 0) {
                 break L1;
               } else {
-                stackOut_2_0 = ((bh) this).field_a[((bh) this).field_a.length + -1];
+                stackOut_2_0 = this.field_a[this.field_a.length + -1];
                 stackIn_4_0 = stackOut_2_0;
                 break L0;
               }
@@ -41,22 +41,22 @@ final class bh {
         int var4 = 0;
         L0: {
           var4 = Bounce.field_N;
-          if (((bh) this).field_a == null) {
+          if (this.field_a == null) {
             break L0;
           } else {
-            if (((bh) this).field_a.length == 0) {
+            if (this.field_a.length == 0) {
               break L0;
             } else {
               var3 = 1;
               L1: while (true) {
-                if (var3 >= ((bh) this).field_a.length) {
+                if (var3 >= this.field_a.length) {
                   if (param1 >= 9) {
-                    return ((bh) this).field_a.length - 1;
+                    return this.field_a.length - 1;
                   } else {
                     return -26;
                   }
                 } else {
-                  if (((bh) this).field_a[-1 + var3] - -((bh) this).field_a[var3] >> 1 > param0) {
+                  if (this.field_a[-1 + var3] - -this.field_a[var3] >> 1571861633 > param0) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -71,21 +71,20 @@ final class bh {
     }
 
     public static void b(byte param0) {
+        if (param0 < 95) {
+            return;
+        }
         field_d = null;
         field_e = null;
     }
 
     bh(int param0, int param1, int param2) {
-        ((bh) this).field_b = param1;
-        ((bh) this).field_a = new int[param2 - -1];
-        ((bh) this).field_f = param0;
+        this.field_b = param1;
+        this.field_a = new int[param2 - -1];
+        this.field_f = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new eh(6, 0, 4, 2);
         field_c = -1;
     }

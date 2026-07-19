@@ -8,7 +8,7 @@ final class tta extends lea {
         if (!(qga.field_m)) {
             throw new IllegalStateException();
         }
-        sra.field_t = true;
+        sra.field_t = param0;
         jda.a(false, 262144);
         gda.field_c = 0;
     }
@@ -43,12 +43,12 @@ final class tta extends lea {
             var4.a((byte) -3, 1);
             var5 = new ue(param2, param0);
             var5.a(0, false);
-            var4.a((byte) 83, (nv) (Object) var5);
+            var4.a((byte) 83, (nv) (var5));
             var6 = rm.field_a;
-            var7 = (kga) (Object) var6.a(12, param1 + 94);
+            var7 = (kga) ((Object) var6.a(12, param1 + 94));
             var7.b((byte) 123, param1);
-            var4.a((gr) (Object) var5, (byte) 124, (dg) (Object) var7);
-            stackOut_0_0 = (fsa) var4;
+            var4.a(var5, (byte) 124, var7);
+            stackOut_0_0 = (fsa) (var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -56,23 +56,23 @@ final class tta extends lea {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_0 = (RuntimeException) (var4_ref);
             stackOut_2_1 = new StringBuilder().append("tta.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -80,7 +80,7 @@ final class tta extends lea {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -94,10 +94,6 @@ final class tta extends lea {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = 0;
     }
 }

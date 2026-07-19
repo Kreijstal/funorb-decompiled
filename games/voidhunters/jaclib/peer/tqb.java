@@ -10,29 +10,44 @@ public final class tqb {
 
     private final void a(int param0) {
         java.lang.ref.Reference var2 = null;
-        jaclib.peer.PeerReference var3 = null;
-        L0: while (true) {
-          var2 = ((jaclib.peer.tqb) this).b.poll();
-          if (var2 != null) {
-            var3 = (jaclib.peer.PeerReference) (Object) var2;
-            this.a(-22216, var3);
-            continue L0;
-          } else {
-            return;
+        jaclib.peer.PeerReference var4 = null;
+        jaclib.peer.PeerReference var5 = null;
+        if (param0 == -18289) {
+          L0: while (true) {
+            var2 = this.b.poll();
+            if (var2 != null) {
+              var4 = (jaclib.peer.PeerReference) ((Object) var2);
+              this.a(-22216, var4);
+              continue L0;
+            } else {
+              return;
+            }
+          }
+        } else {
+          this.a = (jaclib.peer.PeerReference) null;
+          L1: while (true) {
+            var2 = this.b.poll();
+            if (var2 != null) {
+              var5 = (jaclib.peer.PeerReference) ((Object) var2);
+              this.a(-22216, var5);
+              continue L1;
+            } else {
+              return;
+            }
           }
         }
     }
 
     public tqb() {
-        ((jaclib.peer.tqb) this).b = new java.lang.ref.ReferenceQueue();
+        this.b = new java.lang.ref.ReferenceQueue();
     }
 
     public final void a(byte param0) {
         this.a(-18289);
         L0: while (true) {
-          if (null == ((jaclib.peer.tqb) this).c) {
+          if (null == this.c) {
             if (param0 <= 56) {
-              ((jaclib.peer.tqb) this).b = null;
+              this.b = (java.lang.ref.ReferenceQueue) null;
               this.a(-18289);
               return;
             } else {
@@ -40,24 +55,49 @@ public final class tqb {
               return;
             }
           } else {
-            this.a(-22216, ((jaclib.peer.tqb) this).c);
+            this.a(-22216, this.c);
             continue L0;
           }
         }
     }
 
     private final void a(int param0, jaclib.peer.PeerReference param1) {
-        if (!(param1 != ((jaclib.peer.tqb) this).c)) {
-            ((jaclib.peer.tqb) this).c = param1.b;
+        L0: {
+          if (param1 == this.c) {
+            this.c = param1.b;
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (!(param1 != ((jaclib.peer.tqb) this).a)) {
-            ((jaclib.peer.tqb) this).a = param1.a;
+        L1: {
+          if (param1 == this.a) {
+            this.a = param1.a;
+            break L1;
+          } else {
+            break L1;
+          }
         }
-        if (!(param1.a == null)) {
+        L2: {
+          if (param1.a != null) {
             param1.a.b = param1.b;
+            break L2;
+          } else {
+            break L2;
+          }
         }
-        if (!(param1.b == null)) {
-            param1.b.a = param1.a;
+        if (param0 != -22216) {
+          return;
+        } else {
+          L3: {
+            if (param1.b != null) {
+              param1.b.a = param1.a;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          return;
         }
     }
 
@@ -65,30 +105,30 @@ public final class tqb {
         param0.a = null;
         if (param1 != 25362) {
           L0: {
-            ((jaclib.peer.tqb) this).a = null;
-            param0.b = ((jaclib.peer.tqb) this).c;
-            if (null == ((jaclib.peer.tqb) this).a) {
-              ((jaclib.peer.tqb) this).a = param0;
+            this.a = (jaclib.peer.PeerReference) null;
+            param0.b = this.c;
+            if (null == this.a) {
+              this.a = param0;
               break L0;
             } else {
-              ((jaclib.peer.tqb) this).c.a = param0;
+              this.c.a = param0;
               break L0;
             }
           }
-          ((jaclib.peer.tqb) this).c = param0;
+          this.c = param0;
           return;
         } else {
           L1: {
-            param0.b = ((jaclib.peer.tqb) this).c;
-            if (null == ((jaclib.peer.tqb) this).a) {
-              ((jaclib.peer.tqb) this).a = param0;
+            param0.b = this.c;
+            if (null == this.a) {
+              this.a = param0;
               break L1;
             } else {
-              ((jaclib.peer.tqb) this).c.a = param0;
+              this.c.a = param0;
               break L1;
             }
           }
-          ((jaclib.peer.tqb) this).c = param0;
+          this.c = param0;
           return;
         }
     }
@@ -98,6 +138,6 @@ public final class tqb {
         if (!param0) {
             return;
         }
-        ((jaclib.peer.tqb) this).c = null;
+        this.c = (jaclib.peer.PeerReference) null;
     }
 }

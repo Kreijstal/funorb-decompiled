@@ -12,29 +12,38 @@ final class ao extends ne {
 
     public static void d(int param0) {
         field_n = null;
+        if (param0 != 10625) {
+            field_n = (cn) null;
+            field_i = null;
+            return;
+        }
         field_i = null;
     }
 
     final static String a(int param0) {
+        if (param0 != -21) {
+            ao.d(85);
+            return jj.field_d;
+        }
         return jj.field_d;
     }
 
     ao(long param0, int param1, byte[] param2) {
         try {
-            ((ao) this).field_m = param2;
-            ((ao) this).field_l = param0;
-            ((ao) this).field_j = param1;
+            this.field_m = param2;
+            this.field_l = param0;
+            this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ao.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "ao.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(byte param0) {
         int var1 = 0;
         var1 = -108 / ((param0 - 29) / 43);
-        if (dk.field_c >= 20) {
+        if ((dk.field_c ^ -1) <= -21) {
           if (vk.a(22084)) {
-            if (hf.field_sb > 0) {
+            if ((hf.field_sb ^ -1) < -1) {
               if (dh.a(false)) {
                 return false;
               } else {
@@ -52,10 +61,6 @@ final class ao extends ne {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new String[]{"Pit Immunity", "Such is the dexterity of the <%0> that he can traverse any pit without danger of failure."};
     }
 }

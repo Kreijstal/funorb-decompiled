@@ -14,7 +14,7 @@ final class ia extends jj {
             return s.field_jb;
         }
         int var1 = -18 % ((param0 - 36) / 46);
-        return (java.applet.Applet) (Object) ib.field_l;
+        return (java.applet.Applet) ((Object) ib.field_l);
     }
 
     ia() {
@@ -22,10 +22,6 @@ final class ia extends jj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_lb = "ia.D(";
     }
 }

@@ -9,17 +9,20 @@ final class rp implements Runnable {
     volatile boolean field_d;
 
     final static sj[] a(int param0) {
-        int var1 = -1;
+        int var1 = -121 % ((param0 - -40) / 41);
         return new sj[]{mn.field_j, og.field_x, cc.field_c, lm.field_e, jl.field_g, qn.field_g, sb.field_E, cm.field_a, tn.field_q, md.field_u, vg.field_a, qj.field_a, cn.field_b, sp.field_f};
     }
 
     rp() {
-        ((rp) this).field_c = new id[2];
-        ((rp) this).field_d = false;
-        ((rp) this).field_b = false;
+        this.field_c = new id[2];
+        this.field_d = false;
+        this.field_b = false;
     }
 
     public static void b(int param0) {
+        if (param0 != 2) {
+            return;
+        }
         field_a = null;
     }
 
@@ -27,32 +30,28 @@ final class rp implements Runnable {
         int var1_int = 0;
         id var2 = null;
         int var4 = CrazyCrystals.field_B;
-        ((rp) this).field_b = true;
+        this.field_b = true;
         try {
-            while (!((rp) this).field_d) {
+            while (!this.field_d) {
                 for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((rp) this).field_c[var1_int];
+                    var2 = this.field_c[var1_int];
                     if (var2 == null) {
                     } else {
                         var2.c();
                     }
                 }
                 fh.a(true, 10L);
-                so.a((Object) null, ((rp) this).field_e, true);
+                so.a((Object) null, this.field_e, true);
             }
         } catch (Exception exception) {
-            Object var5 = null;
-            wp.a((Throwable) (Object) exception, (String) null, 21862);
+            String var5 = (String) null;
+            wp.a((Throwable) ((Object) exception), (String) null, 21862);
         } finally {
-            ((rp) this).field_b = false;
+            this.field_b = false;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Achievements This Game";
     }
 }

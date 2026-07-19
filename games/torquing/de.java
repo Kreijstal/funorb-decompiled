@@ -12,15 +12,11 @@ abstract class de {
         field_b = null;
         field_c = null;
         field_a = null;
-        int var1 = 44;
+        int var1 = 44 / ((param0 - 53) / 47);
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "de.A(";
         field_b = "Player names can be up to 12 letters, numbers and underscores";
         field_c = new int[]{33, 34, 36, 120, 210, 1, 30, 87, 30, 36, 36, 36};

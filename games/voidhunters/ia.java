@@ -9,7 +9,7 @@ final class ia {
 
     final static Object a(java.applet.Applet param0, String param1, int param2) throws Throwable {
         if (param2 != 12348) {
-            return null;
+            return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param0).call(param1, (Object[]) null);
     }

@@ -64,9 +64,9 @@ public class me {
     }
 
     public static File a(String param0, int param1) {
-        Object var3 = null;
+        String var3 = null;
         if (param1 <= 10) {
-          var3 = null;
+          var3 = (String) null;
           me.a((String) null, 25, 85);
           return me.a(field_c, param0, false, field_a);
         } else {
@@ -75,10 +75,6 @@ public class me {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_b = new Hashtable(16);
     }

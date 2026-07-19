@@ -13,8 +13,8 @@ abstract class tj extends ri implements nf {
         int stackIn_3_0 = 0;
         int stackOut_1_0 = 0;
         var2 = 28 / ((-29 - param0) / 42);
-        if (((tj) this).field_g.field_u != null) {
-          if (0 == ((tj) this).field_g.field_u.length()) {
+        if (this.field_g.field_u != null) {
+          if (0 == this.field_g.field_u.length()) {
             return true;
           } else {
             return false;
@@ -60,23 +60,23 @@ abstract class tj extends ri implements nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("tj.E(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -84,31 +84,35 @@ abstract class tj extends ri implements nf {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final sc b(boolean param0) {
+        String discarded$2 = null;
         if (!param0) {
-          String discarded$2 = ((tj) this).b(-1);
-          return ((tj) this).a(0, ((tj) this).field_g.field_u);
+          discarded$2 = this.b(-1);
+          return this.a(0, this.field_g.field_u);
         } else {
-          return ((tj) this).a(0, ((tj) this).field_g.field_u);
+          return this.a(0, this.field_g.field_u);
         }
     }
 
     abstract String a(byte param0, String param1);
 
     final static void c(int param0) {
-        Object var2 = null;
+        if (param0 != 0) {
+            return;
+        }
+        String var2 = (String) null;
         cl.a((byte) 41, (String) null, Lexicominos.field_H);
     }
 
     tj(rl param0) {
         try {
-            ((tj) this).field_g = param0;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +137,7 @@ abstract class tj extends ri implements nf {
         try {
           L0: {
             L1: {
-              ((tj) this).a(true);
+              this.a(true);
               if (param0 == 10) {
                 break L1;
               } else {
@@ -147,23 +151,23 @@ abstract class tj extends ri implements nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("tj.I(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -171,7 +175,7 @@ abstract class tj extends ri implements nf {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -180,15 +184,15 @@ abstract class tj extends ri implements nf {
     final String b(int param0) {
         if (param0 <= 21) {
           field_h = -22;
-          return ((tj) this).a((byte) -126, ((tj) this).field_g.field_u);
+          return this.a((byte) -126, this.field_g.field_u);
         } else {
-          return ((tj) this).a((byte) -126, ((tj) this).field_g.field_u);
+          return this.a((byte) -126, this.field_g.field_u);
         }
     }
 
     public static void d(int param0) {
         if (param0 != 0) {
-            field_k = null;
+            field_k = (String) null;
             field_j = null;
             field_k = null;
             return;
@@ -198,10 +202,6 @@ abstract class tj extends ri implements nf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Mouse over an icon for details";
         field_j = new String[]{"Using the cursor keys, the 'SPACE' bar, 'Z', and 'X', move and rotate the falling blocks to make words both across and down.", "If you make more than one word with a block, you get a multiplier bonus."};
         field_i = 0;

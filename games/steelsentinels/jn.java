@@ -14,17 +14,28 @@ final class jn {
     public static void a(byte param0) {
         field_b = null;
         field_d = null;
-        field_f = null;
-        field_h = null;
-        field_e = null;
-        field_a = null;
+        if (param0 <= 55) {
+          field_d = (wk[]) null;
+          field_f = null;
+          field_h = null;
+          field_e = null;
+          field_a = null;
+          return;
+        } else {
+          field_f = null;
+          field_h = null;
+          field_e = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, byte param1, int param2, tg param3) {
         Object var4 = null;
         RuntimeException var4_ref = null;
+        Object var4_ref2 = null;
         Throwable var5 = null;
-        Object var6 = null;
+        tg var6 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
@@ -45,7 +56,7 @@ final class jn {
           L0: {
             L1: {
               if (ja.field_g != null) {
-                fn.a(-26907, 1048576, true, param2, param3);
+                fn.a(-26907, 1048576, param0, param2, param3);
                 break L1;
               } else {
                 break L1;
@@ -53,8 +64,8 @@ final class jn {
             }
             L2: {
               if (null != q.field_f) {
-                var4 = (Object) (Object) fc.field_a;
-                synchronized (var4) {
+                var4_ref2 = fc.field_a;
+                synchronized (var4_ref2) {
                   L3: {
                     q.field_f.a(-1, (byte) 20, param2);
                     if (ml.field_g != param3) {
@@ -65,7 +76,7 @@ final class jn {
                         if (null == ml.field_g) {
                           break L4;
                         } else {
-                          q.field_f.a(true, true, ml.field_g);
+                          q.field_f.a(true, param0, ml.field_g);
                           break L4;
                         }
                       }
@@ -83,7 +94,7 @@ final class jn {
             if (param1 >= 65) {
               break L0;
             } else {
-              var6 = null;
+              var6 = (tg) null;
               jn.a(true, (byte) -9, -7, (tg) null);
               return;
             }
@@ -92,23 +103,23 @@ final class jn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var4_ref;
-            stackOut_18_1 = new StringBuilder().append("jn.B(").append(true).append(',').append(param1).append(',').append(param2).append(',');
+            stackOut_18_0 = (RuntimeException) (var4_ref);
+            stackOut_18_1 = new StringBuilder().append("jn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param3 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -116,15 +127,11 @@ final class jn {
               break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Menu";
         field_e = "Warning: ";
         field_g = true;

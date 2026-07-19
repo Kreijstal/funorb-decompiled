@@ -17,11 +17,18 @@ final class eg extends hf {
 
     public static void b(boolean param0) {
         field_q = null;
+        if (param0) {
+            field_l = (String) null;
+            field_p = null;
+            field_l = null;
+            return;
+        }
         field_p = null;
         field_l = null;
     }
 
     final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
+        int discarded$1 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -30,32 +37,32 @@ final class eg extends hf {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        Object var11 = null;
-        int stackIn_44_0 = 0;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_48_2 = null;
+        CharSequence var11 = null;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_43_0 = 0;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        String stackOut_46_2 = null;
+        int stackOut_40_0 = 0;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
         try {
           L0: {
             L1: {
               if (2 > param2) {
                 break L1;
               } else {
-                if (param2 > 36) {
+                if (-37 > (param2 ^ -1)) {
                   break L1;
                 } else {
                   L2: {
@@ -66,8 +73,8 @@ final class eg extends hf {
                     if (param1 > 2) {
                       break L2;
                     } else {
-                      var11 = null;
-                      int discarded$1 = eg.a((CharSequence) null, (byte) 58, 6, false);
+                      var11 = (CharSequence) null;
+                      discarded$1 = eg.a((CharSequence) null, (byte) 58, 6, false);
                       break L2;
                     }
                   }
@@ -75,8 +82,8 @@ final class eg extends hf {
                   L3: while (true) {
                     if (var7 <= var8) {
                       if (var5 != 0) {
-                        stackOut_43_0 = var6;
-                        stackIn_44_0 = stackOut_43_0;
+                        stackOut_40_0 = var6;
+                        stackIn_41_0 = stackOut_40_0;
                         break L0;
                       } else {
                         throw new NumberFormatException();
@@ -88,7 +95,6 @@ final class eg extends hf {
                           if (var8 == 0) {
                             if (var9 == 45) {
                               var4_int = 1;
-                              var8++;
                               break L4;
                             } else {
                               if (var9 != 43) {
@@ -97,7 +103,6 @@ final class eg extends hf {
                                 if (!param3) {
                                   break L5;
                                 } else {
-                                  var8++;
                                   break L4;
                                 }
                               }
@@ -160,7 +165,6 @@ final class eg extends hf {
                           } else {
                             var5 = 1;
                             var6 = var10;
-                            var8++;
                             break L4;
                           }
                         } else {
@@ -180,43 +184,39 @@ final class eg extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) var4;
-            stackOut_45_1 = new StringBuilder().append("eg.B(");
-            stackIn_47_0 = stackOut_45_0;
-            stackIn_47_1 = stackOut_45_1;
-            stackIn_46_0 = stackOut_45_0;
-            stackIn_46_1 = stackOut_45_1;
+            stackOut_42_0 = (RuntimeException) (var4);
+            stackOut_42_1 = new StringBuilder().append("eg.B(");
+            stackIn_44_0 = stackOut_42_0;
+            stackIn_44_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
             if (param0 == null) {
-              stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-              stackOut_47_1 = (StringBuilder) (Object) stackIn_47_1;
-              stackOut_47_2 = "null";
-              stackIn_48_0 = stackOut_47_0;
-              stackIn_48_1 = stackOut_47_1;
-              stackIn_48_2 = stackOut_47_2;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackOut_44_2 = "null";
+              stackIn_45_0 = stackOut_44_0;
+              stackIn_45_1 = stackOut_44_1;
+              stackIn_45_2 = stackOut_44_2;
               break L11;
             } else {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
-              stackOut_46_2 = "{...}";
-              stackIn_48_0 = stackOut_46_0;
-              stackIn_48_1 = stackOut_46_1;
-              stackIn_48_2 = stackOut_46_2;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackOut_43_2 = "{...}";
+              stackIn_45_0 = stackOut_43_0;
+              stackIn_45_1 = stackOut_43_1;
+              stackIn_45_2 = stackOut_43_2;
               break L11;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_44_0;
+        return stackIn_41_0;
     }
 
     eg() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = -1;
     }
 }

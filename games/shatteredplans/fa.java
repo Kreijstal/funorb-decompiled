@@ -15,9 +15,9 @@ final class fa extends go implements ki {
     final void a(int param0, int param1, vg param2, byte param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((fa) this).field_U = pd.field_k - (((fa) this).field_m + param0);
+            this.field_U = pd.field_k - (this.field_m + param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -35,8 +35,8 @@ final class fa extends go implements ki {
         int stackOut_6_1 = 0;
         int stackOut_5_0 = 0;
         int stackOut_5_1 = 0;
-        if (((fa) this).field_k) {
-          if (((fa) this).field_v != null) {
+        if (this.field_k) {
+          if (this.field_v != null) {
             L0: {
               stackOut_4_0 = bb.field_b;
               stackIn_6_0 = stackOut_4_0;
@@ -55,11 +55,11 @@ final class fa extends go implements ki {
                 break L0;
               }
             }
-            ur.a(stackIn_7_0, stackIn_7_1 != 0, ((fa) this).field_x - ((fa) this).field_U + pd.field_k);
+            ur.a(stackIn_7_0, stackIn_7_1 != 0, this.field_x - this.field_U + pd.field_k);
             if (!param0) {
-              return null;
+              return (String) null;
             } else {
-              return ((fa) this).field_v;
+              return this.field_v;
             }
           } else {
             return null;
@@ -71,28 +71,29 @@ final class fa extends go implements ki {
 
     final void i(int param0) {
         super.i(param0);
-        if (((fa) this).field_V != null) {
-            ((fa) this).field_V.b(-72);
+        if (this.field_V != null) {
+            this.field_V.b(-72);
         }
     }
 
     final void a(gk param0, int param1) {
         try {
             if (param1 != 8945) {
-                field_T = null;
+                field_T = (String) null;
             }
-            ((fa) this).field_V = param0;
+            this.field_V = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final gk a(byte param0) {
+        gk discarded$0 = null;
         if (param0 <= 58) {
-            gk discarded$0 = ((fa) this).a((byte) -52);
-            return ((fa) this).field_V;
+            discarded$0 = this.a((byte) -52);
+            return this.field_V;
         }
-        return ((fa) this).field_V;
+        return this.field_V;
     }
 
     final static void a(int param0, byte param1) {
@@ -125,16 +126,15 @@ final class fa extends go implements ki {
         field_W = null;
         field_Y = null;
         field_X = null;
-        field_Z = null;
+        field_Z = (int[][]) null;
         field_S = null;
         field_J = null;
+        if (param0 != 5) {
+            fa.a(-11, (byte) -25);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Y = "<%0> has entered another game.";
         field_T = "Average rating";
         field_S = "<%0> points, 1 point per turn.";

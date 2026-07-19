@@ -161,7 +161,7 @@ final class nk {
                 stackIn_4_0 = stackOut_3_0;
                 stackIn_4_1 = stackOut_3_1;
                 if (var4 != 0) {
-                  stackOut_5_0 = (int[]) (Object) stackIn_5_0;
+                  stackOut_5_0 = (int[]) ((Object) stackIn_5_0);
                   stackOut_5_1 = stackIn_5_1;
                   stackOut_5_2 = var4;
                   stackIn_6_0 = stackOut_5_0;
@@ -169,7 +169,7 @@ final class nk {
                   stackIn_6_2 = stackOut_5_2;
                   break L1;
                 } else {
-                  stackOut_4_0 = (int[]) (Object) stackIn_4_0;
+                  stackOut_4_0 = (int[]) ((Object) stackIn_4_0);
                   stackOut_4_1 = stackIn_4_1;
                   stackOut_4_2 = 65793;
                   stackIn_6_0 = stackOut_4_0;
@@ -190,6 +190,7 @@ final class nk {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        int incrementValue$0 = 0;
         int var13 = param4;
         for (var14 = -param9; var14 < 0; var14++) {
             var15 = (param5 >> 16) * param12;
@@ -198,7 +199,7 @@ final class nk {
                 if (param2 != 0) {
                     param3 = param0[param6];
                     param2 = 256 - (param2 & 255);
-                    int incrementValue$0 = param6;
+                    incrementValue$0 = param6;
                     param6++;
                     param0[incrementValue$0] = ((param3 & 16711935) * param2 & -16711936 | (param3 & 65280) * param2 & 16711680) >> 8;
                 } else {

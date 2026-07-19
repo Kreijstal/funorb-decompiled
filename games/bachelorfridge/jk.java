@@ -15,6 +15,11 @@ final class jk extends at {
         un.field_i = param0;
         mha.field_g = param2;
         jo.field_t = param1;
+        if (param3 != -64) {
+            field_j = (String) null;
+            ah.field_l = param4;
+            return;
+        }
         ah.field_l = param4;
     }
 
@@ -23,9 +28,9 @@ final class jk extends at {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
+        int stackOut_16_0 = 0;
         var3 = BachelorFridge.field_y;
         try {
           L0: {
@@ -46,10 +51,10 @@ final class jk extends at {
                   if (var1_int == 0) {
                     break L3;
                   } else {
-                    if (fw.field_i.field_g >= 0) {
+                    if ((fw.field_i.field_g ^ -1) <= -1) {
                       var2 = st.field_a[fw.field_i.field_g];
                       if (2 == var2) {
-                        nh.b(-14);
+                        nh.b(param0 + -16);
                         break L3;
                       } else {
                         break L3;
@@ -59,8 +64,16 @@ final class jk extends at {
                     }
                   }
                 }
-                stackOut_14_0 = var2;
-                stackIn_15_0 = stackOut_14_0;
+                L4: {
+                  if (param0 == 2) {
+                    break L4;
+                  } else {
+                    jk.a(-119, 95, 106, (byte) -117, -51);
+                    break L4;
+                  }
+                }
+                stackOut_16_0 = var2;
+                stackIn_17_0 = stackOut_16_0;
                 break L0;
               } else {
                 fw.field_i.b(true);
@@ -76,53 +89,60 @@ final class jk extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "jk.C(" + 2 + ')');
+          throw pe.a((Throwable) ((Object) var1), "jk.C(" + param0 + ')');
         }
-        return stackIn_15_0;
+        return stackIn_17_0;
     }
 
     public static void d(byte param0) {
+        int discarded$0 = 0;
         field_p = null;
         field_k = null;
         field_j = null;
         field_l = null;
         field_o = null;
+        if (param0 >= -77) {
+            discarded$0 = jk.d(-67);
+        }
     }
 
     final boolean c(byte param0) {
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
         int var2 = 0;
-        if (((jk) this).field_m == 25) {
-            if (((jk) this).field_q.field_s.i(-90)) {
-                int fieldTemp$0 = ((jk) this).field_m - 1;
-                ((jk) this).field_m = ((jk) this).field_m - 1;
-                if (!(fieldTemp$0 > 0)) {
+        if ((this.field_m ^ -1) == -26) {
+            if (this.field_q.field_s.i(-90)) {
+                fieldTemp$0 = this.field_m - 1;
+                this.field_m = this.field_m - 1;
+                if (!((fieldTemp$0 ^ -1) < -1)) {
                     return false;
                 }
                 var2 = 56 / ((71 - param0) / 47);
                 return true;
             }
-            if (((jk) this).field_n.field_i) {
-                ((jk) this).field_q.b(-1, 7);
-                int fieldTemp$1 = ((jk) this).field_m - 1;
-                ((jk) this).field_m = ((jk) this).field_m - 1;
-                if (!(fieldTemp$1 > 0)) {
+            if (this.field_n.field_i) {
+                this.field_q.b(-1, 7);
+                fieldTemp$1 = this.field_m - 1;
+                this.field_m = this.field_m - 1;
+                if (!((fieldTemp$1 ^ -1) < -1)) {
                     return false;
                 }
                 var2 = 56 / ((71 - param0) / 47);
                 return true;
             }
-            ((jk) this).field_q.b(-1, 5);
-            int fieldTemp$2 = ((jk) this).field_m - 1;
-            ((jk) this).field_m = ((jk) this).field_m - 1;
-            if (!(fieldTemp$2 > 0)) {
+            this.field_q.b(-1, 5);
+            fieldTemp$2 = this.field_m - 1;
+            this.field_m = this.field_m - 1;
+            if (!((fieldTemp$2 ^ -1) < -1)) {
                 return false;
             }
             var2 = 56 / ((71 - param0) / 47);
             return true;
         }
-        int fieldTemp$3 = ((jk) this).field_m - 1;
-        ((jk) this).field_m = ((jk) this).field_m - 1;
-        if (!(fieldTemp$3 > 0)) {
+        int fieldTemp$3 = this.field_m - 1;
+        this.field_m = this.field_m - 1;
+        if (!((fieldTemp$3 ^ -1) < -1)) {
             return false;
         }
         var2 = 56 / ((71 - param0) / 47);
@@ -131,19 +151,15 @@ final class jk extends at {
 
     jk(gj param0, ad param1, mh param2) {
         try {
-            ((jk) this).field_m = 25;
-            ((jk) this).field_q = param1;
-            ((jk) this).field_n = param2;
+            this.field_m = 25;
+            this.field_q = param1;
+            this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new String[]{"attack", "special attack", "jump", "charge", "buff"};
         field_l = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
         field_p = "Game options changed (<%0>)";

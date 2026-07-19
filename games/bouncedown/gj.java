@@ -11,6 +11,6 @@ abstract class gj extends ug {
     abstract int c(byte param0);
 
     gj() {
-        ((gj) this).field_n = true;
+        this.field_n = true;
     }
 }

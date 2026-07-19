@@ -14,23 +14,24 @@ abstract class sca {
             IOException var1 = null;
             int var1_int = 0;
             lu var2 = null;
-            int stackIn_12_0 = 0;
-            int stackIn_22_0 = 0;
-            int stackIn_25_0 = 0;
-            int stackIn_29_0 = 0;
-            int stackIn_31_0 = 0;
+            int stackIn_13_0 = 0;
+            int stackIn_23_0 = 0;
+            int stackIn_26_0 = 0;
+            int stackIn_30_0 = 0;
+            int stackIn_32_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_11_0 = 0;
-            int stackOut_24_0 = 0;
-            int stackOut_21_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_28_0 = 0;
-            if (aka.field_G.field_e >= 4) {
-              if (aka.field_G.field_k != -1) {
-                if (aka.field_G.field_k == -2) {
-                  return 4;
-                } else {
+            int stackOut_12_0 = 0;
+            int stackOut_25_0 = 0;
+            int stackOut_22_0 = 0;
+            int stackOut_31_0 = 0;
+            int stackOut_29_0 = 0;
+            if (-5 >= (aka.field_G.field_e ^ -1)) {
+              if (0 != (aka.field_G.field_k ^ -1)) {
+                if (aka.field_G.field_k != -2) {
                   return 1;
+                } else {
+                  return 4;
                 }
               } else {
                 return 3;
@@ -39,7 +40,7 @@ abstract class sca {
               try {
                 L0: {
                   L1: {
-                    if (0 != ds.field_m) {
+                    if (param0 != ds.field_m) {
                       break L1;
                     } else {
                       ch.field_p = mh.field_l.a((byte) 120, pw.field_A, nj.field_f);
@@ -51,25 +52,26 @@ abstract class sca {
                     if (ds.field_m != 1) {
                       break L2;
                     } else {
-                      if (ch.field_p.field_f != 2) {
-                        if (ch.field_p.field_f == 1) {
+                      if (-3 != (ch.field_p.field_f ^ -1)) {
+                        if ((ch.field_p.field_f ^ -1) == -2) {
                           ds.field_m = ds.field_m + 1;
                           break L2;
                         } else {
                           break L2;
                         }
                       } else {
-                        stackOut_11_0 = cj.a(-1, 1);
-                        stackIn_12_0 = stackOut_11_0;
-                        return stackIn_12_0;
+                        stackOut_12_0 = cj.a(-1, 1);
+                        stackIn_13_0 = stackOut_12_0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       }
                     }
                   }
                   L3: {
-                    if (ds.field_m != 2) {
+                    if (-3 != (ds.field_m ^ -1)) {
                       break L3;
                     } else {
-                      hla.field_s = new pj((java.net.Socket) ch.field_p.field_e, mh.field_l);
+                      hla.field_s = new pj((java.net.Socket) (ch.field_p.field_e), mh.field_l);
                       var2 = new lu(13);
                       cca.a(var2, uea.field_i, (byte) -103, ma.field_E, ro.field_j);
                       var2.d(15, 0);
@@ -81,7 +83,7 @@ abstract class sca {
                     }
                   }
                   L4: {
-                    if (ds.field_m != 3) {
+                    if ((ds.field_m ^ -1) != -4) {
                       break L4;
                     } else {
                       if (0 < hla.field_s.b(125)) {
@@ -90,33 +92,37 @@ abstract class sca {
                           ds.field_m = ds.field_m + 1;
                           break L4;
                         } else {
-                          stackOut_24_0 = cj.a(var1_int, 1);
-                          stackIn_25_0 = stackOut_24_0;
-                          return stackIn_25_0;
+                          stackOut_25_0 = cj.a(var1_int, 1);
+                          stackIn_26_0 = stackOut_25_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
                       } else {
-                        if (~wh.field_q <= ~f.b((byte) 73)) {
+                        if ((wh.field_q ^ -1L) <= (f.b((byte) 73) ^ -1L)) {
                           break L4;
                         } else {
-                          stackOut_21_0 = cj.a(-2, 1);
-                          stackIn_22_0 = stackOut_21_0;
-                          return stackIn_22_0;
+                          stackOut_22_0 = cj.a(-2, 1);
+                          stackIn_23_0 = stackOut_22_0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
                   }
                   if (ds.field_m != 4) {
-                    stackOut_30_0 = -1;
-                    stackIn_31_0 = stackOut_30_0;
+                    stackOut_31_0 = -1;
+                    stackIn_32_0 = stackOut_31_0;
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    aka.field_G.a(nf.field_M, (Object) (Object) hla.field_s, 16008);
+                    aka.field_G.a(nf.field_M, hla.field_s, 16008);
                     ch.field_p = null;
                     hla.field_s = null;
                     ds.field_m = 0;
-                    stackOut_28_0 = 0;
-                    stackIn_29_0 = stackOut_28_0;
-                    return stackIn_29_0;
+                    stackOut_29_0 = 0;
+                    stackIn_30_0 = stackOut_29_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -124,7 +130,23 @@ abstract class sca {
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return cj.a(-3, 1);
               }
-              return stackIn_31_0;
+              if (decompiledRegionSelector0 == 0) {
+                return stackIn_13_0;
+              } else {
+                if (decompiledRegionSelector0 == 1) {
+                  return stackIn_23_0;
+                } else {
+                  if (decompiledRegionSelector0 == 2) {
+                    return stackIn_26_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 3) {
+                      return stackIn_30_0;
+                    } else {
+                      return stackIn_32_0;
+                    }
+                  }
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -141,15 +163,17 @@ abstract class sca {
 
     public static void b(byte param0) {
         field_a = null;
+        if (param0 != -33) {
+            field_a = (kv) null;
+            field_c = null;
+            field_b = null;
+            return;
+        }
         field_c = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 0;
         field_b = "Create a free Account";
     }

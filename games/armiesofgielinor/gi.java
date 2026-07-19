@@ -8,7 +8,11 @@ final class gi {
     static String field_a;
 
     final static boolean a(boolean param0) {
-        return du.field_d == mh.field_b;
+        if (param0) {
+            gi.a(11);
+            return du.field_d == mh.field_b ? true : false;
+        }
+        return du.field_d == mh.field_b ? true : false;
     }
 
     public static void a(int param0) {
@@ -23,10 +27,6 @@ final class gi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 180;
         field_c = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_d = new sa();

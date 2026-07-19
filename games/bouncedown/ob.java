@@ -9,15 +9,14 @@ final class ob {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 640) {
+            return;
+        }
         field_b = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ob.A(";
         field_b = "Music ";
         field_d = 0;

@@ -17,10 +17,6 @@ final class cjb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cjb.A(";
         field_a = "Just play";
     }

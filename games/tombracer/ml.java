@@ -10,6 +10,7 @@ final class ml {
     private RandomAccessFile field_a;
 
     final int a(byte param0, byte[] param1, int param2, int param3) throws IOException {
+        int discarded$2 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -36,16 +37,16 @@ final class ml {
               if (param0 >= 22) {
                 break L1;
               } else {
-                int discarded$2 = ml.a(80);
+                discarded$2 = ml.a(80);
                 break L1;
               }
             }
             L2: {
-              var5_int = ((ml) this).field_a.read(param1, param3, param2);
+              var5_int = this.field_a.read(param1, param3, param2);
               if (var5_int <= 0) {
                 break L2;
               } else {
-                ((ml) this).field_d = ((ml) this).field_d + (long)var5_int;
+                this.field_d = this.field_d + (long)var5_int;
                 break L2;
               }
             }
@@ -57,23 +58,23 @@ final class ml {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_0 = (RuntimeException) (var5);
             stackOut_6_1 = new StringBuilder().append("ml.E(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -81,7 +82,7 @@ final class ml {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_5_0;
     }
@@ -91,40 +92,42 @@ final class ml {
             return;
         }
         try {
-            if (~((ml) this).field_b > ~((long)param2 - -((ml) this).field_d)) {
-                ((ml) this).field_a.seek(((ml) this).field_b);
-                ((ml) this).field_a.write(1);
+            if ((this.field_b ^ -1L) > ((long)param2 - -this.field_d ^ -1L)) {
+                this.field_a.seek(this.field_b);
+                this.field_a.write(1);
                 throw new EOFException();
             }
-            ((ml) this).field_a.write(param3, param0, param2);
-            ((ml) this).field_d = ((ml) this).field_d + (long)param2;
+            this.field_a.write(param3, param0, param2);
+            this.field_d = this.field_d + (long)param2;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ml.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "ml.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
-        if (((ml) this).field_a != null) {
+        if (this.field_a != null) {
             System.out.println("");
-            ((ml) this).b((byte) -102);
+            this.b((byte) -102);
         }
     }
 
     final void b(byte param0) throws IOException {
-        if (((ml) this).field_a == null) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        if (this.field_a == null) {
           if (param0 > -62) {
-            int discarded$4 = ml.a(-10);
+            discarded$4 = ml.a(-10);
             return;
           } else {
             return;
           }
         } else {
-          ((ml) this).field_a.close();
-          ((ml) this).field_a = null;
+          this.field_a.close();
+          this.field_a = null;
           if (param0 <= -62) {
             return;
           } else {
-            int discarded$5 = ml.a(-10);
+            discarded$5 = ml.a(-10);
             return;
           }
         }
@@ -138,60 +141,61 @@ final class ml {
     }
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
         field_c = null;
+        if (param0 != -7) {
+            discarded$0 = ml.a(-107);
+        }
     }
 
     final long a(boolean param0) throws IOException {
         if (param0) {
-            ((ml) this).field_b = 5L;
-            return ((ml) this).field_a.length();
+            this.field_b = 5L;
+            return this.field_a.length();
         }
-        return ((ml) this).field_a.length();
+        return this.field_a.length();
     }
 
     final void a(int param0, long param1) throws IOException {
         if (param0 != 0) {
-          ((ml) this).field_b = 46L;
-          ((ml) this).field_a.seek(param1);
-          ((ml) this).field_d = param1;
+          this.field_b = 46L;
+          this.field_a.seek(param1);
+          this.field_d = param1;
           return;
         } else {
-          ((ml) this).field_a.seek(param1);
-          ((ml) this).field_d = param1;
+          this.field_a.seek(param1);
+          this.field_d = param1;
           return;
         }
     }
 
     ml(File param0, String param1, long param2) throws IOException {
+        boolean discarded$0 = false;
         int var5_int = 0;
         try {
-            if (param2 == -1L) {
+            if ((param2 ^ -1L) == 0L) {
                 param2 = 9223372036854775807L;
             }
-            if (~param0.length() < ~param2) {
-                boolean discarded$0 = param0.delete();
+            if ((param0.length() ^ -1L) < (param2 ^ -1L)) {
+                discarded$0 = param0.delete();
             }
-            ((ml) this).field_a = new RandomAccessFile(param0, param1);
-            ((ml) this).field_d = 0L;
-            ((ml) this).field_b = param2;
-            var5_int = ((ml) this).field_a.read();
+            this.field_a = new RandomAccessFile(param0, param1);
+            this.field_d = 0L;
+            this.field_b = param2;
+            var5_int = this.field_a.read();
             if (var5_int != -1) {
-                if (!param1.equals((Object) (Object) "r")) {
-                    ((ml) this).field_a.seek(0L);
-                    ((ml) this).field_a.write(var5_int);
+                if (!param1.equals("r")) {
+                    this.field_a.seek(0L);
+                    this.field_a.write(var5_int);
                 }
             }
-            ((ml) this).field_a.seek(0L);
+            this.field_a.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ml.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Game full";
     }
 }

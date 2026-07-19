@@ -12,6 +12,7 @@ final class sva extends le {
     private int field_n;
 
     final int[] a(int param0, boolean param1) {
+        boolean discarded$1 = false;
         int[] var3 = null;
         int var4 = 0;
         Random var6 = null;
@@ -48,40 +49,40 @@ final class sva extends le {
         int stackOut_24_0 = 0;
         L0: {
           var27 = VoidHunters.field_G;
-          var3 = ((sva) this).field_f.a((byte) 117, param0);
-          if (((sva) this).field_f.field_e) {
-            var4 = ((sva) this).field_j >> 1;
-            var31 = ((sva) this).field_f.b(73);
-            var6 = new Random((long)((sva) this).field_n);
+          var3 = this.field_f.a((byte) 117, param0);
+          if (this.field_f.field_e) {
+            var4 = this.field_j >> -532029343;
+            var31 = this.field_f.b(73);
+            var6 = new Random((long)this.field_n);
             var7 = 0;
             L1: while (true) {
-              if (((sva) this).field_k <= var7) {
+              if (this.field_k <= var7) {
                 break L0;
               } else {
                 L2: {
-                  if (((sva) this).field_j <= 0) {
-                    stackOut_6_0 = ((sva) this).field_i;
+                  if (this.field_j <= 0) {
+                    stackOut_6_0 = this.field_i;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
                   } else {
-                    stackOut_5_0 = ((sva) this).field_i + (-var4 + hob.a(var6, ((sva) this).field_j, 124));
+                    stackOut_5_0 = this.field_i + (-var4 + hob.a(var6, this.field_j, 124));
                     stackIn_7_0 = stackOut_5_0;
                     break L2;
                   }
                 }
                 L3: {
                   var8 = stackIn_7_0;
-                  var8 = var8 >> 4 & 255;
+                  var8 = var8 >> 1189200676 & 255;
                   var9 = hob.a(var6, hob.field_d, 127);
                   var10 = hob.a(var6, noa.field_o, 117);
-                  var11 = var9 - -(jmb.field_q[var8] * ((sva) this).field_l >> 12);
-                  var12 = var10 + (qta.field_o[var8] * ((sva) this).field_l >> 12);
+                  var11 = var9 - -(jmb.field_q[var8] * this.field_l >> 1177164684);
+                  var12 = var10 + (qta.field_o[var8] * this.field_l >> 1109056556);
                   var13 = -var10 + var12;
                   var14 = -var9 + var11;
                   if (var14 != 0) {
                     break L3;
                   } else {
-                    if (var13 != 0) {
+                    if (-1 != (var13 ^ -1)) {
                       break L3;
                     } else {
                       var7++;
@@ -98,7 +99,7 @@ final class sva extends le {
                   }
                 }
                 L5: {
-                  if (var13 < 0) {
+                  if ((var13 ^ -1) > -1) {
                     var13 = -var13;
                     break L5;
                   } else {
@@ -149,7 +150,7 @@ final class sva extends le {
                   var18 = var12 - var10;
                   var19 = -var17 / 2;
                   var20 = 2048 / var17;
-                  var21 = 1024 + -(hob.a(var6, 4096, 127) >> 2);
+                  var21 = 1024 + -(hob.a(var6, 4096, 127) >> -1241200286);
                   if (var12 > var10) {
                     stackOut_25_0 = 1;
                     stackIn_26_0 = stackOut_25_0;
@@ -185,7 +186,7 @@ final class sva extends le {
                         break L12;
                       }
                     }
-                    if (var19 > 0) {
+                    if ((var19 ^ -1) < -1) {
                       var19 = -var17 + var19;
                       var16 = var16 - -var22;
                       var23++;
@@ -209,7 +210,7 @@ final class sva extends le {
           if (param1) {
             break L13;
           } else {
-            boolean discarded$1 = sva.e((byte) 3);
+            discarded$1 = sva.e((byte) 3);
             break L13;
           }
         }
@@ -218,14 +219,15 @@ final class sva extends le {
 
     public sva() {
         super(0, true);
-        ((sva) this).field_k = 2000;
-        ((sva) this).field_j = 4096;
-        ((sva) this).field_l = 16;
-        ((sva) this).field_n = 0;
-        ((sva) this).field_i = 0;
+        this.field_k = 2000;
+        this.field_j = 4096;
+        this.field_l = 16;
+        this.field_n = 0;
+        this.field_i = 0;
     }
 
     final void a(int param0, int param1, ds param2) {
+        int[] discarded$2 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -252,34 +254,34 @@ final class sva extends le {
               if (param1 < -60) {
                 break L1;
               } else {
-                int[] discarded$2 = ((sva) this).a(66, true);
+                discarded$2 = this.a(66, true);
                 break L1;
               }
             }
             L2: {
               var4_int = param0;
               if (var4_int == 0) {
-                ((sva) this).field_n = param2.e((byte) -101);
+                this.field_n = param2.e((byte) -101);
                 break L2;
               } else {
-                if (var4_int == 1) {
-                  ((sva) this).field_k = param2.e(1869);
+                if ((var4_int ^ -1) == -2) {
+                  this.field_k = param2.e(1869);
                   break L2;
                 } else {
-                  if (var4_int != 2) {
-                    if (var4_int == 3) {
-                      ((sva) this).field_i = param2.e(1869);
+                  if (-3 != (var4_int ^ -1)) {
+                    if ((var4_int ^ -1) == -4) {
+                      this.field_i = param2.e(1869);
                       break L2;
                     } else {
-                      if (var4_int == 4) {
-                        ((sva) this).field_j = param2.e(1869);
+                      if (-5 == (var4_int ^ -1)) {
+                        this.field_j = param2.e(1869);
                         break L2;
                       } else {
                         break L2;
                       }
                     }
                   } else {
-                    ((sva) this).field_l = param2.e((byte) -117);
+                    this.field_l = param2.e((byte) -117);
                     break L2;
                   }
                 }
@@ -291,23 +293,23 @@ final class sva extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var4;
+            stackOut_16_0 = (RuntimeException) (var4);
             stackOut_16_1 = new StringBuilder().append("sva.F(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -315,29 +317,27 @@ final class sva extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
     final void c(byte param0) {
+        boolean discarded$0 = false;
         if (param0 >= -35) {
-            boolean discarded$0 = sva.e((byte) -123);
+            discarded$0 = sva.e((byte) -123);
         }
         taa.e((byte) -120);
     }
 
     final static boolean e(byte param0) {
+        boolean discarded$0 = false;
         if (param0 != -34) {
-            boolean discarded$0 = sva.e((byte) 68);
+            discarded$0 = sva.e((byte) 68);
         }
         return !wba.field_p.a(4) ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = 20;
     }
 }

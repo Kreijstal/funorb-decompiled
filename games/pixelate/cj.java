@@ -9,14 +9,14 @@ final class cj {
         try {
             if (!param1) {
               if (param0 != null) {
-                if (param0 == ((cj) this).field_a) {
+                if (param0 == this.field_a) {
                   return;
                 } else {
-                  if (null == ((cj) this).field_a) {
+                  if (null == this.field_a) {
                     L0: {
                       if (param0 != null) {
-                        param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                        ((cj) this).field_a = param0;
+                        param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                        this.field_a = param0;
                         break L0;
                       } else {
                         break L0;
@@ -25,11 +25,11 @@ final class cj {
                     return;
                   } else {
                     L1: {
-                      ((cj) this).field_a.setCursor((java.awt.Cursor) null);
-                      ((cj) this).field_a = null;
+                      this.field_a.setCursor((java.awt.Cursor) null);
+                      this.field_a = null;
                       if (param0 != null) {
-                        param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                        ((cj) this).field_a = param0;
+                        param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                        this.field_a = param0;
                         break L1;
                       } else {
                         break L1;
@@ -43,14 +43,14 @@ final class cj {
               }
             } else {
               param0 = null;
-              if (param0 == ((cj) this).field_a) {
+              if (param0 == this.field_a) {
                 return;
               } else {
-                if (null == ((cj) this).field_a) {
+                if (null == this.field_a) {
                   L2: {
                     if (param0 != null) {
-                      param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                      ((cj) this).field_a = param0;
+                      param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                      this.field_a = param0;
                       break L2;
                     } else {
                       break L2;
@@ -59,11 +59,11 @@ final class cj {
                   return;
                 } else {
                   L3: {
-                    ((cj) this).field_a.setCursor((java.awt.Cursor) null);
-                    ((cj) this).field_a = null;
+                    this.field_a.setCursor((java.awt.Cursor) null);
+                    this.field_a = null;
                     if (param0 != null) {
-                      param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                      ((cj) this).field_a = param0;
+                      param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                      this.field_a = param0;
                       break L3;
                     } else {
                       break L3;
@@ -81,7 +81,7 @@ final class cj {
     }
 
     public final void movemouse(int param0, int param1) {
-        ((cj) this).field_b.mouseMove(param0, param1);
+        this.field_b.mouseMove(param0, param1);
     }
 
     public final void setcustomcursor(java.awt.Component param0, int[] param1, int param2, int param3, java.awt.Point param4) {
@@ -91,12 +91,12 @@ final class cj {
         } else {
             var6 = new java.awt.image.BufferedImage(param2, param3, 2);
             var6.setRGB(0, 0, param2, param3, param1, 0, param2);
-            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) var6, param4, (String) null));
+            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) var6), param4, (String) null));
         }
     }
 
     public cj() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
-        ((cj) this).field_b = var2;
+        this.field_b = var2;
     }
 }

@@ -11,16 +11,15 @@ final class ji {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -14186) {
+            return;
+        }
         field_a = null;
         field_e = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ji.A(";
         field_d = "Add <%0> to friend list";
         field_a = "The game options are not all set.";

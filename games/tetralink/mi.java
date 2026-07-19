@@ -25,9 +25,9 @@ final class mi extends hl {
             }
             og.field_j = param0.field_fb;
             mm.field_s = param1.field_fb;
-            ji.h(0);
+            ji.h(param2 + param2);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "mi.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "mi.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -35,39 +35,46 @@ final class mi extends hl {
         if (param2 != 3) {
             return;
         }
-        ((mi) this).a((byte) -98, param1, param5, param3, param0);
+        this.a((byte) -98, param1, param5, param3, param0);
         this.d(param4, 62);
     }
 
     private final void d(int param0, int param1) {
-        ((mi) this).field_Lb.a((byte) -123, ((mi) this).field_Lb.f(-122), 0, ((mi) this).field_R, 0);
-        int var3 = ((mi) this).field_Lb.field_Hb - -param0;
-        ((mi) this).field_Ob.a((byte) -121, ((mi) this).field_Hb - var3, 0, ((mi) this).field_R, var3);
+        int var3 = 0;
+        this.field_Lb.a((byte) -123, this.field_Lb.f(-122), 0, this.field_R, 0);
+        if (param1 <= 46) {
+            field_Mb = (String) null;
+            var3 = this.field_Lb.field_Hb - -param0;
+            this.field_Ob.a((byte) -121, this.field_Hb - var3, 0, this.field_R, var3);
+            return;
+        }
+        var3 = this.field_Lb.field_Hb - -param0;
+        this.field_Ob.a((byte) -121, this.field_Hb - var3, 0, this.field_R, var3);
     }
 
     mi(long param0, oh param1, oh param2, int param3, hl param4, String param5) {
         this(param0, (hl) null, param4, param5);
         try {
-            ((mi) this).field_Lb.field_vb = param2;
-            ((mi) this).field_Lb.field_X = param1;
-            ((mi) this).field_Lb.field_J = param3;
+            this.field_Lb.field_vb = param2;
+            this.field_Lb.field_X = param1;
+            this.field_Lb.field_J = param3;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int e(int param0, int param1) {
         if (param0 > -118) {
-            field_Nb = null;
-            return ((mi) this).field_Lb.f(-81) + (param1 - -((mi) this).field_Ob.f(-85));
+            field_Nb = (String) null;
+            return this.field_Lb.f(-81) + (param1 - -this.field_Ob.f(-85));
         }
-        return ((mi) this).field_Lb.f(-81) + (param1 - -((mi) this).field_Ob.f(-85));
+        return this.field_Lb.f(-81) + (param1 - -this.field_Ob.f(-85));
     }
 
     final static void a(int param0, int param1, int param2) {
         bc var3 = nd.field_Lb;
         var3.f(param2, (byte) -92);
-        var3.a(3, false);
+        var3.a(param0, false);
         var3.a(10, false);
         var3.b(param1, false);
     }
@@ -79,28 +86,29 @@ final class mi extends hl {
     public static void h(int param0) {
         field_Kb = null;
         field_Mb = null;
+        if (param0 != 0) {
+            field_Mb = (String) null;
+            field_Nb = null;
+            return;
+        }
         field_Nb = null;
     }
 
     private mi(long param0, hl param1, hl param2, String param3) {
         super(param0, (hl) null);
         try {
-            ((mi) this).field_Lb = new hl(0L, param1);
-            ((mi) this).field_Ob = new hl(0L, param2);
-            ((mi) this).field_Ob.field_jb = param3;
-            ((mi) this).a((byte) 94, ((mi) this).field_Lb);
-            ((mi) this).a((byte) -88, ((mi) this).field_Ob);
-            ((mi) this).c((byte) 95);
+            this.field_Lb = new hl(0L, param1);
+            this.field_Ob = new hl(0L, param2);
+            this.field_Ob.field_jb = param3;
+            this.a((byte) 94, this.field_Lb);
+            this.a((byte) -88, this.field_Ob);
+            this.c((byte) 95);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Mb = "<%0> has joined your game.";
         field_Nb = "Add <%0> to ignore list";
     }

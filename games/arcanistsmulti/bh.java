@@ -11,15 +11,19 @@ final class bh {
     public static void a(int param0) {
         field_d = null;
         field_a = null;
-        field_c = null;
-        field_b = null;
+        if (param0 >= -91) {
+          field_b = (String) null;
+          field_c = null;
+          field_b = null;
+          return;
+        } else {
+          field_c = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bh.A(";
         field_b = "Send private Quick Chat to <%0>";
         field_c = new ih();

@@ -10,8 +10,16 @@ final class cf {
     public static void b(int param0) {
         field_d = null;
         field_a = null;
-        field_c = null;
-        field_b = null;
+        if (param0 != 21230) {
+          field_d = (vc) null;
+          field_c = null;
+          field_b = null;
+          return;
+        } else {
+          field_c = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
@@ -23,10 +31,6 @@ final class cf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Waiting for patches";
         field_d = new vc();
         field_c = null;

@@ -20,41 +20,41 @@ final class nv extends sna {
     public static void f(int param0) {
         field_wb = null;
         if (param0 != 20038) {
-            field_wb = null;
+            field_wb = (ee) null;
         }
     }
 
     final int b(boolean param0) {
         if (param0) {
-            ((nv) this).field_Db = null;
+            this.field_Db = (char[]) null;
         }
-        return ((nv) this).field_Fb + (((nv) this).field_Eb != null ? ((nv) this).field_Eb.b(param0) : 0);
+        return this.field_Fb + (this.field_Eb != null ? this.field_Eb.b(param0) : 0);
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = 0;
         int var8 = 0;
+        int var7 = 0;
         int var9 = BachelorFridge.field_y;
         if (param0 >= -91) {
             nv.f(-20);
         }
-        ((nv) this).field_Fb = 2 * param4 + ((nv) this).field_Gb;
-        ((nv) this).a(((nv) this).field_Ib, 31407, ((nv) this).field_Fb, param3, param2 - ((nv) this).field_Ib);
-        if (!(param1 == ((nv) this).field_zb)) {
-            ((nv) this).field_zb = param1;
-            this.b(((nv) this).field_Bb, false);
+        this.field_Fb = 2 * param4 + this.field_Gb;
+        this.a(this.field_Ib, 31407, this.field_Fb, param3, param2 - this.field_Ib);
+        if (!(param1 == this.field_zb)) {
+            this.field_zb = param1;
+            this.b(this.field_Bb, false);
         }
-        for (var7 = 0; ((nv) this).field_Cb > var7; var7++) {
-            ((nv) this).field_vb[var7].a(((nv) this).field_Fb, param4, ((nv) this).field_Ab, 0, param5, (byte) -88, ((nv) this).field_vb[var7].field_rb);
+        for (var7 = 0; this.field_Cb > var7; var7++) {
+            this.field_vb[var7].a(this.field_Fb, param4, this.field_Ab, 0, param5, (byte) -88, this.field_vb[var7].field_rb);
         }
-        if (-1 != ((nv) this).field_xb) {
-            if (!(((nv) this).field_Hb[((nv) this).field_xb] == null)) {
-                var7 = ((nv) this).field_Hb[((nv) this).field_xb].field_Cb;
-                var8 = (((nv) this).field_xb - -var7) * ((nv) this).field_Ab + ((nv) this).field_rb;
+        if (-1 != this.field_xb) {
+            if (!(this.field_Hb[this.field_xb] == null)) {
+                var7 = this.field_Hb[this.field_xb].field_Cb;
+                var8 = (this.field_xb - -var7) * this.field_Ab + this.field_rb;
                 while (var8 > param2) {
-                    var8 = var8 - ((nv) this).field_Ab;
+                    var8 = var8 - this.field_Ab;
                 }
-                ((nv) this).field_Hb[((nv) this).field_xb].a((byte) -97, ((nv) this).field_vb[((nv) this).field_xb].field_M, var8, ((nv) this).field_Fb + param3, param4, param5);
+                this.field_Hb[this.field_xb].a((byte) -97, this.field_vb[this.field_xb].field_M, var8, this.field_Fb + param3, param4, param5);
             }
         }
     }
@@ -63,80 +63,93 @@ final class nv extends sna {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        String var8 = null;
         L0: {
           var7 = BachelorFridge.field_y;
-          if (((nv) this).field_xb == param1) {
-            ((nv) this).f((byte) -128);
-            this.b(0, false);
+          if (param3) {
             break L0;
           } else {
-            if (((nv) this).field_Hb[param1] == null) {
-              if (((nv) this).field_yb[param1] == -1) {
+            this.a(-125, -33, -91);
+            break L0;
+          }
+        }
+        L1: {
+          if (this.field_xb == param1) {
+            this.f((byte) -128);
+            this.b(0, false);
+            break L1;
+          } else {
+            if (this.field_Hb[param1] == null) {
+              if (0 == (this.field_yb[param1] ^ -1)) {
                 js.a(121);
                 ki.g(-26);
-                break L0;
+                break L1;
               } else {
-                L1: {
-                  var5 = 32768 | ((nv) this).field_yb[param1];
+                L2: {
+                  var5 = 32768 | this.field_yb[param1];
                   var6 = gk.field_d;
                   if (0 != var6) {
-                    break L1;
+                    break L2;
                   } else {
                     if (null != pw.field_w) {
                       var6 = 1;
-                      break L1;
+                      break L2;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                 }
-                L2: {
+                L3: {
                   if (af.a(var6, 26291) == 2) {
                     fk.a(113, var6, param0, 1);
-                    break L2;
+                    break L3;
                   } else {
-                    break L2;
+                    break L3;
                   }
                 }
-                var8 = null;
+                var8 = (String) null;
                 no.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
                 ob.a(eaa.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
                 ki.g(-26);
                 vca.c(true);
-                break L0;
+                break L1;
               }
             } else {
-              ((nv) this).f((byte) -98);
+              this.f((byte) -98);
               this.b(0, false);
-              ((nv) this).field_xb = param1;
-              ((nv) this).field_Eb = ((nv) this).field_Hb[((nv) this).field_xb];
-              dka.a(((nv) this).field_Eb, (byte) 59);
-              ((nv) this).field_Eb.b(12, false);
-              break L0;
+              this.field_xb = param1;
+              this.field_Eb = this.field_Hb[this.field_xb];
+              dka.a(this.field_Eb, (byte) 59);
+              this.field_Eb.b(12, false);
+              break L1;
             }
           }
         }
     }
 
     private final void b(int param0, boolean param1) {
+        int discarded$0 = 0;
         int var5 = 0;
         int var3 = 0;
         int var4 = 0;
         int var6 = BachelorFridge.field_y;
-        ((nv) this).field_Bb = param0;
-        for (var5 = 0; ((nv) this).field_Cb > var5; var5++) {
-            var3 = var5 * ((nv) this).field_Ab;
-            var4 = ((nv) this).field_Bb * ((nv) this).field_Bb;
-            ((nv) this).field_vb[var5].field_rb = (var4 * (((nv) this).field_zb - ((nv) this).field_M) + var3 * (-var4 + 144)) / 144;
+        this.field_Bb = param0;
+        if (param1) {
+            discarded$0 = this.b(false);
+        }
+        for (var5 = 0; this.field_Cb > var5; var5++) {
+            var3 = var5 * this.field_Ab;
+            var4 = this.field_Bb * this.field_Bb;
+            this.field_vb[var5].field_rb = (var4 * (this.field_zb - this.field_M) + var3 * (-var4 + 144)) / 144;
         }
     }
 
     final void f(byte param0) {
         int var3 = 0;
         gna var4 = null;
+        int discarded$0 = 0;
         int var5 = BachelorFridge.field_y;
-        gna[] var6 = ((nv) this).field_vb;
+        gna[] var6 = this.field_vb;
         gna[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
@@ -144,28 +157,36 @@ final class nv extends sna {
             var4.field_R = 0;
         }
         if (param0 > -90) {
-            int discarded$0 = ((nv) this).b(false);
+            discarded$0 = this.b(false);
         }
-        if (((nv) this).field_Eb != null) {
-            ((nv) this).field_Eb.f((byte) -97);
-            ((nv) this).field_Eb.a(false);
+        if (this.field_Eb != null) {
+            this.field_Eb.f((byte) -97);
+            this.field_Eb.a(false);
         }
-        ((nv) this).field_Eb = null;
-        ((nv) this).field_xb = -1;
+        this.field_Eb = null;
+        this.field_xb = -1;
         this.b(12, false);
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         int var4 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_20_0 = 0;
         L0: {
-          if (jea.field_c == null) {
+          if (param2 < -82) {
             break L0;
           } else {
+            field_wb = (ee) null;
+            break L0;
+          }
+        }
+        L1: {
+          if (jea.field_c == null) {
+            break L1;
+          } else {
             if (13 != gf.field_k) {
-              break L0;
+              break L1;
             } else {
               jea.field_c = null;
               return true;
@@ -174,42 +195,42 @@ final class nv extends sna {
         }
         if (lna.field_q) {
           if (cn.d((byte) 64)) {
-            L1: {
+            L2: {
               if (!vaa.a(param3, 1, param0)) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
-                break L1;
+                stackOut_21_0 = 0;
+                stackIn_22_0 = stackOut_21_0;
+                break L2;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                break L1;
+                stackOut_20_0 = 1;
+                stackIn_22_0 = stackOut_20_0;
+                break L2;
               }
             }
-            L2: {
-              L3: {
-                var4 = stackIn_20_0;
-                if (gf.field_k == 80) {
-                  break L3;
+            L3: {
+              L4: {
+                var4 = stackIn_22_0;
+                if ((gf.field_k ^ -1) == -81) {
+                  break L4;
                 } else {
-                  if (gf.field_k != 84) {
-                    break L2;
-                  } else {
+                  if ((gf.field_k ^ -1) != -85) {
                     break L3;
+                  } else {
+                    break L4;
                   }
                 }
               }
               var4 = 1;
               lna.field_q = false;
-              break L2;
+              break L3;
             }
-            L4: {
-              if (gf.field_k != 13) {
-                break L4;
+            L5: {
+              if ((gf.field_k ^ -1) != -14) {
+                break L5;
               } else {
                 bea.d(-125);
                 var4 = 1;
                 lna.field_q = false;
-                break L4;
+                break L5;
               }
             }
             return var4 != 0;
@@ -217,15 +238,15 @@ final class nv extends sna {
             return false;
           }
         } else {
-          L5: {
+          L6: {
             if (gm.field_k) {
-              break L5;
+              break L6;
             } else {
-              if (gf.field_k == 9) {
-                break L5;
+              if ((gf.field_k ^ -1) == -10) {
+                break L6;
               } else {
-                if (gf.field_k == 10) {
-                  break L5;
+                if (-11 == (gf.field_k ^ -1)) {
+                  break L6;
                 } else {
                   if (11 != gf.field_k) {
                     if (gf.field_k != 80) {
@@ -239,7 +260,7 @@ final class nv extends sna {
                       }
                     }
                   } else {
-                    break L5;
+                    break L6;
                   }
                 }
               }
@@ -365,60 +386,60 @@ final class nv extends sna {
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
         String stackOut_32_2 = null;
-        ((nv) this).field_xb = -1;
+        this.field_xb = -1;
         try {
           L0: {
-            ((nv) this).field_Db = param7;
-            ((nv) this).field_yb = param5;
-            ((nv) this).field_Hb = param4;
-            ((nv) this).field_Cb = ((nv) this).field_yb.length;
+            this.field_Db = param7;
+            this.field_yb = param5;
+            this.field_Hb = param4;
+            this.field_Cb = this.field_yb.length;
             var17 = param3.field_jb;
             var18 = var17;
-            ((nv) this).field_Ab = var18.field_B + (2 - -var18.field_u);
-            ((nv) this).field_vb = new gna[((nv) this).field_Cb];
-            ((nv) this).field_Gb = 0;
-            ((nv) this).field_Ib = ((nv) this).field_Cb * ((nv) this).field_Ab;
+            this.field_Ab = var18.field_B + (2 - -var18.field_u);
+            this.field_vb = new gna[this.field_Cb];
+            this.field_Gb = 0;
+            this.field_Ib = this.field_Cb * this.field_Ab;
             var11 = "<col=999999>";
             var12 = "</col>";
             var13 = 0;
             L1: while (true) {
-              if (((nv) this).field_Cb <= var13) {
-                ((nv) this).field_Gb = ((nv) this).field_Gb + (10 + kga.field_a.field_n);
+              if (this.field_Cb <= var13) {
+                this.field_Gb = this.field_Gb + (10 + kga.field_a.field_n);
                 this.b(12, false);
                 break L0;
               } else {
                 L2: {
-                  if (0 >= ((nv) this).field_Db[var13]) {
+                  if (0 >= this.field_Db[var13]) {
                     break L2;
                   } else {
-                    param6[var13] = var11 + oja.a((byte) -113, ((nv) this).field_Db[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                    param6[var13] = var11 + oja.a((byte) -113, this.field_Db[var13]).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }
                 L3: {
                   L4: {
                     var14 = null;
-                    if (null != ((nv) this).field_Hb[var13]) {
+                    if (null != this.field_Hb[var13]) {
                       break L4;
                     } else {
-                      if (((nv) this).field_yb[var13] != -1) {
+                      if ((this.field_yb[var13] ^ -1) != 0) {
                         break L3;
                       } else {
                         break L4;
                       }
                     }
                   }
-                  var14 = (Object) (Object) kga.field_a;
+                  var14 = kga.field_a;
                   break L3;
                 }
                 L5: {
-                  ((nv) this).field_vb[var13] = new gna(0L, param2, (sna) null, param3, (kv) var14, param6[var13]);
-                  ((nv) this).a(-1, (sna) (Object) ((nv) this).field_vb[var13]);
+                  this.field_vb[var13] = new gna(0L, param2, (sna) null, param3, (kv) (var14), param6[var13]);
+                  this.a(-1, this.field_vb[var13]);
                   var15 = var17.a(param6[var13]);
-                  if (var15 <= ((nv) this).field_Gb) {
+                  if (var15 <= this.field_Gb) {
                     break L5;
                   } else {
-                    ((nv) this).field_Gb = var15;
+                    this.field_Gb = var15;
                     break L5;
                   }
                 }
@@ -431,23 +452,23 @@ final class nv extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var10 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var10;
+            stackOut_13_0 = (RuntimeException) (var10);
             stackOut_13_1 = new StringBuilder().append("nv.<init>(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -456,23 +477,23 @@ final class nv extends sna {
             }
           }
           L7: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L7;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -481,23 +502,23 @@ final class nv extends sna {
             }
           }
           L8: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -506,23 +527,23 @@ final class nv extends sna {
             }
           }
           L9: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param4 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -531,23 +552,23 @@ final class nv extends sna {
             }
           }
           L10: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param5 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L10;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -556,23 +577,23 @@ final class nv extends sna {
             }
           }
           L11: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param6 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L11;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -581,23 +602,23 @@ final class nv extends sna {
             }
           }
           L12: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param7 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L12;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -605,7 +626,7 @@ final class nv extends sna {
               break L12;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
     }
 
@@ -619,7 +640,7 @@ final class nv extends sna {
         int stackOut_1_0 = 0;
         L0: {
           var7 = BachelorFridge.field_y;
-          if (gf.field_k != 85) {
+          if ((gf.field_k ^ -1) != -86) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -630,13 +651,13 @@ final class nv extends sna {
           }
         }
         var4 = stackIn_3_0;
-        if (null != ((nv) this).field_Eb) {
+        if (null != this.field_Eb) {
           L1: {
             if (var4 == 0) {
               break L1;
             } else {
-              if (-1 == ((nv) this).field_Eb.field_xb) {
-                ((nv) this).f((byte) -107);
+              if (-1 == this.field_Eb.field_xb) {
+                this.f((byte) -107);
                 this.b(0, false);
                 return true;
               } else {
@@ -644,13 +665,13 @@ final class nv extends sna {
               }
             }
           }
-          return ((nv) this).field_Eb.b(param0, param1, param2);
+          return this.field_Eb.b(param0, param1 ^ 0, param2);
         } else {
           L2: {
-            if (((nv) this).field_Eb != null) {
+            if (this.field_Eb != null) {
               break L2;
             } else {
-              if (this != (Object) (Object) da.field_d) {
+              if (this != da.field_d) {
                 break L2;
               } else {
                 if (var4 == 0) {
@@ -667,7 +688,7 @@ final class nv extends sna {
             if (param1 == -19044) {
               break L3;
             } else {
-              ((nv) this).field_zb = -75;
+              this.field_zb = -75;
               break L3;
             }
           }
@@ -685,10 +706,10 @@ final class nv extends sna {
               }
               var6 = 0;
               L6: while (true) {
-                if (var6 >= ((nv) this).field_Db.length) {
+                if (var6 >= this.field_Db.length) {
                   break L4;
                 } else {
-                  if (var5 != ((nv) this).field_Db[var6]) {
+                  if (var5 != this.field_Db[var6]) {
                     var6++;
                     continue L6;
                   } else {
@@ -709,17 +730,17 @@ final class nv extends sna {
         int var6 = BachelorFridge.field_y;
         int var2 = 0;
         if (param0 != -16360) {
-            ((nv) this).field_Bb = -67;
+            this.field_Bb = -67;
         }
-        gna[] var3 = ((nv) this).field_vb;
+        gna[] var3 = this.field_vb;
         for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             var2 = var2 | (var5.field_R != 0 ? 1 : 0);
         }
         if (var2 == 0) {
-            if (((nv) this).field_xb != -1) {
-                if (!(null == ((nv) this).field_Hb[((nv) this).field_xb])) {
-                    var2 = ((nv) this).field_Hb[((nv) this).field_xb].g(-16360) ? 1 : 0;
+            if (0 != (this.field_xb ^ -1)) {
+                if (!(null == this.field_Hb[this.field_xb])) {
+                    var2 = this.field_Hb[this.field_xb].g(-16360) ? 1 : 0;
                 }
             }
         }
@@ -744,16 +765,16 @@ final class nv extends sna {
         var6 = BachelorFridge.field_y;
         var4_int = 0;
         L0: while (true) {
-          if (var4_int >= ((nv) this).field_vb.length) {
+          if (var4_int >= this.field_vb.length) {
             if (param1 == 30091) {
               L1: {
-                if (((nv) this).field_xb == -1) {
+                if ((this.field_xb ^ -1) == 0) {
                   break L1;
                 } else {
-                  var7 = ((nv) this).field_Hb[((nv) this).field_xb];
+                  var7 = this.field_Hb[this.field_xb];
                   var4 = var7;
                   if (var4 != null) {
-                    var7.a(param0, param1, param2);
+                    var7.a(param0, param1 ^ 0, param2);
                     break L1;
                   } else {
                     break L1;
@@ -761,10 +782,10 @@ final class nv extends sna {
                 }
               }
               L2: {
-                if (((nv) this).field_Bb <= 0) {
+                if (this.field_Bb <= 0) {
                   break L2;
                 } else {
-                  this.b(-1 + ((nv) this).field_Bb, false);
+                  this.b(-1 + this.field_Bb, false);
                   break L2;
                 }
               }
@@ -773,21 +794,21 @@ final class nv extends sna {
               return;
             }
           } else {
-            var5 = ((nv) this).field_vb[var4_int];
-            if (var5.field_R == 1) {
+            var5 = this.field_vb[var4_int];
+            if ((var5.field_R ^ -1) == -2) {
               L3: {
                 this.a(param0, var4_int, param2, true);
-                stackOut_4_0 = (gna) var5;
+                stackOut_4_0 = (gna) (var5);
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_5_0 = stackOut_4_0;
-                if (((nv) this).field_xb != var4_int) {
-                  stackOut_6_0 = (gna) (Object) stackIn_6_0;
+                if (this.field_xb != var4_int) {
+                  stackOut_6_0 = (gna) ((Object) stackIn_6_0);
                   stackOut_6_1 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   stackIn_7_1 = stackOut_6_1;
                   break L3;
                 } else {
-                  stackOut_5_0 = (gna) (Object) stackIn_5_0;
+                  stackOut_5_0 = (gna) ((Object) stackIn_5_0);
                   stackOut_5_1 = 1;
                   stackIn_7_0 = stackOut_5_0;
                   stackIn_7_1 = stackOut_5_1;

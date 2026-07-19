@@ -6,6 +6,8 @@ final class rn {
     static String field_a;
 
     final static void a(byte[] param0, int param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -26,10 +28,6 @@ final class rn {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
@@ -70,7 +68,7 @@ final class rn {
             var16 = new de(param0);
             var17 = var16;
             var17.field_j = -2 + param0.length;
-            t.field_h = var17.f(2);
+            t.field_h = var17.f(param1 + 2);
             bn.field_c = new int[t.field_h];
             uf.field_n = new int[t.field_h];
             sl.field_d = new int[t.field_h];
@@ -91,7 +89,7 @@ final class rn {
                     var4 = 0;
                     L3: while (true) {
                       if (var4 >= t.field_h) {
-                        var4 = 0;
+                        var4 = param1;
                         L4: while (true) {
                           if (t.field_h <= var4) {
                             var17.field_j = -(t.field_h * 8) + -7 + param0.length - (var3 + -1) * 3;
@@ -109,25 +107,21 @@ final class rn {
                                       var5 = bn.field_c[var4];
                                       var6 = uf.field_n[var4];
                                       var7 = var6 * var5;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      vj.field_m[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      vj.field_m[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      ka.field_f[var4] = var25;
+                                      ka.field_f[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.d((byte) -115);
-                                      if ((1 & var11) != 0) {
+                                      if (-1 != (1 & var11 ^ -1)) {
                                         var12 = 0;
                                         L8: while (true) {
                                           if (var5 <= var12) {
-                                            if ((var11 & 2) != 0) {
+                                            if (-1 != (var11 & 2 ^ -1)) {
                                               var12 = 0;
                                               L9: while (true) {
                                                 if (var5 <= var12) {
@@ -140,7 +134,7 @@ final class rn {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        byte dupTemp$2 = var17.e((byte) 116);
+                                                        dupTemp$2 = var17.e((byte) 116);
                                                         var9[var13 * var5 + var12] = dupTemp$2;
                                                         var14 = dupTemp$2;
                                                         stackOut_44_0 = var10;
@@ -195,13 +189,13 @@ final class rn {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    byte dupTemp$3 = var17.e((byte) 116);
+                                                    dupTemp$3 = var17.e((byte) 116);
                                                     var9[var12] = dupTemp$3;
                                                     var13 = dupTemp$3;
                                                     stackOut_28_0 = var10;
                                                     stackIn_30_0 = stackOut_28_0;
                                                     stackIn_29_0 = stackOut_28_0;
-                                                    if (var13 == -1) {
+                                                    if (0 == (var13 ^ -1)) {
                                                       stackOut_30_0 = stackIn_30_0;
                                                       stackOut_30_1 = 0;
                                                       stackIn_31_0 = stackOut_30_0;
@@ -279,23 +273,23 @@ final class rn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
+            stackOut_51_0 = (RuntimeException) (var2);
             stackOut_51_1 = new StringBuilder().append("rn.B(");
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param0 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "null";
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
@@ -303,20 +297,20 @@ final class rn {
               break L17;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ',' + 0 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         field_b = null;
+        if (param0 != -12637) {
+            byte[] var2 = (byte[]) null;
+            rn.a((byte[]) null, -33);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Create a free account to start using this feature";
         field_b = null;
     }

@@ -12,11 +12,12 @@ final class mb {
     }
 
     final String b(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 16925) {
-            boolean discarded$0 = ((mb) this).a((byte) -83);
-            return ((mb) this).field_d;
+            discarded$0 = this.a((byte) -83);
+            return this.field_d;
         }
-        return ((mb) this).field_d;
+        return this.field_d;
     }
 
     mb(String param0, boolean param1) {
@@ -49,11 +50,11 @@ final class mb {
         try {
           L0: {
             L1: {
-              ((mb) this).field_d = param0;
-              if (null != ((mb) this).field_d) {
+              this.field_d = param0;
+              if (null != this.field_d) {
                 break L1;
               } else {
-                ((mb) this).field_d = "";
+                this.field_d = "";
                 break L1;
               }
             }
@@ -75,9 +76,9 @@ final class mb {
                 break L2;
               }
             }
-            ((mb) this).field_c = stackIn_6_1 != 0;
-            if (((mb) this).field_d.length() == 0) {
-              ((mb) this).field_c = false;
+            ((mb) (this)).field_c = stackIn_6_1 != 0;
+            if (this.field_d.length() == 0) {
+              this.field_c = false;
               break L0;
             } else {
               return;
@@ -87,23 +88,23 @@ final class mb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("mb.<init>(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -111,7 +112,7 @@ final class mb {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
@@ -127,14 +128,10 @@ final class mb {
         if (param0 <= 74) {
             return false;
         }
-        return ((mb) this).field_c;
+        return this.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_b = new od("email");
     }

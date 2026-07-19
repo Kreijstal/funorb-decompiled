@@ -12,18 +12,17 @@ final class ea {
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_b = null;
     }
 
     ea(int param0) {
-        ((ea) this).field_a = param0;
+        this.field_a = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new Random();
     }
 }

@@ -7,29 +7,33 @@ abstract class se extends li implements ho {
     private ga field_h;
 
     final static void a(byte param0, boolean param1, int param2) {
-        fa.a((vc) (Object) gj.field_m, (vc) (Object) go.field_l, true, param1, r.field_m ? 280 : 480, 5, 20, 15, 26, 240, h.field_d, af.field_c, 0, param2, r.field_m ? 240 : 320, 20, 17);
+        fa.a(gj.field_m, go.field_l, true, param1, r.field_m ? 280 : 480, 5, 20, 15, 26, 240, h.field_d, af.field_c, 0, param2, r.field_m ? 240 : 320, 20, 17);
         int var3 = -117 / ((param0 - -6) / 42);
     }
 
     public static void d(byte param0) {
         field_g = null;
+        if (param0 > -23) {
+            field_g = (String) null;
+        }
     }
 
     final String a(boolean param0) {
         if (param0) {
-            return null;
+            return (String) null;
         }
-        return ((se) this).a(((se) this).field_h.field_o, 114);
+        return this.a(this.field_h.field_o, 114);
     }
 
     final oi b(int param0) {
         if (param0 != 51) {
-            return null;
+            return (oi) null;
         }
-        return ((se) this).a(((se) this).field_h.field_o, (byte) -122);
+        return this.a(this.field_h.field_o, (byte) -122);
     }
 
     final static int a(int param0, byte param1) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         var3 = CrazyCrystals.field_B;
@@ -45,7 +49,7 @@ abstract class se extends li implements ho {
             if (50 == param0) {
               L0: {
                 oi.field_d.field_p = 5;
-                if (oi.field_d.field_j < 2) {
+                if ((oi.field_d.field_j ^ -1) > -3) {
                   break L0;
                 } else {
                   if (param0 != 51) {
@@ -56,10 +60,10 @@ abstract class se extends li implements ho {
                 }
               }
               L1: {
-                if (oi.field_d.field_j < 2) {
+                if ((oi.field_d.field_j ^ -1) > -3) {
                   break L1;
                 } else {
-                  if (param0 != 50) {
+                  if (-51 != (param0 ^ -1)) {
                     break L1;
                   } else {
                     return 5;
@@ -74,7 +78,7 @@ abstract class se extends li implements ho {
             } else {
               L2: {
                 oi.field_d.field_p = 1;
-                if (oi.field_d.field_j < 2) {
+                if ((oi.field_d.field_j ^ -1) > -3) {
                   break L2;
                 } else {
                   if (param0 != 51) {
@@ -85,10 +89,10 @@ abstract class se extends li implements ho {
                 }
               }
               L3: {
-                if (oi.field_d.field_j < 2) {
+                if ((oi.field_d.field_j ^ -1) > -3) {
                   break L3;
                 } else {
-                  if (param0 != 50) {
+                  if (-51 != (param0 ^ -1)) {
                     break L3;
                   } else {
                     return 5;
@@ -104,7 +108,7 @@ abstract class se extends li implements ho {
           } else {
             L4: {
               oi.field_d.field_p = 2;
-              if (oi.field_d.field_j < 2) {
+              if ((oi.field_d.field_j ^ -1) > -3) {
                 break L4;
               } else {
                 if (param0 != 51) {
@@ -115,10 +119,10 @@ abstract class se extends li implements ho {
               }
             }
             L5: {
-              if (oi.field_d.field_j < 2) {
+              if ((oi.field_d.field_j ^ -1) > -3) {
                 break L5;
               } else {
-                if (param0 != 50) {
+                if (-51 != (param0 ^ -1)) {
                   break L5;
                 } else {
                   return 5;
@@ -132,22 +136,22 @@ abstract class se extends li implements ho {
             }
           }
         } else {
-          int discarded$1 = se.a(-41, (byte) -4);
+          discarded$1 = se.a(-41, (byte) -4);
           cb.field_m = CrazyCrystals.field_D;
           oi.field_d.field_j = oi.field_d.field_j + 1;
           CrazyCrystals.field_D = var2;
           if (param0 != 51) {
             if (50 == param0) {
               oi.field_d.field_p = 5;
-              if (oi.field_d.field_j >= 2) {
+              if ((oi.field_d.field_j ^ -1) <= -3) {
                 if (param0 == 51) {
                   return 2;
                 } else {
                   L6: {
-                    if (oi.field_d.field_j < 2) {
+                    if ((oi.field_d.field_j ^ -1) > -3) {
                       break L6;
                     } else {
-                      if (param0 != 50) {
+                      if (-51 != (param0 ^ -1)) {
                         break L6;
                       } else {
                         return 5;
@@ -162,10 +166,10 @@ abstract class se extends li implements ho {
                 }
               } else {
                 L7: {
-                  if (oi.field_d.field_j < 2) {
+                  if ((oi.field_d.field_j ^ -1) > -3) {
                     break L7;
                   } else {
-                    if (param0 != 50) {
+                    if (-51 != (param0 ^ -1)) {
                       break L7;
                     } else {
                       return 5;
@@ -180,15 +184,15 @@ abstract class se extends li implements ho {
               }
             } else {
               oi.field_d.field_p = 1;
-              if (oi.field_d.field_j >= 2) {
+              if ((oi.field_d.field_j ^ -1) <= -3) {
                 if (param0 == 51) {
                   return 2;
                 } else {
                   L8: {
-                    if (oi.field_d.field_j < 2) {
+                    if ((oi.field_d.field_j ^ -1) > -3) {
                       break L8;
                     } else {
-                      if (param0 != 50) {
+                      if (-51 != (param0 ^ -1)) {
                         break L8;
                       } else {
                         return 5;
@@ -203,10 +207,10 @@ abstract class se extends li implements ho {
                 }
               } else {
                 L9: {
-                  if (oi.field_d.field_j < 2) {
+                  if ((oi.field_d.field_j ^ -1) > -3) {
                     break L9;
                   } else {
-                    if (param0 != 50) {
+                    if (-51 != (param0 ^ -1)) {
                       break L9;
                     } else {
                       return 5;
@@ -222,15 +226,15 @@ abstract class se extends li implements ho {
             }
           } else {
             oi.field_d.field_p = 2;
-            if (oi.field_d.field_j >= 2) {
+            if ((oi.field_d.field_j ^ -1) <= -3) {
               if (param0 == 51) {
                 return 2;
               } else {
                 L10: {
-                  if (oi.field_d.field_j < 2) {
+                  if ((oi.field_d.field_j ^ -1) > -3) {
                     break L10;
                   } else {
-                    if (param0 != 50) {
+                    if (-51 != (param0 ^ -1)) {
                       break L10;
                     } else {
                       return 5;
@@ -244,8 +248,8 @@ abstract class se extends li implements ho {
                 }
               }
             } else {
-              if (oi.field_d.field_j >= 2) {
-                if (param0 == 50) {
+              if ((oi.field_d.field_j ^ -1) <= -3) {
+                if (-51 == (param0 ^ -1)) {
                   return 5;
                 } else {
                   if (4 > oi.field_d.field_j) {
@@ -255,10 +259,10 @@ abstract class se extends li implements ho {
                   }
                 }
               } else {
-                if (4 > oi.field_d.field_j) {
-                  return -1;
-                } else {
+                if (4 <= oi.field_d.field_j) {
                   return 1;
+                } else {
+                  return -1;
                 }
               }
             }
@@ -269,15 +273,15 @@ abstract class se extends li implements ho {
     abstract String a(String param0, int param1);
 
     public final boolean a(byte param0) {
-        Object var3 = null;
+        ga var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 == -41) {
-          if (((se) this).field_h.field_o != null) {
-            if (0 == ((se) this).field_h.field_o.length()) {
+          if (this.field_h.field_o != null) {
+            if (0 == this.field_h.field_o.length()) {
               return true;
             } else {
               return false;
@@ -288,13 +292,13 @@ abstract class se extends li implements ho {
             return stackIn_11_0 != 0;
           }
         } else {
-          var3 = null;
-          ((se) this).a((ga) null, -13);
-          if (((se) this).field_h.field_o == null) {
+          var3 = (ga) null;
+          this.a((ga) null, -13);
+          if (this.field_h.field_o == null) {
             return true;
           } else {
             L0: {
-              if (0 != ((se) this).field_h.field_o.length()) {
+              if (0 != this.field_h.field_o.length()) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -315,15 +319,15 @@ abstract class se extends li implements ho {
         try {
             int var3_int = -104 / ((param0 - -20) / 46);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "se.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "se.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     se(ga param0) {
         try {
-            ((se) this).field_h = param0;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -350,10 +354,10 @@ abstract class se extends li implements ho {
             L1: {
               if (param1 != -29513) {
                 field_f = -69L;
-                ((se) this).b((byte) 78);
+                this.b((byte) 78);
                 break L1;
               } else {
-                ((se) this).b((byte) 78);
+                this.b((byte) 78);
                 break L1;
               }
             }
@@ -363,23 +367,23 @@ abstract class se extends li implements ho {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("se.DA(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -387,15 +391,11 @@ abstract class se extends li implements ho {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Done";
     }
 }

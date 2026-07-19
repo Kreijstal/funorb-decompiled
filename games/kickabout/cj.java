@@ -15,23 +15,34 @@ abstract class cj extends wj implements cw {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
-        if (ov.field_b == 2) {
-            var7 = ds.field_e;
-        } else {
+        L0: {
+          if (-3 != (ov.field_b ^ -1)) {
             var7 = vo.field_db;
+            break L0;
+          } else {
+            var7 = ds.field_e;
+            break L0;
+          }
         }
-        wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
+        if (param4) {
+          cj.a(-38);
+          wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
+          return;
+        } else {
+          wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
+          return;
+        }
     }
 
     void a(hl param0, int param1) {
         try {
-            ((cj) this).field_B = param0;
+            this.field_B = param0;
             if (param1 != -20274) {
                 cj.a(-16);
             }
-            ((cj) this).field_B.field_g = (cj) this;
+            this.field_B.field_g = (cj) (this);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,11 +53,12 @@ abstract class cj extends wj implements cw {
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_H = null;
         field_F = null;
         field_E = null;
         if (param0 > -88) {
-            int discarded$0 = cj.k(94);
+            discarded$0 = cj.k(94);
             field_D = null;
             return;
         }
@@ -54,8 +66,9 @@ abstract class cj extends wj implements cw {
     }
 
     final static int k(int param0) {
+        int discarded$0 = 0;
         if (param0 != 256) {
-            int discarded$0 = cj.k(38);
+            discarded$0 = cj.k(38);
             return 256;
         }
         return 256;
@@ -65,16 +78,12 @@ abstract class cj extends wj implements cw {
 
     public final l a(byte param0) {
         if (param0 > -107) {
-            return null;
+            return (l) null;
         }
-        return (l) (Object) ((cj) this).field_B;
+        return (l) ((Object) this.field_B);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = "Replace";
         field_H = "Respect";
         field_F = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";

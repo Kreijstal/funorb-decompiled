@@ -33,6 +33,7 @@ final class lh implements pf {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         qm stackOut_2_0 = null;
@@ -50,17 +51,17 @@ final class lh implements pf {
             L1: {
               if (!(param0 instanceof wg)) {
                 stackOut_3_0 = null;
-                stackIn_4_0 = (qm) (Object) stackOut_3_0;
+                stackIn_4_0 = (qm) ((Object) stackOut_3_0);
                 break L1;
               } else {
-                stackOut_2_0 = (qm) param0;
+                stackOut_2_0 = (qm) (param0);
                 stackIn_4_0 = stackOut_2_0;
                 break L1;
               }
             }
             L2: {
-              var12 = (wg) (Object) stackIn_4_0;
-              de.d(param0.field_n + param2, param3 - -param0.field_j, param0.field_v, param0.field_k, ((lh) this).field_k);
+              var12 = (wg) ((Object) stackIn_4_0);
+              de.d(param0.field_n + param2, param3 - -param0.field_j, param0.field_v, param0.field_k, this.field_k);
               if (var12 == null) {
                 break L2;
               } else {
@@ -71,47 +72,49 @@ final class lh implements pf {
               var7 = -(2 * var12.field_H) + param0.field_v;
               var8 = param0.field_n + param2 - -var12.field_H;
               var9 = var12.field_L + (param0.field_j + param3);
-              de.b(var8, var9, var7 + var8, var9, ((lh) this).field_b);
+              de.b(var8, var9, var7 + var8, var9, this.field_b);
               var10 = -1 + var12.c(false);
               L3: while (true) {
                 if (0 > var10) {
-                  if (null == ((lh) this).field_j) {
+                  if (null == this.field_j) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    ((lh) this).field_j.b(var12.field_g, var8 - -(var7 / 2), var12.field_L + (((lh) this).field_j.field_H + var9), ((lh) this).field_l, ((lh) this).field_f);
+                    this.field_j.b(var12.field_g, var8 - -(var7 / 2), var12.field_L + (this.field_j.field_H + var9), this.field_l, this.field_f);
                     return;
                   }
                 } else {
-                  de.i(var8 + var7 * var12.a(0, var10) / var12.g((byte) -102), var9, ((lh) this).field_i, ((lh) this).field_m);
+                  de.i(var8 + var7 * var12.a(0, var10) / var12.g((byte) -102), var9, this.field_i, this.field_m);
                   var10--;
                   continue L3;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("lh.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -119,7 +122,12 @@ final class lh implements pf {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -128,29 +136,33 @@ final class lh implements pf {
         field_h = null;
         field_e = null;
         field_d = null;
-        field_a = null;
-        field_g = null;
+        if (param0 != 2) {
+          field_d = (String) null;
+          field_a = null;
+          field_g = null;
+          return;
+        } else {
+          field_a = null;
+          field_g = null;
+          return;
+        }
     }
 
     lh(dj param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((lh) this).field_i = param5;
-            ((lh) this).field_f = param2;
-            ((lh) this).field_b = param3;
-            ((lh) this).field_j = param0;
-            ((lh) this).field_k = param4;
-            ((lh) this).field_l = param1;
-            ((lh) this).field_m = param6;
+            this.field_i = param5;
+            this.field_f = param2;
+            this.field_b = param3;
+            this.field_j = param0;
+            this.field_k = param4;
+            this.field_l = param1;
+            this.field_m = param6;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new vn();
         field_d = "Just one target left; you're almost there! If a target is hard to hit, try aiming away from it and watching how Arcane Arrow curves around to the focus point.";
         field_h = "Remaining time this turn";

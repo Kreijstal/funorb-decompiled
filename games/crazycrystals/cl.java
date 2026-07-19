@@ -17,16 +17,16 @@ final class cl extends hk {
 
     final void a(byte param0) {
         int var2 = 0;
-        if (((cl) this).field_h > 0) {
+        if (-1 > (this.field_h ^ -1)) {
           L0: {
-            tb.field_d.a(d.field_b[((cl) this).field_k], 100, 128 * gi.field_m, ((cl) this).field_l / ((cl) this).field_h);
-            ((cl) this).field_k = ((cl) this).field_k + 1;
-            ((cl) this).field_l = 0;
-            ((cl) this).field_h = 0;
-            if (((cl) this).field_f > 0) {
-              tb.field_d.a(cj.field_x, 100, gi.field_m * 128, ((cl) this).field_g / ((cl) this).field_f);
-              ((cl) this).field_f = 0;
-              ((cl) this).field_g = 0;
+            tb.field_d.a(d.field_b[this.field_k], 100, 128 * gi.field_m, this.field_l / this.field_h);
+            this.field_k = this.field_k + 1;
+            this.field_l = 0;
+            this.field_h = 0;
+            if ((this.field_f ^ -1) < -1) {
+              tb.field_d.a(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
+              this.field_f = 0;
+              this.field_g = 0;
               break L0;
             } else {
               break L0;
@@ -36,10 +36,10 @@ final class cl extends hk {
           return;
         } else {
           L1: {
-            if (((cl) this).field_f > 0) {
-              tb.field_d.a(cj.field_x, 100, gi.field_m * 128, ((cl) this).field_g / ((cl) this).field_f);
-              ((cl) this).field_f = 0;
-              ((cl) this).field_g = 0;
+            if ((this.field_f ^ -1) < -1) {
+              tb.field_d.a(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
+              this.field_f = 0;
+              this.field_g = 0;
               break L1;
             } else {
               break L1;
@@ -54,21 +54,21 @@ final class cl extends hk {
         ln var4 = null;
         int var5 = 0;
         try {
-            var4 = (ln) vm.field_j[param0].elementAt(r.field_i[param0]);
+            var4 = (ln) (vm.field_j[param0].elementAt(r.field_i[param0]));
             if (param1 != 23041505) {
-                field_m = null;
+                field_m = (ko) null;
             }
             var5 = (18 + (m.field_l[param0] * 16384 + 73728)) / 37;
             if (var4.field_e < 0) {
-                ((cl) this).field_g = ((cl) this).field_g + var5;
-                ((cl) this).field_f = ((cl) this).field_f + 1;
+                this.field_g = this.field_g + var5;
+                this.field_f = this.field_f + 1;
             } else {
-                ((cl) this).field_l = ((cl) this).field_l + var5;
-                ((cl) this).field_h = ((cl) this).field_h + 1;
+                this.field_l = this.field_l + var5;
+                this.field_h = this.field_h + 1;
             }
             r.field_i[param0] = r.field_i[param0] + 1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "cl.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class cl extends hk {
                 if (param0 == 19) {
                   break L0;
                 } else {
-                  ((cl) this).field_l = 31;
+                  this.field_l = 31;
                   return;
                 }
               } else {
@@ -115,23 +115,23 @@ final class cl extends hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("cl.L(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -139,7 +139,7 @@ final class cl extends hk {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class cl extends hk {
         if (param0 <= -127) {
             return null;
         }
-        return null;
+        return (pb) null;
     }
 
     public static void c(int param0) {
@@ -159,18 +159,14 @@ final class cl extends hk {
     }
 
     cl() {
-        ((cl) this).field_h = 0;
-        ((cl) this).field_f = 0;
-        ((cl) this).field_l = 0;
-        ((cl) this).field_k = 0;
-        ((cl) this).field_g = 0;
+        this.field_h = 0;
+        this.field_f = 0;
+        this.field_l = 0;
+        this.field_k = 0;
+        this.field_g = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 0;
         field_i = "You don't have to kill spiders, but you get points if you do. Here's a spider for you to practise on.";
     }

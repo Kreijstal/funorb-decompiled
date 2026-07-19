@@ -8,16 +8,21 @@ final class ma {
     private static String field_z;
 
     public static void a(int param0) {
-        field_a = null;
-        field_c = null;
-        field_b = null;
+        if (param0 != 20283) {
+          field_b = (ta) null;
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ma.A(";
         field_c = "Log in";
         field_a = "Names cannot contain consecutive spaces";

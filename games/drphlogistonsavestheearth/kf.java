@@ -20,7 +20,7 @@ final class kf {
             return;
           }
         } else {
-          field_e = null;
+          field_e = (he[]) null;
           if (!param1) {
             wj.c();
             a.a((byte) -123, param1);
@@ -34,6 +34,10 @@ final class kf {
     }
 
     final static int a(boolean param0) {
+        if (param0) {
+            field_a = (og) null;
+            return hi.field_a;
+        }
         return hi.field_a;
     }
 
@@ -49,10 +53,6 @@ final class kf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
     }
 }

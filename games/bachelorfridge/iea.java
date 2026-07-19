@@ -19,14 +19,13 @@ final class iea {
         field_c = null;
         field_a = null;
         field_d = null;
+        if (param0 != 24166) {
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Only show private chat from my friends and opponents";
         field_b = "Loading graphics";
     }

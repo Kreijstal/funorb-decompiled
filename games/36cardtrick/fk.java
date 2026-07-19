@@ -13,7 +13,10 @@ final class fk extends qb {
     int field_i;
 
     final static void a(int param0, boolean param1) {
-        wh.field_a.a(16511, param1);
+        if (param0 != 24988) {
+            return;
+        }
+        wh.field_a.a(param0 + -8477, param1);
     }
 
     public static void a(int param0) {
@@ -25,18 +28,14 @@ final class fk extends qb {
     }
 
     fk(int param0, int param1, int param2, int param3, int param4) {
-        ((fk) this).field_k = param4;
-        ((fk) this).field_i = param1;
-        ((fk) this).field_j = param3;
-        ((fk) this).field_g = param0;
-        ((fk) this).field_n = param2;
+        this.field_k = param4;
+        this.field_i = param1;
+        this.field_j = param3;
+        this.field_g = param0;
+        this.field_n = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Visit the Account Management section on the main site to view.";
     }
 }

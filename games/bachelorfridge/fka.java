@@ -14,6 +14,9 @@ final class fka extends bw {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != -2779) {
+            return;
+        }
         field_h = null;
     }
 
@@ -21,10 +24,6 @@ final class fka extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fka.A(";
         field_h = "Find opponent";
     }

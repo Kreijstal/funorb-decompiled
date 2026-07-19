@@ -8,7 +8,7 @@ final class ma {
     static String field_c;
 
     public static void a(int param0) {
-        field_b = null;
+        field_b = (mo[][]) null;
         field_a = null;
         field_c = null;
         if (param0 != 64) {
@@ -29,12 +29,15 @@ final class ma {
         if (!(null != bh.field_f)) {
             bh.field_f = new sc(64);
         }
+        if (!param2) {
+            return;
+        }
         try {
             jf.field_d = param1.field_Cb;
             ro.field_M = param0.field_Cb;
             cf.d(-8328);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ma.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "ma.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -43,10 +46,6 @@ final class ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Show chat (1 unread message)";
     }
 }

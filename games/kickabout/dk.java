@@ -37,23 +37,23 @@ final class dk extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("dk.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -61,30 +61,42 @@ final class dk extends gn {
               break L0;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        ut[] discarded$12 = null;
+        ut[] discarded$13 = null;
+        ut[] discarded$14 = null;
+        ut[] discarded$15 = null;
+        ut[] discarded$16 = null;
+        ut[] discarded$17 = null;
+        ut[] discarded$18 = null;
+        ut[] discarded$19 = null;
+        ut[] discarded$20 = null;
+        ut[] discarded$21 = null;
+        ut[] discarded$22 = null;
+        ut[] discarded$23 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        sj var9 = null;
         var5 = param4 * 52 + param0;
         var6 = var5 - -52;
         var7 = 75 * param3 + param2;
         var8 = 75 + var7;
         if (0 >= param4) {
-          if (param4 >= 2) {
+          if ((param4 ^ -1) <= -3) {
             if (2 <= param3) {
               if (0 >= param3) {
                 if (param1 <= -95) {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$12 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$12 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -94,8 +106,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$13 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$13 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -107,8 +119,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$14 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$14 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -118,8 +130,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$15 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$15 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -133,8 +145,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$16 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$16 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -144,8 +156,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$17 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$17 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -158,8 +170,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$18 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$18 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -168,8 +180,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$19 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$19 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -178,7 +190,7 @@ final class dk extends gn {
           }
         } else {
           var5++;
-          if (param4 < 2) {
+          if ((param4 ^ -1) > -3) {
             var6--;
             if (2 > param3) {
               var8--;
@@ -187,8 +199,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$20 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$20 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -198,8 +210,8 @@ final class dk extends gn {
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 } else {
-                  var9 = null;
-                  ut[] discarded$21 = dk.a(72, -51, (byte) 107, (sj) null);
+                  var9 = (sj) null;
+                  discarded$21 = dk.a(72, -51, (byte) 107, (sj) null);
                   pt.a(var6, -22914, var5, var8, var7);
                   return;
                 }
@@ -217,8 +229,8 @@ final class dk extends gn {
                 pt.a(var6, -22914, var5, var8, var7);
                 return;
               } else {
-                var9 = null;
-                ut[] discarded$22 = dk.a(72, -51, (byte) 107, (sj) null);
+                var9 = (sj) null;
+                discarded$22 = dk.a(72, -51, (byte) 107, (sj) null);
                 pt.a(var6, -22914, var5, var8, var7);
                 return;
               }
@@ -244,8 +256,8 @@ final class dk extends gn {
               pt.a(var6, -22914, var5, var8, var7);
               return;
             } else {
-              var9 = null;
-              ut[] discarded$23 = dk.a(72, -51, (byte) 107, (sj) null);
+              var9 = (sj) null;
+              discarded$23 = dk.a(72, -51, (byte) 107, (sj) null);
               pt.a(var6, -22914, var5, var8, var7);
               return;
             }
@@ -256,17 +268,16 @@ final class dk extends gn {
     public static void a(int param0) {
         field_h = null;
         field_g = null;
+        if (param0 != 7571) {
+            field_g = (int[]) null;
+        }
     }
 
     dk() {
-        ((dk) this).field_f = false;
+        this.field_f = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new String[]{"THE TANK", "THE KEEPER", "THE RANGER", "THE HOTSHOT", "THE ELITE"};
     }
 }

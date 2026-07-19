@@ -9,13 +9,12 @@ final class qt extends pu {
     public static void b(int param0) {
         field_l = null;
         field_m = null;
+        if (param0 != -29205) {
+            field_l = (qe) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qt.A(";
         field_l = null;
     }

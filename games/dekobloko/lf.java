@@ -53,7 +53,7 @@ final class lf {
             try {
               L0: {
                 L1: {
-                  if (param1.field_r[param1.field_n] != 31) {
+                  if ((param1.field_r[param1.field_n] ^ -1) != -32) {
                     break L1;
                   } else {
                     if (-117 == param1.field_r[1 + param1.field_n]) {

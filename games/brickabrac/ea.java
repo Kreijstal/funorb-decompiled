@@ -12,9 +12,11 @@ final class ea {
     static String field_h;
 
     final static int a(boolean param0, int[] param1) {
+        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
+        int[] var4 = null;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -24,6 +26,7 @@ final class ea {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_4_0 = 0;
@@ -40,56 +43,77 @@ final class ea {
           L0: {
             var2_int = -1 + param1.length;
             L1: while (true) {
-              if (var2_int < 0) {
+              if (-1 < (var2_int ^ -1)) {
+                L2: {
+                  if (param0) {
+                    break L2;
+                  } else {
+                    var4 = (int[]) null;
+                    discarded$2 = ea.a(true, (int[]) null);
+                    break L2;
+                  }
+                }
                 stackOut_9_0 = -1;
                 stackIn_10_0 = stackOut_9_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (0 == param1[var2_int]) {
                   var2_int--;
                   continue L1;
                 } else {
-                  stackOut_4_0 = -1 + (ed.b(9, param1[var2_int]) + (var2_int << 5));
+                  stackOut_4_0 = -1 + (ed.b(9, param1[var2_int]) + (var2_int << 2042070629));
                   stackIn_5_0 = stackOut_4_0;
-                  return stackIn_5_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("ea.E(").append(true).append(',');
+            stackOut_11_0 = (RuntimeException) (var2);
+            stackOut_11_1 = new StringBuilder().append("ea.E(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L2;
+              break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L2;
+              break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          return stackIn_10_0;
+        }
     }
 
     public static void a(byte param0) {
+        if (param0 > -33) {
+            field_h = (String) null;
+            field_f = null;
+            field_h = null;
+            return;
+        }
         field_f = null;
         field_h = null;
     }
@@ -106,13 +130,13 @@ final class ea {
         var2.a(param0 ^ 10903, o.field_e.field_jc);
         if (param0 != -11008) {
           ea.a(109, -29);
-          var4 = o.field_e.field_kc - -(o.field_e.field_wc << 6);
+          var4 = o.field_e.field_kc - -(o.field_e.field_wc << -1326113338);
           var2.a(15, var4);
           var2.a(o.field_e.field_Tb, -1, 0, o.field_e.field_Tb.length);
           var2.d((byte) 118, -var3 + var2.field_l);
           return;
         } else {
-          var4 = o.field_e.field_kc - -(o.field_e.field_wc << 6);
+          var4 = o.field_e.field_kc - -(o.field_e.field_wc << -1326113338);
           var2.a(15, var4);
           var2.a(o.field_e.field_Tb, -1, 0, o.field_e.field_Tb.length);
           var2.d((byte) 118, -var3 + var2.field_l);
@@ -121,22 +145,40 @@ final class ea {
     }
 
     final static java.awt.Container b(int param0) {
-        if (null != cb.field_o) {
-            return (java.awt.Container) (Object) cb.field_o;
+        if (param0 == 0) {
+          if (null != cb.field_o) {
+            return (java.awt.Container) ((Object) cb.field_o);
+          } else {
+            return (java.awt.Container) ((Object) uc.e((byte) -83));
+          }
+        } else {
+          field_g = true;
+          if (null != cb.field_o) {
+            return (java.awt.Container) ((Object) cb.field_o);
+          } else {
+            return (java.awt.Container) ((Object) uc.e((byte) -83));
+          }
         }
-        return (java.awt.Container) (Object) uc.e((byte) -83);
     }
 
     final static gk a(int param0) {
         try {
             Throwable var1 = null;
-            gk stackIn_1_0 = null;
+            gk stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            gk stackOut_0_0 = null;
+            gk stackOut_2_0 = null;
             try {
               L0: {
-                stackOut_0_0 = (gk) Class.forName("qk").newInstance();
-                stackIn_1_0 = stackOut_0_0;
+                L1: {
+                  if (param0 > 59) {
+                    break L1;
+                  } else {
+                    field_b = -61;
+                    break L1;
+                  }
+                }
+                stackOut_2_0 = (gk) (Class.forName("qk").newInstance());
+                stackIn_3_0 = stackOut_2_0;
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -144,7 +186,7 @@ final class ea {
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_1_0;
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -153,10 +195,6 @@ final class ea {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = true;
         field_f = "Invite";
         field_d = 0;

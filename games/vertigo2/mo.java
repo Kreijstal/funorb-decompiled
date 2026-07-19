@@ -18,10 +18,15 @@ class mo {
         field_d = null;
         field_b = null;
         field_g = null;
-        field_i = null;
-        field_e = null;
-        field_h = null;
-        field_f = null;
+        if (param0 <= 84) {
+          return;
+        } else {
+          field_i = null;
+          field_e = null;
+          field_h = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static void a(boolean param0) {
@@ -34,9 +39,17 @@ class mo {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var1_int = 55;
-            var2 = 0;
-            L1: while (true) {
+            L1: {
+              var1_int = 55;
+              var2 = 0;
+              if (param0) {
+                break L1;
+              } else {
+                mo.a(38);
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (rk.field_A.length <= var2) {
                 break L0;
               } else {
@@ -45,22 +58,18 @@ class mo {
                 tk.field_c.b(rk.field_A[var2], -var3 + 620, -2 + var1_int + (tk.field_c.field_D + 30) / 2, 16777215, -1);
                 var1_int += 50;
                 var2++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "mo.G(" + true + ')');
+          throw wn.a((Throwable) ((Object) var1), "mo.G(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Hide private chat and appear offline to friends";
         field_e = "Join";
         field_c = "<%0> wants to draw.";

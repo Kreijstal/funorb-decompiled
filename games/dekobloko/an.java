@@ -396,34 +396,34 @@ final class an {
         while (param1 < param2) {
             incrementValue$0 = param1;
             param1++;
-            param0[incrementValue$0] = 64;
+            param0[incrementValue$0] = param3;
             incrementValue$1 = param1;
             param1++;
-            param0[incrementValue$1] = 64;
+            param0[incrementValue$1] = param3;
             incrementValue$2 = param1;
             param1++;
-            param0[incrementValue$2] = 64;
+            param0[incrementValue$2] = param3;
             incrementValue$3 = param1;
             param1++;
-            param0[incrementValue$3] = 64;
+            param0[incrementValue$3] = param3;
             incrementValue$4 = param1;
             param1++;
-            param0[incrementValue$4] = 64;
+            param0[incrementValue$4] = param3;
             incrementValue$5 = param1;
             param1++;
-            param0[incrementValue$5] = 64;
+            param0[incrementValue$5] = param3;
             incrementValue$6 = param1;
             param1++;
-            param0[incrementValue$6] = 64;
+            param0[incrementValue$6] = param3;
             incrementValue$7 = param1;
             param1++;
-            param0[incrementValue$7] = 64;
+            param0[incrementValue$7] = param3;
         }
         param2 += 7;
         while (param1 < param2) {
             incrementValue$8 = param1;
             param1++;
-            param0[incrementValue$8] = 64;
+            param0[incrementValue$8] = param3;
         }
     }
 

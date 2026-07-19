@@ -18,22 +18,18 @@ final class jm {
         if (param0 < 1) {
           jm.a(-29);
           field_d = null;
-          field_g = null;
+          field_g = (oh[][]) null;
           field_c = null;
           return;
         } else {
           field_d = null;
-          field_g = null;
+          field_g = (oh[][]) null;
           field_c = null;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jm.A(";
         field_c = "Player names can be up to 12 letters, numbers and underscores";
         field_e = "Error";

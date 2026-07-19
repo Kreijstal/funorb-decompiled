@@ -14,15 +14,19 @@ final class ce {
     public static void a(byte param0) {
         field_f = null;
         field_c = null;
-        field_a = null;
-        field_g = null;
+        if (param0 <= 123) {
+          field_e = -62;
+          field_a = null;
+          field_g = null;
+          return;
+        } else {
+          field_a = null;
+          field_g = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ce.A(";
         field_e = 0;
         field_c = new long[32];

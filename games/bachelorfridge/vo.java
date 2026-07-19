@@ -14,12 +14,13 @@ abstract class vo {
     abstract void a(byte param0, int param1, int param2);
 
     public static void a(byte param0) {
-        Object var2 = null;
+        pp discarded$2 = null;
+        lu var2 = null;
         field_d = null;
         field_b = null;
         if (param0 > -121) {
-          var2 = null;
-          pp discarded$2 = vo.a(-98, (lu) null);
+          var2 = (lu) null;
+          discarded$2 = vo.a(-98, (lu) null);
           field_c = null;
           return;
         } else {
@@ -72,23 +73,23 @@ abstract class vo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
             stackOut_4_1 = new StringBuilder().append("vo.E(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -96,24 +97,20 @@ abstract class vo {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (pp) (Object) stackIn_3_0;
+        return (pp) ((Object) stackIn_3_0);
     }
 
     vo(int param0, int param1, int param2) {
-        ((vo) this).field_e = param2;
-        ((vo) this).field_f = param1;
-        ((vo) this).field_a = param0;
+        this.field_e = param2;
+        this.field_f = param1;
+        this.field_a = param0;
     }
 
     abstract void b(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Please enter a year between <%0> and <%1>";
     }
 }

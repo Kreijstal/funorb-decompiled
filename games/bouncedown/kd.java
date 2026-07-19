@@ -13,7 +13,7 @@ public class kd {
 
     public static File a(String param0, int param1) {
         if (param1 != 7900) {
-            return null;
+            return (File) null;
         }
         return kd.a(field_d, param0, false, field_a);
     }
@@ -27,8 +27,11 @@ public class kd {
     }
 
     public static void a(int param0, int param1, String param2) {
+        File discarded$3 = null;
+        File discarded$4 = null;
+        File discarded$5 = null;
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         field_d = param2;
         field_a = param1;
@@ -52,8 +55,8 @@ public class kd {
                 return;
               } else {
                 L2: {
-                  var4 = null;
-                  File discarded$3 = kd.a((String) null, (String) null, true, -114);
+                  var4 = (String) null;
+                  discarded$3 = kd.a((String) null, (String) null, true, -114);
                   if (null == field_e) {
                     field_e = "~/";
                     break L2;
@@ -71,8 +74,8 @@ public class kd {
           field_b = true;
           if (param0 > -28) {
             L3: {
-              var4 = null;
-              File discarded$4 = kd.a((String) null, (String) null, true, -114);
+              var4 = (String) null;
+              discarded$4 = kd.a((String) null, (String) null, true, -114);
               if (null == field_e) {
                 field_e = "~/";
                 break L3;
@@ -96,8 +99,8 @@ public class kd {
         field_b = true;
         if (param0 > -28) {
           L5: {
-            var4 = null;
-            File discarded$5 = kd.a((String) null, (String) null, true, -114);
+            var4 = (String) null;
+            discarded$5 = kd.a((String) null, (String) null, true, -114);
             if (null == field_e) {
               field_e = "~/";
               break L5;
@@ -120,10 +123,6 @@ public class kd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = new Hashtable(16);
     }

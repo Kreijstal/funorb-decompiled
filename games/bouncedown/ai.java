@@ -10,18 +10,18 @@ class ai {
     static String[] field_a;
 
     final void c(int param0) {
-        if (((ai) this).field_f == null) {
+        if (this.field_f == null) {
           return;
         } else {
           L0: {
-            ((ai) this).field_f.field_c = ((ai) this).field_c;
-            ((ai) this).field_c.field_f = ((ai) this).field_f;
-            ((ai) this).field_f = null;
-            ((ai) this).field_c = null;
+            this.field_f.field_c = this.field_c;
+            this.field_c.field_f = this.field_f;
+            this.field_f = null;
+            this.field_c = null;
             if (param0 == 2) {
               break L0;
             } else {
-              ((ai) this).field_d = 120L;
+              this.field_d = 120L;
               break L0;
             }
           }
@@ -30,18 +30,30 @@ class ai {
     }
 
     public static void a(byte param0) {
+        String var2 = null;
         field_b = null;
         field_a = null;
-        field_e = null;
+        if (param0 <= 99) {
+          var2 = (String) null;
+          ai.a(false, (java.awt.Color) null, 3, (String) null, 98);
+          field_e = null;
+          return;
+        } else {
+          field_e = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         wa.a(true);
         na.c(param3, param2, param0, param1);
+        if (param4 != -19852) {
+            field_a = (String[]) null;
+        }
     }
 
     final boolean b(int param0) {
-        if (null == ((ai) this).field_f) {
+        if (null == this.field_f) {
             return false;
         }
         if (param0 < 108) {
@@ -51,6 +63,7 @@ class ai {
     }
 
     final static void a(boolean param0, java.awt.Color param1, int param2, String param3, int param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -96,7 +109,7 @@ class ai {
               L1: {
                 L2: {
                   var10 = ch.field_h.getGraphics();
-                  var6 = 107;
+                  var6 = -107 / ((param2 - 63) / 50);
                   if (pa.field_a != null) {
                     break L2;
                   } else {
@@ -141,7 +154,7 @@ class ai {
                     var11.setFont(pa.field_a);
                     var11.setColor(java.awt.Color.white);
                     var11.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
-                    boolean discarded$1 = var10.drawImage(nb.field_b, -152 + kj.field_i / 2, jc.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var10.drawImage(nb.field_b, -152 + kj.field_i / 2, jc.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -183,23 +196,23 @@ class ai {
           decompiledCaughtException = decompiledCaughtParameter2;
           L8: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5_ref;
+            stackOut_18_0 = (RuntimeException) (var5_ref);
             stackOut_18_1 = new StringBuilder().append("ai.QC(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L8;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -208,23 +221,23 @@ class ai {
             }
           }
           L9: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(-24).append(',');
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L9;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -232,7 +245,7 @@ class ai {
               break L9;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param4 + ')');
         }
     }
 

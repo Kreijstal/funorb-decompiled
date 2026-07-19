@@ -12,11 +12,11 @@ final class sj {
 
     final static void a(p param0, int param1, int param2) {
         try {
-            rh.field_a.a(-81, (hf) (Object) param0);
-            ol.a(4, param0, 30175);
-            int var3_int = 0;
+            rh.field_a.a(-81, param0);
+            ol.a(param2, param0, 30175);
+            int var3_int = -18 % ((param1 - 3) / 40);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + -56 + ',' + 4 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "sj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -24,18 +24,18 @@ final class sj {
         field_g = null;
         field_e = null;
         field_b = null;
-        int var1 = 116;
+        int var1 = -116 / ((param0 - 72) / 36);
     }
 
     final void a(int param0, int param1) {
         if (param0 <= param1) {
-          if (param1 <= ((sj) this).field_d) {
-            if (param1 != ((sj) this).field_d) {
-              sf.a(((sj) this).field_f, 1 + param1, ((sj) this).field_f, param1, -param1 + ((sj) this).field_d);
-              ((sj) this).field_d = ((sj) this).field_d - 1;
+          if (param1 <= this.field_d) {
+            if (param1 != this.field_d) {
+              sf.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_d);
+              this.field_d = this.field_d - 1;
               return;
             } else {
-              ((sj) this).field_d = ((sj) this).field_d - 1;
+              this.field_d = this.field_d - 1;
               return;
             }
           } else {
@@ -50,22 +50,26 @@ final class sj {
         int var3 = 0;
         int var4 = 0;
         var4 = Geoblox.field_C;
-        var3 = ((sj) this).field_f.length;
-        L0: while (true) {
-          if (param0 < var3) {
-            return var3;
-          } else {
-            if (((sj) this).field_c) {
-              if (0 == var3) {
-                var3 = 1;
-                continue L0;
+        if (param1 != 1) {
+          return 80;
+        } else {
+          var3 = this.field_f.length;
+          L0: while (true) {
+            if (param0 < var3) {
+              return var3;
+            } else {
+              if (this.field_c) {
+                if (0 == var3) {
+                  var3 = 1;
+                  continue L0;
+                } else {
+                  var3 = var3 * this.field_a;
+                  continue L0;
+                }
               } else {
-                var3 = var3 * ((sj) this).field_a;
+                var3 = var3 + this.field_a;
                 continue L0;
               }
-            } else {
-              var3 = var3 + ((sj) this).field_a;
-              continue L0;
             }
           }
         }
@@ -73,34 +77,49 @@ final class sj {
 
     final int a(int param0, byte param1) {
         if (param1 != 94) {
-            field_b = null;
-            if (!(param0 <= ((sj) this).field_d)) {
+            field_b = (String) null;
+            if (!(param0 <= this.field_d)) {
                 throw new ArrayIndexOutOfBoundsException(param0);
             }
-            return ((sj) this).field_f[param0];
+            return this.field_f[param0];
         }
-        if (!(param0 <= ((sj) this).field_d)) {
+        if (!(param0 <= this.field_d)) {
             throw new ArrayIndexOutOfBoundsException(param0);
         }
-        return ((sj) this).field_f[param0];
+        return this.field_f[param0];
     }
 
     final int a(byte param0) {
         if (param0 <= 28) {
             this.c(-55, 84);
-            return ((sj) this).field_d + 1;
+            return this.field_d + 1;
         }
-        return ((sj) this).field_d + 1;
+        return this.field_d + 1;
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (!(((sj) this).field_d >= param2)) {
-            ((sj) this).field_d = param2;
+        if (param1 != 1) {
+          return;
+        } else {
+          L0: {
+            if (this.field_d < param2) {
+              this.field_d = param2;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          L1: {
+            if (this.field_f.length <= param2) {
+              this.c(param2, param1 ^ 25176);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          this.field_f[param2] = param0;
+          return;
         }
-        if (!(((sj) this).field_f.length > param2)) {
-            this.c(param2, 25177);
-        }
-        ((sj) this).field_f[param2] = param0;
     }
 
     private final void c(int param0, int param1) {
@@ -109,19 +128,19 @@ final class sj {
         var4 = new int[this.b(param0, 1)];
         var3 = var4;
         if (param1 != 25177) {
-          ((sj) this).field_f = null;
-          sf.a(((sj) this).field_f, 0, var4, 0, ((sj) this).field_f.length);
-          ((sj) this).field_f = var4;
+          this.field_f = (int[]) null;
+          sf.a(this.field_f, 0, var4, 0, this.field_f.length);
+          this.field_f = var4;
           return;
         } else {
-          sf.a(((sj) this).field_f, 0, var4, 0, ((sj) this).field_f.length);
-          ((sj) this).field_f = var4;
+          sf.a(this.field_f, 0, var4, 0, this.field_f.length);
+          this.field_f = var4;
           return;
         }
     }
 
     final void b(int param0, byte param1) {
-        this.a(param0, 1, 1 + ((sj) this).field_d);
+        this.a(param0, 1, 1 + this.field_d);
         int var3 = -48 % ((-39 - param1) / 50);
     }
 
@@ -136,7 +155,7 @@ final class sj {
         try {
             ea.a((byte) 115, var4, param0, var2, var3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "sj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -145,10 +164,6 @@ final class sj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new tf();
         field_e = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_b = "This entry doesn't match";

@@ -17,7 +17,14 @@ final class b {
         field_a = null;
         field_b = null;
         field_f = null;
-        field_e = null;
+        if (param0 <= 53) {
+          field_a = (vn) null;
+          field_e = null;
+          return;
+        } else {
+          field_e = null;
+          return;
+        }
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
@@ -42,7 +49,7 @@ final class b {
         L0: {
           var14 = ArcanistsMulti.field_G ? 1 : 0;
           if (param1 instanceof p) {
-            var15 = (p) (Object) param1;
+            var15 = (p) ((Object) param1);
             param1 = var15.field_g;
             var2 = var15.field_i + " | ";
             var12 = var2;
@@ -53,14 +60,14 @@ final class b {
           }
         }
         var16 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var16);
+        var4 = new PrintWriter((Writer) ((Object) var16));
         param1.printStackTrace(var4);
-        var5 = 0;
+        var5 = -66 % ((32 - param0) / 52);
         var4.close();
         var6 = var16.toString();
         var2 = var6;
         var12 = var6;
-        var7 = new BufferedReader((Reader) (Object) new StringReader(var6));
+        var7 = new BufferedReader((Reader) ((Object) new StringReader(var6)));
         var8 = var7.readLine();
         var2 = var8;
         var12 = var8;
@@ -96,12 +103,13 @@ final class b {
               var20 = var2 + var19;
               var2 = var20;
               var2 = var20;
+              var2 = var20;
               if (var10 == -1) {
                 break L3;
               } else {
-                if (var11 != -1) {
+                if ((var11 ^ -1) != 0) {
                   var13 = var9.indexOf(".java:", var10);
-                  if (var13 < 0) {
+                  if ((var13 ^ -1) > -1) {
                     break L3;
                   } else {
                     var2 = var20 + var9.substring(var13 - -5, var11);
@@ -126,10 +134,6 @@ final class b {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new vn();
         field_e = new ri();
         field_f = new int[]{0, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};

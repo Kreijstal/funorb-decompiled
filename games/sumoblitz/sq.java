@@ -15,10 +15,6 @@ final class sq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sq.A(";
     }
 }

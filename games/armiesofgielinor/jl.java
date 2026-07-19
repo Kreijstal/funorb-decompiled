@@ -12,10 +12,10 @@ final class jl {
         field_b = null;
         if (param0 > -124) {
             jl.a(27);
-            field_c = null;
+            field_c = (String[][]) null;
             return;
         }
-        field_c = null;
+        field_c = (String[][]) null;
     }
 
     public final String toString() {

@@ -42,14 +42,14 @@ final class ui {
             }
             L2: while (true) {
               param1--;
-              if (param1 < 0) {
+              if (-1 < (param1 ^ -1)) {
                 break L0;
               } else {
                 var9 = param0;
                 var5 = var9;
                 var6 = param4;
                 var7 = param2;
-                var9[var6] = var7 + (pf.b(16711422, var9[var6]) >> 1);
+                var9[var6] = var7 + (pf.b(16711422, var9[var6]) >> 1125927713);
                 param4++;
                 continue L2;
               }
@@ -59,23 +59,23 @@ final class ui {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5_ref;
+            stackOut_6_0 = (RuntimeException) (var5_ref);
             stackOut_6_1 = new StringBuilder().append("ui.B(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -83,24 +83,34 @@ final class ui {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(byte param0) {
-        field_c = null;
-        field_b = null;
+        int[] var2 = null;
+        if (param0 <= 109) {
+          var2 = (int[]) null;
+          ui.a((int[]) null, 61, 21, -49, 90);
+          field_c = (byte[][]) null;
+          field_b = null;
+          return;
+        } else {
+          field_c = (byte[][]) null;
+          field_b = null;
+          return;
+        }
     }
 
     final static int b(byte param0) {
+        if (param0 > -62) {
+            ui.a((byte) -27);
+            return 1;
+        }
         return 1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_b = "Age:";
     }

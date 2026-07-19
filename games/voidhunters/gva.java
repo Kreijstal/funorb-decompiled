@@ -6,6 +6,9 @@ final class gva extends Exception {
     static dja field_a;
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_a = null;
     }
 
@@ -13,15 +16,15 @@ final class gva extends Exception {
         if (!(uab.a((byte) 44))) {
             return;
         }
-        int var1 = -35;
+        int var1 = -35 / ((-45 - param0) / 50);
         wha.a(2, false, 4);
     }
 
     gva(String param0) {
         try {
-            ((gva) this).field_b = param0;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

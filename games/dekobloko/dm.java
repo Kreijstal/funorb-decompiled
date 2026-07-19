@@ -8,13 +8,17 @@ final class dm {
     static int field_d;
 
     final static w a(byte param0) {
+        if (param0 <= 95) {
+            dm.a(-23);
+            return ge.field_f.field_Sb;
+        }
         return ge.field_f.field_Sb;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        int var1 = 77;
+        int var1 = -77 / ((69 - param0) / 33);
     }
 
     static {

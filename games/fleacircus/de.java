@@ -33,6 +33,9 @@ final class de {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
+        if (param0 != 88) {
+            field_h = (rh) null;
+        }
         gb.a(si.field_R);
         int var4 = param1 * 16;
         int var5 = 16 * param3;
@@ -42,10 +45,6 @@ final class de {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_n = new il[255];
         field_o = "That name is not available";

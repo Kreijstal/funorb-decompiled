@@ -44,50 +44,67 @@ final class rma extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_c = null;
+            field_c = (dja) null;
             return mmb.field_g;
         }
         return mmb.field_g;
     }
 
     final static void b(int param0, byte param1) {
-        kib.field_d = 3 & param0 >> 4;
-        if (kib.field_d > 2) {
-            kib.field_d = 2;
-            idb.field_p = (13 & param0) >> 2;
+        if (param1 == 71) {
+          kib.field_d = 3 & param0 >> 2061097700;
+          if ((kib.field_d ^ -1) >= -3) {
+            idb.field_p = (13 & param0) >> -1884757342;
             lla.field_h = param0 & 3;
-            if (idb.field_p <= 2) {
-                if (2 < lla.field_h) {
-                    lla.field_h = 2;
-                    return;
-                }
-                return;
-            }
-            idb.field_p = 2;
-            if (2 >= lla.field_h) {
-                return;
-            }
-            lla.field_h = 2;
-            return;
-        }
-        idb.field_p = (13 & param0) >> 2;
-        lla.field_h = param0 & 3;
-        if (idb.field_p > 2) {
-            idb.field_p = 2;
-            if (2 < lla.field_h) {
+            if (-3 <= (idb.field_p ^ -1)) {
+              if (2 < lla.field_h) {
                 lla.field_h = 2;
                 return;
+              } else {
+                return;
+              }
+            } else {
+              idb.field_p = 2;
+              if (2 < lla.field_h) {
+                lla.field_h = 2;
+                return;
+              } else {
+                return;
+              }
             }
-            return;
-        }
-        if (2 < lla.field_h) {
-            lla.field_h = 2;
-            return;
+          } else {
+            kib.field_d = 2;
+            idb.field_p = (13 & param0) >> -1884757342;
+            lla.field_h = param0 & 3;
+            if (-3 > (idb.field_p ^ -1)) {
+              idb.field_p = 2;
+              if (2 >= lla.field_h) {
+                return;
+              } else {
+                lla.field_h = 2;
+                return;
+              }
+            } else {
+              if (2 < lla.field_h) {
+                lla.field_h = 2;
+                return;
+              } else {
+                return;
+              }
+            }
+          }
+        } else {
+          return;
         }
     }
 
     public static void l(int param0) {
         field_c = null;
+        if (param0 != 3) {
+            rma.b(-77, (byte) 54);
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
@@ -139,8 +156,9 @@ final class rma extends mfb {
     }
 
     final int k(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((rma) this).h((byte) 56);
+            discarded$0 = this.h((byte) 56);
             return 3;
         }
         return 3;
@@ -152,8 +170,9 @@ final class rma extends mfb {
     }
 
     final int f(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 0) {
-            int discarded$0 = ((rma) this).b(true);
+            discarded$0 = this.b(true);
             return brb.field_o;
         }
         return brb.field_o;
@@ -161,19 +180,15 @@ final class rma extends mfb {
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_c = null;
+            field_c = (dja) null;
             return dr.field_a;
         }
         return dr.field_a;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_d = (dja) (Object) new bh();
+        field_d = (dja) ((Object) new bh());
         field_b = 0;
-        field_c = (dja) (Object) new dkb();
+        field_c = (dja) ((Object) new dkb());
     }
 }

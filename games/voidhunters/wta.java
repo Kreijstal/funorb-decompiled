@@ -25,11 +25,11 @@ final class wta extends sc implements en, aca {
         try {
           L0: {
             L1: {
-              ((wta) this).a(18);
+              this.a(18);
               if (param1 == 100) {
                 break L1;
               } else {
-                ((wta) this).field_c = null;
+                this.field_c = (vq) null;
                 break L1;
               }
             }
@@ -39,23 +39,23 @@ final class wta extends sc implements en, aca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wta.L(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -63,7 +63,7 @@ final class wta extends sc implements en, aca {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -89,11 +89,11 @@ final class wta extends sc implements en, aca {
           L0: {
             L1: {
               if (param0 != -3) {
-                ((wta) this).field_c = null;
-                ((wta) this).a(79);
+                this.field_c = (vq) null;
+                this.a(79);
                 break L1;
               } else {
-                ((wta) this).a(79);
+                this.a(79);
                 break L1;
               }
             }
@@ -103,23 +103,23 @@ final class wta extends sc implements en, aca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("wta.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -127,7 +127,7 @@ final class wta extends sc implements en, aca {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -140,26 +140,28 @@ final class wta extends sc implements en, aca {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object stackIn_2_0 = null;
+        String stackIn_2_0 = null;
         String stackIn_7_0 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         String stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
+        String stackOut_1_0 = null;
         try {
           L0: {
-            var2_int = ((wta) this).field_c.e(-5);
-            var3 = ((wta) this).field_c.c(true);
-            var4 = ((wta) this).field_c.f(3476);
+            var2_int = this.field_c.e(-5);
+            var3 = this.field_c.c(true);
+            var4 = this.field_c.f(3476);
             if (param0 == 16384) {
               L1: {
                 var5 = vga.a(true);
-                if (var4 < 1890) {
+                if (-1891 < (var4 ^ -1)) {
                   break L1;
                 } else {
                   if (-3 + var5 < var4) {
                     break L1;
                   } else {
                     if (!iia.a(var3, var2_int, true, var4)) {
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       return null;
@@ -167,23 +169,34 @@ final class wta extends sc implements en, aca {
                   }
                 }
               }
-              stackOut_6_0 = isa.a(fob.field_d, new String[2], 79);
+              stackOut_6_0 = isa.a(fob.field_d, new String[]{"1890", Integer.toString(var5 + -3)}, 79);
               stackIn_7_0 = stackOut_6_0;
-              return stackIn_7_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (String) null;
               stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            decompiledRegionSelector0 = 2;
             break L2;
           }
         }
-        return apa.field_o;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            return apa.field_o;
+          }
+        }
     }
 
     final qrb b(int param0) {
@@ -203,52 +216,63 @@ final class wta extends sc implements en, aca {
         try {
           L0: {
             L1: {
-              var2_int = ((wta) this).field_c.e(-5);
-              var3 = ((wta) this).field_c.c(true);
+              var2_int = this.field_c.e(-5);
+              var3 = this.field_c.c(true);
               if (param0 == -1) {
                 break L1;
               } else {
-                ((wta) this).field_c = null;
+                this.field_c = (vq) null;
                 break L1;
               }
             }
-            var4 = ((wta) this).field_c.f(3476);
+            var4 = this.field_c.f(3476);
             var5 = vga.a(true);
-            if (var4 < 1890) {
+            if (-1891 < (var4 ^ -1)) {
               stackOut_4_0 = cca.field_o;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (var4 > -3 + var5) {
                 stackOut_8_0 = cca.field_o;
                 stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (iia.a(var3, var2_int, true, var4)) {
-                  decompiledRegionSelector0 = 0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   stackOut_11_0 = cca.field_o;
                   stackIn_12_0 = stackOut_11_0;
-                  decompiledRegionSelector0 = 1;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               }
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return cca.field_o;
         }
         if (decompiledRegionSelector0 == 0) {
-          return lea.field_o;
+          return stackIn_5_0;
         } else {
-          return stackIn_12_0;
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return lea.field_o;
+            } else {
+              return stackIn_12_0;
+            }
+          }
         }
     }
 
     public final void a(int param0, uf param1) {
+        String discarded$2 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -272,7 +296,7 @@ final class wta extends sc implements en, aca {
               if (param0 == -12409) {
                 break L1;
               } else {
-                String discarded$2 = ((wta) this).d(116);
+                discarded$2 = this.d(116);
                 break L1;
               }
             }
@@ -282,23 +306,23 @@ final class wta extends sc implements en, aca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wta.I(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -306,16 +330,17 @@ final class wta extends sc implements en, aca {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     public final boolean b(byte param0) {
+        boolean discarded$0 = false;
         if (param0 >= -100) {
-            boolean discarded$0 = ((wta) this).b((byte) 87);
-            return ((wta) this).field_c.d(0);
+            discarded$0 = this.b((byte) 87);
+            return this.field_c.d(0);
         }
-        return ((wta) this).field_c.d(0);
+        return this.field_c.d(0);
     }
 
     static {

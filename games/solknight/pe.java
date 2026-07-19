@@ -7,6 +7,9 @@ abstract class pe extends ec {
     static volatile boolean field_n;
 
     final static boolean a(byte param0) {
+        if (param0 > -65) {
+            return false;
+        }
         if (null == fc.field_l) {
             return false;
         }
@@ -26,16 +29,12 @@ abstract class pe extends ec {
     abstract Object h(int param0);
 
     pe(int param0) {
-        ((pe) this).field_o = param0;
+        this.field_o = param0;
     }
 
     abstract boolean g(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = false;
     }
 }

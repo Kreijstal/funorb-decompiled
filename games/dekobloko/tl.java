@@ -14,9 +14,9 @@ final class tl extends wm {
 
     final static boolean b(int param0, int param1, int param2) {
         if (13 != wh.field_c) {
-          if (wh.field_c != 102) {
+          if (wh.field_c != param1) {
             if (null != mg.field_bc) {
-              if (!mg.field_bc.b(13, 15028, 15)) {
+              if (!mg.field_bc.b(param2, 15028, param0)) {
                 return false;
               } else {
                 return true;
@@ -29,7 +29,7 @@ final class tl extends wm {
             return true;
           }
         } else {
-          qn.l(13);
+          qn.l(param1 + -89);
           return true;
         }
     }
@@ -47,6 +47,7 @@ final class tl extends wm {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         tb stackOut_6_0 = null;
         tb stackOut_11_0 = null;
@@ -71,7 +72,8 @@ final class tl extends wm {
                   if (!var3.a(103)) {
                     stackOut_6_0 = jb.field_j;
                     stackIn_7_0 = stackOut_6_0;
-                    return stackIn_7_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     this.field_t = param0;
                     this.field_p = var3.b(-3348);
@@ -90,11 +92,13 @@ final class tl extends wm {
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               stackOut_1_0 = vm.field_u;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,16 +131,34 @@ final class tl extends wm {
           }
           throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
         }
-        return stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            return stackIn_12_0;
+          }
+        }
     }
 
     public static void g(byte param0) {
         field_w = null;
         field_r = null;
-        field_s = null;
-        field_x = null;
-        field_q = null;
-        field_u = null;
+        if (param0 >= -59) {
+          field_w = (ck[]) null;
+          field_s = null;
+          field_x = null;
+          field_q = null;
+          field_u = null;
+          return;
+        } else {
+          field_s = null;
+          field_x = null;
+          field_q = null;
+          field_u = null;
+          return;
+        }
     }
 
     tl(rk param0, rk param1) {
@@ -161,6 +183,7 @@ final class tl extends wm {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_4_0 = null;
         String stackOut_8_0 = null;
@@ -185,11 +208,13 @@ final class tl extends wm {
             if (this.field_v.b(param0, (byte) -40) == vm.field_u) {
               stackOut_4_0 = this.field_v.a(param0, (byte) -11);
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (this.b(param0, (byte) -40) == vm.field_u) {
                 stackOut_8_0 = dd.field_m;
                 stackIn_9_0 = stackOut_8_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return li.field_a;
@@ -226,7 +251,11 @@ final class tl extends wm {
           }
           throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
-        return stackIn_9_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          return stackIn_9_0;
+        }
     }
 
     static {

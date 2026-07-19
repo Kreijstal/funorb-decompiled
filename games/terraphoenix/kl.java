@@ -10,16 +10,15 @@ final class kl {
     private static String field_z;
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_e = null;
         field_b = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kl.A(";
         field_c = -1;
         field_b = "Loading levels";

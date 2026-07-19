@@ -23,13 +23,13 @@ final class me {
         if ((7 & param0) != 0) {
             var2 = -(param0 & 7) + 8;
         }
-        int var4 = 77;
+        int var4 = 77 / ((10 - param1) / 47);
         int var3 = param0 + var2;
         return var3;
     }
 
     final static void a(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         rj.a((String) null, we.field_a, true);
         if (param0 != 7) {
             me.a((byte) -55);
@@ -50,10 +50,6 @@ final class me {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Retry";
         field_c = -1;
         field_e = 0L;

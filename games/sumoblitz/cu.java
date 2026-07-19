@@ -6,26 +6,26 @@ final class cu {
     private java.awt.DisplayMode field_a;
 
     public final void exit() {
-        if (!(((cu) this).field_a == null)) {
-            ((cu) this).field_b.setDisplayMode(((cu) this).field_a);
-            if (!((cu) this).field_b.getDisplayMode().equals(((cu) this).field_a)) {
+        if (!(this.field_a == null)) {
+            this.field_b.setDisplayMode(this.field_a);
+            if (!this.field_b.getDisplayMode().equals(this.field_a)) {
                 throw new RuntimeException("");
             }
-            ((cu) this).field_a = null;
+            this.field_a = null;
         }
         this.a(true, (java.awt.Frame) null);
     }
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((cu) this).field_b.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << -1344578654];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) + 1] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
+            var2[var3 << -476628606] = var4[var3].getWidth();
+            var2[(var3 << -1191933566) + 1] = var4[var3].getHeight();
+            var2[2 + (var3 << -1489953438)] = var4[var3].getBitDepth();
+            var2[(var3 << -294987614) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -50,8 +50,8 @@ final class cu {
                     case 1: {
                         try {
                             var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.setAccessible(true);
-                            if (((Boolean) var4_ref.get((Object) (Object) ((cu) this).field_b)).booleanValue()) {
+                            var4_ref.setAccessible(param0);
+                            if (((Boolean) (var4_ref.get(this.field_b))).booleanValue()) {
                                 statePc = 3;
                             } else {
                                 statePc = 2;
@@ -76,7 +76,7 @@ final class cu {
                     case 3: {
                         try {
                             var3 = 1;
-                            var4_ref.set((Object) (Object) ((cu) this).field_b, (Object) (Object) Boolean.FALSE);
+                            var4_ref.set(this.field_b, Boolean.FALSE);
                             statePc = 6;
                             continue stateLoop;
                         } catch (Throwable stateCaught_3) {
@@ -92,7 +92,7 @@ final class cu {
                     }
                     case 6: {
                         try {
-                            ((cu) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param1);
+                            this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param1));
                             statePc = 7;
                             continue stateLoop;
                         } catch (Throwable stateCaught_6) {
@@ -112,7 +112,7 @@ final class cu {
                     case 9: {
                         try {
                             var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.set((Object) (Object) ((cu) this).field_b, (Object) (Object) Boolean.TRUE);
+                            var4_ref.set(this.field_b, Boolean.TRUE);
                             statePc = 19;
                             continue stateLoop;
                         } catch (Throwable stateCaught_9) {
@@ -148,7 +148,7 @@ final class cu {
                     case 15: {
                         try {
                             var7_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var7_ref.set((Object) (Object) ((cu) this).field_b, (Object) (Object) Boolean.TRUE);
+                            var7_ref.set(this.field_b, Boolean.TRUE);
                             statePc = 18;
                             continue stateLoop;
                         } catch (Throwable stateCaught_15) {
@@ -184,8 +184,8 @@ final class cu {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((cu) this).field_a = ((cu) this).field_b.getDisplayMode();
-        if (null == ((cu) this).field_a) {
+        this.field_a = this.field_b.getDisplayMode();
+        if (null == this.field_a) {
           throw new NullPointerException();
         } else {
           L0: {
@@ -195,8 +195,8 @@ final class cu {
             if (param4 != 0) {
               break L0;
             } else {
-              var6 = ((cu) this).field_a.getRefreshRate();
-              var7 = ((cu) this).field_b.getDisplayModes();
+              var6 = this.field_a.getRefreshRate();
+              var7 = this.field_b.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -244,7 +244,7 @@ final class cu {
               }
             }
           }
-          ((cu) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         }
     }
@@ -256,8 +256,8 @@ final class cu {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((cu) this).field_b = var1.getDefaultScreenDevice();
-        if (((cu) this).field_b.isFullScreenSupported()) {
+        this.field_b = var1.getDefaultScreenDevice();
+        if (this.field_b.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -270,7 +270,7 @@ final class cu {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((cu) this).field_b = var5;
+                  this.field_b = var5;
                   return;
                 } else {
                   var4++;

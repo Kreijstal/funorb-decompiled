@@ -17,28 +17,33 @@ final class lj extends pi {
         if (!(param0 instanceof db)) {
             var2 = new db(param0, param1);
         } else {
-            var2 = (db) (Object) param0;
+            var2 = (db) ((Object) param0);
             var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }
 
     public static void a(byte param0) {
+        if (param0 > -23) {
+            field_r = 91;
+        }
         field_s = null;
         field_v = null;
         field_o = null;
-        field_u = null;
+        field_u = (String[][]) null;
     }
 
     lj(String param0) {
         try {
-            ((lj) this).field_n = param0;
+            this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static pb a(ld param0, byte param1) {
+        pb discarded$2 = null;
+        int discarded$3 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -47,7 +52,7 @@ final class lj extends pi {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        ld var9 = null;
         pb stackIn_24_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -70,15 +75,15 @@ final class lj extends pi {
         try {
           L0: {
             var2_int = param0.c((byte) -70, 8);
-            if (var2_int > 0) {
+            if ((var2_int ^ -1) < -1) {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
                 if (param1 == -62) {
                   break L1;
                 } else {
-                  var9 = null;
-                  pb discarded$2 = lj.a((ld) null, (byte) 35);
+                  var9 = (ld) null;
+                  discarded$2 = lj.a((ld) null, (byte) 35);
                   break L1;
                 }
               }
@@ -111,7 +116,7 @@ final class lj extends pi {
                 if (var4 == 0) {
                   break L3;
                 } else {
-                  int discarded$3 = param0.c((byte) -67, 16);
+                  discarded$3 = param0.c((byte) -67, 16);
                   var5.field_s = gd.a(param0, 16, -66, var5.field_s);
                   var5.field_u = gd.a(param0, 16, -62, var5.field_u);
                   var5.field_i = gd.a(param0, 16, -84, var5.field_i);
@@ -159,7 +164,7 @@ final class lj extends pi {
                   }
                 }
               }
-              stackOut_23_0 = (pb) var5;
+              stackOut_23_0 = (pb) (var5);
               stackIn_24_0 = stackOut_23_0;
               break L0;
             }
@@ -168,23 +173,23 @@ final class lj extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var2;
+            stackOut_25_0 = (RuntimeException) (var2);
             stackOut_25_1 = new StringBuilder().append("lj.A(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -192,18 +197,14 @@ final class lj extends pi {
               break L8;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
         return stackIn_24_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Some Miner";
-        field_u = new String[][]{new String[1]};
+        field_u = new String[][]{new String[]{"Effluvium: Effluvium is worth 750 points. You'll often find it surrounded by toxic, flammable gas."}};
         field_o = "Log in";
         field_v = "Dynamite: Explosives. Does not work underwater";
         field_q = -1;

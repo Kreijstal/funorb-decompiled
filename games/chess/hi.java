@@ -45,19 +45,19 @@ final class hi extends o {
         int var6_int = 0;
         byte[] var6 = null;
         p var2 = new p(param0);
-        ((hi) this).field_P = var2.e((byte) -120);
-        ((hi) this).field_o = var2.e((byte) -110);
-        ((hi) this).field_q = var2.e((byte) -103);
-        ((hi) this).field_G = var2.e((byte) -117);
-        if (((hi) this).field_G < 0) {
-            ((hi) this).field_G = ~((hi) this).field_G;
-            ((hi) this).field_N = true;
+        this.field_P = var2.e((byte) -120);
+        this.field_o = var2.e((byte) -110);
+        this.field_q = var2.e((byte) -103);
+        this.field_G = var2.e((byte) -117);
+        if (this.field_G < 0) {
+            this.field_G = this.field_G ^ -1;
+            this.field_N = true;
         }
         int var3 = var2.e((byte) -121);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((hi) this).field_s = new byte[var3][];
+        this.field_s = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -66,7 +66,7 @@ final class hi extends o {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var5, (byte) 121, var6, 0);
-            ((hi) this).field_s[var4] = var6;
+            this.field_s[var4] = var6;
         }
     }
 
@@ -111,15 +111,16 @@ final class hi extends o {
 
     private final static void a(byte[] param0, int param1) {
         field_L = param0;
-        field_Q = 0;
+        field_Q = param1;
         field_F = 0;
     }
 
     final static hi a(um param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             hi var4_ref = null;
             if (!hi.a(param0)) {
-                boolean discarded$0 = param0.a(param1, param2, (byte) -78);
+                discarded$0 = param0.a(param1, param2, (byte) -78);
                 return null;
             }
             byte[] var3 = param0.a(param1, 30045, param2);
@@ -127,8 +128,10 @@ final class hi extends o {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new hi(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -139,8 +142,8 @@ final class hi extends o {
     }
 
     final static int d(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_F) {
@@ -161,14 +164,13 @@ final class hi extends o {
     }
 
     final lm a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -181,23 +183,23 @@ final class hi extends o {
           }
         }
         L1: {
-          if (((hi) this).field_j != null) {
+          if (this.field_j != null) {
             break L1;
           } else {
-            ((hi) this).field_v = 0;
-            ((hi) this).field_l = new float[field_z];
-            ((hi) this).field_j = new byte[((hi) this).field_o];
-            ((hi) this).field_y = 0;
-            ((hi) this).field_t = 0;
+            this.field_v = 0;
+            this.field_l = new float[field_z];
+            this.field_j = new byte[this.field_o];
+            this.field_y = 0;
+            this.field_t = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((hi) this).field_t >= ((hi) this).field_s.length) {
-            ((hi) this).field_l = null;
-            var14 = ((hi) this).field_j;
-            ((hi) this).field_j = null;
-            return new lm(((hi) this).field_P, var14, ((hi) this).field_q, ((hi) this).field_G, ((hi) this).field_N);
+          if (this.field_t >= this.field_s.length) {
+            this.field_l = null;
+            var12 = this.field_j;
+            this.field_j = null;
+            return new lm(this.field_P, var12, this.field_q, this.field_G, this.field_N);
           } else {
             L3: {
               if (param0 == null) {
@@ -211,19 +213,17 @@ final class hi extends o {
               }
             }
             L4: {
-              var13 = this.e(((hi) this).field_t);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.e(this.field_t);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((hi) this).field_y;
-                  var4 = var13.length;
-                  if (var4 <= ((hi) this).field_o - var3) {
+                  var3 = this.field_y;
+                  var4 = var7.length;
+                  if (var4 <= this.field_o - var3) {
                     break L5;
                   } else {
-                    var4 = ((hi) this).field_o - var3;
+                    var4 = this.field_o - var3;
                     break L5;
                   }
                 }
@@ -234,38 +234,39 @@ final class hi extends o {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((hi) this).field_y);
+                        param0[0] = param0[0] - (var3 - this.field_y);
                         break L7;
                       }
                     }
-                    ((hi) this).field_y = var3;
+                    this.field_y = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((hi) this).field_j[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_j[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((hi) this).field_t = ((hi) this).field_t + 1;
+            this.field_t = this.field_t + 1;
             continue L2;
           }
         }
     }
 
     private final float[] e(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -325,13 +326,7 @@ final class hi extends o {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -366,8 +361,8 @@ final class hi extends o {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          hi.a(((hi) this).field_s[param0], 0);
-          int discarded$1 = hi.b();
+          hi.a(this.field_s[param0], 0);
+          discarded$1 = hi.b();
           var2 = hi.d(ql.a(-122, field_J.length - 1));
           var3 = field_x[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -489,9 +484,7 @@ final class hi extends o {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_O;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_O;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -503,11 +496,11 @@ final class hi extends o {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_E;
+                            stackOut_39_0 = (float[]) (field_E);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_m;
+                            stackOut_38_0 = (float[]) (field_m);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -515,11 +508,11 @@ final class hi extends o {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_B;
+                            stackOut_42_0 = (float[]) (field_B);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_r;
+                            stackOut_41_0 = (float[]) (field_r);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -527,11 +520,11 @@ final class hi extends o {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_w;
+                            stackOut_45_0 = (float[]) (field_w);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_k;
+                            stackOut_44_0 = (float[]) (field_k);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -539,18 +532,16 @@ final class hi extends o {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_H;
+                            stackOut_48_0 = (int[]) (field_H);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_D;
+                            stackOut_47_0 = (int[]) (field_D);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -630,7 +621,7 @@ final class hi extends o {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -675,7 +666,7 @@ final class hi extends o {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -788,27 +779,25 @@ final class hi extends o {
             }
             L35: {
               var17 = null;
-              if (((hi) this).field_v <= 0) {
+              if (this.field_v <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((hi) this).field_v + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_v + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((hi) this).field_M) {
+                  var17 = var40;
+                  if (this.field_M) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((hi) this).field_u) {
+                      if (var19 >= this.field_u) {
                         break L36;
                       } else {
-                        var20 = (((hi) this).field_v >> 1) + var19;
-                        var40[var19] = var40[var19] + ((hi) this).field_l[var20];
+                        var20 = (this.field_v >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_l[var20];
                         var19++;
                         continue L37;
                       }
@@ -823,7 +812,7 @@ final class hi extends o {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_O[var19];
                       var19++;
                       continue L38;
@@ -833,11 +822,11 @@ final class hi extends o {
               }
             }
             L39: {
-              var18 = ((hi) this).field_l;
-              ((hi) this).field_l = field_O;
+              var18 = this.field_l;
+              this.field_l = field_O;
               field_O = var18;
-              ((hi) this).field_v = var4;
-              ((hi) this).field_u = var12 - (var4 >> 1);
+              this.field_v = var4;
+              this.field_u = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -855,12 +844,12 @@ final class hi extends o {
                 break L39;
               }
             }
-            ((hi) this).field_M = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((hi) (this)).field_M = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_p[var14.field_b[var17_int]];
-            var55 = field_O;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_O;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -868,6 +857,7 @@ final class hi extends o {
     }
 
     final lm a() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -875,24 +865,24 @@ final class hi extends o {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((hi) this).field_v = 0;
-        ((hi) this).field_l = new float[field_z];
-        var1 = new byte[((hi) this).field_o];
+        this.field_v = 0;
+        this.field_l = new float[field_z];
+        var1 = new byte[this.field_o];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((hi) this).field_s.length) {
-            ((hi) this).field_l = null;
-            return new lm(((hi) this).field_P, var1, ((hi) this).field_q, ((hi) this).field_G, ((hi) this).field_N);
+          if (var3 >= this.field_s.length) {
+            this.field_l = null;
+            return new lm(this.field_P, var1, this.field_q, this.field_G, this.field_N);
           } else {
             var4 = this.e(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((hi) this).field_o - var2) {
+                if (var5 <= this.field_o - var2) {
                   break L1;
                 } else {
-                  var5 = ((hi) this).field_o - var2;
+                  var5 = this.field_o - var2;
                   break L1;
                 }
               }
@@ -904,11 +894,11 @@ final class hi extends o {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -927,6 +917,9 @@ final class hi extends o {
     }
 
     final static void b(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -1001,14 +994,14 @@ final class hi extends o {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_x;
+                                      stackOut_37_0 = (boolean[]) (field_x);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (hi.b() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -1016,7 +1009,7 @@ final class hi extends o {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -1026,8 +1019,8 @@ final class hi extends o {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = hi.d(16);
-                                    int discarded$4 = hi.d(16);
+                                    discarded$3 = hi.d(16);
+                                    discarded$4 = hi.d(16);
                                     field_J[var6] = hi.d(8);
                                     var6++;
                                     continue L6;
@@ -1052,7 +1045,7 @@ final class hi extends o {
                       }
                     }
                   } else {
-                    int discarded$5 = hi.d(16);
+                    discarded$5 = hi.d(16);
                     var3++;
                     continue L2;
                   }
@@ -1144,9 +1137,10 @@ final class hi extends o {
 
     final static hi a(um param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             hi var4_ref = null;
             if (!hi.a(param0)) {
-                boolean discarded$0 = param0.a((byte) -109, param1, param2);
+                discarded$0 = param0.a((byte) -109, param1, param2);
                 return null;
             }
             byte[] var3 = param0.a(param1, param2, 5847);
@@ -1154,8 +1148,10 @@ final class hi extends o {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new hi(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1180,10 +1176,6 @@ final class hi extends o {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = false;
     }
 }

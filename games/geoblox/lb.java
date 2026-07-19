@@ -13,7 +13,7 @@ final class lb {
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = -53;
+        int var1 = -53 / ((param0 - -21) / 42);
     }
 
     static {

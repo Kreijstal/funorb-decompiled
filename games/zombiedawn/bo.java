@@ -14,6 +14,7 @@ final class bo extends le {
     static boolean[] field_p;
 
     final static String a(int param0) {
+        String discarded$9 = null;
         String var1 = null;
         L0: {
           var1 = "";
@@ -34,7 +35,7 @@ final class bo extends le {
         }
         if (param0 < 19) {
           L2: {
-            String discarded$9 = bo.a(57);
+            discarded$9 = bo.a(57);
             if (var1.length() == 0) {
               var1 = ta.field_a;
               break L2;
@@ -66,6 +67,7 @@ final class bo extends le {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
+            String discarded$2 = null;
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
@@ -92,7 +94,7 @@ final class bo extends le {
                     if (param0 <= -85) {
                       break L1;
                     } else {
-                      String discarded$2 = bo.a(25);
+                      discarded$2 = bo.a(25);
                       break L1;
                     }
                   }
@@ -111,23 +113,23 @@ final class bo extends le {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("bo.C(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -135,7 +137,7 @@ final class bo extends le {
                   break L2;
                 }
               }
-              throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw sh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -145,12 +147,12 @@ final class bo extends le {
     }
 
     bo(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((bo) this).field_h = param1;
-        ((bo) this).field_l = param5;
-        ((bo) this).field_j = param2;
-        ((bo) this).field_k = param3;
-        ((bo) this).field_q = param0;
-        ((bo) this).field_m = param4;
+        this.field_h = param1;
+        this.field_l = param5;
+        this.field_j = param2;
+        this.field_k = param3;
+        this.field_q = param0;
+        this.field_m = param4;
     }
 
     final static void a(int param0, int param1) {
@@ -164,7 +166,7 @@ final class bo extends le {
           sm.field_a = param1;
           var2 = -45 % ((param0 - -16) / 41);
           if (!df.field_h) {
-            if (param1 != -2) {
+            if ((param1 ^ -1) != 1) {
               if (param1 != -3) {
                 nm.field_b = false;
                 if (param1 < 0) {
@@ -272,10 +274,6 @@ final class bo extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = false;
         field_p = new boolean[112];
     }

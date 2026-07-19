@@ -10,7 +10,7 @@ final class im extends za {
         if (param0 >= -116) {
             return;
         }
-        ((im) this).field_g.a();
+        this.field_g.a();
     }
 
     final static byte[] a(int param0, String param1) {
@@ -51,23 +51,23 @@ final class im extends za {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("im.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -75,20 +75,21 @@ final class im extends za {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     im(int param0) {
-        ((im) this).field_g = new jaclib.memory.heap.NativeHeap(param0);
+        this.field_g = new jaclib.memory.heap.NativeHeap(param0);
     }
 
     final static boolean a(boolean param0) {
+        boolean discarded$5 = false;
         if (param0) {
           if (bl.field_c >= 20) {
             if (jr.a((byte) 32)) {
-              if (un.field_c > 0) {
+              if (-1 > (un.field_c ^ -1)) {
                 if (ur.b(-111)) {
                   return false;
                 } else {
@@ -104,10 +105,10 @@ final class im extends za {
             return true;
           }
         } else {
-          boolean discarded$5 = im.a(false);
+          discarded$5 = im.a(false);
           if (bl.field_c >= 20) {
             if (jr.a((byte) 32)) {
-              if (un.field_c > 0) {
+              if (-1 > (un.field_c ^ -1)) {
                 if (ur.b(-111)) {
                   return false;
                 } else {
@@ -126,10 +127,6 @@ final class im extends za {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 9;
     }
 }

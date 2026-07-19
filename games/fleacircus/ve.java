@@ -18,42 +18,42 @@ final class ve {
 
     final boolean a(int param0) {
         if (param0 > -16) {
-            ((ve) this).field_b = null;
-            return ((ve) this).field_c;
+            this.field_b = (String) null;
+            return this.field_c;
         }
-        return ((ve) this).field_c;
+        return this.field_c;
     }
 
     final String c(int param0) {
         if (param0 != -16955) {
-            return null;
+            return (String) null;
         }
-        return ((ve) this).field_b;
+        return this.field_b;
     }
 
     final void a(boolean param0, int param1) {
         if (param1 != 10518) {
             return;
         }
-        ((ve) this).field_a = param0 ? true : false;
-        ((ve) this).field_c = true;
+        this.field_a = param0 ? true : false;
+        this.field_c = true;
     }
 
     final boolean b(int param0) {
         if (param0 != 27937) {
-            ((ve) this).field_b = null;
-            return ((ve) this).field_a;
+            this.field_b = (String) null;
+            return this.field_a;
         }
-        return ((ve) this).field_a;
+        return this.field_a;
     }
 
     ve(String param0) {
-        ((ve) this).field_c = false;
-        ((ve) this).field_a = false;
+        this.field_c = false;
+        this.field_a = false;
         try {
-            ((ve) this).field_b = param0;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pf.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

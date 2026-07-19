@@ -12,21 +12,34 @@ final class pr {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
+            if (param1 != -9194) {
+                field_c = (qr) null;
+            }
             param0.setFocusTraversalKeysEnabled(false);
-            param0.addKeyListener((java.awt.event.KeyListener) (Object) im.field_c);
-            param0.addFocusListener((java.awt.event.FocusListener) (Object) im.field_c);
+            param0.addKeyListener(im.field_c);
+            param0.addFocusListener(im.field_c);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + -9194 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(int param0) {
         field_e = null;
         field_a = null;
-        field_c = null;
-        field_b = null;
-        field_d = null;
-        field_f = null;
+        if (param0 != 21455) {
+          field_g = -51;
+          field_c = null;
+          field_b = null;
+          field_d = null;
+          field_f = null;
+          return;
+        } else {
+          field_c = null;
+          field_b = null;
+          field_d = null;
+          field_f = null;
+          return;
+        }
     }
 
     final synchronized static long a(int param0) {
@@ -55,10 +68,6 @@ final class pr {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Visit the Account Management section on the main site to view.";
         field_e = "You appear to be telling someone your password - please don't!";
         field_f = "Connection restored.";

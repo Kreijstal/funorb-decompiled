@@ -48,13 +48,13 @@ final class to extends de {
         if (param0 != 11) {
             return;
         }
-        ((to) this).b((byte) -71);
+        this.b((byte) -71);
     }
 
     public static void f(byte param0) {
         field_p = null;
         field_r = null;
-        int var1 = 0;
+        int var1 = 127 % ((-44 - param0) / 39);
         field_o = null;
         field_q = null;
         field_t = null;
@@ -66,15 +66,11 @@ final class to extends de {
 
     final void c(byte param0) {
         if (param0 > -13) {
-            field_t = null;
+            field_t = (mm) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "You have 1 unread message!";
         field_p = "Orb points: ";
     }

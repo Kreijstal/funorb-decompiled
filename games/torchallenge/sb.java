@@ -7,15 +7,23 @@ final class sb implements com.ms.directX.IEnumModesCallback {
     private static int[] field_a;
 
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
         if (null != field_a) {
+            fieldTemp$1 = field_b;
             field_b = field_b + 1;
-            field_a[field_b] = param0.width;
+            field_a[fieldTemp$1] = param0.width;
+            fieldTemp$2 = field_b;
             field_b = field_b + 1;
-            field_a[field_b] = param0.height;
+            field_a[fieldTemp$2] = param0.height;
+            fieldTemp$3 = field_b;
             field_b = field_b + 1;
-            field_a[field_b] = param0.rgbBitCount;
+            field_a[fieldTemp$3] = param0.rgbBitCount;
+            fieldTemp$4 = field_b;
             field_b = field_b + 1;
-            field_a[field_b] = param0.refreshRate;
+            field_a[fieldTemp$4] = param0.refreshRate;
         } else {
             field_b = field_b + 4;
         }
@@ -23,12 +31,12 @@ final class sb implements com.ms.directX.IEnumModesCallback {
 
     final void a(int param0, int param1, int param2, int param3, int param4, java.awt.Frame param5) {
         param5.setVisible(true);
-        com.ms.awt.WComponentPeer var7 = null;
+        com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();
         int discarded$0 = com.ms.win32.User32.SetWindowLong(var8, param2, -2147483648);
         int discarded$1 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
-        ((sb) this).field_c.setCooperativeLevel((java.awt.Component) (Object) param5, 17);
-        ((sb) this).field_c.setDisplayMode(param3, param4, param1, param0, 0);
+        this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
+        this.field_c.setDisplayMode(param3, param4, param1, param0, 0);
         param5.setBounds(0, 0, param3, param4);
         param5.toFront();
         param5.requestFocus();
@@ -36,18 +44,18 @@ final class sb implements com.ms.directX.IEnumModesCallback {
 
     final int[] a(int param0) {
         int[] var2 = null;
-        Object var3 = null;
+        java.awt.Frame var3 = null;
         int[] var4 = null;
-        ((sb) this).field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) this);
+        this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_a = new int[field_b];
         field_b = 0;
-        ((sb) this).field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) this);
+        this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         var4 = field_a;
         var2 = var4;
         field_b = 0;
         if (param0 != -27469) {
-          var3 = null;
-          ((sb) this).a(true, (java.awt.Frame) null);
+          var3 = (java.awt.Frame) null;
+          this.a(true, (java.awt.Frame) null);
           field_a = null;
           return var4;
         } else {
@@ -57,15 +65,15 @@ final class sb implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(boolean param0, java.awt.Frame param1) {
-        ((sb) this).field_c.restoreDisplayMode();
-        ((sb) this).field_c.setCooperativeLevel((java.awt.Component) (Object) param1, 8);
+        this.field_c.restoreDisplayMode();
+        this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0) {
             field_b = 38;
         }
     }
 
     public sb() {
-        ((sb) this).field_c = new com.ms.directX.DirectDraw();
-        ((sb) this).field_c.initialize((com.ms.com._Guid) null);
+        this.field_c = new com.ms.directX.DirectDraw();
+        this.field_c.initialize((com.ms.com._Guid) null);
     }
 }

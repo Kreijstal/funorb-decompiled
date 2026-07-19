@@ -14,23 +14,23 @@ final class vl implements Iterator {
     static String field_g;
 
     public final Object next() {
-        ln var1 = ((vl) this).field_b;
-        if (((vl) this).field_e.field_i != var1) {
-            ((vl) this).field_b = var1.field_n;
+        ln var1 = this.field_b;
+        if (this.field_e.field_i != var1) {
+            this.field_b = var1.field_n;
         } else {
-            ((vl) this).field_b = null;
+            this.field_b = null;
             var1 = null;
         }
-        ((vl) this).field_f = var1;
-        return (Object) (Object) var1;
+        this.field_f = var1;
+        return var1;
     }
 
     public final void remove() {
-        if (!(((vl) this).field_f != null)) {
+        if (!(this.field_f != null)) {
             throw new IllegalStateException();
         }
-        ((vl) this).field_f.a((byte) -42);
-        ((vl) this).field_f = null;
+        this.field_f.a((byte) -42);
+        this.field_f = null;
     }
 
     public static void a(byte param0) {
@@ -38,11 +38,14 @@ final class vl implements Iterator {
         field_a = null;
         field_d = null;
         field_g = null;
+        if (param0 != 68) {
+            return;
+        }
         field_c = null;
     }
 
     public final boolean hasNext() {
-        return ((vl) this).field_e.field_i != ((vl) this).field_b;
+        return this.field_e.field_i != this.field_b;
     }
 
     final static void a(int param0) {
@@ -58,7 +61,7 @@ final class vl implements Iterator {
               if (param0 == 0) {
                 break L1;
               } else {
-                field_h = null;
+                field_h = (int[]) null;
                 break L1;
               }
             }
@@ -86,26 +89,22 @@ final class vl implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "vl.A(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var1), "vl.A(" + param0 + ')');
         }
     }
 
     vl(lk param0) {
-        ((vl) this).field_f = null;
+        this.field_f = null;
         try {
-            ((vl) this).field_e = param0;
-            ((vl) this).field_b = ((vl) this).field_e.field_i.field_n;
-            ((vl) this).field_f = null;
+            this.field_e = param0;
+            this.field_b = this.field_e.field_i.field_n;
+            this.field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new th(256);
     }
 }

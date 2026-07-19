@@ -9,15 +9,14 @@ final class jh {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 != 51) {
+            return;
+        }
         field_a = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jh.A(";
         field_d = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_a = "To Customer Support";

@@ -17,8 +17,12 @@ final class mu {
     static int[] field_l;
 
     public static void a(int param0) {
+        kv[] discarded$0 = null;
         field_j = null;
         field_d = null;
+        if (param0 != 9072) {
+            discarded$0 = mu.a(99, -114, 75, 42, 22, (byte) -8);
+        }
         field_b = null;
         field_m = null;
         field_l = null;
@@ -38,12 +42,8 @@ final class mu {
         kv var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
         L0: {
-          var20 = dg.field_e;
-          var19 = var20;
-          var18 = var19;
+          var18 = dg.field_e;
           var17 = var18;
           var15 = var17;
           var6 = var15;
@@ -64,7 +64,7 @@ final class mu {
           if (param5 == 17) {
             break L0;
           } else {
-            field_j = null;
+            field_j = (int[]) null;
             break L0;
           }
         }
@@ -75,7 +75,7 @@ final class mu {
           var14 = null;
           if (param4 > 0) {
             var16 = new kv(16, 16);
-            var14 = (Object) (Object) var16;
+            var14 = var16;
             var16.b();
             dg.c(0, 0, 16, 16, param4);
             break L1;
@@ -83,43 +83,57 @@ final class mu {
             break L1;
           }
         }
-        dg.a(var20, var7, var8);
-        return new kv[]{var10, var11, var10, var9, (kv) var14, var9, var12, var13, var12};
+        dg.a(var18, var7, var8);
+        return new kv[]{var10, var11, var10, var9, (kv) (var14), var9, var12, var13, var12};
     }
 
     final void b(int param0) {
+        kv[] discarded$1 = null;
         L0: {
-          ((mu) this).field_c = 0;
-          ((mu) this).field_e = hga.n(param0 ^ -27213);
-          ((mu) this).field_a = 500;
-          ((mu) this).field_f = new int[50];
-          ((mu) this).field_h = new int[50];
+          this.field_c = 0;
+          this.field_e = hga.n(param0 ^ -27213);
+          this.field_a = 500;
+          this.field_f = new int[50];
+          this.field_h = new int[50];
           if (param0 == 27185) {
             break L0;
           } else {
-            kv[] discarded$1 = mu.a(-82, -8, -124, -44, 91, (byte) -42);
+            discarded$1 = mu.a(-82, -8, -124, -44, 91, (byte) -42);
             break L0;
           }
         }
-        ((mu) this).field_f[0] = ((mu) this).field_f[0] + 1;
-        ((mu) this).field_f[28] = ((mu) this).field_f[28] + 1;
-        ((mu) this).field_f[49] = ((mu) this).field_f[49] + 1;
-        ((mu) this).field_f[16] = ((mu) this).field_f[16] + 1;
-        ((mu) this).field_f[17] = ((mu) this).field_f[17] + 1;
-        ((mu) this).field_f[6] = ((mu) this).field_f[6] + 1;
-        ((mu) this).field_f[7] = ((mu) this).field_f[7] + 1;
-        ((mu) this).field_f[24] = ((mu) this).field_f[24] + 1;
-        ((mu) this).field_f[22] = ((mu) this).field_f[22] + 1;
-        ((mu) this).field_f[19] = ((mu) this).field_f[19] + 1;
-        ((mu) this).field_f[45] = ((mu) this).field_f[45] + 1;
-        ((mu) this).field_f[14] = ((mu) this).field_f[14] + 1;
-        ((mu) this).field_f[30] = ((mu) this).field_f[30] + 1;
-        ((mu) this).field_f[21] = ((mu) this).field_f[21] + 1;
-        ((mu) this).field_e.field_i[2][3].field_f = new it(2, 3, 0);
-        ((mu) this).field_g = 0;
+        this.field_f[0] = this.field_f[0] + 1;
+        this.field_f[28] = this.field_f[28] + 1;
+        this.field_f[49] = this.field_f[49] + 1;
+        this.field_f[16] = this.field_f[16] + 1;
+        this.field_f[17] = this.field_f[17] + 1;
+        this.field_f[6] = this.field_f[6] + 1;
+        this.field_f[7] = this.field_f[7] + 1;
+        this.field_f[24] = this.field_f[24] + 1;
+        this.field_f[22] = this.field_f[22] + 1;
+        this.field_f[19] = this.field_f[19] + 1;
+        this.field_f[45] = this.field_f[45] + 1;
+        this.field_f[14] = this.field_f[14] + 1;
+        this.field_f[30] = this.field_f[30] + 1;
+        this.field_f[21] = this.field_f[21] + 1;
+        this.field_e.field_i[2][3].field_f = new it(2, 3, 0);
+        this.field_g = 0;
     }
 
     private final int a(lu param0, boolean param1) {
+        int discarded$13 = 0;
+        int discarded$14 = 0;
+        int discarded$15 = 0;
+        int discarded$16 = 0;
+        int discarded$17 = 0;
+        rk discarded$18 = null;
+        boolean discarded$19 = false;
+        int discarded$20 = 0;
+        int discarded$21 = 0;
+        int discarded$22 = 0;
+        int discarded$23 = 0;
+        int discarded$24 = 0;
+        int discarded$25 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4_int = 0;
@@ -128,24 +142,24 @@ final class mu {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_33_0 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
+        int stackIn_35_0 = 0;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_32_0 = 0;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
+        int stackOut_34_0 = 0;
         RuntimeException stackOut_36_0 = null;
         StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
@@ -153,35 +167,35 @@ final class mu {
             if (iha.field_j < var3_int) {
               throw new RuntimeException("Profile version too recent! " + var3_int + " > " + iha.field_j);
             } else {
-              int discarded$12 = param0.f(-122);
-              int discarded$13 = param0.f(-122);
-              ((mu) this).field_a = param0.f(-81);
-              int discarded$14 = param0.f(-90);
-              int discarded$15 = param0.f(-53);
-              ((mu) this).field_c = param0.b(16711935);
-              ((mu) this).field_e = gca.a(0, param0);
-              ((mu) this).field_i = new rk[50];
+              discarded$13 = param0.f(-122);
+              discarded$14 = param0.f(-122);
+              this.field_a = param0.f(-81);
+              discarded$15 = param0.f(-90);
+              discarded$16 = param0.f(-53);
+              this.field_c = param0.b(16711935);
+              this.field_e = gca.a(0, param0);
+              this.field_i = new rk[50];
               var4_int = 0;
               L1: while (true) {
-                if (var4_int >= 50) {
+                if (-51 >= (var4_int ^ -1)) {
                   L2: {
                     if (4 < var3_int) {
                       break L2;
                     } else {
                       L3: {
                         var4_int = param0.b(16711935);
-                        if (var4_int < 0) {
+                        if ((var4_int ^ -1) > -1) {
                           break L3;
                         } else {
-                          if (var4_int < 3) {
-                            int discarded$16 = param0.f(99);
+                          if ((var4_int ^ -1) > -4) {
+                            discarded$17 = param0.f(99);
                             break L3;
                           } else {
                             break L3;
                           }
                         }
                       }
-                      rk discarded$17 = gka.a(param0, 255);
+                      discarded$18 = gka.a(param0, 255);
                       break L2;
                     }
                   }
@@ -192,71 +206,79 @@ final class mu {
                   L4: while (true) {
                     if (50 <= var7) {
                       L5: {
-                        ((mu) this).field_f = rd.a(true, param0);
-                        if (var3_int >= 2) {
-                          int discarded$18 = param0.f((byte) 97);
-                          int discarded$19 = param0.f((byte) 111);
-                          int discarded$20 = param0.f((byte) -16);
-                          int discarded$21 = param0.f((byte) -123);
-                          int discarded$22 = param0.f((byte) -123);
-                          int discarded$23 = param0.f((byte) -20);
+                        this.field_f = rd.a(true, param0);
+                        if (!param1) {
                           break L5;
                         } else {
+                          discarded$19 = this.a((byte) -6);
                           break L5;
                         }
                       }
                       L6: {
-                        if (var3_int < 3) {
+                        if (var3_int >= 2) {
+                          discarded$20 = param0.f((byte) 97);
+                          discarded$21 = param0.f((byte) 111);
+                          discarded$22 = param0.f((byte) -16);
+                          discarded$23 = param0.f((byte) -123);
+                          discarded$24 = param0.f((byte) -123);
+                          discarded$25 = param0.f((byte) -20);
                           break L6;
                         } else {
-                          ((mu) this).field_h = new int[50];
+                          break L6;
+                        }
+                      }
+                      L7: {
+                        if ((var3_int ^ -1) > -4) {
+                          break L7;
+                        } else {
+                          this.field_h = new int[50];
                           var7 = 0;
-                          L7: while (true) {
-                            if (var7 >= 50) {
-                              break L6;
+                          L8: while (true) {
+                            if ((var7 ^ -1) <= -51) {
+                              break L7;
                             } else {
-                              ((mu) this).field_h[var7] = param0.b(16711935);
+                              this.field_h[var7] = param0.b(16711935);
                               var7++;
-                              continue L7;
+                              continue L8;
                             }
                           }
                         }
                       }
-                      L8: {
+                      L9: {
                         if (var3_int >= 4) {
-                          ((mu) this).field_g = param0.b(16711935);
-                          break L8;
+                          this.field_g = param0.b(16711935);
+                          break L9;
                         } else {
-                          ((mu) this).field_g = 13;
-                          break L8;
+                          this.field_g = 13;
+                          break L9;
                         }
                       }
-                      stackOut_32_0 = var3_int;
-                      stackIn_33_0 = stackOut_32_0;
+                      stackOut_34_0 = var3_int;
+                      stackIn_35_0 = stackOut_34_0;
                       break L0;
                     } else {
-                      L9: {
+                      L10: {
                         if ((1 << var5 & var6) == 1 << var5) {
                           var4[var7] = true;
-                          break L9;
-                        } else {
-                          break L9;
-                        }
-                      }
-                      L10: {
-                        var5++;
-                        if (var5 != 8) {
                           break L10;
                         } else {
                           break L10;
                         }
                       }
-                      var7++;
-                      continue L4;
+                      var5++;
+                      if (var5 == 8) {
+                        var5 = 0;
+                        var6 = param0.b(16711935);
+                        var7++;
+                        continue L4;
+                      } else {
+                        var7++;
+                        continue L4;
+                      }
                     }
                   }
                 } else {
-                  ((mu) this).field_i[var4_int] = gka.a(param0, 255);
+                  this.field_i[var4_int] = gka.a(param0, 255);
                   var4_int++;
                   continue L1;
                 }
@@ -267,61 +289,59 @@ final class mu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var3 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) var3;
-            stackOut_34_1 = new StringBuilder().append("mu.C(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackOut_36_0 = (RuntimeException) (var3);
+            stackOut_36_1 = new StringBuilder().append("mu.C(");
+            stackIn_38_0 = stackOut_36_0;
+            stackIn_38_1 = stackOut_36_1;
+            stackIn_37_0 = stackOut_36_0;
+            stackIn_37_1 = stackOut_36_1;
             if (param0 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
+              stackOut_38_2 = "null";
+              stackIn_39_0 = stackOut_38_0;
+              stackIn_39_1 = stackOut_38_1;
+              stackIn_39_2 = stackOut_38_2;
               break L11;
             } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackOut_37_2 = "{...}";
+              stackIn_39_0 = stackOut_37_0;
+              stackIn_39_1 = stackOut_37_1;
+              stackIn_39_2 = stackOut_37_2;
               break L11;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + false + ')');
+          throw pe.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ',' + param1 + ')');
         }
-        return stackIn_33_0;
+        return stackIn_35_0;
     }
 
     public mu() {
-        ((mu) this).field_i = new rk[50];
-        ((mu) this).b(27185);
+        this.field_i = new rk[50];
+        this.b(27185);
     }
 
     mu(lu param0) {
-        ((mu) this).field_i = new rk[50];
+        int discarded$0 = 0;
+        this.field_i = new rk[50];
         try {
-            int discarded$0 = this.a(param0, false);
+            discarded$0 = this.a(param0, false);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "mu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(byte param0) {
+        boolean discarded$0 = false;
         if (param0 < 76) {
-            boolean discarded$0 = ((mu) this).a((byte) -41);
+            discarded$0 = this.a((byte) -41);
         }
-        return ((mu) this).field_g >= 10 ? true : false;
+        return this.field_g >= 10 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new int[12];
         field_b = "Click on CONTINUE to return to the fridge. ";
         field_m = "(1 player wants to join)";

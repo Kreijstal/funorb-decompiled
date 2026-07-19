@@ -12,26 +12,34 @@ final class uga extends ana {
     static int field_x;
 
     final static boolean e(int param0) {
+        if (param0 != 37) {
+            field_B = (vr) null;
+            return true;
+        }
         return true;
     }
 
     public static void f(byte param0) {
         field_A = null;
         field_w = null;
+        if (param0 != 21) {
+            return;
+        }
         field_B = null;
         field_C = null;
     }
 
     uga(gj param0, wfa param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((uga) this).field_z = param1;
+            this.field_z = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void e(byte param0) {
+        oha discarded$1 = null;
         Object var3 = null;
         iv var3_ref = null;
         int var5 = 0;
@@ -40,7 +48,7 @@ final class uga extends ana {
         L0: {
           var3 = null;
           var5 = BachelorFridge.field_y;
-          var6 = ((uga) this).field_z.field_l.a(96, ((uga) this).field_q.field_h);
+          var6 = this.field_z.field_l.a(96, this.field_q.field_h);
           if (param0 < -78) {
             break L0;
           } else {
@@ -51,17 +59,17 @@ final class uga extends ana {
         if (var6.i(-83)) {
           return;
         } else {
-          var3_ref = (iv) (Object) ((uga) this).field_z.field_o.b((byte) 90);
-          oha discarded$1 = al.a(-86, ((uga) this).field_z.field_k);
+          var3_ref = (iv) ((Object) this.field_z.field_o.b((byte) 90));
+          discarded$1 = al.a(-86, this.field_z.field_k);
           L1: while (true) {
             if (var3_ref == null) {
               return;
             } else {
-              var3_ref.a(var6, ((uga) this).field_q.field_h, 12);
-              var7 = var3_ref.field_h.a(-27449, ((uga) this).field_q);
+              var3_ref.a(var6, this.field_q.field_h, 12);
+              var7 = var3_ref.field_h.a(-27449, this.field_q);
               var7.b(-1, 6);
-              ((uga) this).a(27799, (at) (Object) new ek(((uga) this).field_q, ((uga) this).field_z.field_l.a(-27449, ((uga) this).field_q), -200));
-              var3_ref = (iv) (Object) ((uga) this).field_z.field_o.c(0);
+              this.a(27799, new ek(this.field_q, this.field_z.field_l.a(-27449, this.field_q), -200));
+              var3_ref = (iv) ((Object) this.field_z.field_o.c(0));
               continue L1;
             }
           }
@@ -69,9 +77,16 @@ final class uga extends ana {
     }
 
     private final void d(int param0) {
+        if (param0 > -10) {
+            field_w = (String) null;
+        }
     }
 
     final static String a(long param0, int param1) {
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
         int var3 = 0;
         long var4 = 0L;
         long var7 = 0L;
@@ -90,11 +105,11 @@ final class uga extends ana {
                 var3 = 0;
                 var4 = param0;
                 L0: while (true) {
-                  if (var4 == 0L) {
+                  if (-1L == (var4 ^ -1L)) {
                     var13 = new StringBuilder(var3);
                     L1: while (true) {
-                      if (param0 == 0L) {
-                        StringBuilder discarded$4 = var13.reverse();
+                      if (-1L == (param0 ^ -1L)) {
+                        discarded$4 = var13.reverse();
                         var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                         return var13.toString();
                       } else {
@@ -111,7 +126,7 @@ final class uga extends ana {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$5 = var13.append((char) var9);
+                        discarded$5 = var13.append((char) var9);
                         continue L1;
                       }
                     }
@@ -129,7 +144,7 @@ final class uga extends ana {
             return null;
           }
         } else {
-          field_w = null;
+          field_w = (String) null;
           if (param0 > 0L) {
             if (6582952005840035281L > param0) {
               if (param0 % 37L == 0L) {
@@ -138,11 +153,11 @@ final class uga extends ana {
                 var3 = 0;
                 var4 = param0;
                 L3: while (true) {
-                  if (var4 == 0L) {
+                  if (-1L == (var4 ^ -1L)) {
                     var12 = new StringBuilder(var3);
                     L4: while (true) {
-                      if (param0 == 0L) {
-                        StringBuilder discarded$6 = var12.reverse();
+                      if (-1L == (param0 ^ -1L)) {
+                        discarded$6 = var12.reverse();
                         var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                         return var12.toString();
                       } else {
@@ -159,7 +174,7 @@ final class uga extends ana {
                             break L5;
                           }
                         }
-                        StringBuilder discarded$7 = var12.append((char) var9);
+                        discarded$7 = var12.append((char) var9);
                         continue L4;
                       }
                     }
@@ -180,10 +195,10 @@ final class uga extends ana {
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$0 = ((uga) this).field_l - 1;
-        ((uga) this).field_l = ((uga) this).field_l - 1;
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
         if (!(fieldTemp$0 < 0)) {
-            if (((uga) this).field_l != 25) {
+            if (-26 != (this.field_l ^ -1)) {
                 return false;
             }
             wf.a(22, (byte) 126);
@@ -196,10 +211,6 @@ final class uga extends ana {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = "That name is not available";
         field_y = 0;
         field_v = 12320512;

@@ -24,12 +24,13 @@ final class nd {
         int var8 = 0;
         int var9 = 0;
         dd var10 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
             ln.field_m[7][3] = "mod_zeph";
-            var10 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new hh[0]);
+            var10 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new hh[]{});
             var2 = new dd(3, 3, 0, 0, 0, 65536, 0, 0, al.field_c[4][3]);
             var2.field_d = 1;
             var3 = new hd(var10);
@@ -39,13 +40,13 @@ final class nd {
               if (3 <= var4_int) {
                 var4_int = 0;
                 L2: while (true) {
-                  if (var4_int >= 3) {
+                  if (-4 >= (var4_int ^ -1)) {
                     var3.field_h = 2;
-                    var3.field_r[16] = (byte) 2;
+                    var3.field_r[16] = (byte)2;
                     var3.field_e = 2;
-                    var3.field_r[22] = (byte) 2;
+                    var3.field_r[22] = (byte)2;
                     var3.field_r[17] = (byte) 1;
-                    var3.field_r[21] = (byte) 2;
+                    var3.field_r[21] = (byte)2;
                     cf.field_C = new kk(var3, 460, 285);
                     te.field_Qb = new al(var10, var3, cf.field_C);
                     ug.field_q = new pb(var2, 150, 280);
@@ -67,15 +68,15 @@ final class nd {
                       var6.field_e = 1;
                       var7 = 0;
                       L3: while (true) {
-                        if (var7 >= 4) {
+                        if ((var7 ^ -1) <= -5) {
                           var5.field_r[13] = (byte) 1;
                           var5.field_r[14] = (byte) 1;
                           var5.field_r[19] = (byte) 1;
                           var5.field_r[18] = (byte) 1;
-                          var6.field_r[12] = (byte) 2;
-                          var6.field_r[13] = (byte) 2;
-                          var6.field_r[18] = (byte) 2;
-                          var6.field_r[17] = (byte) 2;
+                          var6.field_r[12] = (byte)2;
+                          var6.field_r[13] = (byte)2;
+                          var6.field_r[18] = (byte)2;
+                          var6.field_r[17] = (byte)2;
                           var7 = 140;
                           var8 = 370;
                           g.field_r = new kk(var5, var7, var8);
@@ -86,19 +87,21 @@ final class nd {
                           g.field_r.a(0, 0, 0, (byte) -69, 0);
                           an.field_b.a(0, 0, 0, (byte) -98, 0);
                           cg.field_H.a(-18577);
+                          decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           var5.field_r[5 - -var7] = (byte) 1;
-                          var5.field_r[var7 + 10] = (byte) 2;
+                          var5.field_r[var7 + 10] = (byte)2;
                           var7++;
                           continue L3;
                         }
                       }
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   } else {
-                    var3.field_r[var4_int + 10] = (byte) 2;
+                    var3.field_r[var4_int + 10] = (byte)2;
                     var4_int++;
                     continue L2;
                   }
@@ -113,13 +116,21 @@ final class nd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "nd.A(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var1), "nd.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void a(int param0) {
         sc.field_h = rk.field_e;
         h.field_T = 10 + sc.field_h.c(we.field_o[20]);
+        if (param0 != 3) {
+            field_c = (int[]) null;
+        }
         int var1 = sc.field_h.c(we.field_o[21]);
         if (var1 > h.field_T) {
             h.field_T = var1;
@@ -137,10 +148,6 @@ final class nd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[16384];
         field_a = "Report abuse";
     }

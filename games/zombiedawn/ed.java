@@ -20,8 +20,15 @@ final class ed {
         var3 = ZombieDawn.field_J;
         qd.field_e = param1;
         var2 = qd.field_e;
-        if (var2 != 1) {
-          if (var2 == 0) {
+        if ((var2 ^ -1) != -2) {
+          if (var2 != 0) {
+            if (param0 != -11325) {
+              field_c = (String) null;
+              return;
+            } else {
+              return;
+            }
+          } else {
             no.field_G = new int[]{230, 150, 180, 100};
             sf.field_d = new int[]{26, 182, 370, 463};
             ki.field_X = new int[]{-1, 160, 342, 435};
@@ -29,9 +36,12 @@ final class ed {
             cj.field_c = new int[]{220, 347, 515, -1};
             fl.field_c = new int[]{170, 150, 140, 160};
             pj.field_u = new int[]{135, 135, 90, 120};
-            return;
-          } else {
-            return;
+            if (param0 == -11325) {
+              return;
+            } else {
+              field_c = (String) null;
+              return;
+            }
           }
         } else {
           fl.field_c = new int[]{180, 180, 180, 180};
@@ -41,24 +51,35 @@ final class ed {
           cj.field_c = new int[]{220, 307, 490, -1};
           sf.field_d = new int[]{26, 117, 304, 419};
           no.field_G = new int[]{230, 80, 160, 100};
-          return;
+          if (param0 == -11325) {
+            return;
+          } else {
+            field_c = (String) null;
+            return;
+          }
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 115;
+        int var1 = -115 / ((3 - param0) / 39);
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + fg.a("%0a", -127, "\n", param1));
+        if (param0 < 81) {
+          return;
+        } else {
+          System.out.println("Error: " + fg.a("%0a", -127, "\n", param1));
+          return;
+        }
     }
 
     final static String a(CharSequence param0, byte param1) {
+        String discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        CharSequence var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -83,8 +104,8 @@ final class ed {
               if (param1 == -105) {
                 break L1;
               } else {
-                var3 = null;
-                String discarded$2 = ed.a((CharSequence) null, (byte) -46);
+                var3 = (CharSequence) null;
+                discarded$2 = ed.a((CharSequence) null, (byte) -46);
                 break L1;
               }
             }
@@ -96,23 +117,23 @@ final class ed {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ed.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -120,16 +141,12 @@ final class ed {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = null;
     }
 }

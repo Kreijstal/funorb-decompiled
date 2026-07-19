@@ -9,7 +9,7 @@ abstract class ge extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            ((ge) this).field_F = -66;
+            this.field_F = -66;
             return true;
         }
         return true;
@@ -17,7 +17,7 @@ abstract class ge extends kna {
 
     void a(boolean param0, kh param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        la var4 = null;
         kh stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         kh stackIn_9_0 = null;
@@ -55,29 +55,29 @@ abstract class ge extends kna {
               if (!param0) {
                 break L1;
               } else {
-                var4 = null;
-                ((ge) this).a((byte) -1, (mra) null, (la) null);
+                var4 = (la) null;
+                this.a((byte) -1, (mra) null, (la) null);
                 break L1;
               }
             }
             L2: {
               super.a(param0, param1);
-              if (!((ge) this).A(-1)) {
+              if (!this.A(-1)) {
                 break L2;
               } else {
-                param1.a((byte) 124, ((ge) this).field_F, 4);
-                if (((ge) this).B(-23309)) {
+                param1.a((byte) 124, this.field_F, 4);
+                if (this.B(-23309)) {
                   L3: {
-                    if (((ge) this).C(128)) {
+                    if (this.C(128)) {
                       L4: {
-                        stackOut_7_0 = (kh) param1;
+                        stackOut_7_0 = (kh) (param1);
                         stackOut_7_1 = 14;
                         stackIn_9_0 = stackOut_7_0;
                         stackIn_9_1 = stackOut_7_1;
                         stackIn_8_0 = stackOut_7_0;
                         stackIn_8_1 = stackOut_7_1;
-                        if (((ge) this).field_I) {
-                          stackOut_9_0 = (kh) (Object) stackIn_9_0;
+                        if (this.field_I) {
+                          stackOut_9_0 = (kh) ((Object) stackIn_9_0);
                           stackOut_9_1 = stackIn_9_1;
                           stackOut_9_2 = 1;
                           stackIn_10_0 = stackOut_9_0;
@@ -85,7 +85,7 @@ abstract class ge extends kna {
                           stackIn_10_2 = stackOut_9_2;
                           break L4;
                         } else {
-                          stackOut_8_0 = (kh) (Object) stackIn_8_0;
+                          stackOut_8_0 = (kh) ((Object) stackIn_8_0);
                           stackOut_8_1 = stackIn_8_1;
                           stackOut_8_2 = 0;
                           stackIn_10_0 = stackOut_8_0;
@@ -100,10 +100,10 @@ abstract class ge extends kna {
                       break L3;
                     }
                   }
-                  if (((ge) this).field_I) {
+                  if (this.field_I) {
                     break L2;
                   } else {
-                    param1.a((byte) 104, ((ge) this).field_H, 4);
+                    param1.a((byte) 104, this.field_H, 4);
                     return;
                   }
                 } else {
@@ -117,23 +117,23 @@ abstract class ge extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
+            stackOut_14_0 = (RuntimeException) (var3);
             stackOut_14_1 = new StringBuilder().append("ge.V(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -141,7 +141,7 @@ abstract class ge extends kna {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -209,21 +209,21 @@ abstract class ge extends kna {
         String stackOut_20_2 = null;
         try {
           L0: {
-            if (((ge) this).A(-1)) {
+            if (this.A(-1)) {
               L1: {
-                ((ge) this).field_F = param2.b((byte) 44, 4);
-                if (!((ge) this).B(-23309)) {
+                this.field_F = param2.b((byte) 44, 4);
+                if (!this.B(-23309)) {
                   break L1;
                 } else {
                   L2: {
-                    if (!((ge) this).C(128)) {
+                    if (!this.C(128)) {
                       break L2;
                     } else {
                       L3: {
                         stackOut_5_0 = this;
                         stackIn_7_0 = stackOut_5_0;
                         stackIn_6_0 = stackOut_5_0;
-                        if (param2.b((byte) 44, 1) != 1) {
+                        if ((param2.b((byte) 44, 1) ^ -1) != -2) {
                           stackOut_7_0 = this;
                           stackOut_7_1 = 0;
                           stackIn_8_0 = stackOut_7_0;
@@ -237,12 +237,12 @@ abstract class ge extends kna {
                           break L3;
                         }
                       }
-                      ((ge) this).field_I = stackIn_8_1 != 0;
+                      ((ge) (this)).field_I = stackIn_8_1 != 0;
                       break L2;
                     }
                   }
-                  if (!((ge) this).field_I) {
-                    ((ge) this).field_H = param2.b((byte) 44, 4);
+                  if (!this.field_I) {
+                    this.field_H = param2.b((byte) 44, 4);
                     break L1;
                   } else {
                     return;
@@ -258,23 +258,23 @@ abstract class ge extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_0 = (RuntimeException) (runtimeException);
             stackOut_13_1 = new StringBuilder().append("ge.<init>(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -283,23 +283,23 @@ abstract class ge extends kna {
             }
           }
           L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -308,23 +308,23 @@ abstract class ge extends kna {
             }
           }
           L6: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -332,11 +332,14 @@ abstract class ge extends kna {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
     }
 
     public static void r(byte param0) {
+        if (param0 <= 92) {
+            return;
+        }
         field_G = null;
     }
 
@@ -349,14 +352,14 @@ abstract class ge extends kna {
         gaa var6 = null;
         try {
             var5 = rm.field_a;
-            var6 = (gaa) (Object) var5.a(5, 87);
+            var6 = (gaa) ((Object) var5.a(5, 87));
             var6.a(true, param3);
             var6.b(1, 96);
             var6.a(16, 120);
             var6.a(param1, 0, 1, false);
-            param0.a((gr) (Object) param2, (byte) 124, (dg) (Object) var6);
+            param0.a(param2, (byte) 124, var6);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ge.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "ge.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -380,6 +383,7 @@ abstract class ge extends kna {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
@@ -400,25 +404,25 @@ abstract class ge extends kna {
         try {
           L0: {
             if (param0 == 43) {
-              if (((ge) this).A(param0 + -44)) {
+              if (this.A(param0 + -44)) {
                 L1: {
-                  var8 = ln.b(((ge) this).field_F, 23688);
-                  if (!((ge) this).B(-23309)) {
+                  var8 = ln.b(this.field_F, 23688);
+                  if (!this.B(-23309)) {
                     break L1;
                   } else {
                     L2: {
-                      if (!((ge) this).field_I) {
+                      if (!this.field_I) {
                         break L2;
                       } else {
                         var5 = param2.q(-85);
-                        ((ge) this).field_H = var5.a(16, param0 + -43);
+                        this.field_H = var5.a(16, param0 + -43);
                         if (param1 instanceof ska) {
-                          var6 = ((ska) (Object) param1).l(-2);
+                          var6 = ((ska) ((Object) param1)).l(-2);
                           if (var6 == null) {
                             break L2;
                           } else {
                             var7 = var6.a(true);
-                            if (var7 > 0) {
+                            if (-1 > (var7 ^ -1)) {
                               var6.b(var5.a(var7, 0), false);
                               break L2;
                             } else {
@@ -426,46 +430,48 @@ abstract class ge extends kna {
                             }
                           }
                         } else {
-                          var8.a(false, ((ge) this).field_H * var8.a((byte) -94) / 16);
+                          var8.a(false, this.field_H * var8.a((byte) -94) / 16);
                           param1.a(102, var8);
                           return;
                         }
                       }
                     }
-                    var8.a(false, ((ge) this).field_H * var8.a((byte) -94) / 16);
+                    var8.a(false, this.field_H * var8.a((byte) -94) / 16);
                     break L1;
                   }
                 }
                 param1.a(102, var8);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_0 = (RuntimeException) (var4);
             stackOut_15_1 = new StringBuilder().append("ge.DC(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -474,23 +480,23 @@ abstract class ge extends kna {
             }
           }
           L4: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -498,17 +504,22 @@ abstract class ge extends kna {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final boolean s(byte param0) {
         if (param0 < 64) {
-            Object var3 = null;
-            ((ge) this).a(true, (kh) null);
-            return ((ge) this).field_I;
+            kh var3 = (kh) null;
+            this.a(true, (kh) null);
+            return this.field_I;
         }
-        return ((ge) this).field_I;
+        return this.field_I;
     }
 
     abstract boolean C(int param0);
@@ -521,10 +532,6 @@ abstract class ge extends kna {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = "Report abuse";
     }
 }

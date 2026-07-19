@@ -8,15 +8,11 @@ final class dt {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = 0;
+        int var1 = 58 % ((param0 - -80) / 45);
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dt.A(";
     }
 }

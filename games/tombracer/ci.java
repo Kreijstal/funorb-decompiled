@@ -16,8 +16,8 @@ abstract class ci extends vg {
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         L0: {
-          if (~((ci) this).field_f != param2) {
-            stackOut_2_0 = ((ci) this).field_f;
+          if ((this.field_f ^ -1) != param2) {
+            stackOut_2_0 = this.field_f;
             stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
@@ -27,33 +27,39 @@ abstract class ci extends vg {
           }
         }
         var4 = stackIn_3_0;
-        if (((ci) this).field_g) {
-          ((ci) this).field_i = new mv(var4, param1, param0);
-          return;
+        if (this.field_g) {
+          this.field_i = new mv(var4, param1, param0);
+          if (TombRacer.field_G) {
+            this.field_h = new fk(var4, param1, param0);
+            return;
+          } else {
+            return;
+          }
         } else {
-          ((ci) this).field_h = new fk(var4, param1, param0);
+          this.field_h = new fk(var4, param1, param0);
           return;
         }
     }
 
     final int[] c(int param0, int param1, int param2) {
         if (param1 <= -3) {
-          if (((ci) this).field_j[param0].field_g) {
-            return ((ci) this).field_j[param0].c(1, param2);
+          if (this.field_j[param0].field_g) {
+            return this.field_j[param0].c(1, param2);
           } else {
-            return ((ci) this).field_j[param0].b(param2, -1)[0];
+            return this.field_j[param0].b(param2, -1)[0];
           }
         } else {
-          ((ci) this).field_f = 54;
-          if (((ci) this).field_j[param0].field_g) {
-            return ((ci) this).field_j[param0].c(1, param2);
+          this.field_f = 54;
+          if (this.field_j[param0].field_g) {
+            return this.field_j[param0].c(1, param2);
           } else {
-            return ((ci) this).field_j[param0].b(param2, -1)[0];
+            return this.field_j[param0].b(param2, -1)[0];
           }
         }
     }
 
     void a(byte param0, uia param1, int param2) {
+        int[] discarded$2 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -77,7 +83,7 @@ abstract class ci extends vg {
               if (param0 == 107) {
                 break L1;
               } else {
-                int[] discarded$2 = ((ci) this).c(1, -94);
+                discarded$2 = this.c(1, -94);
                 break L1;
               }
             }
@@ -87,23 +93,23 @@ abstract class ci extends vg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ci.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -111,7 +117,7 @@ abstract class ci extends vg {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
@@ -120,8 +126,8 @@ abstract class ci extends vg {
         int[][] var5 = null;
         int[] var6 = null;
         if (param2 == -1) {
-          if (((ci) this).field_j[param1].field_g) {
-            var6 = ((ci) this).field_j[param1].c(1, param0);
+          if (this.field_j[param1].field_g) {
+            var6 = this.field_j[param1].c(1, param0);
             var4 = var6;
             var5 = new int[3][];
             var5[1] = var6;
@@ -129,10 +135,10 @@ abstract class ci extends vg {
             var5[0] = var6;
             return var5;
           } else {
-            return ((ci) this).field_j[param1].b(param0, -1);
+            return this.field_j[param1].b(param0, -1);
           }
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
@@ -144,63 +150,81 @@ abstract class ci extends vg {
     }
 
     void b(byte param0) {
+        int discarded$0 = 0;
         if (param0 != 116) {
-            int discarded$0 = ((ci) this).c((byte) 122);
+            discarded$0 = this.c((byte) 122);
         }
     }
 
     int[][] b(int param0, int param1) {
         if (param1 != -1) {
-            return null;
+            return (int[][]) null;
         }
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
     int a(int param0) {
         if (param0 <= 96) {
-            ((ci) this).field_h = null;
+            this.field_h = (fk) null;
             return -1;
         }
         return -1;
     }
 
     public static void a(byte param0) {
+        kg discarded$0 = null;
         field_l = null;
+        if (param0 >= -69) {
+            byte[] var2 = (byte[]) null;
+            discarded$0 = ci.a((byte[]) null, (byte) 54);
+        }
     }
 
     void b(int param0) {
-        if (!((ci) this).field_g) {
-          ((ci) this).field_h.a(2);
-          ((ci) this).field_h = null;
+        if (!this.field_g) {
+          this.field_h.a(2);
+          this.field_h = null;
           if (param0 < -32) {
             return;
           } else {
-            ((ci) this).b((byte) 31);
+            this.b((byte) 31);
             return;
           }
         } else {
-          ((ci) this).field_i.a(false);
-          ((ci) this).field_i = null;
-          if (param0 < -32) {
-            return;
+          this.field_i.a(false);
+          this.field_i = null;
+          if (!TombRacer.field_G) {
+            if (param0 >= -32) {
+              this.b((byte) 31);
+              return;
+            } else {
+              return;
+            }
           } else {
-            ((ci) this).b((byte) 31);
-            return;
+            this.field_h.a(2);
+            this.field_h = null;
+            if (param0 < -32) {
+              return;
+            } else {
+              this.b((byte) 31);
+              return;
+            }
           }
         }
     }
 
     int[] c(int param0, int param1) {
+        int[] discarded$0 = null;
         if (param0 != 1) {
-            int[] discarded$0 = ((ci) this).c(-21, -6);
+            discarded$0 = this.c(-21, -6);
             throw new IllegalStateException("This operation does not have a monochrome output");
         }
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
     ci(int param0, boolean param1) {
-        ((ci) this).field_j = new ci[param0];
-        ((ci) this).field_g = param1 ? true : false;
+        this.field_j = new ci[param0];
+        this.field_g = param1 ? true : false;
     }
 
     final static kg a(byte[] param0, byte param1) {
@@ -216,6 +240,7 @@ abstract class ci extends vg {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         kg stackOut_3_0 = null;
         Object stackOut_1_0 = null;
@@ -232,37 +257,39 @@ abstract class ci extends vg {
             if (param0 != null) {
               var2 = new kg(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, mga.field_g, ck.field_c);
               loa.a((byte) -70);
-              var3 = -1;
-              stackOut_3_0 = (kg) var2;
+              var3 = -23 % ((-28 - param1) / 37);
+              stackOut_3_0 = (kg) (var2);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (kg) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_0 = (RuntimeException) (var2_ref);
             stackOut_5_1 = new StringBuilder().append("ci.Q(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -270,14 +297,18 @@ abstract class ci extends vg {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -123 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (kg) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     int c(byte param0) {
         if (param0 != -117) {
-            ((ci) this).b((byte) -6);
+            this.b((byte) -6);
             return -1;
         }
         return -1;

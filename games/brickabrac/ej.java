@@ -21,7 +21,7 @@ final class ej extends sl {
             param1.b(-(30 / param2) + (param5.field_i + -param1.field_x) / 2, -(66 / param2) + (-param1.field_z + param3 + param5.field_q), 0, 208);
             sc.b(-101);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ej.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ej.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,39 +35,40 @@ final class ej extends sl {
     public static void h(int param0) {
         field_I = null;
         field_M = null;
-        field_L = null;
+        field_L = (jp[][]) null;
         field_P = null;
         field_F = null;
-        field_K = null;
-        field_H = null;
-        field_E = null;
+        if (param0 != 928072) {
+          return;
+        } else {
+          field_K = null;
+          field_H = null;
+          field_E = null;
+          return;
+        }
     }
 
     ej(Object param0, int param1) {
         super(param1);
         try {
-            ((ej) this).field_N = param0;
+            this.field_N = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final Object g(int param0) {
-        Object var3 = null;
+        pb var3 = null;
         if (param0 != 1) {
-          var3 = null;
+          var3 = (pb) null;
           ej.a(-50, (jp) null, -35, 2, 119, (pb) null);
-          return ((ej) this).field_N;
+          return this.field_N;
         } else {
-          return ((ej) this).field_N;
+          return this.field_N;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_P = new tq();
         field_E = new int[29];
         field_M = "Day";

@@ -43,7 +43,7 @@ final class lg {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 18002) {
-            field_c = null;
+            field_c = (int[]) null;
             field_I = null;
             return;
         }
@@ -51,29 +51,25 @@ final class lg {
     }
 
     lg() {
-        ((lg) this).field_H = new byte[6][258];
-        ((lg) this).field_C = new byte[18002];
-        ((lg) this).field_u = new byte[4096];
-        ((lg) this).field_g = new byte[256];
-        ((lg) this).field_J = new int[256];
-        ((lg) this).field_o = new boolean[16];
-        ((lg) this).field_n = new boolean[256];
-        ((lg) this).field_q = new int[16];
-        ((lg) this).field_y = new int[257];
-        ((lg) this).field_l = new int[6][258];
-        ((lg) this).field_s = 0;
-        ((lg) this).field_j = new int[6][258];
-        ((lg) this).field_d = 0;
-        ((lg) this).field_i = new byte[18002];
-        ((lg) this).field_B = new int[6][258];
-        ((lg) this).field_x = new int[6];
+        this.field_H = new byte[6][258];
+        this.field_C = new byte[18002];
+        this.field_u = new byte[4096];
+        this.field_g = new byte[256];
+        this.field_J = new int[256];
+        this.field_o = new boolean[16];
+        this.field_n = new boolean[256];
+        this.field_q = new int[16];
+        this.field_y = new int[257];
+        this.field_l = new int[6][258];
+        this.field_s = 0;
+        this.field_j = new int[6][258];
+        this.field_d = 0;
+        this.field_i = new byte[18002];
+        this.field_B = new int[6][258];
+        this.field_x = new int[6];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "lg.A(";
         field_I = new int[16];
         field_c = new int[8192];

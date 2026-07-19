@@ -10,6 +10,12 @@ final class bi {
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
+        if (param0) {
+            ha var2 = (ha) null;
+            bi.a((ha) null, 112);
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
@@ -23,15 +29,11 @@ final class bi {
             param0.SA(param1, var3.field_A, bea.field_g, var3.field_t, bea.field_l, bea.field_g * var3.field_A, bea.field_g);
             var2.a(param1 ^ -64);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new fta();
         field_d = new su(7, 0, 1, 1);
         field_b = new String[]{"All scores", "My scores", "Best each"};

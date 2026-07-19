@@ -19,19 +19,19 @@ final class bib extends uda {
 
     final void a(byte param0, int param1, ura param2) {
         try {
-            ((bib) this).field_d.a(param2, -123);
+            this.field_d.a(param2, -123);
             if (param0 <= 42) {
-                field_g = null;
+                field_g = (java.math.BigInteger) null;
             }
-            ((bib) this).field_d.h(54, param1);
+            this.field_d.h(54, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bib.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bib.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0) {
         if (param0 != 2543) {
-            field_g = null;
+            field_g = (java.math.BigInteger) null;
         }
     }
 
@@ -39,7 +39,7 @@ final class bib extends uda {
         field_g = null;
         field_e = null;
         if (param0) {
-            field_g = null;
+            field_g = (java.math.BigInteger) null;
         }
     }
 
@@ -60,10 +60,6 @@ final class bib extends uda {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new java.math.BigInteger("65537");
         field_e = "Lobby";
         field_f = 50;

@@ -9,6 +9,12 @@ final class hg implements ntb {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
+            Object discarded$6 = null;
+            Object discarded$7 = null;
+            Object discarded$8 = null;
+            Object discarded$9 = null;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             Throwable var2 = null;
             RuntimeException var2_ref = null;
             String var3 = null;
@@ -38,17 +44,17 @@ final class hg implements ntb {
                       if (param0 <= -4) {
                         break L2;
                       } else {
-                        field_a = null;
+                        field_a = (int[]) null;
                         break L2;
                       }
                     }
                     var3 = ne.a(var4, (byte) -107, param1).getFile();
-                    Object discarded$6 = ia.a(new Object[2], param1, "updatelinks", (byte) -71);
-                    Object discarded$7 = ia.a(new Object[2], param1, "updatelinks", (byte) 97);
-                    Object discarded$8 = ia.a(new Object[2], param1, "updatelinks", (byte) 121);
-                    Object discarded$9 = ia.a(new Object[2], param1, "updatelinks", (byte) 67);
-                    Object discarded$10 = ia.a(new Object[2], param1, "updatelinks", (byte) -69);
-                    Object discarded$11 = ia.a(new Object[2], param1, "updatelinks", (byte) 70);
+                    discarded$6 = ia.a(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", (byte) -71);
+                    discarded$7 = ia.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", (byte) 97);
+                    discarded$8 = ia.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", (byte) 121);
+                    discarded$9 = ia.a(new Object[]{"options", var3 + "options.ws"}, param1, "updatelinks", (byte) 67);
+                    discarded$10 = ia.a(new Object[]{"terms", var3 + "terms.ws"}, param1, "updatelinks", (byte) -69);
+                    discarded$11 = ia.a(new Object[]{"privacy", var3 + "privacy.ws"}, param1, "updatelinks", (byte) 70);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -64,23 +70,23 @@ final class hg implements ntb {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_0 = (RuntimeException) (var2_ref);
                 stackOut_6_1 = new StringBuilder().append("hg.G(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L4;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -88,7 +94,7 @@ final class hg implements ntb {
                   break L4;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -100,6 +106,10 @@ final class hg implements ntb {
     public static void a(boolean param0) {
         field_b = null;
         field_a = null;
+        if (param0) {
+            java.applet.Applet var2 = (java.applet.Applet) null;
+            hg.a(-91, (java.applet.Applet) null);
+        }
     }
 
     public final void b(byte param0, tv param1) {
@@ -125,9 +135,9 @@ final class hg implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (hg) (Object) param1;
+              var5 = (hg) ((Object) param1);
               var6 = var5;
-              var6.field_d = ((hg) this).field_d;
+              var6.field_d = this.field_d;
               if (param0 > 54) {
                 break L1;
               } else {
@@ -141,23 +151,23 @@ final class hg implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var3;
+            stackOut_3_0 = (RuntimeException) (var3);
             stackOut_3_1 = new StringBuilder().append("hg.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -165,7 +175,7 @@ final class hg implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -181,6 +191,7 @@ final class hg implements ntb {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
@@ -194,14 +205,15 @@ final class hg implements ntb {
         try {
           L0: {
             if (param1.field_d == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 L2: {
                   if (param1.field_f != 0) {
                     break L2;
                   } else {
-                    if (-1 == param1.field_h) {
+                    if (-1 == (param1.field_h ^ -1)) {
                       break L1;
                     } else {
                       break L2;
@@ -215,7 +227,7 @@ final class hg implements ntb {
                   } else {
                     L4: {
                       var3 = nrb.field_b[var2_int];
-                      if (-3 != var3.field_a) {
+                      if (-3 != (var3.field_a ^ -1)) {
                         break L4;
                       } else {
                         if (param1.field_f != var3.field_f) {
@@ -224,7 +236,8 @@ final class hg implements ntb {
                           if (param1.field_h != var3.field_h) {
                             break L4;
                           } else {
-                            return;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           }
                         }
                       }
@@ -245,50 +258,68 @@ final class hg implements ntb {
                   break L5;
                 }
               }
-              fpb.a(param1, 0);
+              L6: {
+                fpb.a(param1, 0);
+                if (param0 > 105) {
+                  break L6;
+                } else {
+                  hg.a(true);
+                  break L6;
+                }
+              }
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("hg.I(").append(108).append(',');
+            stackOut_21_0 = (RuntimeException) (var2);
+            stackOut_21_1 = new StringBuilder().append("hg.I(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L6;
+              break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
               stackIn_24_2 = stackOut_22_2;
-              break L6;
+              break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
             if (param1 > -109) {
-                ((hg) this).field_d = 42;
+                this.field_d = 42;
             }
-            param0.a(-632, ((hg) this).field_d, 32);
+            param0.a(-632, this.field_d, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "hg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -318,9 +349,9 @@ final class hg implements ntb {
         try {
           L0: {
             L1: {
-              var3 = (hg) (Object) param1;
+              var3 = (hg) ((Object) param1);
               var4 = -84 % ((22 - param0) / 59);
-              if (((hg) this).field_d == var3.field_d) {
+              if (this.field_d == var3.field_d) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -336,23 +367,23 @@ final class hg implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("hg.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -360,7 +391,7 @@ final class hg implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -370,9 +401,9 @@ final class hg implements ntb {
             return;
         }
         try {
-            ((hg) this).field_d = param0.i(0, 32);
+            this.field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "hg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -387,6 +418,7 @@ final class hg implements ntb {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -398,13 +430,13 @@ final class hg implements ntb {
         String stackOut_10_2 = null;
         try {
           L0: {
-            var3 = (hg) (Object) param0;
+            var3 = (hg) ((Object) param0);
             if (param1 <= -19) {
               L1: {
                 var4 = 0;
-                if (((hg) this).field_d != var3.field_d) {
+                if (this.field_d != var3.field_d) {
                   var4 = 1;
-                  iva.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + ((hg) this).field_d);
+                  iva.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + this.field_d);
                   break L1;
                 } else {
                   break L1;
@@ -418,32 +450,34 @@ final class hg implements ntb {
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("hg.F(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -451,29 +485,43 @@ final class hg implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void a(byte param0, long param1) {
         try {
             InterruptedException var3 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
                 if (param0 == 90) {
                   Thread.sleep(param1);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L1: {
                 var3 = (InterruptedException) (Object) decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
                 break L1;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -483,10 +531,6 @@ final class hg implements ntb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[2];
     }
 }

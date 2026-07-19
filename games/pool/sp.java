@@ -7,7 +7,10 @@ final class sp extends gr {
     int field_J;
 
     final static boolean h(int param0) {
-        return pa.field_I == ra.field_e;
+        if (param0 != 0) {
+            return true;
+        }
+        return pa.field_I == ra.field_e ? true : false;
     }
 
     final static void a(boolean param0, int param1) {
@@ -18,7 +21,7 @@ final class sp extends gr {
         var3 = Pool.field_O;
         try {
           L0: {
-            bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, true);
+            bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= jh.field_c) {
@@ -42,26 +45,26 @@ final class sp extends gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "sp.F(" + true + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) var2), "sp.F(" + param0 + ',' + param1 + ')');
         }
     }
 
     final byte[] b(boolean param0) {
         if (!param0) {
           L0: {
-            if (((sp) this).field_F) {
+            if (this.field_F) {
               break L0;
             } else {
-              if (((sp) this).field_K.field_v < ((sp) this).field_K.field_t.length + -((sp) this).field_L) {
+              if (this.field_K.field_v < this.field_K.field_t.length + -this.field_L) {
                 break L0;
               } else {
-                return ((sp) this).field_K.field_t;
+                return this.field_K.field_t;
               }
             }
           }
           throw new RuntimeException();
         } else {
-          return null;
+          return (byte[]) null;
         }
     }
 
@@ -69,13 +72,13 @@ final class sp extends gr {
     }
 
     final int e(int param0) {
-        if (null == ((sp) this).field_K) {
+        if (null == this.field_K) {
             return 0;
         }
         if (param0 <= 6) {
             return 22;
         }
-        return 100 * ((sp) this).field_K.field_v / (((sp) this).field_K.field_t.length - ((sp) this).field_L);
+        return 100 * this.field_K.field_v / (this.field_K.field_t.length - this.field_L);
     }
 
     static {

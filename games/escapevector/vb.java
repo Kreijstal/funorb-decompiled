@@ -11,17 +11,17 @@ final class vb implements Iterable {
     final fl a(byte param0) {
         fl var2 = null;
         if (param0 == 102) {
-          var2 = ((vb) this).field_c.field_j;
-          if (((vb) this).field_c == var2) {
+          var2 = this.field_c.field_j;
+          if (this.field_c == var2) {
             return null;
           } else {
             var2.d(param0 ^ 25);
             return var2;
           }
         } else {
-          field_a = null;
-          var2 = ((vb) this).field_c.field_j;
-          if (((vb) this).field_c == var2) {
+          field_a = (String) null;
+          var2 = this.field_c.field_j;
+          if (this.field_c == var2) {
             return null;
           } else {
             var2.d(param0 ^ 25);
@@ -31,24 +31,25 @@ final class vb implements Iterable {
     }
 
     final void a(boolean param0, fl param1) {
+        Iterator discarded$0 = null;
         try {
             if (param0) {
-                Iterator discarded$0 = ((vb) this).iterator();
+                discarded$0 = this.iterator();
             }
             if (!(param1.field_i == null)) {
                 param1.d(96);
             }
-            param1.field_i = ((vb) this).field_c.field_i;
-            param1.field_j = ((vb) this).field_c;
+            param1.field_i = this.field_c.field_i;
+            param1.field_j = this.field_c;
             param1.field_i.field_j = param1;
             param1.field_j.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "vb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "vb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new rm((vb) this);
+        return (Iterator) ((Object) new rm((vb) (this)));
     }
 
     public static void b(byte param0) {
@@ -63,10 +64,6 @@ final class vb implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
         field_a = "Collectables";
     }

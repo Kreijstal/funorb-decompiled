@@ -9,8 +9,9 @@ final class uf {
     static int[] field_c;
 
     public static void a(int param0) {
+        String discarded$0 = null;
         if (param0 != 32578) {
-            String discarded$0 = uf.a((byte) -121);
+            discarded$0 = uf.a((byte) -121);
             field_c = null;
             field_b = null;
             return;
@@ -51,9 +52,9 @@ final class uf {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 <= -15) {
-          if ((Object) (Object) ae.field_g != this) {
-            if ((Object) (Object) dg.field_e != this) {
-              if ((Object) (Object) b.field_b == this) {
+          if (ae.field_g != this) {
+            if (dg.field_e != this) {
+              if (b.field_b == this) {
                 return true;
               } else {
                 return false;
@@ -66,12 +67,12 @@ final class uf {
           }
         } else {
           field_a = 89;
-          if ((Object) (Object) ae.field_g != this) {
-            if ((Object) (Object) dg.field_e == this) {
+          if (ae.field_g != this) {
+            if (dg.field_e == this) {
               return true;
             } else {
               L0: {
-                if ((Object) (Object) b.field_b != this) {
+                if (b.field_b != this) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -90,10 +91,6 @@ final class uf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new java.util.zip.CRC32();
     }
 }

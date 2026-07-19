@@ -15,14 +15,13 @@ final class cja {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != -17719) {
+            return;
+        }
         field_j = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cja.A(";
     }
 }

@@ -13,9 +13,9 @@ final class sn extends gg implements pe, ha {
     public final void a(sl param0, int param1) {
         try {
             int var3_int = -25 % ((-43 - param1) / 35);
-            ((sn) this).b(11755);
+            this.b(11755);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "sn.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "sn.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,23 +44,25 @@ final class sn extends gg implements pe, ha {
         int var5 = 0;
         int var6 = 0;
         String stackIn_4_0 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         String stackOut_3_0 = null;
         try {
           L0: {
             L1: {
-              var2_int = ((sn) this).field_i.h((byte) -119);
-              var3 = ((sn) this).field_i.j(25);
+              var2_int = this.field_i.h((byte) -119);
+              var3 = this.field_i.j(25);
               var5 = -15 / ((-30 - param0) / 45);
-              var4 = ((sn) this).field_i.h(119);
+              var4 = this.field_i.h(119);
               var6 = em.h(36);
-              if (var4 < 1890) {
+              if (-1891 < (var4 ^ -1)) {
                 break L1;
               } else {
                 if (var6 + -3 < var4) {
                   break L1;
                 } else {
                   if (!qp.a((byte) 123, var4, var3, var2_int)) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return null;
@@ -68,18 +70,24 @@ final class sn extends gg implements pe, ha {
                 }
               }
             }
-            stackOut_3_0 = nr.a(new String[2], -1, ej.field_c);
+            stackOut_3_0 = nr.a(new String[]{"1890", Integer.toString(-3 + var6)}, -1, ej.field_c);
             stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            decompiledRegionSelector0 = 1;
             break L2;
           }
         }
-        return ij.field_n;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          return ij.field_n;
+        }
     }
 
     final static boolean h(int param0) {
@@ -115,51 +123,61 @@ final class sn extends gg implements pe, ha {
               if (param0 == -14836) {
                 break L1;
               } else {
-                field_k = null;
+                field_k = (String) null;
                 break L1;
               }
             }
-            var2_int = ((sn) this).field_i.h((byte) -119);
-            var3 = ((sn) this).field_i.j(param0 ^ -14827);
-            var4 = ((sn) this).field_i.h(49);
+            var2_int = this.field_i.h((byte) -119);
+            var3 = this.field_i.j(param0 ^ -14827);
+            var4 = this.field_i.h(49);
             var5 = em.h(param0 + 14872);
             if (1890 <= var4) {
               if (-3 + var5 < var4) {
                 stackOut_7_0 = gp.field_d;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (qp.a((byte) 122, var4, var3, var2_int)) {
-                  decompiledRegionSelector0 = 0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   stackOut_10_0 = gp.field_d;
                   stackIn_11_0 = stackOut_10_0;
-                  decompiledRegionSelector0 = 1;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               }
             } else {
               stackOut_3_0 = gp.field_d;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return gp.field_d;
         }
         if (decompiledRegionSelector0 == 0) {
-          return kr.field_e;
+          return stackIn_4_0;
         } else {
-          return stackIn_11_0;
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return kr.field_e;
+            } else {
+              return stackIn_11_0;
+            }
+          }
         }
     }
 
     public final void a(sl param0, boolean param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        sl var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -182,8 +200,8 @@ final class sn extends gg implements pe, ha {
               if (!param1) {
                 break L1;
               } else {
-                var4 = null;
-                ((sn) this).a((sl) null, -31);
+                var4 = (sl) null;
+                this.a((sl) null, -31);
                 break L1;
               }
             }
@@ -193,23 +211,23 @@ final class sn extends gg implements pe, ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("sn.R(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -217,7 +235,7 @@ final class sn extends gg implements pe, ha {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -225,18 +243,15 @@ final class sn extends gg implements pe, ha {
     }
 
     public final boolean d(int param0) {
+        boolean discarded$0 = false;
         if (param0 != -3) {
-            boolean discarded$0 = sn.h(41);
-            return ((sn) this).field_i.g((byte) 114);
+            discarded$0 = sn.h(41);
+            return this.field_i.g((byte) 114);
         }
-        return ((sn) this).field_i.g((byte) 114);
+        return this.field_i.g((byte) 114);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Spots";
         field_l = "Lobby";
         field_k = "Random";

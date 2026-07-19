@@ -9,13 +9,12 @@ final class qk {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
+        if (param0 != -1003) {
+            field_a = (int[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qk.A(";
     }
 }

@@ -8,9 +8,9 @@ final class sq extends i {
 
     final static boolean b(int param0, int param1, int param2) {
         int var3 = null != ow.field_b ? 1 : 0;
-        if (cc.field_e == 9) {
+        if (-10 == (cc.field_e ^ -1)) {
             if (!(!cb.a(ol.field_z, mv.field_a, (byte) -64, qs.field_S, nr.field_r))) {
-                if (ol.field_z != 2) {
+                if ((ol.field_z ^ -1) != -3) {
                     if (!(var3 == 0)) {
                         return false;
                     }
@@ -18,7 +18,7 @@ final class sq extends i {
                 return mi.a(nr.field_r, mv.field_a, (byte) 124, ol.field_z, qs.field_S);
             }
         }
-        int var4 = 0;
+        int var4 = 1 % ((59 - param0) / 44);
         if (!(10 != cc.field_e)) {
             if (var3 != 0) {
                 return false;
@@ -41,8 +41,8 @@ final class sq extends i {
                 if (!jk.b(0)) {
                     return true;
                 }
-                Object var5 = null;
-                gp.a(vb.field_h, 101, qs.field_K, 15, oc.field_f, (String) null);
+                String var5 = (String) null;
+                gp.a(vb.field_h, 101, qs.field_K, param2, oc.field_f, (String) null);
                 return true;
             }
         }
@@ -60,20 +60,23 @@ final class sq extends i {
             nk.c((byte) -56);
             jm.a(13, true, -2);
         } else {
-            if (param1 == 1) {
+            if ((param1 ^ -1) == -2) {
                 wb.f(-120);
                 jm.a(13, true, -2);
             } else {
-                if (param1 != 2) {
+                if (-3 != (param1 ^ -1)) {
                 }
             }
         }
         if (param0 <= 60) {
-            field_H = null;
+            field_H = (gf[]) null;
         }
     }
 
     public static void g(int param0) {
+        if (param0 != 13) {
+            field_H = (gf[]) null;
+        }
         field_H = null;
         field_F = null;
     }

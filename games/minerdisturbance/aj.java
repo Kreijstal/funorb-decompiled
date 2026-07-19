@@ -18,7 +18,7 @@ final class aj implements uj {
         field_b = null;
         field_c = null;
         if (param0 < 87) {
-            field_c = null;
+            field_c = (ch) null;
         }
     }
 
@@ -34,17 +34,13 @@ final class aj implements uj {
     }
 
     final static Boolean a(int param0) {
-        int var2 = 0;
+        int var2 = 10 % ((param0 - 16) / 60);
         Boolean var1 = mf.field_a;
         mf.field_a = null;
         return var1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Press <img=20> to close.";
     }
 }

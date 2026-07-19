@@ -13,20 +13,28 @@ final class sh {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
-        field_f = null;
-        field_b = null;
-        field_g = null;
+        if (param0 != 320) {
+          field_b = (String) null;
+          field_f = null;
+          field_b = null;
+          field_g = null;
+          return;
+        } else {
+          field_f = null;
+          field_b = null;
+          field_g = null;
+          return;
+        }
     }
 
     final static int a(int param0, int param1) {
-        return 320 - -(70 * param1) << 16;
+        if (param0 != 70) {
+            return -7;
+        }
+        return 320 - -(70 * param1) << 1839569968;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Create a free account to start using this feature";
         field_e = "The grid on the left is a <col=ffff00>team grid</col>, listing all the players in a squad. Hover over them<nbsp>with your mouse to see their stats, EXP and trinkets.";
     }

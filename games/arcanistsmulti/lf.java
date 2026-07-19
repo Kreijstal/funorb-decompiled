@@ -17,11 +17,12 @@ final class lf {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (~mn.field_r != ~si.field_g) {
+            if ((mn.field_r ^ -1) != (si.field_g ^ -1)) {
               L1: {
                 if (ij.b(si.field_g, 10)) {
                   tl.field_f[si.field_g].d((byte) 103);
@@ -35,7 +36,7 @@ final class lf {
                 si.field_g = mn.field_r;
                 cb.field_b = io.field_A;
                 km.field_c = 0;
-                if (si.field_g != -1) {
+                if (0 != (si.field_g ^ -1)) {
                   break L2;
                 } else {
                   if (5 != var1_int) {
@@ -52,10 +53,10 @@ final class lf {
               }
               L3: {
                 L4: {
-                  if (si.field_g == 0) {
+                  if ((si.field_g ^ -1) == -1) {
                     break L4;
                   } else {
-                    if (si.field_g == -4) {
+                    if (3 == (si.field_g ^ -1)) {
                       break L4;
                     } else {
                       if (-1 == si.field_g) {
@@ -64,13 +65,13 @@ final class lf {
                         if (-2 == si.field_g) {
                           break L4;
                         } else {
-                          if (si.field_g == -5) {
+                          if (4 == (si.field_g ^ -1)) {
                             break L4;
                           } else {
-                            if (si.field_g == -3) {
+                            if ((si.field_g ^ -1) == 2) {
                               break L4;
                             } else {
-                              if (si.field_g != 14) {
+                              if ((si.field_g ^ -1) != -15) {
                                 break L3;
                               } else {
                                 break L4;
@@ -84,7 +85,7 @@ final class lf {
                 }
                 var2 = 1;
                 L5: while (true) {
-                  if (~var2 <= ~wm.field_H.length) {
+                  if ((var2 ^ -1) <= (wm.field_H.length ^ -1)) {
                     break L3;
                   } else {
                     wm.field_H[var2] = null;
@@ -94,7 +95,7 @@ final class lf {
                 }
               }
               L6: {
-                if (si.field_g == 3) {
+                if (-4 == (si.field_g ^ -1)) {
                   o.field_s = 0;
                   break L6;
                 } else {
@@ -161,21 +162,52 @@ final class lf {
                   break L13;
                 }
               }
-              break L0;
+              if (param0 == 80) {
+                L14: {
+                  if (!wa.field_Kb) {
+                    break L14;
+                  } else {
+                    ho.a(0);
+                    rn.i((byte) -123);
+                    qn.i(param0 ^ 110);
+                    wa.field_Kb = false;
+                    break L14;
+                  }
+                }
+                pm.field_c = (int)(480.0 * Math.random());
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "lf.A(" + 80 + ')');
+          throw aa.a((Throwable) ((Object) var1), "lf.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(int param0) {
         field_f = null;
         field_a = null;
+        if (param0 != -15) {
+            return;
+        }
         field_h = null;
         field_c = null;
         field_b = null;
@@ -185,15 +217,14 @@ final class lf {
     }
 
     final static void b(int param0) {
+        if (param0 != -4) {
+            field_d = (String) null;
+        }
         dg.d((byte) -74);
         jo.a(true);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new am();
         field_h = "Buying or selling an account";
         field_d = "Spell types 1/2:";

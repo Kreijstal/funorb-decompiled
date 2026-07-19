@@ -18,10 +18,10 @@ abstract class lq extends gn {
     abstract lq c();
 
     final void b(int[] param0, int param1, int param2) {
-        if (((lq) this).field_e) {
-            ((lq) this).a(param0, param1, param2);
+        if (this.field_e) {
+            this.a(param0, param1, param2);
         } else {
-            ((lq) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class lq extends gn {
     abstract int d();
 
     protected lq() {
-        ((lq) this).field_e = true;
+        this.field_e = true;
     }
 }

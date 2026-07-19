@@ -22,8 +22,6 @@ final class fi extends ml {
         int var7 = 0;
         char[] var8 = null;
         char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
         String stackIn_20_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -47,23 +45,21 @@ final class fi extends ml {
           L0: {
             L1: {
               var2_int = param0.length();
-              if (var2_int > 20) {
+              if ((var2_int ^ -1) < -21) {
                 var2_int = 20;
                 break L1;
               } else {
                 break L1;
               }
             }
-            var11 = new char[var2_int];
-            var10 = var11;
-            var9 = var10;
+            var9 = new char[var2_int];
             var8 = var9;
             var3 = var8;
-            var4 = 0;
+            var4 = 103 % ((param1 - -14) / 61);
             var5 = 0;
             L2: while (true) {
               if (var5 >= var2_int) {
-                stackOut_19_0 = new String(var11);
+                stackOut_19_0 = new String(var9);
                 stackIn_20_0 = stackOut_19_0;
                 break L0;
               } else {
@@ -74,7 +70,7 @@ final class fi extends ml {
                       break L4;
                     } else {
                       if (var6 <= 90) {
-                        var3[var5] = (char)(var6 + 32);
+                        var3[var5] = (char)(var6 + -65 - -97);
                         break L3;
                       } else {
                         break L4;
@@ -104,7 +100,7 @@ final class fi extends ml {
                         }
                       }
                     }
-                    var3[var5] = '_';
+                    var3[var5] = (char)95;
                     break L3;
                   }
                   var3[var5] = (char)var6;
@@ -119,23 +115,23 @@ final class fi extends ml {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_0 = (RuntimeException) (var2);
             stackOut_21_1 = new StringBuilder().append("fi.M(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -143,7 +139,7 @@ final class fi extends ml {
               break L8;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 83 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
         return stackIn_20_0;
     }
@@ -158,6 +154,9 @@ final class fi extends ml {
                 }
             }
             nk.field_N.field_m = nk.field_N.field_m + 24;
+            if (param0 != 95) {
+                field_A = 49;
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -167,35 +166,37 @@ final class fi extends ml {
 
     public static void d(byte param0) {
         field_y = null;
-        int var1 = 0;
+        int var1 = -107 % ((-44 - param0) / 44);
         field_v = null;
     }
 
     final int c(boolean param0) {
+        byte[] discarded$0 = null;
         if (param0) {
-            byte[] discarded$0 = ((fi) this).d(123);
+            discarded$0 = this.d(123);
         }
-        if (!(null != ((fi) this).field_C)) {
+        if (!(null != this.field_C)) {
             return 0;
         }
-        return ((fi) this).field_C.field_m * 100 / (-((fi) this).field_D + ((fi) this).field_C.field_k.length);
+        return this.field_C.field_m * 100 / (-this.field_D + this.field_C.field_k.length);
     }
 
     final byte[] d(int param0) {
+        byte[] discarded$2 = null;
         L0: {
-          if (((fi) this).field_s) {
+          if (this.field_s) {
             break L0;
           } else {
-            if (((fi) this).field_C.field_m >= -((fi) this).field_D + ((fi) this).field_C.field_k.length) {
+            if (this.field_C.field_m >= -this.field_D + this.field_C.field_k.length) {
               L1: {
                 if (param0 == 95) {
                   break L1;
                 } else {
-                  byte[] discarded$2 = ((fi) this).d(-58);
+                  discarded$2 = this.d(-58);
                   break L1;
                 }
               }
-              return ((fi) this).field_C.field_k;
+              return this.field_C.field_k;
             } else {
               break L0;
             }
@@ -208,10 +209,6 @@ final class fi extends ml {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = 0;
         field_w = 0;
         field_v = "This password contains your Player Name, and would be easy to guess";

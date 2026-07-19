@@ -15,10 +15,6 @@ final class o {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "o.A(";
         field_b = "Quit to website";
         field_a = new gh();

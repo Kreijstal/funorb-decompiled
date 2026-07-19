@@ -25,10 +25,6 @@ class of extends uh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = new int[1024];
         field_u = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }

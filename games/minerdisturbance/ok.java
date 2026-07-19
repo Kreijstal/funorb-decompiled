@@ -11,36 +11,36 @@ abstract class ok implements jm {
         if (param0 != -11) {
             return;
         }
-        ((ok) this).field_c = sf.a((byte) -87);
+        this.field_c = sf.a((byte) -87);
     }
 
     public final ag b(int param0) {
         if (param0 != 24595) {
-            ((ok) this).field_c = 39L;
-            if (((ok) this).a(false)) {
+            this.field_c = 39L;
+            if (this.a(false)) {
                 return ke.field_W;
             }
-            if (!(sf.a((byte) 105) >= 350L + ((ok) this).field_c)) {
+            if (!(sf.a((byte) 105) >= 350L + this.field_c)) {
                 return nn.field_f;
             }
-            return ((ok) this).b(false);
+            return this.b(false);
         }
-        if (((ok) this).a(false)) {
+        if (this.a(false)) {
             return ke.field_W;
         }
-        if (!(sf.a((byte) 105) >= 350L + ((ok) this).field_c)) {
+        if (!(sf.a((byte) 105) >= 350L + this.field_c)) {
             return nn.field_f;
         }
-        return ((ok) this).b(false);
+        return this.b(false);
     }
 
     public final String a(int param0) {
-        if (!((ok) this).a(false)) {
-          if (~sf.a((byte) 107) <= ~(((ok) this).field_c + 350L)) {
+        if (!this.a(false)) {
+          if ((sf.a((byte) 107) ^ -1L) <= (this.field_c + 350L ^ -1L)) {
             if (param0 != 7320) {
-              return null;
+              return (String) null;
             } else {
-              return ((ok) this).e(96);
+              return this.e(96);
             }
           } else {
             return null;
@@ -64,45 +64,48 @@ abstract class ok implements jm {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_33_0 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
+        int stackIn_28_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_34_0 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_38_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_8_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_26_0 = 0;
+        int stackOut_33_0 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_27_0 = 0;
         int stackOut_18_0 = 0;
         int stackOut_13_0 = 0;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
         RuntimeException stackOut_36_0 = null;
         StringBuilder stackOut_36_1 = null;
         String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
             if (param1 == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var3_int = param1.length();
-              if (var3_int < 1) {
+              if ((var3_int ^ -1) > -2) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (12 >= var3_int) {
                   L1: {
@@ -120,15 +123,17 @@ abstract class ok implements jm {
                               var6 = 0;
                               L3: while (true) {
                                 if (param1.length() <= var6) {
-                                  var7 = 0;
+                                  var7 = -108 % ((-14 - param0) / 55);
                                   if (var5 <= 0) {
-                                    stackOut_32_0 = 1;
-                                    stackIn_33_0 = stackOut_32_0;
+                                    stackOut_33_0 = 1;
+                                    stackIn_34_0 = stackOut_33_0;
+                                    decompiledRegionSelector0 = 6;
                                     break L0;
                                   } else {
-                                    stackOut_30_0 = 0;
-                                    stackIn_31_0 = stackOut_30_0;
-                                    return stackIn_31_0 != 0;
+                                    stackOut_31_0 = 0;
+                                    stackIn_32_0 = stackOut_31_0;
+                                    decompiledRegionSelector0 = 5;
+                                    break L0;
                                   }
                                 } else {
                                   L4: {
@@ -141,14 +146,22 @@ abstract class ok implements jm {
                                       break L4;
                                     }
                                   }
-                                  if (2 > var5) {
-                                    var6++;
-                                    continue L3;
-                                  } else {
-                                    stackOut_26_0 = 0;
-                                    stackIn_27_0 = stackOut_26_0;
-                                    return stackIn_27_0 != 0;
+                                  L5: {
+                                    if (2 > var5) {
+                                      break L5;
+                                    } else {
+                                      if (param2) {
+                                        break L5;
+                                      } else {
+                                        stackOut_27_0 = 0;
+                                        stackIn_28_0 = stackOut_27_0;
+                                        decompiledRegionSelector0 = 4;
+                                        break L0;
+                                      }
+                                    }
                                   }
+                                  var6++;
+                                  continue L3;
                                 }
                               }
                             } else {
@@ -158,7 +171,8 @@ abstract class ok implements jm {
                         }
                         stackOut_18_0 = 0;
                         stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0 != 0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       } else {
                         break L1;
                       }
@@ -166,7 +180,8 @@ abstract class ok implements jm {
                   }
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
-                  return stackIn_14_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   return false;
                 }
@@ -175,46 +190,70 @@ abstract class ok implements jm {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var3 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) var3;
-            stackOut_34_1 = new StringBuilder().append("ok.Q(").append(111).append(',');
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackOut_35_0 = (RuntimeException) (var3);
+            stackOut_35_1 = new StringBuilder().append("ok.Q(").append(param0).append(',');
+            stackIn_37_0 = stackOut_35_0;
+            stackIn_37_1 = stackOut_35_1;
+            stackIn_36_0 = stackOut_35_0;
+            stackIn_36_1 = stackOut_35_1;
             if (param1 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
-              break L5;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
+              stackOut_37_2 = "null";
+              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_1 = stackOut_37_1;
+              stackIn_38_2 = stackOut_37_2;
+              break L6;
             } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
-              break L5;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackOut_36_2 = "{...}";
+              stackIn_38_0 = stackOut_36_0;
+              stackIn_38_1 = stackOut_36_1;
+              stackIn_38_2 = stackOut_36_2;
+              break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + false + ')');
+          throw lj.a((Throwable) ((Object) stackIn_38_0), stackIn_38_2 + ',' + param2 + ')');
         }
-        return stackIn_33_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_14_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_19_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_28_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_32_0 != 0;
+                  } else {
+                    return stackIn_34_0 != 0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     public static void d(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 1627) {
-          field_d = null;
-          field_d = null;
+          field_d = (String[][]) null;
+          field_d = (String[][]) null;
           return;
         } else {
-          field_d = null;
+          field_d = (String[][]) null;
           return;
         }
     }
@@ -222,12 +261,8 @@ abstract class ok implements jm {
     abstract String e(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ta();
-        field_d = new String[][]{null, new String[1]};
+        field_d = new String[][]{null, new String[]{"Cold: This is the measure of how cold you are. If you get too cold you'll freeze to death. You warm up when you're on dry land."}};
         field_a = "A Miner and a Survivor";
     }
 }

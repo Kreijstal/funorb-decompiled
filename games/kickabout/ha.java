@@ -11,6 +11,9 @@ final class ha extends i {
     static int field_I;
 
     final static ki b(int param0, int param1, int param2) {
+        if (param0 != 1) {
+            return (ki) null;
+        }
         return new ki(1, param1, param2, (byte) 0, (byte) 0);
     }
 
@@ -37,12 +40,13 @@ final class ha extends i {
         if (param0 < 60) {
             return;
         }
-        if (!(param1 != 1)) {
+        if (!(-2 != (param1 ^ -1))) {
             ql.a((byte) 29, true, dg.field_f);
         }
     }
 
     final static up a(long param0, int param1, int param2, int param3, int param4) {
+        up discarded$1 = null;
         long var6 = 0L;
         Random var8 = null;
         up var9 = null;
@@ -126,7 +130,7 @@ final class ha extends i {
           if (param3 <= -37) {
             break L0;
           } else {
-            up discarded$1 = ha.a(-62L, -5, -19, -99, -27);
+            discarded$1 = ha.a(-62L, -5, -19, -99, -27);
             break L0;
           }
         }
@@ -141,14 +145,14 @@ final class ha extends i {
           var8 = new Random(var6);
           var9 = new up();
           var9.field_c = true;
-          if (param4 == -1) {
+          if ((param4 ^ -1) == 0) {
             L2: {
               var9.field_q = param1 / 2;
-              if (var9.field_q == 2) {
+              if (-3 == (var9.field_q ^ -1)) {
                 var9.field_q = 3;
                 break L2;
               } else {
-                if (var9.field_q != 3) {
+                if (-4 != (var9.field_q ^ -1)) {
                   break L2;
                 } else {
                   var9.field_q = 2;
@@ -171,7 +175,7 @@ final class ha extends i {
               }
             }
             var9.field_h = new int[var11];
-            if (var9.field_q == 2) {
+            if (-3 == (var9.field_q ^ -1)) {
               var9.field_h[0] = 3;
               var12 = 1;
               L4: while (true) {
@@ -189,76 +193,75 @@ final class ha extends i {
                 if (var12 >= var9.field_h.length) {
                   break L1;
                 } else {
-                  L6: {
-                    if (2 == param1) {
-                      var9.field_h[var12] = 0;
-                      break L6;
-                    } else {
-                      L7: {
-                        if (param1 <= 2) {
-                          break L7;
+                  if (2 == param1) {
+                    var9.field_h[var12] = 0;
+                    var12++;
+                    continue L5;
+                  } else {
+                    L6: {
+                      if ((param1 ^ -1) >= -3) {
+                        break L6;
+                      } else {
+                        if (5 > param1) {
+                          var9.field_h[var12] = dq.a((byte) -118, 2, var8);
+                          var12++;
+                          continue L5;
                         } else {
-                          if (5 > param1) {
-                            var9.field_h[var12] = dq.a((byte) -118, 2, var8);
-                            break L6;
-                          } else {
-                            break L7;
-                          }
+                          break L6;
                         }
                       }
-                      var9.field_h[var12] = dq.a((byte) 120, 3, var8);
-                      break L6;
                     }
+                    var9.field_h[var12] = dq.a((byte) 120, 3, var8);
+                    var12++;
+                    continue L5;
                   }
-                  var12++;
-                  continue L5;
                 }
               }
             }
           } else {
-            L8: {
+            L7: {
               if (3 <= param4) {
                 stackOut_5_0 = 2;
                 stackIn_6_0 = stackOut_5_0;
-                break L8;
+                break L7;
               } else {
                 stackOut_4_0 = 3;
                 stackIn_6_0 = stackOut_4_0;
-                break L8;
+                break L7;
               }
             }
-            L9: {
+            L8: {
               var10 = stackIn_6_0;
               var9.field_q = param1 / var10;
-              if (var9.field_q == 2) {
+              if ((var9.field_q ^ -1) == -3) {
                 var9.field_q = 3;
-                break L9;
+                break L8;
               } else {
                 if (var9.field_q == 3) {
                   var9.field_q = 2;
+                  break L8;
+                } else {
+                  break L8;
+                }
+              }
+            }
+            L9: {
+              if (-3 >= (param4 ^ -1)) {
+                break L9;
+              } else {
+                if (var9.field_q != 2) {
                   break L9;
                 } else {
+                  var9.field_q = 3;
                   break L9;
                 }
               }
             }
             L10: {
-              if (param4 >= 2) {
-                break L10;
-              } else {
-                if (var9.field_q != 2) {
-                  break L10;
-                } else {
-                  var9.field_q = 3;
-                  break L10;
-                }
-              }
-            }
-            L11: {
               var11 = 40 + dq.a((byte) -69, 4, var8) * 10;
               if (var9.field_q == 0) {
-                L12: {
-                  stackOut_16_0 = (up) var9;
+                L11: {
+                  stackOut_16_0 = (up) (var9);
                   stackOut_16_1 = ng.field_d[param4];
                   stackOut_16_2 = 86;
                   stackIn_18_0 = stackOut_16_0;
@@ -268,7 +271,7 @@ final class ha extends i {
                   stackIn_17_1 = stackOut_16_1;
                   stackIn_17_2 = stackOut_16_2;
                   if (param4 == 0) {
-                    stackOut_18_0 = (up) (Object) stackIn_18_0;
+                    stackOut_18_0 = (up) ((Object) stackIn_18_0);
                     stackOut_18_1 = stackIn_18_1;
                     stackOut_18_2 = stackIn_18_2;
                     stackOut_18_3 = 6;
@@ -276,9 +279,9 @@ final class ha extends i {
                     stackIn_19_1 = stackOut_18_1;
                     stackIn_19_2 = stackOut_18_2;
                     stackIn_19_3 = stackOut_18_3;
-                    break L12;
+                    break L11;
                   } else {
-                    stackOut_17_0 = (up) (Object) stackIn_17_0;
+                    stackOut_17_0 = (up) ((Object) stackIn_17_0);
                     stackOut_17_1 = stackIn_17_1;
                     stackOut_17_2 = stackIn_17_2;
                     stackOut_17_3 = 11;
@@ -286,21 +289,21 @@ final class ha extends i {
                     stackIn_19_1 = stackOut_17_1;
                     stackIn_19_2 = stackOut_17_2;
                     stackIn_19_3 = stackOut_17_3;
-                    break L12;
+                    break L11;
                   }
                 }
                 stackIn_19_0.field_o = stackIn_19_1 + dq.a((byte) stackIn_19_2, stackIn_19_3, var8);
                 var9.field_g = var11 * var9.field_o / 100;
                 var9.field_n = (100 - var11) * var9.field_o / 100;
-                break L11;
+                break L10;
               } else {
-                break L11;
+                break L10;
               }
             }
-            L13: {
-              if (var9.field_q == 3) {
-                L14: {
-                  stackOut_22_0 = (up) var9;
+            L12: {
+              if (-4 == (var9.field_q ^ -1)) {
+                L13: {
+                  stackOut_22_0 = (up) (var9);
                   stackOut_22_1 = ng.field_d[param4];
                   stackOut_22_2 = -60;
                   stackIn_24_0 = stackOut_22_0;
@@ -309,8 +312,8 @@ final class ha extends i {
                   stackIn_23_0 = stackOut_22_0;
                   stackIn_23_1 = stackOut_22_1;
                   stackIn_23_2 = stackOut_22_2;
-                  if (param4 == 0) {
-                    stackOut_24_0 = (up) (Object) stackIn_24_0;
+                  if (-1 == (param4 ^ -1)) {
+                    stackOut_24_0 = (up) ((Object) stackIn_24_0);
                     stackOut_24_1 = stackIn_24_1;
                     stackOut_24_2 = stackIn_24_2;
                     stackOut_24_3 = 6;
@@ -318,9 +321,9 @@ final class ha extends i {
                     stackIn_25_1 = stackOut_24_1;
                     stackIn_25_2 = stackOut_24_2;
                     stackIn_25_3 = stackOut_24_3;
-                    break L14;
+                    break L13;
                   } else {
-                    stackOut_23_0 = (up) (Object) stackIn_23_0;
+                    stackOut_23_0 = (up) ((Object) stackIn_23_0);
                     stackOut_23_1 = stackIn_23_1;
                     stackOut_23_2 = stackIn_23_2;
                     stackOut_23_3 = 11;
@@ -328,21 +331,21 @@ final class ha extends i {
                     stackIn_25_1 = stackOut_23_1;
                     stackIn_25_2 = stackOut_23_2;
                     stackIn_25_3 = stackOut_23_3;
-                    break L14;
+                    break L13;
                   }
                 }
                 stackIn_25_0.field_g = stackIn_25_1 + dq.a((byte) stackIn_25_2, stackIn_25_3, var8);
                 var9.field_o = var11 * var9.field_g / 100;
                 var9.field_n = (100 - var11) * var9.field_g / 100;
-                break L13;
+                break L12;
               } else {
-                break L13;
+                break L12;
               }
             }
-            L15: {
+            L14: {
               if (var9.field_q == 1) {
-                L16: {
-                  stackOut_28_0 = (up) var9;
+                L15: {
+                  stackOut_28_0 = (up) (var9);
                   stackOut_28_1 = ng.field_d[param4];
                   stackOut_28_2 = -66;
                   stackIn_30_0 = stackOut_28_0;
@@ -352,7 +355,7 @@ final class ha extends i {
                   stackIn_29_1 = stackOut_28_1;
                   stackIn_29_2 = stackOut_28_2;
                   if (param4 == 0) {
-                    stackOut_30_0 = (up) (Object) stackIn_30_0;
+                    stackOut_30_0 = (up) ((Object) stackIn_30_0);
                     stackOut_30_1 = stackIn_30_1;
                     stackOut_30_2 = stackIn_30_2;
                     stackOut_30_3 = 6;
@@ -360,9 +363,9 @@ final class ha extends i {
                     stackIn_31_1 = stackOut_30_1;
                     stackIn_31_2 = stackOut_30_2;
                     stackIn_31_3 = stackOut_30_3;
-                    break L16;
+                    break L15;
                   } else {
-                    stackOut_29_0 = (up) (Object) stackIn_29_0;
+                    stackOut_29_0 = (up) ((Object) stackIn_29_0);
                     stackOut_29_1 = stackIn_29_1;
                     stackOut_29_2 = stackIn_29_2;
                     stackOut_29_3 = 11;
@@ -370,18 +373,18 @@ final class ha extends i {
                     stackIn_31_1 = stackOut_29_1;
                     stackIn_31_2 = stackOut_29_2;
                     stackIn_31_3 = stackOut_29_3;
-                    break L16;
+                    break L15;
                   }
                 }
                 stackIn_31_0.field_n = stackIn_31_1 - -dq.a((byte) stackIn_31_2, stackIn_31_3, var8);
                 var9.field_g = var9.field_n * var11 / 100;
                 var9.field_o = (-var11 + 100) * var9.field_n / 100;
-                break L15;
+                break L14;
               } else {
-                break L15;
+                break L14;
               }
             }
-            L17: {
+            L16: {
               if (2 == var9.field_q) {
                 var12 = ng.field_d[param4] + dq.a((byte) -41, 11, var8);
                 var11 = dq.a((byte) 81, 3, var8) * 10 + 60;
@@ -390,136 +393,130 @@ final class ha extends i {
                 var9.field_g = var12 * var11 / 100;
                 var11 = 60 + dq.a((byte) 127, 3, var8) * 10;
                 var9.field_n = var12 * var11 / 100;
+                break L16;
+              } else {
+                break L16;
+              }
+            }
+            L17: {
+              var9.field_r = 0;
+              if (-81 <= (var9.field_o ^ -1)) {
                 break L17;
               } else {
+                var9.field_o = 80;
                 break L17;
               }
             }
             L18: {
-              var9.field_r = 0;
-              if (var9.field_o <= 80) {
+              if (var9.field_g <= 80) {
                 break L18;
               } else {
-                var9.field_o = 80;
+                var9.field_g = 80;
                 break L18;
               }
             }
             L19: {
-              if (var9.field_g <= 80) {
+              if ((var9.field_n ^ -1) >= -81) {
                 break L19;
               } else {
-                var9.field_g = 80;
+                var9.field_n = 80;
                 break L19;
               }
             }
             L20: {
-              if (var9.field_n <= 80) {
-                break L20;
-              } else {
-                var9.field_n = 80;
-                break L20;
-              }
-            }
-            L21: {
               var12 = 0;
-              if (var9.field_q != 2) {
+              if ((var9.field_q ^ -1) != -3) {
                 var12++;
-                if (param4 < 4) {
-                  break L21;
+                if ((param4 ^ -1) > -5) {
+                  break L20;
                 } else {
                   if (dq.a((byte) 89, 2, var8) != 0) {
-                    break L21;
+                    break L20;
                   } else {
                     var12++;
-                    break L21;
+                    break L20;
                   }
                 }
               } else {
-                L22: {
+                L21: {
                   var12++;
                   if (param4 < 5) {
-                    break L22;
+                    break L21;
                   } else {
                     var12++;
-                    break L22;
+                    break L21;
                   }
                 }
                 if (0 != dq.a((byte) -73, 2, var8)) {
-                  break L21;
+                  break L20;
                 } else {
                   var12++;
-                  break L21;
+                  break L20;
                 }
               }
             }
-            L23: {
-              var9.field_h = new int[var12];
-              if (2 != var9.field_q) {
-                var13 = 0;
-                L24: while (true) {
-                  if (var9.field_h.length <= var13) {
-                    break L23;
-                  } else {
-                    L25: {
-                      if (param4 >= 2) {
-                        var14 = dq.a((byte) 122, 100, var8);
-                        var17 = 0;
-                        var15 = var17;
-                        L26: while (true) {
-                          if (~ct.field_v[param4].length >= ~var17) {
-                            break L25;
-                          } else {
-                            if (var14 > ct.field_v[param4][var17]) {
-                              var14 = var14 - ct.field_v[param4][var17];
-                              var17++;
-                              continue L26;
-                            } else {
-                              var9.field_h[var13] = var17;
-                              break L25;
-                            }
-                          }
+            var9.field_h = new int[var12];
+            if (2 != var9.field_q) {
+              var13 = 0;
+              L22: while (true) {
+                if (var9.field_h.length <= var13) {
+                  break L1;
+                } else {
+                  if ((param4 ^ -1) <= -3) {
+                    var14 = dq.a((byte) 122, 100, var8);
+                    var17 = 0;
+                    var15 = var17;
+                    L23: while (true) {
+                      if (ct.field_v[param4].length > var17) {
+                        if (var14 > ct.field_v[param4][var17]) {
+                          var14 = var14 - ct.field_v[param4][var17];
+                          var17++;
+                          continue L23;
+                        } else {
+                          var9.field_h[var13] = var17;
+                          var13++;
+                          continue L22;
                         }
                       } else {
-                        var9.field_h[var13] = 0;
-                        break L25;
+                        var13++;
+                        continue L22;
                       }
                     }
+                  } else {
+                    var9.field_h[var13] = 0;
                     var13++;
-                    continue L24;
+                    continue L22;
                   }
                 }
-              } else {
-                var9.field_h[0] = 3;
-                var13 = 1;
-                L27: while (true) {
-                  if (~var9.field_h.length >= ~var13) {
-                    break L23;
-                  } else {
-                    var14 = dq.a((byte) -89, 100, var8);
-                    var15 = 0;
-                    L28: while (true) {
-                      L29: {
-                        if (~var15 <= ~vo.field_eb[param4].length) {
-                          break L29;
-                        } else {
-                          if (~var14 >= ~vo.field_eb[param4][var15]) {
-                            var9.field_h[var13] = var15;
-                            break L29;
-                          } else {
-                            var14 = var14 - vo.field_eb[param4][var15];
-                            var15++;
-                            continue L28;
-                          }
-                        }
+              }
+            } else {
+              var9.field_h[0] = 3;
+              var13 = 1;
+              L24: while (true) {
+                if (var9.field_h.length <= var13) {
+                  break L1;
+                } else {
+                  var14 = dq.a((byte) -89, 100, var8);
+                  var15 = 0;
+                  L25: while (true) {
+                    if (var15 < vo.field_eb[param4].length) {
+                      if (var14 <= vo.field_eb[param4][var15]) {
+                        var9.field_h[var13] = var15;
+                        var13++;
+                        continue L24;
+                      } else {
+                        var14 = var14 - vo.field_eb[param4][var15];
+                        var15++;
+                        continue L25;
                       }
+                    } else {
                       var13++;
-                      continue L27;
+                      continue L24;
                     }
                   }
                 }
               }
             }
-            break L1;
           }
         }
         var9.field_e = dq.a((byte) -67, td.field_a.length, var8);
@@ -528,26 +525,23 @@ final class ha extends i {
         var11 = dq.a((byte) -114, 3, var8);
         var12 = dq.a((byte) -41, 3, var8);
         var13 = var12;
-        var13 = var13 | var11 << 4;
-        var13 = var13 | var10 << 8;
+        var13 = var13 | var11 << -1613591484;
+        var13 = var13 | var10 << -1836445880;
         var9.field_j = var13;
         return var9;
     }
 
     public static void g(int param0) {
+        boolean discarded$0 = false;
         field_H = null;
         field_F = null;
         if (param0 != 100) {
-            boolean discarded$0 = ha.a(false, (byte) -43);
+            discarded$0 = ha.a(false, (byte) -43);
         }
         field_J = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = "To server list";
         field_F = st.c(-23091);
         field_I = 0;

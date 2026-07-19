@@ -11,22 +11,23 @@ final class gm extends ci {
     }
 
     final int[] c(int param0, int param1) {
+        int[] discarded$2 = null;
         int[] var3 = null;
         int[] var4 = null;
         if (param0 == 1) {
-          var4 = ((gm) this).field_i.a((byte) -108, param1);
+          var4 = this.field_i.a((byte) -108, param1);
           var3 = var4;
-          if (((gm) this).field_i.field_d) {
+          if (this.field_i.field_d) {
             lua.a(var4, 0, ns.field_g, sj.field_b[param1]);
             return var4;
           } else {
             return var4;
           }
         } else {
-          int[] discarded$2 = ((gm) this).c(-83, -24);
-          var4 = ((gm) this).field_i.a((byte) -108, param1);
+          discarded$2 = this.c(-83, -24);
+          var4 = this.field_i.a((byte) -108, param1);
           var3 = var4;
-          if (!((gm) this).field_i.field_d) {
+          if (!this.field_i.field_d) {
             return var4;
           } else {
             lua.a(var4, 0, ns.field_g, sj.field_b[param1]);
@@ -36,10 +37,6 @@ final class gm extends ci {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gm.H(";
     }
 }

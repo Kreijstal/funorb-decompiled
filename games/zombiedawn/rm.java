@@ -11,19 +11,23 @@ final class rm extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((rm) this).field_a.paint(param0);
+            this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            field_f = false;
+        }
         field_e = null;
         field_c = null;
         field_d = null;
     }
 
     final static void a(byte param0, int param1, rc param2) {
+        int discarded$1 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -37,6 +41,7 @@ final class rm extends java.awt.Canvas {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
@@ -67,8 +72,9 @@ final class rm extends java.awt.Canvas {
               var5 = 0;
               L1: while (true) {
                 if (var5 >= param2.field_k.length) {
-                  int discarded$1 = var8.e(-123, var4);
+                  discarded$1 = var8.e(-123, var4);
                   var8.d(50, -var4 + var8.field_j);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var7.h(30, param2.field_k[var5]);
@@ -77,30 +83,31 @@ final class rm extends java.awt.Canvas {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("rm.C(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -108,20 +115,29 @@ final class rm extends java.awt.Canvas {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        int var3 = param1 >>> 31;
+        if (param2) {
+            rc var4 = (rc) null;
+            rm.a((byte) -68, 88, (rc) null);
+        }
+        int var3 = param1 >>> 1802605695;
         return (var3 + param1) / param0 - var3;
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((rm) this).field_a.update(param0);
+            this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +156,7 @@ final class rm extends java.awt.Canvas {
         boolean stackOut_10_1 = false;
         L0: {
           var3 = ZombieDawn.field_J;
-          var1 = 0;
+          var1 = param0 ? 1 : 0;
           if (we.o((byte) -80)) {
             hi.a((byte) 120);
             var1 = 1;
@@ -197,8 +213,8 @@ final class rm extends java.awt.Canvas {
           if (!bg.a(2)) {
             break L3;
           } else {
-            var2 = (ln.field_b + -1 << 8) / 16;
-            if (var2 <= 0) {
+            var2 = (ln.field_b + -1 << 1442659304) / 16;
+            if ((var2 ^ -1) >= -1) {
               break L3;
             } else {
               bi.a(0, 0, bi.field_f, bi.field_a, 0, var2);
@@ -212,17 +228,13 @@ final class rm extends java.awt.Canvas {
 
     rm(java.awt.Component param0) {
         try {
-            ((rm) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[8192];
         field_f = false;
         field_e = new vo();

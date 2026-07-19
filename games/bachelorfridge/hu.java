@@ -12,10 +12,11 @@ public class hu {
     private static String field_e;
 
     public static File a(String param0, int param1) {
-        Object var3 = null;
+        File discarded$2 = null;
+        String var3 = null;
         if (param1 != 0) {
-          var3 = null;
-          File discarded$2 = hu.a((String) null, -116);
+          var3 = (String) null;
+          discarded$2 = hu.a((String) null, -116);
           return hu.a(field_a, param0, field_e, 1);
         } else {
           return hu.a(field_a, param0, field_e, 1);
@@ -38,7 +39,7 @@ public class hu {
           if (param0 == 0) {
             break L0;
           } else {
-            field_b = null;
+            field_b = (String) null;
             break L0;
           }
         }
@@ -73,10 +74,6 @@ public class hu {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_c = new Hashtable(16);
     }

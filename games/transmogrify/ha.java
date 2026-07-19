@@ -10,21 +10,23 @@ final class ha {
             return i.field_f;
         }
         if (param0 <= 63) {
-            return null;
+            return (java.applet.Applet) null;
         }
-        return (java.applet.Applet) (Object) wi.field_f;
+        return (java.applet.Applet) ((Object) wi.field_f);
     }
 
     public static void a(int param0) {
+        if (param0 != -19424) {
+            field_a = (java.awt.Font) null;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unpacking graphics";
     }
 }

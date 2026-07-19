@@ -16,13 +16,13 @@ abstract class vc {
 
     final int a(long param0, int param1) {
         if (param1 >= -45) {
-            field_a = null;
+            field_a = (ec) null;
         }
-        long var4 = ((vc) this).a(120);
+        long var4 = this.a(120);
         if (!(var4 <= 0L)) {
             gi.a((byte) -93, var4);
         }
-        return ((vc) this).a(0, param0);
+        return this.a(0, param0);
     }
 
     abstract long a(int param0);
@@ -30,9 +30,13 @@ abstract class vc {
     abstract int a(int param0, long param1);
 
     public static void c(int param0) {
+        boolean discarded$0 = false;
         field_d = null;
         field_c = null;
         field_f = null;
+        if (param0 != 0) {
+            discarded$0 = vc.a(83, 26);
+        }
         field_e = null;
         field_b = null;
         field_g = null;
@@ -53,7 +57,7 @@ abstract class vc {
               if (param0 <= -97) {
                 break L0;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L0;
               }
             }
@@ -64,7 +68,7 @@ abstract class vc {
                 try {
                   L1: {
                     var2_int = ig.field_e.a(0);
-                    if (var2_int > 0) {
+                    if (-1 > (var2_int ^ -1)) {
                       L2: {
                         if (param1 - mk.field_j.field_k >= var2_int) {
                           break L2;
@@ -79,12 +83,14 @@ abstract class vc {
                       if (param1 > mk.field_j.field_k) {
                         stackOut_13_0 = 0;
                         stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
+                        decompiledRegionSelector0 = 0;
+                        break L1;
                       } else {
                         mk.field_j.field_k = 0;
                         stackOut_15_0 = 1;
                         stackIn_16_0 = stackOut_15_0;
-                        return stackIn_16_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L1;
                       }
                     } else {
                       L3: {
@@ -93,7 +99,7 @@ abstract class vc {
                           break L3;
                         } else {
                           if (30000L >= ce.b(1)) {
-                            decompiledRegionSelector0 = 0;
+                            decompiledRegionSelector0 = 2;
                             break L1;
                           } else {
                             gb.g(-17464);
@@ -101,7 +107,7 @@ abstract class vc {
                           }
                         }
                       }
-                      decompiledRegionSelector0 = 1;
+                      decompiledRegionSelector0 = 3;
                       break L1;
                     }
                   }
@@ -110,14 +116,22 @@ abstract class vc {
                   L4: {
                     var2 = (IOException) (Object) decompiledCaughtException;
                     gb.g(-17464);
-                    decompiledRegionSelector0 = 1;
+                    decompiledRegionSelector0 = 3;
                     break L4;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  return false;
+                  return stackIn_14_0 != 0;
                 } else {
-                  return false;
+                  if (decompiledRegionSelector0 == 1) {
+                    return stackIn_16_0 != 0;
+                  } else {
+                    if (decompiledRegionSelector0 == 2) {
+                      return false;
+                    } else {
+                      return false;
+                    }
+                  }
                 }
               } else {
                 return false;
@@ -138,27 +152,26 @@ abstract class vc {
         il.a(1, var1);
         ob.b();
         l.a();
+        if (!param0) {
+            return;
+        }
         try {
             kf.field_f = 0;
             af.d(-2766);
             var2 = var1.d();
-            for (var3 = 0; var3 < 15; var3++) {
+            for (var3 = 0; (var3 ^ -1) > -16; var3++) {
                 var2.b(-2, -2, 16777215);
                 l.e(4, 4, 0, 0, 540, 140);
             }
             s.field_a.a();
             var1.f(0, 0);
-            ij.a(false);
+            ij.a(!param0 ? true : false);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "vc.M(" + true + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "vc.M(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new jj();
         field_b = "L-TAW";
         field_g = new jj();

@@ -10,15 +10,15 @@ final class pfb {
 
     final void b(byte param0) {
         if (param0 <= 72) {
-          field_a = null;
-          ((pfb) this).field_b.a((byte) 61);
-          ((pfb) this).field_c.b(0);
-          ((pfb) this).field_d = ((pfb) this).field_e;
+          field_a = (String) null;
+          this.field_b.a((byte) 61);
+          this.field_c.b(0);
+          this.field_d = this.field_e;
           return;
         } else {
-          ((pfb) this).field_b.a((byte) 61);
-          ((pfb) this).field_c.b(0);
-          ((pfb) this).field_d = ((pfb) this).field_e;
+          this.field_b.a((byte) 61);
+          this.field_c.b(0);
+          this.field_d = this.field_e;
           return;
         }
     }
@@ -32,25 +32,25 @@ final class pfb {
         is var6 = null;
         ska var6_ref = null;
         int var7 = VoidHunters.field_G;
-        if (!(1 <= ((pfb) this).field_e)) {
+        if (!(param3 <= this.field_e)) {
             throw new IllegalStateException();
         }
         this.a(-70, param2);
-        ((pfb) this).field_d = ((pfb) this).field_d - 1;
-        while (0 > ((pfb) this).field_d) {
-            var6 = (is) (Object) ((pfb) this).field_b.a(-7481);
+        this.field_d = this.field_d - param3;
+        while (0 > this.field_d) {
+            var6 = (is) ((Object) this.field_b.a(-7481));
             this.a(var6, -17173);
         }
         if (param0 > -43) {
             return;
         }
         try {
-            var6_ref = new ska(param1, 1);
-            ((pfb) this).field_c.a((ksa) (Object) var6_ref, 0, param2);
-            ((pfb) this).field_b.a(-17569, (fh) (Object) var6_ref);
-            ((is) (Object) var6_ref).field_i = 0L;
+            var6_ref = new ska(param1, param3);
+            this.field_c.a(var6_ref, 0, param2);
+            this.field_b.a(-17569, var6_ref);
+            ((is) ((Object) var6_ref)).field_i = 0L;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pfb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "pfb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class pfb {
             }
             this.a(param2 ^ 20, param0, param1, 1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pfb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "pfb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -75,22 +75,22 @@ final class pfb {
         is var4 = null;
         int var5 = 0;
         var5 = VoidHunters.field_G;
-        var2 = (is) (Object) ((pfb) this).field_c.a(param0 ^ 33);
+        var2 = (is) ((Object) this.field_c.a(param0 ^ 33));
         L0: while (true) {
           if (var2 == null) {
             if (param0 == 67) {
               return null;
             } else {
-              return null;
+              return (Object) null;
             }
           } else {
             var3 = var2.a(120);
             if (var3 == null) {
               var4 = var2;
-              var2 = (is) (Object) ((pfb) this).field_c.a((byte) 44);
+              var2 = (is) ((Object) this.field_c.a((byte) 44));
               var4.b(param0 ^ -3911);
               var4.d((byte) -35);
-              ((pfb) this).field_d = ((pfb) this).field_d + var4.field_k;
+              this.field_d = this.field_d + var4.field_k;
               continue L0;
             } else {
               return var3;
@@ -100,6 +100,8 @@ final class pfb {
     }
 
     final void a(boolean param0, int param1) {
+        long fieldTemp$2 = 0L;
+        long fieldTemp$3 = 0L;
         Object var3 = null;
         is var3_ref = null;
         bna var4 = null;
@@ -107,19 +109,19 @@ final class pfb {
         var3 = null;
         var5 = VoidHunters.field_G;
         if (param0) {
-          var3_ref = (is) (Object) ((pfb) this).field_b.a(false);
+          var3_ref = (is) ((Object) this.field_b.a(false));
           L0: while (true) {
             if (var3_ref == null) {
               return;
             } else {
               L1: {
                 if (!var3_ref.e((byte) 74)) {
-                  long fieldTemp$2 = var3_ref.field_i + 1L;
+                  fieldTemp$2 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
                   if ((long)param1 < fieldTemp$2) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
-                    ((pfb) this).field_c.a((ksa) (Object) var4, 0, var3_ref.field_b);
-                    gbb.a((fh) (Object) var4, (fh) (Object) var3_ref, (byte) -68);
+                    this.field_c.a(var4, 0, var3_ref.field_b);
+                    gbb.a(var4, var3_ref, (byte) -68);
                     var3_ref.b(-3846);
                     var3_ref.d((byte) -35);
                     break L1;
@@ -132,30 +134,30 @@ final class pfb {
                   } else {
                     var3_ref.b(-3846);
                     var3_ref.d((byte) -35);
-                    ((pfb) this).field_d = ((pfb) this).field_d + var3_ref.field_k;
+                    this.field_d = this.field_d + var3_ref.field_k;
                     break L1;
                   }
                 }
               }
-              var3_ref = (is) (Object) ((pfb) this).field_b.b(8063);
+              var3_ref = (is) ((Object) this.field_b.b(8063));
               continue L0;
             }
           }
         } else {
-          ((pfb) this).field_d = 105;
-          var3_ref = (is) (Object) ((pfb) this).field_b.a(false);
+          this.field_d = 105;
+          var3_ref = (is) ((Object) this.field_b.a(false));
           L2: while (true) {
             if (var3_ref == null) {
               return;
             } else {
               L3: {
                 if (!var3_ref.e((byte) 74)) {
-                  long fieldTemp$3 = var3_ref.field_i + 1L;
+                  fieldTemp$3 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
                   if ((long)param1 < fieldTemp$3) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
-                    ((pfb) this).field_c.a((ksa) (Object) var4, 0, var3_ref.field_b);
-                    gbb.a((fh) (Object) var4, (fh) (Object) var3_ref, (byte) -68);
+                    this.field_c.a(var4, 0, var3_ref.field_b);
+                    gbb.a(var4, var3_ref, (byte) -68);
                     var3_ref.b(-3846);
                     var3_ref.d((byte) -35);
                     break L3;
@@ -168,12 +170,12 @@ final class pfb {
                   } else {
                     var3_ref.b(-3846);
                     var3_ref.d((byte) -35);
-                    ((pfb) this).field_d = ((pfb) this).field_d + var3_ref.field_k;
+                    this.field_d = this.field_d + var3_ref.field_k;
                     break L3;
                   }
                 }
               }
-              var3_ref = (is) (Object) ((pfb) this).field_b.b(8063);
+              var3_ref = (is) ((Object) this.field_b.b(8063));
               continue L2;
             }
           }
@@ -188,7 +190,7 @@ final class pfb {
         is var7 = null;
         var5 = VoidHunters.field_G;
         if (!param0) {
-          var2 = (is) (Object) ((pfb) this).field_c.a((byte) 44);
+          var2 = (is) ((Object) this.field_c.a((byte) 44));
           L0: while (true) {
             if (var2 != null) {
               var3 = var2.a(118);
@@ -196,10 +198,10 @@ final class pfb {
                 return var3;
               } else {
                 var6 = var2;
-                var2 = (is) (Object) ((pfb) this).field_c.a((byte) 44);
+                var2 = (is) ((Object) this.field_c.a((byte) 44));
                 var6.b(-3846);
                 var6.d((byte) -35);
-                ((pfb) this).field_d = ((pfb) this).field_d + var6.field_k;
+                this.field_d = this.field_d + var6.field_k;
                 continue L0;
               }
             } else {
@@ -207,8 +209,8 @@ final class pfb {
             }
           }
         } else {
-          ((pfb) this).a((Object) null, -64L, (byte) -68);
-          var2 = (is) (Object) ((pfb) this).field_c.a((byte) 44);
+          this.a((Object) null, -64L, (byte) -68);
+          var2 = (is) ((Object) this.field_c.a((byte) 44));
           L1: while (true) {
             if (var2 != null) {
               var3 = var2.a(118);
@@ -216,10 +218,10 @@ final class pfb {
                 return var3;
               } else {
                 var7 = var2;
-                var2 = (is) (Object) ((pfb) this).field_c.a((byte) 44);
+                var2 = (is) ((Object) this.field_c.a((byte) 44));
                 var7.b(-3846);
                 var7.d((byte) -35);
-                ((pfb) this).field_d = ((pfb) this).field_d + var7.field_k;
+                this.field_d = this.field_d + var7.field_k;
                 continue L1;
               }
             } else {
@@ -233,12 +235,12 @@ final class pfb {
         Object var5 = null;
         ska var6 = null;
         is var7 = null;
-        var7 = (is) (Object) ((pfb) this).field_c.a((byte) -124, param1);
+        var7 = (is) ((Object) this.field_c.a((byte) -124, param1));
         if (var7 != null) {
           var5 = var7.a(param0 ^ 94);
           if (var5 != null) {
             if (!var7.e((byte) 50)) {
-              ((pfb) this).field_b.a(param0 + -17569, (fh) (Object) var7);
+              this.field_b.a(param0 + -17569, var7);
               var7.field_i = 0L;
               if (param0 == 0) {
                 return var5;
@@ -248,9 +250,9 @@ final class pfb {
               }
             } else {
               var6 = new ska(var5, var7.field_k);
-              ((pfb) this).field_c.a((ksa) (Object) var6, 0, var7.field_b);
-              ((pfb) this).field_b.a(-17569, (fh) (Object) var6);
-              ((is) (Object) var6).field_i = 0L;
+              this.field_c.a(var6, 0, var7.field_b);
+              this.field_b.a(-17569, var6);
+              ((is) ((Object) var6)).field_i = 0L;
               var7.b(-3846);
               var7.d((byte) -35);
               if (param0 == 0) {
@@ -263,7 +265,7 @@ final class pfb {
           } else {
             var7.b(-3846);
             var7.d((byte) -35);
-            ((pfb) this).field_d = ((pfb) this).field_d + var7.field_k;
+            this.field_d = this.field_d + var7.field_k;
             return null;
           }
         } else {
@@ -280,6 +282,7 @@ final class pfb {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
@@ -291,36 +294,42 @@ final class pfb {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (param0 != null) {
-              param0.b(-3846);
-              param0.d((byte) -35);
-              ((pfb) this).field_d = ((pfb) this).field_d + param0.field_k;
-              break L0;
+            if (param1 == -17173) {
+              if (param0 != null) {
+                param0.b(-3846);
+                param0.d((byte) -35);
+                this.field_d = this.field_d + param0.field_k;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                return;
+              }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("pfb.H(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -328,20 +337,34 @@ final class pfb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -17173 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final void a(int param0, long param1) {
-        is var4 = (is) (Object) ((pfb) this).field_c.a((byte) -112, param1);
-        this.a(var4, -17173);
+        is var4 = null;
+        if (param0 >= -66) {
+          this.a((Object) null, 32L, (byte) 24);
+          var4 = (is) ((Object) this.field_c.a((byte) -112, param1));
+          this.a(var4, -17173);
+          return;
+        } else {
+          var4 = (is) ((Object) this.field_c.a((byte) -112, param1));
+          this.a(var4, -17173);
+          return;
+        }
     }
 
     private pfb(int param0, int param1) {
         int var3 = 0;
-        ((pfb) this).field_b = new vh();
-        ((pfb) this).field_d = param0;
-        ((pfb) this).field_e = param0;
+        this.field_b = new vh();
+        this.field_d = param0;
+        this.field_e = param0;
         var3 = 1;
         L0: while (true) {
           if (var3 + var3 < param0) {
@@ -349,21 +372,17 @@ final class pfb {
               var3 = var3 + var3;
               continue L0;
             } else {
-              ((pfb) this).field_c = new nga(var3);
+              this.field_c = new nga(var3);
               return;
             }
           } else {
-            ((pfb) this).field_c = new nga(var3);
+            this.field_c = new nga(var3);
             return;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Next mission: ";
     }
 }

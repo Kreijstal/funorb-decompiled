@@ -29,10 +29,6 @@ final class bl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bl.A(";
         field_g = "OK";
         field_b = "Create your own free Jagex account";

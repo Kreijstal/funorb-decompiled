@@ -9,10 +9,10 @@ final class fd {
     static int field_d;
 
     public static void a(int param0) {
-        int var1 = -56;
+        int var1 = 113 / ((-37 - param0) / 56);
         field_e = null;
         field_b = null;
-        field_a = null;
+        field_a = (int[][]) null;
         field_c = null;
     }
 
@@ -21,11 +21,7 @@ final class fd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_a = new int[][]{new int[1], new int[1], new int[1], new int[1], new int[2]};
+        field_a = new int[][]{new int[]{96}, new int[]{97}, new int[]{98}, new int[]{99}, new int[]{83, 82}};
         field_c = new sa();
         field_b = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_d = 50;

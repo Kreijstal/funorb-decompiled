@@ -10,7 +10,7 @@ final class vk {
         wn var1 = null;
         try {
             while (true) {
-                var1 = (wn) (Object) field_c.e(125);
+                var1 = (wn) ((Object) field_c.e(125));
                 if (var1 == null) {
                     break;
                 }
@@ -32,17 +32,23 @@ final class vk {
         if (0 < field_a) {
             var3 = new wn();
             var3.field_e = param0;
-            field_c.a(79, (wf) (Object) var3);
+            field_c.a(79, var3);
         } else {
             param0.w(false);
         }
     }
 
     final synchronized static void b(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_a = field_a + 1;
     }
 
     final synchronized static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_a = field_a - 1;
         if (!(0 != field_a)) {
             vk.a((byte) 119);
@@ -50,10 +56,6 @@ final class vk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = 0;
         field_c = new kp();

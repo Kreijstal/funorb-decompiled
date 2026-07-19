@@ -14,23 +14,23 @@ final class ei extends dg {
 
     final void i(int param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(((ei) this).field_C);
+        ug var2 = new ug(this.field_C);
         if (param0 != -21535) {
-            field_H = null;
+            field_H = (byte[][]) null;
         }
-        ui var3 = (ui) (Object) var2.b((byte) 115);
+        ui var3 = (ui) ((Object) var2.b((byte) 115));
         while (var3 != null) {
             if (!(!var3.h(103))) {
                 var3.c(20);
             }
-            var3 = (ui) (Object) var2.a(true);
+            var3 = (ui) ((Object) var2.a(true));
         }
     }
 
     public static void g(byte param0) {
         field_I = null;
         field_E = null;
-        field_H = null;
+        field_H = (byte[][]) null;
         field_B = null;
         field_D = null;
         field_G = null;
@@ -41,64 +41,66 @@ final class ei extends dg {
     }
 
     final void f(byte param0) {
+        ui discarded$0 = null;
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(((ei) this).field_C);
+        ug var2 = new ug(this.field_C);
         if (param0 >= -126) {
-            ui discarded$0 = ((ei) this).d((byte) -45);
+            discarded$0 = this.d((byte) -45);
         }
-        ui var3 = (ui) (Object) var2.b((byte) 119);
+        ui var3 = (ui) ((Object) var2.b((byte) 119));
         while (var3 != null) {
             if (!(!var3.d(true))) {
                 var3.c(20);
             }
-            var3 = (ui) (Object) var2.a(true);
+            var3 = (ui) ((Object) var2.a(true));
         }
-        ((ei) this).field_y = (rj) (Object) ((ei) this).d((byte) -97);
+        this.field_y = (rj) ((Object) this.d((byte) -97));
     }
 
     final void e(byte param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(((ei) this).field_C);
-        ui var3 = (ui) (Object) var2.b((byte) 124);
+        ug var2 = new ug(this.field_C);
+        ui var3 = (ui) ((Object) var2.b((byte) 124));
         while (var3 != null) {
             var3.field_G = false;
-            var3 = (ui) (Object) var2.a(true);
+            var3 = (ui) ((Object) var2.a(true));
         }
-        ((ei) this).field_y = null;
+        this.field_y = null;
         if (param0 <= 7) {
-            ((ei) this).e((byte) 100);
+            this.e((byte) 100);
         }
     }
 
     final void a(byte param0, rj param1) {
         ui var4 = null;
+        boolean discarded$0 = false;
         try {
             if (!(param1 instanceof ui)) {
                 throw new IllegalArgumentException();
             }
             int var3_int = 32 / ((-36 - param0) / 50);
-            var4 = (ui) (Object) param1;
-            ((ei) this).field_C.a(-1, (gg) (Object) var4);
+            var4 = (ui) ((Object) param1);
+            this.field_C.a(-1, var4);
             var4.field_G = true;
-            boolean discarded$0 = var4.a(-2147483648, (rj) this);
+            discarded$0 = var4.a(-2147483648, (rj) (this));
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ei.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ei.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
         int var7 = stellarshard.field_B;
-        if (((ei) this).field_u != null) {
-            ((ei) this).field_u.a(true, param3, param2, (rj) this, param1 + 4606);
+        if (this.field_u != null) {
+            this.field_u.a(true, param3, param2, (rj) (this), param1 + 4606);
         }
-        ug var5 = new ug(((ei) this).field_C);
+        ug var5 = new ug(this.field_C);
         if (param1 != -57) {
             return;
         }
-        rj var6 = (rj) (Object) var5.a((byte) -87);
+        rj var6 = (rj) ((Object) var5.a((byte) -87));
         while (var6 != null) {
-            var6.a(param0, (byte) -57, param2 - -((ei) this).field_k, ((ei) this).field_w + param3);
-            var6 = (rj) (Object) var5.a(90);
+            var6.a(param0, (byte) -57, param2 - -this.field_k, this.field_w + param3);
+            var6 = (rj) ((Object) var5.a(90));
         }
     }
 
@@ -111,18 +113,18 @@ final class ei extends dg {
           if (param0 == 257) {
             break L0;
           } else {
-            field_E = null;
+            field_E = (String) null;
             break L0;
           }
         }
-        var2 = new ug(((ei) this).field_C);
-        var3 = (ui) (Object) var2.b((byte) 115);
+        var2 = new ug(this.field_C);
+        var3 = (ui) ((Object) var2.b((byte) 115));
         L1: while (true) {
           if (var3 != null) {
             if (var3.field_G) {
               return var3.a((byte) -45);
             } else {
-              var3 = (ui) (Object) var2.a(true);
+              var3 = (ui) ((Object) var2.a(true));
               continue L1;
             }
           } else {
@@ -133,18 +135,18 @@ final class ei extends dg {
 
     final ui d(byte param0) {
         int var4 = stellarshard.field_B;
-        ug var2 = new ug(((ei) this).field_C);
-        ui var3 = (ui) (Object) var2.b((byte) 116);
+        ug var2 = new ug(this.field_C);
+        ui var3 = (ui) ((Object) var2.b((byte) 116));
         while (var3 != null) {
             if (!(!var3.field_G)) {
                 return var3;
             }
-            var3 = (ui) (Object) var2.a(true);
+            var3 = (ui) ((Object) var2.a(true));
         }
         if (param0 <= -91) {
             return null;
         }
-        Object var5 = null;
+        CharSequence[] var5 = (CharSequence[]) null;
         String discarded$0 = ei.a((CharSequence[]) null, (byte) 55);
         return null;
     }
@@ -181,23 +183,23 @@ final class ei extends dg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("ei.S(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -205,21 +207,17 @@ final class ei extends dg {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
 
     public ei() {
         super(0, 0, ml.field_b, vf.field_F, (uk) null, (lf) null);
-        ((ei) this).field_C = new oj();
+        this.field_C = new oj();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_E = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_H = new byte[250][];

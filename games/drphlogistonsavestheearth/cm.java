@@ -18,11 +18,11 @@ final class cm extends lb {
     static double field_G;
 
     final int g(int param0) {
-        if (((cm) this).field_K != null) {
+        if (this.field_K != null) {
           if (param0 > -38) {
             return 97;
           } else {
-            return ((cm) this).field_K.field_j * 100 / (-((cm) this).field_N + ((cm) this).field_K.field_h.length);
+            return this.field_K.field_j * 100 / (-this.field_N + this.field_K.field_h.length);
           }
         } else {
           return 0;
@@ -57,22 +57,22 @@ final class cm extends lb {
 
     final byte[] i(int param0) {
         if (param0 == 13095) {
-          if (!((cm) this).field_u) {
-            if (((cm) this).field_K.field_h.length - ((cm) this).field_N > ((cm) this).field_K.field_j) {
+          if (!this.field_u) {
+            if (this.field_K.field_h.length - this.field_N > this.field_K.field_j) {
               throw new RuntimeException();
             } else {
-              return ((cm) this).field_K.field_h;
+              return this.field_K.field_h;
             }
           } else {
             throw new RuntimeException();
           }
         } else {
-          field_S = null;
-          if (!((cm) this).field_u) {
-            if (((cm) this).field_K.field_h.length - ((cm) this).field_N > ((cm) this).field_K.field_j) {
+          field_S = (char[]) null;
+          if (!this.field_u) {
+            if (this.field_K.field_h.length - this.field_N > this.field_K.field_j) {
               throw new RuntimeException();
             } else {
-              return ((cm) this).field_K.field_h;
+              return this.field_K.field_h;
             }
           } else {
             throw new RuntimeException();
@@ -81,14 +81,10 @@ final class cm extends lb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = new Random();
         field_P = new sa(12, 0, 1, 0);
         field_J = true;
-        field_S = new char[]{'[', ']', '#'};
+        field_S = new char[]{(char)91, (char)93, (char)35};
         field_G = 0.0;
     }
 }

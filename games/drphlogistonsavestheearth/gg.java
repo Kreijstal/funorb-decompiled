@@ -24,10 +24,18 @@ final class gg {
     private int field_a;
 
     private final double a(int param0) {
-        return (double)hi.a(1000, 4, ((gg) this).field_r) / 1000.0;
+        if (param0 != 1769212228) {
+            nh[] var3 = (nh[]) null;
+            gg.a(38, (nh[]) null);
+        }
+        return (double)hi.a(1000, param0 ^ 1769212224, this.field_r) / 1000.0;
     }
 
     public static void b(int param0) {
+        if (param0 != -339514552) {
+            nh[] var2 = (nh[]) null;
+            gg.a(-70, (nh[]) null);
+        }
         field_i = null;
         field_f = null;
         field_d = null;
@@ -43,6 +51,7 @@ final class gg {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -54,41 +63,47 @@ final class gg {
         String stackOut_8_2 = null;
         try {
           L0: {
-            L1: {
-              gl.field_e = param1;
-              if (null == gl.field_e) {
-                break L1;
-              } else {
-                if (param1.length < 3) {
-                  throw new IllegalArgumentException("");
-                } else {
+            if (param0 == 1000) {
+              L1: {
+                gl.field_e = param1;
+                if (null == gl.field_e) {
                   break L1;
+                } else {
+                  if (param1.length < 3) {
+                    throw new IllegalArgumentException("");
+                  } else {
+                    break L1;
+                  }
                 }
               }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("gg.D(").append(1000).append(',');
+            stackOut_7_0 = (RuntimeException) (var2);
+            stackOut_7_1 = new StringBuilder().append("gg.D(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -96,7 +111,12 @@ final class gg {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -112,7 +132,7 @@ final class gg {
           if (param5 > 5) {
             break L0;
           } else {
-            if (param7 < 1) {
+            if (-2 < (param7 ^ -1)) {
               break L0;
             } else {
               L1: {
@@ -126,11 +146,11 @@ final class gg {
               L2: {
                 var11 = (int)((double)param7 * ji.a(65535, param8)) + param1;
                 var12 = param6 - -(int)(pj.a(param8, 32768) * (double)param7);
-                var13 = hi.a((int)(2.0 * ((gg) this).field_k), 4, ((gg) this).field_r);
-                var14 = 126 * param7 / ((gg) this).field_c + 60;
+                var13 = hi.a((int)(2.0 * this.field_k), 4, this.field_r);
+                var14 = 126 * param7 / this.field_c + 60;
                 if (param2) {
-                  wj.a(var11 << 4, var12 << 4, param7 << 4, var14, ((gg) this).field_q);
-                  wj.a(var11 << 4, var12 << 4, param7 << 3, var14 / 2, ((gg) this).field_q);
+                  wj.a(var11 << -134859068, var12 << -1744854236, param7 << -53005020, var14, this.field_q);
+                  wj.a(var11 << -674055772, var12 << 1428501476, param7 << -457140957, var14 / 2, this.field_q);
                   break L2;
                 } else {
                   break L2;
@@ -144,7 +164,7 @@ final class gg {
                 if (var15 >= var13) {
                   return;
                 } else {
-                  this.a(param0, var11, param2, param3, (byte) 47, 1 + param5, var12, (int)(((gg) this).field_g * (double)param7), param8 + (-0.5 + this.a(1769212228)) * ((gg) this).field_m);
+                  this.a(param0, var11, param2, param3, (byte) 47, 1 + param5, var12, (int)(this.field_g * (double)param7), param8 + (-0.5 + this.a(1769212228)) * this.field_m);
                   var15++;
                   continue L3;
                 }
@@ -163,16 +183,16 @@ final class gg {
         int var10 = 0;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 == -1093327740) {
-          ((gg) this).field_r.setSeed((long)((gg) this).field_o);
-          var6 = 255 & param3 >> 8;
-          var5 = param3 >> 16;
+          this.field_r.setSeed((long)this.field_o);
+          var6 = 255 & param3 >> 579456712;
+          var5 = param3 >> -849301040;
           var7 = 255 & param3;
           var8 = 0;
           L0: while (true) {
             if (var8 >= 255) {
               L1: {
                 if (param2) {
-                  wj.a(((gg) this).field_a << 4, ((gg) this).field_j << 4, 2 * ((gg) this).field_c << 4, 254, ((gg) this).field_q);
+                  wj.a(this.field_a << -1093327740, this.field_j << -1442300220, 2 * this.field_c << 1764868324, 254, this.field_q);
                   break L1;
                 } else {
                   break L1;
@@ -180,14 +200,14 @@ final class gg {
               }
               var8 = 0;
               L2: while (true) {
-                if (((gg) this).field_e <= var8) {
+                if (this.field_e <= var8) {
                   return;
                 } else {
                   L3: {
                     if (!param2) {
                       break L3;
                     } else {
-                      wj.a(((gg) this).field_a << 4, ((gg) this).field_j << 4, var8 * ((gg) this).field_c << 4, 254 / (1 - -var8), ((gg) this).field_q);
+                      wj.a(this.field_a << -1506698492, this.field_j << -228446140, var8 * this.field_c << 1769212228, 254 / (1 - -var8), this.field_q);
                       break L3;
                     }
                   }
@@ -195,18 +215,18 @@ final class gg {
                     if (!param2) {
                       break L4;
                     } else {
-                      wj.a(((gg) this).field_a << 4, ((gg) this).field_j << 4, var8 * ((gg) this).field_c << 4, 196 / (1 - -var8), ((gg) this).field_q);
+                      wj.a(this.field_a << -1365633052, this.field_j << 809833828, var8 * this.field_c << 1329221092, 196 / (1 - -var8), this.field_q);
                       break L4;
                     }
                   }
-                  this.a(param3, ((gg) this).field_a, param2, param1, (byte) 31, 0, ((gg) this).field_j, ((gg) this).field_c, ((gg) this).field_h + (this.a(1769212228) - 0.5) * ((gg) this).field_p);
+                  this.a(param3, this.field_a, param2, param1, (byte) 31, 0, this.field_j, this.field_c, this.field_h + (this.a(1769212228) - 0.5) * this.field_p);
                   var8++;
                   continue L2;
                 }
               }
             } else {
               var9 = (int)(Math.pow((double)var8, 1.5) / 16.0);
-              ((gg) this).field_q[var8] = li.a(li.a(var9 * var6 >> 8 << 8, var5 * var9 >> 8 << 16), var9 * var7 >> 8);
+              this.field_q[var8] = li.a(li.a(var9 * var6 >> 1096251080 << 1898885576, var5 * var9 >> -339514552 << -340031760), var9 * var7 >> 439917576);
               var8++;
               continue L0;
             }
@@ -217,57 +237,55 @@ final class gg {
     }
 
     gg(int param0, int param1, int param2, double param3, double param4, double param5, int param6, double param7, double param8, int param9) {
-        ((gg) this).field_r = new Random();
-        ((gg) this).field_q = new int[255];
-        ((gg) this).field_j = param1;
-        ((gg) this).field_k = param7;
-        ((gg) this).field_g = param8;
-        ((gg) this).field_a = param0;
-        ((gg) this).field_c = param2;
-        ((gg) this).field_e = param6;
-        ((gg) this).field_h = param3;
-        ((gg) this).field_m = param5;
-        ((gg) this).field_o = param9;
-        ((gg) this).field_p = param4;
+        this.field_r = new Random();
+        this.field_q = new int[255];
+        this.field_j = param1;
+        this.field_k = param7;
+        this.field_g = param8;
+        this.field_a = param0;
+        this.field_c = param2;
+        this.field_e = param6;
+        this.field_h = param3;
+        this.field_m = param5;
+        this.field_o = param9;
+        this.field_p = param4;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        field_f = new int[256];
-        field_n = new int[]{1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0};
-        field_l = -1;
-        field_i = new int[]{1, 10, 4, 1};
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= 256) {
-            return;
-          } else {
-            var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (8 <= var2) {
-                field_f[var1] = var0;
-                var1++;
-                continue L0;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            field_f = new int[256];
+            field_n = new int[]{1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0};
+            field_l = -1;
+            field_i = new int[]{1, 10, 4, 1};
+            var1 = 0;
+            L0: while (true) {
+              if (var1 >= 256) {
+                break $cfr$clinit;
               } else {
-                if ((var0 & 1) != 1) {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var0 = var0 >>> 1 ^ -306674912;
-                  var2++;
-                  continue L1;
+                var0 = var1;
+                var2 = 0;
+                L1: while (true) {
+                  if (8 <= var2) {
+                    field_f[var1] = var0;
+                    var1++;
+                    continue L0;
+                  } else {
+                    if ((var0 & 1 ^ -1) != -2) {
+                      var0 = var0 >>> 1;
+                      var2++;
+                      continue L1;
+                    } else {
+                      var0 = var0 >>> -1946992639 ^ -306674912;
+                      var2++;
+                      continue L1;
+                    }
+                  }
                 }
               }
             }
-          }
         }
     }
 }

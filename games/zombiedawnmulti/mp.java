@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 abstract class mp {
     static ak field_b;
     static String field_a;
@@ -20,6 +18,7 @@ abstract class mp {
         int stackIn_7_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_10_0 = 0;
@@ -28,23 +27,23 @@ abstract class mp {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var3 = ((mp) this).field_e;
+            var3 = this.field_e;
             if (param0 == 52224) {
               var4 = 0;
               L1: while (true) {
                 L2: {
                   L3: {
-                    if (~var4 <= ~var3.length) {
+                    if ((var4 ^ -1) <= (var3.length ^ -1)) {
                       break L3;
                     } else {
                       var5 = var3[var4];
-                      stackOut_6_0 = ~param1;
+                      stackOut_6_0 = param1 ^ -1;
                       stackIn_14_0 = stackOut_6_0;
                       stackIn_7_0 = stackOut_6_0;
                       if (var6 != 0) {
                         break L2;
                       } else {
-                        if (stackIn_7_0 <= ~var5.field_e.length) {
+                        if (stackIn_7_0 <= (var5.field_e.length ^ -1)) {
                           param1 = param1 - (var5.field_e.length - 1);
                           var4++;
                           if (var6 == 0) {
@@ -55,7 +54,8 @@ abstract class mp {
                         } else {
                           stackOut_10_0 = var5.field_e[param1];
                           stackIn_11_0 = stackOut_10_0;
-                          return stackIn_11_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
                       }
                     }
@@ -64,23 +64,34 @@ abstract class mp {
                   stackIn_14_0 = stackOut_13_0;
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
               stackOut_2_0 = -3;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3_ref, "mp.C(" + param0 + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) var3_ref), "mp.C(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_14_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_14_0;
+          } else {
+            return stackIn_11_0;
+          }
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
+        int fieldTemp$0 = 0;
         int var4_int = 0;
         try {
             pm.field_R.field_j = param0;
@@ -92,13 +103,13 @@ abstract class mp {
             pm.field_R.a(param3, (byte) -128);
             pm.field_R.a(tp.field_v, -2628, gn.field_L);
             ma.field_a.b((byte) -35, 18);
-            int fieldTemp$0 = ma.field_a.field_j + 1;
+            fieldTemp$0 = ma.field_a.field_j + 1;
             ma.field_a.field_j = ma.field_a.field_j + 1;
             var4_int = fieldTemp$0;
             ma.field_a.a(pm.field_R.field_m, pm.field_R.field_j, 0, 126);
             ma.field_a.e(72, -var4_int + ma.field_a.field_j);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "mp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "mp.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -120,11 +131,11 @@ abstract class mp {
             }
             L2: {
               L3: {
-                if (((mp) this).field_e == null) {
+                if (this.field_e == null) {
                   break L3;
                 } else {
-                  if (((mp) this).field_e.length > 0) {
-                    stackOut_9_0 = ((mp) this).field_e[((mp) this).field_e.length - 1].field_h - ((mp) this).field_e[0].field_d;
+                  if (-1 > (this.field_e.length ^ -1)) {
+                    stackOut_9_0 = this.field_e[this.field_e.length - 1].field_h - this.field_e[0].field_d;
                     stackIn_10_0 = stackOut_9_0;
                     break L2;
                   } else {
@@ -141,12 +152,13 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "mp.A(" + param0 + ')');
+          throw fa.a((Throwable) ((Object) var2), "mp.A(" + param0 + ')');
         }
         return stackIn_10_0;
     }
 
     final static ml a(int param0, boolean param1, byte param2) {
+        ml discarded$1 = null;
         RuntimeException var3 = null;
         int var3_int = 0;
         th var4 = null;
@@ -233,7 +245,7 @@ abstract class mp {
               stackIn_2_2 = stackOut_1_2;
               stackIn_2_3 = stackOut_1_3;
               if (eg.field_B.field_Jb != vc.field_d) {
-                stackOut_4_0 = (tq) (Object) stackIn_4_0;
+                stackOut_4_0 = (tq) ((Object) stackIn_4_0);
                 stackOut_4_1 = stackIn_4_1;
                 stackOut_4_2 = stackIn_4_2;
                 stackOut_4_3 = stackIn_4_3;
@@ -245,7 +257,7 @@ abstract class mp {
                 stackIn_5_4 = stackOut_4_4;
                 break L1;
               } else {
-                stackOut_2_0 = (tq) (Object) stackIn_2_0;
+                stackOut_2_0 = (tq) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = stackIn_2_2;
                 stackOut_2_3 = stackIn_2_3;
@@ -285,10 +297,10 @@ abstract class mp {
                 break L2;
               } else {
                 pa.field_O.field_Z = true;
-                dp.field_b.field_wb = vl.a(kg.field_m, new String[1], 2);
+                dp.field_b.field_wb = vl.a(kg.field_m, new String[]{ta.field_ob}, 2);
                 eg.field_B.field_Jb.field_Jb.field_wb = null;
                 var6 = null;
-                var7 = (ml) (Object) var4.c(42);
+                var7 = (ml) ((Object) var4.c(42));
                 L5: while (true) {
                   L6: {
                     L7: {
@@ -353,7 +365,7 @@ abstract class mp {
                             if (var7.field_Kb == null) {
                               break L12;
                             } else {
-                              if (!var7.field_Kb.equals((Object) (Object) "")) {
+                              if (!var7.field_Kb.equals("")) {
                                 var7.field_Gb.field_rb = pa.field_T;
                                 var7.field_Gb.field_ob = var11;
                                 var7.field_Gb.a(jk.field_f, var9, 3 + pa.field_T.field_z, 0, -3344);
@@ -388,13 +400,13 @@ abstract class mp {
                             stackIn_34_0 = stackOut_31_0;
                             stackIn_32_0 = stackOut_31_0;
                             if (0 >= var14) {
-                              stackOut_34_0 = (cj) (Object) stackIn_34_0;
+                              stackOut_34_0 = (cj) ((Object) stackIn_34_0);
                               stackOut_34_1 = var7.field_Hb;
                               stackIn_35_0 = stackOut_34_0;
                               stackIn_35_1 = stackOut_34_1;
                               break L14;
                             } else {
-                              stackOut_32_0 = (cj) (Object) stackIn_32_0;
+                              stackOut_32_0 = (cj) ((Object) stackIn_32_0);
                               stackOut_32_1 = fm.a(var7.field_Ib.field_yb, var7.field_Hb, var14);
                               stackIn_35_0 = stackOut_32_0;
                               stackIn_35_1 = stackOut_32_1;
@@ -408,13 +420,13 @@ abstract class mp {
                             stackIn_38_0 = stackOut_35_0;
                             stackIn_36_0 = stackOut_35_0;
                             if (var7.field_Nb != null) {
-                              stackOut_38_0 = (cj) (Object) stackIn_38_0;
+                              stackOut_38_0 = (cj) ((Object) stackIn_38_0);
                               stackOut_38_1 = var7.field_Nb;
                               stackIn_39_0 = stackOut_38_0;
                               stackIn_39_1 = stackOut_38_1;
                               break L15;
                             } else {
-                              stackOut_36_0 = (cj) (Object) stackIn_36_0;
+                              stackOut_36_0 = (cj) ((Object) stackIn_36_0);
                               stackOut_36_1 = pi.field_c;
                               stackIn_39_0 = stackOut_36_0;
                               stackIn_39_1 = stackOut_36_1;
@@ -424,7 +436,7 @@ abstract class mp {
                           L16: {
                             stackIn_39_0.field_wb = stackIn_39_1;
                             var7.field_Fb.a(jk.field_f, var9, 80, -80 + var7.field_zb, -3344);
-                            if (var7.field_Ib.field_wb.equals((Object) (Object) var7.field_Hb)) {
+                            if (var7.field_Ib.field_wb.equals(var7.field_Hb)) {
                               stackOut_42_0 = 0;
                               stackIn_43_0 = stackOut_42_0;
                               break L16;
@@ -446,7 +458,7 @@ abstract class mp {
                           }
                           L18: {
                             if (var8 != 0) {
-                              eg.field_B.field_Ib.a(2, (cj) (Object) var7, 1300, (cj) var6);
+                              eg.field_B.field_Ib.a(2, var7, 1300, (cj) (var6));
                               break L18;
                             } else {
                               break L18;
@@ -487,7 +499,7 @@ abstract class mp {
                               }
                               L23: {
                                 var16 = var7.field_Hb;
-                                ve.a(0L, param2 + 315, (String) null, eg.field_B.field_Jb, var16, (cj) (Object) var7, -1, (int[]) null, -1);
+                                ve.a(0L, param2 + 315, (String) null, eg.field_B.field_Jb, var16, var7, -1, (int[]) null, -1);
                                 if (var7.field_Nb == null) {
                                   break L23;
                                 } else {
@@ -502,20 +514,20 @@ abstract class mp {
                                           break L24;
                                         } else {
                                           var17 = pk.field_b;
-                                          var18 = vl.a(jk.field_i, new String[1], 2);
+                                          var18 = vl.a(jk.field_i, new String[]{var16}, 2);
                                           var17.field_j.a((byte) -118, var18, 8);
                                           break L24;
                                         }
                                       }
                                       var17 = pk.field_b;
-                                      var18 = vl.a(field_c, new String[1], param2 ^ -117);
+                                      var18 = vl.a(field_c, new String[]{var16}, param2 ^ -117);
                                       var17.field_j.a((byte) -118, var18, 18);
                                       break L23;
                                     }
                                   }
                                 }
                               }
-                              var5 = (Object) (Object) var7;
+                              var5 = var7;
                               if (var19 == 0) {
                                 break L19;
                               } else {
@@ -525,8 +537,8 @@ abstract class mp {
                             ui.field_j = var7.field_Kb;
                             break L19;
                           }
-                          var6 = (Object) (Object) var7;
-                          var7 = (ml) (Object) var4.b(6);
+                          var6 = var7;
+                          var7 = (ml) ((Object) var4.b(6));
                           if (var19 == 0) {
                             continue L5;
                           } else {
@@ -535,7 +547,7 @@ abstract class mp {
                         }
                       }
                     }
-                    if (eg.field_B.field_Gb.field_T == 0) {
+                    if (-1 == (eg.field_B.field_Gb.field_T ^ -1)) {
                       break L6;
                     } else {
                       gi.field_i = new dk(eg.field_B.field_Gb.field_w, eg.field_B.field_Gb.field_qb, eg.field_B.field_Gb.field_zb, eg.field_B.field_Gb.field_z, ud.field_Z, kd.field_a, vo.field_m, vo.field_m);
@@ -544,7 +556,7 @@ abstract class mp {
                     }
                   }
                   L25: {
-                    if (eg.field_B.field_Hb.field_T == 0) {
+                    if ((eg.field_B.field_Hb.field_T ^ -1) == -1) {
                       break L25;
                     } else {
                       gi.field_i = new dk(eg.field_B.field_Hb.field_w, eg.field_B.field_Hb.field_qb, eg.field_B.field_Hb.field_zb, eg.field_B.field_Hb.field_z, fe.field_Q, kd.field_a, vo.field_m, vo.field_m);
@@ -560,7 +572,7 @@ abstract class mp {
               if (param2 == -119) {
                 break L26;
               } else {
-                ml discarded$1 = mp.a(81, true, (byte) -50);
+                discarded$1 = mp.a(81, true, (byte) -50);
                 break L26;
               }
             }
@@ -571,9 +583,9 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "mp.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fa.a((Throwable) ((Object) var3), "mp.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return (ml) (Object) stackIn_101_0;
+        return (ml) ((Object) stackIn_101_0);
     }
 
     final int a(String param0, int param1, int param2, int param3) {
@@ -597,6 +609,7 @@ abstract class mp {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_3_1 = 0;
@@ -622,7 +635,7 @@ abstract class mp {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~var8 <= ~var7) {
+                  if ((var8 ^ -1) <= (var7 ^ -1)) {
                     break L3;
                   } else {
                     var9 = param0.charAt(var8);
@@ -681,18 +694,20 @@ abstract class mp {
                   }
                 }
                 stackOut_21_0 = -1;
-                stackOut_21_1 = ~var5_int;
+                stackOut_21_1 = var5_int ^ -1;
                 stackIn_22_0 = stackOut_21_0;
                 stackIn_22_1 = stackOut_21_1;
                 break L2;
               }
               if (stackIn_22_0 > stackIn_22_1) {
-                stackOut_24_0 = (param3 + -param2 << 8) / var5_int;
+                stackOut_24_0 = (param3 + -param2 << 431260488) / var5_int;
                 stackIn_25_0 = stackOut_24_0;
-                return stackIn_25_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 stackOut_26_0 = 0;
                 stackIn_27_0 = stackOut_26_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -701,23 +716,23 @@ abstract class mp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var5;
+            stackOut_28_0 = (RuntimeException) (var5);
             stackOut_28_1 = new StringBuilder().append("mp.F(");
             stackIn_31_0 = stackOut_28_0;
             stackIn_31_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L7;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_32_0 = stackOut_29_0;
               stackIn_32_1 = stackOut_29_1;
@@ -725,12 +740,17 @@ abstract class mp {
               break L7;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_27_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_25_0;
+        } else {
+          return stackIn_27_0;
+        }
     }
 
     final int a(byte param0, int param1) {
+        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         td var4 = null;
@@ -738,6 +758,7 @@ abstract class mp {
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_12_0 = 0;
@@ -749,7 +770,7 @@ abstract class mp {
               if (param0 == -126) {
                 break L1;
               } else {
-                int discarded$2 = ((mp) this).b(-6);
+                discarded$2 = this.b(-6);
                 break L1;
               }
             }
@@ -757,20 +778,21 @@ abstract class mp {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~((mp) this).field_e.length >= ~var3_int) {
+                  if ((this.field_e.length ^ -1) >= (var3_int ^ -1)) {
                     break L4;
                   } else {
-                    var4 = ((mp) this).field_e[var3_int];
-                    stackOut_6_0 = ~param1;
+                    var4 = this.field_e[var3_int];
+                    stackOut_6_0 = param1 ^ -1;
                     stackIn_16_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var5 != 0) {
                       break L3;
                     } else {
-                      if (stackIn_7_0 > ~var4.field_e.length) {
+                      if (stackIn_7_0 > (var4.field_e.length ^ -1)) {
                         stackOut_12_0 = var3_int;
                         stackIn_13_0 = stackOut_12_0;
-                        return stackIn_13_0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
                         param1 = param1 - (var4.field_e.length + -1);
                         var3_int++;
@@ -783,19 +805,24 @@ abstract class mp {
                     }
                   }
                 }
-                stackOut_15_0 = ((mp) this).field_e.length;
+                stackOut_15_0 = this.field_e.length;
                 stackIn_16_0 = stackOut_15_0;
                 break L3;
               }
+              decompiledRegionSelector0 = 0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "mp.E(" + param0 + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) var3), "mp.E(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_16_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_16_0;
+        } else {
+          return stackIn_13_0;
+        }
     }
 
     public static void a(int param0) {
@@ -808,7 +835,7 @@ abstract class mp {
             field_b = null;
             field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "mp.H(" + param0 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "mp.H(" + param0 + ')');
         }
     }
 
@@ -831,16 +858,16 @@ abstract class mp {
               if (param0 >= 20) {
                 break L1;
               } else {
-                ((mp) this).field_e = null;
+                this.field_e = (td[]) null;
                 break L1;
               }
             }
             L2: {
-              if (null != ((mp) this).field_e) {
-                var3 = ((mp) this).field_e;
+              if (null != this.field_e) {
+                var3 = this.field_e;
                 var4 = 0;
                 L3: while (true) {
-                  if (~var3.length >= ~var4) {
+                  if ((var3.length ^ -1) >= (var4 ^ -1)) {
                     break L2;
                   } else {
                     L4: {
@@ -876,7 +903,7 @@ abstract class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "mp.B(" + param0 + ')');
+          throw fa.a((Throwable) ((Object) var2), "mp.B(" + param0 + ')');
         }
         return stackIn_16_0;
     }
@@ -896,6 +923,7 @@ abstract class mp {
         int stackIn_34_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_39_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_19_0 = 0;
         int stackOut_23_0 = 0;
@@ -909,29 +937,30 @@ abstract class mp {
         try {
           L0: {
             L1: {
-              if (null == ((mp) this).field_e) {
+              if (null == this.field_e) {
                 break L1;
               } else {
-                if (((mp) this).field_e.length == 0) {
+                if ((this.field_e.length ^ -1) == -1) {
                   break L1;
                 } else {
-                  if (param2 >= ((mp) this).field_e[0].field_d) {
+                  if (param2 >= this.field_e[0].field_d) {
                     if (param1 <= 0) {
-                      if (((mp) this).field_e[((mp) this).field_e.length - 1].field_h >= param2) {
-                        if (1 == ((mp) this).field_e.length) {
-                          stackOut_19_0 = ((mp) this).field_e[0].a(false, param0);
+                      if (this.field_e[this.field_e.length - 1].field_h >= param2) {
+                        if (1 == this.field_e.length) {
+                          stackOut_19_0 = this.field_e[0].a(false, param0);
                           stackIn_20_0 = stackOut_19_0;
-                          return stackIn_20_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           var4_int = 0;
                           var5 = 0;
                           L2: while (true) {
                             L3: {
                               L4: {
-                                if (~var5 <= ~((mp) this).field_e.length) {
+                                if ((var5 ^ -1) <= (this.field_e.length ^ -1)) {
                                   break L4;
                                 } else {
-                                  var6 = ((mp) this).field_e[var5];
+                                  var6 = this.field_e[var5];
                                   stackOut_23_0 = param2;
                                   stackIn_39_0 = stackOut_23_0;
                                   stackIn_24_0 = stackOut_23_0;
@@ -942,18 +971,20 @@ abstract class mp {
                                       if (stackIn_24_0 < var6.field_d) {
                                         break L5;
                                       } else {
-                                        if (~param2 < ~var6.field_h) {
+                                        if ((param2 ^ -1) < (var6.field_h ^ -1)) {
                                           break L5;
                                         } else {
                                           var7 = var6.a(false, param0);
                                           if (-1 == var7) {
                                             stackOut_33_0 = -1;
                                             stackIn_34_0 = stackOut_33_0;
-                                            return stackIn_34_0;
+                                            decompiledRegionSelector0 = 5;
+                                            break L0;
                                           } else {
                                             stackOut_35_0 = var4_int - -var7;
                                             stackIn_36_0 = stackOut_35_0;
-                                            return stackIn_36_0;
+                                            decompiledRegionSelector0 = 6;
+                                            break L0;
                                           }
                                         }
                                       }
@@ -972,18 +1003,21 @@ abstract class mp {
                               stackIn_39_0 = stackOut_38_0;
                               break L3;
                             }
+                            decompiledRegionSelector0 = 4;
                             break L0;
                           }
                         }
                       } else {
                         stackOut_14_0 = -1;
                         stackIn_15_0 = stackOut_14_0;
-                        return stackIn_15_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     } else {
                       stackOut_11_0 = -76;
                       stackIn_12_0 = stackOut_11_0;
-                      return stackIn_12_0;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
                   } else {
                     break L1;
@@ -993,21 +1027,42 @@ abstract class mp {
             }
             stackOut_8_0 = -1;
             stackIn_9_0 = stackOut_8_0;
-            return stackIn_9_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var4, "mp.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw fa.a((Throwable) ((Object) var4), "mp.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_39_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_12_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_15_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_20_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_39_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_34_0;
+                  } else {
+                    return stackIn_36_0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for <%0> to start the game...";
         field_c = "Send private Quick Chat to <%0>";
         field_b = new ak();

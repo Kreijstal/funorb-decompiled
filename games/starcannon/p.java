@@ -25,11 +25,19 @@ final class p {
             fb.field_r = 11;
             var1_int = 0;
             L1: while (true) {
-              if (var1_int >= 256) {
+              if ((var1_int ^ -1) <= -257) {
                 var5 = 256;
                 var1_int = var5;
                 L2: while (true) {
                   if (sd.field_e.length <= var5) {
+                    L3: {
+                      if (param0 == -68) {
+                        break L3;
+                      } else {
+                        field_g = 120;
+                        break L3;
+                      }
+                    }
                     break L0;
                   } else {
                     sd.field_e[var5] = 255;
@@ -48,7 +56,7 @@ final class p {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "p.B(" + -68 + ')');
+          throw sd.a((Throwable) ((Object) var1), "p.B(" + param0 + ')');
         }
     }
 
@@ -58,6 +66,9 @@ final class p {
         field_e = null;
         field_d = null;
         field_b = null;
+        if (param0 != 11) {
+            p.a((byte) -118);
+        }
     }
 
     public final String toString() {
@@ -65,10 +76,6 @@ final class p {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "SPACE or CTRL   Fire Guns";
         field_a = new mj("email");
         field_e = "Collect <img=0> to power up your lasers";

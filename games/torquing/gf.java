@@ -11,7 +11,7 @@ abstract class gf extends eq implements wm {
 
     public final void a(tk param0, byte param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        tk var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -34,8 +34,8 @@ abstract class gf extends eq implements wm {
               if (param1 <= -122) {
                 break L1;
               } else {
-                var4 = null;
-                ((gf) this).a((tk) null, (byte) 107);
+                var4 = (tk) null;
+                this.a((tk) null, (byte) 107);
                 break L1;
               }
             }
@@ -45,23 +45,23 @@ abstract class gf extends eq implements wm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("gf.I(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -69,35 +69,35 @@ abstract class gf extends eq implements wm {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final String b(int param0) {
         if (param0 != 0) {
-            return null;
+            return (String) null;
         }
-        return ((gf) this).a((byte) -121, ((gf) this).field_i.field_m);
+        return this.a((byte) -121, this.field_i.field_m);
     }
 
     final cd c(int param0) {
         if (param0 != 0) {
-            return null;
+            return (cd) null;
         }
-        return ((gf) this).a(111, ((gf) this).field_i.field_m);
+        return this.a(111, this.field_i.field_m);
     }
 
     gf(tk param0) {
         try {
-            ((gf) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(int param0, tk param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        tk var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -117,12 +117,12 @@ abstract class gf extends eq implements wm {
         try {
           L0: {
             L1: {
-              ((gf) this).a(true);
+              this.a(true);
               if (param0 >= 3) {
                 break L1;
               } else {
-                var4 = null;
-                ((gf) this).a((tk) null, (byte) 9);
+                var4 = (tk) null;
+                this.a((tk) null, (byte) 9);
                 break L1;
               }
             }
@@ -132,23 +132,23 @@ abstract class gf extends eq implements wm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("gf.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -156,7 +156,7 @@ abstract class gf extends eq implements wm {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ abstract class gf extends eq implements wm {
     public static void d(int param0) {
         field_j = null;
         if (param0 != 0) {
-            field_j = null;
+            field_j = (qd) null;
         }
     }
 
@@ -178,8 +178,8 @@ abstract class gf extends eq implements wm {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0) {
-          if (null != ((gf) this).field_i.field_m) {
-            if (0 == ((gf) this).field_i.field_m.length()) {
+          if (null != this.field_i.field_m) {
+            if (0 == this.field_i.field_m.length()) {
               return true;
             } else {
               return false;
@@ -191,11 +191,11 @@ abstract class gf extends eq implements wm {
           }
         } else {
           field_f = -87L;
-          if (null == ((gf) this).field_i.field_m) {
+          if (null == this.field_i.field_m) {
             return true;
           } else {
             L0: {
-              if (0 != ((gf) this).field_i.field_m.length()) {
+              if (0 != this.field_i.field_m.length()) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -211,10 +211,6 @@ abstract class gf extends eq implements wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new qd();
     }
 }

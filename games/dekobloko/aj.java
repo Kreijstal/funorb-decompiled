@@ -12,6 +12,9 @@ final class aj {
         field_b = null;
         field_d = null;
         field_e = null;
+        if (param0 != 0) {
+            return;
+        }
         field_a = null;
         field_c = null;
     }
@@ -137,6 +140,9 @@ final class aj {
 
     final static void a(int param0) {
         pk.field_r = 0;
+        if (param0 != -1045) {
+            return;
+        }
         v.b(0);
     }
 

@@ -11,6 +11,6 @@ public class mk {
     int field_g;
 
     mk() {
-        ((mk) this).field_f = 0;
+        this.field_f = 0;
     }
 }

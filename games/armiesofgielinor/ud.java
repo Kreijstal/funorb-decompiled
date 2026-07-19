@@ -10,39 +10,66 @@ final class ud extends sf implements he {
     private fw field_bb;
 
     final static void b(int param0, boolean param1, int param2, int param3) {
-        L0: {
-          if (param2 != 0) {
-            break L0;
-          } else {
-            if (param0 != ol.field_B) {
-              ol.field_B = param0;
-              kr.field_J = true;
-              ae.a(896, param3);
+        if (!param1) {
+          L0: {
+            if (param2 != 0) {
               break L0;
             } else {
-              if (param2 == 1) {
+              if (param0 != ol.field_B) {
+                ol.field_B = param0;
+                kr.field_J = true;
+                ae.a(896, param3);
+                break L0;
+              } else {
                 L1: {
-                  if (va.field_D != param0) {
-                    va.field_D = param0;
-                    kr.field_J = true;
-                    ae.a(896, param3);
+                  if (param2 != 1) {
                     break L1;
                   } else {
-                    break L1;
+                    if (va.field_D != param0) {
+                      va.field_D = param0;
+                      kr.field_J = true;
+                      ae.a(896, param3);
+                      break L1;
+                    } else {
+                      if (2 == param2) {
+                        if (cd.field_c != param0) {
+                          cd.field_c = param0;
+                          kr.field_J = true;
+                          ae.a(896, param3);
+                          return;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        return;
+                      }
+                    }
                   }
                 }
                 if (2 == param2) {
-                  if (cd.field_c != param0) {
+                  if (cd.field_c == param0) {
+                    return;
+                  } else {
                     cd.field_c = param0;
                     kr.field_J = true;
                     ae.a(896, param3);
-                    return;
-                  } else {
                     return;
                   }
                 } else {
                   return;
                 }
+              }
+            }
+          }
+          L2: {
+            if (param2 != 1) {
+              break L2;
+            } else {
+              if (va.field_D != param0) {
+                va.field_D = param0;
+                kr.field_J = true;
+                ae.a(896, param3);
+                break L2;
               } else {
                 if (2 == param2) {
                   if (cd.field_c == param0) {
@@ -59,43 +86,110 @@ final class ud extends sf implements he {
               }
             }
           }
-        }
-        L2: {
-          if (param2 != 1) {
-            break L2;
-          } else {
-            if (va.field_D != param0) {
-              va.field_D = param0;
+          if (2 == param2) {
+            if (cd.field_c != param0) {
+              cd.field_c = param0;
               kr.field_J = true;
               ae.a(896, param3);
-              break L2;
+              return;
             } else {
-              if (2 == param2) {
-                if (cd.field_c == param0) {
-                  return;
+              return;
+            }
+          } else {
+            return;
+          }
+        } else {
+          field_X = (wk[]) null;
+          if (param2 == 0) {
+            L3: {
+              if (param0 != ol.field_B) {
+                ol.field_B = param0;
+                kr.field_J = true;
+                ae.a(896, param3);
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            if (param2 == 1) {
+              L4: {
+                if (va.field_D != param0) {
+                  va.field_D = param0;
+                  kr.field_J = true;
+                  ae.a(896, param3);
+                  break L4;
                 } else {
+                  break L4;
+                }
+              }
+              if (2 == param2) {
+                if (cd.field_c != param0) {
                   cd.field_c = param0;
                   kr.field_J = true;
                   ae.a(896, param3);
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              if (2 == param2) {
+                if (cd.field_c != param0) {
+                  cd.field_c = param0;
+                  kr.field_J = true;
+                  ae.a(896, param3);
+                  return;
+                } else {
                   return;
                 }
               } else {
                 return;
               }
             }
-          }
-        }
-        if (2 == param2) {
-          if (cd.field_c == param0) {
-            return;
           } else {
-            cd.field_c = param0;
-            kr.field_J = true;
-            ae.a(896, param3);
-            return;
+            L5: {
+              if (param2 != 1) {
+                break L5;
+              } else {
+                if (va.field_D != param0) {
+                  va.field_D = param0;
+                  kr.field_J = true;
+                  ae.a(896, param3);
+                  break L5;
+                } else {
+                  L6: {
+                    if (2 != param2) {
+                      break L6;
+                    } else {
+                      if (cd.field_c == param0) {
+                        break L6;
+                      } else {
+                        cd.field_c = param0;
+                        kr.field_J = true;
+                        ae.a(896, param3);
+                        break L6;
+                      }
+                    }
+                  }
+                  return;
+                }
+              }
+            }
+            if (2 == param2) {
+              if (cd.field_c == param0) {
+                return;
+              } else {
+                cd.field_c = param0;
+                kr.field_J = true;
+                ae.a(896, param3);
+                return;
+              }
+            } else {
+              return;
+            }
           }
-        } else {
-          return;
         }
     }
 
@@ -140,14 +234,14 @@ final class ud extends sf implements he {
         try {
           L0: {
             var4 = new fw(param0, param1);
-            var4.field_k = (kh) (Object) new nu();
-            var5 = ((ud) this).field_w + -6;
-            ((ud) this).field_w = ((ud) this).field_w + 38;
-            var4.a(15, -16 + (-14 + ((ud) this).field_l), var5, 8192, 30);
-            ((ud) this).a((byte) 10, (kb) (Object) var4);
-            ((ud) this).e(0);
-            var6 = 63;
-            stackOut_0_0 = (fw) var4;
+            var4.field_k = (kh) ((Object) new nu());
+            var5 = this.field_w + -6;
+            this.field_w = this.field_w + 38;
+            var4.a(15, -16 + (-14 + this.field_l), var5, 8192, 30);
+            this.a((byte) 10, (kb) (var4));
+            this.e(0);
+            var6 = -126 / ((-6 - param2) / 40);
+            stackOut_0_0 = (fw) (var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -155,23 +249,23 @@ final class ud extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_0 = (RuntimeException) (var4_ref);
             stackOut_2_1 = new StringBuilder().append("ud.E(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -180,23 +274,23 @@ final class ud extends sf implements he {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -204,7 +298,7 @@ final class ud extends sf implements he {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 93 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -250,43 +344,43 @@ final class ud extends sf implements he {
               var3 = null;
               if (param1 != hm.field_h) {
                 if (mp.field_Mb == param1) {
-                  ((ud) this).field_w = ((ud) this).field_w + 10;
-                  var3 = (Object) (Object) am.field_y;
+                  this.field_w = this.field_w + 10;
+                  var3 = am.field_y;
                   if (!pr.b(-108)) {
                     break L1;
                   } else {
-                    ((ud) this).field_w = ((ud) this).field_w + 20;
-                    var3 = (Object) (Object) field_W;
+                    this.field_w = this.field_w + 20;
+                    var3 = field_W;
                     break L1;
                   }
                 } else {
                   if (param1 != tn.field_cb) {
                     break L1;
                   } else {
-                    ((ud) this).field_w = ((ud) this).field_w + 30;
-                    var3 = (Object) (Object) hb.field_a;
+                    this.field_w = this.field_w + 30;
+                    var3 = hb.field_a;
                     break L1;
                   }
                 }
               } else {
-                var3 = (Object) (Object) tl.field_a;
+                var3 = tl.field_a;
                 break L1;
               }
             }
-            var4 = new kb((String) var3, (qo) null);
+            var4 = new kb((String) (var3), (qo) null);
             var4.field_B = 0;
             var4.field_p = 50;
-            var4.field_l = ((ud) this).field_l;
+            var4.field_l = this.field_l;
             var4.field_w = 80;
-            var4.field_k = (kh) (Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
-            ((ud) this).a((byte) 10, var4);
-            ((ud) this).field_bb = this.a(pd.field_f, (qo) this, 93);
+            var4.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+            this.a((byte) 10, var4);
+            this.field_bb = this.a(pd.field_f, (qo) (this), 93);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_10_0 = var3;
             stackOut_10_1 = new StringBuilder().append("ud.<init>(");
             stackIn_12_0 = stackOut_10_0;
@@ -295,7 +389,7 @@ final class ud extends sf implements he {
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
@@ -303,7 +397,7 @@ final class ud extends sf implements he {
               break L2;
             } else {
               stackOut_11_0 = stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -320,7 +414,7 @@ final class ud extends sf implements he {
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
               stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
@@ -328,7 +422,7 @@ final class ud extends sf implements he {
               break L3;
             } else {
               stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -336,7 +430,7 @@ final class ud extends sf implements he {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
@@ -364,11 +458,11 @@ final class ud extends sf implements he {
               if (param1 == 11) {
                 break L1;
               } else {
-                field_Z = null;
+                field_Z = (String) null;
                 break L1;
               }
             }
-            if (param4 != ((ud) this).field_bb) {
+            if (param4 != this.field_bb) {
               break L0;
             } else {
               this.i((byte) 60);
@@ -379,23 +473,23 @@ final class ud extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var6;
+            stackOut_5_0 = (RuntimeException) (var6);
             stackOut_5_1 = new StringBuilder().append("ud.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -403,7 +497,7 @@ final class ud extends sf implements he {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -427,17 +521,21 @@ final class ud extends sf implements he {
     }
 
     private final void i(byte param0) {
-        if (!(((ud) this).field_L)) {
+        if (param0 != 60) {
+            ud.n(-98);
+            if (!(this.field_L)) {
+                return;
+            }
+            this.field_L = false;
             return;
         }
-        ((ud) this).field_L = false;
+        if (!(this.field_L)) {
+            return;
+        }
+        this.field_L = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Y = "This unit has an attack range of <%0>";
         field_Z = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
         field_W = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";

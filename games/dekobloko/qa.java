@@ -12,6 +12,9 @@ final class qa extends wk {
     static float[] field_r;
 
     final static w d(int param0) {
+        if (param0 != 5) {
+            return (w) null;
+        }
         return tb.field_b.field_Ob;
     }
 
@@ -27,13 +30,13 @@ final class qa extends wk {
         var2.a(true, cd.field_m.field_mc);
         if (param1 != 1850462342) {
           qa.e(-25);
-          var4 = (cd.field_m.field_qc << 6) + cd.field_m.field_Wb;
+          var4 = (cd.field_m.field_qc << 1850462342) + cd.field_m.field_Wb;
           var2.a(true, var4);
           var2.a(false, cd.field_m.field_kc.length, cd.field_m.field_kc, 0);
           var2.b(var2.field_n + -var3, true);
           return;
         } else {
-          var4 = (cd.field_m.field_qc << 6) + cd.field_m.field_Wb;
+          var4 = (cd.field_m.field_qc << 1850462342) + cd.field_m.field_Wb;
           var2.a(true, var4);
           var2.a(false, cd.field_m.field_kc.length, cd.field_m.field_kc, 0);
           var2.b(var2.field_n + -var3, true);

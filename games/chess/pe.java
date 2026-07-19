@@ -16,15 +16,11 @@ final class pe {
         field_c = null;
         field_b = null;
         field_e = null;
-        int var1 = 53;
+        int var1 = 106 / ((param0 - -63) / 55);
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pe.A(";
         field_b = "No spectators";
         field_e = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";

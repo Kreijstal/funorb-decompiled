@@ -66,17 +66,13 @@ public class fd {
 
     public static File a(String param0, byte param1) {
         if (param1 != 115) {
-            field_c = null;
+            field_c = (String) null;
             return fd.a(param0, field_b, field_c, 66);
         }
         return fd.a(param0, field_b, field_c, 66);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_a = new Hashtable(16);
     }

@@ -34,7 +34,7 @@ final class bj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 55;
+            var2_int = -110 / ((param1 - 15) / 48);
             stackOut_0_0 = ve.a(-10537, param0, param0.length, 0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -43,23 +43,23 @@ final class bj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("bj.A(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -67,27 +67,35 @@ final class bj {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -103 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
 
     public static void a(int param0) {
+        String discarded$2 = null;
+        CharSequence[] var2 = null;
         field_g = null;
         field_e = null;
         field_c = null;
         field_f = null;
         field_h = null;
-        field_a = null;
-        field_d = null;
-        field_b = null;
+        if (param0 != 0) {
+          var2 = (CharSequence[]) null;
+          discarded$2 = bj.a((CharSequence[]) null, (byte) 24);
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "From only <%0>/month";
         field_h = "Highscores";
         field_a = "25000pts";

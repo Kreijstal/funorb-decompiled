@@ -39,11 +39,11 @@ abstract class ka {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2 = new ana(param1, (ksa) (Object) param1);
-            cg.field_p.b(-10258, (ksa) (Object) var2);
+            var2 = new ana(param1, param1);
+            cg.field_p.b(-10258, var2);
             var3 = 119 / ((param0 - 18) / 37);
-            kpb.field_q.b((f) (Object) param1);
-            stackOut_0_0 = (ana) var2;
+            kpb.field_q.b(param1);
+            stackOut_0_0 = (ana) (var2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -51,23 +51,23 @@ abstract class ka {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_0 = (RuntimeException) (var2_ref);
             stackOut_2_1 = new StringBuilder().append("ka.A(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -75,7 +75,7 @@ abstract class ka {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }

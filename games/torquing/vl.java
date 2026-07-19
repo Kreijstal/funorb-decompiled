@@ -19,14 +19,14 @@ final class vl implements Iterable {
             return;
         }
         try {
-            var5 = ((vl) this).field_a[(int)((long)(((vl) this).field_e + -1) & param0)];
+            var5 = this.field_a[(int)((long)(this.field_e + -1) & param0)];
             param2.field_h = var5.field_h;
             param2.field_e = var5;
             param2.field_h.field_e = param2;
             param2.field_e.field_h = param2;
             param2.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,33 +36,36 @@ final class vl implements Iterable {
         q var6 = null;
         int var7 = 0;
         var7 = Torquing.field_u;
-        var4 = ((vl) this).field_a[(int)((long)(((vl) this).field_e - 1) & param0)];
-        ((vl) this).field_b = var4.field_e;
+        var4 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
+        this.field_b = var4.field_e;
         var5 = -94 % ((24 - param1) / 41);
         L0: while (true) {
-          if (((vl) this).field_b != var4) {
-            if (((vl) this).field_b.field_f == param0) {
-              var6 = ((vl) this).field_b;
-              ((vl) this).field_b = ((vl) this).field_b.field_e;
+          if (this.field_b != var4) {
+            if (this.field_b.field_f == param0) {
+              var6 = this.field_b;
+              this.field_b = this.field_b.field_e;
               return var6;
             } else {
-              ((vl) this).field_b = ((vl) this).field_b.field_e;
+              this.field_b = this.field_b.field_e;
               continue L0;
             }
           } else {
-            ((vl) this).field_b = null;
+            this.field_b = null;
             return null;
           }
         }
     }
 
     public static void a(byte param0) {
+        if (param0 != 93) {
+            return;
+        }
         field_c = null;
         field_d = null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new dh((vl) this);
+        return (Iterator) ((Object) new dh((vl) (this)));
     }
 
     private vl() throws Throwable {
@@ -70,10 +73,6 @@ final class vl implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[255];
         field_c = null;
     }

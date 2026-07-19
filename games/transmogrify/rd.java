@@ -14,87 +14,88 @@ final class rd {
         RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
-        int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                rd.a(true);
+                break L1;
+              }
+            }
             ka.c();
             ug.field_c = new int[260];
             nd.field_m = 11;
             var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= 256) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
-                  if (var5 >= ug.field_c.length) {
-                    break L0;
+            L2: while (true) {
+              L3: {
+                if (var1_int >= 256) {
+                  var1_int = 256;
+                  break L3;
+                } else {
+                  var2 = 15.0;
+                  ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                  var1_int++;
+                  if (var4 != 0) {
+                    break L3;
                   } else {
-                    ug.field_c[var5] = 255;
-                    var5++;
                     continue L2;
                   }
                 }
-              } else {
-                var2 = 15.0;
-                ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L1;
+              }
+              L4: while (true) {
+                if (var1_int >= ug.field_c.length) {
+                  break L0;
+                } else {
+                  ug.field_c[var1_int] = 255;
+                  var1_int++;
+                  if (var4 == 0) {
+                    continue L4;
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "rd.A(" + true + ')');
+          throw ch.a((Throwable) ((Object) var1), "rd.A(" + param0 + ')');
         }
     }
 
     final static void a(String param0, boolean param1) {
         try {
             hi.a(-23883, param0);
-            jj.a(false, gb.field_c, 1702);
+            jj.a(param1, gb.field_c, 1702);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0) {
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
         if (param0 > 46) {
-          L0: {
-            L1: {
-              if (bi.field_L < 20) {
-                break L1;
-              } else {
-                if (!pa.b(-120)) {
-                  break L1;
+          if (bi.field_L >= 20) {
+            if (pa.b(-120)) {
+              if (db.field_d > 0) {
+                if (Transmogrify.d(false)) {
+                  return false;
                 } else {
-                  L2: {
-                    if (db.field_d <= 0) {
-                      break L2;
-                    } else {
-                      if (Transmogrify.d(false)) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  break L0;
+                  return true;
                 }
+              } else {
+                return false;
               }
+            } else {
+              return true;
             }
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            break L0;
+          } else {
+            return true;
           }
-          return stackIn_9_0 != 0;
         } else {
           return false;
         }
@@ -111,10 +112,6 @@ final class rd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new q();
         field_c = new int[]{0, 21, 21, 21, 8, 9, 10, 11, 11, 16, 17, 18, 17, 18, 17, 18, 17, 24, 25, 26, 27, 26, 25, 28, 29, 28, 25, 30, 24, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25, 26, 27, 26, 25, 28, 29, 28, 25};
         field_b = "Player names can be up to 12 letters, numbers and underscores";

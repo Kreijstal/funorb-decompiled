@@ -13,6 +13,10 @@ final class di {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
+        if (param0 != 0) {
+            nf[] var2 = (nf[]) null;
+            di.a(100, (nf[]) null, (byte) 46, 121, -125, -36);
+        }
         field_g = null;
         field_c = null;
         field_f = null;
@@ -39,7 +43,7 @@ final class di {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        Object var23 = null;
+        nf[] var23 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -51,6 +55,7 @@ final class di {
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
         String stackIn_74_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -76,7 +81,7 @@ final class di {
                 if (0 >= param4) {
                   break L1;
                 } else {
-                  if (param0 <= 0) {
+                  if ((param0 ^ -1) >= -1) {
                     break L1;
                   } else {
                     L2: {
@@ -134,7 +139,7 @@ final class di {
                       if (param2 < -23) {
                         break L6;
                       } else {
-                        var23 = null;
+                        var23 = (nf[]) null;
                         di.a(-48, (nf[]) null, (byte) 113, -19, 53, -112);
                         break L6;
                       }
@@ -231,7 +236,7 @@ final class di {
                       if (null == param1[7]) {
                         break L15;
                       } else {
-                        if (param1[7].field_t != 0) {
+                        if (-1 != (param1[7].field_t ^ -1)) {
                           fn.f(var16, var19, var17, var11);
                           var20 = var12;
                           L16: while (true) {
@@ -327,36 +332,39 @@ final class di {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) var6;
+            stackOut_71_0 = (RuntimeException) (var6);
             stackOut_71_1 = new StringBuilder().append("di.C(").append(param0).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
             stackIn_72_1 = stackOut_71_1;
             if (param1 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L24;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "{...}";
               stackIn_74_0 = stackOut_72_0;
               stackIn_74_1 = stackOut_72_1;
@@ -364,7 +372,16 @@ final class di {
               break L24;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -372,27 +389,26 @@ final class di {
         if (!(null != qc.field_m)) {
             return "";
         }
+        if (!param0) {
+            di.a(88);
+        }
         return qc.field_m;
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (!((1 << param2 & i.field_o) == 0)) {
+        if (!(-1 == (1 << param2 & i.field_o ^ -1))) {
             return;
         }
         i.field_o = i.field_o | 1 << param2;
         if (param0 != -30867) {
-            field_a = null;
+            field_a = (bi) null;
         }
         oj.field_B = oj.field_B | 1 << param2;
-        qn.field_v.field_u.a((rk) (Object) new an(param2), (byte) -110);
-        ra.field_c.a((rk) (Object) new sf(param2, param1, qn.field_v.field_B.field_yb + bd.field_h, we.field_g + qn.field_v.field_J.field_o, d.field_a + -qn.field_v.field_h, rc.field_i), (byte) 73);
+        qn.field_v.field_u.a((rk) (new an(param2)), (byte) -110);
+        ra.field_c.a((rk) (new sf(param2, param1, qn.field_v.field_B.field_yb + bd.field_h, we.field_g + qn.field_v.field_J.field_o, d.field_a + -qn.field_v.field_h, rc.field_i)), (byte) 73);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_e = "<col=FFFFFF>Power-up attractor:</col> collect this and your ship will attempt to pull power-ups in automatically for 30 seconds, enabling you to concentrate more on dodging enemy fire and aiming your weapons.";
         field_b = "<col=FFFFFF>Mine:</col> the aliens start dropping these from Level 7 onwards. They are hard to see, but will explode and damage your shields if you hit them. Try not to!";

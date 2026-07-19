@@ -27,78 +27,139 @@ final class pf {
                   }
                 }
               }
-              if (field_e <= param2) {
-                if (param2 < ub.field_e.field_u + field_e) {
-                  if (ii.field_a <= param0) {
-                    if (ub.field_e.field_x + ii.field_a > param0) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
+              L1: {
+                if (field_e > param2) {
+                  break L1;
                 } else {
-                  return -1;
+                  if (param2 >= ub.field_e.field_u + field_e) {
+                    break L1;
+                  } else {
+                    if (ii.field_a > param0) {
+                      break L1;
+                    } else {
+                      if (ub.field_e.field_x + ii.field_a > param0) {
+                        return 1;
+                      } else {
+                        if (param1 == -19503) {
+                          return -1;
+                        } else {
+                          field_c = (eg) null;
+                          return -1;
+                        }
+                      }
+                    }
+                  }
                 }
+              }
+              if (param1 == -19503) {
+                return -1;
               } else {
+                field_c = (eg) null;
                 return -1;
               }
             } else {
               if (field_e <= param2) {
                 if (param2 < ub.field_e.field_u + field_e) {
-                  if (ii.field_a <= param0) {
-                    if (ub.field_e.field_x + ii.field_a <= param0) {
+                  if (ii.field_a > param0) {
+                    if (param1 == -19503) {
                       return -1;
                     } else {
-                      return 1;
+                      field_c = (eg) null;
+                      return -1;
                     }
                   } else {
+                    if (ub.field_e.field_x + ii.field_a > param0) {
+                      return 1;
+                    } else {
+                      if (param1 == -19503) {
+                        return -1;
+                      } else {
+                        field_c = (eg) null;
+                        return -1;
+                      }
+                    }
+                  }
+                } else {
+                  if (param1 == -19503) {
+                    return -1;
+                  } else {
+                    field_c = (eg) null;
                     return -1;
                   }
+                }
+              } else {
+                if (param1 != -19503) {
+                  field_c = (eg) null;
+                  return -1;
                 } else {
                   return -1;
                 }
-              } else {
-                return -1;
               }
             }
           } else {
             if (field_e <= param2) {
               if (param2 < ub.field_e.field_u + field_e) {
-                if (ii.field_a <= param0) {
-                  if (ub.field_e.field_x + ii.field_a <= param0) {
+                if (ii.field_a > param0) {
+                  if (param1 != -19503) {
+                    field_c = (eg) null;
                     return -1;
+                  } else {
+                    return -1;
+                  }
+                } else {
+                  if (ub.field_e.field_x + ii.field_a <= param0) {
+                    if (param1 != -19503) {
+                      field_c = (eg) null;
+                      return -1;
+                    } else {
+                      return -1;
+                    }
                   } else {
                     return 1;
                   }
+                }
+              } else {
+                if (param1 != -19503) {
+                  field_c = (eg) null;
+                  return -1;
                 } else {
                   return -1;
                 }
+              }
+            } else {
+              if (param1 != -19503) {
+                field_c = (eg) null;
+                return -1;
               } else {
                 return -1;
               }
-            } else {
-              return -1;
             }
           }
         }
     }
 
     public static void a(int param0) {
-        field_d = null;
-        field_b = null;
-        field_a = null;
-        field_c = null;
-        field_f = null;
-        field_g = null;
+        if (param0 != 0) {
+          field_e = 82;
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          field_f = null;
+          field_g = null;
+          return;
+        } else {
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          field_f = null;
+          field_g = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new sl();
         field_b = new cf();
         field_g = new int[4];

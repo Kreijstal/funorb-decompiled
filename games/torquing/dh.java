@@ -12,6 +12,12 @@ final class dh implements Iterator {
     private q field_b;
 
     public static void a(boolean param0) {
+        if (!param0) {
+            field_d = (String) null;
+            field_a = null;
+            field_d = null;
+            return;
+        }
         field_a = null;
         field_d = null;
     }
@@ -45,7 +51,7 @@ final class dh implements Iterator {
         try {
           L0: {
             L1: {
-              if (nd.field_a != -1) {
+              if (0 != (nd.field_a ^ -1)) {
                 break L1;
               } else {
                 if (ad.field_n != -1) {
@@ -61,7 +67,7 @@ final class dh implements Iterator {
               L3: {
                 lp.field_b = lp.field_b + 1;
                 if (param0 != null) {
-                  if (param0.equals((Object) (Object) wb.field_t)) {
+                  if (param0.equals(wb.field_t)) {
                     break L2;
                   } else {
                     break L3;
@@ -163,7 +169,7 @@ final class dh implements Iterator {
                 }
               }
             }
-            nd.field_a = -1;
+            nd.field_a = param1;
             ad.field_n = -1;
             break L0;
           }
@@ -171,23 +177,23 @@ final class dh implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_38_0 = (RuntimeException) var2;
+            stackOut_38_0 = (RuntimeException) (var2);
             stackOut_38_1 = new StringBuilder().append("dh.C(");
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
             stackIn_39_1 = stackOut_38_1;
             if (param0 == null) {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackOut_40_2 = "null";
               stackIn_41_0 = stackOut_40_0;
               stackIn_41_1 = stackOut_40_1;
               stackIn_41_2 = stackOut_40_2;
               break L8;
             } else {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "{...}";
               stackIn_41_0 = stackOut_39_0;
               stackIn_41_1 = stackOut_39_1;
@@ -195,24 +201,25 @@ final class dh implements Iterator {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + -1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ')');
         }
     }
 
     public final Object next() {
+        int fieldTemp$2 = 0;
         q var1 = null;
         int var2 = 0;
         var2 = Torquing.field_u;
-        if (((dh) this).field_b == ((dh) this).field_e.field_a[-1 + ((dh) this).field_c]) {
+        if (this.field_b == this.field_e.field_a[-1 + this.field_c]) {
           L0: while (true) {
-            if (((dh) this).field_c < ((dh) this).field_e.field_e) {
-              int fieldTemp$2 = ((dh) this).field_c;
-              ((dh) this).field_c = ((dh) this).field_c + 1;
-              var1 = ((dh) this).field_e.field_a[fieldTemp$2].field_e;
-              if (((dh) this).field_e.field_a[-1 + ((dh) this).field_c] != var1) {
-                ((dh) this).field_b = var1.field_e;
-                ((dh) this).field_f = var1;
-                return (Object) (Object) var1;
+            if (this.field_c < this.field_e.field_e) {
+              fieldTemp$2 = this.field_c;
+              this.field_c = this.field_c + 1;
+              var1 = this.field_e.field_a[fieldTemp$2].field_e;
+              if (this.field_e.field_a[-1 + this.field_c] != var1) {
+                this.field_b = var1.field_e;
+                this.field_f = var1;
+                return var1;
               } else {
                 continue L0;
               }
@@ -221,26 +228,27 @@ final class dh implements Iterator {
             }
           }
         } else {
-          var1 = ((dh) this).field_b;
-          ((dh) this).field_b = var1.field_e;
-          ((dh) this).field_f = var1;
-          return (Object) (Object) var1;
+          var1 = this.field_b;
+          this.field_b = var1.field_e;
+          this.field_f = var1;
+          return var1;
         }
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = Torquing.field_u;
-        if (((dh) this).field_e.field_a[-1 + ((dh) this).field_c] == ((dh) this).field_b) {
+        if (this.field_e.field_a[-1 + this.field_c] == this.field_b) {
           L0: while (true) {
-            if (((dh) this).field_c < ((dh) this).field_e.field_e) {
-              int fieldTemp$1 = ((dh) this).field_c;
-              ((dh) this).field_c = ((dh) this).field_c + 1;
-              if (((dh) this).field_e.field_a[fieldTemp$1].field_e == ((dh) this).field_e.field_a[((dh) this).field_c + -1]) {
-                ((dh) this).field_b = ((dh) this).field_e.field_a[-1 + ((dh) this).field_c];
+            if (this.field_c < this.field_e.field_e) {
+              fieldTemp$1 = this.field_c;
+              this.field_c = this.field_c + 1;
+              if (this.field_e.field_a[fieldTemp$1].field_e == this.field_e.field_a[this.field_c + -1]) {
+                this.field_b = this.field_e.field_a[-1 + this.field_c];
                 continue L0;
               } else {
-                ((dh) this).field_b = ((dh) this).field_e.field_a[((dh) this).field_c + -1].field_e;
+                this.field_b = this.field_e.field_a[this.field_c + -1].field_e;
                 return true;
               }
             } else {
@@ -253,34 +261,30 @@ final class dh implements Iterator {
     }
 
     public final void remove() {
-        if (!(((dh) this).field_f != null)) {
+        if (!(this.field_f != null)) {
             throw new IllegalStateException();
         }
-        ((dh) this).field_f.f(0);
-        ((dh) this).field_f = null;
+        this.field_f.f(0);
+        this.field_f = null;
     }
 
     private final void a(int param0) {
-        ((dh) this).field_b = ((dh) this).field_e.field_a[0].field_e;
-        ((dh) this).field_c = 1;
-        ((dh) this).field_f = null;
+        this.field_b = this.field_e.field_a[param0].field_e;
+        this.field_c = 1;
+        this.field_f = null;
     }
 
     dh(vl param0) {
-        ((dh) this).field_f = null;
+        this.field_f = null;
         try {
-            ((dh) this).field_e = param0;
+            this.field_e = param0;
             this.a(0);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "OK";
     }
 }

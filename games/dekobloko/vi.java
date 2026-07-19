@@ -7,8 +7,17 @@ abstract class vi extends be {
     static ck[] field_z;
 
     public static void f(byte param0) {
+        nj discarded$2 = null;
+        String var2 = null;
         field_A = null;
         field_z = null;
+        if (param0 == 46) {
+          return;
+        } else {
+          var2 = (String) null;
+          discarded$2 = vi.a((ji) null, (ji) null, (String) null, (byte) -124, (String) null);
+          return;
+        }
     }
 
     abstract Object c(int param0);
@@ -205,10 +214,15 @@ abstract class vi extends be {
     }
 
     final static int d(int param0) {
+        if (param0 != 1) {
+            field_z = (ck[]) null;
+            return 1;
+        }
         return 1;
     }
 
     final static boolean a(int[] param0, int param1) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         long var2_long = 0L;
         bf var4_ref_bf = null;
@@ -218,41 +232,43 @@ abstract class vi extends be {
         int var6 = 0;
         int var7 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_21_0 = 0;
+        int stackIn_17_0 = 0;
         int stackIn_25_0 = 0;
-        int stackIn_36_0 = 0;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_40_2 = null;
+        int stackIn_29_0 = 0;
+        int stackIn_43_0 = 0;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_47_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_35_0 = 0;
+        int stackOut_16_0 = 0;
         int stackOut_24_0 = 0;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        String stackOut_39_2 = null;
-        RuntimeException stackOut_38_0 = null;
-        StringBuilder stackOut_38_1 = null;
-        String stackOut_38_2 = null;
+        int stackOut_42_0 = 0;
+        int stackOut_28_0 = 0;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        RuntimeException stackOut_46_0 = null;
+        StringBuilder stackOut_46_1 = null;
+        String stackOut_46_2 = null;
+        RuntimeException stackOut_45_0 = null;
+        StringBuilder stackOut_45_1 = null;
+        String stackOut_45_2 = null;
         var7 = client.field_A ? 1 : 0;
         try {
           L0: {
             if (wf.field_u != ph.field_xb) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                var2_long = ik.a(4);
+                var2_long = ik.a(param1 + 4);
                 if (ub.field_a == 0) {
                   break L1;
                 } else {
@@ -269,19 +285,34 @@ abstract class vi extends be {
                         de.field_V.field_n = 0;
                         var5_int = 0;
                         L2: while (true) {
-                          if (var5_int >= sm.field_e) {
+                          L3: {
+                            L4: {
+                              if (var5_int >= sm.field_e) {
+                                break L4;
+                              } else {
+                                de.field_V.field_r[var5_int] = var4_ref_bf.field_n[var5_int];
+                                var5_int++;
+                                if (var7 != 0) {
+                                  break L3;
+                                } else {
+                                  if (var7 == 0) {
+                                    continue L2;
+                                  } else {
+                                    break L4;
+                                  }
+                                }
+                              }
+                            }
                             lg.field_U = bb.field_d;
                             bb.field_d = kf.field_L;
                             kf.field_L = bh.field_k;
                             bh.field_k = var4_ref_bf.field_s;
-                            stackOut_13_0 = 1;
-                            stackIn_14_0 = stackOut_13_0;
-                            return stackIn_14_0 != 0;
-                          } else {
-                            de.field_V.field_r[var5_int] = var4_ref_bf.field_n[var5_int];
-                            var5_int++;
-                            continue L2;
+                            break L3;
                           }
+                          stackOut_16_0 = 1;
+                          stackIn_17_0 = stackOut_16_0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
@@ -290,102 +321,150 @@ abstract class vi extends be {
                   }
                 }
               }
-              L3: while (true) {
-                L4: {
+              L5: {
+                if (param1 == 0) {
+                  break L5;
+                } else {
+                  discarded$1 = vi.d(-63);
+                  break L5;
+                }
+              }
+              L6: while (true) {
+                L7: {
                   if (0 > dl.field_N) {
                     de.field_V.field_n = 0;
-                    if (!pe.b(25973, 1)) {
-                      stackOut_20_0 = 0;
-                      stackIn_21_0 = stackOut_20_0;
-                      return stackIn_21_0 != 0;
+                    if (!pe.b(param1 + 25973, 1)) {
+                      stackOut_24_0 = 0;
+                      stackIn_25_0 = stackOut_24_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       dl.field_N = de.field_V.i((byte) 81);
                       de.field_V.field_n = 0;
                       sm.field_e = param0[dl.field_N];
-                      break L4;
+                      break L7;
                     }
                   } else {
-                    break L4;
+                    break L7;
                   }
                 }
                 if (fh.a((byte) 116)) {
-                  if (ub.field_a == 0) {
-                    lg.field_U = bb.field_d;
-                    bb.field_d = kf.field_L;
-                    kf.field_L = bh.field_k;
-                    bh.field_k = dl.field_N;
-                    dl.field_N = -1;
-                    stackOut_35_0 = 1;
-                    stackIn_36_0 = stackOut_35_0;
-                    break L0;
-                  } else {
-                    L5: {
-                      var4 = ub.field_a;
-                      if (0.0 != pg.field_b) {
-                        var4 = (int)((double)var4 + gg.field_A.nextGaussian() * pg.field_b);
-                        if (var4 >= 0) {
-                          break L5;
+                  L8: {
+                    if (ub.field_a == 0) {
+                      break L8;
+                    } else {
+                      L9: {
+                        var4 = ub.field_a;
+                        if (0.0 != pg.field_b) {
+                          var4 = (int)((double)var4 + gg.field_A.nextGaussian() * pg.field_b);
+                          if (-1 >= (var4 ^ -1)) {
+                            break L9;
+                          } else {
+                            var4 = 0;
+                            break L9;
+                          }
                         } else {
-                          var4 = 0;
-                          break L5;
+                          break L9;
                         }
-                      } else {
-                        break L5;
                       }
-                    }
-                    var5 = new bf(var2_long + (long)var4, dl.field_N, new byte[sm.field_e]);
-                    var6 = 0;
-                    L6: while (true) {
-                      if (sm.field_e <= var6) {
-                        ci.field_h.a(var5, 2777);
-                        dl.field_N = -1;
-                        continue L3;
-                      } else {
-                        var5.field_n[var6] = de.field_V.field_r[var6];
-                        var6++;
-                        continue L6;
+                      var5 = new bf(var2_long + (long)var4, dl.field_N, new byte[sm.field_e]);
+                      var6 = 0;
+                      L10: while (true) {
+                        L11: {
+                          L12: {
+                            if (sm.field_e <= var6) {
+                              break L12;
+                            } else {
+                              var5.field_n[var6] = de.field_V.field_r[var6];
+                              var6++;
+                              if (var7 != 0) {
+                                break L11;
+                              } else {
+                                if (var7 == 0) {
+                                  continue L10;
+                                } else {
+                                  break L12;
+                                }
+                              }
+                            }
+                          }
+                          ci.field_h.a(var5, param1 ^ 2777);
+                          dl.field_N = -1;
+                          break L11;
+                        }
+                        if (var7 == 0) {
+                          continue L6;
+                        } else {
+                          break L8;
+                        }
                       }
                     }
                   }
+                  lg.field_U = bb.field_d;
+                  bb.field_d = kf.field_L;
+                  kf.field_L = bh.field_k;
+                  bh.field_k = dl.field_N;
+                  dl.field_N = -1;
+                  stackOut_42_0 = 1;
+                  stackIn_43_0 = stackOut_42_0;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 } else {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
-                  return stackIn_25_0 != 0;
+                  stackOut_28_0 = 0;
+                  stackIn_29_0 = stackOut_28_0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L13: {
             var2 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) (var2);
-            stackOut_37_1 = new StringBuilder().append("vi.L(");
-            stackIn_39_0 = stackOut_37_0;
-            stackIn_39_1 = stackOut_37_1;
-            stackIn_38_0 = stackOut_37_0;
-            stackIn_38_1 = stackOut_37_1;
+            stackOut_44_0 = (RuntimeException) (var2);
+            stackOut_44_1 = new StringBuilder().append("vi.L(");
+            stackIn_46_0 = stackOut_44_0;
+            stackIn_46_1 = stackOut_44_1;
+            stackIn_45_0 = stackOut_44_0;
+            stackIn_45_1 = stackOut_44_1;
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
-              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
-              stackOut_39_2 = "null";
-              stackIn_40_0 = stackOut_39_0;
-              stackIn_40_1 = stackOut_39_1;
-              stackIn_40_2 = stackOut_39_2;
-              break L7;
+              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
+              stackOut_46_2 = "null";
+              stackIn_47_0 = stackOut_46_0;
+              stackIn_47_1 = stackOut_46_1;
+              stackIn_47_2 = stackOut_46_2;
+              break L13;
             } else {
-              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
-              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
-              stackOut_38_2 = "{...}";
-              stackIn_40_0 = stackOut_38_0;
-              stackIn_40_1 = stackOut_38_1;
-              stackIn_40_2 = stackOut_38_2;
-              break L7;
+              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
+              stackOut_45_2 = "{...}";
+              stackIn_47_0 = stackOut_45_0;
+              stackIn_47_1 = stackOut_45_1;
+              stackIn_47_2 = stackOut_45_2;
+              break L13;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + 0 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_47_0), stackIn_47_2 + ',' + param1 + ')');
         }
-        return stackIn_36_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_17_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_25_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_29_0 != 0;
+              } else {
+                return stackIn_43_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     static {

@@ -32,10 +32,10 @@ final class da extends gn {
     static String field_i;
 
     final void a(boolean param0) {
-        ((da) this).field_y = null;
-        ((da) this).field_g = null;
-        ((da) this).field_F = null;
-        ((da) this).field_j = null;
+        this.field_y = null;
+        this.field_g = null;
+        this.field_F = null;
+        this.field_j = null;
         if (param0) {
           return;
         } else {
@@ -45,43 +45,43 @@ final class da extends gn {
     }
 
     final static ut b(int param0, int param1) {
-        if (param1 == 0) {
+        if (-1 == (param1 ^ -1)) {
           return mc.field_k[1];
         } else {
           if (param1 == 1) {
             return mc.field_k[0];
           } else {
-            if (param1 == 25) {
+            if ((param1 ^ -1) == -26) {
               return mc.field_k[0];
             } else {
-              if (2 == param1) {
+              if (param0 == param1) {
                 return mc.field_k[1];
               } else {
                 if (3 == param1) {
                   return mc.field_k[1];
                 } else {
                   if (4 != param1) {
-                    if (param1 != 5) {
-                      if (param1 == 6) {
+                    if (-6 != (param1 ^ -1)) {
+                      if ((param1 ^ -1) == -7) {
                         return mc.field_k[1];
                       } else {
                         if (param1 == 7) {
                           return mc.field_k[1];
                         } else {
                           if (param1 != 22) {
-                            if (param1 != 8) {
-                              if (param1 == 28) {
+                            if (-9 != (param1 ^ -1)) {
+                              if ((param1 ^ -1) == -29) {
                                 return mc.field_k[1];
                               } else {
                                 if (9 == param1) {
                                   return kb.field_E[6];
                                 } else {
                                   if (param1 != 35) {
-                                    if (param1 != 36) {
-                                      if (param1 == 38) {
+                                    if ((param1 ^ -1) != -37) {
+                                      if ((param1 ^ -1) == -39) {
                                         return mc.field_k[1];
                                       } else {
-                                        if (param1 != 39) {
+                                        if (-40 != (param1 ^ -1)) {
                                           if (param1 == 40) {
                                             return mc.field_k[1];
                                           } else {
@@ -92,7 +92,7 @@ final class da extends gn {
                                         }
                                       }
                                     } else {
-                                      return (ut) (Object) sh.field_g;
+                                      return (ut) ((Object) sh.field_g);
                                     }
                                   } else {
                                     return mc.field_k[1];
@@ -149,8 +149,8 @@ final class da extends gn {
         field_m = null;
         field_i = null;
         field_x = null;
-        field_k = null;
-        int var1 = 0;
+        field_k = (int[][]) null;
+        int var1 = -77 % ((param0 - -16) / 40);
     }
 
     final static void a(int param0) {
@@ -160,6 +160,9 @@ final class da extends gn {
 
     final static void a(sj param0, boolean param1, sj param2, sj param3, int param4) {
         lc.field_e = su.a(-3505, "");
+        if (param4 >= -118) {
+            return;
+        }
         try {
             lc.field_e.a(false, (byte) 108);
             id.a(param0, param3, false, param2);
@@ -167,7 +170,7 @@ final class da extends gn {
             mj.field_a = vj.field_a;
             wk.field_f = vj.field_a;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + -120 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -179,21 +182,29 @@ final class da extends gn {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            var4 = (fa) (Object) nl.field_f.g(24009);
-            L1: while (true) {
+            L1: {
+              var4 = (fa) ((Object) nl.field_f.g(param0 + 24009));
+              if (param0 == 0) {
+                break L1;
+              } else {
+                da.b(79);
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
-                sp.a(2, var4, -51265247);
-                var4 = (fa) (Object) nl.field_f.c(33);
-                continue L1;
+                sp.a(param1, var4, -51265247);
+                var4 = (fa) ((Object) nl.field_f.c(33));
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "da.D(" + 0 + ',' + 2 + ')');
+          throw nb.a((Throwable) ((Object) var2), "da.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -201,11 +212,7 @@ final class da extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_k = new int[][]{new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4]};
+        field_k = new int[][]{new int[]{-1, 2, 3, 1}, new int[]{-1, 3, 3, 1}, new int[]{-1, 3, 1, 1}, new int[]{-1, 4, 1, 1}, new int[]{-1, 5, 1, 1}, new int[]{-1, 6, 1, 1}, new int[]{-1, 7, 1, 1}, new int[]{-1, 8, 1, 1}, new int[]{-1, 9, 1, 1}, new int[]{-1, 10, 1, 1}, new int[]{-1, 11, 1, 1}, new int[]{-1, 12, 1, 1}, new int[]{-1, 13, 1, 1}, new int[]{-1, 14, 1, 1}, new int[]{-1, 15, 1, 1}, new int[]{-1, 16, 1, 1}, new int[]{-1, 9, 3, 0}, new int[]{-1, 10, 3, 0}, new int[]{-1, 11, 3, 0}, new int[]{-1, 12, 3, 0}, new int[]{-1, 13, 3, 0}, new int[]{-1, 14, 3, 0}, new int[]{-1, 15, 3, 0}, new int[]{-1, 16, 3, 0}};
         field_h = new tf();
         field_x = new int[]{130, 65, 110, 65, 60};
         field_i = "Sell Player";

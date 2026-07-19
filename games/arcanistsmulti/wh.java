@@ -17,34 +17,48 @@ final class wh {
 
     final static int a(int param0, int param1) {
         param0--;
-        param0 = param0 | param0 >>> 1;
-        param0 = param0 | param0 >>> 2;
-        param0 = param0 | param0 >>> 4;
-        param0 = param0 | param0 >>> 8;
-        param0 = param0 | param0 >>> 16;
+        param0 = param0 | param0 >>> -327065503;
+        param0 = param0 | param0 >>> -1057549438;
+        param0 = param0 | param0 >>> -469438012;
+        param0 = param0 | param0 >>> 220093928;
+        if (param1 != 678231216) {
+            field_k = (ll[]) null;
+        }
+        param0 = param0 | param0 >>> 678231216;
         return 1 + param0;
     }
 
     public static void a(byte param0) {
+        qb discarded$0 = null;
         field_b = null;
+        if (param0 > -83) {
+            discarded$0 = wh.a(-29);
+        }
         field_e = null;
         field_h = null;
         field_i = null;
         field_l = null;
         field_f = null;
         field_k = null;
-        field_d = null;
+        field_d = (int[][]) null;
         field_j = null;
         field_a = null;
     }
 
     final static void a(byte param0, boolean param1) {
+        qb discarded$0 = null;
+        if (param0 != 117) {
+            discarded$0 = wh.a(89);
+        }
         wn.field_z.a(param1, (byte) -127);
     }
 
     final static qb a(int param0) {
         int var4_int = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
+        if (param0 > -100) {
+            field_f = (e) null;
+        }
         int var1 = ho.field_i[0] * jg.field_p[0];
         byte[] var2 = ln.field_I[0];
         int[] var3 = new int[var1];
@@ -57,10 +71,6 @@ final class wh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Username: ";
         field_a = "Waiting for fonts";
         field_i = new int[]{1, 2, 3, 4, 5, 6, 53, 57, 54};

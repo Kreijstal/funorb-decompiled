@@ -13,10 +13,10 @@ final class dp extends ki {
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
-        if (param1 > -1) {
+        if ((param1 ^ -1) < 0) {
           L0: {
             lb.g(param2, param3, 153, 238, kg.field_d[param1], 22953);
-            if (((dp) this).b((byte) -115)) {
+            if (this.b((byte) -115)) {
               mq.field_f.c(param2, param3);
               break L0;
             } else {
@@ -28,7 +28,7 @@ final class dp extends ki {
         } else {
           L1: {
             lb.g(param2, param3, 153, 238, 7829367, 22953);
-            if (((dp) this).b((byte) -115)) {
+            if (this.b((byte) -115)) {
               mq.field_f.c(param2, param3);
               break L1;
             } else {
@@ -41,15 +41,16 @@ final class dp extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
+        jp[] discarded$1 = null;
         pb var7 = null;
         pb var8 = null;
         if (param0) {
-          if (((dp) this).b((byte) -106)) {
+          if (this.b((byte) -106)) {
             L0: {
-              var8 = ge.a(((dp) this).field_m, param3, -20777);
-              if (!var8.a((byte) -84, param3, ((dp) this).field_m)) {
+              var8 = ge.a(this.field_m, param3, -20777);
+              if (!var8.a((byte) -84, param3, this.field_m)) {
                 s.a(ch.field_m, 1, param3, th.field_j, var8, 0, (byte) -86, va.field_b);
-                var8.a(((dp) this).field_m, param3, (byte) 78);
+                var8.a(this.field_m, param3, (byte) 78);
                 break L0;
               } else {
                 break L0;
@@ -62,13 +63,13 @@ final class dp extends ki {
             return;
           }
         } else {
-          jp[] discarded$1 = ((dp) this).a(-127, false);
-          if (((dp) this).b((byte) -106)) {
+          discarded$1 = this.a(-127, false);
+          if (this.b((byte) -106)) {
             L1: {
-              var7 = ge.a(((dp) this).field_m, param3, -20777);
-              if (!var7.a((byte) -84, param3, ((dp) this).field_m)) {
+              var7 = ge.a(this.field_m, param3, -20777);
+              if (!var7.a((byte) -84, param3, this.field_m)) {
                 s.a(ch.field_m, 1, param3, th.field_j, var7, 0, (byte) -86, va.field_b);
-                var7.a(((dp) this).field_m, param3, (byte) 78);
+                var7.a(this.field_m, param3, (byte) 78);
                 break L1;
               } else {
                 break L1;
@@ -85,7 +86,7 @@ final class dp extends ki {
 
     final jp[] a(int param0, boolean param1) {
         if (!param1) {
-            return null;
+            return (jp[]) null;
         }
         return qg.field_r[param0 + -1];
     }
@@ -127,17 +128,17 @@ final class dp extends ki {
             param4.b(-(60 / param0) + (-param4.field_x + param5.field_i) / 2, -param4.field_z + param1 - (-param5.field_q - -(130 / param0)), 0, 208);
             la.a(0, 0, param5.field_i, param5.field_q, 0, nj.field_G[param3], 96);
             if (param2) {
-                Object var7 = null;
+                pb var7 = (pb) null;
                 dp.a(82, 29, true, -26, (jp) null, (pb) null);
             }
             sc.b(-80);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "dp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean b(byte param0) {
-        Object var3 = null;
+        pb var3 = null;
         int stackIn_19_0 = 0;
         int stackIn_40_0 = 0;
         int stackOut_39_0 = 0;
@@ -190,7 +191,7 @@ final class dp extends ki {
             return false;
           }
         } else {
-          var3 = null;
+          var3 = (pb) null;
           dp.a(62, -82, true, -61, (jp) null, (pb) null);
           if (nf.field_U != null) {
             if (null != ni.field_Ub) {
@@ -246,19 +247,20 @@ final class dp extends ki {
             ej.field_L = new jp[2][];
             ap.field_c = new jp[2];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "dp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "dp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
+        boolean discarded$1 = false;
         pb var7 = null;
         pb var8 = null;
         if (param1 < -84) {
-          if (((dp) this).b((byte) -126)) {
-            var8 = kd.a(((dp) this).field_m, param3, (byte) 116);
-            if (!var8.a((byte) -84, param3, ((dp) this).field_m)) {
+          if (this.b((byte) -126)) {
+            var8 = kd.a(this.field_m, param3, (byte) 116);
+            if (!var8.a((byte) -84, param3, this.field_m)) {
               s.a(ch.field_m, 2, param3, th.field_j, var8, -13, (byte) -96, va.field_b);
-              var8.a(((dp) this).field_m, param3, (byte) 78);
+              var8.a(this.field_m, param3, (byte) 78);
               qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var8.field_p, param0);
               return;
             } else {
@@ -270,15 +272,15 @@ final class dp extends ki {
             return;
           }
         } else {
-          boolean discarded$1 = ((dp) this).a(true);
-          if (((dp) this).b((byte) -126)) {
-            var7 = kd.a(((dp) this).field_m, param3, (byte) 116);
-            if (var7.a((byte) -84, param3, ((dp) this).field_m)) {
+          discarded$1 = this.a(true);
+          if (this.b((byte) -126)) {
+            var7 = kd.a(this.field_m, param3, (byte) 116);
+            if (var7.a((byte) -84, param3, this.field_m)) {
               qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var7.field_p, param0);
               return;
             } else {
               s.a(ch.field_m, 2, param3, th.field_j, var7, -13, (byte) -96, va.field_b);
-              var7.a(((dp) this).field_m, param3, (byte) 78);
+              var7.a(this.field_m, param3, (byte) 78);
               qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var7.field_p, param0);
               return;
             }
@@ -291,7 +293,7 @@ final class dp extends ki {
 
     final jp a(boolean param0, int param1) {
         if (!param0) {
-            field_u = null;
+            field_u = (jp) null;
             return ap.field_c[-1 + param1];
         }
         return ap.field_c[-1 + param1];
@@ -313,6 +315,9 @@ final class dp extends ki {
         field_u = null;
         field_v = null;
         field_x = null;
+        if (param0 != 1) {
+            field_w = (mh[]) null;
+        }
     }
 
     final jp[] a(byte param0, int param1) {
@@ -321,10 +326,6 @@ final class dp extends ki {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Back";
         field_r = new int[]{100, 350, 750, 10, 25, 15, 30, 30000, 60000, 30, 60, 10, 10, 25, 5, 10, 1, 1, 3, 10, 20, 30, 7, 1, 2, 3, 1, 1, 1, 10, 5, 10, 5, 10, 100, 500, 2500, 5000, 15000, 1000, 135000, 5};
     }

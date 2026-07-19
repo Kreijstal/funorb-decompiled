@@ -7,6 +7,12 @@ final class sd {
     static int field_b;
 
     public static void a(int param0) {
+        if (param0 < 40) {
+            field_a = (String) null;
+            field_a = null;
+            field_c = null;
+            return;
+        }
         field_a = null;
         field_c = null;
     }
@@ -18,7 +24,7 @@ final class sd {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        CharSequence var8 = null;
         long stackIn_23_0 = 0L;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -46,7 +52,7 @@ final class sd {
               if (param0 == -66) {
                 break L1;
               } else {
-                var8 = null;
+                var8 = (CharSequence) null;
                 break L1;
               }
             }
@@ -104,10 +110,10 @@ final class sd {
               }
               L7: while (true) {
                 L8: {
-                  if (var2_long % 37L != 0L) {
+                  if (-1L != (var2_long % 37L ^ -1L)) {
                     break L8;
                   } else {
-                    if (var2_long == 0L) {
+                    if ((var2_long ^ -1L) == -1L) {
                       break L8;
                     } else {
                       var2_long = var2_long / 37L;
@@ -125,23 +131,23 @@ final class sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_0 = (RuntimeException) (var2);
             stackOut_24_1 = new StringBuilder().append("sd.B(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -149,7 +155,7 @@ final class sd {
               break L9;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }
@@ -159,10 +165,6 @@ final class sd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Game Complete!";
         field_c = "Email is valid";
     }

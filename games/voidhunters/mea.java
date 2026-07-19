@@ -22,6 +22,7 @@ abstract class mea extends ksa {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_6_0 = 0;
@@ -50,6 +51,7 @@ abstract class mea extends ksa {
               if (param1.length() <= var3) {
                 stackOut_9_0 = 1;
                 stackIn_10_0 = stackOut_9_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (var2_int == param1.charAt(var3)) {
@@ -58,7 +60,8 @@ abstract class mea extends ksa {
                 } else {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -67,23 +70,23 @@ abstract class mea extends ksa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("mea.J(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -91,14 +94,18 @@ abstract class mea extends ksa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     final int d(int param0) {
         if (param0 != 23230) {
-            ((mea) this).field_f = false;
+            this.field_f = false;
             return 1;
         }
         return 1;
@@ -106,6 +113,9 @@ abstract class mea extends ksa {
 
     public static void c(int param0) {
         field_e = null;
+        if (param0 >= -88) {
+            field_e = (ij) null;
+        }
     }
 
     abstract void c(byte param0);
@@ -114,7 +124,7 @@ abstract class mea extends ksa {
 
     int d(byte param0) {
         if (param0 != 7) {
-            ((mea) this).a(39, 72);
+            this.a(39, 72);
             return 0;
         }
         return 0;
@@ -129,10 +139,10 @@ abstract class mea extends ksa {
 
     final boolean e(byte param0) {
         if (param0 <= 56) {
-            ((mea) this).field_f = false;
-            return ((mea) this).field_f;
+            this.field_f = false;
+            return this.field_f;
         }
-        return ((mea) this).field_f;
+        return this.field_f;
     }
 
     final static void a(int param0, byte param1, int param2, int param3) {
@@ -147,8 +157,8 @@ abstract class mea extends ksa {
               break L0;
             } else {
               if (param1 > -69) {
-                field_e = null;
-                if (param3 == 1) {
+                field_e = (ij) null;
+                if (-2 == (param3 ^ -1)) {
                   L1: {
                     if (idb.field_p != param0) {
                       ebb.field_b = true;
@@ -187,7 +197,7 @@ abstract class mea extends ksa {
                 }
               } else {
                 L2: {
-                  if (param3 != 1) {
+                  if (-2 != (param3 ^ -1)) {
                     break L2;
                   } else {
                     if (idb.field_p != param0) {
@@ -229,7 +239,7 @@ abstract class mea extends ksa {
         }
         if (param1 <= -69) {
           L3: {
-            if (param3 != 1) {
+            if (-2 != (param3 ^ -1)) {
               break L3;
             } else {
               if (idb.field_p != param0) {
@@ -273,8 +283,8 @@ abstract class mea extends ksa {
           return;
         } else {
           L6: {
-            field_e = null;
-            if (param3 != 1) {
+            field_e = (ij) null;
+            if (-2 != (param3 ^ -1)) {
               break L6;
             } else {
               if (idb.field_p != param0) {
@@ -324,13 +334,17 @@ abstract class mea extends ksa {
 
     mea(qfa param0) {
         try {
-            ((mea) this).field_d = param0;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "mea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "mea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(boolean param0) {
+        if (!param0) {
+            field_e = (ij) null;
+            return qga.field_b.a(-1);
+        }
         return qga.field_b.a(-1);
     }
 

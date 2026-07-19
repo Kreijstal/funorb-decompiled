@@ -9,16 +9,16 @@ final class re extends ae {
     static String field_T;
 
     final void b(int param0, int param1, int param2, int param3) {
-        ((re) this).field_N = !((re) this).field_N ? true : false;
+        this.field_N = !this.field_N ? true : false;
         super.b(param0, param1, param2, param3);
     }
 
     re(String param0, dn param1, boolean param2) {
         this(param0, param1);
         try {
-            ((re) this).field_N = param2 ? true : false;
+            this.field_N = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -30,6 +30,15 @@ final class re extends ae {
         rl.b(-9648);
         jl.a(109);
         bm.a(-25676);
+        if (!param0) {
+            re.e((byte) -39);
+            if (!(!wm.c(-14688))) {
+                nd.field_Lb.f(1, (byte) -92);
+                ak.a((byte) -86, 0);
+            }
+            mk.a(false);
+            return;
+        }
         if (!(!wm.c(-14688))) {
             nd.field_Lb.f(1, (byte) -92);
             ak.a((byte) -86, 0);
@@ -38,7 +47,25 @@ final class re extends ae {
     }
 
     final static boolean a(byte param0, int param1) {
-        return ~(-param1 & param1) == ~param1;
+        int stackIn_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0 >= -84) {
+          return true;
+        } else {
+          L0: {
+            if ((-param1 & param1) != param1) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L0;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     public static void a(int param0) {
@@ -55,9 +82,9 @@ final class re extends ae {
     private re(String param0, dn param1) {
         this(param0, dh.field_q.field_n, param1);
         try {
-            ((re) this).field_H = dh.field_q.field_x;
+            this.field_H = dh.field_q.field_x;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +121,7 @@ final class re extends ae {
             }
             L3: {
               db.field_e = null;
-              var1_int = -39;
+              var1_int = 39 / ((param0 - 14) / 42);
               if (ui.field_d != null) {
                 ui.field_d.b(1);
                 ui.field_d = null;
@@ -108,14 +135,14 @@ final class re extends ae {
               if (null == db.field_a) {
                 break L4;
               } else {
-                var2 = (gd) (Object) db.field_a.b(-104);
+                var2 = (gd) ((Object) db.field_a.b(-104));
                 L5: while (true) {
                   if (var2 == null) {
                     db.field_a = null;
                     break L4;
                   } else {
                     var2.e(0);
-                    var2 = (gd) (Object) db.field_a.d(-1);
+                    var2 = (gd) ((Object) db.field_a.d(-1));
                     continue L5;
                   }
                 }
@@ -126,24 +153,20 @@ final class re extends ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) runtimeException, "re.C(" + -33 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
         }
     }
 
     private re(String param0, kg param1, dn param2) {
         super(param0, param1, param2);
         try {
-            ((re) this).field_H = dh.field_q.field_x;
+            this.field_H = dh.field_q.field_x;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_S = "Remove friend";
         field_Q = "Add name";
         field_T = "The account name you use to access RuneScape and other Jagex.com games";

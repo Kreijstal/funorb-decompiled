@@ -32,10 +32,6 @@ final class pg extends IOException {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pg.A(";
         field_c = "Player";
         field_d = new kk[11];

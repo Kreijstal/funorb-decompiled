@@ -11,16 +11,16 @@ abstract class dl extends ri {
 
     public static void b(boolean param0) {
         field_l = null;
-        field_n = null;
+        field_n = (long[][]) null;
         if (param0) {
             return;
         }
         try {
             field_q = null;
             field_m = null;
-            field_p = null;
+            field_p = (byte[][]) null;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "dl.D(" + param0 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "dl.D(" + param0 + ')');
         }
     }
 
@@ -28,9 +28,9 @@ abstract class dl extends ri {
 
     dl(int param0) {
         try {
-            ((dl) this).field_o = param0;
+            this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "dl.<init>(" + param0 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "dl.<init>(" + param0 + ')');
         }
     }
 
@@ -677,23 +677,23 @@ abstract class dl extends ri {
           decompiledCaughtException = decompiledCaughtParameter0;
           L69: {
             var2_ref = decompiledCaughtException;
-            stackOut_246_0 = (RuntimeException) var2_ref;
+            stackOut_246_0 = (RuntimeException) (var2_ref);
             stackOut_246_1 = new StringBuilder().append("dl.E(");
             stackIn_249_0 = stackOut_246_0;
             stackIn_249_1 = stackOut_246_1;
             stackIn_247_0 = stackOut_246_0;
             stackIn_247_1 = stackOut_246_1;
             if (param0 == null) {
-              stackOut_249_0 = (RuntimeException) (Object) stackIn_249_0;
-              stackOut_249_1 = (StringBuilder) (Object) stackIn_249_1;
+              stackOut_249_0 = (RuntimeException) ((Object) stackIn_249_0);
+              stackOut_249_1 = (StringBuilder) ((Object) stackIn_249_1);
               stackOut_249_2 = "null";
               stackIn_250_0 = stackOut_249_0;
               stackIn_250_1 = stackOut_249_1;
               stackIn_250_2 = stackOut_249_2;
               break L69;
             } else {
-              stackOut_247_0 = (RuntimeException) (Object) stackIn_247_0;
-              stackOut_247_1 = (StringBuilder) (Object) stackIn_247_1;
+              stackOut_247_0 = (RuntimeException) ((Object) stackIn_247_0);
+              stackOut_247_1 = (StringBuilder) ((Object) stackIn_247_1);
               stackOut_247_2 = "{...}";
               stackIn_250_0 = stackOut_247_0;
               stackIn_250_1 = stackOut_247_1;
@@ -701,104 +701,102 @@ abstract class dl extends ri {
               break L69;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_250_0, stackIn_250_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_250_0), stackIn_250_2 + ',' + param1 + ')');
         }
     }
 
     abstract boolean d(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        long var2 = 0L;
-        long var4 = 0L;
-        long var6 = 0L;
-        long var8 = 0L;
-        long var10 = 0L;
-        long var12 = 0L;
-        int var14 = 0;
-        long stackIn_6_0 = 0L;
-        long stackOut_5_0 = 0L;
-        long stackOut_3_0 = 0L;
-        field_n = new long[8][256];
-        field_q = new long[11];
-        var0 = 0;
-        L0: while (true) {
-          if (var0 >= 256) {
-            field_q[0] = 0L;
-            var0 = 1;
-            L1: while (true) {
-              if (10 < var0) {
-                field_p = new byte[50][];
-                field_m = "Highscores";
-                return;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            long var2 = 0L;
+            long var4 = 0L;
+            long var6 = 0L;
+            long var8 = 0L;
+            long var10 = 0L;
+            long var12 = 0L;
+            int var14 = 0;
+            long stackIn_6_0 = 0L;
+            long stackOut_5_0 = 0L;
+            long stackOut_3_0 = 0L;
+            field_n = new long[8][256];
+            field_q = new long[11];
+            var0 = 0;
+            L0: while (true) {
+              if (-257 >= (var0 ^ -1)) {
+                field_q[0] = 0L;
+                var0 = 1;
+                L1: while (true) {
+                  if (10 < var0) {
+                    field_p = new byte[50][];
+                    field_m = "Highscores";
+                    break $cfr$clinit;
+                  } else {
+                    var1 = (-1 + var0) * 8;
+                    field_q[var0] = aj.a(ej.a(255L, field_n[7][7 + var1]), aj.a(ej.a(field_n[6][var1 - -6], 65280L), aj.a(ej.a(16711680L, field_n[5][5 + var1]), aj.a(aj.a(ej.a(1095216660480L, field_n[3][var1 + 3]), aj.a(aj.a(ej.a(field_n[1][1 + var1], 71776119061217280L), ej.a(-72057594037927936L, field_n[0][var1])), ej.a(field_n[2][var1 - -2], 280375465082880L))), ej.a(field_n[4][var1 + 4], 4278190080L)))));
+                    var0++;
+                    continue L1;
+                  }
+                }
               } else {
-                var1 = (-1 + var0) * 8;
-                field_q[var0] = aj.a(ej.a(255L, field_n[7][7 + var1]), aj.a(ej.a(field_n[6][var1 - -6], 65280L), aj.a(ej.a(16711680L, field_n[5][5 + var1]), aj.a(aj.a(ej.a(1095216660480L, field_n[3][var1 + 3]), aj.a(aj.a(ej.a(field_n[1][1 + var1], 71776119061217280L), ej.a(-72057594037927936L, field_n[0][var1])), ej.a(field_n[2][var1 - -2], 280375465082880L))), ej.a(field_n[4][var1 + 4], 4278190080L)))));
-                var0++;
-                continue L1;
+                L2: {
+                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+                  if ((1 & var0) != 0) {
+                    stackOut_5_0 = (long)(var1 & 255);
+                    stackIn_6_0 = stackOut_5_0;
+                    break L2;
+                  } else {
+                    stackOut_3_0 = (long)(var1 >>> -6554328);
+                    stackIn_6_0 = stackOut_3_0;
+                    break L2;
+                  }
+                }
+                L3: {
+                  var2 = stackIn_6_0;
+                  var4 = var2 << -6316671;
+                  if (256L <= var4) {
+                    var4 = var4 ^ 285L;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  var6 = var4 << -1747385407;
+                  if (256L > var6) {
+                    break L4;
+                  } else {
+                    var6 = var6 ^ 285L;
+                    break L4;
+                  }
+                }
+                L5: {
+                  var8 = var2 ^ var6;
+                  var10 = var6 << 555409281;
+                  if ((var10 ^ -1L) > -257L) {
+                    break L5;
+                  } else {
+                    var10 = var10 ^ 285L;
+                    break L5;
+                  }
+                }
+                var12 = var2 ^ var10;
+                field_n[0][var0] = hi.a(hi.a(var4 << 1278463816, hi.a(hi.a(var10 << -1981598952, hi.a(hi.a(var6 << -1943898904, hi.a(var2 << -121003344, var2 << 1904724856)), var2 << 517900064)), var8 << -57554160)), var12);
+                var14 = 1;
+                L6: while (true) {
+                  if (var14 >= 8) {
+                    var0++;
+                    continue L0;
+                  } else {
+                    field_n[var14][var0] = hi.a(field_n[-1 + var14][var0] << -1702575496, field_n[-1 + var14][var0] >>> -824773816);
+                    var14++;
+                    continue L6;
+                  }
+                }
               }
             }
-          } else {
-            L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if ((1 & var0) != 0) {
-                stackOut_5_0 = (long)(var1 & 255);
-                stackIn_6_0 = stackOut_5_0;
-                break L2;
-              } else {
-                stackOut_3_0 = (long)(var1 >>> 8);
-                stackIn_6_0 = stackOut_3_0;
-                break L2;
-              }
-            }
-            L3: {
-              var2 = stackIn_6_0;
-              var4 = var2 << 1;
-              if (256L <= var4) {
-                var4 = var4 ^ 285L;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              var6 = var4 << 1;
-              if (256L > var6) {
-                break L4;
-              } else {
-                var6 = var6 ^ 285L;
-                break L4;
-              }
-            }
-            L5: {
-              var8 = var2 ^ var6;
-              var10 = var6 << 1;
-              if (var10 < 256L) {
-                break L5;
-              } else {
-                var10 = var10 ^ 285L;
-                break L5;
-              }
-            }
-            var12 = var2 ^ var10;
-            field_n[0][var0] = hi.a(hi.a(var4 << 8, hi.a(hi.a(var10 << 24, hi.a(hi.a(var6 << 40, hi.a(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)), var12);
-            var14 = 1;
-            L6: while (true) {
-              if (var14 >= 8) {
-                var0++;
-                continue L0;
-              } else {
-                field_n[var14][var0] = hi.a(field_n[-1 + var14][var0] << 56, field_n[-1 + var14][var0] >>> 8);
-                var14++;
-                continue L6;
-              }
-            }
-          }
         }
     }
 }

@@ -15,10 +15,6 @@ final class vb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vb.A(";
     }
 }

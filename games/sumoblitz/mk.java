@@ -17,24 +17,20 @@ final class mk {
     }
 
     protected final void finalize() throws Throwable {
-        ((mk) this).field_c.a(((mk) this).field_b, (byte) -81);
+        this.field_c.a(this.field_b, (byte) -81);
         super.finalize();
     }
 
     mk(fr param0, long param1, int param2) {
         try {
-            ((mk) this).field_c = param0;
-            ((mk) this).field_b = param1;
+            this.field_c = param0;
+            this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

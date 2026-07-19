@@ -97,7 +97,7 @@ final class lha {
             var1 = stackIn_32_0;
             break L0;
           } else {
-            if (var2 == 1) {
+            if (-2 == (var2 ^ -1)) {
               L2: {
                 jga.field_z = kia.a(oaa.field_b, "", "bf_shopping_screen");
                 if (null == jga.field_z) {
@@ -113,7 +113,7 @@ final class lha {
               var1 = stackIn_36_0;
               break L0;
             } else {
-              if (var2 != 2) {
+              if ((var2 ^ -1) != -3) {
                 if (var2 == 3) {
                   L3: {
                     pm.field_z = kia.a(oaa.field_b, "", "bf_main_view2");
@@ -147,7 +147,7 @@ final class lha {
                       var1 = stackIn_52_0;
                       break L0;
                     } else {
-                      if (var2 == 6) {
+                      if (-7 == (var2 ^ -1)) {
                         L5: {
                           wba.field_e[2] = kia.a(oaa.field_b, "", "bf_new_battle2");
                           if (wba.field_e[2] == null) {
@@ -179,7 +179,7 @@ final class lha {
                           var1 = stackIn_60_0;
                           break L0;
                         } else {
-                          if (var2 == 8) {
+                          if (-9 == (var2 ^ -1)) {
                             L7: {
                               nu.field_h = kia.a(oaa.field_b, "", "bf_competition_lose_jingle");
                               if (null == nu.field_h) {
@@ -196,7 +196,7 @@ final class lha {
                             break L0;
                           } else {
                             if (var2 != 9) {
-                              if (var2 != 10) {
+                              if (-11 != (var2 ^ -1)) {
                                 if (var2 == 11) {
                                   L8: {
                                     if (!uf.field_c.a(db.field_a, wc.field_p, ai.field_d, (byte) -98, 22050)) {
@@ -213,7 +213,7 @@ final class lha {
                                   break L0;
                                 } else {
                                   if (var2 != 12) {
-                                    if (var2 == 13) {
+                                    if (-14 == (var2 ^ -1)) {
                                       L9: {
                                         if (!uf.field_c.a(db.field_a, eda.field_i, ai.field_d, (byte) -13, 22050)) {
                                           stackOut_83_0 = 0;
@@ -258,7 +258,7 @@ final class lha {
                                           var1 = stackIn_92_0;
                                           break L0;
                                         } else {
-                                          if (var2 == 16) {
+                                          if ((var2 ^ -1) == -17) {
                                             L12: {
                                               if (!uf.field_c.a(db.field_a, wba.field_e[1], ai.field_d, (byte) -91, 22050)) {
                                                 stackOut_95_0 = 0;
@@ -289,7 +289,7 @@ final class lha {
                                               break L0;
                                             } else {
                                               if (18 != var2) {
-                                                if (var2 != 19) {
+                                                if ((var2 ^ -1) != -20) {
                                                   if (20 == var2) {
                                                     L14: {
                                                       if (!uf.field_c.a(db.field_a, mu.field_d, ai.field_d, (byte) -102, 22050)) {
@@ -435,40 +435,44 @@ final class lha {
           if (param0 > 12) {
             break L22;
           } else {
-            field_b = null;
+            field_b = (po) null;
             break L22;
           }
         }
-        if (var1 == 0) {
+        if (var1 != 0) {
+          kca.field_a = kca.field_a + 1;
           return false;
         } else {
-          kca.field_a = kca.field_a + 1;
           return false;
         }
     }
 
     final void a(boolean param0) {
         if (!param0) {
-            ((lha) this).field_c = -117;
+            this.field_c = -117;
         }
-        dc.field_y[((lha) this).field_g].e((int)((lha) this).field_f + -12, -12 + (int)((lha) this).field_d);
+        dc.field_y[this.field_g].e((int)this.field_f + -12, -12 + (int)this.field_d);
     }
 
     private final boolean a(float param0, float param1, byte param2) {
+        boolean discarded$0 = false;
         if (param2 > -79) {
-            boolean discarded$0 = lha.b(-39);
+            discarded$0 = lha.b(-39);
         }
         return 2.0f > Math.abs(-param1 + param0) ? true : false;
     }
 
     final static int a(byte param0) {
+        if (param0 >= -47) {
+            lha.a(-54);
+        }
         return fga.field_f;
     }
 
     lha(int param0, int param1, int param2) {
-        ((lha) this).field_f = (float)param0;
-        ((lha) this).field_d = (float)param1;
-        ((lha) this).field_g = param2;
+        this.field_f = (float)param0;
+        this.field_d = (float)param1;
+        this.field_g = param2;
         qm.a(4, 7758);
     }
 
@@ -480,20 +484,26 @@ final class lha {
             fs.field_f = fs.field_f + (hga.field_U.field_f + -pda.field_p);
             pda.field_p = hga.field_U.field_f;
         }
-        if (!(eb.field_t <= 0)) {
+        if (param0 <= 59) {
+            field_b = (po) null;
+        }
+        if (!((eb.field_t ^ -1) >= -1)) {
             iv.b(false);
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 1) {
+            field_b = (po) null;
+        }
         field_b = null;
     }
 
     final void c(byte param0) {
         L0: {
-          if (((lha) this).field_e) {
-            ((lha) this).field_d = ((lha) this).field_d + (-((lha) this).field_d + (float)((lha) this).field_a) * 0.1599999964237213f;
-            ((lha) this).field_f = ((lha) this).field_f + ((float)((lha) this).field_c - ((lha) this).field_f) * 0.1599999964237213f;
+          if (this.field_e) {
+            this.field_d = this.field_d + (-this.field_d + (float)this.field_a) * 0.1599999964237213f;
+            this.field_f = this.field_f + ((float)this.field_c - this.field_f) * 0.1599999964237213f;
             break L0;
           } else {
             break L0;
@@ -503,11 +513,11 @@ final class lha {
           return;
         } else {
           L1: {
-            if (!this.a(((lha) this).field_f, (float)((lha) this).field_c, (byte) -103)) {
+            if (!this.a(this.field_f, (float)this.field_c, (byte) -103)) {
               break L1;
             } else {
-              if (this.a(((lha) this).field_d, (float)((lha) this).field_a, (byte) -98)) {
-                ((lha) this).field_e = false;
+              if (this.a(this.field_d, (float)this.field_a, (byte) -98)) {
+                this.field_e = false;
                 break L1;
               } else {
                 break L1;
@@ -519,6 +529,7 @@ final class lha {
     }
 
     final static void a(String param0, java.awt.Color param1, int param2, boolean param3, int param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -603,11 +614,11 @@ final class lha {
                     var10.fillRect(2, 2, 3 * param2, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(2 + 3 * param2, 2, -(3 * param2) + 300, 30);
+                    var10.fillRect(2 + 3 * param2, 2, -(param4 * param2) + 300, 30);
                     var10.setFont(tb.field_b);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (304 + -(6 * param0.length())) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(et.field_m, dda.field_j / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var9.drawImage(et.field_m, dda.field_j / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -654,23 +665,23 @@ final class lha {
           decompiledCaughtException = decompiledCaughtParameter2;
           L10: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5_ref;
+            stackOut_18_0 = (RuntimeException) (var5_ref);
             stackOut_18_1 = new StringBuilder().append("lha.I(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L10;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -679,23 +690,23 @@ final class lha {
             }
           }
           L11: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L11;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -703,7 +714,7 @@ final class lha {
               break L11;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + 3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -712,22 +723,22 @@ final class lha {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_5_0 = null;
-            StringBuilder stackIn_5_1 = null;
-            RuntimeException stackIn_6_0 = null;
-            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
-            String stackIn_7_2 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_4_0 = null;
-            StringBuilder stackOut_4_1 = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
-            String stackOut_6_2 = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            String stackOut_5_2 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
               L0: {
                 try {
@@ -744,37 +755,45 @@ final class lha {
                     break L2;
                   }
                 }
+                L3: {
+                  if (param1 == -17672) {
+                    break L3;
+                  } else {
+                    lha.a(-63);
+                    break L3;
+                  }
+                }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
+              L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var2_ref2;
-                stackOut_4_1 = new StringBuilder().append("lha.E(");
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_6_1 = stackOut_4_1;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
+                stackOut_6_1 = new StringBuilder().append("lha.E(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-                  stackOut_6_2 = "null";
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  stackIn_7_2 = stackOut_6_2;
-                  break L3;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L4;
                 } else {
-                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-                  stackOut_5_2 = "{...}";
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  stackIn_7_2 = stackOut_5_2;
-                  break L3;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L4;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -17672 + ')');
+              throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

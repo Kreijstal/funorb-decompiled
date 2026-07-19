@@ -12,6 +12,9 @@ final class jd {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_e = null;
         field_d = null;
         field_f = null;
@@ -21,10 +24,6 @@ final class jd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jd.A(";
         field_e = new String[]{"By rating", "By win percentage"};
         field_f = "BOMBO";

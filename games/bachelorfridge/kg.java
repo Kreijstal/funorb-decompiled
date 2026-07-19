@@ -20,6 +20,10 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     public static void a(byte param0) {
+        if (param0 != 36) {
+            vr var2 = (vr) null;
+            kg.a((vr) null, -47);
+        }
         field_d = null;
         field_c = null;
         field_a = null;
@@ -28,28 +32,28 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((kg) this).field_f = true;
+            this.field_f = true;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var7 = null;
-        if (gk.field_d != 2) {
+        if ((gk.field_d ^ -1) != param4) {
             var7 = ama.field_k;
         } else {
             var7 = oka.field_t;
         }
-        jna.a(param1, param2, -1, param3, var7, 180, param6, 320);
+        jna.a(param1, param2, -1, param3, var7, param5, param6, param0);
     }
 
     final void a(int param0, ht param1) {
         try {
             int var3_int = 80 / ((-61 - param0) / 41);
-            gv.a(-110, param1, ((kg) this).field_g);
+            gv.a(-110, param1, this.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,6 +77,7 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -92,54 +97,60 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
             ld.field_o = ni.a((byte) 41, var10);
             bd.field_l = new int[var3][];
             gaa.field_i = new ma[var3];
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var3) {
-                var10.i((byte) -86);
-                var9 = 0;
-                var4 = var9;
-                L2: while (true) {
-                  if (var3 <= var9) {
-                    break L0;
-                  } else {
-                    var5 = gaa.field_i[var9];
-                    var5.a(0, 6, 6, 6, 1);
-                    var5.b(117);
-                    var6 = new int[]{var5.field_u + var5.field_A >> 1, var5.field_G - -var5.field_B >> 1, var5.field_q + var5.field_I >> 1};
-                    bd.field_l[var9] = var6;
-                    var5.a(-var6[2], 0, -var6[1], -var6[0]);
-                    var9++;
-                    continue L2;
+            if (param1 >= 110) {
+              var4 = 0;
+              L1: while (true) {
+                if (var4 >= var3) {
+                  var10.i((byte) -86);
+                  var9 = 0;
+                  var4 = var9;
+                  L2: while (true) {
+                    if (var3 <= var9) {
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    } else {
+                      var5 = gaa.field_i[var9];
+                      var5.a(0, 6, 6, 6, 1);
+                      var5.b(117);
+                      var6 = new int[]{var5.field_u + var5.field_A >> 1139542017, var5.field_G - -var5.field_B >> -1853191519, var5.field_q + var5.field_I >> 882145889};
+                      bd.field_l[var9] = var6;
+                      var5.a(-var6[2], 0, -var6[1], -var6[0]);
+                      var9++;
+                      continue L2;
+                    }
                   }
+                } else {
+                  gaa.field_i[var4] = sa.a(false, var8);
+                  var4++;
+                  continue L1;
                 }
-              } else {
-                gaa.field_i[var4] = sa.a(false, var8);
-                var4++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("kg.A(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -147,15 +158,16 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + 112 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Friends";
     }
 }

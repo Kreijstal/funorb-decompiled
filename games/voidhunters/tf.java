@@ -3,6 +3,7 @@
  */
 final class tf {
     final static int a(int param0, int param1, int[] param2) {
+        int discarded$1 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -15,11 +16,9 @@ final class tf {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -48,19 +47,17 @@ final class tf {
               if (param1 <= -25) {
                 break L1;
               } else {
-                var13 = null;
-                int discarded$1 = tf.a(-23, -46, (int[]) null);
+                var13 = (int[]) null;
+                discarded$1 = tf.a(-23, -46, (int[]) null);
                 break L1;
               }
             }
             var6_int = 0;
             L2: while (true) {
               if (param2.length <= var6_int) {
-                var5 = var5 / (param2.length >> 1);
-                var4 = var4 / (param2.length >> 1);
-                var17 = new int[param2.length];
-                var16 = var17;
-                var15 = var16;
+                var5 = var5 / (param2.length >> -1125813791);
+                var4 = var4 / (param2.length >> -1873997695);
+                var15 = new int[param2.length];
                 var14 = var15;
                 var6 = var14;
                 var7 = 0;
@@ -68,13 +65,13 @@ final class tf {
                   if (param2.length <= var7) {
                     var7 = 0;
                     L4: while (true) {
-                      if (var7 >= var17.length + -2) {
+                      if (var7 >= var15.length + -2) {
                         var3_int = var3_int / 2;
                         stackOut_12_0 = var3_int;
                         stackIn_13_0 = stackOut_12_0;
                         break L0;
                       } else {
-                        var8 = var17[var7] >> param0;
+                        var8 = var15[var7] >> param0;
                         var9 = var6[1 + var7] >> param0;
                         var10 = var6[2 + var7] >> param0;
                         var11 = var6[var7 + 3] >> param0;
@@ -104,23 +101,23 @@ final class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
+            stackOut_14_0 = (RuntimeException) (var3);
             stackOut_14_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -128,7 +125,7 @@ final class tf {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
         return stackIn_13_0;
     }

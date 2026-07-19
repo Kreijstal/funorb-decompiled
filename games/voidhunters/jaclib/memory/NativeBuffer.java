@@ -117,7 +117,7 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
         int stackOut_16_4 = 0;
         int stackOut_16_5 = 0;
         L0: {
-          if (((jaclib.memory.NativeBuffer) this).a >= param3 + param2) {
+          if (this.a >= param3 + param2) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -180,7 +180,7 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
           stackIn_10_0 = stackOut_9_0;
           stackIn_10_1 = stackOut_9_1;
           stackIn_10_2 = stackOut_9_2;
-          if (param1 >= 0) {
+          if (-1 >= (param1 ^ -1)) {
             stackOut_11_0 = stackIn_11_0;
             stackOut_11_1 = stackIn_11_1;
             stackOut_11_2 = stackIn_11_2;
@@ -257,7 +257,7 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
           stackIn_16_2 = stackOut_15_2;
           stackIn_16_3 = stackOut_15_3;
           stackIn_16_4 = stackOut_15_4;
-          if (0L != ((jaclib.memory.NativeBuffer) this).b) {
+          if (0L != this.b) {
             stackOut_17_0 = stackIn_17_0;
             stackOut_17_1 = stackIn_17_1;
             stackOut_17_2 = stackIn_17_2;
@@ -290,7 +290,7 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
         if ((stackIn_18_0 | (stackIn_18_1 | (stackIn_18_2 | (stackIn_18_3 | (stackIn_18_4 | stackIn_18_5))))) != 0) {
           throw new RuntimeException();
         } else {
-          this.put(((jaclib.memory.NativeBuffer) this).b, param0, param1, param2, param3);
+          this.put(this.b, param0, param1, param2, param3);
           return;
         }
     }
@@ -298,17 +298,17 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
     private final native void get(long param0, byte[] param1, int param2, int param3, int param4);
 
     protected final void a(long param0, int param1) {
-        ((jaclib.memory.NativeBuffer) this).b = param0;
-        ((jaclib.memory.NativeBuffer) this).a = param1;
+        this.b = param0;
+        this.a = param1;
     }
 
     private final native void put(long param0, byte[] param1, int param2, int param3, int param4);
 
     protected NativeBuffer() {
-        ((jaclib.memory.NativeBuffer) this).a = -1;
+        this.a = -1;
     }
 
     public final int getSize() {
-        return ((jaclib.memory.NativeBuffer) this).a;
+        return this.a;
     }
 }

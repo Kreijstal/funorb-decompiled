@@ -10,13 +10,12 @@ final class aq {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 1) {
+            field_a = (k) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aq.A(";
         field_a = new k(13, 0, 1, 0);
         field_c = false;

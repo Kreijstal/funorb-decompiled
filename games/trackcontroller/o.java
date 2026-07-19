@@ -64,13 +64,12 @@ final class o {
 
     public static void b(byte param0) {
         field_b = null;
+        if (param0 <= 13) {
+            o.a((byte) 109);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = -1;
     }
 }

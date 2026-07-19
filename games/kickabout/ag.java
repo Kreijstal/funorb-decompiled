@@ -13,7 +13,7 @@ final class ag extends gn {
 
     final static hd a(int param0, int param1) {
         hd var2 = new hd((long)param1, (hd) null);
-        var2.field_R = sp.a((byte) 26, 16006912);
+        var2.field_R = sp.a((byte) 26, param0);
         return var2;
     }
 
@@ -27,20 +27,16 @@ final class ag extends gn {
 
     ag(vm param0, gn param1) {
         try {
-            ((ag) this).field_i = param0;
-            ((ag) this).field_j = param0.m();
-            ((ag) this).field_k = param1;
-            ((ag) this).field_i.b(128 + mn.field_a * ((ag) this).field_j >> 8);
+            this.field_i = param0;
+            this.field_j = param0.m();
+            this.field_k = param1;
+            this.field_i.b(128 + mn.field_a * this.field_j >> -1975549464);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "<%0>: Show Chat";
     }
 }

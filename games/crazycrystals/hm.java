@@ -11,26 +11,44 @@ final class hm {
     }
 
     public static void b(int param0) {
+        if (param0 != -2) {
+            hm.a(102);
+            field_c = null;
+            field_a = null;
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     final static void a(int param0) {
+        boolean discarded$2 = false;
+        ng var2 = null;
         pi.field_j = rl.c(-9918);
-        qe.field_g = new ol();
-        vk.a(-40, true, true);
+        if (param0 != -3121) {
+          var2 = (ng) null;
+          discarded$2 = hm.a((ng) null, -93);
+          qe.field_g = new ol();
+          vk.a(param0 ^ 3095, true, true);
+          return;
+        } else {
+          qe.field_g = new ol();
+          vk.a(param0 ^ 3095, true, true);
+          return;
+        }
     }
 
     final static int a(int param0, int param1, int param2) {
+        boolean discarded$2 = false;
         int var3 = 0;
-        Object var4 = null;
+        ng var4 = null;
         if (param1 < 23) {
-          var4 = null;
-          boolean discarded$2 = hm.a((ng) null, 46);
-          var3 = param2 >>> 31;
+          var4 = (ng) null;
+          discarded$2 = hm.a((ng) null, 46);
+          var3 = param2 >>> -935292001;
           return -var3 + (param2 - -var3) / param0;
         } else {
-          var3 = param2 >>> 31;
+          var3 = param2 >>> -935292001;
           return -var3 + (param2 - -var3) / param0;
         }
     }
@@ -64,7 +82,7 @@ final class hm {
           L0: {
             L1: {
               var2_int = param0.h(255);
-              if (param1 != ~var2_int) {
+              if (param1 != (var2_int ^ -1)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -83,23 +101,23 @@ final class hm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("hm.C(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -107,16 +125,12 @@ final class hm {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Click on the spider to find out about it. Many hints are hidden this way.";
     }
 }

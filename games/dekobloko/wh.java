@@ -13,6 +13,9 @@ final class wh {
     public static void a(boolean param0) {
         field_f = null;
         field_e = null;
+        if (!param0) {
+            wh.a(true);
+        }
     }
 
     static {

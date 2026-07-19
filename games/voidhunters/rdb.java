@@ -8,11 +8,12 @@ final class rdb extends ksa implements ntb {
     static String field_f;
 
     final int a(boolean param0) {
+        int discarded$0 = 0;
         if (!param0) {
-            int discarded$0 = ((rdb) this).a(46);
-            return ((rdb) this).field_e;
+            discarded$0 = this.a(46);
+            return this.field_e;
         }
-        return ((rdb) this).field_e;
+        return this.field_e;
     }
 
     final boolean a(int param0, byte param1, int param2) {
@@ -26,8 +27,8 @@ final class rdb extends ksa implements ntb {
           return true;
         } else {
           L0: {
-            var4 = param0 - ((rdb) this).field_e;
-            var5 = param2 - ((rdb) this).field_d;
+            var4 = param0 - this.field_e;
+            var5 = param2 - this.field_d;
             var6 = ar.a(var4, (byte) 106, var5);
             if (51200 <= var6) {
               stackOut_3_0 = 0;
@@ -46,32 +47,33 @@ final class rdb extends ksa implements ntb {
     public final void a(faa param0, boolean param1) {
         try {
             if (param1) {
-                ((rdb) this).field_e = -114;
+                this.field_e = -114;
             }
-            ((rdb) this).field_e = param0.i(0, 32);
-            ((rdb) this).field_d = param0.i(0, 32);
-            ((rdb) this).field_g = param0.i(0, 1);
+            this.field_e = param0.i(0, 32);
+            this.field_d = param0.i(0, 32);
+            this.field_g = param0.i(0, 1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "rdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(lta param0, boolean param1) {
         int var3_int = 0;
         try {
-            var3_int = qpb.a(param1, ((rdb) this).field_g, 13894143);
-            kq.a(param0.field_a * 51200.0f, (byte) 89, param0.b(true, ((rdb) this).field_d), var3_int, param0.a(((rdb) this).field_e, (byte) 121));
+            var3_int = qpb.a(param1, this.field_g, 13894143);
+            kq.a(param0.field_a * 51200.0f, (byte) 89, param0.b(true, this.field_d), var3_int, param0.a(this.field_e, (byte) 121));
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rdb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "rdb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int d(int param0) {
         int var2 = 28 % ((param0 - 55) / 49);
-        return ((rdb) this).field_g;
+        return this.field_g;
     }
 
     final void a(int param0, pe param1) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -95,7 +97,7 @@ final class rdb extends ksa implements ntb {
               if (param0 == 3128) {
                 break L1;
               } else {
-                boolean discarded$2 = ((rdb) this).a(-54, (byte) 92, -6);
+                discarded$2 = this.a(-54, (byte) 92, -6);
                 break L1;
               }
             }
@@ -105,23 +107,23 @@ final class rdb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("rdb.G(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -129,55 +131,61 @@ final class rdb extends ksa implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
             if (param1 >= -109) {
-                ((rdb) this).field_d = -98;
+                this.field_d = -98;
             }
-            param0.a(-632, ((rdb) this).field_e, 32);
-            param0.a(-632, ((rdb) this).field_d, 32);
-            param0.a(-632, ((rdb) this).field_g, 1);
+            param0.a(-632, this.field_e, 32);
+            param0.a(-632, this.field_d, 32);
+            param0.a(-632, this.field_g, 1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "rdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void b(byte param0, tv param1) {
         rdb var6 = null;
         rdb var7 = null;
+        boolean discarded$0 = false;
         try {
-            var6 = (rdb) (Object) param1;
+            var6 = (rdb) ((Object) param1);
             var7 = var6;
-            var7.field_g = ((rdb) this).field_g;
-            var7.field_e = ((rdb) this).field_e;
+            var7.field_g = this.field_g;
+            var7.field_e = this.field_e;
             if (param0 < 54) {
-                Object var4 = null;
-                boolean discarded$0 = ((rdb) this).a((byte) 14, (tv) null);
+                tv var4 = (tv) null;
+                discarded$0 = this.a((byte) 14, (tv) null);
             }
-            var7.field_d = ((rdb) this).field_d;
+            var7.field_d = this.field_d;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rdb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "rdb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, byte param1) {
         int var3 = -111 % ((param1 - -20) / 61);
-        ((rdb) this).field_g = param0;
+        this.field_g = param0;
     }
 
     final int a(int param0) {
         if (param0 < 56) {
-            ((rdb) this).field_d = -12;
-            return ((rdb) this).field_d;
+            this.field_d = -12;
+            return this.field_d;
         }
-        return ((rdb) this).field_d;
+        return this.field_d;
     }
 
     public static void c(int param0) {
+        if (param0 != 51200) {
+            field_f = (String) null;
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 
@@ -209,14 +217,14 @@ final class rdb extends ksa implements ntb {
             L1: {
               L2: {
                 var3_int = 28 % ((22 - param0) / 59);
-                var4 = (rdb) (Object) param1;
-                if (((rdb) this).field_e != var4.field_e) {
+                var4 = (rdb) ((Object) param1);
+                if (this.field_e != var4.field_e) {
                   break L2;
                 } else {
-                  if (var4.field_d != ((rdb) this).field_d) {
+                  if (var4.field_d != this.field_d) {
                     break L2;
                   } else {
-                    if (var4.field_g == ((rdb) this).field_g) {
+                    if (var4.field_g == this.field_g) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -236,23 +244,23 @@ final class rdb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("rdb.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -260,7 +268,7 @@ final class rdb extends ksa implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -269,9 +277,9 @@ final class rdb extends ksa implements ntb {
     }
 
     rdb(int param0, int param1, int param2) {
-        ((rdb) this).field_g = param2;
-        ((rdb) this).field_d = param1;
-        ((rdb) this).field_e = param0;
+        this.field_g = param2;
+        this.field_d = param1;
+        this.field_e = param0;
     }
 
     public final void a(tv param0, int param1) {
@@ -285,6 +293,7 @@ final class rdb extends ksa implements ntb {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -296,30 +305,30 @@ final class rdb extends ksa implements ntb {
         String stackOut_14_2 = null;
         try {
           L0: {
-            var5 = (rdb) (Object) param0;
+            var5 = (rdb) ((Object) param0);
             if (param1 < -19) {
               L1: {
                 var4 = 0;
-                if (((rdb) this).field_e == var5.field_e) {
+                if (this.field_e == var5.field_e) {
                   break L1;
                 } else {
-                  System.out.println("int x has changed. before=" + var5.field_e + ", now=" + ((rdb) this).field_e);
+                  System.out.println("int x has changed. before=" + var5.field_e + ", now=" + this.field_e);
                   var4 = 1;
                   break L1;
                 }
               }
               L2: {
-                if (((rdb) this).field_d != var5.field_d) {
+                if (this.field_d != var5.field_d) {
                   var4 = 1;
-                  System.out.println("int y has changed. before=" + var5.field_d + ", now=" + ((rdb) this).field_d);
+                  System.out.println("int y has changed. before=" + var5.field_d + ", now=" + this.field_d);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                if (var5.field_g != ((rdb) this).field_g) {
-                  System.out.println("int team has changed. before=" + var5.field_g + ", now=" + ((rdb) this).field_g);
+                if (var5.field_g != this.field_g) {
+                  System.out.println("int team has changed. before=" + var5.field_g + ", now=" + this.field_g);
                   var4 = 1;
                   break L3;
                 } else {
@@ -327,36 +336,38 @@ final class rdb extends ksa implements ntb {
                 }
               }
               if (var4 == 0) {
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 System.out.println("This instance of SpawnPoint has changed");
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("rdb.F(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -364,15 +375,16 @@ final class rdb extends ksa implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "You can ask to join this game";
     }
 }

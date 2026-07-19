@@ -19,7 +19,7 @@ final class wj {
           }
         }
         if (kb.field_a != null) {
-          var1 = (Object) (Object) kb.field_a;
+          var1 = kb.field_a;
           synchronized (var1) {
             L1: {
               kb.field_a = null;
@@ -33,15 +33,14 @@ final class wj {
     }
 
     public static void a(int param0) {
+        if (param0 >= -78) {
+            return;
+        }
         field_a = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Achieved";
         field_b = 10;
     }

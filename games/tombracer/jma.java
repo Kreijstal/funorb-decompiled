@@ -21,53 +21,68 @@ final class jma implements noa {
 
     final void a(ew param0, byte param1, kh param2) {
         try {
-            ((jma) this).field_d.a(30489, param0, param2);
-            param2.a((byte) -127, ((jma) this).field_e, 8);
-            param2.a((byte) -45, ((jma) this).field_k, 8);
-            param2.a((byte) -125, ((jma) this).field_i, 8);
+            this.field_d.a(30489, param0, param2);
+            param2.a((byte) -127, this.field_e, 8);
+            param2.a((byte) -45, this.field_k, 8);
+            param2.a((byte) -125, this.field_i, 8);
             if (param1 <= 65) {
-                Object var5 = null;
-                ((jma) this).a((ew) null, (byte) 97, (kh) null);
+                kh var5 = (kh) null;
+                this.a((ew) null, (byte) 97, (kh) null);
             }
-            param2.a((byte) -126, ((jma) this).field_l, 8);
-            param2.a((byte) -45, ((jma) this).field_f, 8);
-            param2.a((byte) 77, ((jma) this).field_m ? 1 : 0, 1);
-            param2.a((byte) -127, ((jma) this).field_p ? 1 : 0, 1);
-            param2.a((byte) -126, ((jma) this).field_c, 4);
+            param2.a((byte) -126, this.field_l, 8);
+            param2.a((byte) -45, this.field_f, 8);
+            param2.a((byte) 77, this.field_m ? 1 : 0, 1);
+            param2.a((byte) -127, this.field_p ? 1 : 0, 1);
+            param2.a((byte) -126, this.field_c, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jma.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "jma.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void c(byte param0) {
-        ((jma) this).field_n = 3;
+        if (param0 >= -63) {
+            return;
+        }
+        this.field_n = 3;
     }
 
     final void b(int param0, int param1) {
         if (param1 < 50) {
             return;
         }
-        ((jma) this).field_c = param0;
+        this.field_c = param0;
     }
 
     private final void e(byte param0) {
         if (param0 == -102) {
-          if (((jma) this).field_l <= 0) {
+          if ((this.field_l ^ -1) >= -1) {
             this.a(8);
-            return;
+            if (TombRacer.field_G) {
+              this.field_n = 4;
+              this.field_b = this.field_l;
+              return;
+            } else {
+              return;
+            }
           } else {
-            ((jma) this).field_n = 4;
-            ((jma) this).field_b = ((jma) this).field_l;
+            this.field_n = 4;
+            this.field_b = this.field_l;
             return;
           }
         } else {
-          ((jma) this).a(-19, 46, -116, 50, -114, 44);
-          if (((jma) this).field_l <= 0) {
+          this.a(-19, 46, -116, 50, -114, 44);
+          if ((this.field_l ^ -1) >= -1) {
             this.a(8);
-            return;
+            if (!TombRacer.field_G) {
+              return;
+            } else {
+              this.field_n = 4;
+              this.field_b = this.field_l;
+              return;
+            }
           } else {
-            ((jma) this).field_n = 4;
-            ((jma) this).field_b = ((jma) this).field_l;
+            this.field_n = 4;
+            this.field_b = this.field_l;
             return;
           }
         }
@@ -76,6 +91,9 @@ final class jma implements noa {
     public static void e(int param0) {
         field_a = null;
         field_h = null;
+        if (param0 <= 39) {
+            return;
+        }
         field_o = null;
         field_j = null;
     }
@@ -85,9 +103,9 @@ final class jma implements noa {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == 4) {
-          if (((jma) this).field_n != 1) {
-            if (((jma) this).field_n != 2) {
-              if (((jma) this).field_n == 3) {
+          if ((this.field_n ^ -1) != -2) {
+            if (this.field_n != 2) {
+              if (this.field_n == 3) {
                 return true;
               } else {
                 return false;
@@ -99,13 +117,13 @@ final class jma implements noa {
             return true;
           }
         } else {
-          field_j = null;
-          if (((jma) this).field_n != 1) {
-            if (((jma) this).field_n == 2) {
+          field_j = (cn) null;
+          if ((this.field_n ^ -1) != -2) {
+            if (this.field_n == 2) {
               return true;
             } else {
               L0: {
-                if (((jma) this).field_n != 3) {
+                if (this.field_n != 3) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -124,21 +142,45 @@ final class jma implements noa {
     }
 
     jma(int param0) {
-        this(param0, new lj[0]);
+        this(param0, new lj[]{});
     }
 
     private final void a(int param0) {
-        if (((jma) this).field_k > 0) {
-            ((jma) this).field_b = ((jma) this).field_k;
-            ((jma) this).field_n = 5;
+        if (param0 == 8) {
+          if ((this.field_k ^ -1) < -1) {
+            this.field_b = this.field_k;
+            this.field_n = 5;
+            if (TombRacer.field_G) {
+              this.a((byte) 63);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            this.a((byte) 63);
             return;
+          }
+        } else {
+          this.e((byte) 60);
+          if ((this.field_k ^ -1) < -1) {
+            this.field_b = this.field_k;
+            this.field_n = 5;
+            if (!TombRacer.field_G) {
+              return;
+            } else {
+              this.a((byte) 63);
+              return;
+            }
+          } else {
+            this.a((byte) 63);
+            return;
+          }
         }
-        this.a((byte) 63);
     }
 
     private final void g(int param0) {
-        ((jma) this).field_n = 3;
-        if (!(!((jma) this).field_m)) {
+        this.field_n = 3;
+        if (!(!this.field_m)) {
             this.d((byte) -70);
         }
         if (param0 <= 49) {
@@ -148,10 +190,10 @@ final class jma implements noa {
     }
 
     private final void a(byte param0) {
-        ((jma) this).field_n = 0;
-        ((jma) this).field_b = ((jma) this).field_f;
+        this.field_n = 0;
+        this.field_b = this.field_f;
         int var2 = 101 % ((param0 - -2) / 52);
-        if (!(!((jma) this).field_p)) {
+        if (!(!this.field_p)) {
             this.d((byte) -70);
         }
     }
@@ -159,28 +201,34 @@ final class jma implements noa {
     final void a(byte param0, ew param1) {
         try {
             if (param0 != 48) {
-                field_j = null;
+                field_j = (cn) null;
             }
-            ((jma) this).field_d.a(param1, 8);
+            this.field_d.a(param1, 8);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jma.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "jma.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final koa h(int param0) {
         if (param0 != 1) {
             this.e((byte) -23);
-            return ((jma) this).field_d;
+            return this.field_d;
         }
-        return ((jma) this).field_d;
+        return this.field_d;
     }
 
     private final boolean b(boolean param0) {
-        if (((jma) this).field_b <= 0) {
-            return true;
+        if (-1 > (this.field_b ^ -1)) {
+          this.field_b = this.field_b - 1;
+          if (!param0) {
+            this.field_b = 15;
+            return false;
+          } else {
+            return false;
+          }
+        } else {
+          return true;
         }
-        ((jma) this).field_b = ((jma) this).field_b - 1;
-        return false;
     }
 
     final boolean b(byte param0) {
@@ -188,9 +236,9 @@ final class jma implements noa {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 >= 70) {
-          if (((jma) this).field_n != 3) {
-            if (((jma) this).field_n != 4) {
-              if (5 == ((jma) this).field_n) {
+          if (this.field_n != 3) {
+            if ((this.field_n ^ -1) != -5) {
+              if (5 == this.field_n) {
                 return true;
               } else {
                 return false;
@@ -202,13 +250,13 @@ final class jma implements noa {
             return true;
           }
         } else {
-          field_h = null;
-          if (((jma) this).field_n != 3) {
-            if (((jma) this).field_n == 4) {
+          field_h = (String) null;
+          if (this.field_n != 3) {
+            if ((this.field_n ^ -1) == -5) {
               return true;
             } else {
               L0: {
-                if (5 != ((jma) this).field_n) {
+                if (5 != this.field_n) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -230,80 +278,344 @@ final class jma implements noa {
         int var3 = 0;
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (((jma) this).field_g) {
+        if (this.field_g) {
           return;
         } else {
           if (param0 == -14) {
-            var3 = ((jma) this).field_n;
-            if (var3 == 0) {
-              if (this.b(true)) {
-                if (!param1) {
-                  return;
-                } else {
-                  this.f(param0 + -86);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              if (1 != var3) {
-                if (var3 == 2) {
-                  if (!this.b(true)) {
-                    return;
-                  } else {
-                    this.g(103);
-                    return;
-                  }
-                } else {
-                  if (var3 != 3) {
-                    if (4 != var3) {
-                      if (5 == var3) {
-                        if (!this.b(true)) {
-                          return;
-                        } else {
-                          this.a((byte) 122);
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (!param1) {
-                        if (!this.b(true)) {
-                          return;
-                        } else {
-                          this.a(8);
-                          return;
-                        }
-                      } else {
-                        this.c((byte) -69);
-                        return;
-                      }
-                    }
-                  } else {
+            L0: {
+              L1: {
+                var3 = this.field_n;
+                if (var3 == 0) {
+                  if (this.b(true)) {
                     if (param1) {
+                      this.f(param0 + -86);
+                      if (var4 != 0) {
+                        break L1;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  if (1 == var3) {
+                    if (var4 == 0) {
+                      break L1;
+                    } else {
+                      L2: {
+                        if ((var3 ^ -1) == -3) {
+                          if (this.b(true)) {
+                            this.g(103);
+                            if (var4 == 0) {
+                              break L0;
+                            } else {
+                              break L2;
+                            }
+                          } else {
+                            return;
+                          }
+                        } else {
+                          if (var3 == 3) {
+                            if (var4 == 0) {
+                              break L2;
+                            } else {
+                              if (4 != var3) {
+                                if (5 == var3) {
+                                  if (this.b(true)) {
+                                    this.a((byte) 122);
+                                    break L0;
+                                  } else {
+                                    return;
+                                  }
+                                } else {
+                                  return;
+                                }
+                              } else {
+                                if (5 == var3) {
+                                  if (this.b(true)) {
+                                    this.a((byte) 122);
+                                    return;
+                                  } else {
+                                    return;
+                                  }
+                                } else {
+                                  return;
+                                }
+                              }
+                            }
+                          } else {
+                            L3: {
+                              if (4 != var3) {
+                                break L3;
+                              } else {
+                                break L3;
+                              }
+                            }
+                            if (5 == var3) {
+                              if (!this.b(true)) {
+                                return;
+                              } else {
+                                this.a((byte) 122);
+                                return;
+                              }
+                            } else {
+                              return;
+                            }
+                          }
+                        }
+                      }
+                      if (!param1) {
+                        this.e((byte) -102);
+                        if (var4 == 0) {
+                          break L0;
+                        } else {
+                          L4: {
+                            if (param1) {
+                              break L4;
+                            } else {
+                              if (this.b(true)) {
+                                this.a(8);
+                                if (var4 == 0) {
+                                  break L0;
+                                } else {
+                                  break L4;
+                                }
+                              } else {
+                                return;
+                              }
+                            }
+                          }
+                          this.c((byte) -69);
+                          if (var4 == 0) {
+                            break L0;
+                          } else {
+                            L5: {
+                              if (this.b(true)) {
+                                this.a((byte) 122);
+                                break L5;
+                              } else {
+                                break L5;
+                              }
+                            }
+                            return;
+                          }
+                        }
+                      } else {
+                        return;
+                      }
+                    }
+                  } else {
+                    L6: {
+                      L7: {
+                        if ((var3 ^ -1) == -3) {
+                          if (this.b(true)) {
+                            this.g(103);
+                            if (var4 != 0) {
+                              break L7;
+                            } else {
+                              return;
+                            }
+                          } else {
+                            return;
+                          }
+                        } else {
+                          L8: {
+                            if (var3 != 3) {
+                              break L8;
+                            } else {
+                              if (var4 == 0) {
+                                break L7;
+                              } else {
+                                break L8;
+                              }
+                            }
+                          }
+                          L9: {
+                            if (4 != var3) {
+                              break L9;
+                            } else {
+                              if (var4 == 0) {
+                                break L6;
+                              } else {
+                                break L9;
+                              }
+                            }
+                          }
+                          if (5 == var3) {
+                            if (!this.b(true)) {
+                              return;
+                            } else {
+                              this.a((byte) 122);
+                              return;
+                            }
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                      if (!param1) {
+                        this.e((byte) -102);
+                        if (var4 != 0) {
+                          break L6;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        return;
+                      }
+                    }
+                    L10: {
+                      if (param1) {
+                        break L10;
+                      } else {
+                        if (this.b(true)) {
+                          this.a(8);
+                          if (var4 != 0) {
+                            break L10;
+                          } else {
+                            return;
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    this.c((byte) -69);
+                    if (var4 != 0) {
+                      L11: {
+                        if (this.b(true)) {
+                          this.a((byte) 122);
+                          break L11;
+                        } else {
+                          break L11;
+                        }
+                      }
                       return;
                     } else {
-                      this.e((byte) -102);
                       return;
                     }
                   }
                 }
-              } else {
-                if (param1) {
-                  if (!this.b(true)) {
+              }
+              if (!param1) {
+                this.c(param0 ^ 8182);
+                if (var4 == 0) {
+                  break L0;
+                } else {
+                  if (this.b(true)) {
+                    L12: {
+                      this.g(103);
+                      if (var4 == 0) {
+                        break L12;
+                      } else {
+                        if (!param1) {
+                          this.e((byte) -102);
+                          if (var4 == 0) {
+                            break L12;
+                          } else {
+                            L13: {
+                              if (param1) {
+                                break L13;
+                              } else {
+                                if (this.b(true)) {
+                                  this.a(8);
+                                  if (var4 == 0) {
+                                    break L12;
+                                  } else {
+                                    break L13;
+                                  }
+                                } else {
+                                  return;
+                                }
+                              }
+                            }
+                            this.c((byte) -69);
+                            if (var4 == 0) {
+                              break L12;
+                            } else {
+                              if (this.b(true)) {
+                                this.a((byte) 122);
+                                break L12;
+                              } else {
+                                return;
+                              }
+                            }
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    }
                     return;
                   } else {
-                    this.d(-121);
+                    return;
+                  }
+                }
+              } else {
+                if (this.b(true)) {
+                  this.d(-121);
+                  if (var4 != 0) {
+                    this.c(param0 ^ 8182);
+                    if (this.b(true)) {
+                      this.g(103);
+                      if (var4 != 0) {
+                        if (!param1) {
+                          this.e((byte) -102);
+                          if (var4 != 0) {
+                            L14: {
+                              L15: {
+                                if (param1) {
+                                  break L15;
+                                } else {
+                                  if (this.b(true)) {
+                                    this.a(8);
+                                    if (var4 == 0) {
+                                      break L14;
+                                    } else {
+                                      break L15;
+                                    }
+                                  } else {
+                                    return;
+                                  }
+                                }
+                              }
+                              this.c((byte) -69);
+                              if (var4 == 0) {
+                                break L14;
+                              } else {
+                                if (this.b(true)) {
+                                  this.a((byte) 122);
+                                  break L14;
+                                } else {
+                                  return;
+                                }
+                              }
+                            }
+                            return;
+                          } else {
+                            return;
+                          }
+                        } else {
+                          return;
+                        }
+                      } else {
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
+                  } else {
                     return;
                   }
                 } else {
-                  this.c(param0 ^ 8182);
                   return;
                 }
               }
             }
+            return;
           } else {
             return;
           }
@@ -312,10 +624,10 @@ final class jma implements noa {
 
     final boolean a(boolean param0) {
         if (!param0) {
-            ((jma) this).field_g = true;
-            return ((jma) this).field_p;
+            this.field_g = true;
+            return this.field_p;
         }
-        return ((jma) this).field_p;
+        return this.field_p;
     }
 
     final boolean f(byte param0) {
@@ -327,13 +639,20 @@ final class jma implements noa {
 
     private final void f(int param0) {
         int var2 = 0;
-        if (((jma) this).field_i <= 0) {
+        if (this.field_i <= 0) {
           this.d(-125);
-          var2 = 109 % ((param0 - -20) / 61);
-          return;
+          if (TombRacer.field_G) {
+            this.field_n = 1;
+            this.field_b = this.field_i;
+            var2 = 109 % ((param0 - -20) / 61);
+            return;
+          } else {
+            var2 = 109 % ((param0 - -20) / 61);
+            return;
+          }
         } else {
-          ((jma) this).field_n = 1;
-          ((jma) this).field_b = ((jma) this).field_i;
+          this.field_n = 1;
+          this.field_b = this.field_i;
           var2 = 109 % ((param0 - -20) / 61);
           return;
         }
@@ -344,45 +663,53 @@ final class jma implements noa {
         int var4 = 0;
         int var6 = 0;
         lj[] var7 = null;
-        lj[] var21 = null;
-        lj var22 = null;
-        lj[] var24 = null;
-        lj var27 = null;
-        lj[] var29 = null;
-        lj var30 = null;
-        lj[] var31 = null;
-        lj var32 = null;
+        lj[] var8 = null;
+        lj var9 = null;
+        lj[] var10 = null;
+        lj var11 = null;
+        lj[] var12 = null;
+        lj var13 = null;
+        lj[] var14 = null;
+        lj var15 = null;
         L0: {
           var6 = TombRacer.field_G ? 1 : 0;
-          if (((jma) this).field_c <= 0) {
+          if ((this.field_c ^ -1) >= -1) {
             break L0;
           } else {
-            ((jma) this).field_c = ((jma) this).field_c - 1;
-            if (((jma) this).field_c == 0) {
-              ((jma) this).field_g = true;
+            this.field_c = this.field_c - 1;
+            if (-1 == (this.field_c ^ -1)) {
+              this.field_g = true;
               break L0;
             } else {
               if (param0 != -70) {
-                field_o = null;
-                if (null != ((jma) this).field_d) {
-                  var7 = ((jma) this).field_d.c(1);
-                  var24 = var7;
+                field_o = (String) null;
+                if (null != this.field_d) {
+                  var7 = this.field_d.c(1);
+                  var10 = var7;
                   var3 = var7;
                   var4 = 0;
                   L1: while (true) {
-                    if (var24.length > var4) {
-                      L2: {
-                        var27 = var24[var4];
-                        if (var27 != null) {
-                          var27.m(119);
-                          break L2;
-                        } else {
-                          var4++;
-                          break L2;
+                    if (var10.length > var4) {
+                      var11 = var10[var4];
+                      if (var6 == 0) {
+                        L2: {
+                          if (var11 != null) {
+                            var11.m(119);
+                            break L2;
+                          } else {
+                            if (var6 == 0) {
+                              break L2;
+                            } else {
+                              var11.m(119);
+                              break L2;
+                            }
+                          }
                         }
+                        var4++;
+                        continue L1;
+                      } else {
+                        return;
                       }
-                      var4++;
-                      continue L1;
                     } else {
                       return;
                     }
@@ -391,33 +718,37 @@ final class jma implements noa {
                   return;
                 }
               } else {
-                if (null != ((jma) this).field_d) {
-                  L3: {
-                    var7 = ((jma) this).field_d.c(1);
-                    var21 = var7;
-                    var3 = var7;
-                    var4 = 0;
-                    if (var21.length <= var4) {
-                      break L3;
-                    } else {
-                      L4: {
-                        var22 = var21[var4];
-                        if (var22 != null) {
-                          var22.m(119);
-                          var4++;
-                          break L4;
-                        } else {
-                          var4++;
-                          break L4;
+                if (null != this.field_d) {
+                  var7 = this.field_d.c(1);
+                  var8 = var7;
+                  var3 = var7;
+                  var4 = 0;
+                  L3: while (true) {
+                    if (var8.length > var4) {
+                      var9 = var8[var4];
+                      if (var6 == 0) {
+                        L4: {
+                          if (var9 != null) {
+                            var9.m(119);
+                            break L4;
+                          } else {
+                            if (var6 == 0) {
+                              break L4;
+                            } else {
+                              var9.m(119);
+                              break L4;
+                            }
+                          }
                         }
+                        var4++;
+                        continue L3;
+                      } else {
+                        return;
                       }
-                      var4++;
-                      var4++;
-                      var4++;
-                      break L3;
+                    } else {
+                      return;
                     }
                   }
-                  return;
                 } else {
                   return;
                 }
@@ -426,51 +757,69 @@ final class jma implements noa {
           }
         }
         if (param0 == -70) {
-          if (null != ((jma) this).field_d) {
-            var7 = ((jma) this).field_d.c(1);
-            var31 = var7;
+          if (null != this.field_d) {
+            var7 = this.field_d.c(1);
+            var14 = var7;
             var4 = 0;
             L5: while (true) {
-              if (var31.length <= var4) {
-                return;
-              } else {
-                var32 = var31[var4];
-                if (var32 != null) {
-                  var32.m(119);
+              if (var14.length > var4) {
+                var15 = var14[var4];
+                if (var6 == 0) {
+                  L6: {
+                    if (var15 != null) {
+                      var15.m(119);
+                      break L6;
+                    } else {
+                      if (var6 == 0) {
+                        break L6;
+                      } else {
+                        var15.m(119);
+                        break L6;
+                      }
+                    }
+                  }
                   var4++;
                   continue L5;
                 } else {
-                  var4++;
-                  var4++;
-                  continue L5;
+                  return;
                 }
+              } else {
+                return;
               }
             }
           } else {
             return;
           }
         } else {
-          field_o = null;
-          if (null != ((jma) this).field_d) {
-            var7 = ((jma) this).field_d.c(1);
-            var29 = var7;
+          field_o = (String) null;
+          if (null != this.field_d) {
+            var7 = this.field_d.c(1);
+            var12 = var7;
             var4 = 0;
-            L6: while (true) {
-              if (var29.length <= var4) {
-                return;
-              } else {
-                L7: {
-                  var30 = var29[var4];
-                  if (var30 != null) {
-                    var30.m(119);
-                    break L7;
-                  } else {
-                    var4++;
-                    break L7;
+            L7: while (true) {
+              if (var12.length > var4) {
+                var13 = var12[var4];
+                if (var6 == 0) {
+                  L8: {
+                    if (var13 != null) {
+                      var13.m(119);
+                      break L8;
+                    } else {
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        var13.m(119);
+                        break L8;
+                      }
+                    }
                   }
+                  var4++;
+                  continue L7;
+                } else {
+                  return;
                 }
-                var4++;
-                continue L6;
+              } else {
+                return;
               }
             }
           } else {
@@ -483,25 +832,35 @@ final class jma implements noa {
         if (param0 != -8188) {
             return;
         }
-        ((jma) this).field_n = 0;
+        this.field_n = 0;
     }
 
     private final void d(int param0) {
         if (param0 <= -119) {
-          if (-1 < ((jma) this).field_e) {
-            ((jma) this).field_b = ((jma) this).field_e;
-            ((jma) this).field_n = 2;
-            return;
+          if (-1 > (this.field_e ^ -1)) {
+            this.field_b = this.field_e;
+            this.field_n = 2;
+            if (TombRacer.field_G) {
+              this.g(69);
+              return;
+            } else {
+              return;
+            }
           } else {
             this.g(69);
             return;
           }
         } else {
-          ((jma) this).field_b = -37;
-          if (-1 > ((jma) this).field_e) {
-            ((jma) this).field_b = ((jma) this).field_e;
-            ((jma) this).field_n = 2;
-            return;
+          this.field_b = -37;
+          if (-1 > (this.field_e ^ -1)) {
+            this.field_b = this.field_e;
+            this.field_n = 2;
+            if (!TombRacer.field_G) {
+              return;
+            } else {
+              this.g(69);
+              return;
+            }
           } else {
             this.g(69);
             return;
@@ -510,42 +869,42 @@ final class jma implements noa {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((jma) this).field_l = param1;
+        this.field_l = param1;
         if (param4 != 5) {
           this.d((byte) -52);
-          ((jma) this).field_f = param2;
-          ((jma) this).field_k = param3;
-          ((jma) this).field_i = param0;
-          ((jma) this).field_e = param5;
+          this.field_f = param2;
+          this.field_k = param3;
+          this.field_i = param0;
+          this.field_e = param5;
           return;
         } else {
-          ((jma) this).field_f = param2;
-          ((jma) this).field_k = param3;
-          ((jma) this).field_i = param0;
-          ((jma) this).field_e = param5;
+          this.field_f = param2;
+          this.field_k = param3;
+          this.field_i = param0;
+          this.field_e = param5;
           return;
         }
     }
 
     private jma(int param0, lj[] param1) {
-        ((jma) this).field_p = false;
-        ((jma) this).field_m = true;
+        this.field_p = false;
+        this.field_m = true;
         try {
-            ((jma) this).field_d = new koa(param0, 0);
-            ((jma) this).field_d.a(9, param1);
+            this.field_d = new koa(param0, 0);
+            this.field_d.a(9, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jma.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "jma.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int a(int param0, int param1) {
-        param1 = fs.a((byte) 85, param1, ((jma) this).field_n);
+        param1 = fs.a((byte) 85, param1, this.field_n);
         if (param0 <= 59) {
-          ((jma) this).field_c = 32;
-          param1 = fs.a((byte) 93, param1, ((jma) this).field_b);
+          this.field_c = 32;
+          param1 = fs.a((byte) 93, param1, this.field_b);
           return param1;
         } else {
-          param1 = fs.a((byte) 93, param1, ((jma) this).field_b);
+          param1 = fs.a((byte) 93, param1, this.field_b);
           return param1;
         }
     }
@@ -601,26 +960,33 @@ final class jma implements noa {
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         String stackOut_16_2 = null;
-        ((jma) this).field_p = false;
-        ((jma) this).field_m = true;
+        this.field_p = false;
+        this.field_m = true;
         try {
           L0: {
             L1: {
-              ((jma) this).field_d = new koa(param0, 0, param1.field_E, param2);
-              if (param1.field_E > 9) {
-                ((jma) this).field_e = param2.b((byte) 44, 8);
-                ((jma) this).field_k = param2.b((byte) 44, 8);
-                ((jma) this).field_i = param2.b((byte) 44, 8);
-                ((jma) this).field_l = param2.b((byte) 44, 8);
-                ((jma) this).field_f = param2.b((byte) 44, 8);
-                break L1;
-              } else {
-                ((jma) this).field_e = param2.b((byte) 44, 8);
-                ((jma) this).field_k = param2.b((byte) 44, 8);
-                break L1;
+              L2: {
+                this.field_d = new koa(param0, 0, param1.field_E, param2);
+                if (param1.field_E > 9) {
+                  break L2;
+                } else {
+                  this.field_e = param2.b((byte) 44, 8);
+                  this.field_k = param2.b((byte) 44, 8);
+                  if (!TombRacer.field_G) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
               }
+              this.field_e = param2.b((byte) 44, 8);
+              this.field_k = param2.b((byte) 44, 8);
+              this.field_i = param2.b((byte) 44, 8);
+              this.field_l = param2.b((byte) 44, 8);
+              this.field_f = param2.b((byte) 44, 8);
+              break L1;
             }
-            L2: {
+            L3: {
               stackOut_4_0 = this;
               stackIn_6_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
@@ -629,96 +995,97 @@ final class jma implements noa {
                 stackOut_6_1 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
-                break L2;
+                break L3;
               } else {
                 stackOut_5_0 = this;
                 stackOut_5_1 = 0;
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
-                break L2;
+                break L3;
               }
             }
-            L3: {
-              ((jma) this).field_m = stackIn_7_1 != 0;
+            L4: {
+              ((jma) (this)).field_m = stackIn_7_1 != 0;
               stackOut_7_0 = this;
               stackIn_9_0 = stackOut_7_0;
               stackIn_8_0 = stackOut_7_0;
-              if (param2.b((byte) 44, 1) == 1) {
+              if ((param2.b((byte) 44, 1) ^ -1) == -2) {
                 stackOut_9_0 = this;
                 stackOut_9_1 = 1;
                 stackIn_10_0 = stackOut_9_0;
                 stackIn_10_1 = stackOut_9_1;
-                break L3;
+                break L4;
               } else {
                 stackOut_8_0 = this;
                 stackOut_8_1 = 0;
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
-                break L3;
+                break L4;
               }
             }
-            ((jma) this).field_p = stackIn_10_1 != 0;
-            ((jma) this).field_c = param2.b((byte) 44, 4);
+            ((jma) (this)).field_p = stackIn_10_1 != 0;
+            this.field_c = param2.b((byte) 44, 4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("jma.<init>(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
               stackIn_15_2 = stackOut_13_2;
-              break L4;
+              break L5;
             }
           }
-          L5: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+          L6: {
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
-              break L5;
+              break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
               stackIn_18_2 = stackOut_16_2;
-              break L5;
+              break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
     final void a(int param0, boolean param1) {
+        boolean discarded$4 = false;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
@@ -739,7 +1106,7 @@ final class jma implements noa {
         int stackOut_2_1 = 0;
         if (param0 != -2) {
           L0: {
-            boolean discarded$4 = this.b(true);
+            discarded$4 = this.b(true);
             stackOut_5_0 = this;
             stackIn_7_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
@@ -757,7 +1124,7 @@ final class jma implements noa {
               break L0;
             }
           }
-          ((jma) this).field_p = stackIn_8_1 != 0;
+          ((jma) (this)).field_p = stackIn_8_1 != 0;
           return;
         } else {
           L1: {
@@ -778,16 +1145,12 @@ final class jma implements noa {
               break L1;
             }
           }
-          ((jma) this).field_p = stackIn_4_1 != 0;
+          ((jma) (this)).field_p = stackIn_4_1 != 0;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
         field_h = "Create unrated game";
     }

@@ -16,33 +16,36 @@ abstract class ib implements dg {
         try {
             while (true) {
                 param4--;
-                if (param4 < 0) {
+                if (-1 < (param4 ^ -1)) {
                     break;
                 }
                 var9 = param1;
                 int[] var5 = var9;
                 var6 = param2;
                 var7 = param3;
-                var9[var6] = var7 + cd.a(var9[var6] >> 1, 8355711);
+                var9[var6] = var7 + cd.a(var9[var6] >> -453107103, 8355711);
                 param2++;
             }
             int var5_int = -30 % ((-2 - param0) / 40);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ib.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ib.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_d = null;
+        if (!param0) {
+            field_c = -26;
+        }
     }
 
     public final String c(int param0) {
-        if (!((ib) this).a(-26556)) {
-          if (oa.a(param0 ^ 25670) >= 350L + ((ib) this).field_b) {
+        if (!this.a(-26556)) {
+          if (oa.a(param0 ^ 25670) >= 350L + this.field_b) {
             if (param0 != -21666) {
-              return null;
+              return (String) null;
             } else {
-              return ((ib) this).b((byte) -103);
+              return this.b((byte) -103);
             }
           } else {
             return null;
@@ -55,7 +58,7 @@ abstract class ib implements dg {
     abstract String b(byte param0);
 
     public final void b(int param0) {
-        ((ib) this).field_b = oa.a(param0 ^ 23811);
+        this.field_b = oa.a(param0 ^ 23811);
         if (param0 != -28133) {
             field_e = 55;
         }
@@ -65,35 +68,35 @@ abstract class ib implements dg {
         pk var3 = null;
         try {
             var3 = fj.field_q;
-            var3.a(3, (byte) -82);
-            var3.d((byte) 124, 5);
+            var3.a(param0, (byte) -82);
+            var3.d((byte) 124, param1);
             var3.d((byte) -66, 0);
             var3.e(param2.field_i, 28695);
             var3.d((byte) -84, param2.field_f);
             var3.d((byte) 125, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ib.DA(" + 3 + ',' + 5 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ib.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final lh a(byte param0) {
         if (param0 == -105) {
-          if (!((ib) this).a(param0 ^ 26579)) {
-            if (~(350L + ((ib) this).field_b) < ~oa.a(-12520)) {
+          if (!this.a(param0 ^ 26579)) {
+            if ((350L + this.field_b ^ -1L) < (oa.a(-12520) ^ -1L)) {
               return bf.field_g;
             } else {
-              return ((ib) this).e(32);
+              return this.e(32);
             }
           } else {
             return oj.field_d;
           }
         } else {
           field_e = -117;
-          if (!((ib) this).a(param0 ^ 26579)) {
-            if (~(350L + ((ib) this).field_b) < ~oa.a(-12520)) {
+          if (!this.a(param0 ^ 26579)) {
+            if ((350L + this.field_b ^ -1L) < (oa.a(-12520) ^ -1L)) {
               return bf.field_g;
             } else {
-              return ((ib) this).e(32);
+              return this.e(32);
             }
           } else {
             return oj.field_d;
@@ -102,7 +105,7 @@ abstract class ib implements dg {
     }
 
     final static void d(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         f.b("", (String) null, 7697781);
         if (param0 != 24107) {
             field_a = false;
@@ -112,10 +115,6 @@ abstract class ib implements dg {
     abstract lh e(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Not achieved";
     }
 }

@@ -20,6 +20,7 @@ final class kd extends wm {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         Object stackOut_6_0 = null;
@@ -36,12 +37,14 @@ final class kd extends wm {
             if (this.b(param0, (byte) -40) == vm.field_u) {
               stackOut_2_0 = um.field_b;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param1 != -11) {
                 field_u = 2;
                 stackOut_6_0 = null;
                 stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return null;
@@ -78,7 +81,11 @@ final class kd extends wm {
           }
           throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
-        return (String) ((Object) stackIn_7_0);
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return (String) ((Object) stackIn_7_0);
+        }
     }
 
     final tb b(String param0, byte param1) {
@@ -95,6 +102,7 @@ final class kd extends wm {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         tb stackOut_8_0 = null;
         tb stackOut_1_0 = null;
@@ -124,7 +132,7 @@ final class kd extends wm {
                 if (var3_int <= 0) {
                   break L2;
                 } else {
-                  if (var3_int > 130) {
+                  if ((var3_int ^ -1) < -131) {
                     break L2;
                   } else {
                     return dc.field_b;
@@ -133,11 +141,13 @@ final class kd extends wm {
               }
               stackOut_8_0 = vm.field_u;
               stackIn_9_0 = stackOut_8_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = vm.field_u;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,7 +180,11 @@ final class kd extends wm {
           }
           throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
-        return stackIn_9_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_9_0;
+        }
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
@@ -252,87 +266,115 @@ final class kd extends wm {
               }
             }
             L5: {
-              var11 = stackIn_13_0;
-              if (param1 < hk.field_c) {
-                break L5;
-              } else {
-                if (hk.field_g <= param1) {
-                  break L5;
-                } else {
-                  var12 = param1 + var8 * hk.field_j;
-                  var13 = -var8 + var11 + 1 >> 1;
-                  L6: while (true) {
-                    var13--;
-                    if (var13 < 0) {
-                      break L5;
+              L6: {
+                L7: {
+                  L8: {
+                    var11 = stackIn_13_0;
+                    if (param1 < hk.field_c) {
+                      break L8;
                     } else {
-                      hk.field_l[var12] = 16777215;
-                      var12 = var12 + hk.field_j * 2;
-                      continue L6;
+                      if (hk.field_g <= param1) {
+                        break L8;
+                      } else {
+                        var12 = param1 + var8 * hk.field_j;
+                        var13 = -var8 + var11 + 1 >> -97095103;
+                        L9: while (true) {
+                          var13--;
+                          if ((var13 ^ -1) > -1) {
+                            break L8;
+                          } else {
+                            hk.field_l[var12] = 16777215;
+                            var12 = var12 + hk.field_j * 2;
+                            if (var14 != 0) {
+                              break L7;
+                            } else {
+                              if (var14 == 0) {
+                                continue L9;
+                              } else {
+                                break L8;
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
-                }
-              }
-            }
-            L7: {
-              if (param3 < hk.field_h) {
-                break L7;
-              } else {
-                if (hk.field_b <= var6) {
-                  break L7;
-                } else {
-                  var12 = hk.field_j * param3 + var7;
-                  var13 = -var7 + var10 + 1 >> 1;
-                  L8: while (true) {
-                    var13--;
-                    if (var13 < 0) {
+                  if (param3 < hk.field_h) {
+                    break L7;
+                  } else {
+                    if (hk.field_b <= var6) {
                       break L7;
                     } else {
-                      hk.field_l[var12] = 16777215;
-                      var12 += 2;
-                      continue L8;
+                      var12 = hk.field_j * param3 + var7;
+                      var13 = -var7 + var10 + 1 >> -1989691583;
+                      L10: while (true) {
+                        var13--;
+                        if (-1 < (var13 ^ -1)) {
+                          break L7;
+                        } else {
+                          hk.field_l[var12] = 16777215;
+                          var12 += 2;
+                          if (var14 != 0) {
+                            break L6;
+                          } else {
+                            if (var14 == 0) {
+                              continue L10;
+                            } else {
+                              break L7;
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
-              }
-            }
-            L9: {
-              if (var5_int < hk.field_c) {
-                break L9;
-              } else {
-                if (var5_int < hk.field_g) {
-                  var12 = (var8 - -(var5_int - param1 & 1)) * hk.field_j - -var5_int;
-                  var13 = -var8 + 1 + var11 >> 1;
-                  L10: while (true) {
-                    var13--;
-                    if (var13 < 0) {
-                      break L9;
-                    } else {
-                      hk.field_l[var12] = 16777215;
-                      var12 = var12 + 2 * hk.field_j;
-                      continue L10;
-                    }
-                  }
+                if (var5_int < hk.field_c) {
+                  break L6;
                 } else {
-                  break L9;
+                  if (var5_int < hk.field_g) {
+                    var12 = (var8 - -(var5_int - param1 & 1)) * hk.field_j - -var5_int;
+                    var13 = -var8 + 1 + var11 >> -2048490399;
+                    L11: while (true) {
+                      var13--;
+                      if ((var13 ^ -1) > -1) {
+                        break L6;
+                      } else {
+                        hk.field_l[var12] = 16777215;
+                        var12 = var12 + 2 * hk.field_j;
+                        if (var14 != 0) {
+                          break L5;
+                        } else {
+                          if (var14 == 0) {
+                            continue L11;
+                          } else {
+                            break L6;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    break L6;
+                  }
                 }
               }
-            }
-            L11: {
               if (hk.field_h > param3) {
-                break L11;
+                break L5;
               } else {
                 if (hk.field_b > var6) {
                   var12 = (-param3 + var6 & 1) + var6 * hk.field_j - -var7;
-                  var13 = 1 - -var10 - var7 >> 1;
+                  var13 = 1 - -var10 - var7 >> -418335423;
                   L12: while (true) {
                     var13--;
                     if (0 > var13) {
-                      break L11;
+                      break L5;
                     } else {
                       hk.field_l[var12] = 16777215;
                       var12 += 2;
-                      continue L12;
+                      if (var14 == 0) {
+                        continue L12;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 } else {
@@ -358,7 +400,7 @@ final class kd extends wm {
         field_q = null;
         field_s = (int[][]) null;
         field_r = null;
-        int var1 = 6;
+        int var1 = -6 / ((80 - param0) / 42);
     }
 
     static {

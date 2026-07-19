@@ -12,6 +12,9 @@ final class u {
 
     final static void a(String param0, int param1) {
         System.out.println("Error: " + qf.a(param0, 0, "%0a", "\n"));
+        if (param1 <= 106) {
+            u.a(11);
+        }
     }
 
     public static void a(int param0) {
@@ -20,14 +23,13 @@ final class u {
         field_d = null;
         field_b = null;
         field_a = null;
+        if (param0 >= -71) {
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new qf();
         field_c = new jj();
         field_f = "Unpacking levels";

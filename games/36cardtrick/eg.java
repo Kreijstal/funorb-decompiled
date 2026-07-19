@@ -12,6 +12,9 @@ final class eg {
     public static void a(byte param0) {
         field_e = null;
         field_a = null;
+        if (param0 != 38) {
+            return;
+        }
         field_c = null;
     }
 
@@ -21,10 +24,6 @@ final class eg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Waiting for sound effects";
         field_a = "Orb points: <%0>";
         field_b = 0;

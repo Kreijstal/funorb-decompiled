@@ -53,43 +53,47 @@ final class bq {
               if (var6 <= var5_int) {
                 break L0;
               } else {
-                L3: {
-                  var8 += 2;
-                  var5_int++;
-                  var7 = var7 + var8;
-                  if (0 > var7) {
-                    break L3;
-                  } else {
-                    var6--;
-                    var7 = var7 - (var6 << 1);
-                    var9_ref_int__ = vaa.field_a[var6 + param0];
-                    var10_ref_int__ = vaa.field_a[-var6 + param0];
-                    var11_int = param1 + var5_int;
-                    var12_int = -var5_int + param1;
-                    nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
-                    nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
-                    break L3;
+                var8 += 2;
+                var5_int++;
+                var7 = var7 + var8;
+                if (var13 == 0) {
+                  L3: {
+                    if (0 > var7) {
+                      break L3;
+                    } else {
+                      var6--;
+                      var7 = var7 - (var6 << -1333958623);
+                      var9_ref_int__ = vaa.field_a[var6 + param0];
+                      var10_ref_int__ = vaa.field_a[-var6 + param0];
+                      var11_int = param1 + var5_int;
+                      var12_int = -var5_int + param1;
+                      nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
+                      nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
+                      break L3;
+                    }
                   }
+                  var9 = param1 + var6;
+                  var10 = param1 - var6;
+                  var11 = vaa.field_a[var5_int + param0];
+                  var12 = vaa.field_a[-var5_int + param0];
+                  nra.a((byte) -55, param2, var9, var11, var10);
+                  nra.a((byte) -55, param2, var9, var12, var10);
+                  continue L2;
+                } else {
+                  return;
                 }
-                var9 = param1 + var6;
-                var10 = param1 - var6;
-                var11 = vaa.field_a[var5_int + param0];
-                var12 = vaa.field_a[-var5_int + param0];
-                nra.a((byte) -55, param2, var9, var11, var10);
-                nra.a((byte) -55, param2, var9, var12, var10);
-                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var5, "bq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) var5), "bq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(byte param0) {
-        int var1 = 31;
+        int var1 = -31 / ((-57 - param0) / 53);
         field_b = null;
         field_h = null;
         field_e = null;
@@ -98,10 +102,6 @@ final class bq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Your friend list is full. Max of 100 for free users, and 200 for members.";
         field_e = "People, objects and projectiles that enter a portal will instantly appear somewhere else. It's a piece of cake.";
         field_a = "Point Lights: ";

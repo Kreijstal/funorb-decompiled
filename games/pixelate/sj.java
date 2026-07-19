@@ -16,10 +16,10 @@ abstract class sj extends fa {
     abstract void a(int param0);
 
     final void a(int[] param0, int param1, int param2) {
-        if (((sj) this).field_n) {
-            ((sj) this).b(param0, param1, param2);
+        if (this.field_n) {
+            this.b(param0, param1, param2);
         } else {
-            ((sj) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class sj extends fa {
     abstract sj b();
 
     protected sj() {
-        ((sj) this).field_n = true;
+        this.field_n = true;
     }
 }

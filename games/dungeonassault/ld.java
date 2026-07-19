@@ -18,16 +18,21 @@ final class ld {
     public static void a(boolean param0) {
         field_f = null;
         field_h = null;
-        field_d = null;
-        field_a = null;
-        field_e = null;
+        if (param0) {
+          field_f = (Random) null;
+          field_d = null;
+          field_a = null;
+          field_e = null;
+          return;
+        } else {
+          field_d = null;
+          field_a = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ld.A(";
         field_a = "Create a free account to start using this feature";
         field_b = true;

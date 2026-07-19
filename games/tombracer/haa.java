@@ -33,11 +33,11 @@ class haa extends rj {
               if (!param1) {
                 break L1;
               } else {
-                ((haa) this).field_B = null;
+                this.field_B = (ae) null;
                 break L1;
               }
             }
-            stackOut_2_0 = ((haa) this).field_B.a(param0, false);
+            stackOut_2_0 = this.field_B.a(param0, false);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -45,23 +45,23 @@ class haa extends rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("haa.S(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -69,30 +69,35 @@ class haa extends rj {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     haa(ae param0) {
         try {
-            ((haa) this).field_B = param0;
+            this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "haa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "haa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(int param0) {
-        field_C = null;
-        field_A = null;
-        field_z = null;
+        if (param0 <= 37) {
+          field_A = (jpa) null;
+          field_C = (int[][]) null;
+          field_A = null;
+          field_z = null;
+          return;
+        } else {
+          field_C = (int[][]) null;
+          field_A = null;
+          field_z = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_C = new int[][]{new int[4], new int[2]};
+        field_C = new int[][]{new int[]{3, 4, 5, 6}, new int[]{2, 3}};
     }
 }

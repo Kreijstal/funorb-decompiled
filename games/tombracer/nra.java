@@ -18,50 +18,53 @@ final class nra implements bo {
     private long field_j;
 
     public final void a(int param0, kh param1) {
-        param1.a(1736565456, ((nra) this).field_j);
-        param1.f(param0 ^ -1477662080, ((nra) this).field_m);
-        param1.i(((nra) this).field_f, 0);
-        param1.a(((nra) this).field_h, (byte) -84);
-        param1.a(((nra) this).field_d, (byte) -117);
-        param1.a(((nra) this).field_i, (byte) -109);
-        param1.a(((nra) this).field_k, (byte) 4);
-        param1.a(1736565456, ((nra) this).field_e);
-        param1.a(1736565456, ((nra) this).field_n);
-        param1.a(param0 ^ 1736565272, ((nra) this).field_b);
+        param1.a(1736565456, this.field_j);
+        param1.f(param0 ^ -1477662080, this.field_m);
+        param1.i(this.field_f, 0);
+        param1.a(this.field_h, (byte) -84);
+        param1.a(this.field_d, (byte) -117);
+        param1.a(this.field_i, (byte) -109);
+        param1.a(this.field_k, (byte) 4);
+        param1.a(1736565456, this.field_e);
+        param1.a(1736565456, this.field_n);
+        param1.a(param0 ^ 1736565272, this.field_b);
         if (param0 != 200) {
             return;
         }
         try {
-            param1.a(param0 ^ 1736565272, ((nra) this).field_l);
+            param1.a(param0 ^ 1736565272, this.field_l);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "nra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "nra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(kh param0, byte param1) {
-        ((nra) this).field_j = param0.b(290646880);
-        ((nra) this).field_m = param0.d(122);
-        ((nra) this).field_f = param0.h(param1 + 274);
+        this.field_j = param0.b(290646880);
+        this.field_m = param0.d(122);
+        this.field_f = param0.h(param1 + 274);
         if (param1 != -19) {
             return;
         }
         try {
-            ((nra) this).field_h = param0.e(-126);
-            ((nra) this).field_d = param0.e(-51);
-            ((nra) this).field_i = param0.e(-25);
-            ((nra) this).field_k = param0.e(100);
-            ((nra) this).field_e = param0.b(290646880);
-            ((nra) this).field_n = param0.b(param1 + 290646899);
-            ((nra) this).field_b = param0.b(param1 ^ -290646899);
-            ((nra) this).field_l = param0.b(290646880);
+            this.field_h = param0.e(-126);
+            this.field_d = param0.e(-51);
+            this.field_i = param0.e(-25);
+            this.field_k = param0.e(100);
+            this.field_e = param0.b(290646880);
+            this.field_n = param0.b(param1 + 290646899);
+            this.field_b = param0.b(param1 ^ -290646899);
+            this.field_l = param0.b(290646880);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "nra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "nra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
-        field_g = null;
+        if (param0 <= 27) {
+            return;
+        }
+        field_g = (int[][]) null;
         field_c = null;
     }
 
@@ -69,137 +72,160 @@ final class nra implements bo {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             param4--;
             param2--;
             var5_int = param2 + -7;
-            L1: while (true) {
-              if (param4 >= var5_int) {
-                L2: while (true) {
-                  if (param4 >= param2) {
-                    break L0;
+            if (param0 == -55) {
+              L1: while (true) {
+                L2: {
+                  if (param4 >= var5_int) {
+                    L3: while (true) {
+                      if (param4 >= param2) {
+                        break L2;
+                      } else {
+                        param4++;
+                        param3[param4] = param1;
+                        if (var6 == 0) {
+                          continue L3;
+                        } else {
+                          return;
+                        }
+                      }
+                    }
                   } else {
                     param4++;
                     param3[param4] = param1;
-                    continue L2;
+                    param4++;
+                    param3[param4] = param1;
+                    param4++;
+                    param3[param4] = param1;
+                    param4++;
+                    param3[param4] = param1;
+                    param4++;
+                    param3[param4] = param1;
+                    param4++;
+                    param3[param4] = param1;
+                    param4++;
+                    param3[param4] = param1;
+                    param4++;
+                    param3[param4] = param1;
+                    if (var6 != 0) {
+                      break L2;
+                    } else {
+                      continue L1;
+                    }
                   }
                 }
-              } else {
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                param4++;
-                param3[param4] = param1;
-                continue L1;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("nra.F(").append(-55).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_13_0 = (RuntimeException) (var5);
+            stackOut_13_1 = new StringBuilder().append("nra.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void a(int param0, long param1) {
-        ((nra) this).field_j = param1;
+        this.field_j = param1;
         if (param0 == -7) {
             return;
         }
-        ((nra) this).field_k = -64;
+        this.field_k = -64;
     }
 
     final void a(long param0, long param1, boolean param2, long param3, long param4) {
-        Object var11 = null;
-        ((nra) this).field_e = param3;
-        ((nra) this).field_l = param0;
+        kh var11 = null;
+        this.field_e = param3;
+        this.field_l = param0;
         if (param2) {
-          var11 = null;
-          ((nra) this).a((kh) null, (byte) -83);
-          ((nra) this).field_n = param1;
-          ((nra) this).field_b = param4;
+          var11 = (kh) null;
+          this.a((kh) null, (byte) -83);
+          this.field_n = param1;
+          this.field_b = param4;
           return;
         } else {
-          ((nra) this).field_n = param1;
-          ((nra) this).field_b = param4;
+          this.field_n = param1;
+          this.field_b = param4;
           return;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        ((nra) this).field_i = param2;
-        ((nra) this).field_h = param0;
-        ((nra) this).field_d = param3;
-        ((nra) this).field_k = param1;
+        this.field_i = param2;
+        this.field_h = param0;
+        this.field_d = param3;
+        this.field_k = param1;
         int var6 = -68 % ((-66 - param4) / 36);
     }
 
     final void b(int param0, int param1) {
         int var3 = -109 % ((87 - param0) / 38);
-        ((nra) this).field_f = param1;
+        this.field_f = param1;
     }
 
     final void a(int param0, int param1) {
         if (param1 > -69) {
-            ((nra) this).field_e = 126L;
-            ((nra) this).field_m = param0;
+            this.field_e = 126L;
+            this.field_m = param0;
             return;
         }
-        ((nra) this).field_m = param0;
+        this.field_m = param0;
     }
 
     static {

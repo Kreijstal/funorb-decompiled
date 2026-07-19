@@ -15,6 +15,9 @@ final class ea {
         field_b = null;
         field_d = null;
         field_h = null;
+        if (param0 > -78) {
+            return;
+        }
         field_g = null;
         field_a = null;
     }
@@ -196,10 +199,6 @@ final class ea {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = null;
         field_e = 0;
         field_c = 100;

@@ -28,10 +28,8 @@ final class bm {
         int var18 = 0;
         int[] var19 = null;
         int[] var22 = null;
-        int[] var25 = null;
-        int[] var28 = null;
-        float[] var29 = null;
-        float[] var30 = null;
+        float[] var27 = null;
+        float[] var28 = null;
         var4 = 0;
         L0: while (true) {
           if (var4 >= param1) {
@@ -39,9 +37,7 @@ final class bm {
               var4 = va.field_S[this.field_a].field_d;
               var5 = this.field_f - this.field_b;
               var6 = var5 / this.field_d;
-              var28 = new int[var6];
-              var25 = var28;
-              var22 = var25;
+              var22 = new int[var6];
               var19 = var22;
               var7 = var19;
               var8 = 0;
@@ -80,14 +76,14 @@ final class bm {
                           }
                         }
                       }
-                      var28 = var25;
+                      var22 = var19;
                       var10 = 0;
                       L6: while (true) {
                         if (var10 >= var4) {
                           continue L2;
                         } else {
                           L7: {
-                            var11 = var28[var9];
+                            var11 = var22[var9];
                             var12 = this.field_g[var11 * 8 + var8];
                             if (var12 < 0) {
                               break L7;
@@ -100,13 +96,13 @@ final class bm {
                                   if (var15 >= this.field_d) {
                                     break L7;
                                   } else {
-                                    var30 = var14.b();
+                                    var28 = var14.b();
                                     var17 = 0;
                                     L9: while (true) {
                                       if (var17 >= var14.field_d) {
                                         continue L8;
                                       } else {
-                                        param0[var13 + var15] = param0[var13 + var15] + var30[var17];
+                                        param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                                         var15++;
                                         var17++;
                                         continue L9;
@@ -121,14 +117,14 @@ final class bm {
                                   if (var16 >= var15) {
                                     break L7;
                                   } else {
-                                    var29 = var14.b();
+                                    var27 = var14.b();
                                     var18 = 0;
                                     L11: while (true) {
                                       if (var18 >= var14.field_d) {
                                         var16++;
                                         continue L10;
                                       } else {
-                                        param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var29[var18];
+                                        param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                                         var18++;
                                         continue L11;
                                       }

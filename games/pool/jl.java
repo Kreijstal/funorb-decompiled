@@ -12,13 +12,21 @@ final class jl {
         field_b = null;
         field_a = null;
         field_e = null;
-        field_d = null;
+        if (param0 <= 31) {
+          field_e = (rb) null;
+          field_d = (dd[][]) null;
+          return;
+        } else {
+          field_d = (dd[][]) null;
+          return;
+        }
     }
 
     final static boolean a(byte param0, di param1, int param2) {
+        boolean discarded$2 = false;
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        di var4 = null;
         byte[] var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -29,6 +37,7 @@ final class jl {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_6_0 = 0;
@@ -46,8 +55,8 @@ final class jl {
               if (param0 > 5) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = jl.a((byte) -59, (di) null, -110);
+                var4 = (di) null;
+                discarded$2 = jl.a((byte) -59, (di) null, -110);
                 break L1;
               }
             }
@@ -56,11 +65,13 @@ final class jl {
             if (var5 == null) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               oa.a(true, var5);
               stackOut_6_0 = 1;
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -68,23 +79,23 @@ final class jl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("jl.A(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -92,16 +103,16 @@ final class jl {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
         }
-        return stackIn_7_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> are all out of lives!";
         field_a = "To <%0>: ";
     }

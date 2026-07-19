@@ -8,7 +8,7 @@ final class fg {
 
     final gd a() {
         byte[] var1 = this.b();
-        return new gd(22050, var1, 22050 * ((fg) this).field_c / 1000, 22050 * ((fg) this).field_b / 1000);
+        return new gd(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     private final byte[] b() {
@@ -33,10 +33,10 @@ final class fg {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((fg) this).field_a[var4] != null) {
-                    var5 = ((fg) this).field_a[var4].field_d * 22050 / 1000;
-                    var6 = ((fg) this).field_a[var4].field_v * 22050 / 1000;
-                    var13 = ((fg) this).field_a[var4].a(var5, ((fg) this).field_a[var4].field_d);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_d * 22050 / 1000;
+                    var6 = this.field_a[var4].field_v * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -67,9 +67,9 @@ final class fg {
               return new byte[]{};
             }
           } else {
-            if (((fg) this).field_a[var2] != null) {
-              if (((fg) this).field_a[var2].field_d + ((fg) this).field_a[var2].field_v > var1) {
-                var1 = ((fg) this).field_a[var2].field_d + ((fg) this).field_a[var2].field_v;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_d + this.field_a[var2].field_v > var1) {
+                var1 = this.field_a[var2].field_d + this.field_a[var2].field_v;
                 var2++;
                 continue L0;
               } else {
@@ -87,19 +87,19 @@ final class fg {
     private fg(qc param0) {
         int var2 = 0;
         int var3 = 0;
-        ((fg) this).field_a = new ed[10];
+        this.field_a = new ed[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((fg) this).field_c = param0.b(true);
-            ((fg) this).field_b = param0.b(true);
+            this.field_c = param0.b(true);
+            this.field_b = param0.b(true);
             return;
           } else {
             var3 = param0.c((byte) 34);
             if (var3 != 0) {
               param0.field_f = param0.field_f - 1;
-              ((fg) this).field_a[var2] = new ed();
-              ((fg) this).field_a[var2].a(param0);
+              this.field_a[var2] = new ed();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

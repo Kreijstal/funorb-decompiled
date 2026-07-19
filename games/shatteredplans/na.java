@@ -45,7 +45,7 @@ final class na {
     static int field_F;
 
     public static void b(byte param0) {
-        int var1 = 0;
+        int var1 = 104 % ((-30 - param0) / 39);
         field_s = null;
         field_J = null;
         field_u = null;
@@ -53,9 +53,10 @@ final class na {
     }
 
     final static boolean a(String param0, int param1, String param2) {
+        boolean discarded$2 = false;
         String var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        String var4 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -98,8 +99,8 @@ final class na {
               if (param1 >= 126) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = na.a((String) null, 75, (String) null);
+                var4 = (String) null;
+                discarded$2 = na.a((String) null, 75, (String) null);
                 break L1;
               }
             }
@@ -108,7 +109,7 @@ final class na {
                 if (-1 != param0.indexOf(param2)) {
                   break L3;
                 } else {
-                  if (param0.indexOf(var3) == -1) {
+                  if (0 == (param0.indexOf(var3) ^ -1)) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
@@ -127,23 +128,23 @@ final class na {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("na.C(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -152,23 +153,23 @@ final class na {
             }
           }
           L5: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -176,7 +177,7 @@ final class na {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -185,24 +186,34 @@ final class na {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             if (oq.field_i != null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              ga.field_L = rs.field_zb + uq.field_h;
-              rj.field_r = rs.field_zb + an.field_a;
-              oq.field_i = new String[33];
-              oq.field_i[14] = tm.field_o;
-              oq.field_i[0] = wm.field_f;
-              oq.field_i[7] = sn.field_b;
-              oq.field_i[4] = lr.field_e;
-              oq.field_i[12] = ar.field_g;
-              oq.field_i[1] = km.field_a;
-              oq.field_i[8] = cj.field_v;
-              oq.field_i[5] = ro.field_e;
+              L1: {
+                ga.field_L = rs.field_zb + uq.field_h;
+                rj.field_r = rs.field_zb + an.field_a;
+                oq.field_i = new String[33];
+                oq.field_i[14] = tm.field_o;
+                oq.field_i[0] = wm.field_f;
+                oq.field_i[7] = sn.field_b;
+                oq.field_i[4] = lr.field_e;
+                oq.field_i[12] = ar.field_g;
+                oq.field_i[1] = km.field_a;
+                oq.field_i[8] = cj.field_v;
+                oq.field_i[5] = ro.field_e;
+                if (param0 >= 6) {
+                  break L1;
+                } else {
+                  field_u = (Random) null;
+                  break L1;
+                }
+              }
               oq.field_i[10] = uc.field_y;
               oq.field_i[9] = null;
               oq.field_i[6] = ro.field_e;
@@ -261,16 +272,17 @@ final class na {
               ub.field_Db = new String[5][];
               ub.field_Db[0] = new String[5];
               var1_int = 0;
-              L1: while (true) {
-                if (var1_int >= 5) {
+              L2: while (true) {
+                if ((var1_int ^ -1) <= -6) {
                   ub.field_Db[4] = ua.field_c;
                   ub.field_Db[2] = tc.field_E;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   w.field_J[0][var1_int] = Integer.toString(var1_int);
                   ub.field_Db[0][var1_int] = be.field_i;
                   var1_int++;
-                  continue L1;
+                  continue L2;
                 }
               }
             }
@@ -278,34 +290,35 @@ final class na {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "na.B(" + 51 + ')');
+          throw r.a((Throwable) ((Object) var1), "na.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     na() {
-        ((na) this).field_C = new byte[6][258];
-        ((na) this).field_c = new byte[18002];
-        ((na) this).field_o = new int[6][258];
-        ((na) this).field_D = new byte[4096];
-        ((na) this).field_b = 0;
-        ((na) this).field_M = new boolean[16];
-        ((na) this).field_y = new int[6][258];
-        ((na) this).field_t = new byte[18002];
-        ((na) this).field_A = new byte[256];
-        ((na) this).field_K = new int[16];
-        ((na) this).field_i = new int[6];
-        ((na) this).field_l = new int[257];
-        ((na) this).field_a = new boolean[256];
-        ((na) this).field_q = new int[256];
-        ((na) this).field_H = new int[6][258];
-        ((na) this).field_d = 0;
+        this.field_C = new byte[6][258];
+        this.field_c = new byte[18002];
+        this.field_o = new int[6][258];
+        this.field_D = new byte[4096];
+        this.field_b = 0;
+        this.field_M = new boolean[16];
+        this.field_y = new int[6][258];
+        this.field_t = new byte[18002];
+        this.field_A = new byte[256];
+        this.field_K = new int[16];
+        this.field_i = new int[6];
+        this.field_l = new int[257];
+        this.field_a = new boolean[256];
+        this.field_q = new int[256];
+        this.field_H = new int[6][258];
+        this.field_d = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new Random();
         field_I = new gq(9, 0, 4, 1);
         field_s = "Production";

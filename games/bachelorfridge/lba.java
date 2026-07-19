@@ -19,10 +19,6 @@ final class lba {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lba.A(";
         field_c = new qia();
     }

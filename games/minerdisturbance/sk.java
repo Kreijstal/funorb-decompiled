@@ -25,15 +25,17 @@ final class sk implements uj {
     }
 
     public static void b(boolean param0) {
+        if (!param0) {
+            sk.b(true);
+            field_b = null;
+            field_e = null;
+            return;
+        }
         field_b = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{255, 4489372};
     }
 }

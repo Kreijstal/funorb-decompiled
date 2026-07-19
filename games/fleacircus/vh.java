@@ -11,9 +11,18 @@ final class vh extends lh {
     static int[] field_i;
 
     public static void d(int param0) {
-        field_j = null;
-        field_k = null;
-        field_i = null;
+        if (param0 != -889323520) {
+          vh.a(-16L, -34);
+          field_j = (int[][]) null;
+          field_k = null;
+          field_i = null;
+          return;
+        } else {
+          field_j = (int[][]) null;
+          field_k = null;
+          field_i = null;
+          return;
+        }
     }
 
     private vh() throws Throwable {
@@ -21,7 +30,7 @@ final class vh extends lh {
     }
 
     final static void a(int param0) {
-        td.field_k.field_c = 0;
+        td.field_k.field_c = param0;
         td.field_k.field_b = 0;
     }
 
@@ -34,7 +43,12 @@ final class vh extends lh {
           if (param0 % 10L == 0L) {
             df.a(-122, -1L + param0);
             df.a(71, 1L);
-            return;
+            if (fleas.field_A) {
+              df.a(-119, param0);
+              return;
+            } else {
+              return;
+            }
           } else {
             df.a(-119, param0);
             return;
@@ -43,10 +57,6 @@ final class vh extends lh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Passwords must be between 5 and 20 characters long";
         field_o = -889323520;
     }

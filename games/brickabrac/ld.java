@@ -26,8 +26,8 @@ abstract class ld extends km {
         } else {
           L0: {
             var2 = 1;
-            var3 = nn.field_g.c(ag.field_D[((ld) this).field_m[0].field_f]);
-            if (((ld) this).a((byte) 110, 1)) {
+            var3 = nn.field_g.c(ag.field_D[this.field_m[0].field_f]);
+            if (this.a((byte) 110, 1)) {
               var2++;
               var4 = 0;
               L1: while (true) {
@@ -63,11 +63,11 @@ abstract class ld extends km {
           var6 = this.h(6175);
           var7 = 0;
           L3: while (true) {
-            if (var7 >= ((ld) this).field_m.length) {
+            if (var7 >= this.field_m.length) {
               return;
             } else {
               L4: {
-                var8 = ((ld) this).field_m[var7];
+                var8 = this.field_m[var7];
                 var8.field_c = var7 * var3 + var5 + 5 * var7;
                 var8.field_a = var6;
                 if (0 != var7) {
@@ -78,7 +78,7 @@ abstract class ld extends km {
                 }
               }
               var8.field_j = var3;
-              var8.field_d = ((ld) this).b((byte) 115, var7);
+              var8.field_d = this.b((byte) 115, var7);
               var7++;
               continue L3;
             }
@@ -123,10 +123,10 @@ abstract class ld extends km {
           }
         }
         var2 = -qp.field_e[0].field_h + 480;
-        var3 = ((ld) this).f(-6);
+        var3 = this.f(-6);
         var4 = 0;
         L2: while (true) {
-          if (var4 >= 3) {
+          if ((var4 ^ -1) <= -4) {
             L3: {
               if (param0 <= -14) {
                 break L3;
@@ -149,12 +149,12 @@ abstract class ld extends km {
                     L6: {
                       var8 = 320;
                       var9 = var2;
-                      if (sk.field_I != 2) {
-                        if (var5 == 0) {
+                      if ((sk.field_I ^ -1) != -3) {
+                        if (-1 == (var5 ^ -1)) {
                           var9 += 14;
                           break L6;
                         } else {
-                          if (var5 == 1) {
+                          if ((var5 ^ -1) == -2) {
                             var9 += 38;
                             var8 = var8 - (-10 + var4 / 3);
                             break L6;
@@ -195,7 +195,7 @@ abstract class ld extends km {
                     var10.c(var8 - var10.field_x / 2, var9 + -var10.field_z);
                     ce.field_e.b(fh.field_h[var7], var8, var2 - -85, 0, -1);
                     var5++;
-                    if (var5 == 3) {
+                    if ((var5 ^ -1) == -4) {
                       break L5;
                     } else {
                       var6++;
@@ -207,7 +207,7 @@ abstract class ld extends km {
                   }
                 }
               }
-              ((ld) this).a(0);
+              this.a(0);
               pg.d(0);
               return;
             }
@@ -225,34 +225,38 @@ abstract class ld extends km {
     }
 
     final void a(boolean param0, int param1, int param2) {
+        int discarded$0 = 0;
         if (param2 < 96) {
-            int discarded$0 = ((ld) this).f(66);
+            discarded$0 = this.f(66);
         }
         super.a(param0, param1, 100);
-        ((ld) this).b(true);
+        this.b(true);
     }
 
     void a(int param0, int param1, char param2) {
         if (param0 != -120) {
-            field_w = null;
+            field_w = (int[]) null;
         }
-        ((ld) this).field_h.a(0, -1);
+        this.field_h.a(0, -1);
     }
 
     private final int h(int param0) {
-        return (284 + ((ld) this).f(-6)) / 2;
+        if (param0 != 6175) {
+            return 116;
+        }
+        return (284 + this.f(param0 + -6181)) / 2;
     }
 
     final void a(boolean param0, boolean param1, int param2) {
         int var5 = 0;
         int var6 = BrickABrac.field_J ? 1 : 0;
         if (param2 > -52) {
-            ((ld) this).a(false, false, -123);
+            this.a(false, false, -123);
         }
         super.a(param0, param1, -121);
         int var4 = this.h(6175);
-        for (var5 = 0; var5 < ((ld) this).field_m.length; var5++) {
-            ((ld) this).field_m[var5].field_a = var4;
+        for (var5 = 0; var5 < this.field_m.length; var5++) {
+            this.field_m[var5].field_a = var4;
         }
     }
 
@@ -262,14 +266,10 @@ abstract class ld extends km {
         }
         field_r = null;
         field_w = null;
-        field_v = null;
+        field_v = (int[][]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Hotseat multiplayer game";
         field_s = true;
     }

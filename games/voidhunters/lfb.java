@@ -21,7 +21,7 @@ public class lfb {
 
     public static File a(String param0, byte param1) {
         if (param1 != 34) {
-          field_b = null;
+          field_b = (String) null;
           return lfb.a(param0, param1 ^ -35, field_e, field_c);
         } else {
           return lfb.a(param0, param1 ^ -35, field_e, field_c);
@@ -29,15 +29,16 @@ public class lfb {
     }
 
     public static void a(int param0, int param1, String param2) {
+        File discarded$2 = null;
         Exception exception = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         L0: {
           if (param1 < -103) {
             break L0;
           } else {
-            var4 = null;
-            File discarded$2 = lfb.a((String) null, -23, (String) null, -127);
+            var4 = (String) null;
+            discarded$2 = lfb.a((String) null, -23, (String) null, -127);
             break L0;
           }
         }
@@ -75,10 +76,6 @@ public class lfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_a = new Hashtable(16);
     }

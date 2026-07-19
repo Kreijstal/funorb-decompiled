@@ -11,16 +11,33 @@ final class uj extends al {
     static int field_w;
 
     final static hl b(boolean param0) {
-        return bl.d(true);
+        if (param0) {
+            field_w = -76;
+            return bl.d(!param0 ? true : false);
+        }
+        return bl.d(!param0 ? true : false);
     }
 
     final static void a(long param0, int param1) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            {
-              Thread.sleep(param0);
-              return;
+            try {
+              L0: {
+                Thread.sleep(param0);
+                if (param1 == -568127903) {
+                  break L0;
+                } else {
+                  field_s = (int[][]) null;
+                  return;
+                }
+              }
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var3 = (InterruptedException) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -30,6 +47,7 @@ final class uj extends al {
     }
 
     public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -83,7 +101,7 @@ final class uj extends al {
             L2: {
               var6_int = stackIn_6_0;
               if (param0 instanceof ae) {
-                param4 = param4 & ((ae) (Object) param0).field_K;
+                param4 = param4 & ((ae) ((Object) param0)).field_K;
                 break L2;
               } else {
                 break L2;
@@ -91,16 +109,16 @@ final class uj extends al {
             }
             L3: {
               if (!param4) {
-                stackOut_13_0 = ((uj) this).field_t;
+                stackOut_13_0 = this.field_t;
                 stackIn_14_0 = stackOut_13_0;
                 break L3;
               } else {
                 if (var6_int == 0) {
-                  stackOut_12_0 = ((uj) this).field_r;
+                  stackOut_12_0 = this.field_r;
                   stackIn_14_0 = stackOut_12_0;
                   break L3;
                 } else {
-                  stackOut_11_0 = ((uj) this).field_v;
+                  stackOut_11_0 = this.field_v;
                   stackIn_14_0 = stackOut_11_0;
                   break L3;
                 }
@@ -111,7 +129,7 @@ final class uj extends al {
               if (param3) {
                 break L4;
               } else {
-                ((uj) this).field_u = null;
+                this.field_u = (oh[]) null;
                 break L4;
               }
             }
@@ -127,31 +145,31 @@ final class uj extends al {
               }
             }
             var8 = stackIn_19_0;
-            ci.a(var7, (-((uj) this).field_u[0].field_F + param0.field_u >> 1) + (param0.field_w + param2), param0.field_F, param0.field_t + param1, ((uj) this).field_u, -119);
-            int discarded$1 = ((uj) this).field_b.a(param0.field_A, param0.field_t + param1, param0.field_w + (param2 + -2), param0.field_F, param0.field_u, var8, -1, 1, 1, ((uj) this).field_b.field_N);
+            ci.a(var7, (-this.field_u[0].field_F + param0.field_u >> -568127903) + (param0.field_w + param2), param0.field_F, param0.field_t + param1, this.field_u, -119);
+            discarded$1 = this.field_b.a(param0.field_A, param0.field_t + param1, param0.field_w + (param2 + -2), param0.field_F, param0.field_u, var8, -1, 1, 1, this.field_b.field_N);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("uj.L(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -159,22 +177,22 @@ final class uj extends al {
               break L6;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void b(byte param0) {
-        int var1 = 0;
-        field_s = null;
+        int var1 = -97 % ((43 - param0) / 56);
+        field_s = (int[][]) null;
         field_q = null;
     }
 
     private uj(int param0, int param1, int param2) {
-        ((uj) this).field_u = mf.field_q;
-        ((uj) this).field_v = param1;
-        ((uj) this).field_t = param2;
-        ((uj) this).field_r = param0;
-        ((uj) this).field_b = ab.field_V;
+        this.field_u = mf.field_q;
+        this.field_v = param1;
+        this.field_t = param2;
+        this.field_r = param0;
+        this.field_b = ab.field_V;
     }
 
     public uj() {

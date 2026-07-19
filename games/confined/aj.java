@@ -15,10 +15,6 @@ final class aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aj.A(";
         field_b = "<col=FFFFFF>Power-up attractor:</col> awarded on every level and every boss from Level 7 onwards, but when you collect one, there will be no more for three levels.";
     }

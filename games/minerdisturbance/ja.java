@@ -17,10 +17,6 @@ class ja extends al {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ja.I(";
         field_u = 150;
     }

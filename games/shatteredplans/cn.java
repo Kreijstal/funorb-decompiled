@@ -16,8 +16,6 @@ class cn extends vp {
         int var6 = 0;
         char[] var7 = null;
         char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
         String stackIn_22_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -49,9 +47,7 @@ class cn extends vp {
               }
             }
             L2: {
-              var10 = new char[var2_int];
-              var9 = var10;
-              var8 = var9;
+              var8 = new char[var2_int];
               var7 = var8;
               var3 = var7;
               if (param1 == 53) {
@@ -64,7 +60,7 @@ class cn extends vp {
             var4 = 0;
             L3: while (true) {
               if (var4 >= var2_int) {
-                stackOut_21_0 = new String(var10);
+                stackOut_21_0 = new String(var8);
                 stackIn_22_0 = stackOut_21_0;
                 break L0;
               } else {
@@ -75,7 +71,7 @@ class cn extends vp {
                       break L5;
                     } else {
                       if (var5 <= 90) {
-                        var3[var4] = (char)(var5 + 32);
+                        var3[var4] = (char)(var5 - 65 + 97);
                         break L4;
                       } else {
                         break L5;
@@ -105,7 +101,7 @@ class cn extends vp {
                         }
                       }
                     }
-                    var3[var4] = '_';
+                    var3[var4] = (char)95;
                     break L4;
                   }
                   var3[var4] = (char)var5;
@@ -120,23 +116,23 @@ class cn extends vp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
+            stackOut_23_0 = (RuntimeException) (var2);
             stackOut_23_1 = new StringBuilder().append("cn.D(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -144,29 +140,30 @@ class cn extends vp {
               break L9;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
         return stackIn_22_0;
     }
 
     final void f(byte param0) {
-        if (!(((cn) this).field_u != null)) {
+        if (!(this.field_u != null)) {
             return;
         }
-        ((cn) this).field_u.field_x = ((cn) this).field_x;
-        ((cn) this).field_x.field_u = ((cn) this).field_u;
+        this.field_u.field_x = this.field_x;
+        this.field_x.field_u = this.field_u;
         if (param0 != -62) {
-            ((cn) this).f((byte) -89);
+            this.f((byte) -89);
         }
-        ((cn) this).field_x = null;
-        ((cn) this).field_u = null;
+        this.field_x = null;
+        this.field_u = null;
     }
 
     public static void e(boolean param0) {
+        String discarded$0 = null;
         field_v = null;
         if (!param0) {
-            Object var2 = null;
-            String discarded$0 = cn.a((CharSequence) null, (byte) 57);
+            CharSequence var2 = (CharSequence) null;
+            discarded$0 = cn.a((CharSequence) null, (byte) 57);
         }
     }
 
@@ -175,17 +172,13 @@ class cn extends vp {
 
     final static int a(byte param0, int param1, int param2) {
         if (param0 > -67) {
-            field_v = null;
+            field_v = (String) null;
         }
-        int var3 = param1 >>> 31;
+        int var3 = param1 >>> -772668161;
         return -var3 + (param1 + var3) / param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "Email: ";
     }
 }

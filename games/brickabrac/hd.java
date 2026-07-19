@@ -8,10 +8,11 @@ final class hd {
     static String field_b;
 
     final static jp a(int param0, int param1, byte param2) {
+        jp discarded$0 = null;
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         if (param2 != -6) {
-            jp discarded$0 = hd.a(121, -95, (byte) -105);
+            discarded$0 = hd.a(121, -95, (byte) -105);
         }
         jp var6 = new jp(param1, param1);
         jp var3 = var6;
@@ -41,11 +42,14 @@ final class hd {
             hn.field_a = param2;
             bh.field_vb = param3;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 12) {
+            return;
+        }
         field_a = null;
         field_c = null;
         field_b = null;
@@ -54,7 +58,7 @@ final class hd {
 
     final static void a(boolean param0) {
         ga.field_i = 12;
-        cm.field_s = true;
+        cm.field_s = param0 ? true : false;
         tb.field_eb = null;
         rf.field_f = true;
         pp.field_a = 12;
@@ -65,10 +69,6 @@ final class hd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unable to delete name - system busy";
     }
 }

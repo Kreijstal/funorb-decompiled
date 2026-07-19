@@ -28,26 +28,27 @@ final class o implements Iterator {
     }
 
     public final void remove() {
-        if (null == ((o) this).field_c) {
+        if (null == this.field_c) {
             throw new IllegalStateException();
         }
-        ((o) this).field_c.a(true);
-        ((o) this).field_c = null;
+        this.field_c.a(true);
+        this.field_c = null;
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = Confined.field_J ? 1 : 0;
-        if (((o) this).field_e == ((o) this).field_a.field_j[-1 + ((o) this).field_b]) {
+        if (this.field_e == this.field_a.field_j[-1 + this.field_b]) {
           L0: while (true) {
-            if (((o) this).field_a.field_i > ((o) this).field_b) {
-              int fieldTemp$1 = ((o) this).field_b;
-              ((o) this).field_b = ((o) this).field_b + 1;
-              if (((o) this).field_a.field_j[fieldTemp$1].field_h != ((o) this).field_a.field_j[-1 + ((o) this).field_b]) {
-                ((o) this).field_e = ((o) this).field_a.field_j[((o) this).field_b + -1].field_h;
+            if (this.field_a.field_i > this.field_b) {
+              fieldTemp$1 = this.field_b;
+              this.field_b = this.field_b + 1;
+              if (this.field_a.field_j[fieldTemp$1].field_h != this.field_a.field_j[-1 + this.field_b]) {
+                this.field_e = this.field_a.field_j[this.field_b + -1].field_h;
                 return true;
               } else {
-                ((o) this).field_e = ((o) this).field_a.field_j[-1 + ((o) this).field_b];
+                this.field_e = this.field_a.field_j[-1 + this.field_b];
                 continue L0;
               }
             } else {
@@ -60,35 +61,36 @@ final class o implements Iterator {
     }
 
     private final void a(int param0) {
-        ((o) this).field_c = null;
-        ((o) this).field_e = ((o) this).field_a.field_j[0].field_h;
-        ((o) this).field_b = 1;
+        this.field_c = null;
+        this.field_e = this.field_a.field_j[0].field_h;
+        this.field_b = param0;
     }
 
     o(gh param0) {
-        ((o) this).field_c = null;
+        this.field_c = null;
         try {
-            ((o) this).field_a = param0;
+            this.field_a = param0;
             this.a(1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Object next() {
+        int fieldTemp$2 = 0;
         rk var1 = null;
         int var2 = 0;
         var2 = Confined.field_J ? 1 : 0;
-        if (((o) this).field_a.field_j[-1 + ((o) this).field_b] == ((o) this).field_e) {
+        if (this.field_a.field_j[-1 + this.field_b] == this.field_e) {
           L0: while (true) {
-            if (((o) this).field_a.field_i > ((o) this).field_b) {
-              int fieldTemp$2 = ((o) this).field_b;
-              ((o) this).field_b = ((o) this).field_b + 1;
-              var1 = ((o) this).field_a.field_j[fieldTemp$2].field_h;
-              if (((o) this).field_a.field_j[((o) this).field_b + -1] != var1) {
-                ((o) this).field_e = var1.field_h;
-                ((o) this).field_c = var1;
-                return (Object) (Object) var1;
+            if (this.field_a.field_i > this.field_b) {
+              fieldTemp$2 = this.field_b;
+              this.field_b = this.field_b + 1;
+              var1 = this.field_a.field_j[fieldTemp$2].field_h;
+              if (this.field_a.field_j[this.field_b + -1] != var1) {
+                this.field_e = var1.field_h;
+                this.field_c = var1;
+                return var1;
               } else {
                 continue L0;
               }
@@ -97,18 +99,14 @@ final class o implements Iterator {
             }
           }
         } else {
-          var1 = ((o) this).field_e;
-          ((o) this).field_c = var1;
-          ((o) this).field_e = var1.field_h;
-          return (Object) (Object) var1;
+          var1 = this.field_e;
+          this.field_c = var1;
+          this.field_e = var1.field_h;
+          return var1;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Log in";
     }
 }

@@ -19,40 +19,50 @@ final class eq extends oh {
         RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
-        int var5 = 0;
+        sq var5 = null;
+        int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            wn.c();
-            we.field_e = 11;
-            uc.field_w = new int[260];
+            L1: {
+              wn.c();
+              we.field_e = 11;
+              uc.field_w = new int[260];
+              if (param0 == -47) {
+                break L1;
+              } else {
+                var5 = (sq) null;
+                eq.a((String[]) null, (sq) null, 48);
+                break L1;
+              }
+            }
             var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= 256) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
-                  if (var5 >= uc.field_w.length) {
+            L2: while (true) {
+              if ((var1_int ^ -1) <= -257) {
+                var6 = 256;
+                var1_int = var6;
+                L3: while (true) {
+                  if (var6 >= uc.field_w.length) {
                     break L0;
                   } else {
-                    uc.field_w[var5] = 255;
-                    var5++;
-                    continue L2;
+                    uc.field_w[var6] = 255;
+                    var6++;
+                    continue L3;
                   }
                 }
               } else {
                 var2 = 15.0;
                 uc.field_w[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
                 var1_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "eq.B(" + -47 + ')');
+          throw r.a((Throwable) ((Object) var1), "eq.B(" + param0 + ')');
         }
     }
 
@@ -99,7 +109,7 @@ final class eq extends oh {
           L0: {
             var7 = args;
             var3 = var7;
-            var4 = 0;
+            var4 = param2;
             L1: while (true) {
               if (var7.length <= var4) {
                 break L0;
@@ -115,23 +125,23 @@ final class eq extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_0 = (RuntimeException) (var3_ref);
             stackOut_5_1 = new StringBuilder().append("eq.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (args == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -140,23 +150,23 @@ final class eq extends oh {
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -164,11 +174,14 @@ final class eq extends oh {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 0 + ')');
+          throw r.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
+        if (param0 != -70) {
+            return;
+        }
         field_i = null;
         field_o = null;
         field_k = null;
@@ -178,10 +191,6 @@ final class eq extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Cancel unrated rematch";
     }
 }

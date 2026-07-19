@@ -21,38 +21,39 @@ final class ie extends l {
           if (param13 >= param14) {
             if (param14 > param1) {
               r.a(param2, param6, param9, param3, param5, wj.field_l, param12, param7, param14, param8, param10, param13, param15, param11, param0, (byte) -66, param1);
-              var16 = 116;
+              var16 = 116 / ((53 - param4) / 62);
               return;
             } else {
               r.a(param5, param6, param8, param15, param2, wj.field_l, param12, param10, param1, param9, param7, param13, param3, param11, param0, (byte) -65, param14);
-              var16 = 116;
+              var16 = 116 / ((53 - param4) / 62);
               return;
             }
           } else {
             r.a(param11, param9, param6, param3, param5, wj.field_l, param10, param7, param13, param8, param12, param14, param0, param2, param15, (byte) -60, param1);
-            var16 = 116;
+            var16 = 116 / ((53 - param4) / 62);
             return;
           }
         } else {
           if (param1 >= param14) {
             if (param13 < param14) {
               r.a(param2, param8, param9, param0, param11, wj.field_l, param7, param12, param14, param6, param10, param1, param15, param5, param3, (byte) -67, param13);
-              var16 = 116;
+              var16 = 116 / ((53 - param4) / 62);
               return;
             } else {
               r.a(param11, param8, param6, param15, param2, wj.field_l, param7, param10, param13, param9, param12, param1, param0, param5, param3, (byte) -88, param14);
-              var16 = 116;
+              var16 = 116 / ((53 - param4) / 62);
               return;
             }
           } else {
             r.a(param5, param9, param8, param0, param11, wj.field_l, param10, param12, param1, param6, param7, param14, param3, param2, param15, (byte) -112, param13);
-            var16 = 116;
+            var16 = 116 / ((53 - param4) / 62);
             return;
           }
         }
     }
 
     public final void a(boolean param0, int param1, vg param2, int param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -90,7 +91,7 @@ final class ie extends l {
               if (param1 > 94) {
                 break L1;
               } else {
-                ((ie) this).field_t = null;
+                this.field_t = (nh[]) null;
                 break L1;
               }
             }
@@ -116,23 +117,23 @@ final class ie extends l {
               if (!(param2 instanceof hf)) {
                 break L3;
               } else {
-                param0 = param0 & ((hf) (Object) param2).field_E;
+                param0 = param0 & ((hf) ((Object) param2)).field_E;
                 break L3;
               }
             }
             L4: {
               if (param0) {
                 if (var6_int != 0) {
-                  stackOut_14_0 = ((ie) this).field_z;
+                  stackOut_14_0 = this.field_z;
                   stackIn_15_0 = stackOut_14_0;
                   break L4;
                 } else {
-                  stackOut_13_0 = ((ie) this).field_A;
+                  stackOut_13_0 = this.field_A;
                   stackIn_15_0 = stackOut_13_0;
                   break L4;
                 }
               } else {
-                stackOut_11_0 = ((ie) this).field_w;
+                stackOut_11_0 = this.field_w;
                 stackIn_15_0 = stackOut_11_0;
                 break L4;
               }
@@ -150,31 +151,31 @@ final class ie extends l {
               }
             }
             var8 = stackIn_18_0;
-            lh.a(((ie) this).field_t, (byte) 121, param2.field_w, var7, param4 - -param2.field_o, param3 + param2.field_m + (param2.field_k + -((ie) this).field_t[0].field_C >> 1));
-            int discarded$1 = ((ie) this).field_g.a(param2.field_p, param2.field_o + param4, param2.field_m + (param3 + -2), param2.field_w, param2.field_k, var8, -1, 1, 1, ((ie) this).field_g.field_x);
+            lh.a(this.field_t, (byte) 121, param2.field_w, var7, param4 - -param2.field_o, param3 + param2.field_m + (param2.field_k + -this.field_t[0].field_C >> 2013306433));
+            discarded$1 = this.field_g.a(param2.field_p, param2.field_o + param4, param2.field_m + (param3 + -2), param2.field_w, param2.field_k, var8, -1, 1, 1, this.field_g.field_x);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("ie.J(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -182,7 +183,7 @@ final class ie extends l {
               break L6;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -191,14 +192,29 @@ final class ie extends l {
     }
 
     final static int a(boolean param0) {
-        return -si.field_B + li.field_k;
+        if (param0) {
+          ie.a(9, -41, 98, 108, (byte) 5, 25, 90, -7, -48, -35, 72, 76, -77, -54, -7, 93);
+          return -si.field_B + li.field_k;
+        } else {
+          return -si.field_B + li.field_k;
+        }
     }
 
     public static void c(int param0) {
-        field_C = null;
-        field_v = null;
-        field_x = null;
-        field_u = null;
+        if (param0 <= 39) {
+          ie.a(18, 72, 51, -18, (byte) -114, 114, -2, 103, 120, 120, -108, -121, 76, 24, 2, -16);
+          field_C = null;
+          field_v = null;
+          field_x = null;
+          field_u = null;
+          return;
+        } else {
+          field_C = null;
+          field_v = null;
+          field_x = null;
+          field_u = null;
+          return;
+        }
     }
 
     final static gl a(Throwable param0, String param1) {
@@ -206,25 +222,21 @@ final class ie extends l {
         if (!(param0 instanceof gl)) {
             var2 = new gl(param0, param1);
         } else {
-            var2 = (gl) (Object) param0;
+            var2 = (gl) ((Object) param0);
             var2.field_d = var2.field_d + ' ' + param1;
         }
         return var2;
     }
 
     private ie(int param0, int param1, int param2) {
-        ((ie) this).field_w = param2;
-        ((ie) this).field_g = wi.field_e;
-        ((ie) this).field_z = param1;
-        ((ie) this).field_A = param0;
-        ((ie) this).field_t = rk.field_d;
+        this.field_w = param2;
+        this.field_g = wi.field_e;
+        this.field_z = param1;
+        this.field_A = param0;
+        this.field_t = rk.field_d;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = -1;
         field_C = null;
         field_x = new he[1];

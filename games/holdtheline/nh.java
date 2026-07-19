@@ -13,7 +13,7 @@ final class nh extends v implements pi {
 
     public static void a(byte param0) {
         if (param0 != 25) {
-            field_H = null;
+            field_H = (String) null;
             field_K = null;
             field_H = null;
             return;
@@ -49,20 +49,19 @@ final class nh extends v implements pi {
             var6_int = 0;
             L1: while (true) {
               L2: {
-                if (((nh) this).field_L <= var6_int) {
+                if (this.field_L <= var6_int) {
                   break L2;
                 } else {
-                  if (((nh) this).field_G[var6_int] == param1) {
-                    var7 = ((nh) this).field_J[var6_int];
+                  if (this.field_G[var6_int] == param1) {
+                    var7 = this.field_J[var6_int];
                     if (-1 == var7) {
-                      ((nh) this).field_F.h((byte) -115);
+                      this.field_F.h((byte) -115);
                       break L2;
                     } else {
-                      go.a(0, ((nh) this).field_J[var6_int]);
+                      go.a(0, this.field_J[var6_int]);
                       break L2;
                     }
                   } else {
-                    var6_int++;
                     var6_int++;
                     continue L1;
                   }
@@ -80,23 +79,23 @@ final class nh extends v implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("nh.M(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -104,7 +103,7 @@ final class nh extends v implements pi {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -112,7 +111,7 @@ final class nh extends v implements pi {
         rm var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        Object var6 = null;
+        rm var6 = null;
         rm stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -150,20 +149,20 @@ final class nh extends v implements pi {
           L0: {
             L1: {
               var4 = new rm(param2, param1);
-              var4.field_l = (dh) (Object) new mo();
-              var5 = -2 + ((nh) this).field_u;
-              ((nh) this).a(0, (byte) 122, 0, 34 + ((nh) this).field_u, ((nh) this).field_x);
-              var4.a(7, (byte) 122, var5, 30, -14 + ((nh) this).field_x);
+              var4.field_l = (dh) ((Object) new mo());
+              var5 = -2 + this.field_u;
+              this.a(0, (byte) 122, 0, 34 + this.field_u, this.field_x);
+              var4.a(7, (byte) 122, var5, 30, -14 + this.field_x);
               if (param0 >= 43) {
                 break L1;
               } else {
-                var6 = null;
-                ((nh) this).a(-64, (rm) null, 28, 127, 42);
+                var6 = (rm) null;
+                this.a(-64, (rm) null, 28, 127, 42);
                 break L1;
               }
             }
-            ((nh) this).a(true, (n) (Object) var4);
-            stackOut_2_0 = (rm) var4;
+            this.a(true, var4);
+            stackOut_2_0 = (rm) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -171,23 +170,23 @@ final class nh extends v implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
             stackOut_4_1 = new StringBuilder().append("nh.G(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -196,23 +195,23 @@ final class nh extends v implements pi {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -220,7 +219,7 @@ final class nh extends v implements pi {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -228,67 +227,79 @@ final class nh extends v implements pi {
     nh(ab param0, qi param1, String param2) {
         super(0, 0, 288, 0, (dh) null);
         int var4_int = 0;
-        ((nh) this).field_L = 0;
+        this.field_L = 0;
         try {
-            ((nh) this).field_I = param1;
-            ((nh) this).field_F = param0;
-            ((nh) this).field_M = param2;
-            var4_int = ((nh) this).field_M == null ? 0 : ((nh) this).field_I.b(((nh) this).field_M, 260, ((nh) this).field_I.field_G);
-            ((nh) this).a(0, (byte) 122, 0, 22 - -var4_int, 288);
+            this.field_I = param1;
+            this.field_F = param0;
+            this.field_M = param2;
+            var4_int = this.field_M == null ? 0 : this.field_I.b(this.field_M, 260, this.field_I.field_G);
+            this.a(0, (byte) 122, 0, 22 - -var4_int, 288);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void h(int param0) {
-        ol.field_f = 0;
+        ol.field_f = param0;
         va.field_k = false;
         a.field_I = -1;
     }
 
     private final void a(int param0, byte param1) {
+        rm[] var3 = null;
+        int[] var4 = null;
         int var5 = 0;
-        int var6 = HoldTheLine.field_D;
-        if (!(((nh) this).field_L < param0)) {
-            return;
+        int var6 = 0;
+        rm[] var7 = null;
+        var6 = HoldTheLine.field_D;
+        if (this.field_L >= param0) {
+          return;
+        } else {
+          var7 = new rm[param0];
+          var3 = var7;
+          var4 = new int[param0];
+          var5 = 0;
+          L0: while (true) {
+            if (this.field_L <= var5) {
+              this.field_L = param0;
+              this.field_J = var4;
+              if (param1 <= 125) {
+                return;
+              } else {
+                this.field_G = var3;
+                return;
+              }
+            } else {
+              var7[var5] = this.field_G[var5];
+              var4[var5] = this.field_J[var5];
+              var5++;
+              continue L0;
+            }
+          }
         }
-        rm[] var7 = new rm[param0];
-        rm[] var3 = var7;
-        int[] var4 = new int[param0];
-        for (var5 = 0; ((nh) this).field_L > var5; var5++) {
-            var7[var5] = ((nh) this).field_G[var5];
-            var4[var5] = ((nh) this).field_J[var5];
-        }
-        ((nh) this).field_L = param0;
-        ((nh) this).field_J = var4;
-        ((nh) this).field_G = var3;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        int discarded$0 = ((nh) this).field_I.a(((nh) this).field_M, 14 + (((nh) this).field_k + param2), 10 + (((nh) this).field_o + param1), ((nh) this).field_x + -28, ((nh) this).field_u, 16777215, -1, 0, 0, ((nh) this).field_I.field_G);
+        int discarded$0 = this.field_I.a(this.field_M, 14 + (this.field_k + param2), 10 + (this.field_o + param1), this.field_x + -28, this.field_u, 16777215, -1, 0, 0, this.field_I.field_G);
     }
 
     final void a(int param0, String param1, byte param2) {
         int var4_int = 0;
         try {
-            var4_int = ((nh) this).field_L;
+            var4_int = this.field_L;
             this.a(var4_int - -1, (byte) 127);
-            ((nh) this).field_G[var4_int] = ((nh) this).a(76, (tb) this, param1);
+            this.field_G[var4_int] = this.a(76, (tb) (this), param1);
             if (param2 <= 52) {
-                ((nh) this).field_G = null;
+                this.field_G = (rm[]) null;
             }
-            ((nh) this).field_J[var4_int] = param0;
+            this.field_J[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "nh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "nh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "Achievements";
         field_H = "Account created successfully!";
     }

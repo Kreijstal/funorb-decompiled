@@ -8,16 +8,21 @@ final class rj {
     private static String field_z;
 
     public static void a(boolean param0) {
-        field_c = null;
-        field_a = null;
-        field_b = null;
+        if (!param0) {
+          rj.a(true);
+          field_c = null;
+          field_a = null;
+          field_b = null;
+          return;
+        } else {
+          field_c = null;
+          field_a = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rj.A(";
         field_c = new boolean[]{true, true, false};
         field_a = "Members";

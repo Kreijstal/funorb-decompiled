@@ -20,7 +20,7 @@ abstract class fb extends gp {
     abstract void a(int param0, int param1, int param2, int param3);
 
     final static void h(int param0) {
-        field_D.setLength(0);
+        field_D.setLength(param0);
         ui.field_g = 0;
     }
 
@@ -67,7 +67,14 @@ abstract class fb extends gp {
         field_D = null;
         field_A = null;
         field_u = null;
-        field_w = null;
+        if (param0 < 91) {
+          fb.a(-125, false);
+          field_w = (boolean[][]) null;
+          return;
+        } else {
+          field_w = (boolean[][]) null;
+          return;
+        }
     }
 
     final static void a(int param0, boolean param1) {
@@ -75,17 +82,13 @@ abstract class fb extends gp {
             param1 = false;
         }
         d.a(69, param1);
-        kp.i(0);
+        kp.i(param0);
     }
 
     fb() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = new boolean[][]{new boolean[11], new boolean[10]};
         field_D = new StringBuilder(80);
         field_E = 0;

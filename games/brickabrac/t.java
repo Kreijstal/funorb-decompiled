@@ -13,12 +13,17 @@ final class t {
 
     public static void a(int param0) {
         field_e = null;
-        field_f = null;
-        field_b = null;
-        field_d = null;
-        field_h = null;
-        field_c = null;
-        field_a = null;
+        if (param0 != -11470) {
+          return;
+        } else {
+          field_f = null;
+          field_b = null;
+          field_d = null;
+          field_h = null;
+          field_c = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
@@ -30,6 +35,7 @@ final class t {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
@@ -41,36 +47,42 @@ final class t {
         String stackOut_7_2 = null;
         try {
           L0: {
-            ge.a(-2846, (java.awt.Component) (Object) param1);
-            b.a(20616, (java.awt.Component) (Object) param1);
-            if (null != qa.field_x) {
-              qa.field_x.a((java.awt.Component) (Object) param1, -117);
-              break L0;
+            ge.a(-2846, (java.awt.Component) ((Object) param1));
+            b.a(20616, (java.awt.Component) ((Object) param1));
+            if (!param0) {
+              if (null != qa.field_x) {
+                qa.field_x.a((java.awt.Component) ((Object) param1), -117);
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                return;
+              }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("t.B(").append(false).append(',');
+            stackOut_6_0 = (RuntimeException) (var2);
+            stackOut_6_1 = new StringBuilder().append("t.B(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -78,15 +90,16 @@ final class t {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Offer draw";
         field_h = "Resigned";
         field_c = "Continue";

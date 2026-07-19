@@ -7,14 +7,10 @@ final class iaa {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 0;
+        int var1 = 82 % ((29 - param0) / 57);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "iaa.A(";
         field_a = "Completed!";
     }

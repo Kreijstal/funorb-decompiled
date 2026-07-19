@@ -9,8 +9,8 @@ final class ja extends ta implements ec {
     private static ei field_u;
 
     final void b() {
-        if (!((ja) this).a((byte) 73)) {
-            field_t.a((byte) 54, (q) this);
+        if (!this.a((byte) 73)) {
+            field_t.a((byte) 54, (q) (this));
         }
     }
 
@@ -26,8 +26,6 @@ final class ja extends ta implements ec {
         ja var11 = null;
         int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
         int stackIn_6_0 = 0;
         q stackIn_9_0 = null;
         int stackOut_5_0 = 0;
@@ -35,11 +33,9 @@ final class ja extends ta implements ec {
         q stackOut_8_0 = null;
         q stackOut_7_0 = null;
         var2 = (long)param1;
-        var4 = (ja) (Object) field_r.a(var2, 4604);
+        var4 = (ja) ((Object) field_r.a(var2, 4604));
         if (var4 == null) {
-          var15 = param0.a(param1, be.field_d);
-          var14 = var15;
-          var13 = var14;
+          var13 = param0.a(param1, be.field_d);
           var12 = var13;
           var5 = var12;
           var6 = pj.a(param0.b(param1), 64);
@@ -71,7 +67,8 @@ final class ja extends ta implements ec {
               }
             }
             L2: {
-              var11 = (ja) (Object) stackIn_9_0;
+              var11 = (ja) ((Object) stackIn_9_0);
+              var4 = var11;
               if (var11 != null) {
                 var11.field_q = var6;
                 break L2;
@@ -84,10 +81,10 @@ final class ja extends ta implements ec {
             var10 = var8 - 1;
             L3: while (true) {
               if (var10 < 0) {
-                field_r.a(var2, (ta) (Object) var4, 0);
+                field_r.a(var2, var4, 0);
                 return var4;
               } else {
-                var9[var10] = ja.i(var15[var10]);
+                var9[var10] = ja.i(var13[var10]);
                 var10--;
                 continue L3;
               }
@@ -102,7 +99,7 @@ final class ja extends ta implements ec {
         long var8 = 0L;
         int var10 = 0;
         int var2 = be.field_a[param1];
-        ja var3 = (ja) (Object) field_t.a((byte) -114);
+        ja var3 = (ja) ((Object) field_t.a((byte) -114));
         if (var3 == null) {
             var3 = new ja(var2, new int[4096]);
         } else {
@@ -129,14 +126,23 @@ final class ja extends ta implements ec {
     }
 
     public final boolean a(int param0) {
-        return ((ja) this).field_s.length == 4096;
+        return this.field_s.length == 4096;
     }
 
     public final int[] a(int param0, float param1) {
-        return ((ja) this).field_s;
+        return this.field_s;
     }
 
     final static ja a(long[] param0, ec param1, int param2) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -149,8 +155,6 @@ final class ja extends ta implements ec {
         int var13 = 0;
         int[] var14 = null;
         int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
         int stackIn_5_0 = 0;
         q stackIn_8_0 = null;
         int[] stackIn_18_0 = null;
@@ -172,9 +176,7 @@ final class ja extends ta implements ec {
         int[] stackOut_18_0 = null;
         int stackOut_18_1 = 0;
         int stackOut_18_2 = 0;
-        var17 = param1.a(param2, be.field_d);
-        var16 = var17;
-        var15 = var16;
+        var15 = param1.a(param2, be.field_d);
         var14 = var15;
         var3 = var14;
         if (var3 != null) {
@@ -203,7 +205,7 @@ final class ja extends ta implements ec {
             }
           }
           L2: {
-            var6 = (ja) (Object) stackIn_8_0;
+            var6 = (ja) ((Object) stackIn_8_0);
             if (var6 != null) {
               var6.field_q = param1.b(param2);
               break L2;
@@ -231,20 +233,20 @@ final class ja extends ta implements ec {
                       } else {
                         L6: {
                           if (var10 % 2L == 0L) {
-                            int incrementValue$9 = var9;
+                            incrementValue$9 = var9;
                             var9--;
-                            var7[incrementValue$9] = var17[var9];
-                            int incrementValue$10 = var9;
+                            var7[incrementValue$9] = var15[var9];
+                            incrementValue$10 = var9;
                             var9--;
-                            var7[incrementValue$10] = var17[var9];
+                            var7[incrementValue$10] = var15[var9];
                             break L6;
                           } else {
-                            int incrementValue$11 = var9;
+                            incrementValue$11 = var9;
                             var9--;
-                            var7[incrementValue$11] = ja.i(var17[var9]);
-                            int incrementValue$12 = var9;
+                            var7[incrementValue$11] = ja.i(var15[var9]);
+                            incrementValue$12 = var9;
                             var9--;
-                            var7[incrementValue$12] = ja.i(var17[var9]);
+                            var7[incrementValue$12] = ja.i(var15[var9]);
                             break L6;
                           }
                         }
@@ -256,20 +258,20 @@ final class ja extends ta implements ec {
                   } else {
                     L7: {
                       if (var10 % 2L == 0L) {
-                        int incrementValue$13 = var9;
+                        incrementValue$13 = var9;
                         var9--;
-                        var7[incrementValue$13] = var17[var9];
-                        int incrementValue$14 = var9;
+                        var7[incrementValue$13] = var15[var9];
+                        incrementValue$14 = var9;
                         var9--;
-                        var7[incrementValue$14] = var17[var9];
+                        var7[incrementValue$14] = var15[var9];
                         break L7;
                       } else {
-                        int incrementValue$15 = var9;
+                        incrementValue$15 = var9;
                         var9--;
-                        var7[incrementValue$15] = ja.i(var17[var9]);
-                        int incrementValue$16 = var9;
+                        var7[incrementValue$15] = ja.i(var15[var9]);
+                        incrementValue$16 = var9;
                         var9--;
-                        var7[incrementValue$16] = ja.i(var17[var9]);
+                        var7[incrementValue$16] = ja.i(var15[var9]);
                         break L7;
                       }
                     }
@@ -295,17 +297,17 @@ final class ja extends ta implements ec {
                     continue L8;
                   } else {
                     L10: {
-                      var13 = var17[var9];
-                      int incrementValue$17 = var9;
+                      var13 = var15[var9];
+                      incrementValue$17 = var9;
                       var9--;
-                      stackOut_17_0 = (int[]) var7;
+                      stackOut_17_0 = (int[]) (var7);
                       stackOut_17_1 = incrementValue$17;
                       stackIn_19_0 = stackOut_17_0;
                       stackIn_19_1 = stackOut_17_1;
                       stackIn_18_0 = stackOut_17_0;
                       stackIn_18_1 = stackOut_17_1;
                       if (var10 % 2L == 0L) {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
                         stackOut_19_2 = var13;
                         stackIn_20_0 = stackOut_19_0;
@@ -313,7 +315,7 @@ final class ja extends ta implements ec {
                         stackIn_20_2 = stackOut_19_2;
                         break L10;
                       } else {
-                        stackOut_18_0 = (int[]) (Object) stackIn_18_0;
+                        stackOut_18_0 = (int[]) ((Object) stackIn_18_0);
                         stackOut_18_1 = stackIn_18_1;
                         stackOut_18_2 = ja.i(var13);
                         stackIn_20_0 = stackOut_18_0;
@@ -339,8 +341,8 @@ final class ja extends ta implements ec {
     }
 
     private ja(int param0, int[] param1) {
-        ((ja) this).field_q = param0;
-        ((ja) this).field_s = param1;
+        this.field_q = param0;
+        this.field_s = param1;
     }
 
     private final static int i(int param0) {
@@ -358,14 +360,10 @@ final class ja extends ta implements ec {
     }
 
     public final int b(int param0) {
-        return ((ja) this).field_q;
+        return this.field_q;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new cf(16);
         field_t = new ei();
         field_u = new ei();

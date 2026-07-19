@@ -8,33 +8,29 @@ final class gd extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((gd) this).field_a.update(param0);
+            this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gd.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "gd.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((gd) this).field_a.paint(param0);
+            this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gd.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "gd.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     gd(java.awt.Component param0) {
         try {
-            ((gd) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "gd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
     }
 }

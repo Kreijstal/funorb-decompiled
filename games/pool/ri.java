@@ -29,9 +29,9 @@ final class ri extends fe {
     private ri(String param0, cc param1) {
         this(param0, db.field_Sb.field_l, param1);
         try {
-            ((ri) this).field_z = db.field_Sb.field_o;
+            this.field_z = db.field_Sb.field_o;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,11 +56,11 @@ final class ri extends fe {
         int stackOut_2_1 = 0;
         if (param0 != 16) {
           L0: {
-            ((ri) this).a(126, 56, 57, 116);
+            this.a(126, 56, 57, 116);
             stackOut_5_0 = this;
             stackIn_7_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
-            if (((ri) this).field_G) {
+            if (this.field_G) {
               stackOut_7_0 = this;
               stackOut_7_1 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -74,15 +74,15 @@ final class ri extends fe {
               break L0;
             }
           }
-          ((ri) this).field_G = stackIn_8_1 != 0;
-          super.a(param0, param1, param2, param3);
+          ((ri) (this)).field_G = stackIn_8_1 != 0;
+          super.a(param0 + 0, param1, param2, param3);
           return;
         } else {
           L1: {
             stackOut_1_0 = this;
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
-            if (((ri) this).field_G) {
+            if (this.field_G) {
               stackOut_3_0 = this;
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -96,8 +96,8 @@ final class ri extends fe {
               break L1;
             }
           }
-          ((ri) this).field_G = stackIn_4_1 != 0;
-          super.a(param0, param1, param2, param3);
+          ((ri) (this)).field_G = stackIn_4_1 != 0;
+          super.a(param0 + 0, param1, param2, param3);
           return;
         }
     }
@@ -105,26 +105,22 @@ final class ri extends fe {
     private ri(String param0, fp param1, cc param2) {
         super(param0, param1, param2);
         try {
-            ((ri) this).field_z = db.field_Sb.field_o;
+            this.field_z = db.field_Sb.field_o;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     ri(String param0, cc param1, boolean param2) {
         this(param0, param1);
         try {
-            ((ri) this).field_G = param2 ? true : false;
+            this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = "Your email address is used to identify this account";
         field_Q = "Connecting to<br>friend server...";
         field_R = "Orb coins: ";

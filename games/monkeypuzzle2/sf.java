@@ -41,13 +41,13 @@ final class sf extends ug {
 
     private final static void a(byte[] param0, int param1) {
         field_H = param0;
-        field_I = 0;
+        field_I = param1;
         field_r = 0;
     }
 
     final static int f(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_r) {
@@ -73,19 +73,19 @@ final class sf extends ug {
         int var6_int = 0;
         byte[] var6 = null;
         gk var2 = new gk(param0);
-        ((sf) this).field_G = var2.e(126);
-        ((sf) this).field_m = var2.e(-90);
-        ((sf) this).field_i = var2.e(-3);
-        ((sf) this).field_J = var2.e(-81);
-        if (((sf) this).field_J < 0) {
-            ((sf) this).field_J = ~((sf) this).field_J;
-            ((sf) this).field_L = true;
+        this.field_G = var2.e(126);
+        this.field_m = var2.e(-90);
+        this.field_i = var2.e(-3);
+        this.field_J = var2.e(-81);
+        if (this.field_J < 0) {
+            this.field_J = this.field_J ^ -1;
+            this.field_L = true;
         }
         int var3 = var2.e(-121);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((sf) this).field_o = new byte[var3][];
+        this.field_o = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -94,15 +94,16 @@ final class sf extends ug {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var6, var5, -96, 0);
-            ((sf) this).field_o[var4] = var6;
+            this.field_o[var4] = var6;
         }
     }
 
     final static sf a(ad param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             sf var4_ref = null;
             if (!sf.a(param0)) {
-                boolean discarded$0 = param0.a(param2, true, param1);
+                discarded$0 = param0.a(param2, true, param1);
                 return null;
             }
             byte[] var3 = param0.a(param2, param1, -124);
@@ -110,8 +111,10 @@ final class sf extends ug {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new sf(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -134,6 +137,7 @@ final class sf extends ug {
     }
 
     private final float[] a(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -193,13 +197,7 @@ final class sf extends ug {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -234,8 +232,8 @@ final class sf extends ug {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          sf.a(((sf) this).field_o[param0], 0);
-          int discarded$1 = sf.b();
+          sf.a(this.field_o[param0], 0);
+          discarded$1 = sf.b();
           var2 = sf.f(nf.a(field_x.length - 1, true));
           var3 = field_A[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -357,9 +355,7 @@ final class sf extends ug {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_w;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_w;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -371,11 +367,11 @@ final class sf extends ug {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_f;
+                            stackOut_39_0 = (float[]) (field_f);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_j;
+                            stackOut_38_0 = (float[]) (field_j);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -383,11 +379,11 @@ final class sf extends ug {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_D;
+                            stackOut_42_0 = (float[]) (field_D);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_p;
+                            stackOut_41_0 = (float[]) (field_p);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -395,11 +391,11 @@ final class sf extends ug {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_K;
+                            stackOut_45_0 = (float[]) (field_K);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_t;
+                            stackOut_44_0 = (float[]) (field_t);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -407,18 +403,16 @@ final class sf extends ug {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_B;
+                            stackOut_48_0 = (int[]) (field_B);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_k;
+                            stackOut_47_0 = (int[]) (field_k);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -498,7 +492,7 @@ final class sf extends ug {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -543,7 +537,7 @@ final class sf extends ug {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -656,27 +650,25 @@ final class sf extends ug {
             }
             L35: {
               var17 = null;
-              if (((sf) this).field_e <= 0) {
+              if (this.field_e <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((sf) this).field_e + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_e + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((sf) this).field_y) {
+                  var17 = var40;
+                  if (this.field_y) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((sf) this).field_u) {
+                      if (var19 >= this.field_u) {
                         break L36;
                       } else {
-                        var20 = (((sf) this).field_e >> 1) + var19;
-                        var40[var19] = var40[var19] + ((sf) this).field_g[var20];
+                        var20 = (this.field_e >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_g[var20];
                         var19++;
                         continue L37;
                       }
@@ -691,7 +683,7 @@ final class sf extends ug {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_w[var19];
                       var19++;
                       continue L38;
@@ -701,11 +693,11 @@ final class sf extends ug {
               }
             }
             L39: {
-              var18 = ((sf) this).field_g;
-              ((sf) this).field_g = field_w;
+              var18 = this.field_g;
+              this.field_g = field_w;
               field_w = var18;
-              ((sf) this).field_e = var4;
-              ((sf) this).field_u = var12 - (var4 >> 1);
+              this.field_e = var4;
+              this.field_u = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -723,12 +715,12 @@ final class sf extends ug {
                 break L39;
               }
             }
-            ((sf) this).field_y = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((sf) (this)).field_y = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_n[var14.field_b[var17_int]];
-            var55 = field_w;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_w;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -736,14 +728,13 @@ final class sf extends ug {
     }
 
     final td a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -756,23 +747,23 @@ final class sf extends ug {
           }
         }
         L1: {
-          if (((sf) this).field_v != null) {
+          if (this.field_v != null) {
             break L1;
           } else {
-            ((sf) this).field_e = 0;
-            ((sf) this).field_g = new float[field_s];
-            ((sf) this).field_v = new byte[((sf) this).field_m];
-            ((sf) this).field_q = 0;
-            ((sf) this).field_l = 0;
+            this.field_e = 0;
+            this.field_g = new float[field_s];
+            this.field_v = new byte[this.field_m];
+            this.field_q = 0;
+            this.field_l = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((sf) this).field_l >= ((sf) this).field_o.length) {
-            ((sf) this).field_g = null;
-            var14 = ((sf) this).field_v;
-            ((sf) this).field_v = null;
-            return new td(((sf) this).field_G, var14, ((sf) this).field_i, ((sf) this).field_J, ((sf) this).field_L);
+          if (this.field_l >= this.field_o.length) {
+            this.field_g = null;
+            var12 = this.field_v;
+            this.field_v = null;
+            return new td(this.field_G, var12, this.field_i, this.field_J, this.field_L);
           } else {
             L3: {
               if (param0 == null) {
@@ -786,19 +777,17 @@ final class sf extends ug {
               }
             }
             L4: {
-              var13 = this.a(((sf) this).field_l);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.a(this.field_l);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((sf) this).field_q;
-                  var4 = var13.length;
-                  if (var4 <= ((sf) this).field_m - var3) {
+                  var3 = this.field_q;
+                  var4 = var7.length;
+                  if (var4 <= this.field_m - var3) {
                     break L5;
                   } else {
-                    var4 = ((sf) this).field_m - var3;
+                    var4 = this.field_m - var3;
                     break L5;
                   }
                 }
@@ -809,32 +798,32 @@ final class sf extends ug {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((sf) this).field_q);
+                        param0[0] = param0[0] - (var3 - this.field_q);
                         break L7;
                       }
                     }
-                    ((sf) this).field_q = var3;
+                    this.field_q = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((sf) this).field_v[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_v[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((sf) this).field_l = ((sf) this).field_l + 1;
+            this.field_l = this.field_l + 1;
             continue L2;
           }
         }
@@ -861,9 +850,10 @@ final class sf extends ug {
 
     final static sf a(ad param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             sf var4_ref = null;
             if (!sf.a(param0)) {
-                boolean discarded$0 = param0.c(param1, param2, -125);
+                discarded$0 = param0.c(param1, param2, -125);
                 return null;
             }
             byte[] var3 = param0.b(255, param2, param1);
@@ -871,8 +861,10 @@ final class sf extends ug {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new sf(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -891,6 +883,7 @@ final class sf extends ug {
     }
 
     final td a() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -898,24 +891,24 @@ final class sf extends ug {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((sf) this).field_e = 0;
-        ((sf) this).field_g = new float[field_s];
-        var1 = new byte[((sf) this).field_m];
+        this.field_e = 0;
+        this.field_g = new float[field_s];
+        var1 = new byte[this.field_m];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((sf) this).field_o.length) {
-            ((sf) this).field_g = null;
-            return new td(((sf) this).field_G, var1, ((sf) this).field_i, ((sf) this).field_J, ((sf) this).field_L);
+          if (var3 >= this.field_o.length) {
+            this.field_g = null;
+            return new td(this.field_G, var1, this.field_i, this.field_J, this.field_L);
           } else {
             var4 = this.a(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((sf) this).field_m - var2) {
+                if (var5 <= this.field_m - var2) {
                   break L1;
                 } else {
-                  var5 = ((sf) this).field_m - var2;
+                  var5 = this.field_m - var2;
                   break L1;
                 }
               }
@@ -927,11 +920,11 @@ final class sf extends ug {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -960,6 +953,9 @@ final class sf extends ug {
     }
 
     final static void a(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -1034,14 +1030,14 @@ final class sf extends ug {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_A;
+                                      stackOut_37_0 = (boolean[]) (field_A);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (sf.b() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -1049,7 +1045,7 @@ final class sf extends ug {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -1059,8 +1055,8 @@ final class sf extends ug {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = sf.f(16);
-                                    int discarded$4 = sf.f(16);
+                                    discarded$3 = sf.f(16);
+                                    discarded$4 = sf.f(16);
                                     field_x[var6] = sf.f(8);
                                     var6++;
                                     continue L6;
@@ -1085,7 +1081,7 @@ final class sf extends ug {
                       }
                     }
                   } else {
-                    int discarded$5 = sf.f(16);
+                    discarded$5 = sf.f(16);
                     var3++;
                     continue L2;
                   }
@@ -1180,10 +1176,6 @@ final class sf extends ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = false;
     }
 }

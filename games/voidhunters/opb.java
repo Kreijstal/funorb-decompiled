@@ -35,7 +35,7 @@ final class opb extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(13, 103));
+            stackOut_2_0 = new nc(frb.a(13, 103));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class opb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("opb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -67,7 +67,7 @@ final class opb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -76,7 +76,7 @@ final class opb extends rqa {
         if (param2 == -128) {
           if (li.field_i) {
             if (fua.field_o) {
-              og.field_r.a(72, param1, param6, param4 << 24 | param5, param0, param3);
+              og.field_r.a(72, param1, param6, param4 << -1115023848 | param5, param0, param3);
               return;
             } else {
               return;
@@ -91,7 +91,7 @@ final class opb extends rqa {
             if (!fua.field_o) {
               return;
             } else {
-              og.field_r.a(72, param1, param6, param4 << 24 | param5, param0, param3);
+              og.field_r.a(72, param1, param6, param4 << -1115023848 | param5, param0, param3);
               return;
             }
           } else {
@@ -102,6 +102,11 @@ final class opb extends rqa {
     }
 
     public static void e(byte param0) {
+        if (param0 <= 57) {
+            opb.a(-77, 127, (byte) 35, -88, 55, 91, -105);
+            field_p = null;
+            return;
+        }
         field_p = null;
     }
 
@@ -110,10 +115,6 @@ final class opb extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Show lobby chat from my friends";
         field_o = 25;
     }

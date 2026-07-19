@@ -30,7 +30,7 @@ final class ge extends k implements mj {
         try {
           L0: {
             L1: {
-              if (((ge) this).field_gb != param0) {
+              if (this.field_gb != param0) {
                 break L1;
               } else {
                 this.c(true);
@@ -51,23 +51,23 @@ final class ge extends k implements mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var6;
+            stackOut_5_0 = (RuntimeException) (var6);
             stackOut_5_1 = new StringBuilder().append("ge.DA(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -75,7 +75,7 @@ final class ge extends k implements mj {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class ge extends k implements mj {
         int var3 = 0;
         var3 = Chess.field_G;
         if (param0) {
-          field_db = null;
+          field_db = (String) null;
           if (param1) {
             jh.field_a = false;
             if (param1) {
@@ -106,8 +106,8 @@ final class ge extends k implements mj {
             } else {
               L0: {
                 if (pd.field_Rb != null) {
-                  if (an.field_e <= 0) {
-                    if (aj.field_c <= 0) {
+                  if (-1 <= (an.field_e ^ -1)) {
+                    if (-1 <= (aj.field_c ^ -1)) {
                       if (ug.field_b <= ed.field_c) {
                         break L0;
                       } else {
@@ -132,7 +132,7 @@ final class ge extends k implements mj {
                   }
                 } else {
                   if (null != ib.field_d) {
-                    if (an.field_e > 0) {
+                    if ((an.field_e ^ -1) < -1) {
                       an.field_e = an.field_e - 1;
                       return;
                     } else {
@@ -158,13 +158,13 @@ final class ge extends k implements mj {
                     }
                   } else {
                     jh.field_a = false;
-                    if (aj.field_c <= 0) {
+                    if (-1 <= (aj.field_c ^ -1)) {
                       if (0 >= ed.field_c) {
                         if (ug.field_b <= an.field_e) {
                           break L0;
                         } else {
                           L3: {
-                            if (an.field_e == 0) {
+                            if (-1 == (an.field_e ^ -1)) {
                               tj.b((byte) -126);
                               break L3;
                             } else {
@@ -210,8 +210,8 @@ final class ge extends k implements mj {
               } else {
                 L4: {
                   if (pd.field_Rb != null) {
-                    if (an.field_e <= 0) {
-                      if (aj.field_c <= 0) {
+                    if (-1 <= (an.field_e ^ -1)) {
+                      if (-1 <= (aj.field_c ^ -1)) {
                         if (ug.field_b <= ed.field_c) {
                           break L4;
                         } else {
@@ -236,7 +236,7 @@ final class ge extends k implements mj {
                     }
                   } else {
                     if (null != ib.field_d) {
-                      if (an.field_e > 0) {
+                      if ((an.field_e ^ -1) < -1) {
                         an.field_e = an.field_e - 1;
                         return;
                       } else {
@@ -262,13 +262,13 @@ final class ge extends k implements mj {
                       }
                     } else {
                       jh.field_a = false;
-                      if (aj.field_c <= 0) {
+                      if (-1 <= (aj.field_c ^ -1)) {
                         if (0 >= ed.field_c) {
                           if (ug.field_b <= an.field_e) {
                             break L4;
                           } else {
                             L7: {
-                              if (an.field_e == 0) {
+                              if (-1 == (an.field_e ^ -1)) {
                                 tj.b((byte) -126);
                                 break L7;
                               } else {
@@ -312,8 +312,8 @@ final class ge extends k implements mj {
               } else {
                 L8: {
                   if (pd.field_Rb != null) {
-                    if (an.field_e <= 0) {
-                      if (aj.field_c <= 0) {
+                    if (-1 <= (an.field_e ^ -1)) {
+                      if (-1 <= (aj.field_c ^ -1)) {
                         if (ug.field_b <= ed.field_c) {
                           break L8;
                         } else {
@@ -338,7 +338,7 @@ final class ge extends k implements mj {
                     }
                   } else {
                     if (null != ib.field_d) {
-                      if (an.field_e > 0) {
+                      if ((an.field_e ^ -1) < -1) {
                         an.field_e = an.field_e - 1;
                         return;
                       } else {
@@ -364,11 +364,11 @@ final class ge extends k implements mj {
                       }
                     } else {
                       jh.field_a = false;
-                      if (aj.field_c <= 0) {
+                      if (-1 <= (aj.field_c ^ -1)) {
                         if (0 >= ed.field_c) {
                           if (ug.field_b > an.field_e) {
                             L11: {
-                              if (an.field_e == 0) {
+                              if (-1 == (an.field_e ^ -1)) {
                                 tj.b((byte) -126);
                                 break L11;
                               } else {
@@ -425,8 +425,8 @@ final class ge extends k implements mj {
                 } else {
                   L13: {
                     if (pd.field_Rb != null) {
-                      if (an.field_e <= 0) {
-                        if (aj.field_c <= 0) {
+                      if (-1 <= (an.field_e ^ -1)) {
+                        if (-1 <= (aj.field_c ^ -1)) {
                           if (ug.field_b <= ed.field_c) {
                             break L13;
                           } else {
@@ -451,7 +451,7 @@ final class ge extends k implements mj {
                       }
                     } else {
                       if (null != ib.field_d) {
-                        if (an.field_e > 0) {
+                        if ((an.field_e ^ -1) < -1) {
                           an.field_e = an.field_e - 1;
                           break L13;
                         } else {
@@ -477,13 +477,13 @@ final class ge extends k implements mj {
                         }
                       } else {
                         jh.field_a = false;
-                        if (aj.field_c <= 0) {
+                        if (-1 <= (aj.field_c ^ -1)) {
                           if (0 >= ed.field_c) {
                             if (ug.field_b <= an.field_e) {
                               break L13;
                             } else {
                               L16: {
-                                if (an.field_e == 0) {
+                                if (-1 == (an.field_e ^ -1)) {
                                   tj.b((byte) -126);
                                   break L16;
                                 } else {
@@ -529,8 +529,8 @@ final class ge extends k implements mj {
           } else {
             L17: {
               if (pd.field_Rb != null) {
-                if (an.field_e <= 0) {
-                  if (aj.field_c <= 0) {
+                if (-1 <= (an.field_e ^ -1)) {
+                  if (-1 <= (aj.field_c ^ -1)) {
                     if (ug.field_b <= ed.field_c) {
                       break L17;
                     } else {
@@ -555,7 +555,7 @@ final class ge extends k implements mj {
                 }
               } else {
                 if (null != ib.field_d) {
-                  if (an.field_e > 0) {
+                  if ((an.field_e ^ -1) < -1) {
                     an.field_e = an.field_e - 1;
                     break L17;
                   } else {
@@ -581,11 +581,11 @@ final class ge extends k implements mj {
                   }
                 } else {
                   jh.field_a = false;
-                  if (aj.field_c <= 0) {
+                  if (-1 <= (aj.field_c ^ -1)) {
                     if (0 >= ed.field_c) {
                       if (ug.field_b > an.field_e) {
                         L20: {
-                          if (an.field_e == 0) {
+                          if (-1 == (an.field_e ^ -1)) {
                             tj.b((byte) -126);
                             break L20;
                           } else {
@@ -625,19 +625,22 @@ final class ge extends k implements mj {
 
     final static pg a(boolean param0, int param1, int param2, int param3) {
         int var5 = Chess.field_G;
-        pg var4 = (pg) (Object) nd.field_h.g(-18110);
+        pg var4 = (pg) ((Object) nd.field_h.g(-18110));
         while (var4 != null) {
-            if (!(var4.field_q != 0)) {
+            if (!(var4.field_q != param2)) {
                 return var4;
             }
-            var4 = (pg) (Object) nd.field_h.a((byte) -111);
+            var4 = (pg) ((Object) nd.field_h.a((byte) -111));
         }
         pg var6 = new pg();
         var4 = var6;
-        var6.field_u = 10;
-        var4.field_q = 0;
-        nd.field_h.a((o) (Object) var4, (byte) 102);
-        tm.a(false, var4, 7);
+        var6.field_u = param3;
+        if (!param0) {
+            return (pg) null;
+        }
+        var4.field_q = param2;
+        nd.field_h.a((o) (var4), (byte) 102);
+        tm.a(false, var4, param1);
         return var4;
     }
 
@@ -681,13 +684,13 @@ final class ge extends k implements mj {
         try {
           L0: {
             var4 = new fb(param0, param1);
-            var4.field_n = (jm) (Object) new sf();
-            var5 = ((ge) this).field_C - 6;
-            ((ge) this).field_C = ((ge) this).field_C + 38;
-            var4.a(var5, 34, 30, -30 + ((ge) this).field_y, 15);
-            ((ge) this).b((mf) (Object) var4, 95);
-            ((ge) this).c((byte) 112);
-            stackOut_0_0 = (fb) var4;
+            var4.field_n = (jm) ((Object) new sf());
+            var5 = this.field_C - 6;
+            this.field_C = this.field_C + 38;
+            var4.a(var5, 34, param2, -30 + this.field_y, 15);
+            this.b(var4, 95);
+            this.c((byte) 112);
+            stackOut_0_0 = (fb) (var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -695,23 +698,23 @@ final class ge extends k implements mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_0 = (RuntimeException) (var4_ref);
             stackOut_2_1 = new StringBuilder().append("ge.I(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -720,23 +723,23 @@ final class ge extends k implements mj {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -744,16 +747,19 @@ final class ge extends k implements mj {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 30 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
 
     private final void c(boolean param0) {
-        if (!(((ge) this).field_P)) {
+        if (!(this.field_P)) {
             return;
         }
-        ((ge) this).field_P = false;
+        this.field_P = false;
+        if (!param0) {
+            ge.a(false, true);
+        }
     }
 
     ge(fm param0, ij param1) {
@@ -796,44 +802,44 @@ final class ge extends k implements mj {
             L1: {
               var3 = null;
               if (gi.field_a == param1) {
-                var3 = (Object) (Object) Chess.field_D;
+                var3 = Chess.field_D;
                 break L1;
               } else {
                 if (kh.field_k == param1) {
-                  ((ge) this).field_C = ((ge) this).field_C + 10;
-                  var3 = (Object) (Object) le.field_c;
+                  this.field_C = this.field_C + 10;
+                  var3 = le.field_c;
                   if (!jj.d(124)) {
                     break L1;
                   } else {
-                    var3 = (Object) (Object) le.field_d;
-                    ((ge) this).field_C = ((ge) this).field_C + 20;
+                    var3 = le.field_d;
+                    this.field_C = this.field_C + 20;
                     break L1;
                   }
                 } else {
                   if (cm.field_t != param1) {
                     break L1;
                   } else {
-                    ((ge) this).field_C = ((ge) this).field_C + 30;
-                    var3 = (Object) (Object) vd.field_Gb;
+                    this.field_C = this.field_C + 30;
+                    var3 = vd.field_Gb;
                     break L1;
                   }
                 }
               }
             }
-            var4 = new mf((String) var3, (rg) null);
+            var4 = new mf((String) (var3), (rg) null);
             var4.field_C = 80;
-            var4.field_y = ((ge) this).field_y;
+            var4.field_y = this.field_y;
             var4.field_r = 50;
             var4.field_u = 0;
-            var4.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
-            ((ge) this).b(var4, 95);
-            ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+            var4.field_n = (jm) ((Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+            this.b(var4, 95);
+            this.field_gb = this.a(sj.field_m, (rg) (this), 30);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_10_0 = var3;
             stackOut_10_1 = new StringBuilder().append("ge.<init>(");
             stackIn_12_0 = stackOut_10_0;
@@ -842,7 +848,7 @@ final class ge extends k implements mj {
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
@@ -850,7 +856,7 @@ final class ge extends k implements mj {
               break L2;
             } else {
               stackOut_11_0 = stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -867,7 +873,7 @@ final class ge extends k implements mj {
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
               stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
@@ -875,7 +881,7 @@ final class ge extends k implements mj {
               break L3;
             } else {
               stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -883,7 +889,7 @@ final class ge extends k implements mj {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
@@ -893,15 +899,11 @@ final class ge extends k implements mj {
                 ge.k(15);
             }
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ge.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ge.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_cb = "Your game";
         field_eb = new int[1024];
         field_db = "Account created successfully!";

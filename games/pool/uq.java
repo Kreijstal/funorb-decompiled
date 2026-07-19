@@ -44,9 +44,22 @@ final class uq {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            {
-              Thread.sleep(param0);
-              return;
+            try {
+              L0: {
+                Thread.sleep(param0);
+                if (param1 == 104) {
+                  break L0;
+                } else {
+                  uq.a(-92);
+                  return;
+                }
+              }
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var3 = (InterruptedException) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -69,7 +82,7 @@ final class uq {
               if (param0 < -79) {
                 break L1;
               } else {
-                field_K = null;
+                field_K = (String) null;
                 break L1;
               }
             }
@@ -77,11 +90,11 @@ final class uq {
               kh.field_Pb = kh.field_Pb - 1;
               if (kh.field_Pb == 0) {
                 kh.field_Pb = 200;
-                var1 = (kf) (Object) oj.field_o.c((byte) 116);
+                var1 = (kf) ((Object) oj.field_o.c((byte) 116));
                 L3: while (true) {
                   if (var1 == null) {
                     if (mp.field_R != null) {
-                      var1 = (kf) (Object) mp.field_R.c((byte) -84);
+                      var1 = (kf) ((Object) mp.field_R.c((byte) -84));
                       L4: while (true) {
                         if (var1 == null) {
                           break L2;
@@ -94,7 +107,7 @@ final class uq {
                               break L5;
                             }
                           }
-                          var1 = (kf) (Object) mp.field_R.f((byte) -5);
+                          var1 = (kf) ((Object) mp.field_R.f((byte) -5));
                           continue L4;
                         }
                       }
@@ -110,7 +123,7 @@ final class uq {
                         break L6;
                       }
                     }
-                    var1 = (kf) (Object) oj.field_o.f((byte) -5);
+                    var1 = (kf) ((Object) oj.field_o.f((byte) -5));
                     continue L3;
                   }
                 }
@@ -134,53 +147,55 @@ final class uq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) runtimeException, "uq.B(" + param0 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "uq.B(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_f = null;
         field_i = null;
+        if (param0 != -8090) {
+            return;
+        }
         field_K = null;
         field_D = null;
     }
 
     final static void a(int param0, String param1, int param2, byte param3, long param4) {
         try {
+            if (param3 > -52) {
+                field_i = (jg) null;
+            }
             hj.field_c = param4;
             nr.field_T = true;
             ie.field_e = param1;
             uh.field_x = param0;
             tq.field_t = param2;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "uq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -76 + ',' + param4 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "uq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     uq() {
-        ((uq) this).field_o = new int[16];
-        ((uq) this).field_I = new int[256];
-        ((uq) this).field_b = new int[6][258];
-        ((uq) this).field_w = new int[257];
-        ((uq) this).field_a = 0;
-        ((uq) this).field_G = new byte[4096];
-        ((uq) this).field_J = new byte[6][258];
-        ((uq) this).field_k = new byte[256];
-        ((uq) this).field_v = new int[6];
-        ((uq) this).field_d = new int[6][258];
-        ((uq) this).field_x = new boolean[16];
-        ((uq) this).field_m = new boolean[256];
-        ((uq) this).field_A = new byte[18002];
-        ((uq) this).field_u = 0;
-        ((uq) this).field_r = new byte[18002];
-        ((uq) this).field_n = new int[6][258];
+        this.field_o = new int[16];
+        this.field_I = new int[256];
+        this.field_b = new int[6][258];
+        this.field_w = new int[257];
+        this.field_a = 0;
+        this.field_G = new byte[4096];
+        this.field_J = new byte[6][258];
+        this.field_k = new byte[256];
+        this.field_v = new int[6];
+        this.field_d = new int[6][258];
+        this.field_x = new boolean[16];
+        this.field_m = new boolean[256];
+        this.field_A = new byte[18002];
+        this.field_u = 0;
+        this.field_r = new byte[18002];
+        this.field_n = new int[6][258];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = -1;
         field_K = "Passwords must be between 5 and 20 characters long";
     }

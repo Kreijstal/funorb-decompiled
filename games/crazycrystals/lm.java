@@ -18,7 +18,7 @@ final class lm {
         int var2 = 0;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = (Object) (Object) tm.field_b;
+        var1 = tm.field_b;
         synchronized (var1) {
           L0: {
             gg.field_c = uc.field_b;
@@ -31,7 +31,7 @@ final class lm {
             to.field_a = kk.field_g;
             dp.field_h = sb.field_I;
             th.field_y = 0;
-            var2 = 1;
+            var2 = 33 % ((-53 - param0) / 49);
             break L0;
           }
         }
@@ -42,7 +42,14 @@ final class lm {
         field_g = null;
         field_a = null;
         field_e = null;
-        field_d = null;
+        if (param0 != -26377) {
+          lm.a((byte) -120);
+          field_d = null;
+          return;
+        } else {
+          field_d = null;
+          return;
+        }
     }
 
     private lm() throws Throwable {
@@ -50,10 +57,6 @@ final class lm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_e = new sj(4, 1, 1, 1);
     }

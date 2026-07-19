@@ -9,6 +9,7 @@ abstract class em {
     static boolean field_c;
 
     final int a(int param0) {
+        int discarded$2 = 0;
         int var2 = 0;
         mi[] var3 = null;
         int var4 = 0;
@@ -21,13 +22,13 @@ abstract class em {
           if (param0 == -17287) {
             break L0;
           } else {
-            int discarded$2 = ((em) this).a(9, -34, -21);
+            discarded$2 = this.a(9, -34, -21);
             break L0;
           }
         }
         L1: {
-          if (((em) this).field_a != null) {
-            var3 = ((em) this).field_a;
+          if (this.field_a != null) {
+            var3 = this.field_a;
             var4 = 0;
             L2: while (true) {
               if (var4 >= var3.length) {
@@ -65,31 +66,31 @@ abstract class em {
         int var8 = 0;
         L0: {
           var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          if (null == ((em) this).field_a) {
+          if (null == this.field_a) {
             break L0;
           } else {
-            if (0 == ((em) this).field_a.length) {
+            if (0 == this.field_a.length) {
               break L0;
             } else {
-              if (((em) this).field_a[0].field_e > param2) {
+              if (this.field_a[0].field_e > param2) {
                 break L0;
               } else {
-                if (param2 <= ((em) this).field_a[((em) this).field_a.length + -1].field_b) {
-                  if (((em) this).field_a.length != 1) {
+                if (param2 <= this.field_a[this.field_a.length + -1].field_b) {
+                  if ((this.field_a.length ^ -1) != -2) {
                     var4 = param1;
                     var5 = 0;
                     L1: while (true) {
-                      if (var5 >= ((em) this).field_a.length) {
+                      if (var5 >= this.field_a.length) {
                         return -1;
                       } else {
                         L2: {
-                          var6 = ((em) this).field_a[var5];
+                          var6 = this.field_a[var5];
                           if (param2 < var6.field_e) {
                             break L2;
                           } else {
                             if (param2 <= var6.field_b) {
                               var7 = var6.a(-21878, param0);
-                              if (var7 == -1) {
+                              if ((var7 ^ -1) == 0) {
                                 return -1;
                               } else {
                                 return var4 - -var7;
@@ -105,7 +106,7 @@ abstract class em {
                       }
                     }
                   } else {
-                    return ((em) this).field_a[0].a(-21878, param0);
+                    return this.field_a[0].a(-21878, param0);
                   }
                 } else {
                   return -1;
@@ -120,18 +121,19 @@ abstract class em {
     final int b(int param0, int param1) {
         int var3 = 0;
         mi var4 = null;
+        int discarded$0 = 0;
         int var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        for (var3 = 0; ((em) this).field_a.length > var3; var3++) {
-            var4 = ((em) this).field_a[var3];
+        for (var3 = 0; this.field_a.length > var3; var3++) {
+            var4 = this.field_a[var3];
             if (param0 < var4.field_a.length) {
                 return var3;
             }
             param0 = param0 - (-1 + var4.field_a.length);
         }
         if (param1 != -12280) {
-            int discarded$0 = ((em) this).a(-67, -51);
+            discarded$0 = this.a(-67, -51);
         }
-        return ((em) this).field_a.length;
+        return this.field_a.length;
     }
 
     final int a(int param0, int param1) {
@@ -139,7 +141,7 @@ abstract class em {
         mi var6 = null;
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var3 = 58 / ((19 - param0) / 48);
-        mi[] var4 = ((em) this).field_a;
+        mi[] var4 = this.field_a;
         for (var5 = 0; var4.length > var5; var5++) {
             var6 = var4[var5];
             if (var6.field_a.length > param1) {
@@ -158,24 +160,24 @@ abstract class em {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
+        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
+        int stackOut_15_0 = 0;
         RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -186,8 +188,8 @@ abstract class em {
             L1: while (true) {
               if (var8 >= var7) {
                 if (var5_int > param3) {
-                  stackOut_13_0 = (-param2 + param0 << 8) / var5_int;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackOut_15_0 = (-param2 + param0 << -217207480) / var5_int;
+                  stackIn_16_0 = stackOut_15_0;
                   break L0;
                 } else {
                   return 0;
@@ -200,15 +202,18 @@ abstract class em {
                     break L2;
                   } else {
                     if (var9 != 62) {
-                      L3: {
-                        if (var6 != 0) {
-                          break L3;
+                      if (var6 == 0) {
+                        if (var9 == 32) {
+                          var5_int++;
+                          break L2;
                         } else {
-                          break L3;
+                          var8++;
+                          continue L1;
                         }
+                      } else {
+                        var8++;
+                        continue L1;
                       }
-                      var8++;
-                      continue L1;
                     } else {
                       var6 = 0;
                       break L2;
@@ -222,35 +227,35 @@ abstract class em {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("em.K(").append(param0).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_18_0 = (RuntimeException) (var5);
+            stackOut_18_1 = new StringBuilder().append("em.K(").append(param0).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L4;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L4;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_14_0;
+        return stackIn_16_0;
     }
 
     final int b(int param0) {
@@ -267,13 +272,13 @@ abstract class em {
         }
         L1: {
           L2: {
-            if (((em) this).field_a == null) {
+            if (this.field_a == null) {
               break L2;
             } else {
-              if (((em) this).field_a.length <= 0) {
+              if (this.field_a.length <= 0) {
                 break L2;
               } else {
-                stackOut_4_0 = -((em) this).field_a[0].field_e + ((em) this).field_a[((em) this).field_a.length - 1].field_b;
+                stackOut_4_0 = -this.field_a[0].field_e + this.field_a[this.field_a.length - 1].field_b;
                 stackIn_6_0 = stackOut_4_0;
                 break L1;
               }
@@ -287,10 +292,6 @@ abstract class em {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 64;
         field_c = false;
         field_d = 100;

@@ -9,17 +9,17 @@ final class gg extends fb {
     byte[] field_n;
 
     gg(int param0, byte[] param1, int param2, int param3) {
-        ((gg) this).field_m = param0;
-        ((gg) this).field_n = param1;
-        ((gg) this).field_k = param2;
-        ((gg) this).field_o = param3;
+        this.field_m = param0;
+        this.field_n = param1;
+        this.field_k = param2;
+        this.field_o = param3;
     }
 
     gg(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((gg) this).field_m = param0;
-        ((gg) this).field_n = param1;
-        ((gg) this).field_k = param2;
-        ((gg) this).field_o = param3;
-        ((gg) this).field_l = param4 ? true : false;
+        this.field_m = param0;
+        this.field_n = param1;
+        this.field_k = param2;
+        this.field_o = param3;
+        this.field_l = param4 ? true : false;
     }
 }

@@ -7,25 +7,26 @@ final class osb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return null;
+            return (tv[]) null;
         }
-        return (tv[]) (Object) new cc[param1];
+        return (tv[]) ((Object) new cc[param1]);
     }
 
     public static void a(int param0) {
+        if (param0 != 1) {
+            field_b = -17;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     public final tv a(byte param0) {
         int var2 = -16 % ((-64 - param0) / 50);
-        return (tv) (Object) new cc();
+        return (tv) ((Object) new cc());
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 1;
         field_a = "Searching for opponents";
     }

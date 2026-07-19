@@ -1,24 +1,22 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-07-19T11:52:25.761Z",
+  "capturedAt": "2026-07-19T20:18:31.266Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "03c3b99e09689de5572d0e0a0e759ccd6f2acaeb",
+      "commit": "636c8031b92f4f851622d37dabe83e4cd7a52b1c",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "5f9a077afb7bd705cb3248862507e17a0806ea90",
+      "commit": "7403bb59fbecc9fc1bc129c35b78109581c83ae7",
       "trackedClean": true
     }
   },
   "invocation": {
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
-      "/tmp/issue24-funorb-regen.HlI32y",
-      "--game",
-      "dekobloko"
+      ".work/games"
     ],
-    "selectedGame": "dekobloko",
+    "selectedGame": null,
     "reusePipeline": false,
     "updateBaseline": false,
     "fixedPipelineArguments": [
@@ -26,18 +24,55 @@
       "none",
       "--safe-bytecode"
     ],
-    "environment": {
-      "PIPELINE_EXPERIMENTAL_INTERCLASS_DCE": "1",
-      "PIPELINE_EXPERIMENTAL_SIGNATURE_COMPACTION": "0",
-      "PIPELINE_EXPERIMENTAL_UNTHROWABLE_CATCH_DCE": "1",
-      "PIPELINE_TIMEOUT_SECONDS": "7200"
-    }
+    "environment": {}
   },
   "publication": {
-    "synchronizedAt": "2026-07-19T11:58:26.027Z",
-    "destinationBaseCommit": "b2f94d02527af883bed27561b2ca8d64aa8ab502",
+    "synchronizedAt": "2026-07-19T23:58:55.322Z",
+    "destinationBaseCommit": "25831130d345ac421ee463ed08215ca8c79a0778",
     "syncedGames": [
-      "dekobloko"
+      "36cardtrick",
+      "aceofskies",
+      "arcanistsmulti",
+      "armiesofgielinor",
+      "bachelorfridge",
+      "bouncedown",
+      "brickabrac",
+      "chess",
+      "confined",
+      "crazycrystals",
+      "dekobloko",
+      "drphlogistonsavestheearth",
+      "dungeonassault",
+      "escapevector",
+      "fleacircus",
+      "geoblox",
+      "holdtheline",
+      "kickabout",
+      "lexicominos",
+      "minerdisturbance",
+      "monkeypuzzle2",
+      "orbdefence",
+      "pixelate",
+      "pool",
+      "shatteredplans",
+      "solknight",
+      "starcannon",
+      "steelsentinels",
+      "stellarshard",
+      "sumoblitz",
+      "terraphoenix",
+      "tetralink",
+      "tombracer",
+      "torchallenge",
+      "torquing",
+      "trackcontroller",
+      "transmogrify",
+      "vertigo2",
+      "virogrid",
+      "voidhunters",
+      "wizardrun",
+      "zombiedawn",
+      "zombiedawnmulti"
     ]
   }
 }

@@ -10,15 +10,11 @@ final class aa {
         field_b = null;
         field_a = null;
         if (param0 != 20293) {
-            field_a = null;
+            field_a = (am) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aa.A(";
     }
 }

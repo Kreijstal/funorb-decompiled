@@ -8,6 +8,9 @@ final class rn {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 != -2) {
+            field_a = 49;
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -21,12 +24,13 @@ final class rn {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var14 = Chess.field_G;
         try {
           L0: {
             L1: {
-              var6_int = param0 + 493 + param3 + 10;
+              var6_int = param0 + 493 + param3 - -2 - -8;
               ji.field_N.a(3, -6 + var6_int, -2147483648, -6 + uh.field_m.field_pb, 3);
               var7 = -5 + ji.field_N.field_pb;
               qj.field_e.a(5, 487 + (param3 - -param0), -2147483648, param5, -param5 + var7);
@@ -45,57 +49,61 @@ final class rn {
             var9 = var8 / 2;
             var10 = param2 + (var9 + param3);
             var11 = 0;
-            var12 = 0;
-            L2: while (true) {
-              if (var12 >= 6) {
-                break L0;
-              } else {
-                L3: {
-                  L4: {
-                    if (var12 >= 5) {
-                      break L4;
-                    } else {
-                      if (null == g.field_d[var12]) {
-                        var12++;
-                        break L3;
-                      } else {
+            if (param1 <= -127) {
+              var12 = 0;
+              L2: while (true) {
+                if (-7 >= (var12 ^ -1)) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    L4: {
+                      if (var12 >= 5) {
                         break L4;
+                      } else {
+                        if (null == g.field_d[var12]) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
                       }
                     }
+                    var13 = 3 - -((-6 + uh.field_m.field_pb - -2) * var11 / (qm.field_d - -1));
+                    var11++;
+                    var7 = -var13 + -2 + 3 + (-6 + (uh.field_m.field_pb - -2)) * var11 / (1 + qm.field_d);
+                    if (-6 < (var12 ^ -1)) {
+                      g.field_d[var12].a(var6_int, var8, -2147483648, var7, var13);
+                      t.field_K[var12].a(param3, var9 - param3, -2147483648, var7, 0);
+                      ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7 + -param4, param4);
+                      mf.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7 + -param4, param4);
+                      break L3;
+                    } else {
+                      bj.field_jb.a(var6_int, var8, -2147483648, var7, var13);
+                      break L3;
+                    }
                   }
-                  var13 = 3 - -((-6 + uh.field_m.field_pb - -2) * var11 / (qm.field_d - -1));
-                  var11++;
-                  var7 = -var13 + 1 + (-6 + (uh.field_m.field_pb - -2)) * var11 / (1 + qm.field_d);
-                  if (var12 < 5) {
-                    g.field_d[var12].a(var6_int, var8, -2147483648, var7, var13);
-                    t.field_K[var12].a(param3, var9 - param3, -2147483648, var7, 0);
-                    ig.field_i[var12].a(var9, param2, -2147483648, -param4 + var7 + -param4, param4);
-                    mf.field_l[var12].a(var10, -var10 + var8 - param3, -2147483648, -param4 + var7 + -param4, param4);
-                    var12++;
-                    break L3;
-                  } else {
-                    bj.field_jb.a(var6_int, var8, -2147483648, var7, var13);
-                    var12++;
-                    break L3;
-                  }
+                  var12++;
+                  continue L2;
                 }
-                var12++;
-                continue L2;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var6, "rn.B(" + param0 + ',' + -128 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw fk.a((Throwable) ((Object) var6), "rn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Change display name";
         field_b = 2;
         field_a = -1;

@@ -20,17 +20,13 @@ abstract class se extends ri {
         field_o = null;
         field_p = null;
         field_q = null;
-        int var1 = -57;
+        int var1 = 57 / ((38 - param0) / 45);
     }
 
     se() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "se.P(";
         field_o = "Names should contain a maximum of 12 characters";
         field_v = 4;

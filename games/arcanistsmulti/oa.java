@@ -10,6 +10,9 @@ final class oa {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 != 98) {
+            return;
+        }
         field_d = null;
         field_c = null;
         field_a = null;
@@ -79,7 +82,7 @@ final class oa {
                     } else {
                       L6: {
                         if (ul.field_h) {
-                          param2 = tj.a(114, new String[1], wa.field_Eb);
+                          param2 = tj.a(114, new String[]{param2}, wa.field_Eb);
                           break L6;
                         } else {
                           break L6;
@@ -97,10 +100,10 @@ final class oa {
                       break L5;
                     }
                   }
-                  if (param1 == 256) {
+                  if ((param1 ^ -1) == -257) {
                     break L1;
                   } else {
-                    if (param1 != 10) {
+                    if (-11 != (param1 ^ -1)) {
                       if (hk.field_s) {
                         break L1;
                       } else {
@@ -117,7 +120,7 @@ final class oa {
             if (param0) {
               break L0;
             } else {
-              field_b = null;
+              field_b = (String) null;
               return;
             }
           }
@@ -125,23 +128,23 @@ final class oa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_0 = (RuntimeException) (var3);
             stackOut_26_1 = new StringBuilder().append("oa.B(").append(param0).append(',').append(param1).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param2 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -149,15 +152,11 @@ final class oa {
               break L8;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Chat view has been scrolled up. Scroll down to chat.";
         field_e = 50;
         field_b = "Minimap";

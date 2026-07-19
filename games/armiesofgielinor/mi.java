@@ -42,15 +42,15 @@ final class mi extends tc {
     }
 
     final void e(int param0) {
-        ((mi) this).field_K = null;
-        ((mi) this).field_H = null;
-        ((mi) this).field_q = null;
+        this.field_K = null;
+        this.field_H = null;
+        this.field_q = null;
         if (param0 != 13301) {
           mi.a(-82);
-          ((mi) this).field_v = null;
+          this.field_v = null;
           return;
         } else {
-          ((mi) this).field_v = null;
+          this.field_v = null;
           return;
         }
     }
@@ -77,10 +77,6 @@ final class mi extends tc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "Healing";
         field_k = "Send private message to <%0>";
         field_z = "Day";

@@ -12,40 +12,46 @@ final class a {
     static String field_d;
 
     public static void a(int param0) {
+        pb[] discarded$0 = null;
         field_h = null;
         field_d = null;
         field_g = null;
         field_b = null;
+        if (param0 != -3323) {
+            discarded$0 = a.a(118, 52, -105, -52, 50);
+        }
     }
 
     final static pb[] a(int param0, int param1, int param2, int param3, int param4) {
+        pb dupTemp$4 = null;
+        pb dupTemp$5 = null;
         pb[] var5 = null;
         pb[] var6 = null;
-        var6 = new pb[9];
-        var5 = var6;
-        pb dupTemp$4 = cl.a(param0, -41, 1);
-        var6[6] = dupTemp$4;
-        var5[3] = dupTemp$4;
-        var5[2] = dupTemp$4;
-        var5[1] = dupTemp$4;
-        var5[0] = dupTemp$4;
-        pb dupTemp$5 = cl.a(param1, -117, 1);
-        var6[8] = dupTemp$5;
-        var5[7] = dupTemp$5;
-        var5[5] = dupTemp$5;
-        if (param4 != 0) {
-          var6[4] = cl.a(param4, 119, 64);
-          return var5;
+        if (param3 <= -106) {
+          var6 = new pb[9];
+          var5 = var6;
+          dupTemp$4 = cl.a(param0, -41, param2);
+          var6[6] = dupTemp$4;
+          var5[3] = dupTemp$4;
+          var5[2] = dupTemp$4;
+          var5[1] = dupTemp$4;
+          var5[0] = dupTemp$4;
+          dupTemp$5 = cl.a(param1, -117, param2);
+          var6[8] = dupTemp$5;
+          var5[7] = dupTemp$5;
+          var5[5] = dupTemp$5;
+          if (param4 != 0) {
+            var6[4] = cl.a(param4, 119, 64);
+            return var5;
+          } else {
+            return var5;
+          }
         } else {
-          return var5;
+          return (pb[]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Please enter your age in years";
         field_h = new qe[1000];
         field_d = "To Customer Support";

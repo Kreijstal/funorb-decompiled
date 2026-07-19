@@ -9,6 +9,10 @@ final class tf extends wm {
     static String field_m;
 
     final static cr b(byte param0) {
+        if (param0 <= 90) {
+            field_l = (am) null;
+            return uk.field_v.field_Nb;
+        }
         return uk.field_v.field_Nb;
     }
 
@@ -53,6 +57,7 @@ final class tf extends wm {
     final static void a(int param0, String param1, int param2, String param3, int param4, int param5) {
         mi var9 = null;
         int var7 = 0;
+        int discarded$0 = 0;
         try {
             var9 = uh.field_Wb;
             mi var6 = var9;
@@ -61,25 +66,21 @@ final class tf extends wm {
             var7 = var9.field_u;
             int var8 = 33 % ((-45 - param2) / 39);
             var9.f(param0, 108);
-            if (!(param0 != 2)) {
+            if (!((param0 ^ -1) != -3)) {
                 var9.a((byte) 0, param1);
             }
             if (param3 == null) {
                 var9.d(param5, -1783);
             } else {
-                int discarded$0 = nj.a(param3, 7937, (ed) (Object) var9);
+                discarded$0 = nj.a(param3, 7937, var9);
             }
             var9.b((byte) 100, -var7 + var9.field_u);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "tf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "tf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = null;
         field_o = new int[12];
         field_m = "Connection timed out. Please try using a different server.";

@@ -8,16 +8,19 @@ final class ul {
     final static phb[] a(int param0, int param1, int param2, int param3, boolean param4) {
         phb[] var6 = new phb[9];
         phb[] var5 = var6;
-        phb dupTemp$0 = mra.a(param0, (byte) -119, 1);
+        phb dupTemp$0 = mra.a(param0, (byte) -119, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        phb dupTemp$1 = mra.a(param3, (byte) -125, 1);
+        phb dupTemp$1 = mra.a(param3, (byte) -125, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
+        if (!param4) {
+            field_b = (llb[]) null;
+        }
         if (param1 != 0) {
             var6[4] = mra.a(param1, (byte) -116, 64);
         }
@@ -33,6 +36,7 @@ final class ul {
         int var12 = 0;
         int var14 = 0;
         int[] var18 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var14 = VoidHunters.field_G;
         try {
@@ -51,6 +55,7 @@ final class ul {
                       var12 = var8_int;
                       L3: while (true) {
                         if (var9 < var12) {
+                          decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           var18 = rba.field_b[var12];
@@ -74,25 +79,30 @@ final class ul {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var8, "ul.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rta.a((Throwable) ((Object) var8), "ul.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -23460) {
+            field_b = (llb[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

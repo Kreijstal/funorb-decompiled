@@ -13,6 +13,8 @@ final class ri {
     int field_c;
 
     private final static ri[] a(byte[] param0) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         fs var1 = null;
         int var2 = 0;
         ri[] var3 = null;
@@ -32,8 +34,6 @@ final class ri {
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
         int stackIn_48_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
@@ -79,9 +79,7 @@ final class ri {
                             L5: while (true) {
                               if (var7_int >= var2) {
                                 var1.field_p = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
-                                var19 = new int[var6];
-                                var18 = var19;
-                                var17 = var18;
+                                var17 = new int[var6];
                                 var16 = var17;
                                 var7 = var16;
                                 var8 = 1;
@@ -120,7 +118,7 @@ final class ri {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                byte dupTemp$2 = var1.d(true);
+                                                                dupTemp$2 = var1.d(true);
                                                                 var9.field_a[var13 + var14 * var9.field_h] = dupTemp$2;
                                                                 var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
@@ -171,7 +169,7 @@ final class ri {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            byte dupTemp$3 = var1.d(true);
+                                                            dupTemp$3 = var1.d(true);
                                                             var9.field_a[var13] = dupTemp$3;
                                                             var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
@@ -257,8 +255,8 @@ final class ri {
                                     }
                                   } else {
                                     var7[var8] = var1.c((byte) 122);
-                                    if (var19[var8] == 0) {
-                                      var19[var8] = 1;
+                                    if (var17[var8] == 0) {
+                                      var17[var8] = 1;
                                       var8++;
                                       continue L6;
                                     } else {

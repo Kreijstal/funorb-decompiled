@@ -11,38 +11,44 @@ final class qw extends vg {
     final hca b(int param0) {
         if (param0 != -14065) {
             qw.a(-124);
-            return ((qw) this).field_h;
+            return this.field_h;
         }
-        return ((qw) this).field_h;
+        return this.field_h;
     }
 
     final static void a(int param0) {
         int var1 = 0;
-        if (param0 != 256) {
-          L0: {
-            qw.a(false);
-            if (224 > ff.field_w) {
+        if (param0 == 256) {
+          if (224 <= ff.field_w) {
+            cf.a(256, -116);
+            if (TombRacer.field_G) {
               var1 = ff.field_w % 32;
               cf.a(ff.field_w - (-32 + var1), -127);
-              break L0;
+              return;
             } else {
-              cf.a(256, -116);
-              break L0;
+              return;
             }
+          } else {
+            var1 = ff.field_w % 32;
+            cf.a(ff.field_w - (-32 + var1), -127);
+            return;
           }
-          return;
         } else {
-          L1: {
-            if (224 > ff.field_w) {
+          qw.a(false);
+          if (224 <= ff.field_w) {
+            cf.a(256, -116);
+            if (!TombRacer.field_G) {
+              return;
+            } else {
               var1 = ff.field_w % 32;
               cf.a(ff.field_w - (-32 + var1), -127);
-              break L1;
-            } else {
-              cf.a(256, -116);
-              break L1;
+              return;
             }
+          } else {
+            var1 = ff.field_w % 32;
+            cf.a(ff.field_w - (-32 + var1), -127);
+            return;
           }
-          return;
         }
     }
 
@@ -59,33 +65,46 @@ final class qw extends vg {
         if (param0 <= 4) {
             return -38;
         }
-        return ((qw) this).field_i;
+        return this.field_i;
     }
 
     qw(hca param0, la param1, int param2, int param3, int param4) {
         try {
-            ((qw) this).field_i = param3;
-            ((qw) this).field_h = param0;
+            this.field_i = param3;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "qw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(byte param0, int param1) {
-        if (param1 != msa.field_a) {
+        if (param0 == -32) {
+          if (param1 == msa.field_a) {
+            if (null == rba.field_a) {
+              return;
+            } else {
+              v.b(15, 0);
+              return;
+            }
+          } else {
             return;
-        }
-        if (null == rba.field_a) {
+          }
+        } else {
+          field_g = (String) null;
+          if (param1 == msa.field_a) {
+            if (null == rba.field_a) {
+              return;
+            } else {
+              v.b(15, 0);
+              return;
+            }
+          } else {
             return;
+          }
         }
-        v.b(15, 0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Friend's Best Score:<br> <%0> - <%1>";
     }
 }

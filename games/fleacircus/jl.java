@@ -9,13 +9,12 @@ final class jl {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
+        if (param0 != 32768) {
+            field_a = (int[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         long var4 = 0L;
         long var6 = 0L;
@@ -24,15 +23,15 @@ final class jl {
         int var1 = 0;
         field_z = "jl.A(";
         field_a = new int[98304];
-        for (var0 = 92682; var0 >= 46341; var0--) {
-            var4 = (long)((var0 << 1) + -1);
-            var6 = (long)(1 + (var0 << 1));
-            var3 = (int)((var6 * var6 >> 18) - 32768L);
-            var2 = (int)(-32768L + (var4 * var4 >> 18));
+        for (var0 = 92682; (var0 ^ -1) <= -46342; var0--) {
+            var4 = (long)((var0 << -1929560223) + -1);
+            var6 = (long)(1 + (var0 << -1467602431));
+            var3 = (int)((var6 * var6 >> 902293522) - 32768L);
+            var2 = (int)(-32768L + (var4 * var4 >> -51883246));
             if (var3 >= field_a.length) {
                 var3 = field_a.length - 1;
             }
-            for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+            for (var1 = (var2 ^ -1) > -1 ? 0 : var2; var1 <= var3; var1++) {
                 field_a[var1] = var0;
             }
         }

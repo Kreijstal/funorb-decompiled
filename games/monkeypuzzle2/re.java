@@ -49,14 +49,10 @@ final class re {
     }
 
     final static void b(int param0) {
-        int var1 = -105;
+        int var1 = -105 / ((param0 - -17) / 58);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         double var1 = 0.0;
         field_c = new int[65536];

@@ -12,13 +12,12 @@ final class fk {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
+        if (param0 < 59) {
+            field_d = -118;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fk.A(";
         field_c = new byte[520];
         field_b = new char[128];

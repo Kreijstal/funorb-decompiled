@@ -7,6 +7,12 @@ final class cd {
     static String field_a;
 
     public static void a(int param0) {
+        int discarded$0 = 0;
+        if (param0 != 5) {
+            discarded$0 = cd.a(true);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -15,14 +21,14 @@ final class cd {
     }
 
     final static int a(boolean param0) {
+        if (!param0) {
+            field_a = (String) null;
+            return klb.field_r.f(-2147483648);
+        }
         return klb.field_r.f(-2147483648);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 5;
         field_c = 0;
         field_a = "Create random message";

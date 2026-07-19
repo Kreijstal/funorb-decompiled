@@ -10,6 +10,9 @@ final class re extends hf {
     int field_k;
 
     public static void b(int param0) {
+        if (param0 != 127) {
+            return;
+        }
         field_f = null;
         field_h = null;
         field_i = null;
@@ -36,38 +39,46 @@ final class re extends hf {
         var4 = Geoblox.field_C;
         try {
           L0: {
-            var1 = (Object) (Object) je.field_j;
+            var1 = je.field_j;
             synchronized (var1) {
               L1: {
                 L2: {
+                  if (param0) {
+                    break L2;
+                  } else {
+                    field_f = (String) null;
+                    break L2;
+                  }
+                }
+                L3: {
                   vd.field_n = pc.field_p;
                   nk.field_e = nk.field_e + 1;
                   if (ii.field_c < 0) {
                     var5 = 0;
                     var2 = var5;
-                    L3: while (true) {
+                    L4: while (true) {
                       if (var5 >= 112) {
                         ii.field_c = gk.field_b;
-                        break L2;
+                        break L3;
                       } else {
                         kj.field_o[var5] = false;
                         var5++;
-                        continue L3;
+                        continue L4;
                       }
                     }
                   } else {
-                    L4: while (true) {
+                    L5: while (true) {
                       if (gk.field_b == ii.field_c) {
-                        break L2;
+                        break L3;
                       } else {
                         var2 = gf.field_c[gk.field_b];
                         gk.field_b = 1 + gk.field_b & 127;
                         if (var2 < 0) {
-                          kj.field_o[~var2] = false;
-                          continue L4;
+                          kj.field_o[var2 ^ -1] = false;
+                          continue L5;
                         } else {
                           kj.field_o[var2] = true;
-                          continue L4;
+                          continue L5;
                         }
                       }
                     }
@@ -82,7 +93,7 @@ final class re extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "re.C(" + true + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "re.C(" + param0 + ')');
         }
     }
 

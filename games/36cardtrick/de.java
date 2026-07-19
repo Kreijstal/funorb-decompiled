@@ -9,6 +9,9 @@ final class de {
     static int field_b;
 
     public static void a(boolean param0) {
+        if (param0) {
+            field_b = -77;
+        }
         field_e = null;
     }
 
@@ -17,6 +20,7 @@ final class de {
     }
 
     final static void b(int param0) {
+        int discarded$1 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -42,30 +46,26 @@ final class de {
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
         RuntimeException decompiledCaughtException = null;
         var19 = Main.field_T;
         try {
           L0: {
             rh.field_h = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
             var1_int = il.field_a.length;
-            var23 = new int[var1_int];
-            var22 = var23;
-            var21 = var22;
+            var21 = new int[var1_int];
             var20 = var21;
             var2 = var20;
             var3 = 0;
             L1: while (true) {
               if (var3 >= var1_int) {
                 L2: {
-                  var3 = rh.field_h[9] >> 8;
-                  var4 = rh.field_h[10] >> 8;
-                  var5 = rh.field_h[11] >> 8;
-                  var6 = h.field_F << 4;
+                  var3 = rh.field_h[9] >> -593030328;
+                  var4 = rh.field_h[10] >> -1346278328;
+                  var5 = rh.field_h[11] >> -1095233368;
+                  var6 = h.field_F << 966927556;
                   var7 = 0;
-                  var8 = ph.a(-35, var6) >> 8;
-                  var9 = kh.a(95, var6) >> 8;
+                  var8 = ph.a(-35, var6) >> 565192680;
+                  var9 = kh.a(95, var6) >> 1353132872;
                   if (eg.field_b == -1) {
                     break L2;
                   } else {
@@ -85,7 +85,7 @@ final class de {
                   if (param0 >= 17) {
                     break L3;
                   } else {
-                    int discarded$1 = de.a(93);
+                    discarded$1 = de.a(93);
                     break L3;
                   }
                 }
@@ -107,12 +107,12 @@ final class de {
                     var17_int = 1;
                     L5: while (true) {
                       if (var17_int >= il.field_a.length) {
-                        var23[var16] = -2147483648;
+                        var21[var16] = -2147483648;
                         var17 = il.field_a[var16];
                         kj.a((byte) 104, var16);
                         var18 = 0;
                         L6: while (true) {
-                          if (var18 >= 3) {
+                          if ((var18 ^ -1) <= -4) {
                             me.a(false, false, nl.field_c, true, var17, rh.field_h, false);
                             fj.a(-102, var8, var12, var14, var9, var7, var17, var13);
                             var15++;
@@ -124,15 +124,14 @@ final class de {
                           }
                         }
                       } else {
-                        L7: {
-                          if (var23[var17_int] <= var23[var16]) {
-                            break L7;
-                          } else {
-                            break L7;
-                          }
+                        if (var21[var17_int] > var21[var16]) {
+                          var16 = var17_int;
+                          var17_int++;
+                          continue L5;
+                        } else {
+                          var17_int++;
+                          continue L5;
                         }
-                        var17_int++;
-                        continue L5;
                       }
                     }
                   }
@@ -141,16 +140,16 @@ final class de {
                 var4_ref_mg = il.field_a[var3];
                 var4_ref_mg.a((byte) 116);
                 kj.a((byte) 104, var3);
-                var5 = var4_ref_mg.field_f + var4_ref_mg.field_e >> 1;
-                var6 = var4_ref_mg.field_s + var4_ref_mg.field_u >> 1;
-                var7 = var4_ref_mg.field_z - -var4_ref_mg.field_i >> 1;
-                var8 = rh.field_h[9] >> 2;
-                var9 = rh.field_h[10] >> 2;
-                var10_int = rh.field_h[11] >> 2;
-                var11 = var10_int * nl.field_c[5] + (var9 * nl.field_c[4] + nl.field_c[3] * var8) >> 14;
-                var12 = nl.field_c[8] * var10_int + (nl.field_c[6] * var8 - -(nl.field_c[7] * var9)) >> 14;
-                var13 = nl.field_c[9] * var8 - -(var9 * nl.field_c[10]) + var10_int * nl.field_c[11] >> 14;
-                var2[var3] = var7 * var13 + var11 * var5 + var12 * var6 >> 16;
+                var5 = var4_ref_mg.field_f + var4_ref_mg.field_e >> 12352481;
+                var6 = var4_ref_mg.field_s + var4_ref_mg.field_u >> -449277279;
+                var7 = var4_ref_mg.field_z - -var4_ref_mg.field_i >> 314211073;
+                var8 = rh.field_h[9] >> 1078957890;
+                var9 = rh.field_h[10] >> 1829716674;
+                var10_int = rh.field_h[11] >> -694065886;
+                var11 = var10_int * nl.field_c[5] + (var9 * nl.field_c[4] + nl.field_c[3] * var8) >> -1532984562;
+                var12 = nl.field_c[8] * var10_int + (nl.field_c[6] * var8 - -(nl.field_c[7] * var9)) >> -284073938;
+                var13 = nl.field_c[9] * var8 - -(var9 * nl.field_c[10]) + var10_int * nl.field_c[11] >> -381070034;
+                var2[var3] = var7 * var13 + var11 * var5 + var12 * var6 >> 1969037904;
                 var3++;
                 continue L1;
               }
@@ -159,7 +158,7 @@ final class de {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "de.C(" + param0 + ')');
+          throw ma.a((Throwable) ((Object) var1), "de.C(" + param0 + ')');
         }
     }
 
@@ -171,15 +170,11 @@ final class de {
     }
 
     de(int param0, int param1, int param2, int param3) {
-        ((de) this).field_d = param3;
-        ((de) this).field_a = param0;
+        this.field_d = param3;
+        this.field_a = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new bk();
     }
 }

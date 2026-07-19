@@ -25,12 +25,20 @@ abstract class qb {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 == 31) {
+            break L0;
+          } else {
+            qb.c((byte) -24);
+            break L0;
+          }
+        }
         if (on.field_Z != null) {
-          var1 = (Object) (Object) on.field_Z;
+          var1 = on.field_Z;
           synchronized (var1) {
-            L0: {
+            L1: {
               on.field_Z = null;
-              break L0;
+              break L1;
             }
           }
           return;
@@ -41,10 +49,10 @@ abstract class qb {
 
     final int d(int param0) {
         if (param0 != 20) {
-          ((qb) this).field_d = 116;
-          return ((qb) this).field_c.a((byte) 98) - -((qb) this).field_l.a((byte) 98);
+          this.field_d = 116;
+          return this.field_c.a((byte) 98) - -this.field_l.a((byte) 98);
         } else {
-          return ((qb) this).field_c.a((byte) 98) - -((qb) this).field_l.a((byte) 98);
+          return this.field_c.a((byte) 98) - -this.field_l.a((byte) 98);
         }
     }
 
@@ -57,15 +65,15 @@ abstract class qb {
             la.field_m = param0;
             um.field_a = param3;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "qb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "qb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void c(byte param0) {
-        Object var2 = null;
+        pd var2 = null;
         field_e = null;
         if (param0 != -7) {
-          var2 = null;
+          var2 = (pd) null;
           qb.a(36, (byte) -107, (pd) null, 47);
           field_o = null;
           field_h = null;
@@ -93,21 +101,21 @@ abstract class qb {
         tn stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = ((long)param3 << 32) - -(long)param1;
+          var6 = ((long)param3 << 487989472) - -(long)param1;
           var8 = new tn();
           var8.field_B = param4;
           var8.field_l = var6;
-          stackOut_0_0 = (tn) var8;
+          stackOut_0_0 = (tn) (var8);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if (!param2) {
-            stackOut_2_0 = (tn) (Object) stackIn_2_0;
+            stackOut_2_0 = (tn) ((Object) stackIn_2_0);
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             break L0;
           } else {
-            stackOut_1_0 = (tn) (Object) stackIn_1_0;
+            stackOut_1_0 = (tn) ((Object) stackIn_1_0);
             stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -115,26 +123,33 @@ abstract class qb {
           }
         }
         L1: {
-          stackIn_3_0.field_r = stackIn_3_1 != 0;
-          if (!param2) {
-            if (20 <= ((qb) this).d(20)) {
-              throw new RuntimeException();
+          L2: {
+            stackIn_3_0.field_r = stackIn_3_1 != 0;
+            if (!param2) {
+              break L2;
             } else {
-              ((qb) this).field_c.a(29664, (qa) (Object) var8);
-              break L1;
+              if (20 > this.a(0)) {
+                this.field_g.a(param0 ^ 488002304, var8);
+                if (!ZombieDawnMulti.field_E) {
+                  break L1;
+                } else {
+                  break L2;
+                }
+              } else {
+                throw new RuntimeException();
+              }
             }
+          }
+          if (20 <= this.d(20)) {
+            throw new RuntimeException();
           } else {
-            if (20 > ((qb) this).a(0)) {
-              ((qb) this).field_g.a(param0 ^ 488002304, (qa) (Object) var8);
-              break L1;
-            } else {
-              throw new RuntimeException();
-            }
+            this.field_c.a(29664, var8);
+            break L1;
           }
         }
         if (param0 != 487989472) {
-          var9 = null;
-          ((qb) this).a(false, (Object) null, 52);
+          var9 = (Object) null;
+          this.a(false, (Object) null, 52);
           return var8;
         } else {
           return var8;
@@ -154,8 +169,8 @@ abstract class qb {
         int stackOut_2_0 = 0;
         if (param0 <= 13) {
           L0: {
-            ((qb) this).field_d = -46;
-            if (-21 < ((qb) this).a(0)) {
+            this.field_d = -46;
+            if (-21 < (this.a(0) ^ -1)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -168,7 +183,7 @@ abstract class qb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (-21 > ((qb) this).a(0)) {
+            if (-21 < (this.a(0) ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -191,8 +206,8 @@ abstract class qb {
         int stackOut_2_0 = 0;
         if (param0 > -32) {
           L0: {
-            ((qb) this).field_b = null;
-            if (((qb) this).d(20) < 20) {
+            this.field_b = (k) null;
+            if ((this.d(20) ^ -1) > -21) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -205,7 +220,7 @@ abstract class qb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((qb) this).d(20) < 20) {
+            if ((this.d(20) ^ -1) > -21) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -225,26 +240,22 @@ abstract class qb {
         if (param0 != 0) {
             return 31;
         }
-        return ((qb) this).field_g.a((byte) 98) + ((qb) this).field_j.a((byte) 98);
+        return this.field_g.a((byte) 98) + this.field_j.a((byte) 98);
     }
 
     qb() {
-        ((qb) this).field_g = new lq();
-        ((qb) this).field_j = new lq();
-        ((qb) this).field_c = new lq();
-        ((qb) this).field_l = new lq();
-        ((qb) this).field_b = new k(6);
-        ((qb) this).field_i = (byte) 0;
-        ((qb) this).field_n = 0;
-        ((qb) this).field_p = 0;
-        ((qb) this).field_k = new k(10);
+        this.field_g = new lq();
+        this.field_j = new lq();
+        this.field_c = new lq();
+        this.field_l = new lq();
+        this.field_b = new k(6);
+        this.field_i = (byte) 0;
+        this.field_n = 0;
+        this.field_p = 0;
+        this.field_k = new k(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "<%0> has joined your game.";
         field_a = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         field_e = new ip();

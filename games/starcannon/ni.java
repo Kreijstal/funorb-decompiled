@@ -18,6 +18,7 @@ final class ni implements de {
     static String[] field_f;
 
     public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -48,17 +49,17 @@ final class ni implements de {
           L0: {
             L1: {
               if (param4 instanceof gh) {
-                stackOut_2_0 = (uj) param4;
+                stackOut_2_0 = (uj) (param4);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
                 stackOut_1_0 = null;
-                stackIn_3_0 = (uj) (Object) stackOut_1_0;
+                stackIn_3_0 = (uj) ((Object) stackOut_1_0);
                 break L1;
               }
             }
             L2: {
-              var12 = (gh) (Object) stackIn_3_0;
+              var12 = (gh) ((Object) stackIn_3_0);
               if (var12 == null) {
                 break L2;
               } else {
@@ -68,7 +69,7 @@ final class ni implements de {
             }
             L3: {
               var7 = 5592405;
-              ki.d(param0 + param4.field_s, param3 - -param4.field_j, param4.field_i, param4.field_f, ((ni) this).field_d);
+              ki.d(param0 + param4.field_s, param3 - -param4.field_j, param4.field_i, param4.field_f, this.field_d);
               if (!param1) {
                 break L3;
               } else {
@@ -78,22 +79,22 @@ final class ni implements de {
             }
             L4: {
               var10 = 97 % ((2 - param2) / 54);
-              var8 = param4.field_s + (param0 - -((ni) this).field_l);
-              var9 = ((ni) this).field_g + param4.field_j + param3;
-              ki.b(var8, var9, ((ni) this).field_b, ((ni) this).field_c, 5592405);
-              ki.d(var8, var9, ((ni) this).field_b, ((ni) this).field_c, var7);
+              var8 = param4.field_s + (param0 - -this.field_l);
+              var9 = this.field_g + param4.field_j + param3;
+              ki.b(var8, var9, this.field_b, this.field_c, 5592405);
+              ki.d(var8, var9, this.field_b, this.field_c, var7);
               if (!var12.field_z) {
                 break L4;
               } else {
-                ki.a(var8, var9, var8 + ((ni) this).field_b, var9 + ((ni) this).field_c, 1);
-                ki.a(((ni) this).field_b + var8, var9, var8, ((ni) this).field_c + var9, 1);
+                ki.a(var8, var9, var8 + this.field_b, var9 + this.field_c, 1);
+                ki.a(this.field_b + var8, var9, var8, this.field_c + var9, 1);
                 break L4;
               }
             }
             L5: {
-              if (((ni) this).field_m != null) {
-                var11 = ((ni) this).field_b + ((ni) this).field_l - -((ni) this).field_i;
-                int discarded$1 = ((ni) this).field_m.a(param4.field_k, param4.field_s + (param0 - -var11), ((ni) this).field_a + (param4.field_j + param3), param4.field_i + (-((ni) this).field_i + -var11), -(((ni) this).field_i << 1) + param4.field_f, ((ni) this).field_j, ((ni) this).field_e, ((ni) this).field_n, ((ni) this).field_h, 0);
+              if (this.field_m != null) {
+                var11 = this.field_b + this.field_l - -this.field_i;
+                discarded$1 = this.field_m.a(param4.field_k, param4.field_s + (param0 - -var11), this.field_a + (param4.field_j + param3), param4.field_i + (-this.field_i + -var11), -(this.field_i << -1392353151) + param4.field_f, this.field_j, this.field_e, this.field_n, this.field_h, 0);
                 break L5;
               } else {
                 break L5;
@@ -105,23 +106,23 @@ final class ni implements de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("ni.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -129,15 +130,19 @@ final class ni implements de {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 >= -3) {
+            return;
+        }
         field_f = null;
     }
 
     final static String a(int param0, CharSequence param1) {
+        StringBuilder discarded$1 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -147,7 +152,7 @@ final class ni implements de {
         int var7 = 0;
         int var8 = 0;
         Object stackIn_2_0 = null;
-        Object stackIn_18_0 = null;
+        String stackIn_18_0 = null;
         Object stackIn_28_0 = null;
         String stackIn_30_0 = null;
         RuntimeException stackIn_32_0 = null;
@@ -157,10 +162,11 @@ final class ni implements de {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_29_0 = null;
         Object stackOut_27_0 = null;
-        Object stackOut_17_0 = null;
+        String stackOut_17_0 = null;
         Object stackOut_1_0 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
@@ -202,7 +208,7 @@ final class ni implements de {
                     }
                   }
                   var4 = -var2_int + var3;
-                  if (var4 >= 1) {
+                  if ((var4 ^ -1) <= -2) {
                     if (12 >= var4) {
                       var5 = new StringBuilder(var4);
                       if (param0 >= 106) {
@@ -212,11 +218,13 @@ final class ni implements de {
                             if (var5.length() != 0) {
                               stackOut_29_0 = var5.toString();
                               stackIn_30_0 = stackOut_29_0;
+                              decompiledRegionSelector0 = 3;
                               break L0;
                             } else {
                               stackOut_27_0 = null;
                               stackIn_28_0 = stackOut_27_0;
-                              return (String) (Object) stackIn_28_0;
+                              decompiledRegionSelector0 = 2;
+                              break L0;
                             }
                           } else {
                             L6: {
@@ -226,7 +234,7 @@ final class ni implements de {
                                 if (var8 == 0) {
                                   break L6;
                                 } else {
-                                  StringBuilder discarded$1 = var5.append((char) var8);
+                                  discarded$1 = var5.append((char) var8);
                                   break L6;
                                 }
                               } else {
@@ -238,9 +246,10 @@ final class ni implements de {
                           }
                         }
                       } else {
-                        stackOut_17_0 = null;
+                        stackOut_17_0 = (String) null;
                         stackIn_18_0 = stackOut_17_0;
-                        return (String) (Object) stackIn_18_0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     } else {
                       return null;
@@ -253,30 +262,31 @@ final class ni implements de {
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var2;
+            stackOut_31_0 = (RuntimeException) (var2);
             stackOut_31_1 = new StringBuilder().append("ni.B(").append(param0).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L7;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -284,35 +294,43 @@ final class ni implements de {
               break L7;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
-        return stackIn_30_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (String) ((Object) stackIn_2_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_18_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return (String) ((Object) stackIn_28_0);
+            } else {
+              return stackIn_30_0;
+            }
+          }
+        }
     }
 
     ni(qe param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((ni) this).field_n = 1;
-        ((ni) this).field_h = 1;
+        this.field_n = 1;
+        this.field_h = 1;
         try {
-            ((ni) this).field_l = param5;
-            ((ni) this).field_g = param6;
-            ((ni) this).field_d = param9;
-            ((ni) this).field_i = param1;
-            ((ni) this).field_c = param7;
-            ((ni) this).field_e = param4;
-            ((ni) this).field_b = param8;
-            ((ni) this).field_a = param2;
-            ((ni) this).field_m = param0;
-            ((ni) this).field_j = param3;
+            this.field_l = param5;
+            this.field_g = param6;
+            this.field_d = param9;
+            this.field_i = param1;
+            this.field_c = param7;
+            this.field_e = param4;
+            this.field_b = param8;
+            this.field_a = param2;
+            this.field_m = param0;
+            this.field_j = param3;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = 0;
         field_f = new String[]{"Showing by rating", "Showing by win percentage"};
     }

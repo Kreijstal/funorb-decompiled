@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 class gna extends elb {
     private int field_j;
@@ -14,11 +12,12 @@ class gna extends elb {
 
     final void a(int param0, int param1, int param2) {
         int var4 = -50 / ((-53 - param0) / 48);
-        ((gna) this).field_j = ((gna) this).field_j + (param2 * ((gna) this).field_k[param1] >> 12);
+        this.field_j = this.field_j + (param2 * this.field_k[param1] >> 761290252);
     }
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             mob var4 = null;
@@ -44,6 +43,7 @@ class gna extends elb {
             java.net.URL stackIn_14_3 = null;
             StringBuilder stackIn_14_4 = null;
             String stackIn_14_5 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             eab stackOut_11_0 = null;
             java.net.URL stackOut_11_1 = null;
@@ -92,11 +92,12 @@ class gna extends elb {
                 }
                 pa.a(var3_ref, 3);
                 var7 = sh.a("%3a", ":", var3_ref, param2 + param2);
-                var8 = sh.a("%40", "@", var7, param2);
+                var8 = sh.a("%40", "@", var7, param2 + 0);
                 var9 = sh.a("%26", "&", var8, 0);
-                var10 = sh.a("%23", "#", var9, param2);
+                var10 = sh.a("%23", "#", var9, param2 + 0);
                 if (null == qv.field_p) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   L4: {
                     stackOut_11_0 = vpa.field_b;
@@ -115,11 +116,11 @@ class gna extends elb {
                     stackIn_12_3 = stackOut_11_3;
                     stackIn_12_4 = stackOut_11_4;
                     if (null != ku.field_d) {
-                      stackOut_13_0 = (eab) (Object) stackIn_13_0;
+                      stackOut_13_0 = (eab) ((Object) stackIn_13_0);
                       stackOut_13_1 = null;
                       stackOut_13_2 = null;
-                      stackOut_13_3 = (java.net.URL) (Object) stackIn_13_3;
-                      stackOut_13_4 = (StringBuilder) (Object) stackIn_13_4;
+                      stackOut_13_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackOut_13_4 = (StringBuilder) ((Object) stackIn_13_4);
                       stackOut_13_5 = ku.field_d;
                       stackIn_14_0 = stackOut_13_0;
                       stackIn_14_1 = stackOut_13_1;
@@ -129,11 +130,11 @@ class gna extends elb {
                       stackIn_14_5 = stackOut_13_5;
                       break L4;
                     } else {
-                      stackOut_12_0 = (eab) (Object) stackIn_12_0;
+                      stackOut_12_0 = (eab) ((Object) stackIn_12_0);
                       stackOut_12_1 = null;
                       stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) (Object) stackIn_12_3;
-                      stackOut_12_4 = (StringBuilder) (Object) stackIn_12_4;
+                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
                       stackOut_12_5 = "" + tia.field_C;
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_14_1 = stackOut_12_1;
@@ -151,12 +152,13 @@ class gna extends elb {
                         if (var4.field_f != 1) {
                           break L6;
                         } else {
-                          var5 = (DataInputStream) var4.field_d;
-                          int discarded$1 = var5.read();
+                          var5 = (DataInputStream) (var4.field_d);
+                          discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       gdb.b(120, 1L);
@@ -169,8 +171,14 @@ class gna extends elb {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
                 var3 = (Exception) (Object) decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
                 break L7;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -180,62 +188,64 @@ class gna extends elb {
     }
 
     void a(int param0, int param1, byte param2) {
-        int fieldTemp$0 = ((gna) this).field_l;
-        ((gna) this).field_l = ((gna) this).field_l + 1;
-        ((gna) this).field_i[fieldTemp$0] = (byte)((dla.a((int) param2, 255) >> 1) + 127);
+        int fieldTemp$0 = this.field_l;
+        this.field_l = this.field_l + 1;
+        this.field_i[fieldTemp$0] = (byte)((dla.a((int) param2, 255) >> 1111320769) + 127);
         if (param0 != 1111320769) {
-            ((gna) this).a(-23, -5, 87);
+            this.a(-23, -5, 87);
         }
     }
 
     final void a(int param0) {
-        ((gna) this).field_j = Math.abs(((gna) this).field_j);
-        if (((gna) this).field_j >= 4096) {
-            ((gna) this).field_j = 4095;
-            int fieldTemp$0 = ((gna) this).field_l;
-            ((gna) this).field_l = ((gna) this).field_l + 1;
-            ((gna) this).a(1111320769, fieldTemp$0, (byte)(((gna) this).field_j >> 4));
+        int fieldTemp$0 = 0;
+        this.field_j = Math.abs(this.field_j);
+        if (-4097 >= (this.field_j ^ -1)) {
+            this.field_j = 4095;
+            fieldTemp$0 = this.field_l;
+            this.field_l = this.field_l + 1;
+            this.a(1111320769, fieldTemp$0, (byte)(this.field_j >> -36128892));
             if (param0 != 1424903724) {
                 return;
             }
-            ((gna) this).field_j = 0;
+            this.field_j = 0;
             return;
         }
-        int fieldTemp$1 = ((gna) this).field_l;
-        ((gna) this).field_l = ((gna) this).field_l + 1;
-        ((gna) this).a(1111320769, fieldTemp$1, (byte)(((gna) this).field_j >> 4));
+        int fieldTemp$1 = this.field_l;
+        this.field_l = this.field_l + 1;
+        this.a(1111320769, fieldTemp$1, (byte)(this.field_j >> -36128892));
         if (param0 != 1424903724) {
             return;
         }
-        ((gna) this).field_j = 0;
+        this.field_j = 0;
     }
 
     final void a(boolean param0) {
-        ((gna) this).field_j = 0;
+        this.field_j = 0;
         if (!param0) {
             return;
         }
-        ((gna) this).field_l = 0;
+        this.field_l = 0;
     }
 
     gna(int param0, int param1, int param2, int param3, int param4, float param5) {
         super(param0, param1, param2, param3, param4);
         int var7 = 0;
-        ((gna) this).field_k = new int[((gna) this).field_a];
-        for (var7 = 0; var7 < ((gna) this).field_a; var7++) {
-            ((gna) this).field_k[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
+        this.field_k = new int[this.field_a];
+        for (var7 = 0; var7 < this.field_a; var7++) {
+            this.field_k[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
         }
     }
 
     public static void b(boolean param0) {
+        if (param0) {
+            gna.b(false);
+            field_m = null;
+            return;
+        }
         field_m = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Enter the name you'd prefer. This is the name displayed to other players.";
     }
 }

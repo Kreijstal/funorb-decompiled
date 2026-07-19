@@ -13,9 +13,9 @@ final class fo extends nn implements uc {
             return;
         }
         try {
-            ((fo) this).field_gb = aa.field_Nb + -((fo) this).field_t - param1;
+            this.field_gb = aa.field_Nb + -this.field_t - param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "fo.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "fo.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -25,28 +25,28 @@ final class fo extends nn implements uc {
 
     final void j(int param0) {
         super.j(param0);
-        if (((fo) this).field_fb != null) {
-            ((fo) this).field_fb.a(118);
+        if (this.field_fb != null) {
+            this.field_fb.a(118);
         }
     }
 
     final void a(byte param0, vm param1) {
         try {
-            ((fo) this).field_fb = param1;
+            this.field_fb = param1;
             int var3_int = -96 % ((-9 - param0) / 48);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "fo.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "fo.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String e(int param0) {
-        if (((fo) this).field_r) {
-          if (null != ((fo) this).field_C) {
+        if (this.field_r) {
+          if (null != this.field_C) {
             if (param0 != 0) {
-              return null;
+              return (String) null;
             } else {
-              kj.a((byte) -77, ((fo) this).field_F + -((fo) this).field_gb + aa.field_Nb, a.field_a);
-              return ((fo) this).field_C;
+              kj.a((byte) -77, this.field_F + -this.field_gb + aa.field_Nb, a.field_a);
+              return this.field_C;
             }
           } else {
             return null;
@@ -60,24 +60,20 @@ final class fo extends nn implements uc {
         field_db = null;
         field_eb = null;
         if (param0 != 29790) {
-            field_db = null;
+            field_db = (String) null;
         }
     }
 
     public final vm a(int param0) {
         if (param0 >= -100) {
-            Object var3 = null;
-            ((fo) this).a((byte) -21, (vm) null);
-            return ((fo) this).field_fb;
+            vm var3 = (vm) null;
+            this.a((byte) -21, (vm) null);
+            return this.field_fb;
         }
-        return ((fo) this).field_fb;
+        return this.field_fb;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_db = "Rankings";
         field_eb = "Visit the Account Management section on the main site to view.";
     }

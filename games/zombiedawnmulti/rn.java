@@ -18,12 +18,12 @@ final class rn {
         field_f = null;
         field_b = null;
         field_d = null;
-        int var1 = 0;
+        int var1 = 40 % ((21 - param0) / 39);
     }
 
     final static void a(int param0) {
         if (field_f != null) {
-          nq.a(95, (java.awt.Canvas) (Object) field_f);
+          nq.a(95, field_f);
           if (param0 <= -26) {
             field_f.a(8192, pl.field_J);
             field_f = null;
@@ -36,7 +36,7 @@ final class rn {
               return;
             }
           } else {
-            field_a = null;
+            field_a = (ja[]) null;
             field_f.a(8192, pl.field_J);
             field_f = null;
             if (null == ng.field_g) {
@@ -54,14 +54,13 @@ final class rn {
     }
 
     final static cj b(int param0) {
+        if (param0 != 28579) {
+            return (cj) null;
+        }
         return gl.field_L.field_Ib;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Quick Thinker";
         field_g = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_b = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";

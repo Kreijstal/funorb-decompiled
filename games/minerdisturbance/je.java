@@ -170,7 +170,7 @@ final class je {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        return field_O.a((param0 << 2) + param2, (param1 << 2) + 1, (byte) 61);
+        return field_O.a((param0 << 2) + param2, (param1 << 2) + param3, (byte) 61);
     }
 
     final static void g(int param0, int param1) {
@@ -831,6 +831,7 @@ final class je {
     }
 
     private final static void a(int param0, int param1, je param2) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -934,7 +935,7 @@ final class je {
                     var4++;
                     continue L9;
                   } else {
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
                     field_I[var5][var4].field_i = incrementValue$1;
                     var5++;
@@ -1326,7 +1327,7 @@ final class je {
                                       var28 = var25 - var22;
                                       var30 = 256 * (var15.field_q - 256) >> 8;
                                       var28 = var28 * var30 >> 8;
-                                      var35 = 16711680 | (var22 + var28 & 255) << 8;
+                                      var35 = 16711680 | (var22 + var28 & 255) << 8 | 0;
                                       break L15;
                                     }
                                   } else {
@@ -1804,7 +1805,7 @@ final class je {
     }
 
     private final static boolean b(int param0, int param1, int param2, int param3) {
-        return field_O.d((param1 << 2) + 3, (param0 << 2) + 1, (byte) -122);
+        return field_O.d((param1 << 2) + param3, (param0 << 2) + param2, (byte) -122);
     }
 
     private final static void b(int param0, int param1, je param2) {
@@ -1955,6 +1956,7 @@ final class je {
         int var15 = 0;
         int var16 = 0;
         int var20 = 0;
+        int incrementValue$0 = 0;
         for (var19 = 0; var19 < param12; var19++) {
             var17 = param5 * param6 + param4 * param8 >> 8;
             var18 = param5 * param7 + param4 * param9 >> 8;
@@ -1965,7 +1967,7 @@ final class je {
             for (var20 = 0; var20 < param11; var20++) {
                 param2 = var16 + var15 >> 8;
                 param1 = param0[param10];
-                int incrementValue$0 = param10;
+                incrementValue$0 = param10;
                 param10++;
                 param0[incrementValue$0] = ((param1 & 16711935) * param2 & -16711936 | (param1 & 65280) * param2 & 16711680) >> 8;
                 var15 = var15 + var18;
@@ -1978,6 +1980,8 @@ final class je {
     }
 
     private final static void b(int param0, int param1, boolean param2) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2036,7 +2040,7 @@ final class je {
                       }
                     }
                   } else {
-                    int incrementValue$2 = var4;
+                    incrementValue$2 = var4;
                     var4++;
                     te.field_c[field_K[incrementValue$2 % field_K.length]].c(var9, var3 + var8, var6, var7);
                     var9 = var9 + var6;
@@ -2049,7 +2053,7 @@ final class je {
                   if (var9 >= 640) {
                     return;
                   } else {
-                    int incrementValue$3 = var4;
+                    incrementValue$3 = var4;
                     var4++;
                     nb.field_a[field_K[incrementValue$3 % field_K.length]].c(var9, var3 + var8 * 2, (int)((double)var6 * 0.8), (int)((double)var7 * 0.8));
                     var9 = var9 + te.field_c[0].field_x;
@@ -2146,7 +2150,7 @@ final class je {
               var10 = rf.a(13) ? 1 : 0;
               if (var6 == 0) {
                 if (var5 == 0) {
-                  var7 = (Object) (Object) ag.field_a[-tb.field_c];
+                  var7 = ag.field_a[-tb.field_c];
                   break L4;
                 } else {
                   if (var10 == 0) {
@@ -2165,7 +2169,7 @@ final class je {
                       tb.field_c = 0;
                       break L5;
                     }
-                    var7 = (Object) (Object) rg.field_tb[tb.field_c];
+                    var7 = rg.field_tb[tb.field_c];
                     break L4;
                   } else {
                     L7: {
@@ -2183,18 +2187,18 @@ final class je {
                       tb.field_c = 0;
                       break L7;
                     }
-                    var7 = (Object) (Object) pc.field_f[tb.field_c];
+                    var7 = pc.field_f[tb.field_c];
                     break L4;
                   }
                 }
               } else {
                 if (ch.field_h == 5) {
-                  var7 = (Object) (Object) ob.field_w[tb.field_c];
+                  var7 = ob.field_w[tb.field_c];
                   var12 = var7;
                   var7 = var12;
                   break L4;
                 } else {
-                  var7 = (Object) (Object) a.field_a[tb.field_c];
+                  var7 = a.field_a[tb.field_c];
                   break L4;
                 }
               }
@@ -2207,22 +2211,22 @@ final class je {
                       break L11;
                     } else {
                       if (var10 != 0) {
-                        ((ea) var7).b(-113, var3 + param0 / 2 + 16, 4096, 7281, var4 + param1 / 2 + 16);
+                        ((ea) (var7)).b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
                         break L10;
                       } else {
                         break L11;
                       }
                     }
                   }
-                  ((ea) var7).h(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  ((ea) (var7)).h(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                   break L10;
                 }
                 L12: {
                   if (var9 == 0) {
                     break L12;
                   } else {
-                    var13 = ((ea) var7).e();
-                    var7 = (Object) (Object) var13;
+                    var13 = ((ea) (var7)).e();
+                    var7 = var13;
                     var13.d(40, 40, 80);
                     var13.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                     if (ce.field_b % 20 >= 10) {
@@ -2260,22 +2264,22 @@ final class je {
                       break L14;
                     } else {
                       if (var10 != 0) {
-                        ((ea) var7).b(-127, var3 + param0 / 2 + 16, 4096, 23665, var4 + param1 / 2 + 16);
+                        ((ea) (var7)).b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
                         break L13;
                       } else {
                         break L14;
                       }
                     }
                   }
-                  ((ea) var7).f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  ((ea) (var7)).f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                   break L13;
                 }
                 L15: {
                   if (var9 == 0) {
                     break L15;
                   } else {
-                    var12_ref = ((ea) var7).c();
-                    var7 = (Object) (Object) var12_ref;
+                    var12_ref = ((ea) (var7)).c();
+                    var7 = var12_ref;
                     var12_ref.d(40, 40, 80);
                     var12_ref.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                     if (ce.field_b % 20 >= 10) {
@@ -2337,7 +2341,7 @@ final class je {
             }
           }
         }
-        return (ea) var7;
+        return (ea) (var7);
     }
 
     private final static void c(int param0, int param1) {
@@ -3671,8 +3675,8 @@ final class je {
     }
 
     final static je[][] i() {
-        int var0 = 0;
         int var1 = 0;
+        int var0 = 0;
         field_t = 0;
         field_H = 0;
         field_I = new je[32][24 * field_N[cm.field_o]];
@@ -3704,17 +3708,17 @@ final class je {
     }
 
     private final void h() {
-        ((je) this).field_Q = (int)(Math.random() * 2.0);
-        ((je) this).field_q = 0;
-        ((je) this).field_a = true;
-        ((je) this).field_U = -1;
-        ((je) this).field_S = false;
-        ((je) this).field_b = false;
-        ((je) this).field_V = false;
-        ((je) this).field_v = false;
-        ((je) this).field_i = 0;
-        ((je) this).field_A = false;
-        ((je) this).field_r = (int)(Math.random() * 1000.0 + 0.0);
+        this.field_Q = (int)(Math.random() * 2.0);
+        this.field_q = 0;
+        this.field_a = true;
+        this.field_U = -1;
+        this.field_S = false;
+        this.field_b = false;
+        this.field_V = false;
+        this.field_v = false;
+        this.field_i = 0;
+        this.field_A = false;
+        this.field_r = (int)(Math.random() * 1000.0 + 0.0);
     }
 
     final static void k() {
@@ -4648,6 +4652,7 @@ final class je {
     }
 
     private final static void b(int param0) {
+        int incrementValue$1 = 0;
         int var1 = 0;
         ql var2 = null;
         int var3 = 0;
@@ -4705,7 +4710,7 @@ final class je {
                                   var9 = ll.a((byte) -73, 7) + 5;
                                   var10 = 0;
                                   L6: while (true) {
-                                    int incrementValue$1 = var9;
+                                    incrementValue$1 = var9;
                                     var9--;
                                     if (incrementValue$1 < 0) {
                                       break L3;
@@ -5105,13 +5110,13 @@ final class je {
                               stackIn_44_0 = stackOut_42_0;
                               stackIn_43_0 = stackOut_42_0;
                               if (var2.field_o[var7] >= 0) {
-                                stackOut_44_0 = (je) (Object) stackIn_44_0;
+                                stackOut_44_0 = (je) ((Object) stackIn_44_0);
                                 stackOut_44_1 = 0;
                                 stackIn_45_0 = stackOut_44_0;
                                 stackIn_45_1 = stackOut_44_1;
                                 break L28;
                               } else {
-                                stackOut_43_0 = (je) (Object) stackIn_43_0;
+                                stackOut_43_0 = (je) ((Object) stackIn_43_0);
                                 stackOut_43_1 = 1;
                                 stackIn_45_0 = stackOut_43_0;
                                 stackIn_45_1 = stackOut_43_1;
@@ -5193,16 +5198,16 @@ final class je {
     }
 
     final static boolean d(int param0, int param1, int param2, int param3) {
-        return field_O.i(98, (param0 << 2) + 1, (param1 << 2) + 1);
+        return field_O.i(98, (param0 << 2) + param2, (param1 << 2) + param3);
     }
 
     public static void c() {
         field_N = null;
-        field_h = null;
-        field_d = null;
-        field_P = null;
-        field_R = null;
-        field_p = null;
+        field_h = (int[][]) null;
+        field_d = (ea[][]) null;
+        field_P = (ea[][]) null;
+        field_R = (ea[][]) null;
+        field_p = (ea[][]) null;
         field_k = null;
         field_y = null;
         field_n = null;
@@ -5211,12 +5216,12 @@ final class je {
         field_c = null;
         field_C = null;
         field_g = null;
-        field_z = null;
+        field_z = (ea[][]) null;
         field_w = null;
         field_B = null;
-        field_x = null;
-        field_j = null;
-        field_I = null;
+        field_x = (ea[][]) null;
+        field_j = (ea[][]) null;
+        field_I = (je[][]) null;
         field_O = null;
         field_K = null;
     }
@@ -6134,10 +6139,10 @@ final class je {
     }
 
     final boolean g() {
-        if (((je) this).field_a) {
+        if (this.field_a) {
           return true;
         } else {
-          if (!((je) this).field_b) {
+          if (!this.field_b) {
             return false;
           } else {
             return true;
@@ -6150,10 +6155,6 @@ final class je {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_X = "TVie: ";
         field_j = new ea[2][];
         field_z = new ea[4][];
@@ -6165,6 +6166,6 @@ final class je {
         field_t = 0;
         field_P = new ea[2][];
         field_R = new ea[2][];
-        field_h = new int[][]{new int[6], new int[6]};
+        field_h = new int[][]{new int[]{8421504, 13744249, 10976325, 8011818, 4340751, 7170907}, new int[]{16777215, 15202815, 12119039, 7196662, 11849706, 6330319}};
     }
 }

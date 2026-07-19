@@ -22,9 +22,9 @@ final class c {
         int var2 = 0;
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
-        var2 = 0;
-        if (bw.field_m[param0][0] != 4) {
-          if (bw.field_m[param0][0] != 3) {
+        var2 = -3 % ((23 - param1) / 60);
+        if ((bw.field_m[param0][0] ^ -1) != -5) {
+          if ((bw.field_m[param0][0] ^ -1) != -4) {
             if (2 != bw.field_m[param0][0]) {
               if ((2048 & bw.field_m[param0][10]) != 0) {
                 return true;
@@ -45,10 +45,6 @@ final class c {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "This unit has been tainted with vampyric blood and will gain health for every point of damage it deals in melee combat, and loses one point of health every turn.";
         field_b = "Tonics";
         field_a = "Visit the Account Management section on the main site to view.";

@@ -7,10 +7,20 @@ abstract class tf {
     static li field_b;
 
     final static void a(int param0) {
-        int var1 = ok.a((byte) 125);
-        int var2 = kb.b((byte) 98);
-        eh.field_a.a(true, var1 - -(ka.field_q << 1), var2 + (sa.field_h << 1), rg.field_F + -sa.field_h, -ka.field_q + od.field_r);
-        kl.a(true);
+        int var1 = 0;
+        int var2 = 0;
+        var1 = ok.a((byte) 125);
+        var2 = kb.b((byte) 98);
+        if (param0 != 0) {
+          tf.b(-92);
+          eh.field_a.a(true, var1 - -(ka.field_q << 489811521), var2 + (sa.field_h << -2144618463), rg.field_F + -sa.field_h, -ka.field_q + od.field_r);
+          kl.a(true);
+          return;
+        } else {
+          eh.field_a.a(true, var1 - -(ka.field_q << 489811521), var2 + (sa.field_h << -2144618463), rg.field_F + -sa.field_h, -ka.field_q + od.field_r);
+          kl.a(true);
+          return;
+        }
     }
 
     public static void b(int param0) {
@@ -24,83 +34,106 @@ abstract class tf {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         i var4 = null;
-        byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
-        byte[] stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
+        byte[] stackIn_11_0 = null;
+        byte[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_10_0 = null;
         byte[] stackOut_8_0 = null;
-        byte[] stackOut_6_0 = null;
-        byte[] stackOut_11_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
+        byte[] stackOut_13_0 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         try {
-          if (param2 != null) {
-            if (param2 instanceof byte[]) {
-              var3 = (byte[]) param2;
-              if (param1) {
-                stackOut_8_0 = cl.a(0, var3);
-                stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0;
+          L0: {
+            if (param2 != null) {
+              L1: {
+                if (param0 == 2) {
+                  break L1;
+                } else {
+                  tf.b(-31);
+                  break L1;
+                }
+              }
+              if (param2 instanceof byte[]) {
+                var3 = (byte[]) (param2);
+                if (param1) {
+                  stackOut_10_0 = cl.a(0, var3);
+                  stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  stackOut_8_0 = (byte[]) (var3);
+                  stackIn_9_0 = stackOut_8_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                }
               } else {
-                stackOut_6_0 = (byte[]) var3;
-                stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                if (!(param2 instanceof i)) {
+                  throw new IllegalArgumentException();
+                } else {
+                  var4 = (i) (param2);
+                  stackOut_13_0 = var4.a(-27);
+                  stackIn_14_0 = stackOut_13_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                }
               }
             } else {
-              if (!(param2 instanceof i)) {
-                throw new IllegalArgumentException();
-              } else {
-                var4 = (i) param2;
-                stackOut_11_0 = var4.a(-27);
-                stackIn_12_0 = stackOut_11_0;
-                return stackIn_12_0;
-              }
+              return null;
             }
-          } else {
-            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("tf.M(").append(2).append(',').append(param1).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_16_0 = (RuntimeException) (var3_ref);
+            stackOut_16_1 = new StringBuilder().append("tf.M(").append(param0).append(',').append(param1).append(',');
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L0;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L0;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_11_0;
+          } else {
+            return stackIn_14_0;
+          }
         }
     }
 
@@ -119,6 +152,7 @@ abstract class tf {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -137,7 +171,7 @@ abstract class tf {
               } else {
                 if (param0 > 0) {
                   var5_int = param2[0].field_w;
-                  var6 = param2[2].field_w;
+                  var6 = param2[param1].field_w;
                   var7 = param2[1].field_w;
                   param2[0].e(param3, param4);
                   param2[2].e(-var6 + param0 + param3, param4);
@@ -149,6 +183,7 @@ abstract class tf {
                   L2: while (true) {
                     if (param3 >= var9) {
                       ti.b(og.field_b);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param2[1].e(param3, param4);
@@ -161,29 +196,30 @@ abstract class tf {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
-            stackOut_9_1 = new StringBuilder().append("tf.J(").append(param0).append(',').append(2).append(',');
+            stackOut_9_0 = (RuntimeException) (runtimeException);
+            stackOut_9_1 = new StringBuilder().append("tf.J(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -191,15 +227,16 @@ abstract class tf {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Not yet achieved";
         field_a = new oj();
         field_b = new li(15, 0, 1, 0);

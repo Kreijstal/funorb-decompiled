@@ -16,46 +16,46 @@ final class gu extends ka {
     final void b(byte param0) {
         int var2 = 0;
         L0: {
-          if (null != ((gu) this).field_i) {
-            ((gu) this).field_i.b(16711680);
+          if (null != this.field_i) {
+            this.field_i.b(16711680);
             break L0;
           } else {
             break L0;
           }
         }
-        if (((gu) this).field_k == null) {
-          if (((gu) this).field_l == null) {
+        if (this.field_k == null) {
+          if (this.field_l == null) {
             var2 = -105 % ((-65 - param0) / 56);
-            if (((gu) this).field_f == null) {
-              if (((gu) this).field_g != null) {
-                ((gu) this).field_g.a(-1);
+            if (this.field_f == null) {
+              if (this.field_g != null) {
+                this.field_g.a(-1);
                 return;
               } else {
                 return;
               }
             } else {
-              ((gu) this).field_f.b(16711680);
-              if (((gu) this).field_g != null) {
-                ((gu) this).field_g.a(-1);
+              this.field_f.b(16711680);
+              if (this.field_g != null) {
+                this.field_g.a(-1);
                 return;
               } else {
                 return;
               }
             }
           } else {
-            ((gu) this).field_l.b(16711680);
+            this.field_l.b(16711680);
             var2 = -105 % ((-65 - param0) / 56);
-            if (((gu) this).field_f == null) {
-              if (((gu) this).field_g != null) {
-                ((gu) this).field_g.a(-1);
+            if (this.field_f == null) {
+              if (this.field_g != null) {
+                this.field_g.a(-1);
                 return;
               } else {
                 return;
               }
             } else {
-              ((gu) this).field_f.b(16711680);
-              if (((gu) this).field_g != null) {
-                ((gu) this).field_g.a(-1);
+              this.field_f.b(16711680);
+              if (this.field_g != null) {
+                this.field_g.a(-1);
                 return;
               } else {
                 return;
@@ -63,41 +63,41 @@ final class gu extends ka {
             }
           }
         } else {
-          ((gu) this).field_k.b(16711680);
-          if (((gu) this).field_l != null) {
-            ((gu) this).field_l.b(16711680);
+          this.field_k.b(16711680);
+          if (this.field_l != null) {
+            this.field_l.b(16711680);
             var2 = -105 % ((-65 - param0) / 56);
-            if (((gu) this).field_f != null) {
-              ((gu) this).field_f.b(16711680);
-              if (((gu) this).field_g != null) {
-                ((gu) this).field_g.a(-1);
+            if (this.field_f != null) {
+              this.field_f.b(16711680);
+              if (this.field_g != null) {
+                this.field_g.a(-1);
                 return;
               } else {
                 return;
               }
             } else {
-              if (((gu) this).field_g == null) {
+              if (this.field_g == null) {
                 return;
               } else {
-                ((gu) this).field_g.a(-1);
+                this.field_g.a(-1);
                 return;
               }
             }
           } else {
             var2 = -105 % ((-65 - param0) / 56);
-            if (((gu) this).field_f == null) {
-              if (((gu) this).field_g != null) {
-                ((gu) this).field_g.a(-1);
+            if (this.field_f == null) {
+              if (this.field_g != null) {
+                this.field_g.a(-1);
                 return;
               } else {
                 return;
               }
             } else {
-              ((gu) this).field_f.b(16711680);
-              if (((gu) this).field_g == null) {
+              this.field_f.b(16711680);
+              if (this.field_g == null) {
                 return;
               } else {
-                ((gu) this).field_g.a(-1);
+                this.field_g.a(-1);
                 return;
               }
             }
@@ -127,19 +127,19 @@ final class gu extends ka {
           L0: {
             L1: {
               L2: {
-                ((gu) this).field_c = param2;
-                ((gu) this).field_e = param1;
+                this.field_c = param2;
+                this.field_e = param1;
                 if (param3) {
                   break L2;
                 } else {
-                  if (!jf.a(((gu) this).field_e, (byte) -97, ((gu) this).field_c)) {
+                  if (!jf.a(this.field_e, (byte) -97, this.field_c)) {
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              ((gu) this).field_i = new lr(te.a(false, ((gu) this).field_e, ((gu) this).field_c));
+              this.field_i = new lr(te.a(false, this.field_e, this.field_c));
               break L1;
             }
             L3: {
@@ -147,14 +147,14 @@ final class gu extends ka {
                 if (param3) {
                   break L4;
                 } else {
-                  if (!sg.a(((gu) this).field_c, ((gu) this).field_e, 37)) {
+                  if (!sg.a(this.field_c, this.field_e, 37)) {
                     break L3;
                   } else {
                     break L4;
                   }
                 }
               }
-              ((gu) this).field_k = new lr(om.a(((gu) this).field_c, ((gu) this).field_e, (byte) -50));
+              this.field_k = new lr(om.a(this.field_c, this.field_e, (byte) -50));
               break L3;
             }
             L5: {
@@ -162,14 +162,14 @@ final class gu extends ka {
                 if (param3) {
                   break L6;
                 } else {
-                  if (!oj.a(((gu) this).field_e, 13836, ((gu) this).field_c)) {
+                  if (!oj.a(this.field_e, 13836, this.field_c)) {
                     break L5;
                   } else {
                     break L6;
                   }
                 }
               }
-              ((gu) this).field_l = new lr(se.a(31, ((gu) this).field_e, ((gu) this).field_c));
+              this.field_l = new lr(se.a(31, this.field_e, this.field_c));
               break L5;
             }
             L7: {
@@ -177,51 +177,51 @@ final class gu extends ka {
                 if (param3) {
                   break L8;
                 } else {
-                  if (!bj.a(((gu) this).field_e, (byte) -113, ((gu) this).field_c)) {
+                  if (!bj.a(this.field_e, (byte) -113, this.field_c)) {
                     break L7;
                   } else {
                     break L8;
                   }
                 }
               }
-              ((gu) this).field_f = new lr(mo.a(((gu) this).field_c, ((gu) this).field_e, 30643));
+              this.field_f = new lr(mo.a(this.field_c, this.field_e, 30643));
               break L7;
             }
             L9: {
               if (param3) {
                 break L9;
               } else {
-                if (tf.a(((gu) this).field_c, -2626, ((gu) this).field_e)) {
+                if (tf.a(this.field_c, -2626, this.field_e)) {
                   break L9;
                 } else {
                   return;
                 }
               }
             }
-            ((gu) this).field_g = new lm(qq.b(((gu) this).field_e, ((gu) this).field_c, -126));
+            this.field_g = new lm(qq.b(this.field_e, this.field_c, -126));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var6;
+            stackOut_18_0 = (RuntimeException) (var6);
             stackOut_18_1 = new StringBuilder().append("gu.<init>(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L10;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -229,19 +229,18 @@ final class gu extends ka {
               break L10;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_h = null;
+        if (!param0) {
+            gu.a(true);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Music: ";
     }
 }

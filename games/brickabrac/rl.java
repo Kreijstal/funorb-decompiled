@@ -38,10 +38,6 @@ final class rl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Public chat is unavailable while setting up a rated game.";
         field_d = "Players: <%0>/<%1>";
         field_f = "Month";

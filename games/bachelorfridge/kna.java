@@ -7,11 +7,17 @@ final class kna extends bw {
     int field_f;
 
     public static void a(int param0) {
+        int discarded$0 = 0;
+        if (param0 <= 33) {
+            CharSequence var2 = (CharSequence) null;
+            discarded$0 = kna.a(-6, (CharSequence) null, true, 97);
+        }
         field_h = null;
         field_g = null;
     }
 
     final static int a(int param0, CharSequence param1, boolean param2, int param3) {
+        int discarded$1 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -21,7 +27,7 @@ final class kna extends bw {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        CharSequence var12 = null;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -53,8 +59,8 @@ final class kna extends bw {
                     if (param3 == 24808) {
                       break L2;
                     } else {
-                      var12 = null;
-                      int discarded$1 = kna.a(91, (CharSequence) null, false, -125);
+                      var12 = (CharSequence) null;
+                      discarded$1 = kna.a(91, (CharSequence) null, false, -125);
                       break L2;
                     }
                   }
@@ -169,23 +175,23 @@ final class kna extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) var4;
+            stackOut_42_0 = (RuntimeException) (var4);
             stackOut_42_1 = new StringBuilder().append("kna.A(").append(param0).append(',');
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
             stackIn_43_1 = stackOut_42_1;
             if (param1 == null) {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
               stackOut_44_2 = "null";
               stackIn_45_0 = stackOut_44_0;
               stackIn_45_1 = stackOut_44_1;
               stackIn_45_2 = stackOut_44_2;
               break L11;
             } else {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackOut_43_2 = "{...}";
               stackIn_45_0 = stackOut_43_0;
               stackIn_45_1 = stackOut_43_1;
@@ -193,32 +199,28 @@ final class kna extends bw {
               break L11;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_41_0;
     }
 
     final void b(boolean param0) {
-        ((kna) this).field_f = ((kna) this).field_f + 1;
+        this.field_f = this.field_f + 1;
         if (!param0) {
-            field_g = null;
+            field_g = (String[]) null;
         }
     }
 
     final void c(byte param0) {
-        ((kna) this).field_f = ((kna) this).field_f - 1;
+        this.field_f = this.field_f - 1;
         int var2 = 66 / ((param0 - -69) / 55);
     }
 
     kna(int param0, int param1) {
-        ((kna) this).field_f = param1;
+        this.field_f = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{"Normal", "Poison", "Stun", "Protect", "Stamina down", "Speed down", "Fisticuffs down", "Flingstuff down", "Immobilise", "Disarm", "Fatigue", "Ignoring orders", "Strong poison", "Spiky", "Regen", "Knockback", "Stamina up", "Speed up", "Fisticuffs up", "Flingstuff up", "Berserk", "Double duration of effects", "Triple duration of effects", "Pull forward", "Carrying red fly", "Carrying green fly", "Carrying yellow fly", "Carrying blue fly", "Speed capped", "Sleeping", "Damage down", "Martyr", "Levitate", "Invincible", "Disabled", "Zombie", "Stuck", "Smitten", "Losing speed", "Jellied", "Fear", "Reset buffs", "Rage", "Spilling milk", "Dreaming", "Knockback 2 squares", "Knockback 3 squares", "Push aside", "Switch places", "Create poison tile", "Create regen tile", "Confuse", "Panic", "Burning", "Bagpiping"};
         field_h = "Chat is currently disabled.";
     }

@@ -51,50 +51,52 @@ final class jn implements Iterator {
     }
 
     public static void a(byte param0) {
+        if (param0 >= -76) {
+            field_c = (String) null;
+            field_c = null;
+            field_a = null;
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     public final boolean hasNext() {
-        return ((jn) this).field_e.field_a != ((jn) this).field_d;
+        return this.field_e.field_a != this.field_d;
     }
 
     public final void remove() {
-        if (!(null != ((jn) this).field_b)) {
+        if (!(null != this.field_b)) {
             throw new IllegalStateException();
         }
-        ((jn) this).field_b.d((byte) -35);
-        ((jn) this).field_b = null;
+        this.field_b.d((byte) -35);
+        this.field_b = null;
     }
 
     public final Object next() {
-        fh var1 = ((jn) this).field_d;
-        if (var1 == ((jn) this).field_e.field_a) {
-            ((jn) this).field_d = null;
+        fh var1 = this.field_d;
+        if (var1 == this.field_e.field_a) {
+            this.field_d = null;
             var1 = null;
         } else {
-            ((jn) this).field_d = var1.field_e;
+            this.field_d = var1.field_e;
         }
-        ((jn) this).field_b = var1;
-        return (Object) (Object) var1;
+        this.field_b = var1;
+        return var1;
     }
 
     jn(vh param0) {
-        ((jn) this).field_b = null;
+        this.field_b = null;
         try {
-            ((jn) this).field_e = param0;
-            ((jn) this).field_d = ((jn) this).field_e.field_a.field_e;
-            ((jn) this).field_b = null;
+            this.field_e = param0;
+            this.field_d = this.field_e.field_a.field_e;
+            this.field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Disarm self destruct";
     }
 }

@@ -30,11 +30,22 @@ abstract class bb {
         field_t = null;
         field_e = null;
         field_f = null;
-        field_r = null;
-        field_l = null;
+        if (param0 != 127) {
+          field_k = (String[]) null;
+          field_r = null;
+          field_l = null;
+          return;
+        } else {
+          field_r = null;
+          field_l = null;
+          return;
+        }
     }
 
     final static cn[] a(int param0, boolean param1, int param2, int param3) {
+        if (param1) {
+            return (cn[]) null;
+        }
         return pe.a(param3, param0, 25, param2, 1);
     }
 
@@ -49,8 +60,8 @@ abstract class bb {
         int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            ((bb) this).field_d = null;
-            if (20 > ((bb) this).e(param0)) {
+            this.field_d = (up) null;
+            if (20 > this.e(param0 + 0)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -63,7 +74,7 @@ abstract class bb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (20 > ((bb) this).e(param0)) {
+            if (20 > this.e(param0 + 0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -85,10 +96,10 @@ abstract class bb {
 
     final int c(int param0) {
         if (param0 != 20) {
-          ((bb) this).field_a = 69;
-          return ((bb) this).field_g.b((byte) 53) - -((bb) this).field_p.b((byte) 53);
+          this.field_a = 69;
+          return this.field_g.b((byte) 53) - -this.field_p.b((byte) 53);
         } else {
-          return ((bb) this).field_g.b((byte) 53) - -((bb) this).field_p.b((byte) 53);
+          return this.field_g.b((byte) 53) - -this.field_p.b((byte) 53);
         }
     }
 
@@ -96,15 +107,16 @@ abstract class bb {
         if (param0 != -21431) {
             return true;
         }
-        return 20 <= ((bb) this).c(param0 ^ -21411) ? true : false;
+        return 20 <= this.c(param0 ^ -21411) ? true : false;
     }
 
     final int e(int param0) {
+        boolean discarded$2 = false;
         if (param0 != 20) {
-          boolean discarded$2 = ((bb) this).d(38);
-          return ((bb) this).field_d.b((byte) 53) + ((bb) this).field_s.b((byte) 53);
+          discarded$2 = this.d(38);
+          return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
         } else {
-          return ((bb) this).field_d.b((byte) 53) + ((bb) this).field_s.b((byte) 53);
+          return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
         }
     }
 
@@ -121,21 +133,21 @@ abstract class bb {
         em stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param3 + ((long)param1 << 32);
+          var6 = (long)param3 + ((long)param1 << -1369774112);
           var8 = new em();
           var8.field_E = param2;
           var8.field_o = var6;
-          stackOut_0_0 = (em) var8;
+          stackOut_0_0 = (em) (var8);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if (!param0) {
-            stackOut_2_0 = (em) (Object) stackIn_2_0;
+            stackOut_2_0 = (em) ((Object) stackIn_2_0);
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             break L0;
           } else {
-            stackOut_1_0 = (em) (Object) stackIn_1_0;
+            stackOut_1_0 = (em) ((Object) stackIn_1_0);
             stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -145,23 +157,23 @@ abstract class bb {
         L1: {
           stackIn_3_0.field_B = stackIn_3_1 != 0;
           if (param0) {
-            if (((bb) this).c(20) < 20) {
-              ((bb) this).field_g.a((ll) (Object) var8, -32711);
+            if ((this.c(20) ^ -1) > -21) {
+              this.field_g.a(var8, -32711);
               break L1;
             } else {
               throw new RuntimeException();
             }
           } else {
-            if (((bb) this).e(20) >= 20) {
+            if (-21 >= (this.e(20) ^ -1)) {
               throw new RuntimeException();
             } else {
-              ((bb) this).field_d.a((ll) (Object) var8, -32711);
+              this.field_d.a(var8, -32711);
               break L1;
             }
           }
         }
         if (param4 <= 65) {
-          field_t = null;
+          field_t = (String[]) null;
           return var8;
         } else {
           return var8;
@@ -169,22 +181,18 @@ abstract class bb {
     }
 
     bb() {
-        ((bb) this).field_g = new up();
-        ((bb) this).field_p = new up();
-        ((bb) this).field_d = new up();
-        ((bb) this).field_s = new up();
-        ((bb) this).field_o = new ec(6);
-        ((bb) this).field_j = (byte) 0;
-        ((bb) this).field_h = 0;
-        ((bb) this).field_c = 0;
-        ((bb) this).field_m = new ec(10);
+        this.field_g = new up();
+        this.field_p = new up();
+        this.field_d = new up();
+        this.field_s = new up();
+        this.field_o = new ec(6);
+        this.field_j = (byte) 0;
+        this.field_h = 0;
+        this.field_c = 0;
+        this.field_m = new ec(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = null;
         field_r = "Select a raider to enchant with additional Sneak";
         field_q = "RESULT";

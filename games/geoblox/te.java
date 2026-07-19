@@ -9,14 +9,15 @@ final class te {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 != -8297) {
+            field_c = (ci) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "te.A(";
     }
 }

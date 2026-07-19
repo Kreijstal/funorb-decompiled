@@ -16,57 +16,57 @@ final class bma extends uda {
     private gla field_j;
 
     final void a(int param0) {
-        ((bma) this).field_d.g(1, -64);
-        ((bma) this).field_d.a((ura) null, -114);
-        ((bma) this).field_d.a(asa.field_a, true, asa.field_a);
-        ((bma) this).field_d.a(0, qcb.field_q, 7);
-        ((bma) this).field_d.a(2, pea.field_d, param0 + -2536);
-        ((bma) this).field_d.a(0, (byte) -72, qcb.field_q);
-        ((bma) this).field_d.g(0, -123);
-        if (!((bma) this).field_f) {
+        this.field_d.g(1, -64);
+        this.field_d.a((ura) null, -114);
+        this.field_d.a(asa.field_a, true, asa.field_a);
+        this.field_d.a(0, qcb.field_q, 7);
+        this.field_d.a(2, pea.field_d, param0 + -2536);
+        this.field_d.a(0, (byte) -72, qcb.field_q);
+        this.field_d.g(0, -123);
+        if (!this.field_f) {
           if (param0 == 2543) {
-            if (((bma) this).field_g) {
+            if (this.field_g) {
               jaggl.OpenGL.glBindProgramARB(34336, 0);
               jaggl.OpenGL.glDisable(34820);
               jaggl.OpenGL.glDisable(34336);
-              ((bma) this).field_g = false;
+              this.field_g = false;
               return;
             } else {
               return;
             }
           } else {
             field_o = -55;
-            if (((bma) this).field_g) {
+            if (this.field_g) {
               jaggl.OpenGL.glBindProgramARB(34336, 0);
               jaggl.OpenGL.glDisable(34820);
               jaggl.OpenGL.glDisable(34336);
-              ((bma) this).field_g = false;
+              this.field_g = false;
               return;
             } else {
               return;
             }
           }
         } else {
-          ((bma) this).field_d.a(0, qcb.field_q, 7);
-          ((bma) this).field_d.a(0, (byte) -118, qcb.field_q);
-          ((bma) this).field_f = false;
+          this.field_d.a(0, qcb.field_q, 7);
+          this.field_d.a(0, (byte) -118, qcb.field_q);
+          this.field_f = false;
           if (param0 != 2543) {
             field_o = -55;
-            if (!((bma) this).field_g) {
+            if (!this.field_g) {
               return;
             } else {
               jaggl.OpenGL.glBindProgramARB(34336, 0);
               jaggl.OpenGL.glDisable(34820);
               jaggl.OpenGL.glDisable(34336);
-              ((bma) this).field_g = false;
+              this.field_g = false;
               return;
             }
           } else {
-            if (((bma) this).field_g) {
+            if (this.field_g) {
               jaggl.OpenGL.glBindProgramARB(34336, 0);
               jaggl.OpenGL.glDisable(34820);
               jaggl.OpenGL.glDisable(34336);
-              ((bma) this).field_g = false;
+              this.field_g = false;
               return;
             } else {
               return;
@@ -76,16 +76,16 @@ final class bma extends uda {
     }
 
     final void a(int param0, boolean param1) {
-        ((bma) this).field_i = param1 ? true : false;
-        ((bma) this).field_d.g(1, -72);
-        ((bma) this).field_d.a((ura) (Object) ((bma) this).field_e, param0 + -119);
-        ((bma) this).field_d.a(et.field_c, true, df.field_o);
-        ((bma) this).field_d.a(0, pea.field_d, param0 ^ 2);
-        ((bma) this).field_d.a(true, -21115, false, qcb.field_q, 2);
-        ((bma) this).field_d.a(0, (byte) -104, pja.field_l);
-        ((bma) this).field_d.g(0, -93);
+        this.field_i = param1 ? true : false;
+        this.field_d.g(1, -72);
+        this.field_d.a(this.field_e, param0 + -119);
+        this.field_d.a(et.field_c, true, df.field_o);
+        this.field_d.a(0, pea.field_d, param0 ^ 2);
+        this.field_d.a(true, -21115, false, qcb.field_q, 2);
+        this.field_d.a(0, (byte) -104, pja.field_l);
+        this.field_d.g(0, -93);
         if (param0 != 5) {
-            ((bma) this).field_j = null;
+            this.field_j = (gla) null;
         } else {
             this.e(0);
             return;
@@ -138,18 +138,18 @@ final class bma extends uda {
         pf stackOut_3_5 = null;
         int stackOut_3_6 = 0;
         L0: {
-          if (((bma) this).field_g) {
+          if (this.field_g) {
             L1: {
-              var2 = ((bma) this).field_d.XA();
-              var3 = ((bma) this).field_d.i();
+              var2 = this.field_d.XA();
+              var3 = this.field_d.i();
               var4 = -((float)(var2 - var3) * 0.125f) + (float)var2;
               var5 = (float)var2 - (float)(var2 - var3) * 0.25f;
               stackOut_2_0 = 34336;
               stackOut_2_1 = 0;
               stackOut_2_2 = var5;
               stackOut_2_3 = var4;
-              stackOut_2_4 = 1.0f / (float)((bma) this).field_d.D(100);
-              stackOut_2_5 = ((bma) this).field_d;
+              stackOut_2_4 = 1.0f / (float)this.field_d.D(100);
+              stackOut_2_5 = this.field_d;
               stackIn_4_0 = stackOut_2_0;
               stackIn_4_1 = stackOut_2_1;
               stackIn_4_2 = stackOut_2_2;
@@ -168,7 +168,7 @@ final class bma extends uda {
                 stackOut_4_2 = stackIn_4_2;
                 stackOut_4_3 = stackIn_4_3;
                 stackOut_4_4 = stackIn_4_4;
-                stackOut_4_5 = (pf) (Object) stackIn_4_5;
+                stackOut_4_5 = (pf) ((Object) stackIn_4_5);
                 stackOut_4_6 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
@@ -184,7 +184,7 @@ final class bma extends uda {
                 stackOut_3_2 = stackIn_3_2;
                 stackOut_3_3 = stackIn_3_3;
                 stackOut_3_4 = stackIn_3_4;
-                stackOut_3_5 = (pf) (Object) stackIn_3_5;
+                stackOut_3_5 = (pf) ((Object) stackIn_3_5);
                 stackOut_3_6 = 1;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_5_1 = stackOut_3_1;
@@ -197,16 +197,16 @@ final class bma extends uda {
               }
             }
             jaggl.OpenGL.glProgramLocalParameter4fARB(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, (float)((pf) (Object) stackIn_5_5).a(stackIn_5_6 != 0) / 255.0f);
-            ((bma) this).field_d.g(1, -42);
-            ((bma) this).field_d.e(-122, ((bma) this).field_d.D((byte) -124));
-            ((bma) this).field_d.g(0, -81);
+            this.field_d.g(1, -42);
+            this.field_d.e(-122, this.field_d.D((byte) -124));
+            this.field_d.g(0, -81);
             break L0;
           } else {
             break L0;
           }
         }
         if (!param0) {
-          ((bma) this).field_i = true;
+          this.field_i = true;
           return;
         } else {
           return;
@@ -214,7 +214,7 @@ final class bma extends uda {
     }
 
     bma(jp param0, asb param1) {
-        super((pf) (Object) param0);
+        super(param0);
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
@@ -289,8 +289,8 @@ final class bma extends uda {
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
         String stackOut_24_2 = null;
-        ((bma) this).field_h = new float[4];
-        ((bma) this).field_f = false;
+        this.field_h = new float[4];
+        this.field_f = false;
         try {
           L0: {
             if (param1 == null) {
@@ -298,11 +298,11 @@ final class bma extends uda {
             } else {
               if (param0.field_Ac) {
                 L1: {
-                  ((bma) this).field_p = mha.a(0, param1.a("uw_ground_unlit", true, "gl"), 34336, param0);
-                  ((bma) this).field_k = mha.a(0, param1.a("uw_ground_lit", true, "gl"), 34336, param0);
-                  ((bma) this).field_m = mha.a(0, param1.a("uw_model_unlit", true, "gl"), 34336, param0);
-                  ((bma) this).field_j = mha.a(0, param1.a("uw_model_lit", true, "gl"), 34336, param0);
-                  if (((bma) this).field_j == null) {
+                  this.field_p = mha.a(0, param1.a("uw_ground_unlit", true, "gl"), 34336, param0);
+                  this.field_k = mha.a(0, param1.a("uw_ground_lit", true, "gl"), 34336, param0);
+                  this.field_m = mha.a(0, param1.a("uw_model_unlit", true, "gl"), 34336, param0);
+                  this.field_j = mha.a(0, param1.a("uw_model_lit", true, "gl"), 34336, param0);
+                  if (this.field_j == null) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L1;
@@ -316,7 +316,7 @@ final class bma extends uda {
                   stackOut_7_0 = stackIn_7_0;
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_8_0 = stackOut_7_0;
-                  if (((bma) this).field_k == null) {
+                  if (this.field_k == null) {
                     stackOut_9_0 = stackIn_9_0;
                     stackOut_9_1 = 0;
                     stackIn_10_0 = stackOut_9_0;
@@ -337,7 +337,7 @@ final class bma extends uda {
                   stackIn_12_1 = stackOut_10_1;
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
-                  if (null == ((bma) this).field_p) {
+                  if (null == this.field_p) {
                     stackOut_12_0 = stackIn_12_0;
                     stackOut_12_1 = stackIn_12_1;
                     stackOut_12_2 = 0;
@@ -362,7 +362,7 @@ final class bma extends uda {
                   stackIn_15_1 = stackOut_13_1;
                   stackIn_14_0 = stackOut_13_0;
                   stackIn_14_1 = stackOut_13_1;
-                  if (null == ((bma) this).field_m) {
+                  if (null == this.field_m) {
                     stackOut_15_0 = stackIn_15_0;
                     stackOut_15_1 = stackIn_15_1;
                     stackOut_15_2 = 0;
@@ -381,12 +381,12 @@ final class bma extends uda {
                   }
                 }
                 if ((stackIn_16_0 & (stackIn_16_1 & stackIn_16_2)) == 0) {
-                  ((bma) this).field_l = false;
+                  this.field_l = false;
                   return;
                 } else {
-                  ((bma) this).field_e = ((bma) this).field_d.a(2, false, 1, (byte) -67, new int[2]);
-                  ((bma) this).field_e.a(false, (byte) -98, false);
-                  ((bma) this).field_l = true;
+                  this.field_e = this.field_d.a(2, false, 1, (byte) -67, new int[]{0, -1});
+                  this.field_e.a(false, (byte) -98, false);
+                  this.field_l = true;
                   return;
                 }
               } else {
@@ -394,29 +394,29 @@ final class bma extends uda {
               }
             }
           }
-          ((bma) this).field_l = false;
+          this.field_l = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
+            stackOut_20_0 = (RuntimeException) (var3);
             stackOut_20_1 = new StringBuilder().append("bma.<init>(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -425,23 +425,23 @@ final class bma extends uda {
             }
           }
           L6: {
-            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
             stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -449,34 +449,34 @@ final class bma extends uda {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
     final boolean a(byte param0) {
         int var2 = 100 / ((34 - param0) / 63);
-        return ((bma) this).field_l;
+        return this.field_l;
     }
 
     final void a(int param0, int param1, int param2) {
         if (param2 != 5) {
-            ((bma) this).field_k = null;
+            this.field_k = (gla) null;
         }
     }
 
     private final void e(int param0) {
-        int var2 = ((bma) this).field_d.u((byte) 127);
-        oj var3 = ((bma) this).field_d.g((byte) 47);
-        if (((bma) this).field_i) {
-            jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? ((bma) this).field_j.field_c : ((bma) this).field_k.field_c);
+        int var2 = this.field_d.u((byte) 127);
+        oj var3 = this.field_d.g((byte) 47);
+        if (this.field_i) {
+            jaggl.OpenGL.glBindProgramARB(34336, (var2 ^ -1) != -2147483648 ? this.field_j.field_c : this.field_k.field_c);
         } else {
-            jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != var2 ? ((bma) this).field_m.field_c : ((bma) this).field_p.field_c);
+            jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != var2 ? this.field_m.field_c : this.field_p.field_c);
         }
         jaggl.OpenGL.glEnable(34336);
-        ((bma) this).field_g = true;
-        var3.a(((bma) this).field_h, -1.0f, (byte) 67, (float)var2, (float)param0, 0.0f);
-        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, ((bma) this).field_h[0], ((bma) this).field_h[1], ((bma) this).field_h[2], ((bma) this).field_h[3]);
-        ((bma) this).b(true);
+        this.field_g = true;
+        var3.a(this.field_h, -1.0f, (byte) 67, (float)var2, (float)param0, 0.0f);
+        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_h[0], this.field_h[1], this.field_h[2], this.field_h[3]);
+        this.b(true);
     }
 
     final void b(int param0, boolean param1) {
@@ -508,25 +508,25 @@ final class bma extends uda {
             L1: {
               if (param2 != null) {
                 L2: {
-                  if (((bma) this).field_f) {
-                    ((bma) this).field_d.a(0, qcb.field_q, 7);
-                    ((bma) this).field_d.a(0, (byte) -58, qcb.field_q);
-                    ((bma) this).field_f = false;
+                  if (this.field_f) {
+                    this.field_d.a(0, qcb.field_q, 7);
+                    this.field_d.a(0, (byte) -58, qcb.field_q);
+                    this.field_f = false;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((bma) this).field_d.a(param2, -118);
-                ((bma) this).field_d.h(-122, param1);
+                this.field_d.a(param2, -118);
+                this.field_d.h(-122, param1);
                 break L1;
               } else {
-                if (!((bma) this).field_f) {
-                  ((bma) this).field_d.a(((bma) this).field_d.field_Q, -108);
-                  ((bma) this).field_d.h(-120, 1);
-                  ((bma) this).field_d.a(0, pja.field_l, 7);
-                  ((bma) this).field_d.a(0, (byte) -74, pja.field_l);
-                  ((bma) this).field_f = true;
+                if (!this.field_f) {
+                  this.field_d.a(this.field_d.field_Q, -108);
+                  this.field_d.h(-120, 1);
+                  this.field_d.a(0, pja.field_l, 7);
+                  this.field_d.a(0, (byte) -74, pja.field_l);
+                  this.field_f = true;
                   break L1;
                 } else {
                   break L1;
@@ -536,7 +536,7 @@ final class bma extends uda {
             if (param0 >= 42) {
               break L0;
             } else {
-              ((bma) this).field_g = false;
+              this.field_g = false;
               return;
             }
           }
@@ -544,23 +544,23 @@ final class bma extends uda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_0 = (RuntimeException) (var4);
             stackOut_11_1 = new StringBuilder().append("bma.E(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -568,15 +568,11 @@ final class bma extends uda {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 16;
         field_o = 0;
     }

@@ -16,9 +16,9 @@ final class lc extends nf {
     lc(Object param0, int param1) {
         super(param1);
         try {
-            ((lc) this).field_p = param0;
+            this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,21 +34,17 @@ final class lc extends nf {
         field_w = null;
         field_u = null;
         field_v = null;
-        int var1 = 0;
+        int var1 = -51 % ((7 - param0) / 56);
     }
 
     final Object f(int param0) {
         if (param0 != 0) {
-            return null;
+            return (Object) null;
         }
-        return ((lc) this).field_p;
+        return this.field_p;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = 0;
         field_u = "LEVEL SELECT";
         field_r = 0;

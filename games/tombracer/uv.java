@@ -28,13 +28,8 @@ final class uv extends oga {
         long var7 = 0L;
         long var8 = 0L;
         int var10 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        int var11 = 0;
+        int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -42,15 +37,14 @@ final class uv extends oga {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
@@ -59,55 +53,99 @@ final class uv extends oga {
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
         String stackOut_25_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
-              jaggl.OpenGL.glPushAttrib(2048);
-              jaggl.OpenGL.glMatrixMode(5889);
-              jaggl.OpenGL.glPushMatrix();
-              jaggl.OpenGL.glLoadIdentity();
-              jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
-              if (null == ((uv) this).field_l) {
-                ((uv) this).field_g.a(true, (kl) (Object) param0);
-                ((uv) this).field_g.b((ks) (Object) ((uv) this).field_q, (byte) 81);
-                ((uv) this).field_q.a(0, (byte) -91);
-                jaggl.OpenGL.glViewport(0, 0, 256, 256);
-                var5_long = ((uv) this).field_m.field_c;
-                jaggl.OpenGL.glUseProgramObjectARB(var5_long);
-                jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "sceneTex"), 0);
-                jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "params"), ql.field_l, 0.0f, 0.0f);
-                jaggl.OpenGL.glBegin(7);
-                jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                jaggl.OpenGL.glVertex2i(0, 0);
-                jaggl.OpenGL.glTexCoord2f((float)((uv) this).field_t, 0.0f);
-                jaggl.OpenGL.glVertex2i(1, 0);
-                jaggl.OpenGL.glTexCoord2f((float)((uv) this).field_t, (float)((uv) this).field_n);
-                jaggl.OpenGL.glVertex2i(1, 1);
-                jaggl.OpenGL.glTexCoord2f(0.0f, (float)((uv) this).field_n);
-                jaggl.OpenGL.glVertex2i(0, 1);
-                jaggl.OpenGL.glEnd();
-                break L1;
-              } else {
-                ((uv) this).field_g.b((ks) (Object) ((uv) this).field_s, (byte) 81);
-                var5_int = b.a(((uv) this).field_t, (byte) 85);
-                var6 = b.a(((uv) this).field_n, (byte) 96);
-                var7_int = 0;
-                L2: while (true) {
-                  L3: {
-                    if (var5_int > 256) {
-                      break L3;
-                    } else {
-                      if (var6 <= 256) {
-                        ((uv) this).field_g.b((ks) (Object) ((uv) this).field_s, 0);
-                        ((uv) this).field_g.a(true, (kl) (Object) ((uv) this).field_l[-1 + var7_int]);
-                        ((uv) this).field_g.b((ks) (Object) ((uv) this).field_q, (byte) 81);
-                        ((uv) this).field_q.a(0, (byte) -91);
-                        jaggl.OpenGL.glViewport(0, 0, 256, 256);
-                        var8 = ((uv) this).field_v.field_c;
-                        jaggl.OpenGL.glUseProgramObjectARB(var8);
-                        jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "sceneTex"), 0);
-                        jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "params"), ql.field_l, 0.0f, 0.0f);
+              L2: {
+                jaggl.OpenGL.glPushAttrib(2048);
+                jaggl.OpenGL.glMatrixMode(5889);
+                jaggl.OpenGL.glPushMatrix();
+                jaggl.OpenGL.glLoadIdentity();
+                jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+                if (null == this.field_l) {
+                  break L2;
+                } else {
+                  this.field_g.b((ks) (this.field_s), (byte) 81);
+                  var5_int = b.a(this.field_t, (byte) 85);
+                  var6 = b.a(this.field_n, (byte) 96);
+                  var7_int = 0;
+                  L3: while (true) {
+                    L4: {
+                      L5: {
+                        L6: {
+                          L7: {
+                            if ((var5_int ^ -1) < -257) {
+                              break L7;
+                            } else {
+                              var12 = var6 ^ -1;
+                              var11 = -257;
+                              if (var10 != 0) {
+                                if (var11 <= var12) {
+                                  break L5;
+                                } else {
+                                  break L6;
+                                }
+                              } else {
+                                if (var11 <= var12) {
+                                  break L4;
+                                } else {
+                                  break L7;
+                                }
+                              }
+                            }
+                          }
+                          jaggl.OpenGL.glViewport(0, 0, var5_int, var6);
+                          this.field_s.a(true, this.field_l[var7_int], 0);
+                          if (var6 <= 256) {
+                            break L5;
+                          } else {
+                            break L6;
+                          }
+                        }
+                        var6 = var6 >> 1;
+                        break L5;
+                      }
+                      L8: {
+                        if (-257 <= (var5_int ^ -1)) {
+                          break L8;
+                        } else {
+                          var5_int = var5_int >> 1;
+                          break L8;
+                        }
+                      }
+                      L9: {
+                        L10: {
+                          if (0 != var7_int) {
+                            break L10;
+                          } else {
+                            this.field_g.a(true, param0);
+                            jaggl.OpenGL.glBegin(7);
+                            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+                            jaggl.OpenGL.glVertex2i(0, 0);
+                            jaggl.OpenGL.glTexCoord2f((float)this.field_t, 0.0f);
+                            jaggl.OpenGL.glVertex2i(1, 0);
+                            jaggl.OpenGL.glTexCoord2f((float)this.field_t, (float)this.field_n);
+                            jaggl.OpenGL.glVertex2i(1, 1);
+                            jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.field_n);
+                            jaggl.OpenGL.glVertex2i(0, 1);
+                            jaggl.OpenGL.glEnd();
+                            if (var10 == 0) {
+                              break L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        this.field_g.a(true, this.field_l[-1 + var7_int]);
                         jaggl.OpenGL.glBegin(7);
                         jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                         jaggl.OpenGL.glVertex2i(0, 0);
@@ -118,69 +156,66 @@ final class uv extends oga {
                         jaggl.OpenGL.glTexCoord2f(0.0f, 1.0f);
                         jaggl.OpenGL.glVertex2i(0, 1);
                         jaggl.OpenGL.glEnd();
-                        break L1;
+                        break L9;
+                      }
+                      var7_int++;
+                      if (var10 == 0) {
+                        continue L3;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
-                  }
-                  L4: {
-                    jaggl.OpenGL.glViewport(0, 0, var5_int, var6);
-                    ((uv) this).field_s.a(true, ((uv) this).field_l[var7_int], 0);
-                    if (var6 <= 256) {
-                      break L4;
+                    this.field_g.b(this.field_s, 0);
+                    this.field_g.a(true, this.field_l[-1 + var7_int]);
+                    this.field_g.b((ks) (this.field_q), (byte) 81);
+                    this.field_q.a(0, (byte) -91);
+                    jaggl.OpenGL.glViewport(0, 0, 256, 256);
+                    var8 = this.field_v.field_c;
+                    jaggl.OpenGL.glUseProgramObjectARB(var8);
+                    jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "sceneTex"), 0);
+                    jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "params"), ql.field_l, 0.0f, 0.0f);
+                    jaggl.OpenGL.glBegin(7);
+                    jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+                    jaggl.OpenGL.glVertex2i(0, 0);
+                    jaggl.OpenGL.glTexCoord2f(1.0f, 0.0f);
+                    jaggl.OpenGL.glVertex2i(1, 0);
+                    jaggl.OpenGL.glTexCoord2f(1.0f, 1.0f);
+                    jaggl.OpenGL.glVertex2i(1, 1);
+                    jaggl.OpenGL.glTexCoord2f(0.0f, 1.0f);
+                    jaggl.OpenGL.glVertex2i(0, 1);
+                    jaggl.OpenGL.glEnd();
+                    if (var10 == 0) {
+                      break L1;
                     } else {
-                      var6 = var6 >> 1;
-                      break L4;
+                      break L2;
                     }
                   }
-                  L5: {
-                    if (var5_int <= 256) {
-                      break L5;
-                    } else {
-                      var5_int = var5_int >> 1;
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if (0 != var7_int) {
-                      ((uv) this).field_g.a(true, (kl) (Object) ((uv) this).field_l[-1 + var7_int]);
-                      jaggl.OpenGL.glBegin(7);
-                      jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                      jaggl.OpenGL.glVertex2i(0, 0);
-                      jaggl.OpenGL.glTexCoord2f(1.0f, 0.0f);
-                      jaggl.OpenGL.glVertex2i(1, 0);
-                      jaggl.OpenGL.glTexCoord2f(1.0f, 1.0f);
-                      jaggl.OpenGL.glVertex2i(1, 1);
-                      jaggl.OpenGL.glTexCoord2f(0.0f, 1.0f);
-                      jaggl.OpenGL.glVertex2i(0, 1);
-                      jaggl.OpenGL.glEnd();
-                      break L6;
-                    } else {
-                      ((uv) this).field_g.a(true, (kl) (Object) param0);
-                      jaggl.OpenGL.glBegin(7);
-                      jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-                      jaggl.OpenGL.glVertex2i(0, 0);
-                      jaggl.OpenGL.glTexCoord2f((float)((uv) this).field_t, 0.0f);
-                      jaggl.OpenGL.glVertex2i(1, 0);
-                      jaggl.OpenGL.glTexCoord2f((float)((uv) this).field_t, (float)((uv) this).field_n);
-                      jaggl.OpenGL.glVertex2i(1, 1);
-                      jaggl.OpenGL.glTexCoord2f(0.0f, (float)((uv) this).field_n);
-                      jaggl.OpenGL.glVertex2i(0, 1);
-                      jaggl.OpenGL.glEnd();
-                      var7_int++;
-                      break L6;
-                    }
-                  }
-                  var7_int++;
-                  continue L2;
                 }
               }
+              this.field_g.a(true, param0);
+              this.field_g.b((ks) (this.field_q), (byte) 81);
+              this.field_q.a(0, (byte) -91);
+              jaggl.OpenGL.glViewport(0, 0, 256, 256);
+              var5_long = this.field_m.field_c;
+              jaggl.OpenGL.glUseProgramObjectARB(var5_long);
+              jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "sceneTex"), 0);
+              jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "params"), ql.field_l, 0.0f, 0.0f);
+              jaggl.OpenGL.glBegin(7);
+              jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+              jaggl.OpenGL.glVertex2i(0, 0);
+              jaggl.OpenGL.glTexCoord2f((float)this.field_t, 0.0f);
+              jaggl.OpenGL.glVertex2i(1, 0);
+              jaggl.OpenGL.glTexCoord2f((float)this.field_t, (float)this.field_n);
+              jaggl.OpenGL.glVertex2i(1, 1);
+              jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.field_n);
+              jaggl.OpenGL.glVertex2i(0, 1);
+              jaggl.OpenGL.glEnd();
+              break L1;
             }
-            L7: {
-              ((uv) this).field_q.a(1, (byte) -91);
-              ((uv) this).field_g.a(true, (kl) (Object) ((uv) this).field_x);
-              var5_long = ((uv) this).field_w.field_c;
+            L11: {
+              this.field_q.a(1, (byte) -91);
+              this.field_g.a(true, this.field_x);
+              var5_long = this.field_w.field_c;
               jaggl.OpenGL.glUseProgramObjectARB(var5_long);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "baseTex"), 0);
               jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "step"), 0.00390625f, 0.0f, 0.0f);
@@ -194,8 +229,8 @@ final class uv extends oga {
               jaggl.OpenGL.glTexCoord2f(0.0f, 1.0f);
               jaggl.OpenGL.glVertex2i(0, 1);
               jaggl.OpenGL.glEnd();
-              ((uv) this).field_q.a(0, (byte) -91);
-              ((uv) this).field_g.a(true, (kl) (Object) ((uv) this).field_i);
+              this.field_q.a(0, (byte) -91);
+              this.field_g.a(true, this.field_i);
               jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "step"), 0.0f, 0.00390625f, 0.0f);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
@@ -203,10 +238,10 @@ final class uv extends oga {
               jaggl.OpenGL.glTexCoord2f(1.0f, 0.0f);
               jaggl.OpenGL.glVertex2i(1, 0);
               if (param2 <= -82) {
-                break L7;
+                break L11;
               } else {
                 uv.d(-13);
-                break L7;
+                break L11;
               }
             }
             jaggl.OpenGL.glTexCoord2f(1.0f, 1.0f);
@@ -217,72 +252,72 @@ final class uv extends oga {
             jaggl.OpenGL.glPopAttrib();
             jaggl.OpenGL.glPopMatrix();
             jaggl.OpenGL.glMatrixMode(5888);
-            ((uv) this).field_g.b((ks) (Object) ((uv) this).field_q, 0);
-            var7 = ((uv) this).field_j.field_c;
+            this.field_g.b(this.field_q, 0);
+            var7 = this.field_j.field_c;
             jaggl.OpenGL.glUseProgramObjectARB(var7);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "sceneTex"), 0);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "bloomTex"), 1);
             jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), vba.field_v, fra.field_p, 0.0f);
-            ((uv) this).field_g.e(1, true);
-            ((uv) this).field_g.a(true, (kl) (Object) ((uv) this).field_x);
-            ((uv) this).field_g.e(0, true);
-            ((uv) this).field_g.a(true, (kl) (Object) param0);
+            this.field_g.e(1, true);
+            this.field_g.a(true, this.field_x);
+            this.field_g.e(0, true);
+            this.field_g.a(true, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L12: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("uv.D(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
-            if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L8;
-            } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L8;
-            }
-          }
-          L9: {
-            stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',');
+            stackOut_24_0 = (RuntimeException) (var5);
+            stackOut_24_1 = new StringBuilder().append("uv.D(");
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
-            if (param3 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+            if (param0 == null) {
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L9;
+              break L12;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L9;
+              break L12;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          L13: {
+            stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
+            if (param3 == null) {
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L13;
+            } else {
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L13;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
         }
     }
 
@@ -294,12 +329,12 @@ final class uv extends oga {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == 34842) {
-          if (((uv) this).field_g.field_id) {
-            if (!((uv) this).field_g.field_Vc) {
+          if (this.field_g.field_id) {
+            if (!this.field_g.field_Vc) {
               return false;
             } else {
               L0: {
-                if (!((uv) this).field_g.field_z) {
+                if (!this.field_g.field_z) {
                   stackOut_15_0 = 0;
                   stackIn_16_0 = stackOut_15_0;
                   break L0;
@@ -315,13 +350,13 @@ final class uv extends oga {
             return false;
           }
         } else {
-          ((uv) this).field_m = null;
-          if (((uv) this).field_g.field_id) {
-            if (!((uv) this).field_g.field_Vc) {
+          this.field_m = (cua) null;
+          if (this.field_g.field_id) {
+            if (!this.field_g.field_Vc) {
               return false;
             } else {
               L1: {
-                if (!((uv) this).field_g.field_z) {
+                if (!this.field_g.field_z) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L1;
@@ -340,569 +375,196 @@ final class uv extends oga {
     }
 
     final void a(int param0, byte param1, int param2) {
+        int incrementValue$1 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = TombRacer.field_G ? 1 : 0;
-        ((uv) this).field_t = param2;
-        ((uv) this).field_n = param0;
-        if (param1 == -71) {
-          var4 = b.a(((uv) this).field_t, (byte) -95);
-          var5 = b.a(((uv) this).field_n, (byte) -95);
-          if (((uv) this).field_r == var4) {
-            if (~var5 == ~((uv) this).field_p) {
-              return;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        L0: {
+          var9 = TombRacer.field_G ? 1 : 0;
+          this.field_t = param2;
+          this.field_n = param0;
+          if (param1 == -71) {
+            break L0;
+          } else {
+            this.field_w = (cua) null;
+            break L0;
+          }
+        }
+        L1: {
+          var4 = b.a(this.field_t, (byte) -95);
+          var5 = b.a(this.field_n, (byte) -95);
+          if (this.field_r != var4) {
+            break L1;
+          } else {
+            if (var5 != this.field_p) {
+              break L1;
             } else {
-              L0: {
-                if (((uv) this).field_l != null) {
-                  var6 = 0;
-                  L1: while (true) {
-                    if (~((uv) this).field_l.length >= ~var6) {
-                      ((uv) this).field_l = null;
-                      break L0;
-                    } else {
-                      ((uv) this).field_l[var6].b(0);
-                      var6++;
-                      continue L1;
-                    }
-                  }
-                } else {
-                  break L0;
-                }
-              }
-              if (256 < var4) {
-                var6 = var4;
-                var7 = var5;
-                var8 = 0;
-                L2: while (true) {
-                  L3: {
-                    if (var6 > 256) {
-                      break L3;
-                    } else {
-                      if (256 >= var7) {
-                        if (((uv) this).field_s != null) {
-                          var6 = var4;
-                          ((uv) this).field_l = new rt[var8];
-                          var7 = var5;
-                          var8 = 0;
-                          L4: while (true) {
-                            L5: {
-                              if (var6 > 256) {
-                                break L5;
-                              } else {
-                                if (var7 <= 256) {
-                                  ((uv) this).field_r = var4;
-                                  ((uv) this).field_p = var5;
-                                  return;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            L6: {
-                              int incrementValue$7 = var8;
-                              var8++;
-                              ((uv) this).field_l[incrementValue$7] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                              if (var6 <= 256) {
-                                break L6;
-                              } else {
-                                var6 = var6 >> 1;
-                                break L6;
-                              }
-                            }
-                            if (256 < var7) {
-                              var7 = var7 >> 1;
-                              continue L4;
-                            } else {
-                              continue L4;
-                            }
-                          }
-                        } else {
-                          ((uv) this).field_s = new cb(((uv) this).field_g);
-                          var6 = var4;
-                          ((uv) this).field_l = new rt[var8];
-                          var7 = var5;
-                          var8 = 0;
-                          L7: while (true) {
-                            L8: {
-                              if (var6 > 256) {
-                                break L8;
-                              } else {
-                                if (var7 <= 256) {
-                                  ((uv) this).field_r = var4;
-                                  ((uv) this).field_p = var5;
-                                  return;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                            }
-                            L9: {
-                              int incrementValue$8 = var8;
-                              var8++;
-                              ((uv) this).field_l[incrementValue$8] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                              if (var6 <= 256) {
-                                break L9;
-                              } else {
-                                var6 = var6 >> 1;
-                                break L9;
-                              }
-                            }
-                            if (256 < var7) {
-                              var7 = var7 >> 1;
-                              continue L7;
-                            } else {
-                              continue L7;
-                            }
-                          }
-                        }
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  L10: {
-                    if (var6 <= 256) {
-                      break L10;
-                    } else {
-                      var6 = var6 >> 1;
-                      break L10;
-                    }
-                  }
-                  var8++;
-                  if (var7 > 256) {
-                    var7 = var7 >> 1;
-                    continue L2;
-                  } else {
-                    continue L2;
-                  }
-                }
+              return;
+            }
+          }
+        }
+        L2: {
+          if (this.field_l != null) {
+            var6 = 0;
+            L3: while (true) {
+              if (this.field_l.length <= var6) {
+                this.field_l = null;
+                break L2;
               } else {
-                if (var5 <= 256) {
-                  ((uv) this).field_s = null;
-                  ((uv) this).field_r = var4;
-                  ((uv) this).field_p = var5;
-                  return;
+                this.field_l[var6].b(0);
+                var6++;
+                if (var9 != 0) {
+                  break L2;
                 } else {
-                  var6 = var4;
-                  var7 = var5;
-                  var8 = 0;
-                  L11: while (true) {
-                    L12: {
-                      if (var6 > 256) {
-                        break L12;
-                      } else {
-                        if (256 >= var7) {
-                          L13: {
-                            if (((uv) this).field_s != null) {
-                              var6 = var4;
-                              ((uv) this).field_l = new rt[var8];
-                              var7 = var5;
-                              var8 = 0;
-                              break L13;
-                            } else {
-                              ((uv) this).field_s = new cb(((uv) this).field_g);
-                              var6 = var4;
-                              ((uv) this).field_l = new rt[var8];
-                              var7 = var5;
-                              var8 = 0;
-                              break L13;
-                            }
-                          }
-                          L14: while (true) {
-                            L15: {
-                              if (var6 > 256) {
-                                break L15;
-                              } else {
-                                if (var7 <= 256) {
-                                  ((uv) this).field_r = var4;
-                                  ((uv) this).field_p = var5;
-                                  return;
-                                } else {
-                                  break L15;
-                                }
-                              }
-                            }
-                            L16: {
-                              int incrementValue$9 = var8;
-                              var8++;
-                              ((uv) this).field_l[incrementValue$9] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                              if (var6 <= 256) {
-                                break L16;
-                              } else {
-                                var6 = var6 >> 1;
-                                break L16;
-                              }
-                            }
-                            if (256 < var7) {
-                              var7 = var7 >> 1;
-                              continue L14;
-                            } else {
-                              continue L14;
-                            }
-                          }
-                        } else {
-                          break L12;
-                        }
-                      }
-                    }
-                    L17: {
-                      if (var6 <= 256) {
-                        break L17;
-                      } else {
-                        var6 = var6 >> 1;
-                        break L17;
-                      }
-                    }
-                    var8++;
-                    if (var7 > 256) {
-                      var7 = var7 >> 1;
-                      continue L11;
-                    } else {
-                      continue L11;
-                    }
+                  if (var9 == 0) {
+                    continue L3;
+                  } else {
+                    this.field_l = null;
+                    break L2;
                   }
                 }
               }
             }
           } else {
-            L18: {
-              if (((uv) this).field_l != null) {
-                var6 = 0;
-                L19: while (true) {
-                  if (~((uv) this).field_l.length >= ~var6) {
-                    ((uv) this).field_l = null;
-                    break L18;
-                  } else {
-                    ((uv) this).field_l[var6].b(0);
-                    var6++;
-                    continue L19;
-                  }
-                }
-              } else {
-                break L18;
-              }
+            break L2;
+          }
+        }
+        L4: {
+          if (256 < var4) {
+            break L4;
+          } else {
+            if (-257 <= (var5 ^ -1)) {
+              this.field_s = null;
+              this.field_r = var4;
+              this.field_p = var5;
+              return;
+            } else {
+              break L4;
             }
-            if (256 < var4) {
-              var6 = var4;
-              var7 = var5;
-              var8 = 0;
-              L20: while (true) {
-                L21: {
-                  if (var6 > 256) {
-                    break L21;
+          }
+        }
+        var6 = var4;
+        var7 = var5;
+        var8 = 0;
+        L5: while (true) {
+          L6: {
+            L7: {
+              L8: {
+                L9: {
+                  if (-257 > (var6 ^ -1)) {
+                    break L9;
                   } else {
-                    if (256 >= var7) {
-                      if (((uv) this).field_s != null) {
-                        var6 = var4;
-                        ((uv) this).field_l = new rt[var8];
-                        var7 = var5;
-                        var8 = 0;
-                        L22: while (true) {
-                          L23: {
-                            if (var6 > 256) {
-                              break L23;
-                            } else {
-                              if (var7 <= 256) {
-                                ((uv) this).field_r = var4;
-                                ((uv) this).field_p = var5;
-                                return;
-                              } else {
-                                break L23;
-                              }
-                            }
-                          }
-                          L24: {
-                            int incrementValue$10 = var8;
-                            var8++;
-                            ((uv) this).field_l[incrementValue$10] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                            if (var6 <= 256) {
-                              break L24;
-                            } else {
-                              var6 = var6 >> 1;
-                              break L24;
-                            }
-                          }
-                          if (256 < var7) {
-                            var7 = var7 >> 1;
-                            continue L22;
-                          } else {
-                            continue L22;
-                          }
-                        }
+                    var13 = var7;
+                    var12 = 256;
+                    if (var9 != 0) {
+                      if (var12 <= var13) {
+                        break L7;
                       } else {
-                        ((uv) this).field_s = new cb(((uv) this).field_g);
-                        var6 = var4;
-                        ((uv) this).field_l = new rt[var8];
-                        var7 = var5;
-                        var8 = 0;
-                        L25: while (true) {
-                          L26: {
-                            if (var6 > 256) {
-                              break L26;
-                            } else {
-                              if (var7 <= 256) {
-                                ((uv) this).field_r = var4;
-                                ((uv) this).field_p = var5;
-                                return;
-                              } else {
-                                break L26;
-                              }
-                            }
-                          }
-                          L27: {
-                            int incrementValue$11 = var8;
-                            var8++;
-                            ((uv) this).field_l[incrementValue$11] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                            if (var6 <= 256) {
-                              break L27;
-                            } else {
-                              var6 = var6 >> 1;
-                              break L27;
-                            }
-                          }
-                          if (256 < var7) {
-                            var7 = var7 >> 1;
-                            continue L25;
-                          } else {
-                            continue L25;
-                          }
-                        }
+                        break L8;
                       }
                     } else {
-                      break L21;
+                      if (var12 >= var13) {
+                        break L6;
+                      } else {
+                        break L9;
+                      }
                     }
                   }
                 }
-                L28: {
-                  if (var6 <= 256) {
-                    break L28;
-                  } else {
-                    var6 = var6 >> 1;
-                    break L28;
-                  }
-                }
-                var8++;
-                if (var7 > 256) {
-                  var7 = var7 >> 1;
-                  continue L20;
+                if (var6 <= 256) {
+                  break L7;
                 } else {
-                  continue L20;
+                  break L8;
                 }
               }
-            } else {
-              if (var5 <= 256) {
-                ((uv) this).field_s = null;
-                ((uv) this).field_r = var4;
-                ((uv) this).field_p = var5;
-                return;
-              } else {
-                var6 = var4;
-                var7 = var5;
-                var8 = 0;
-                L29: while (true) {
-                  L30: {
-                    if (var6 > 256) {
-                      break L30;
-                    } else {
-                      if (256 >= var7) {
-                        L31: {
-                          if (((uv) this).field_s != null) {
-                            var6 = var4;
-                            ((uv) this).field_l = new rt[var8];
-                            var7 = var5;
-                            var8 = 0;
-                            break L31;
-                          } else {
-                            ((uv) this).field_s = new cb(((uv) this).field_g);
-                            var6 = var4;
-                            ((uv) this).field_l = new rt[var8];
-                            var7 = var5;
-                            var8 = 0;
-                            break L31;
-                          }
-                        }
-                        L32: while (true) {
-                          L33: {
-                            if (var6 > 256) {
-                              break L33;
-                            } else {
-                              if (var7 <= 256) {
-                                ((uv) this).field_r = var4;
-                                ((uv) this).field_p = var5;
-                                return;
-                              } else {
-                                break L33;
-                              }
-                            }
-                          }
-                          L34: {
-                            int incrementValue$12 = var8;
-                            var8++;
-                            ((uv) this).field_l[incrementValue$12] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                            if (var6 <= 256) {
-                              break L34;
-                            } else {
-                              var6 = var6 >> 1;
-                              break L34;
-                            }
-                          }
-                          if (256 < var7) {
-                            var7 = var7 >> 1;
-                            continue L32;
-                          } else {
-                            continue L32;
-                          }
-                        }
-                      } else {
-                        break L30;
-                      }
-                    }
-                  }
-                  L35: {
-                    if (var6 <= 256) {
-                      break L35;
-                    } else {
-                      var6 = var6 >> 1;
-                      break L35;
-                    }
-                  }
-                  var8++;
-                  if (var7 > 256) {
-                    var7 = var7 >> 1;
-                    continue L29;
-                  } else {
-                    continue L29;
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          L36: {
-            ((uv) this).field_w = null;
-            var4 = b.a(((uv) this).field_t, (byte) -95);
-            var5 = b.a(((uv) this).field_n, (byte) -95);
-            if (((uv) this).field_r != var4) {
-              break L36;
-            } else {
-              if (~var5 != ~((uv) this).field_p) {
-                break L36;
-              } else {
-                return;
-              }
-            }
-          }
-          L37: {
-            if (((uv) this).field_l != null) {
-              var6 = 0;
-              L38: while (true) {
-                if (~((uv) this).field_l.length >= ~var6) {
-                  ((uv) this).field_l = null;
-                  break L37;
-                } else {
-                  ((uv) this).field_l[var6].b(0);
-                  var6++;
-                  continue L38;
-                }
-              }
-            } else {
-              break L37;
-            }
-          }
-          L39: {
-            if (256 < var4) {
-              break L39;
-            } else {
-              if (var5 <= 256) {
-                ((uv) this).field_s = null;
-                ((uv) this).field_r = var4;
-                ((uv) this).field_p = var5;
-                return;
-              } else {
-                break L39;
-              }
-            }
-          }
-          var6 = var4;
-          var7 = var5;
-          var8 = 0;
-          L40: while (true) {
-            L41: {
-              if (var6 > 256) {
-                break L41;
-              } else {
-                if (256 >= var7) {
-                  L42: {
-                    if (((uv) this).field_s != null) {
-                      var6 = var4;
-                      ((uv) this).field_l = new rt[var8];
-                      var7 = var5;
-                      var8 = 0;
-                      break L42;
-                    } else {
-                      ((uv) this).field_s = new cb(((uv) this).field_g);
-                      var6 = var4;
-                      ((uv) this).field_l = new rt[var8];
-                      var7 = var5;
-                      var8 = 0;
-                      break L42;
-                    }
-                  }
-                  L43: while (true) {
-                    L44: {
-                      if (var6 > 256) {
-                        break L44;
-                      } else {
-                        if (var7 <= 256) {
-                          ((uv) this).field_r = var4;
-                          ((uv) this).field_p = var5;
-                          return;
-                        } else {
-                          break L44;
-                        }
-                      }
-                    }
-                    L45: {
-                      int incrementValue$13 = var8;
-                      var8++;
-                      ((uv) this).field_l[incrementValue$13] = new rt(((uv) this).field_g, 3553, 34842, var6, var7);
-                      if (var6 <= 256) {
-                        break L45;
-                      } else {
-                        var6 = var6 >> 1;
-                        break L45;
-                      }
-                    }
-                    if (256 < var7) {
-                      var7 = var7 >> 1;
-                      continue L43;
-                    } else {
-                      continue L43;
-                    }
-                  }
-                } else {
-                  break L41;
-                }
-              }
-            }
-            L46: {
-              if (var6 <= 256) {
-                break L46;
-              } else {
-                var6 = var6 >> 1;
-                break L46;
-              }
+              var6 = var6 >> 1;
+              break L7;
             }
             var8++;
-            if (var7 > 256) {
+            if ((var7 ^ -1) < -257) {
               var7 = var7 >> 1;
-              continue L40;
+              if (var9 == 0) {
+                continue L5;
+              } else {
+                break L6;
+              }
             } else {
-              continue L40;
+              continue L5;
+            }
+          }
+          L10: {
+            if (this.field_s != null) {
+              var6 = var4;
+              this.field_l = new rt[var8];
+              var7 = var5;
+              var8 = 0;
+              break L10;
+            } else {
+              this.field_s = new cb(this.field_g);
+              var6 = var4;
+              this.field_l = new rt[var8];
+              var7 = var5;
+              var8 = 0;
+              break L10;
+            }
+          }
+          L11: while (true) {
+            L12: {
+              L13: {
+                L14: {
+                  if ((var6 ^ -1) < -257) {
+                    break L14;
+                  } else {
+                    var11 = var7 ^ -1;
+                    var10 = -257;
+                    if (var9 != 0) {
+                      if (var10 <= var11) {
+                        break L12;
+                      } else {
+                        break L13;
+                      }
+                    } else {
+                      if (var10 > var11) {
+                        break L14;
+                      } else {
+                        if (var9 == 0) {
+                          this.field_r = var4;
+                          this.field_p = var5;
+                          return;
+                        } else {
+                          this.field_s = null;
+                          this.field_r = var4;
+                          this.field_p = var5;
+                          return;
+                        }
+                      }
+                    }
+                  }
+                }
+                incrementValue$1 = var8;
+                var8++;
+                this.field_l[incrementValue$1] = new rt(this.field_g, 3553, 34842, var6, var7);
+                if (-257 <= (var6 ^ -1)) {
+                  break L12;
+                } else {
+                  break L13;
+                }
+              }
+              var6 = var6 >> 1;
+              break L12;
+            }
+            if (256 < var7) {
+              var7 = var7 >> 1;
+              continue L11;
+            } else {
+              continue L11;
             }
           }
         }
@@ -919,7 +581,7 @@ final class uv extends oga {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_2_0 = null;
+        hja stackIn_2_0 = null;
         hja stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -942,9 +604,10 @@ final class uv extends oga {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         hja stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        hja stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -976,34 +639,36 @@ final class uv extends oga {
               var5 = param1.a(true, param0, var4_int);
               stackOut_3_0 = cu.a(false, var5, param1, var4_int);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (hja) null;
               stackIn_2_0 = stackOut_1_0;
-              return (hja) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("uv.E(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -1012,23 +677,23 @@ final class uv extends oga {
             }
           }
           L2: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -1037,23 +702,23 @@ final class uv extends oga {
             }
           }
           L3: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -1061,13 +726,18 @@ final class uv extends oga {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final boolean c(byte param0) {
-        Object var3 = null;
+        hja discarded$8 = null;
+        String var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -1076,9 +746,9 @@ final class uv extends oga {
         int stackOut_2_0 = 0;
         if (param0 < 78) {
           L0: {
-            var3 = null;
-            hja discarded$8 = uv.a((String) null, (cn) null, (String) null, -53);
-            if (((uv) this).field_q == null) {
+            var3 = (String) null;
+            discarded$8 = uv.a((String) null, (cn) null, (String) null, -53);
+            if (this.field_q == null) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -1091,7 +761,7 @@ final class uv extends oga {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((uv) this).field_q == null) {
+            if (this.field_q == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -1106,75 +776,77 @@ final class uv extends oga {
     }
 
     final void a(int param0, byte param1) {
+        boolean discarded$0 = false;
         jaggl.OpenGL.glUseProgramObjectARB(0L);
-        ((uv) this).field_g.e(1, true);
-        ((uv) this).field_g.a(true, (kl) null);
-        ((uv) this).field_g.e(0, true);
+        this.field_g.e(1, true);
+        this.field_g.a(true, (kl) null);
+        this.field_g.e(0, true);
         if (param1 < 117) {
-            boolean discarded$0 = ((uv) this).e(-29);
+            discarded$0 = this.e(-29);
         }
     }
 
     final boolean a(byte param0) {
-        int stackIn_15_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_14_0 = 0;
+        boolean discarded$1 = false;
+        int stackIn_18_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_17_0 = 0;
         L0: {
           if (param0 == 65) {
             break L0;
           } else {
-            boolean discarded$1 = ((uv) this).c((byte) -83);
+            discarded$1 = this.c((byte) -83);
             break L0;
           }
         }
-        if (((uv) this).field_g.field_id) {
-          if (((uv) this).field_g.field_Vc) {
-            if (((uv) this).field_g.field_z) {
-              ((uv) this).field_q = new cb(((uv) this).field_g);
-              ((uv) this).field_x = new rt(((uv) this).field_g, 3553, 34842, 256, 256);
-              ((uv) this).field_x.a(false, false, -3554);
-              ((uv) this).field_i = new rt(((uv) this).field_g, 3553, 34842, 256, 256);
-              ((uv) this).field_i.a(false, false, -3554);
-              ((uv) this).field_g.b((ks) (Object) ((uv) this).field_q, (byte) 81);
-              ((uv) this).field_q.a(true, ((uv) this).field_x, 0);
-              ((uv) this).field_q.a(true, ((uv) this).field_i, 1);
-              ((uv) this).field_q.a(0, (byte) -91);
-              if (!((uv) this).field_q.c(-84)) {
-                ((uv) this).field_g.b((ks) (Object) ((uv) this).field_q, 0);
-                return false;
-              } else {
-                L1: {
-                  L2: {
-                    ((uv) this).field_g.b((ks) (Object) ((uv) this).field_q, 0);
-                    ((uv) this).field_m = dga.a(21885, ((uv) this).field_g, new fca[1]);
-                    ((uv) this).field_v = dga.a(param0 ^ 21820, ((uv) this).field_g, new fca[1]);
-                    ((uv) this).field_j = dga.a(21885, ((uv) this).field_g, new fca[1]);
-                    ((uv) this).field_w = dga.a(21885, ((uv) this).field_g, new fca[1]);
-                    if (null == ((uv) this).field_v) {
-                      break L2;
-                    } else {
-                      if (((uv) this).field_m == null) {
-                        break L2;
-                      } else {
-                        if (null == ((uv) this).field_j) {
+        if (this.field_g.field_id) {
+          if (this.field_g.field_Vc) {
+            if (this.field_g.field_z) {
+              this.field_q = new cb(this.field_g);
+              this.field_x = new rt(this.field_g, 3553, 34842, 256, 256);
+              this.field_x.a(false, false, -3554);
+              this.field_i = new rt(this.field_g, 3553, 34842, 256, 256);
+              this.field_i.a(false, false, -3554);
+              this.field_g.b((ks) (this.field_q), (byte) 81);
+              this.field_q.a(true, this.field_x, 0);
+              this.field_q.a(true, this.field_i, 1);
+              this.field_q.a(0, (byte) -91);
+              if (this.field_q.c(-84)) {
+                this.field_g.b(this.field_q, 0);
+                this.field_m = dga.a(21885, this.field_g, new fca[]{cpa.a(param0 + -1, this.field_g, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
+                this.field_v = dga.a(param0 ^ 21820, this.field_g, new fca[]{cpa.a(64, this.field_g, 35632, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
+                this.field_j = dga.a(21885, this.field_g, new fca[]{cpa.a(64, this.field_g, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")});
+                this.field_w = dga.a(21885, this.field_g, new fca[]{cpa.a(param0 + -1, this.field_g, 35632, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")});
+                if (null != this.field_v) {
+                  if (this.field_m == null) {
+                    return false;
+                  } else {
+                    L1: {
+                      L2: {
+                        if (null == this.field_j) {
                           break L2;
                         } else {
-                          if (null == ((uv) this).field_w) {
+                          if (null == this.field_w) {
                             break L2;
                           } else {
-                            stackOut_13_0 = 1;
-                            stackIn_15_0 = stackOut_13_0;
+                            stackOut_16_0 = 1;
+                            stackIn_18_0 = stackOut_16_0;
                             break L1;
                           }
                         }
                       }
+                      stackOut_17_0 = 0;
+                      stackIn_18_0 = stackOut_17_0;
+                      break L1;
                     }
+                    return stackIn_18_0 != 0;
                   }
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L1;
+                } else {
+                  return false;
                 }
-                return stackIn_15_0 != 0;
+              } else {
+                this.field_g.b(this.field_q, 0);
+                return false;
               }
             } else {
               return false;
@@ -1208,45 +880,95 @@ final class uv extends oga {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        boolean stackIn_1_0 = false;
         boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
-        int stackIn_3_1 = 0;
-        int stackIn_6_0 = 0;
-        boolean stackOut_0_0 = false;
+        boolean stackIn_4_0 = false;
+        int stackIn_4_1 = 0;
+        int stackIn_8_0 = 0;
+        boolean stackIn_12_0 = false;
+        boolean stackIn_13_0 = false;
+        boolean stackIn_14_0 = false;
+        int stackIn_14_1 = 0;
+        int stackIn_17_0 = 0;
+        boolean stackOut_11_0 = false;
+        boolean stackOut_13_0 = false;
+        int stackOut_13_1 = 0;
+        boolean stackOut_12_0 = false;
+        int stackOut_12_1 = 0;
+        int stackOut_15_0 = 0;
+        boolean stackOut_1_0 = false;
+        boolean stackOut_3_0 = false;
+        int stackOut_3_1 = 0;
         boolean stackOut_2_0 = false;
         int stackOut_2_1 = 0;
-        boolean stackOut_1_0 = false;
-        int stackOut_1_1 = 0;
-        int stackOut_4_0 = 0;
-        L0: {
-          stackOut_0_0 = jj.a(param0, param2, -32842);
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (0 == (458752 & param2)) {
-            stackOut_2_0 = stackIn_2_0;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = stackIn_1_0;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        if (param1 == 1) {
+          L0: {
+            stackOut_11_0 = jj.a(param0, param2, -32842);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_12_0 = stackOut_11_0;
+            if (0 == (458752 & param2)) {
+              stackOut_13_0 = stackIn_13_0;
+              stackOut_13_1 = 0;
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              break L0;
+            } else {
+              stackOut_12_0 = stackIn_12_0;
+              stackOut_12_1 = 1;
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              break L0;
+            }
           }
-        }
-        if (stackIn_3_0 | stackIn_3_1 == 0) {
-          if (so.a(param2, (byte) -105, param0)) {
-            return true;
+          if (stackIn_14_0 | stackIn_14_1 == 0) {
+            if (so.a(param2, (byte) -105, param0)) {
+              return true;
+            } else {
+              return false;
+            }
           } else {
-            return false;
+            stackOut_15_0 = 1;
+            stackIn_17_0 = stackOut_15_0;
+            return stackIn_17_0 != 0;
           }
         } else {
-          stackOut_4_0 = 1;
-          stackIn_6_0 = stackOut_4_0;
-          return stackIn_6_0 != 0;
+          L1: {
+            field_k = (String[]) null;
+            stackOut_1_0 = jj.a(param0, param2, -32842);
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_2_0 = stackOut_1_0;
+            if (0 == (458752 & param2)) {
+              stackOut_3_0 = stackIn_3_0;
+              stackOut_3_1 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_1 = stackOut_3_1;
+              break L1;
+            } else {
+              stackOut_2_0 = stackIn_2_0;
+              stackOut_2_1 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_1 = stackOut_2_1;
+              break L1;
+            }
+          }
+          if (stackIn_4_0 | stackIn_4_1 != 0) {
+            return true;
+          } else {
+            L2: {
+              if (!so.a(param2, (byte) -105, param0)) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
+              } else {
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
+              }
+            }
+            return stackIn_8_0 != 0;
+          }
         }
     }
 
@@ -1268,11 +990,11 @@ final class uv extends oga {
               break L0;
             } else {
               stackOut_6_0 = null;
-              stackIn_8_0 = (ei) (Object) stackOut_6_0;
+              stackIn_8_0 = (ei) ((Object) stackOut_6_0);
               break L0;
             }
           }
-          return (lqa) (Object) stackIn_8_0;
+          return (lqa) ((Object) stackIn_8_0);
         } else {
           L1: {
             var1 = baa.field_d.field_i;
@@ -1282,36 +1004,32 @@ final class uv extends oga {
               break L1;
             } else {
               stackOut_2_0 = null;
-              stackIn_4_0 = (ei) (Object) stackOut_2_0;
+              stackIn_4_0 = (ei) ((Object) stackOut_2_0);
               break L1;
             }
           }
-          return (lqa) (Object) stackIn_4_0;
+          return (lqa) ((Object) stackIn_4_0);
         }
     }
 
     final void d(byte param0) {
-        ((uv) this).field_q = null;
-        ((uv) this).field_w = null;
-        ((uv) this).field_x = null;
-        ((uv) this).field_i = null;
-        ((uv) this).field_j = null;
-        ((uv) this).field_s = null;
-        ((uv) this).field_m = null;
-        ((uv) this).field_l = null;
+        this.field_q = null;
+        this.field_w = null;
+        this.field_x = null;
+        this.field_i = null;
+        this.field_j = null;
+        this.field_s = null;
+        this.field_m = null;
+        this.field_l = null;
         if (param0 >= -9) {
           return;
         } else {
-          ((uv) this).field_v = null;
+          this.field_v = null;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Mirrors";
         field_k = new String[1];
         field_k[0] = "Powerdown";

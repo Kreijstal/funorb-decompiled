@@ -17,38 +17,62 @@ abstract class ne {
 
     final static void a(boolean param0, String param1, String param2, int param3) {
         try {
+            if (param3 != 150) {
+                ne.a(-9, -29);
+            }
             lc.field_hb = param2;
             sd.field_b = param1;
             sc.a(param0, (byte) 93, bl.field_c);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ne.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 150 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ne.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     abstract void c(int param0, int param1);
 
     final static void b(int param0, int param1) {
-        int discarded$0 = mg.a((byte) -78);
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        String var3 = null;
+        if (param1 != 150) {
+          var3 = (String) null;
+          ne.a(false, (String) null, (String) null, 49);
+          discarded$4 = mg.a((byte) -78);
+          return;
+        } else {
+          discarded$5 = mg.a((byte) -78);
+          return;
+        }
     }
 
     public static void a(int param0) {
+        String var2 = null;
         field_l = null;
         field_c = null;
-        field_i = null;
-        field_a = null;
+        if (param0 > -83) {
+          var2 = (String) null;
+          ne.a(false, (String) null, (String) null, -118);
+          field_i = null;
+          field_a = null;
+          return;
+        } else {
+          field_i = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1) {
         if (param1 < 6) {
-          field_l = null;
-          kk.field_a = 33;
-          kk.field_c = 133;
-          kk.field_e = 21845;
+          field_l = (td) null;
+          kk.field_a = param0 * 100 / 150;
+          kk.field_c = param0 * 400 / 150;
+          kk.field_e = (param0 << 1164553424) / 150;
           return;
         } else {
-          kk.field_a = 33;
-          kk.field_c = 133;
-          kk.field_e = 21845;
+          kk.field_a = param0 * 100 / 150;
+          kk.field_c = param0 * 400 / 150;
+          kk.field_e = (param0 << 1164553424) / 150;
           return;
         }
     }
@@ -70,6 +94,7 @@ abstract class ne {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_2_0 = 0;
@@ -92,9 +117,10 @@ abstract class ne {
                 if (var2_int <= var4) {
                   stackOut_7_0 = var3;
                   stackIn_8_0 = stackOut_7_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var3 = ma.a(-128, param1.charAt(var4)) + -var3 + (var3 << 5);
+                  var3 = ma.a(-128, param1.charAt(var4)) + -var3 + (var3 << -427390427);
                   var4++;
                   continue L1;
                 }
@@ -102,30 +128,31 @@ abstract class ne {
             } else {
               stackOut_2_0 = -84;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_0 = (RuntimeException) (var2);
             stackOut_9_1 = new StringBuilder().append("ne.I(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -133,16 +160,16 @@ abstract class ne {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_8_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Game over";
         field_a = "The account name you use to access RuneScape and other Jagex.com games";
         field_c = new rk();

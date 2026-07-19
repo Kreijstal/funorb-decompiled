@@ -109,15 +109,11 @@ final class w {
         int var13 = 0;
         int[] var14 = null;
         int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
         var2 = param0.field_d;
         var3 = param0.field_g;
         var4 = param0.field_o;
         var5 = param0.field_B;
-        var17 = ov.field_a;
-        var16 = var17;
-        var15 = var16;
+        var15 = ov.field_a;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_s;
@@ -178,34 +174,34 @@ final class w {
             L5: while (true) {
               if (var4 != var12) {
                 L6: {
-                  var17 = var16;
+                  var15 = var14;
                   var2 = (byte)var5;
-                  var7 = var17[var7];
+                  var7 = var15[var7];
                   var1 = (byte)var7;
                   var7 = var7 >> 8;
                   var4++;
                   if (var1 == var5) {
                     if (var4 != var12) {
                       var3 = 2;
-                      var7 = var17[var7];
+                      var7 = var15[var7];
                       var1 = (byte)var7;
                       var7 = var7 >> 8;
                       var4++;
                       if (var4 != var12) {
                         if (var1 == var5) {
                           var3 = 3;
-                          var7 = var17[var7];
+                          var7 = var15[var7];
                           var1 = (byte)var7;
                           var7 = var7 >> 8;
                           var4++;
                           if (var4 != var12) {
                             if (var1 == var5) {
-                              var7 = var17[var7];
+                              var7 = var15[var7];
                               var1 = (byte)var7;
                               var7 = var7 >> 8;
                               var4++;
                               var3 = (var1 & 255) + 4;
-                              var7 = var17[var7];
+                              var7 = var15[var7];
                               var5 = (byte)var7;
                               var7 = var7 >> 8;
                               var4++;
@@ -338,8 +334,6 @@ final class w {
         int var35 = 0;
         byte[] var36 = null;
         byte[] var37 = null;
-        byte[] var38 = null;
-        byte[] var39 = null;
         L0: {
           var4 = 0;
           var5 = 0;
@@ -418,9 +412,7 @@ final class w {
                           var4 = 0;
                           L6: while (true) {
                             if (var4 >= var9) {
-                              var39 = new byte[6];
-                              var38 = var39;
-                              var37 = var38;
+                              var37 = new byte[6];
                               var36 = var37;
                               var27_ref_byte__ = var36;
                               var29 = 0;
@@ -454,9 +446,9 @@ final class w {
                                                           var12 = 50;
                                                           var21 = param0.field_l[var11];
                                                           var22 = param0.field_F[var21];
-                                                          var23 = (Object) (Object) param0.field_f[var21];
-                                                          var25 = (Object) (Object) param0.field_v[var21];
-                                                          var24 = (Object) (Object) param0.field_y[var21];
+                                                          var23 = param0.field_f[var21];
+                                                          var25 = param0.field_v[var21];
+                                                          var24 = param0.field_y[var21];
                                                           break L13;
                                                         }
                                                       }
@@ -464,13 +456,13 @@ final class w {
                                                       var18 = var22;
                                                       var19 = w.a(var18, param0);
                                                       L14: while (true) {
-                                                        if (var19 > ((int[]) var23)[var18]) {
+                                                        if (var19 > ((int[]) (var23))[var18]) {
                                                           var18++;
                                                           var20 = w.e(param0);
                                                           var19 = var19 << 1 | var20;
                                                           continue L14;
                                                         } else {
-                                                          var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
+                                                          var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
                                                           L15: while (true) {
                                                             if (var13 != var10) {
                                                               L16: {
@@ -520,7 +512,7 @@ final class w {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_t[var31] = param0.field_t[var31] - 1;
-                                                                                param0.field_z[param0.field_t[var31]] = param0.field_z[param0.field_t[var31 - 1] + 15];
+                                                                                param0.field_z[param0.field_t[var31]] = param0.field_z[param0.field_t[var31 - 1] + 16 - 1];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -569,9 +561,9 @@ final class w {
                                                                         var12 = 50;
                                                                         var21 = param0.field_l[var11];
                                                                         var22 = param0.field_F[var21];
-                                                                        var23 = (Object) (Object) param0.field_f[var21];
-                                                                        var25 = (Object) (Object) param0.field_v[var21];
-                                                                        var24 = (Object) (Object) param0.field_y[var21];
+                                                                        var23 = param0.field_f[var21];
+                                                                        var25 = param0.field_v[var21];
+                                                                        var24 = param0.field_y[var21];
                                                                         break L24;
                                                                       }
                                                                     }
@@ -579,13 +571,13 @@ final class w {
                                                                     var18 = var22;
                                                                     var19 = w.a(var18, param0);
                                                                     L25: while (true) {
-                                                                      if (var19 > ((int[]) var23)[var18]) {
+                                                                      if (var19 > ((int[]) (var23))[var18]) {
                                                                         var18++;
                                                                         var20 = w.e(param0);
                                                                         var19 = var19 << 1 | var20;
                                                                         continue L25;
                                                                       } else {
-                                                                        var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
+                                                                        var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
                                                                         continue L15;
                                                                       }
                                                                     }
@@ -606,7 +598,7 @@ final class w {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + var16;
+                                                                    var15 = var15 + 1 * var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -619,9 +611,9 @@ final class w {
                                                                     var12 = 50;
                                                                     var21 = param0.field_l[var11];
                                                                     var22 = param0.field_F[var21];
-                                                                    var23 = (Object) (Object) param0.field_f[var21];
-                                                                    var25 = (Object) (Object) param0.field_v[var21];
-                                                                    var24 = (Object) (Object) param0.field_y[var21];
+                                                                    var23 = param0.field_f[var21];
+                                                                    var25 = param0.field_v[var21];
+                                                                    var24 = param0.field_y[var21];
                                                                     break L28;
                                                                   }
                                                                 }
@@ -629,13 +621,13 @@ final class w {
                                                                 var18 = var22;
                                                                 var19 = w.a(var18, param0);
                                                                 L29: while (true) {
-                                                                  if (var19 > ((int[]) var23)[var18]) {
+                                                                  if (var19 > ((int[]) (var23))[var18]) {
                                                                     var18++;
                                                                     var20 = w.e(param0);
                                                                     var19 = var19 << 1 | var20;
                                                                     continue L29;
                                                                   } else {
-                                                                    var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
+                                                                    var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
                                                                     if (var13 == 0) {
                                                                       continue L26;
                                                                     } else {
@@ -803,7 +795,7 @@ final class w {
                                       }
                                     } else {
                                       var29 = param0.field_b[var4];
-                                      var28 = var39[var29];
+                                      var28 = var37[var29];
                                       L40: while (true) {
                                         if (var29 <= 0) {
                                           var27_ref_byte__[0] = (byte)var28;
@@ -904,11 +896,11 @@ final class w {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_1_0 = 0;
-        var5 = (Object) (Object) field_a;
+        var5 = field_a;
         synchronized (var5) {
           L0: {
             field_a.field_h = param2;
-            field_a.field_w = 9;
+            field_a.field_w = param4;
             field_a.field_p = param0;
             field_a.field_r = 0;
             field_a.field_C = param1;
@@ -950,10 +942,6 @@ final class w {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ku();
     }
 }

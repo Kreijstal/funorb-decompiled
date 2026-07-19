@@ -9,7 +9,12 @@ final class vl {
 
     public static void a(int param0) {
         field_d = null;
-        field_c = null;
+        field_c = (double[][]) null;
+        if (param0 != -14578) {
+            field_c = (double[][]) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -39,7 +44,7 @@ final class vl {
               if (param1 == -182) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (double[][]) null;
                 break L1;
               }
             }
@@ -51,23 +56,23 @@ final class vl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("vl.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -75,17 +80,13 @@ final class vl {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_c = new double[][]{new double[3], new double[6], new double[3], new double[3]};
+        field_c = new double[][]{new double[]{-4.0, 0.0, -138.0}, new double[]{-182.0, 0.0, -136.0, 182.0, 0.0, -136.0}, new double[]{0.0, -41.0, -93.0}, new double[]{-24.0, -94.0, -392.0}};
         field_b = false;
         field_a = "The account name you use to access RuneScape and other Jagex.com games";
     }

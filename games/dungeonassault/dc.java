@@ -45,6 +45,7 @@ final class dc {
     boolean[] field_n;
 
     public static void a(byte param0) {
+        String discarded$0 = null;
         field_p = null;
         field_k = null;
         field_H = null;
@@ -53,7 +54,7 @@ final class dc {
         field_v = null;
         field_e = null;
         if (param0 <= 76) {
-            String discarded$0 = dc.a(-94);
+            discarded$0 = dc.a(-94);
         }
     }
 
@@ -72,29 +73,25 @@ final class dc {
     }
 
     dc() {
-        ((dc) this).field_s = new int[256];
-        ((dc) this).field_f = new int[6][258];
-        ((dc) this).field_D = new int[6][258];
-        ((dc) this).field_C = new byte[256];
-        ((dc) this).field_r = new byte[6][258];
-        ((dc) this).field_B = new int[6][258];
-        ((dc) this).field_y = new byte[4096];
-        ((dc) this).field_h = 0;
-        ((dc) this).field_a = 0;
-        ((dc) this).field_g = new byte[18002];
-        ((dc) this).field_J = new byte[18002];
-        ((dc) this).field_w = new int[6];
-        ((dc) this).field_i = new int[257];
-        ((dc) this).field_m = new int[16];
-        ((dc) this).field_n = new boolean[16];
-        ((dc) this).field_E = new boolean[256];
+        this.field_s = new int[256];
+        this.field_f = new int[6][258];
+        this.field_D = new int[6][258];
+        this.field_C = new byte[256];
+        this.field_r = new byte[6][258];
+        this.field_B = new int[6][258];
+        this.field_y = new byte[4096];
+        this.field_h = 0;
+        this.field_a = 0;
+        this.field_g = new byte[18002];
+        this.field_J = new byte[18002];
+        this.field_w = new int[6];
+        this.field_i = new int[257];
+        this.field_m = new int[16];
+        this.field_n = new boolean[16];
+        this.field_E = new boolean[256];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "ON";
         field_p = new int[]{1, 2, 3, 5, 10, 25};
         field_H = "Orc Blademaster";

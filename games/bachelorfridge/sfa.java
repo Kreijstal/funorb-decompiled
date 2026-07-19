@@ -10,7 +10,7 @@ abstract class sfa extends bw {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         int var5 = 0;
-        var5 = 0;
+        var5 = -51 % ((-79 - param2) / 46);
         if (param3 >= an.field_q) {
           if (param3 > ha.field_n) {
             return;
@@ -27,24 +27,31 @@ abstract class sfa extends bw {
 
     sfa(int param0, int param1, nq param2) {
         try {
-            ((sfa) this).field_h = param2;
-            ((sfa) this).field_f = param0;
-            ((sfa) this).field_g = param1;
+            this.field_h = param2;
+            this.field_f = param0;
+            this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sfa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "sfa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pf var3 = sja.field_fb;
+        pf var3 = null;
+        var3 = sja.field_fb;
         var3.c(param0, (byte) 119);
         var3.d(3, 0);
         var3.d(10, 0);
         var3.b(param1, -125);
+        if (param2) {
+          sfa.a(-72, -127, false);
+          return;
+        } else {
+          return;
+        }
     }
 
     public final String toString() {
-        oha var1 = al.a(123, ((sfa) this).field_g);
+        oha var1 = al.a(123, this.field_g);
         if (var1 == null) {
             return "Move not found.";
         }
@@ -55,7 +62,7 @@ abstract class sfa extends bw {
         try {
             int var3_int = 34 % ((param0 - 61) / 53);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sfa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "sfa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

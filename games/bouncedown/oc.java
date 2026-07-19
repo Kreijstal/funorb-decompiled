@@ -20,10 +20,6 @@ final class oc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oc.A(";
         field_a = new int[128];
         field_c = "To server list";

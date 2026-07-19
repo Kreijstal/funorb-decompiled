@@ -6,44 +6,44 @@ final class mk extends a implements java.awt.event.MouseWheelListener {
 
     final void b(java.awt.Component param0, boolean param1) {
         if (!param1) {
-            Object var4 = null;
-            ((mk) this).mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
-            param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) this);
+            java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
+            this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+            param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
             return;
         }
-        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final synchronized int b(int param0) {
         int var2 = 0;
-        Object var3 = null;
+        java.awt.Component var3 = null;
         if (param0 != -1) {
-          var3 = null;
-          ((mk) this).a((java.awt.Component) null, true);
-          var2 = ((mk) this).field_i;
-          ((mk) this).field_i = 0;
+          var3 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, true);
+          var2 = this.field_i;
+          this.field_i = 0;
           return var2;
         } else {
-          var2 = ((mk) this).field_i;
-          ((mk) this).field_i = 0;
+          var2 = this.field_i;
+          this.field_i = 0;
           return var2;
         }
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        ((mk) this).field_i = ((mk) this).field_i + param0.getWheelRotation();
+        this.field_i = this.field_i + param0.getWheelRotation();
         param0.consume();
     }
 
     final void a(java.awt.Component param0, boolean param1) {
-        param0.addMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1) {
-            Object var4 = null;
-            ((mk) this).b((java.awt.Component) null, false);
+            java.awt.Component var4 = (java.awt.Component) null;
+            this.b((java.awt.Component) null, false);
         }
     }
 
     mk() {
-        ((mk) this).field_i = 0;
+        this.field_i = 0;
     }
 }

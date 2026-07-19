@@ -6,7 +6,7 @@ final class sf {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -110;
+        int var1 = 110 / ((-2 - param0) / 55);
     }
 
     final static void a(int param0) {
@@ -22,15 +22,11 @@ final class sf {
             }
             id.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "sf.B(" + param0 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Hide private chat and appear offline to friends";
     }
 }

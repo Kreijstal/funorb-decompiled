@@ -12,9 +12,13 @@ final class mh {
     static int field_f;
 
     public static void a(boolean param0) {
+        String discarded$0 = null;
         field_b = null;
         field_g = null;
         field_a = null;
+        if (!param0) {
+            discarded$0 = mh.b((byte) 81);
+        }
         field_d = null;
         field_h = null;
         field_c = null;
@@ -28,14 +32,21 @@ final class mh {
         if (var1.length() == 0) {
             var1 = tg.i(0);
         }
-        if (var1.length() == 0) {
+        if (param0 <= 50) {
+            field_d = (String) null;
+        }
+        if (-1 == (var1.length() ^ -1)) {
             var1 = fi.field_e;
         }
         return var1;
     }
 
     final static void a(byte param0, boolean param1) {
+        String discarded$0 = null;
         wc.a(param1, 1983, true);
+        if (param0 >= -68) {
+            discarded$0 = mh.b((byte) 6);
+        }
     }
 
     final static int a(int param0, CharSequence param1) {
@@ -74,7 +85,7 @@ final class mh {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var3 = hf.a(78, param1.charAt(var4)) + (-var3 + (var3 << 5));
+                var3 = hf.a(78, param1.charAt(var4)) + (-var3 + (var3 << 1321276677));
                 var4++;
                 continue L1;
               }
@@ -84,23 +95,23 @@ final class mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("mh.E(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -108,7 +119,7 @@ final class mh {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -117,13 +128,12 @@ final class mh {
         if (null != bk.field_r) {
             bk.field_r.a((byte) -109);
         }
+        if (param0 != 119) {
+            field_c = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_h = new hf();
         field_b = "PER MONTH";

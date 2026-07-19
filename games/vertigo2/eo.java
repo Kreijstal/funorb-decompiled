@@ -10,10 +10,13 @@ final class eo extends mo {
     static String field_n;
 
     final static void a(int param0, int[][] param1) {
+        if (param0 != 0) {
+            return;
+        }
         try {
             vl.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "eo.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,13 +24,12 @@ final class eo extends mo {
         field_k = null;
         field_l = null;
         field_n = null;
+        if (param0 != 0) {
+            field_k = (java.awt.Frame) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 0;
         field_o = true;
         field_n = "Try again";

@@ -15,19 +15,23 @@ final class lk extends vg implements qn, fo, noa {
     static jea field_l;
 
     private final boolean a(int param0) {
+        if (param0 < 65) {
+            return false;
+        }
         return false;
     }
 
     final boolean a(int param0, boolean param1) {
+        int discarded$0 = 0;
         if (param1) {
-            int discarded$0 = ((lk) this).c((byte) -27);
+            discarded$0 = this.c((byte) -27);
         }
-        return ((lk) this).field_m.a(param0, 14530);
+        return this.field_m.a(param0, 14530);
     }
 
     final void a(la param0, byte param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        iq var4 = null;
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -56,11 +60,11 @@ final class lk extends vg implements qn, fo, noa {
         try {
           L0: {
             L1: {
-              ((lk) this).field_n = param0.a(((lk) this).field_n, (byte) 71);
+              this.field_n = param0.a(this.field_n, (byte) 71);
               stackOut_0_0 = this;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
-              if (((lk) this).field_g) {
+              if (this.field_g) {
                 stackOut_2_0 = this;
                 stackOut_2_1 = 0;
                 stackIn_3_0 = stackOut_2_0;
@@ -75,12 +79,12 @@ final class lk extends vg implements qn, fo, noa {
               }
             }
             L2: {
-              ((lk) this).field_g = stackIn_3_1 != 0;
+              ((lk) (this)).field_g = stackIn_3_1 != 0;
               if (param1 == 104) {
                 break L2;
               } else {
-                var4 = null;
-                ((lk) this).a(-36, (iq) null);
+                var4 = (iq) null;
+                this.a(-36, (iq) null);
                 break L2;
               }
             }
@@ -90,23 +94,23 @@ final class lk extends vg implements qn, fo, noa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("lk.A(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -114,18 +118,44 @@ final class lk extends vg implements qn, fo, noa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
     private final boolean f(byte param0) {
-        return ((lk) this).field_i.o((byte) -82) && !((lk) this).a(((lk) this).field_i.i(6029), false);
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 == -1) {
+          L0: {
+            L1: {
+              if (!this.field_i.o((byte) -82)) {
+                break L1;
+              } else {
+                if (this.a(this.field_i.i(6029), false)) {
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L0;
+                }
+              }
+            }
+            stackOut_5_0 = 0;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+          return stackIn_6_0 != 0;
+        } else {
+          return false;
+        }
     }
 
     final void a(int param0, int param1) {
-        ((lk) this).field_n = param1;
+        int discarded$0 = 0;
+        this.field_n = param1;
         if (param0 != -6492) {
-            int discarded$0 = ((lk) this).b((byte) 30);
+            discarded$0 = this.b((byte) 30);
         }
     }
 
@@ -151,7 +181,7 @@ final class lk extends vg implements qn, fo, noa {
           L0: {
             L1: {
               if (!this.f((byte) -1)) {
-                dea.field_a.a(param1, 15, (lk) this);
+                dea.field_a.a(param1, 15, (lk) (this));
                 break L1;
               } else {
                 break L1;
@@ -161,7 +191,7 @@ final class lk extends vg implements qn, fo, noa {
               if (param0 > 103) {
                 break L2;
               } else {
-                ((lk) this).field_g = false;
+                this.field_g = false;
                 break L2;
               }
             }
@@ -171,23 +201,23 @@ final class lk extends vg implements qn, fo, noa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("lk.DB(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -195,36 +225,36 @@ final class lk extends vg implements qn, fo, noa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     public final int b(byte param0) {
         int var2 = -17 % ((-23 - param0) / 53);
-        return ((lk) this).field_n;
+        return this.field_n;
     }
 
     public final void f(int param0) {
         if (param0 != -4366) {
-            ((lk) this).field_i = null;
+            this.field_i = (la) null;
         }
     }
 
     final void a(byte param0, kh param1) {
         try {
             if (param0 >= -125) {
-                ((lk) this).field_n = -37;
+                this.field_n = -37;
             }
-            param1.a((byte) 20, ((lk) this).field_j, 8);
-            param1.a((byte) -127, ((lk) this).field_n >> 16, 12);
-            param1.a((byte) -43, ((lk) this).field_p >> 16, 12);
-            param1.a((byte) -125, ((lk) this).field_k >> 16, 10);
-            param1.a((byte) -128, ((lk) this).field_o >> 16, 10);
-            param1.a((byte) -127, ((lk) this).field_g ? 1 : 0, 1);
-            param1.a((byte) 86, !((lk) this).field_f ? 0 : 1, 1);
-            ((lk) this).field_m.a((byte) -86, param1);
+            param1.a((byte) 20, this.field_j, 8);
+            param1.a((byte) -127, this.field_n >> -1002716944, 12);
+            param1.a((byte) -43, this.field_p >> 1417874896, 12);
+            param1.a((byte) -125, this.field_k >> -1665169328, 10);
+            param1.a((byte) -128, this.field_o >> 1087350000, 10);
+            param1.a((byte) -127, this.field_g ? 1 : 0, 1);
+            param1.a((byte) 86, !this.field_f ? 0 : 1, 1);
+            this.field_m.a((byte) -86, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "lk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -239,12 +269,12 @@ final class lk extends vg implements qn, fo, noa {
         if (param0 < 91) {
             return -46;
         }
-        return ((lk) this).field_p;
+        return this.field_p;
     }
 
     public final int e(byte param0) {
         if (param0 >= -86) {
-            ((lk) this).field_k = -73;
+            this.field_k = -73;
             return 0;
         }
         return 0;
@@ -252,63 +282,63 @@ final class lk extends vg implements qn, fo, noa {
 
     final int a(byte param0) {
         int var2 = -101 % ((56 - param0) / 62);
-        return ((lk) this).field_n;
+        return this.field_n;
     }
 
     final int b(int param0) {
         if (param0 < 36) {
             return -117;
         }
-        return ((lk) this).field_k;
+        return this.field_k;
     }
 
     final void b(int param0, int param1) {
-        ((lk) this).field_p = param1;
+        boolean discarded$0 = false;
+        this.field_p = param1;
         if (param0 != 0) {
-            boolean discarded$0 = ((lk) this).d((byte) 90);
+            discarded$0 = this.d((byte) 90);
         }
     }
 
     public static void a(boolean param0) {
         field_l = null;
         field_h = null;
+        if (param0) {
+            field_h = (boolean[]) null;
+        }
     }
 
     final int b(boolean param0) {
         if (param0) {
-            field_h = null;
+            field_h = (boolean[]) null;
         }
-        return ((lk) this).field_o;
+        return this.field_o;
     }
 
     final int g(byte param0) {
         if (param0 >= -58) {
             return -85;
         }
-        return ((lk) this).field_p;
+        return this.field_p;
     }
 
     lk(la param0, kh param1) {
         try {
-            ((lk) this).field_i = param0;
-            ((lk) this).field_j = param1.b((byte) 44, 8);
-            ((lk) this).field_n = param1.b((byte) 44, 12) << 16;
-            ((lk) this).field_p = param1.b((byte) 44, 12) << 16;
-            ((lk) this).field_k = param1.b((byte) 44, 10) << 16;
-            ((lk) this).field_o = param1.b((byte) 44, 10) << 16;
-            ((lk) this).field_g = param1.b((byte) 44, 1) == 1 ? true : false;
-            ((lk) this).field_f = param1.b((byte) 44, 1) == 1 ? true : false;
-            ((lk) this).field_m = new bca(param0.field_E, param1);
+            this.field_i = param0;
+            this.field_j = param1.b((byte) 44, 8);
+            this.field_n = param1.b((byte) 44, 12) << 1864567952;
+            this.field_p = param1.b((byte) 44, 12) << 326200144;
+            this.field_k = param1.b((byte) 44, 10) << -1338787696;
+            this.field_o = param1.b((byte) 44, 10) << 109104240;
+            this.field_g = -2 == (param1.b((byte) 44, 1) ^ -1) ? true : false;
+            this.field_f = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_m = new bca(param0.field_E, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_h = new boolean[42];
         for (var0 = 0; var0 < field_h.length; var0++) {

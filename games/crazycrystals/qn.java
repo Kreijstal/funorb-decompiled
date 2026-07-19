@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class qn {
     byte field_f;
     int[] field_K;
@@ -53,172 +51,146 @@ final class qn {
         if (param0 != 258) {
             return;
         }
-        try {
-            field_e = null;
-            field_j = null;
-        } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "qn.C(" + param0 + ')');
-        }
+        field_e = null;
+        field_j = null;
     }
 
     final static boolean a(byte param0, boolean param1, CharSequence param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        boolean stackIn_12_0 = false;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        boolean stackOut_11_0 = false;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_7_0 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        int stackOut_3_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
             if (!sl.a(param1, param2, 0)) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param0 <= -82) {
                 var3_int = 0;
                 L1: while (true) {
-                  L2: {
-                    L3: {
-                      if (param2.length() <= var3_int) {
-                        break L3;
-                      } else {
-                        stackOut_11_0 = oh.a(param2.charAt(var3_int), (byte) 108);
-                        stackIn_20_0 = stackOut_11_0 ? 1 : 0;
-                        stackIn_12_0 = stackOut_11_0;
-                        if (var4 != 0) {
-                          break L2;
-                        } else {
-                          if (!stackIn_12_0) {
-                            stackOut_16_0 = 0;
-                            stackIn_17_0 = stackOut_16_0;
-                            return stackIn_17_0 != 0;
-                          } else {
-                            var3_int++;
-                            if (var4 == 0) {
-                              continue L1;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                      }
+                  if (param2.length() <= var3_int) {
+                    stackOut_15_0 = 1;
+                    stackIn_16_0 = stackOut_15_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
+                  } else {
+                    if (!oh.a(param2.charAt(var3_int), (byte) 108)) {
+                      stackOut_12_0 = 0;
+                      stackIn_13_0 = stackOut_12_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
+                    } else {
+                      var3_int++;
+                      continue L1;
                     }
-                    stackOut_19_0 = 1;
-                    stackIn_20_0 = stackOut_19_0;
-                    break L2;
                   }
-                  break L0;
                 }
               } else {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0 != 0;
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("qn.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_24_0 = stackOut_21_0;
-            stackIn_24_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_17_0 = (RuntimeException) (var3);
+            stackOut_17_1 = new StringBuilder().append("qn.B(").append(param0).append(',').append(param1).append(',');
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L4;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L2;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_25_0 = stackOut_22_0;
-              stackIn_25_1 = stackOut_22_1;
-              stackIn_25_2 = stackOut_22_2;
-              break L4;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
-        return stackIn_20_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_13_0 != 0;
+            } else {
+              return stackIn_16_0 != 0;
+            }
+          }
+        }
     }
 
     final static String a(byte param0) {
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        String stackIn_1_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_0_0 = null;
-        try {
-          L0: {
-            var1_int = -53 % ((param0 - -57) / 50);
-            stackOut_0_0 = (String) field_z;
-            stackIn_1_0 = stackOut_0_0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "qn.A(" + param0 + ')');
-        }
-        return stackIn_1_0;
+        int var1 = -53 % ((param0 - -57) / 50);
+        return field_z;
     }
 
     qn() {
-        ((qn) this).field_i = new byte[4096];
-        ((qn) this).field_D = new int[16];
-        ((qn) this).field_k = 0;
-        ((qn) this).field_A = new byte[18002];
-        ((qn) this).field_d = new byte[6][258];
-        ((qn) this).field_p = new boolean[256];
-        ((qn) this).field_K = new int[257];
-        ((qn) this).field_y = new boolean[16];
-        ((qn) this).field_x = new int[6][258];
-        ((qn) this).field_F = new int[6][258];
-        ((qn) this).field_l = new int[6][258];
-        ((qn) this).field_o = new int[256];
-        ((qn) this).field_H = new byte[256];
-        ((qn) this).field_b = 0;
-        ((qn) this).field_v = new int[6];
-        ((qn) this).field_c = new byte[18002];
+        this.field_i = new byte[4096];
+        this.field_D = new int[16];
+        this.field_k = 0;
+        this.field_A = new byte[18002];
+        this.field_d = new byte[6][258];
+        this.field_p = new boolean[256];
+        this.field_K = new int[257];
+        this.field_y = new boolean[16];
+        this.field_x = new int[6][258];
+        this.field_F = new int[6][258];
+        this.field_l = new int[6][258];
+        this.field_o = new int[256];
+        this.field_H = new byte[256];
+        this.field_b = 0;
+        this.field_v = new int[6];
+        this.field_c = new byte[18002];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new sj(7, 0, 1, 1);
         field_C = "From only <%0>/month";
         field_u = -1;

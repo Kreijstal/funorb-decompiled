@@ -12,10 +12,20 @@ final class ra {
     public static void a(boolean param0) {
         field_e = null;
         field_c = null;
-        field_d = null;
-        field_a = null;
-        field_b = null;
-        field_f = null;
+        if (param0) {
+          ra.a(false);
+          field_d = null;
+          field_a = null;
+          field_b = (int[][]) null;
+          field_f = null;
+          return;
+        } else {
+          field_d = null;
+          field_a = null;
+          field_b = (int[][]) null;
+          field_f = null;
+          return;
+        }
     }
 
     final static void a(byte param0) {
@@ -37,19 +47,18 @@ final class ra {
         var5.a(true, param1.field_m);
         var5.a(true, param1.field_s);
         var5.a(true, param1.field_p);
-        int discarded$0 = var5.d(-1, var4);
+        int discarded$45 = var5.d(-1, var4);
+        if (param2 > -23) {
+            return;
+        }
         try {
             var5.b(var5.field_v + -var4, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -102 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Show all game chat";
         field_d = "TAB - hide chat temporarily";
         field_a = "Create a free account to start using this feature";

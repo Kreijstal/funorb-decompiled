@@ -12,20 +12,16 @@ final class wg extends RuntimeException {
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
-        int var1 = 0;
+        int var1 = 1 / ((3 - param0) / 33);
         field_d = null;
     }
 
     wg(Throwable param0, String param1) {
-        ((wg) this).field_a = param0;
-        ((wg) this).field_f = param1;
+        this.field_a = param0;
+        this.field_f = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_e = "Phoenix device";
         field_b = "(Including <%0>)";

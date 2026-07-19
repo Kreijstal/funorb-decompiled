@@ -14,6 +14,11 @@ final class ai extends wj implements qu, vh {
     static int field_J;
 
     private final String m(int param0) {
+        String discarded$0 = null;
+        if (param0 != -1522433695) {
+            discarded$0 = this.k(13);
+            return "</col></u>";
+        }
         return "</col></u>";
     }
 
@@ -36,14 +41,17 @@ final class ai extends wj implements qu, vh {
     }
 
     final static boolean a(int param0) {
-        int var1 = 1;
-        if (null == kl.field_h) {
+        int var1 = 0;
+        var1 = 61 % ((-62 - param0) / 44);
+        if (null != kl.field_h) {
+          if (!kl.field_h.e(0)) {
             return false;
+          } else {
+            return true;
+          }
+        } else {
+          return false;
         }
-        if (!kl.field_h.e(0)) {
-            return false;
-        }
-        return true;
     }
 
     ai(jn param0) {
@@ -72,50 +80,50 @@ final class ai extends wj implements qu, vh {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((ai) this).field_B = param0;
-            ((ai) this).field_I = new wi(es.field_g, (jv) null);
-            ((ai) this).field_I.field_r = (gj) (Object) new op();
-            var7 = vo.a((byte) -18, ov.field_a, new String[2]);
+            this.field_B = param0;
+            this.field_I = new wi(es.field_g, (jv) null);
+            this.field_I.field_r = (gj) ((Object) new op());
+            var7 = vo.a((byte) -18, ov.field_a, new String[]{this.k(107), this.m(-1522433695)});
             var3 = 20;
             var4 = new qv(gf.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
-            ((ai) this).field_D = new lb(var7, (gj) (Object) var4);
-            ((ai) this).field_D.field_u = "";
-            ((ai) this).field_D.a(fa.field_e, 0, 12082);
-            ((ai) this).field_D.a(fa.field_e, 1, 12082);
-            ((ai) this).field_D.field_n = ((ai) this).field_n - 40;
-            ((ai) this).field_D.field_k = (jv) this;
-            ((ai) this).field_D.c(-1, -40 + ((ai) this).field_n, 26, var3);
-            var3 = var3 + (15 + ((ai) this).field_D.field_i);
-            ((ai) this).a(-103, (fd) (Object) ((ai) this).field_D);
+            this.field_D = new lb(var7, var4);
+            this.field_D.field_u = "";
+            this.field_D.a(fa.field_e, 0, 12082);
+            this.field_D.a(fa.field_e, 1, 12082);
+            this.field_D.field_n = this.field_n - 40;
+            this.field_D.field_k = (jv) (this);
+            this.field_D.c(-1, -40 + this.field_n, 26, var3);
+            var3 = var3 + (15 + this.field_D.field_i);
+            this.a(-103, this.field_D);
             var5 = 4;
             var6 = 200;
-            ((ai) this).field_I.a(40, 1, 300 - var6 >> 1, var6, var3);
-            ((ai) this).field_I.field_k = (jv) this;
-            ((ai) this).a(-43, (fd) (Object) ((ai) this).field_I);
-            ((ai) this).a(55 + (var3 - -var5), 1, 0, 300, 0);
+            this.field_I.a(40, 1, 300 - var6 >> -1522433695, var6, var3);
+            this.field_I.field_k = (jv) (this);
+            this.a(-43, this.field_I);
+            this.a(55 + (var3 - -var5), 1, 0, 300, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var2;
+            stackOut_3_0 = (RuntimeException) (var2);
             stackOut_3_1 = new StringBuilder().append("ai.<init>(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -123,7 +131,7 @@ final class ai extends wj implements qu, vh {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -140,6 +148,7 @@ final class ai extends wj implements qu, vh {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         boolean stackOut_6_0 = false;
@@ -158,26 +167,30 @@ final class ai extends wj implements qu, vh {
             if (super.a(param0, (byte) -122, param2, param3)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (param3 == 98) {
-                stackOut_6_0 = ((ai) this).a(param2, (byte) -100);
+              if ((param3 ^ -1) == -99) {
+                stackOut_6_0 = this.a(param2, (byte) -100);
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (param3 != 99) {
                   if (param1 <= -60) {
                     stackOut_13_0 = 0;
                     stackIn_14_0 = stackOut_13_0;
+                    decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
-                    ((ai) this).field_B = null;
+                    this.field_B = (jn) null;
                     return false;
                   }
                 } else {
-                  stackOut_9_0 = ((ai) this).b(param2, (byte) 125);
+                  stackOut_9_0 = this.b(param2, (byte) 125);
                   stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             }
@@ -186,23 +199,23 @@ final class ai extends wj implements qu, vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_0 = (RuntimeException) (var5);
             stackOut_15_1 = new StringBuilder().append("ai.E(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L1;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -210,9 +223,21 @@ final class ai extends wj implements qu, vh {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ')');
         }
-        return stackIn_14_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_10_0;
+            } else {
+              return stackIn_14_0 != 0;
+            }
+          }
+        }
     }
 
     public final void a(lb param0, int param1, int param2, int param3) {
@@ -225,6 +250,7 @@ final class ai extends wj implements qu, vh {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -244,6 +270,7 @@ final class ai extends wj implements qu, vh {
               } else {
                 if (1 != param2) {
                   if (2 != param2) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     rb.a((byte) -51, "conduct.ws");
@@ -255,30 +282,31 @@ final class ai extends wj implements qu, vh {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_0 = (RuntimeException) (var5);
             stackOut_10_1 = new StringBuilder().append("ai.VA(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L1;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -286,7 +314,12 @@ final class ai extends wj implements qu, vh {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -314,13 +347,13 @@ final class ai extends wj implements qu, vh {
               if (param3 >= 64) {
                 break L1;
               } else {
-                ((ai) this).field_D = null;
+                this.field_D = (lb) null;
                 break L1;
               }
             }
-            if (param1 == ((ai) this).field_I) {
+            if (param1 == this.field_I) {
               oh.a(-124);
-              ((ai) this).field_B.q(-87);
+              this.field_B.q(-87);
               break L0;
             } else {
               return;
@@ -330,23 +363,23 @@ final class ai extends wj implements qu, vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("ai.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -354,15 +387,21 @@ final class ai extends wj implements qu, vh {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final String k(int param0) {
+        if (param0 < 63) {
+            lb var3 = (lb) null;
+            this.a((lb) null, -77, -73, -3);
+            return "<u=2164A2><col=2164A2>";
+        }
         return "<u=2164A2><col=2164A2>";
     }
 
     final static int a(int param0, int param1) {
+        int discarded$2 = 0;
         int var2 = 0;
         L0: {
           var2 = qr.a(param0, (byte) -1);
@@ -374,7 +413,7 @@ final class ai extends wj implements qu, vh {
           }
         }
         if (param1 != 6784) {
-          int discarded$2 = ai.a(121, -36);
+          discarded$2 = ai.a(121, -36);
           return var2;
         } else {
           return var2;
@@ -382,10 +421,6 @@ final class ai extends wj implements qu, vh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "This kit is only available to you.";
         field_L = "Please try again in a few minutes.";
         field_K = new String[]{"Trap Mouse: Off", "Trap Mouse: On"};

@@ -15,56 +15,57 @@ final class vj {
     int field_b;
 
     final void a() {
-        ((vj) this).field_h = 0;
-        ((vj) this).field_f = 0;
-        ((vj) this).field_k = 0;
-        ((vj) this).field_i = 0;
-        ((vj) this).field_j = 0;
+        this.field_h = 0;
+        this.field_f = 0;
+        this.field_k = 0;
+        this.field_i = 0;
+        this.field_j = 0;
     }
 
     final int a(int param0) {
-        if (((vj) this).field_j >= ((vj) this).field_h) {
-            int fieldTemp$0 = ((vj) this).field_f;
-            ((vj) this).field_f = ((vj) this).field_f + 1;
-            ((vj) this).field_i = ((vj) this).field_g[fieldTemp$0] << 15;
-            if (((vj) this).field_f >= ((vj) this).field_c) {
-                ((vj) this).field_f = ((vj) this).field_c - 1;
+        int fieldTemp$0 = 0;
+        if (this.field_j >= this.field_h) {
+            fieldTemp$0 = this.field_f;
+            this.field_f = this.field_f + 1;
+            this.field_i = this.field_g[fieldTemp$0] << 15;
+            if (this.field_f >= this.field_c) {
+                this.field_f = this.field_c - 1;
             }
-            ((vj) this).field_h = (int)((double)((vj) this).field_e[((vj) this).field_f] / 65536.0 * (double)param0);
-            if (((vj) this).field_h > ((vj) this).field_j) {
-                ((vj) this).field_k = ((((vj) this).field_g[((vj) this).field_f] << 15) - ((vj) this).field_i) / (((vj) this).field_h - ((vj) this).field_j);
+            this.field_h = (int)((double)this.field_e[this.field_f] / 65536.0 * (double)param0);
+            if (this.field_h > this.field_j) {
+                this.field_k = ((this.field_g[this.field_f] << 15) - this.field_i) / (this.field_h - this.field_j);
             }
         }
-        ((vj) this).field_i = ((vj) this).field_i + ((vj) this).field_k;
-        ((vj) this).field_j = ((vj) this).field_j + 1;
-        return ((vj) this).field_i - ((vj) this).field_k >> 15;
+        this.field_i = this.field_i + this.field_k;
+        this.field_j = this.field_j + 1;
+        return this.field_i - this.field_k >> 15;
     }
 
     final void b(fs param0) {
         int var2 = 0;
-        ((vj) this).field_c = param0.e(-31302);
-        ((vj) this).field_e = new int[((vj) this).field_c];
-        ((vj) this).field_g = new int[((vj) this).field_c];
-        for (var2 = 0; var2 < ((vj) this).field_c; var2++) {
-            ((vj) this).field_e[var2] = param0.a(255);
-            ((vj) this).field_g[var2] = param0.a(255);
+        this.field_c = param0.e(-31302);
+        this.field_e = new int[this.field_c];
+        this.field_g = new int[this.field_c];
+        for (var2 = 0; var2 < this.field_c; var2++) {
+            this.field_e[var2] = param0.a(255);
+            this.field_g[var2] = param0.a(255);
         }
     }
 
     final void a(fs param0) {
-        ((vj) this).field_a = param0.e(-31302);
-        ((vj) this).field_b = param0.c(true);
-        ((vj) this).field_d = param0.c(true);
-        ((vj) this).b(param0);
+        this.field_a = param0.e(-31302);
+        this.field_b = param0.c(true);
+        this.field_d = param0.c(true);
+        this.b(param0);
     }
 
     vj() {
-        ((vj) this).field_c = 2;
-        ((vj) this).field_e = new int[2];
-        ((vj) this).field_g = new int[2];
-        ((vj) this).field_e[0] = 0;
-        ((vj) this).field_e[1] = 65535;
-        ((vj) this).field_g[0] = 0;
-        ((vj) this).field_g[1] = 65535;
+        this.field_c = 2;
+        this.field_e = new int[2];
+        this.field_g = new int[2];
+        this.field_e[0] = 0;
+        this.field_e[1] = 65535;
+        this.field_g[0] = 0;
+        this.field_g[1] = 65535;
     }
 }

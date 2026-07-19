@@ -22,33 +22,33 @@ final class kg extends h {
             int stackOut_5_1 = 0;
             dh stackOut_4_0 = null;
             int stackOut_4_1 = 0;
-            if (null == ((kg) this).field_p) {
+            if (null == this.field_p) {
               return;
             } else {
               try {
                 L0: {
                   L1: {
-                    ((kg) this).field_e.field_k = 0;
-                    stackOut_3_0 = ((kg) this).field_e;
+                    this.field_e.field_k = 0;
+                    stackOut_3_0 = this.field_e;
                     stackIn_5_0 = stackOut_3_0;
                     stackIn_4_0 = stackOut_3_0;
                     if (param1) {
-                      stackOut_5_0 = (dh) (Object) stackIn_5_0;
+                      stackOut_5_0 = (dh) ((Object) stackIn_5_0);
                       stackOut_5_1 = 2;
                       stackIn_6_0 = stackOut_5_0;
                       stackIn_6_1 = stackOut_5_1;
                       break L1;
                     } else {
-                      stackOut_4_0 = (dh) (Object) stackIn_4_0;
+                      stackOut_4_0 = (dh) ((Object) stackIn_4_0);
                       stackOut_4_1 = 3;
                       stackIn_6_0 = stackOut_4_0;
                       stackIn_6_1 = stackOut_4_1;
                       break L1;
                     }
                   }
-                  ((dh) (Object) stackIn_6_0).i(stackIn_6_1, -99);
-                  ((kg) this).field_e.b(0L, -2108648176);
-                  ((kg) this).field_p.a(((kg) this).field_e.field_i.length, 0, (byte) -97, ((kg) this).field_e.field_i);
+                  ((dh) (Object) stackIn_6_0).i(stackIn_6_1, param0 + -99);
+                  this.field_e.b((long)param0, -2108648176);
+                  this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
                   break L0;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -57,7 +57,7 @@ final class kg extends h {
                   iOException = (IOException) (Object) decompiledCaughtException;
                   try {
                     L3: {
-                      ((kg) this).field_p.a((byte) -127);
+                      this.field_p.a((byte) -127);
                       break L3;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -67,9 +67,9 @@ final class kg extends h {
                       break L4;
                     }
                   }
-                  ((kg) this).field_i = ((kg) this).field_i + 1;
-                  ((kg) this).field_p = null;
-                  ((kg) this).field_l = -2;
+                  this.field_i = this.field_i + 1;
+                  this.field_p = null;
+                  this.field_l = -2;
                   break L2;
                 }
               }
@@ -110,12 +110,12 @@ final class kg extends h {
             try {
               L0: {
                 L1: {
-                  if (null == ((kg) this).field_p) {
+                  if (null == this.field_p) {
                     break L1;
                   } else {
                     try {
                       L2: {
-                        ((kg) this).field_p.a((byte) -127);
+                        this.field_p.a((byte) -127);
                         break L2;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -125,31 +125,52 @@ final class kg extends h {
                         break L3;
                       }
                     }
-                    ((kg) this).field_p = null;
+                    this.field_p = null;
                     break L1;
                   }
                 }
-                ((kg) this).field_p = (tf) param1;
+                this.field_p = (tf) (param1);
                 this.d(false);
                 this.a(0, param2);
-                ((kg) this).field_k = null;
-                ((kg) this).field_o.field_k = 0;
+                this.field_k = null;
+                this.field_o.field_k = 0;
                 L4: while (true) {
-                  var4_ref3 = (nh) (Object) ((kg) this).field_m.a((byte) -66);
+                  var4_ref3 = (nh) ((Object) this.field_m.a((byte) -66));
                   if (var4_ref3 == null) {
                     L5: while (true) {
-                      var4_ref3 = (nh) (Object) ((kg) this).field_g.a((byte) -61);
+                      var4_ref3 = (nh) ((Object) this.field_g.a((byte) -61));
                       if (var4_ref3 == null) {
                         L6: {
-                          if (((kg) this).field_n != 0) {
-                            {
+                          if (-1 != (this.field_n ^ -1)) {
+                            try {
                               L7: {
-                                ((kg) this).field_e.field_k = 0;
-                                ((kg) this).field_e.i(4, -90);
-                                ((kg) this).field_e.i((int) ((kg) this).field_n, 68);
-                                ((kg) this).field_e.e(0, 8959);
-                                ((kg) this).field_p.a(((kg) this).field_e.field_i.length, 0, (byte) -97, ((kg) this).field_e.field_i);
+                                this.field_e.field_k = 0;
+                                this.field_e.i(4, -90);
+                                this.field_e.i((int) this.field_n, 68);
+                                this.field_e.e(0, 8959);
+                                this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
                                 break L7;
+                              }
+                            } catch (java.io.IOException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              L8: {
+                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                try {
+                                  L9: {
+                                    this.field_p.a((byte) -123);
+                                    break L9;
+                                  }
+                                } catch (java.lang.Exception decompiledCaughtParameter2) {
+                                  decompiledCaughtException = decompiledCaughtParameter2;
+                                  L10: {
+                                    var5 = (Exception) (Object) decompiledCaughtException;
+                                    break L10;
+                                  }
+                                }
+                                this.field_p = null;
+                                this.field_l = -2;
+                                this.field_i = this.field_i + 1;
+                                break L8;
                               }
                             }
                             break L6;
@@ -158,8 +179,8 @@ final class kg extends h {
                           }
                         }
                         L11: {
-                          ((kg) this).field_h = 0;
-                          ((kg) this).field_f = ll.a(1000);
+                          this.field_h = 0;
+                          this.field_f = ll.a(1000);
                           if (param0 == -1456343840) {
                             break L11;
                           } else {
@@ -169,12 +190,12 @@ final class kg extends h {
                         }
                         break L0;
                       } else {
-                        ((kg) this).field_a.a(param0 ^ -1456349328, (vh) (Object) var4_ref3);
+                        this.field_a.a(param0 ^ -1456349328, var4_ref3);
                         continue L5;
                       }
                     }
                   } else {
-                    ((kg) this).field_b.a(param0 + 1456354992, (vh) (Object) var4_ref3);
+                    this.field_b.a(param0 + 1456354992, var4_ref3);
                     continue L4;
                   }
                 }
@@ -183,23 +204,23 @@ final class kg extends h {
               decompiledCaughtException = decompiledCaughtParameter3;
               L12: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_23_0 = (RuntimeException) var4_ref2;
+                stackOut_23_0 = (RuntimeException) (var4_ref2);
                 stackOut_23_1 = new StringBuilder().append("kg.H(").append(param0).append(',');
                 stackIn_25_0 = stackOut_23_0;
                 stackIn_25_1 = stackOut_23_1;
                 stackIn_24_0 = stackOut_23_0;
                 stackIn_24_1 = stackOut_23_1;
                 if (param1 == null) {
-                  stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-                  stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+                  stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+                  stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
                   stackOut_25_2 = "null";
                   stackIn_26_0 = stackOut_25_0;
                   stackIn_26_1 = stackOut_25_1;
                   stackIn_26_2 = stackOut_25_2;
                   break L12;
                 } else {
-                  stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-                  stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
                   stackOut_24_2 = "{...}";
                   stackIn_26_0 = stackOut_24_0;
                   stackIn_26_1 = stackOut_24_1;
@@ -207,7 +228,7 @@ final class kg extends h {
                   break L12;
                 }
               }
-              throw qk.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ')');
+              throw qk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -218,36 +239,58 @@ final class kg extends h {
 
     final void a(int param0) {
         if (param0 > -94) {
-            field_r = null;
+            field_r = (ci[]) null;
         }
-        if (!(null == ((kg) this).field_p)) {
-            ((kg) this).field_p.a((byte) -126);
+        if (!(null == this.field_p)) {
+            this.field_p.a((byte) -126);
         }
     }
 
     private final void d(boolean param0) {
         try {
+            IOException iOException = null;
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
-            if (null == ((kg) this).field_p) {
+            if (null == this.field_p) {
               return;
             } else {
               L0: {
                 if (!param0) {
                   break L0;
                 } else {
-                  ((kg) this).b(-29);
+                  this.b(-29);
                   break L0;
                 }
               }
-              {
+              try {
                 L1: {
-                  ((kg) this).field_e.field_k = 0;
-                  ((kg) this).field_e.i(6, -108);
-                  ((kg) this).field_e.a(3, (byte) -89);
-                  ((kg) this).field_e.h(-1564407352, 0);
-                  ((kg) this).field_p.a(((kg) this).field_e.field_i.length, 0, (byte) -97, ((kg) this).field_e.field_i);
+                  this.field_e.field_k = 0;
+                  this.field_e.i(6, -108);
+                  this.field_e.a(3, (byte) -89);
+                  this.field_e.h(-1564407352, 0);
+                  this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
                   break L1;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    L3: {
+                      this.field_p.a((byte) -122);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L4: {
+                      var3 = (Exception) (Object) decompiledCaughtException;
+                      break L4;
+                    }
+                  }
+                  this.field_i = this.field_i + 1;
+                  this.field_l = -2;
+                  this.field_p = null;
+                  break L2;
                 }
               }
               return;
@@ -261,16 +304,16 @@ final class kg extends h {
 
     final void b(int param0) {
         try {
-            ((kg) this).field_p.a((byte) -124);
+            this.field_p.a((byte) -124);
         } catch (Exception exception) {
         }
-        ((kg) this).field_i = ((kg) this).field_i + 1;
-        ((kg) this).field_l = -1;
+        this.field_i = this.field_i + 1;
+        this.field_l = -1;
         if (param0 != -12948) {
             this.d(true);
         }
-        ((kg) this).field_p = null;
-        ((kg) this).field_n = (byte)(int)(Math.random() * 255.0 + 1.0);
+        this.field_p = null;
+        this.field_n = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
     final boolean c(boolean param0) {
@@ -306,10 +349,10 @@ final class kg extends h {
             int stackOut_83_0 = 0;
             L0: {
               var16 = Terraphoenix.field_V;
-              if (null != ((kg) this).field_p) {
+              if (null != this.field_p) {
                 L1: {
                   var2_long = ll.a(1000);
-                  var4 = (int)(var2_long - ((kg) this).field_f);
+                  var4 = (int)(var2_long - this.field_f);
                   if (200 >= var4) {
                     break L1;
                   } else {
@@ -317,14 +360,14 @@ final class kg extends h {
                     break L1;
                   }
                 }
-                ((kg) this).field_f = var2_long;
-                ((kg) this).field_h = ((kg) this).field_h + var4;
-                if (((kg) this).field_h <= 30000) {
+                this.field_f = var2_long;
+                this.field_h = this.field_h + var4;
+                if (-30001 <= (this.field_h ^ -1)) {
                   break L0;
                 } else {
                   try {
                     L2: {
-                      ((kg) this).field_p.a((byte) 71);
+                      this.field_p.a((byte) 71);
                       break L2;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -334,37 +377,37 @@ final class kg extends h {
                       break L3;
                     }
                   }
-                  ((kg) this).field_p = null;
+                  this.field_p = null;
                   break L0;
                 }
               } else {
                 break L0;
               }
             }
-            if (((kg) this).field_p != null) {
+            if (this.field_p != null) {
               try {
                 L4: {
-                  ((kg) this).field_p.c(10509);
-                  var2_ref = (nh) (Object) ((kg) this).field_b.c(8192);
+                  this.field_p.c(10509);
+                  var2_ref = (nh) ((Object) this.field_b.c(8192));
                   L5: while (true) {
                     if (var2_ref == null) {
-                      var2_ref = (nh) (Object) ((kg) this).field_a.c(8192);
+                      var2_ref = (nh) ((Object) this.field_a.c(8192));
                       L6: while (true) {
                         if (var2_ref == null) {
                           var2_int = 0;
                           L7: while (true) {
                             L8: {
-                              if (var2_int >= 100) {
+                              if ((var2_int ^ -1) <= -101) {
                                 break L8;
                               } else {
-                                var3_int = ((kg) this).field_p.a(0);
+                                var3_int = this.field_p.a(0);
                                 if (var3_int >= 0) {
                                   if (0 != var3_int) {
                                     L9: {
-                                      ((kg) this).field_h = 0;
+                                      this.field_h = 0;
                                       var4 = 0;
-                                      if (null != ((kg) this).field_k) {
-                                        if (((kg) this).field_k.field_F != 0) {
+                                      if (null != this.field_k) {
+                                        if (this.field_k.field_F != 0) {
                                           break L9;
                                         } else {
                                           var4 = 1;
@@ -376,12 +419,12 @@ final class kg extends h {
                                       }
                                     }
                                     L10: {
-                                      if (var4 <= 0) {
+                                      if ((var4 ^ -1) >= -1) {
                                         L11: {
-                                          var5 = ((kg) this).field_k.field_H.field_i.length + -((kg) this).field_k.field_G;
-                                          var6 = -((kg) this).field_k.field_F + 512;
-                                          if (var6 > var5 - ((kg) this).field_k.field_H.field_k) {
-                                            var6 = var5 + -((kg) this).field_k.field_H.field_k;
+                                          var5 = this.field_k.field_H.field_i.length + -this.field_k.field_G;
+                                          var6 = -this.field_k.field_F + 512;
+                                          if (var6 > var5 - this.field_k.field_H.field_k) {
+                                            var6 = var5 + -this.field_k.field_H.field_k;
                                             break L11;
                                           } else {
                                             break L11;
@@ -396,8 +439,8 @@ final class kg extends h {
                                           }
                                         }
                                         L13: {
-                                          ((kg) this).field_p.a(((kg) this).field_k.field_H.field_i, var6, ((kg) this).field_k.field_H.field_k, (byte) 117);
-                                          if (((kg) this).field_n == 0) {
+                                          this.field_p.a(this.field_k.field_H.field_i, var6, this.field_k.field_H.field_k, (byte) 117);
+                                          if (this.field_n == 0) {
                                             break L13;
                                           } else {
                                             var7 = 0;
@@ -405,31 +448,31 @@ final class kg extends h {
                                               if (var7 >= var6) {
                                                 break L13;
                                               } else {
-                                                ((kg) this).field_k.field_H.field_i[var7 + ((kg) this).field_k.field_H.field_k] = (byte)sl.a((int) ((kg) this).field_k.field_H.field_i[var7 + ((kg) this).field_k.field_H.field_k], (int) ((kg) this).field_n);
+                                                this.field_k.field_H.field_i[var7 + this.field_k.field_H.field_k] = (byte)sl.a((int) this.field_k.field_H.field_i[var7 + this.field_k.field_H.field_k], (int) this.field_n);
                                                 var7++;
                                                 continue L14;
                                               }
                                             }
                                           }
                                         }
-                                        ((kg) this).field_k.field_F = ((kg) this).field_k.field_F + var6;
-                                        ((kg) this).field_k.field_H.field_k = ((kg) this).field_k.field_H.field_k + var6;
-                                        if (((kg) this).field_k.field_H.field_k != var5) {
-                                          if (512 == ((kg) this).field_k.field_F) {
-                                            ((kg) this).field_k.field_F = 0;
+                                        this.field_k.field_F = this.field_k.field_F + var6;
+                                        this.field_k.field_H.field_k = this.field_k.field_H.field_k + var6;
+                                        if (this.field_k.field_H.field_k != var5) {
+                                          if (512 == this.field_k.field_F) {
+                                            this.field_k.field_F = 0;
                                             break L10;
                                           } else {
                                             break L10;
                                           }
                                         } else {
-                                          ((kg) this).field_k.c((byte) 13);
-                                          ((kg) this).field_k.field_A = false;
-                                          ((kg) this).field_k = null;
+                                          this.field_k.c((byte) 13);
+                                          this.field_k.field_A = false;
+                                          this.field_k = null;
                                           break L10;
                                         }
                                       } else {
                                         L15: {
-                                          var5 = -((kg) this).field_o.field_k + var4;
+                                          var5 = -this.field_o.field_k + var4;
                                           if (var5 <= var3_int) {
                                             break L15;
                                           } else {
@@ -438,8 +481,8 @@ final class kg extends h {
                                           }
                                         }
                                         L16: {
-                                          ((kg) this).field_p.a(((kg) this).field_o.field_i, var5, ((kg) this).field_o.field_k, (byte) 101);
-                                          if (((kg) this).field_n == 0) {
+                                          this.field_p.a(this.field_o.field_i, var5, this.field_o.field_k, (byte) 101);
+                                          if (-1 == (this.field_n ^ -1)) {
                                             break L16;
                                           } else {
                                             var6 = 0;
@@ -447,35 +490,35 @@ final class kg extends h {
                                               if (var5 <= var6) {
                                                 break L16;
                                               } else {
-                                                ((kg) this).field_o.field_i[((kg) this).field_o.field_k + var6] = (byte)sl.a((int) ((kg) this).field_o.field_i[((kg) this).field_o.field_k + var6], (int) ((kg) this).field_n);
+                                                this.field_o.field_i[this.field_o.field_k + var6] = (byte)sl.a((int) this.field_o.field_i[this.field_o.field_k + var6], (int) this.field_n);
                                                 var6++;
                                                 continue L17;
                                               }
                                             }
                                           }
                                         }
-                                        ((kg) this).field_o.field_k = ((kg) this).field_o.field_k + var5;
-                                        if (var4 <= ((kg) this).field_o.field_k) {
-                                          if (((kg) this).field_k != null) {
-                                            if (((kg) this).field_k.field_F != 0) {
+                                        this.field_o.field_k = this.field_o.field_k + var5;
+                                        if (var4 <= this.field_o.field_k) {
+                                          if (this.field_k != null) {
+                                            if (this.field_k.field_F != 0) {
                                               throw new IOException();
                                             } else {
-                                              if (-1 != ((kg) this).field_o.field_i[0]) {
-                                                ((kg) this).field_k = null;
+                                              if (-1 != this.field_o.field_i[0]) {
+                                                this.field_k = null;
                                                 break L10;
                                               } else {
-                                                ((kg) this).field_o.field_k = 0;
-                                                ((kg) this).field_k.field_F = 1;
+                                                this.field_o.field_k = 0;
+                                                this.field_k.field_F = 1;
                                                 break L10;
                                               }
                                             }
                                           } else {
                                             L18: {
-                                              ((kg) this).field_o.field_k = 0;
-                                              var6 = ((kg) this).field_o.a(-16384);
-                                              var7 = ((kg) this).field_o.f((byte) -107);
-                                              var8 = ((kg) this).field_o.a(-16384);
-                                              var9 = ((kg) this).field_o.f((byte) -107);
+                                              this.field_o.field_k = 0;
+                                              var6 = this.field_o.a(-16384);
+                                              var7 = this.field_o.f((byte) -107);
+                                              var8 = this.field_o.a(-16384);
+                                              var9 = this.field_o.f((byte) -107);
                                               var10 = 127 & var8;
                                               if (0 == (128 & var8)) {
                                                 stackOut_42_0 = 0;
@@ -489,10 +532,10 @@ final class kg extends h {
                                             }
                                             L19: {
                                               var11 = stackIn_43_0;
-                                              var12 = (long)var7 + ((long)var6 << 32);
+                                              var12 = (long)var7 + ((long)var6 << -1911674656);
                                               var14 = null;
                                               if (var11 != 0) {
-                                                var14_ref = (nh) (Object) ((kg) this).field_g.c(8192);
+                                                var14_ref = (nh) ((Object) this.field_g.c(8192));
                                                 L20: while (true) {
                                                   if (var14_ref == null) {
                                                     break L19;
@@ -500,19 +543,19 @@ final class kg extends h {
                                                     if (var12 == var14_ref.field_m) {
                                                       break L19;
                                                     } else {
-                                                      var14_ref = (nh) (Object) ((kg) this).field_g.a(6273);
+                                                      var14_ref = (nh) ((Object) this.field_g.a(6273));
                                                       continue L20;
                                                     }
                                                   }
                                                 }
                                               } else {
-                                                var14_ref = (nh) (Object) ((kg) this).field_m.c(8192);
+                                                var14_ref = (nh) ((Object) this.field_m.c(8192));
                                                 L21: while (true) {
                                                   if (var14_ref == null) {
                                                     break L19;
                                                   } else {
                                                     if (var14_ref.field_m != var12) {
-                                                      var14_ref = (nh) (Object) ((kg) this).field_m.a(6273);
+                                                      var14_ref = (nh) ((Object) this.field_m.a(6273));
                                                       continue L21;
                                                     } else {
                                                       break L19;
@@ -536,12 +579,12 @@ final class kg extends h {
                                                 }
                                               }
                                               var15 = stackIn_59_0;
-                                              ((kg) this).field_k = var14_ref;
-                                              ((kg) this).field_k.field_H = new dh(((kg) this).field_k.field_G + (var15 + var9));
-                                              ((kg) this).field_k.field_H.i(var10, 89);
-                                              ((kg) this).field_k.field_H.e(var9, 8959);
-                                              ((kg) this).field_k.field_F = 10;
-                                              ((kg) this).field_o.field_k = 0;
+                                              this.field_k = var14_ref;
+                                              this.field_k.field_H = new dh(this.field_k.field_G + (var15 + var9));
+                                              this.field_k.field_H.i(var10, 89);
+                                              this.field_k.field_H.e(var9, 8959);
+                                              this.field_k.field_F = 10;
+                                              this.field_o.field_k = 0;
                                               break L10;
                                             }
                                           }
@@ -565,27 +608,27 @@ final class kg extends h {
                               stackIn_84_0 = stackOut_83_0;
                               break L4;
                             } else {
-                              field_r = null;
+                              field_r = (ci[]) null;
                               return true;
                             }
                           }
                         } else {
-                          ((kg) this).field_e.field_k = 0;
-                          ((kg) this).field_e.i(0, -124);
-                          ((kg) this).field_e.b(var2_ref.field_m, -2108648176);
-                          ((kg) this).field_p.a(((kg) this).field_e.field_i.length, 0, (byte) -97, ((kg) this).field_e.field_i);
-                          ((kg) this).field_g.a(11152, (vh) (Object) var2_ref);
-                          var2_ref = (nh) (Object) ((kg) this).field_a.a(6273);
+                          this.field_e.field_k = 0;
+                          this.field_e.i(0, -124);
+                          this.field_e.b(var2_ref.field_m, -2108648176);
+                          this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+                          this.field_g.a(11152, var2_ref);
+                          var2_ref = (nh) ((Object) this.field_a.a(6273));
                           continue L6;
                         }
                       }
                     } else {
-                      ((kg) this).field_e.field_k = 0;
-                      ((kg) this).field_e.i(1, -115);
-                      ((kg) this).field_e.b(var2_ref.field_m, -2108648176);
-                      ((kg) this).field_p.a(((kg) this).field_e.field_i.length, 0, (byte) -97, ((kg) this).field_e.field_i);
-                      ((kg) this).field_m.a(11152, (vh) (Object) var2_ref);
-                      var2_ref = (nh) (Object) ((kg) this).field_b.a(6273);
+                      this.field_e.field_k = 0;
+                      this.field_e.i(1, -115);
+                      this.field_e.b(var2_ref.field_m, -2108648176);
+                      this.field_p.a(this.field_e.field_i.length, 0, (byte) -97, this.field_e.field_i);
+                      this.field_m.a(11152, var2_ref);
+                      var2_ref = (nh) ((Object) this.field_b.a(6273));
                       continue L5;
                     }
                   }
@@ -595,7 +638,7 @@ final class kg extends h {
                 var2 = (IOException) (Object) decompiledCaughtException;
                 try {
                   L23: {
-                    ((kg) this).field_p.a((byte) 116);
+                    this.field_p.a((byte) 116);
                     break L23;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
@@ -606,13 +649,13 @@ final class kg extends h {
                   }
                 }
                 L25: {
-                  ((kg) this).field_l = -2;
-                  ((kg) this).field_p = null;
-                  ((kg) this).field_i = ((kg) this).field_i + 1;
-                  if (((kg) this).c(79) != 0) {
+                  this.field_l = -2;
+                  this.field_p = null;
+                  this.field_i = this.field_i + 1;
+                  if (this.c(79) != 0) {
                     break L25;
                   } else {
-                    if (((kg) this).a((byte) -103) != 0) {
+                    if (this.a((byte) -103) != 0) {
                       break L25;
                     } else {
                       return true;
@@ -624,10 +667,10 @@ final class kg extends h {
               return stackIn_84_0 != 0;
             } else {
               L26: {
-                if (((kg) this).c(96) != 0) {
+                if (this.c(96) != 0) {
                   break L26;
                 } else {
-                  if (0 != ((kg) this).a((byte) -103)) {
+                  if (0 != this.a((byte) -103)) {
                     break L26;
                   } else {
                     return true;

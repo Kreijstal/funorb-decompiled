@@ -34,7 +34,7 @@ final class rm {
         try {
           L0: {
             var2_int = -107 % ((param1 - 67) / 56);
-            stackOut_0_0 = new double[][]{param0, new double[6], new double[6], new double[6]};
+            stackOut_0_0 = new double[][]{param0, new double[]{param0[0], -param0[1] + 288.0, param0[2], param0[3], 288.0 - param0[4], param0[5]}, new double[]{-param0[0] + 576.0, 288.0 - param0[1], param0[2], 576.0 - param0[3], -param0[4] + 288.0, param0[5]}, new double[]{-param0[0] + 576.0, param0[1], param0[2], -param0[3] + 576.0, param0[4], param0[5]}};
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -42,23 +42,23 @@ final class rm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("rm.B(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -66,7 +66,7 @@ final class rm {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -82,10 +82,6 @@ final class rm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Show private chat from my friends and opponents";
         field_f = "Yes";
         field_c = 0L;

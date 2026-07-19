@@ -31,13 +31,14 @@ abstract class jc extends df {
     abstract int e(int param0);
 
     final static bg a(java.applet.Applet param0, boolean param1) {
+        bg discarded$2 = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         bg[] var3 = null;
         int var4 = 0;
         bg var5 = null;
         int var6 = 0;
-        Object var7 = null;
+        java.applet.Applet var7 = null;
         bg stackIn_4_0 = null;
         bg stackIn_10_0 = null;
         bg stackIn_15_0 = null;
@@ -48,6 +49,7 @@ abstract class jc extends df {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         bg stackOut_3_0 = null;
         bg stackOut_14_0 = null;
@@ -67,7 +69,8 @@ abstract class jc extends df {
             if (var2 == null) {
               stackOut_3_0 = mj.field_Rb;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var3 = oh.c((byte) -90);
               var4 = 0;
@@ -77,20 +80,22 @@ abstract class jc extends df {
                     if (param1) {
                       break L2;
                     } else {
-                      var7 = null;
-                      bg discarded$2 = jc.a((java.applet.Applet) null, false);
+                      var7 = (java.applet.Applet) null;
+                      discarded$2 = jc.a((java.applet.Applet) null, false);
                       break L2;
                     }
                   }
                   stackOut_14_0 = mj.field_Rb;
                   stackIn_15_0 = stackOut_14_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a((byte) 80, var2)) {
-                    stackOut_9_0 = (bg) var5;
+                    stackOut_9_0 = (bg) (var5);
                     stackIn_10_0 = stackOut_9_0;
-                    return stackIn_10_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     var4++;
                     continue L1;
@@ -103,23 +108,23 @@ abstract class jc extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2_ref;
+            stackOut_16_0 = (RuntimeException) (var2_ref);
             stackOut_16_1 = new StringBuilder().append("jc.D(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -127,31 +132,83 @@ abstract class jc extends df {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
-        return stackIn_15_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0;
+          } else {
+            return stackIn_15_0;
+          }
+        }
     }
 
     final static void a(int param0, bc param1) {
         fd var2 = null;
+        kk discarded$0 = null;
         try {
             fd.b(param1.a(true, "", "headers.packvorbis"));
             var2 = fd.a(param1, "jagex logo2.packvorbis", "");
-            kk discarded$0 = var2.b();
-            int var3 = -19;
+            discarded$0 = var2.b();
+            int var3 = 38 / ((param0 - 28) / 50);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "jc.A(" + -102 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean f(int param0) {
-        if (gm.field_i < 10) {
+        int stackIn_7_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 == -11) {
+          if ((gm.field_i ^ -1) <= -11) {
+            if (eh.field_P) {
+              return false;
+            } else {
+              L0: {
+                if (cb.b((byte) -119)) {
+                  stackOut_15_0 = 0;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
+                } else {
+                  stackOut_14_0 = 1;
+                  stackIn_16_0 = stackOut_14_0;
+                  break L0;
+                }
+              }
+              return stackIn_16_0 != 0;
+            }
+          } else {
             return false;
-        }
-        if (eh.field_P) {
+          }
+        } else {
+          field_s = (String) null;
+          if ((gm.field_i ^ -1) <= -11) {
+            if (eh.field_P) {
+              return false;
+            } else {
+              L1: {
+                if (cb.b((byte) -119)) {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
+                } else {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
+                }
+              }
+              return stackIn_7_0 != 0;
+            }
+          } else {
             return false;
+          }
         }
-        return !cb.b((byte) -119) ? true : false;
     }
 
     final static void a(int param0, bi param1) {
@@ -180,19 +237,15 @@ abstract class jc extends df {
             gf.b(3, 3, 0, 0, 64, 64);
             cg.i(0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     jc() {
-        ((jc) this).field_u = true;
+        this.field_u = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 0;
     }
 }

@@ -29,8 +29,8 @@ final class ae extends com.ms.dll.Callback {
           if (32 == param1) {
             var5 = param3 & 65535;
             if (1 != var5) {
-              if (param1 != 101024) {
-                if (param1 == 1) {
+              if ((param1 ^ -1) != -101025) {
+                if (-2 == (param1 ^ -1)) {
                   this.field_e = 0;
                   this.field_b = true;
                   return com.ms.win32.User32.CallWindowProc(this.field_a, param0, param1, param2, param3);
@@ -68,8 +68,8 @@ final class ae extends com.ms.dll.Callback {
               return 0;
             }
           } else {
-            if (param1 != 101024) {
-              if (param1 == 1) {
+            if ((param1 ^ -1) != -101025) {
+              if (-2 == (param1 ^ -1)) {
                 this.field_e = 0;
                 this.field_b = true;
                 return com.ms.win32.User32.CallWindowProc(this.field_a, param0, param1, param2, param3);

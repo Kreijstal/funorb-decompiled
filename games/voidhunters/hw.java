@@ -9,20 +9,23 @@ final class hw {
     static int field_b;
 
     public static void a(int param0) {
-        field_d = null;
+        if (param0 != -1) {
+            return;
+        }
+        field_d = (int[][]) null;
         field_e = null;
     }
 
     final void a(long param0, byte param1) {
-        int fieldTemp$2 = ((hw) this).field_a;
-        ((hw) this).field_a = ((hw) this).field_a + 1;
-        ((hw) this).field_c[fieldTemp$2] = param0;
+        int fieldTemp$2 = this.field_a;
+        this.field_a = this.field_a + 1;
+        this.field_c[fieldTemp$2] = param0;
         if (param1 != -115) {
           return;
         } else {
           L0: {
-            if (((hw) this).field_a >= ((hw) this).field_c.length) {
-              ((hw) this).field_a = 0;
+            if (this.field_a >= this.field_c.length) {
+              this.field_a = 0;
               break L0;
             } else {
               break L0;
@@ -46,12 +49,12 @@ final class hw {
         L0: {
           var17 = VoidHunters.field_G;
           var6 = 500;
-          if (var6 == ((hw) this).field_c.length) {
+          if (var6 == this.field_c.length) {
             break L0;
           } else {
-            ((hw) this).field_c = new long[var6];
-            if (((hw) this).field_c.length <= ((hw) this).field_a) {
-              ((hw) this).field_a = 0;
+            this.field_c = new long[var6];
+            if (this.field_c.length <= this.field_a) {
+              this.field_a = 0;
               break L0;
             } else {
               param3 = param3 + param0;
@@ -61,23 +64,23 @@ final class hw {
               var11 = 16711935;
               var12 = 0;
               L1: while (true) {
-                if (((hw) this).field_c.length <= var12) {
+                if (this.field_c.length <= var12) {
                   if (param1 >= 88) {
-                    cka.a(-1, "Currentval=" + ((hw) this).field_c[(-1 + (((hw) this).field_c.length + ((hw) this).field_a)) % ((hw) this).field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+                    cka.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
                     cka.a(-1, "Maxval=" + var7 / 1000L, var11, 20 + -(param0 / 2) + param3, param2 + param4, 4266);
                     return;
                   } else {
-                    ((hw) this).a(13L, (byte) 97);
-                    cka.a(-1, "Currentval=" + ((hw) this).field_c[(-1 + (((hw) this).field_c.length + ((hw) this).field_a)) % ((hw) this).field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+                    this.a(13L, (byte) 97);
+                    cka.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
                     cka.a(-1, "Maxval=" + var7 / 1000L, var11, 20 + -(param0 / 2) + param3, param2 + param4, 4266);
                     return;
                   }
                 } else {
                   L2: {
-                    var13 = param2 * var12 / ((hw) this).field_c.length + param4;
-                    var14 = ((hw) this).field_c[var12];
+                    var13 = param2 * var12 / this.field_c.length + param4;
+                    var14 = this.field_c[var12];
                     var16 = -(int)(var14 * (long)param0 / var7) + param3;
-                    if (var12 == ((hw) this).field_a) {
+                    if (var12 == this.field_a) {
                       c.a(10 + param3, var13, var13, param3, -16777216, 16711680);
                       break L2;
                     } else {
@@ -85,7 +88,7 @@ final class hw {
                     }
                   }
                   L3: {
-                    if (var12 <= 0) {
+                    if (-1 <= (var12 ^ -1)) {
                       break L3;
                     } else {
                       c.a(var16, var13, var9, var10, -16777216, var11);
@@ -108,23 +111,23 @@ final class hw {
         var11 = 16711935;
         var12 = 0;
         L4: while (true) {
-          if (((hw) this).field_c.length <= var12) {
+          if (this.field_c.length <= var12) {
             if (param1 < 88) {
-              ((hw) this).a(13L, (byte) 97);
-              cka.a(-1, "Currentval=" + ((hw) this).field_c[(-1 + (((hw) this).field_c.length + ((hw) this).field_a)) % ((hw) this).field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+              this.a(13L, (byte) 97);
+              cka.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
               cka.a(-1, "Maxval=" + var7 / 1000L, var11, 20 + -(param0 / 2) + param3, param2 + param4, 4266);
               return;
             } else {
-              cka.a(-1, "Currentval=" + ((hw) this).field_c[(-1 + (((hw) this).field_c.length + ((hw) this).field_a)) % ((hw) this).field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+              cka.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
               cka.a(-1, "Maxval=" + var7 / 1000L, var11, 20 + -(param0 / 2) + param3, param2 + param4, 4266);
               return;
             }
           } else {
             L5: {
-              var13 = param2 * var12 / ((hw) this).field_c.length + param4;
-              var14 = ((hw) this).field_c[var12];
+              var13 = param2 * var12 / this.field_c.length + param4;
+              var14 = this.field_c[var12];
               var16 = -(int)(var14 * (long)param0 / var7) + param3;
-              if (var12 == ((hw) this).field_a) {
+              if (var12 == this.field_a) {
                 c.a(10 + param3, var13, var13, param3, -16777216, 16711680);
                 break L5;
               } else {
@@ -132,7 +135,7 @@ final class hw {
               }
             }
             L6: {
-              if (var12 <= 0) {
+              if (-1 <= (var12 ^ -1)) {
                 break L6;
               } else {
                 c.a(var16, var13, var9, var10, -16777216, var11);
@@ -148,15 +151,11 @@ final class hw {
     }
 
     hw() {
-        ((hw) this).field_a = 0;
-        ((hw) this).field_c = new long[500];
+        this.field_a = 0;
+        this.field_c = new long[500];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[1][0];
         field_b = 0;
     }

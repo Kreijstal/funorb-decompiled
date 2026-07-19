@@ -15,6 +15,11 @@ final class om {
         field_c = null;
         field_g = null;
         field_e = null;
+        if (param0) {
+            field_a = -81;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 

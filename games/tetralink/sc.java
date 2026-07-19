@@ -12,17 +12,13 @@ final class sc {
         field_c = null;
         if (param0 != 26740) {
             sc.a(-4);
-            field_a = null;
+            field_a = (int[][]) null;
             return;
         }
-        field_a = null;
+        field_a = (int[][]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sc.A(";
         field_c = null;
         field_a = new int[4][];

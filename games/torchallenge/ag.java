@@ -14,30 +14,33 @@ final class ag implements Iterator {
     public static void b(int param0) {
         field_e = null;
         field_c = null;
+        if (param0 != 640) {
+            ag.a(-73);
+        }
     }
 
     public final boolean hasNext() {
-        return ((ag) this).field_b.field_f != ((ag) this).field_f;
+        return this.field_b.field_f != this.field_f;
     }
 
     public final Object next() {
-        w var1 = ((ag) this).field_f;
-        if (((ag) this).field_b.field_f == var1) {
+        w var1 = this.field_f;
+        if (this.field_b.field_f == var1) {
             var1 = null;
-            ((ag) this).field_f = null;
+            this.field_f = null;
         } else {
-            ((ag) this).field_f = var1.field_k;
+            this.field_f = var1.field_k;
         }
-        ((ag) this).field_a = var1;
-        return (Object) (Object) var1;
+        this.field_a = var1;
+        return var1;
     }
 
     public final void remove() {
-        if (null == ((ag) this).field_a) {
+        if (null == this.field_a) {
             throw new IllegalStateException();
         }
-        ((ag) this).field_a.a(12695);
-        ((ag) this).field_a = null;
+        this.field_a.a(12695);
+        this.field_a = null;
     }
 
     final static void a(int param0) {
@@ -75,21 +78,17 @@ final class ag implements Iterator {
     }
 
     ag(ak param0) {
-        ((ag) this).field_a = null;
+        this.field_a = null;
         try {
-            ((ag) this).field_b = param0;
-            ((ag) this).field_a = null;
-            ((ag) this).field_f = ((ag) this).field_b.field_f.field_k;
+            this.field_b = param0;
+            this.field_a = null;
+            this.field_f = this.field_b.field_f.field_k;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = -1;
     }
 }

@@ -22,7 +22,7 @@ final class td {
     public static void a(int param0) {
         field_g = null;
         if (param0 != 869637800) {
-            field_g = null;
+            field_g = (int[]) null;
         }
         field_o = null;
         field_m = null;
@@ -43,22 +43,22 @@ final class td {
         Object stackOut_12_0 = null;
         int stackOut_12_1 = 0;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (((td) this).field_i) {
+        if (this.field_i) {
           return;
         } else {
           L0: {
-            if (((td) this).field_n == 11) {
-              if (((td) this).field_d.length > ((td) this).field_k / ((td) this).field_e) {
-                ((td) this).field_d[((td) this).field_k / ((td) this).field_e].a(-((td) this).field_c + ((td) this).field_l, ((td) this).field_a + -((td) this).field_h);
+            if (-12 == (this.field_n ^ -1)) {
+              if (this.field_d.length > this.field_k / this.field_e) {
+                this.field_d[this.field_k / this.field_e].a(-this.field_c + this.field_l, this.field_a + -this.field_h);
                 break L0;
               } else {
-                ((td) this).field_i = true;
+                this.field_i = true;
                 break L0;
               }
             } else {
-              if (((td) this).field_n != 0) {
+              if (-1 != (this.field_n ^ -1)) {
                 L1: {
-                  var2 = 255 * (hf.field_H[((td) this).field_n] - vh.field_e[((td) this).field_n] * ((td) this).field_k / 2) / hf.field_H[((td) this).field_n];
+                  var2 = 255 * (hf.field_H[this.field_n] - vh.field_e[this.field_n] * this.field_k / 2) / hf.field_H[this.field_n];
                   if (255 < var2) {
                     var2 = 255;
                     break L1;
@@ -90,9 +90,9 @@ final class td {
                   }
                 }
                 L3: {
-                  ((td) this).field_i = stackIn_14_1 != 0;
-                  var3 = ((td) this).field_k * vh.field_e[((td) this).field_n];
-                  wj.c(((td) this).field_l, ((td) this).field_a, var3, 16777215, var2);
+                  ((td) (this)).field_i = stackIn_14_1 != 0;
+                  var3 = this.field_k * vh.field_e[this.field_n];
+                  wj.c(this.field_l, this.field_a, var3, 16777215, var2);
                   var4 = 250 + -var2;
                   if (1 > var4) {
                     var4 = 1;
@@ -102,7 +102,7 @@ final class td {
                   }
                 }
                 L4: {
-                  if (var4 > 250) {
+                  if ((var4 ^ -1) < -251) {
                     var4 = 250;
                     break L4;
                   } else {
@@ -110,13 +110,13 @@ final class td {
                   }
                 }
                 L5: {
-                  if (var3 < 2) {
+                  if (-3 < (var3 ^ -1)) {
                     break L5;
                   } else {
                     if ((double)var3 > 181.25) {
                       break L5;
                     } else {
-                      wj.a(((td) this).field_l << 4, ((td) this).field_a << 4, var3 << 3, var4, ((td) this).field_p);
+                      wj.a(this.field_l << -1127641820, this.field_a << 781956356, var3 << -1868827805, var4, this.field_p);
                       break L0;
                     }
                   }
@@ -131,7 +131,7 @@ final class td {
             if (param0) {
               break L6;
             } else {
-              ((td) this).field_c = 76;
+              this.field_c = 76;
               break L6;
             }
           }
@@ -157,7 +157,7 @@ final class td {
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
         L0: {
-          ((td) this).field_k = ((td) this).field_k + 1;
+          this.field_k = this.field_k + 1;
           if (param0 <= -98) {
             break L0;
           } else {
@@ -170,13 +170,13 @@ final class td {
             stackOut_2_0 = this;
             stackIn_5_0 = stackOut_2_0;
             stackIn_3_0 = stackOut_2_0;
-            if (((td) this).field_b == null) {
+            if (this.field_b == null) {
               break L2;
             } else {
               stackOut_3_0 = this;
               stackIn_6_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
-              if (!((td) this).field_b.m()) {
+              if (!this.field_b.m()) {
                 stackOut_6_0 = this;
                 stackOut_6_1 = 0;
                 stackIn_7_0 = stackOut_6_0;
@@ -198,18 +198,18 @@ final class td {
         L3: {
           L4: {
             L5: {
-              ((td) this).field_j = stackIn_7_1 != 0;
-              if (!((td) this).field_i) {
+              ((td) (this)).field_j = stackIn_7_1 != 0;
+              if (!this.field_i) {
                 break L5;
               } else {
-                if (((td) this).field_j) {
+                if (this.field_j) {
                   break L4;
                 } else {
                   break L5;
                 }
               }
             }
-            if (((td) this).field_n != 0) {
+            if (-1 != (this.field_n ^ -1)) {
               stackOut_13_0 = 0;
               stackIn_14_0 = stackOut_13_0;
               break L3;
@@ -230,49 +230,49 @@ final class td {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ((td) this).field_k = 0;
-        ((td) this).field_j = false;
-        ((td) this).field_h = 0;
-        ((td) this).field_e = 1;
-        ((td) this).field_c = 0;
-        ((td) this).field_d = null;
-        ((td) this).field_p = new int[255];
-        ((td) this).field_i = false;
-        ((td) this).field_a = param2;
-        ((td) this).field_l = param1;
-        ((td) this).field_n = param0;
-        var5 = fa.field_l[((td) this).field_n] >> 16;
-        var6 = 255 & fa.field_l[((td) this).field_n] >> 8;
-        var7 = fa.field_l[((td) this).field_n] & 255;
+        this.field_k = 0;
+        this.field_j = false;
+        this.field_h = 0;
+        this.field_e = 1;
+        this.field_c = 0;
+        this.field_d = null;
+        this.field_p = new int[255];
+        this.field_i = false;
+        this.field_a = param2;
+        this.field_l = param1;
+        this.field_n = param0;
+        var5 = fa.field_l[this.field_n] >> -1309204080;
+        var6 = 255 & fa.field_l[this.field_n] >> 869637800;
+        var7 = fa.field_l[this.field_n] & 255;
         var8 = 0;
         L0: while (true) {
           if (var8 >= 250) {
             L1: {
-              if (((td) this).field_n != 11) {
+              if (-12 != (this.field_n ^ -1)) {
                 break L1;
               } else {
-                ((td) this).field_c = 5;
-                ((td) this).field_e = 1;
-                ((td) this).field_h = 5;
-                ((td) this).field_d = oj.field_c;
+                this.field_c = 5;
+                this.field_e = 1;
+                this.field_h = 5;
+                this.field_d = oj.field_c;
                 break L1;
               }
             }
             L2: {
               if (param3 != -1) {
                 var8 = e.a(104, param1);
-                ((td) this).field_b = ag.a(nl.field_r[param3], 100, dk.field_a[((td) this).field_n], var8);
-                od.a(-1630758008, ((td) this).field_b);
+                this.field_b = ag.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8);
+                od.a(-1630758008, this.field_b);
                 break L2;
               } else {
-                ((td) this).field_b = null;
+                this.field_b = null;
                 break L2;
               }
             }
             return;
           } else {
-            var9 = 1 - -(var8 >> 5);
-            ((td) this).field_p[var8] = var7 / var9 + (var5 / var9 << 16) - -(var6 / var9 << 8);
+            var9 = 1 - -(var8 >> -714237947);
+            this.field_p[var8] = var7 / var9 + (var5 / var9 << -842691504) - -(var6 / var9 << 1228323784);
             var8++;
             continue L0;
           }
@@ -280,10 +280,6 @@ final class td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new int[]{2400, 1050, 1350, 1900, 1500, 900, 1400, 950, 650};
         field_o = "Waiting for graphics";
     }

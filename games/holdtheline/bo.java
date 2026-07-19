@@ -18,10 +18,6 @@ final class bo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bo.A(";
         field_a = "Single Race";
     }

@@ -15,8 +15,9 @@ final class nh extends jq {
     static String field_p;
 
     final static boolean a(String param0, byte param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -26,6 +27,7 @@ final class nh extends jq {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_4_0 = 0;
@@ -51,13 +53,14 @@ final class nh extends jq {
                       if (param1 == -113) {
                         break L2;
                       } else {
-                        var3 = null;
-                        boolean discarded$2 = nh.a((String) null, (byte) 14);
+                        var3 = (String) null;
+                        discarded$2 = nh.a((String) null, (byte) 14);
                         break L2;
                       }
                     }
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return true;
@@ -67,29 +70,30 @@ final class nh extends jq {
             }
             stackOut_4_0 = 1;
             stackIn_5_0 = stackOut_4_0;
-            return stackIn_5_0 != 0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("nh.C(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -97,17 +101,21 @@ final class nh extends jq {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     nh(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(-1, param4, param5);
-        ((nh) this).field_q = param2;
-        ((nh) this).field_j = param0;
-        ((nh) this).field_o = param3;
-        ((nh) this).field_k = param1;
+        this.field_q = param2;
+        this.field_j = param0;
+        this.field_o = param3;
+        this.field_k = param1;
     }
 
     public static void a(boolean param0) {
@@ -116,19 +124,27 @@ final class nh extends jq {
         field_i = null;
         field_n = null;
         field_l = null;
-        field_r = null;
-        field_p = null;
+        if (param0) {
+          field_n = (String) null;
+          field_r = null;
+          field_p = null;
+          return;
+        } else {
+          field_r = null;
+          field_p = null;
+          return;
+        }
     }
 
     final void b(int param0, byte param1, int param2) {
         if (param1 < 26) {
-            field_i = null;
+            field_i = (String) null;
         }
     }
 
     final void a(int param0, byte param1, int param2) {
         if (param1 >= -31) {
-            ((nh) this).field_k = 41;
+            this.field_k = 41;
         }
     }
 
@@ -140,20 +156,16 @@ final class nh extends jq {
         if (param2 != 45) {
           return;
         } else {
-          var4 = param1 * ((nh) this).field_j >> 12;
-          var5 = ((nh) this).field_q * param1 >> 12;
-          var6 = param0 * ((nh) this).field_k >> 12;
-          var7 = param0 * ((nh) this).field_o >> 12;
-          eh.a(var7, var5, (byte) -4, var6, ((nh) this).field_a, var4);
+          var4 = param1 * this.field_j >> 1364542028;
+          var5 = this.field_q * param1 >> -1604299572;
+          var6 = param0 * this.field_k >> 1654680684;
+          var7 = param0 * this.field_o >> -812871380;
+          eh.a(var7, var5, (byte) -4, var6, this.field_a, var4);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_m = new sq();
         field_i = "2 players compete to paint as much of the map as possible in their own colour - either purple or blue. In this mode you can only pick up your own colour of paint and any paint you pick up is immediately replaced. Also note that you can't paint the blocks that the paint pots are on. When the time limit is reached, the player with the most blocks of their colour is victorious.";
